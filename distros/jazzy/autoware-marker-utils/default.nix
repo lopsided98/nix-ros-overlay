@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-index-cpp, autoware-cmake, autoware-lanelet2-extension, autoware-perception-msgs, autoware-planning-msgs, autoware-utils-geometry, autoware-utils-visualization, autoware-vehicle-info-utils, boost, range-v3, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-marker-utils";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_marker_utils/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "23bb837eec5be4f976dfb0aaa2abed76e9bea0eb1076471baf241a8e1a970bbe";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_marker_utils/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "898503f41dfe5f3ba91ff1b4596bcda5a0839eb4928ab2ee637b9031b0be4dd7";
   };
 
   buildType = "ament_cmake";

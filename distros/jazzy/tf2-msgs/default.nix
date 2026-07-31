@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-tf2-msgs";
-  version = "0.36.21-r1";
+  version = "0.36.22-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_msgs/0.36.21-1.tar.gz";
-    name = "0.36.21-1.tar.gz";
-    sha256 = "0dfebe101a92658fd00176e11163dd86a21b088165017f29597af82ff6ce4d36";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_msgs/0.36.22-1.tar.gz";
+    name = "0.36.22-1.tar.gz";
+    sha256 = "89d9ebe290b90952ede5cd8f55d725f6f2c012010a460b50f1f524415a023a2b";
   };
 
   buildType = "ament_cmake";

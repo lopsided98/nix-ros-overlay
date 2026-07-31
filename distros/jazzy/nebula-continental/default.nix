@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-lint-auto, autoware-cmake, autoware-sensing-msgs, continental-msgs, continental-srvs, diagnostic-msgs, diagnostic-updater, geometry-msgs, message-filters, nebula-continental-common, nebula-continental-decoders, nebula-continental-hw-interfaces, nebula-core-common, nebula-core-ros, nebula-msgs, radar-msgs, rclcpp, rclcpp-components, ros-environment, ros-testing, rosbag2-cpp, sensor-msgs, sync-tooling-msgs, tf2-ros, visualization-msgs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-nebula-continental";
-  version = "1.1.1-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_continental/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "7a8b031b34d88e8c4fc4fcb4742c0522dd3e3277949fd1b77047b51f825fdd19";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_continental/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "0979ddfcac8b6482938a784d76a32ed8a4ecf0834b52762cd287b3f032960f81";
   };
 
   buildType = "ament_cmake";

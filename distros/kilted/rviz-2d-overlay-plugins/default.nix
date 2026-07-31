@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, rviz-2d-overlay-msgs, rviz-common, rviz-ogre-vendor, rviz-rendering, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-rviz-2d-overlay-plugins";
-  version = "1.4.1-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz_2d_overlay_plugins-release/archive/release/kilted/rviz_2d_overlay_plugins/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "1ee7238c0712eab1dc88ba5b563da592137a7684a3933ae67ef5d6593dc9b124";
+    url = "https://github.com/ros2-gbp/rviz_2d_overlay_plugins-release/archive/release/kilted/rviz_2d_overlay_plugins/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "49bcbfc4719dd37ec701e9e9cce62beb05087e88fd1b581ef21d35c5cf6b686f";
   };
 
   buildType = "ament_cmake";

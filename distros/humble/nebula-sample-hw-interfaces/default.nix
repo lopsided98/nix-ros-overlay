@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, nebula-core-common, nebula-core-hw-interfaces, nebula-sample-common }:
 buildRosPackage {
   pname = "ros-humble-nebula-sample-hw-interfaces";
-  version = "1.1.1-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_sample_hw_interfaces/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "79aaba1218223635e3bed2c4db24e1cf96c4e093690e9f8b3efaf2cf23d18e31";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_sample_hw_interfaces/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "a6310a1a82869d3060a4fe22ec863e5a3941bafcfab6230b175900a92d844344";
   };
 
   buildType = "ament_cmake";

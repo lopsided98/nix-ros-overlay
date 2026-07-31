@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-autoware-utils-rclcpp";
-  version = "1.7.2-r2";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/humble/autoware_utils_rclcpp/1.7.2-2.tar.gz";
-    name = "1.7.2-2.tar.gz";
-    sha256 = "e56ce7b7c8dfe104f9b13074039df301f795a50b1fd033b489c9e4e1a32b0f68";
+    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/humble/autoware_utils_rclcpp/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "69825cbee0173af156855b3f96f8a7634ed778528440898d084c3b494838cc3f";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lint-common, eigen, osqp-vendor, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-osqp-interface";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_osqp_interface/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "b6bfcb496944e68dfe32956b8cdd05da7897e4f7fb5d27ee9387dad77bc42a58";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_osqp_interface/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "f2c9dafe0e45fef9c284ff18adfea73620550b3673e4fd6715da44fb00a80d5a";
   };
 
   buildType = "ament_cmake";

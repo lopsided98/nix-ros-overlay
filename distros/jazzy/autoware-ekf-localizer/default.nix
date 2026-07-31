@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-agnocast-wrapper, autoware-cmake, autoware-internal-debug-msgs, autoware-kalman-filter, autoware-lint-common, autoware-localization-util, autoware-utils-geometry, autoware-utils-logging, autoware-utils-system, diagnostic-msgs, eigen, eigen3-cmake-module, fmt, geometry-msgs, launch-testing-ament-cmake, nav-msgs, rclcpp, rclcpp-components, ros-testing, std-srvs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-ekf-localizer";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_ekf_localizer/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "b85307c9183482c49ef5943031c234a1f00c4682f7e844abb7941d26b7edecbd";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_ekf_localizer/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "a961dbba53ec40c91f1b638be84ded810dd075b315aa0000af037713477769b8";
   };
 
   buildType = "ament_cmake";

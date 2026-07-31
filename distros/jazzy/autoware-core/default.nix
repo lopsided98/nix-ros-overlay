@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-core-api, autoware-core-control, autoware-core-localization, autoware-core-map, autoware-core-perception, autoware-core-planning, autoware-core-sensing, autoware-core-vehicle, autoware-global-parameter-loader, autoware-lint-common, rviz2 }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-core";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_core/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "769c1f1f80d2d6eaf383a048bc73ba4050e14667d80bb79e23add31156e33ce6";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_core/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "72e2a56fcc35c2fa021f98b1674d02eacbc003452702f7fb6742bbb7e120d8b7";
   };
 
   buildType = "ament_cmake";

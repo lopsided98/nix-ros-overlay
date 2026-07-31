@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-cppcheck, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lint-common, eigen, eigen3-cmake-module }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-kalman-filter";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_kalman_filter/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "30f2d9ea5190d9e7c61e9a4c978a6b041740bc24cee52cc7b6234e71702b34b1";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_kalman_filter/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "2c5f72bceda2b05549cf578d4068181eb3ec19f04211da57bcc7b34fa5ee2b5f";
   };
 
   buildType = "ament_cmake";

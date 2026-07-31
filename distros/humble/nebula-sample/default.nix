@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, diagnostic-msgs, diagnostic-updater, nebula-core-common, nebula-core-ros, nebula-msgs, nebula-sample-common, nebula-sample-decoders, nebula-sample-hw-interfaces, rclcpp, rclcpp-components, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-nebula-sample";
-  version = "1.1.1-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_sample/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "56e321a8281157561f4dbf473c7a8affb078aef614da596d27bcfc359e17e0cc";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_sample/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "52c692ade7031305d112297cb68827a372bf616d5e6952443674279743a00c29";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-kilted-yasmin-msgs";
-  version = "6.0.0-r1";
+  version = "6.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin_msgs/6.0.0-1.tar.gz";
-    name = "6.0.0-1.tar.gz";
-    sha256 = "75ab9c7b0de946cb0d19db972a6a0ac5c09ca1a2ea237277d00b64b19c35d432";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin_msgs/6.1.0-1.tar.gz";
+    name = "6.1.0-1.tar.gz";
+    sha256 = "2a03d139c48900dcfe0938328d97e2e621f4c7b1b9b28a2cddd81cc6acd6a9b2";
   };
 
   buildType = "ament_cmake";

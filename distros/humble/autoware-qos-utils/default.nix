@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, autoware-cmake, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-autoware-qos-utils";
-  version = "1.8.0-r3";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_qos_utils/1.8.0-3.tar.gz";
-    name = "1.8.0-3.tar.gz";
-    sha256 = "71cb5a497c1662c3459b5e7a040978fd23d42cee5d0336bfa80a778b61b01faa";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_qos_utils/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "77d4b38d66721afe930c829e71e38259e7f5eff159b5673d3bd3804066172d99";
   };
 
   buildType = "ament_cmake";

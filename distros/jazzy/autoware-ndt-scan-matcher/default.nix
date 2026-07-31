@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-cppcheck, ament-index-cpp, ament-lint-auto, autoware-agnocast-wrapper, autoware-cmake, autoware-internal-debug-msgs, autoware-internal-localization-msgs, autoware-localization-util, autoware-map-msgs, autoware-qos-utils, autoware-utils-diagnostics, autoware-utils-logging, autoware-utils-pcl, autoware-utils-visualization, diagnostic-msgs, fmt, geometry-msgs, launch-testing-ament-cmake, nav-msgs, pcl, pcl-conversions, rclcpp, rclcpp-components, ros-testing, sensor-msgs, std-srvs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-ndt-scan-matcher";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_ndt_scan_matcher/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "55d46e7554eee292f8e3972a9280dcf719ccaab86548825728d06418e76292ba";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_ndt_scan_matcher/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "d61c12f12a6b902b894184ac2a3b0a7022ae75c16439e3a54b09193eff05c145";
   };
 
   buildType = "ament_cmake";

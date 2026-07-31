@@ -560,6 +560,8 @@ self: super: {
 
  dummy-sensors = self.callPackage ./dummy-sensors {};
 
+ dynamixel-hardware = self.callPackage ./dynamixel-hardware {};
+
  dynamixel-hardware-interface = self.callPackage ./dynamixel-hardware-interface {};
 
  dynamixel-interfaces = self.callPackage ./dynamixel-interfaces {};

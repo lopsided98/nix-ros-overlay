@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, bullet, geometry-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-tf2-bullet";
-  version = "0.41.8-r1";
+  version = "0.41.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/tf2_bullet/0.41.8-1.tar.gz";
-    name = "0.41.8-1.tar.gz";
-    sha256 = "e767354d5f17dabac35b5a270d0335423598ab460f76f5d0f4fcb6ac80c84b8d";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/tf2_bullet/0.41.9-1.tar.gz";
+    name = "0.41.9-1.tar.gz";
+    sha256 = "4eb92f52dbefd51d4fcf3d5c620056283dd177c061773c21cbb36adaf62e3e02";
   };
 
   buildType = "ament_cmake";

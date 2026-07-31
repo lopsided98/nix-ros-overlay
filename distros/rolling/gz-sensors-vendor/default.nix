@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, gz-cmake-vendor, gz-common-vendor, gz-math-vendor, gz-msgs-vendor, gz-rendering-vendor, gz-tools-vendor, gz-transport-vendor, sdformat-vendor, xorg }:
 buildRosPackage {
   pname = "ros-rolling-gz-sensors-vendor";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_sensors_vendor-release/archive/release/rolling/gz_sensors_vendor/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "62adfc5058b44fc8ad3dae037661d35e4eb206f0333589340bce27a5e4886e3f";
+    url = "https://github.com/ros2-gbp/gz_sensors_vendor-release/archive/release/rolling/gz_sensors_vendor/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "92cf99949e301d55fe4664e3ab8ef53356b0d14685e456d1001faecd270be0ab";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cmake-vendor-package cmake ];
 
   meta = {
-    description = "Vendor package for: gz-sensors 10.0.1
+    description = "Vendor package for: gz-sensors 10.0.2
 
     Gazebo Sensors : Sensor models for simulation";
     license = with lib.licenses; [ asl20 ];

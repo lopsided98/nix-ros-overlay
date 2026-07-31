@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-agnocast-wrapper, autoware-cmake, autoware-internal-debug-msgs, autoware-kalman-filter, autoware-lint-common, autoware-localization-util, autoware-utils-geometry, autoware-utils-logging, autoware-utils-system, diagnostic-msgs, eigen, eigen3-cmake-module, fmt, geometry-msgs, launch-testing-ament-cmake, nav-msgs, rclcpp, rclcpp-components, ros-testing, std-srvs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-autoware-ekf-localizer";
-  version = "1.8.0-r3";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_ekf_localizer/1.8.0-3.tar.gz";
-    name = "1.8.0-3.tar.gz";
-    sha256 = "a4883c7b29ca270f7fb78847d65e8d6461f640867b56ba299ad8fcdf62821518";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_ekf_localizer/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "858aaa506e88cc29a32189706f9b34ccfde77e0f76e0eab96ff087235cf6d3ba";
   };
 
   buildType = "ament_cmake";

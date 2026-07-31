@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-agnocast-wrapper, autoware-cmake, autoware-lint-common, autoware-localization-util, autoware-utils-diagnostics, autoware-utils-geometry, autoware-utils-logging, autoware-utils-tf, diagnostic-msgs, fmt, geometry-msgs, rclcpp, rclcpp-components, sensor-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-humble-autoware-gyro-odometer";
-  version = "1.8.0-r3";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_gyro_odometer/1.8.0-3.tar.gz";
-    name = "1.8.0-3.tar.gz";
-    sha256 = "986d6d1f18c9e1f1c88bc8cb7360de81ecc44d59771178135f40a1de869b2df3";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_gyro_odometer/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "2e48775f00476f2551d510c10feb8d1de75811673b97562d19d7a5f9c637a0a6";
   };
 
   buildType = "ament_cmake";

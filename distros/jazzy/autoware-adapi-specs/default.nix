@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-adapi-specs";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_adapi_specs/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "8ad4e8b7a2411ea9c44d2e74ec1dffcfa0a82b0dc54c6caa0d1189dcc06871cb";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_adapi_specs/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "ae1b19b23f9abc64abeb5db245979cc3d5278312edcba58525d832722fc4667b";
   };
 
   buildType = "ament_cmake";

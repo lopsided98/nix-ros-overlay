@@ -628,6 +628,8 @@ self: super: {
 
  easynav-planner = self.callPackage ./easynav-planner {};
 
+ easynav-regulated-pp-controller = self.callPackage ./easynav-regulated-pp-controller {};
+
  easynav-routes-maps-manager = self.callPackage ./easynav-routes-maps-manager {};
 
  easynav-sensors = self.callPackage ./easynav-sensors {};

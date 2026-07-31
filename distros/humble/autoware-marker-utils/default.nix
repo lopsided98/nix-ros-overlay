@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-index-cpp, autoware-cmake, autoware-lanelet2-extension, autoware-perception-msgs, autoware-planning-msgs, autoware-utils-geometry, autoware-utils-visualization, autoware-vehicle-info-utils, boost, range-v3, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-autoware-marker-utils";
-  version = "1.8.0-r3";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_marker_utils/1.8.0-3.tar.gz";
-    name = "1.8.0-3.tar.gz";
-    sha256 = "9a1586a592acb854ccb6f5be7d19547352f5dfca06b2e9c589ef387ff3c73f16";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_marker_utils/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "08e40a9ba5326eb7961752891f1c6c85651c48f13db8be9cf8ad9ad678cf8abd";
   };
 
   buildType = "ament_cmake";

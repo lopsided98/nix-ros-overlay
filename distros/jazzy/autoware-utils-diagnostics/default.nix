@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lint-common, diagnostic-msgs, diagnostic-updater, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-utils-diagnostics";
-  version = "1.7.2-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/jazzy/autoware_utils_diagnostics/1.7.2-1.tar.gz";
-    name = "1.7.2-1.tar.gz";
-    sha256 = "29944afd24ec7213773624f5060a4c77a19751bc1b0d88679c30f263550ae37e";
+    url = "https://github.com/ros2-gbp/autoware_utils-release/archive/release/jazzy/autoware_utils_diagnostics/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "43494091424e3a3b2e6d4b42b20a8eab75ebd179acfbee159ff16b2fab30d436";
   };
 
   buildType = "ament_cmake";

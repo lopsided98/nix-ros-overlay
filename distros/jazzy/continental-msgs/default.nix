@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-continental-msgs";
-  version = "1.1.1-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/continental_msgs/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "63127c05fd63fde1a3d9462daa5ffa5bd5ef7e2b7e5cb910cda41df6ff94a24f";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/continental_msgs/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "a575193488da105ccfcf74d0a42837689edc4e9d91a6b933b4152ee7e11e5417";
   };
 
   buildType = "ament_cmake";

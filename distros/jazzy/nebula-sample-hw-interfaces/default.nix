@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, nebula-core-common, nebula-core-hw-interfaces, nebula-sample-common }:
 buildRosPackage {
   pname = "ros-jazzy-nebula-sample-hw-interfaces";
-  version = "1.1.1-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_sample_hw_interfaces/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "21947d02d4514dc4270af2d3f0d45e80c8a8eb02b240188b0f9c6f69f214f9c8";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_sample_hw_interfaces/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "9088e939c44e665c1ae792da26627a112e0d09fb6bb367515df7bd7312b128a1";
   };
 
   buildType = "ament_cmake";

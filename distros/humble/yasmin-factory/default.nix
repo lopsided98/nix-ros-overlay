@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-index-cpp, class-loader, pluginlib, python3, python3Packages, rclcpp, tinyxml2-vendor, yasmin, yasmin-viewer }:
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-index-cpp, ament-index-python, class-loader, pluginlib, python3, python3Packages, rclcpp, rclcpp-action, rclpy, tinyxml2-vendor, yasmin, yasmin-msgs, yasmin-ros, yasmin-viewer }:
 buildRosPackage {
   pname = "ros-humble-yasmin-factory";
-  version = "6.0.0-r1";
+  version = "6.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_factory/6.0.0-1.tar.gz";
-    name = "6.0.0-1.tar.gz";
-    sha256 = "8e3ca9cafd84ca1ddfbf43c494d796b8b953bb0a3aa8dba6c7b50797613b5249";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_factory/6.1.0-1.tar.gz";
+    name = "6.1.0-1.tar.gz";
+    sha256 = "e418607141c1a778359cd7f850d17bfb976e5d40a9307a803cdaed9b5e28e464";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ];
-  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ];
-  propagatedBuildInputs = [ ament-index-cpp class-loader pluginlib python3 python3Packages.lxml python3Packages.pybind11 rclcpp tinyxml2-vendor yasmin yasmin-viewer ];
+  checkInputs = [ action-msgs ament-cmake-gtest ament-cmake-pytest ament-index-python ];
+  propagatedBuildInputs = [ ament-index-cpp class-loader pluginlib python3 python3Packages.lxml python3Packages.pybind11 rclcpp rclcpp-action rclpy tinyxml2-vendor yasmin yasmin-msgs yasmin-ros yasmin-viewer ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {

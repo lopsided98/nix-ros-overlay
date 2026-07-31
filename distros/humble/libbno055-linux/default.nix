@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, diagnostic-msgs, geometry-msgs, lifecycle-msgs, rclcpp, rclcpp-components, rclcpp-lifecycle, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-libbno055-linux";
-  version = "1.7.1-r1";
+  version = "1.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/lazytatzv/libbno055_linux-release/archive/release/humble/libbno055_linux/1.7.1-1.tar.gz";
-    name = "1.7.1-1.tar.gz";
-    sha256 = "5ba9efc0a88f9d0ba6e1a6e68e9d70aa697684b929d00249bcf6aa2e4918d820";
+    url = "https://github.com/lazytatzv/libbno055_linux-release/archive/release/humble/libbno055_linux/1.7.2-1.tar.gz";
+    name = "1.7.2-1.tar.gz";
+    sha256 = "37ac75c2d80116c85516f05d64e11db31f2312d16da4d0c15441df6f5f2c9d7e";
   };
 
   buildType = "ament_cmake";

@@ -598,6 +598,74 @@ self: super: {
 
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
 
+ easynav = self.callPackage ./easynav {};
+
+ easynav-bonxai-maps-manager = self.callPackage ./easynav-bonxai-maps-manager {};
+
+ easynav-common = self.callPackage ./easynav-common {};
+
+ easynav-controller = self.callPackage ./easynav-controller {};
+
+ easynav-core = self.callPackage ./easynav-core {};
+
+ easynav-costmap-common = self.callPackage ./easynav-costmap-common {};
+
+ easynav-costmap-localizer = self.callPackage ./easynav-costmap-localizer {};
+
+ easynav-costmap-maps-manager = self.callPackage ./easynav-costmap-maps-manager {};
+
+ easynav-costmap-planner = self.callPackage ./easynav-costmap-planner {};
+
+ easynav-fusion-localizer = self.callPackage ./easynav-fusion-localizer {};
+
+ easynav-gps-localizer = self.callPackage ./easynav-gps-localizer {};
+
+ easynav-interfaces = self.callPackage ./easynav-interfaces {};
+
+ easynav-localizer = self.callPackage ./easynav-localizer {};
+
+ easynav-maps-manager = self.callPackage ./easynav-maps-manager {};
+
+ easynav-mpc-controller = self.callPackage ./easynav-mpc-controller {};
+
+ easynav-mppi-controller = self.callPackage ./easynav-mppi-controller {};
+
+ easynav-navmap-localizer = self.callPackage ./easynav-navmap-localizer {};
+
+ easynav-navmap-maps-manager = self.callPackage ./easynav-navmap-maps-manager {};
+
+ easynav-navmap-planner = self.callPackage ./easynav-navmap-planner {};
+
+ easynav-octomap-maps-manager = self.callPackage ./easynav-octomap-maps-manager {};
+
+ easynav-planner = self.callPackage ./easynav-planner {};
+
+ easynav-regulated-pp-controller = self.callPackage ./easynav-regulated-pp-controller {};
+
+ easynav-routes-maps-manager = self.callPackage ./easynav-routes-maps-manager {};
+
+ easynav-sensors = self.callPackage ./easynav-sensors {};
+
+ easynav-serest-controller = self.callPackage ./easynav-serest-controller {};
+
+ easynav-simple-common = self.callPackage ./easynav-simple-common {};
+
+ easynav-simple-controller = self.callPackage ./easynav-simple-controller {};
+
+ easynav-simple-localizer = self.callPackage ./easynav-simple-localizer {};
+
+ easynav-simple-maps-manager = self.callPackage ./easynav-simple-maps-manager {};
+
+ easynav-simple-planner = self.callPackage ./easynav-simple-planner {};
+
+ easynav-support-py = self.callPackage ./easynav-support-py {};
+
+ easynav-system = self.callPackage ./easynav-system {};
+
+ easynav-tools = self.callPackage ./easynav-tools {};
+
+ easynav-vff-controller = self.callPackage ./easynav-vff-controller {};
+
  ecl-build = self.callPackage ./ecl-build {};
 
  ecl-command-line = self.callPackage ./ecl-command-line {};
@@ -1716,6 +1784,16 @@ self: super: {
 
  nav-msgs = self.callPackage ./nav-msgs {};
 
+ navmap-core = self.callPackage ./navmap-core {};
+
+ navmap-examples = self.callPackage ./navmap-examples {};
+
+ navmap-ros = self.callPackage ./navmap-ros {};
+
+ navmap-ros-interfaces = self.callPackage ./navmap-ros-interfaces {};
+
+ navmap-rviz-plugin = self.callPackage ./navmap-rviz-plugin {};
+
  ndcurves = self.callPackage ./ndcurves {};
 
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
@@ -1924,6 +2002,40 @@ self: super: {
 
  pinocchio = self.callPackage ./pinocchio {};
 
+ plansys2 = self.callPackage ./plansys2 {};
+
+ plansys2-bringup = self.callPackage ./plansys2-bringup {};
+
+ plansys2-bt-actions = self.callPackage ./plansys2-bt-actions {};
+
+ plansys2-core = self.callPackage ./plansys2-core {};
+
+ plansys2-domain-expert = self.callPackage ./plansys2-domain-expert {};
+
+ plansys2-executor = self.callPackage ./plansys2-executor {};
+
+ plansys2-lifecycle-manager = self.callPackage ./plansys2-lifecycle-manager {};
+
+ plansys2-msgs = self.callPackage ./plansys2-msgs {};
+
+ plansys2-pddl-parser = self.callPackage ./plansys2-pddl-parser {};
+
+ plansys2-planner = self.callPackage ./plansys2-planner {};
+
+ plansys2-popf-plan-solver = self.callPackage ./plansys2-popf-plan-solver {};
+
+ plansys2-problem-expert = self.callPackage ./plansys2-problem-expert {};
+
+ plansys2-support-py = self.callPackage ./plansys2-support-py {};
+
+ plansys2-terminal = self.callPackage ./plansys2-terminal {};
+
+ plansys2-tests = self.callPackage ./plansys2-tests {};
+
+ plansys2-tools = self.callPackage ./plansys2-tools {};
+
+ plansys2-tui-cli = self.callPackage ./plansys2-tui-cli {};
+
  play-motion2 = self.callPackage ./play-motion2 {};
 
  play-motion2-cli = self.callPackage ./play-motion2-cli {};
@@ -1965,6 +2077,8 @@ self: super: {
  polygon-rviz-plugins = self.callPackage ./polygon-rviz-plugins {};
 
  polygon-utils = self.callPackage ./polygon-utils {};
+
+ popf = self.callPackage ./popf {};
 
  pose-broadcaster = self.callPackage ./pose-broadcaster {};
 
@@ -3245,6 +3359,8 @@ self: super: {
  wireless-watcher = self.callPackage ./wireless-watcher {};
 
  xacro = self.callPackage ./xacro {};
+
+ yaets = self.callPackage ./yaets {};
 
  yaml-cpp-vendor = self.callPackage ./yaml-cpp-vendor {};
 

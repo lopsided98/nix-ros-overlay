@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, boost, nebula-core-common, nebula-core-decoders, nebula-robosense-common, rclcpp, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-nebula-robosense-decoders";
-  version = "1.1.1-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_robosense_decoders/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "1809e702277f0e94f220a5ef322d042601fb0c2c275756b66debbc987693b792";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_robosense_decoders/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "8f5a0d9ff017c63adb03cf6f0bbd3aca392b12178f24c9701cd3293075bc8892";
   };
 
   buildType = "ament_cmake";

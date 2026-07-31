@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, example-interfaces, geometry-msgs, pluginlib, python3Packages, rclcpp, rclcpp-action, rclpy, ros-environment, rosidl-runtime-py, std-msgs, std-srvs, tf2, tf2-msgs, tf2-py, tf2-ros, tf2-ros-py, yasmin }:
 buildRosPackage {
   pname = "ros-humble-yasmin-ros";
-  version = "6.0.0-r1";
+  version = "6.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_ros/6.0.0-1.tar.gz";
-    name = "6.0.0-1.tar.gz";
-    sha256 = "4e012281cb346a1b42b0fd48dde750fbd23911200ed0b86472aef131350c5b79";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_ros/6.1.0-1.tar.gz";
+    name = "6.1.0-1.tar.gz";
+    sha256 = "1392ddb681d0bf899ddde66b1b1929175000efaf11bb0ab8fd9f8536cd9e546d";
   };
 
   buildType = "ament_cmake";

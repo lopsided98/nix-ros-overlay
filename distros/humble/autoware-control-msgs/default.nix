@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-autoware-control-msgs";
-  version = "1.12.0-r1";
+  version = "1.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_msgs-release/archive/release/humble/autoware_control_msgs/1.12.0-1.tar.gz";
-    name = "1.12.0-1.tar.gz";
-    sha256 = "d14b0b462e9adc52a8025a568c1130b22630cc378fed6d36315c31dbecb16713";
+    url = "https://github.com/ros2-gbp/autoware_msgs-release/archive/release/humble/autoware_control_msgs/1.13.0-1.tar.gz";
+    name = "1.13.0-1.tar.gz";
+    sha256 = "f03022f2b34ef3b677f1d3724db7c6f1c3f31b67473c0141b58c44569529578d";
   };
 
   buildType = "ament_cmake";

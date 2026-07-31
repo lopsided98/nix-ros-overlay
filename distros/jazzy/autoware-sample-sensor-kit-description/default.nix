@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, velodyne-description, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-sample-sensor-kit-description";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_sample_sensor_kit_description/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "340912e6662d085a54351a4aae3903c2f3d22fbd16ddaafa1bfbfd0bb56742f9";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_sample_sensor_kit_description/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "9be75294c8d6dfb7e530c18d7b853df5890225246013160a92ae83a9097e9af1";
   };
 
   buildType = "ament_cmake";

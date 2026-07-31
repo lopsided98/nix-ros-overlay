@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-internal-planning-msgs, autoware-lanelet2-utils, autoware-lint-common, autoware-motion-utils, autoware-planning-msgs, autoware-planning-test-manager, autoware-test-utils, autoware-trajectory, autoware-utils-debug, autoware-utils-rclcpp, autoware-utils-system, autoware-vehicle-info-utils, generate-parameter-library, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-humble-autoware-path-generator";
-  version = "1.8.0-r3";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_path_generator/1.8.0-3.tar.gz";
-    name = "1.8.0-3.tar.gz";
-    sha256 = "1081bfd5e35dec6dd85f139906e1448dfd7ce41ee8e10a59116f8b2fc5b7dde9";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_path_generator/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "8ac9b46b12ac7cb9c3048b724016361653776744836a2b42ef458998d6009559";
   };
 
   buildType = "ament_cmake";

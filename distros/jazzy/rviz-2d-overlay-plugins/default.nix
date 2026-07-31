@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, rviz-2d-overlay-msgs, rviz-common, rviz-ogre-vendor, rviz-rendering, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rviz-2d-overlay-plugins";
-  version = "1.4.1-r1";
+  version = "1.4.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz_2d_overlay_plugins-release/archive/release/jazzy/rviz_2d_overlay_plugins/1.4.1-1.tar.gz";
-    name = "1.4.1-1.tar.gz";
-    sha256 = "3d0d6f9e1c1e805ed5f8ad48e0dbdb0590f486361e45499c15d11f57791b2b3a";
+    url = "https://github.com/ros2-gbp/rviz_2d_overlay_plugins-release/archive/release/jazzy/rviz_2d_overlay_plugins/1.4.2-1.tar.gz";
+    name = "1.4.2-1.tar.gz";
+    sha256 = "d962ec49e240d5ee64e29a4f6a973d96d92b245f2337f445f3033c89e9344096";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, diagnostic-msgs, geometry-msgs, lifecycle-msgs, rclcpp, rclcpp-components, rclcpp-lifecycle, sensor-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-kilted-libbno055-linux";
-  version = "1.7.1-r1";
+  version = "1.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/lazytatzv/libbno055_linux-release/archive/release/kilted/libbno055_linux/1.7.1-1.tar.gz";
-    name = "1.7.1-1.tar.gz";
-    sha256 = "4ab4929527d0254be90499b8b510c9bbd5f33aced5370d66fb15baf126c9ddcf";
+    url = "https://github.com/lazytatzv/libbno055_linux-release/archive/release/kilted/libbno055_linux/1.7.2-1.tar.gz";
+    name = "1.7.2-1.tar.gz";
+    sha256 = "20fd32b57a90286d684be8295e3aaa5e9f822602706f8101ad9cdc4486475c01";
   };
 
   buildType = "ament_cmake";

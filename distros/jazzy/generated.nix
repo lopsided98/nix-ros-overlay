@@ -282,6 +282,8 @@ self: super: {
 
  autoware-cmake = self.callPackage ./autoware-cmake {};
 
+ autoware-command-gate = self.callPackage ./autoware-command-gate {};
+
  autoware-common-msgs = self.callPackage ./autoware-common-msgs {};
 
  autoware-component-interface-specs = self.callPackage ./autoware-component-interface-specs {};
@@ -1017,6 +1019,8 @@ self: super: {
  easynav-octomap-maps-manager = self.callPackage ./easynav-octomap-maps-manager {};
 
  easynav-planner = self.callPackage ./easynav-planner {};
+
+ easynav-regulated-pp-controller = self.callPackage ./easynav-regulated-pp-controller {};
 
  easynav-routes-maps-manager = self.callPackage ./easynav-routes-maps-manager {};
 

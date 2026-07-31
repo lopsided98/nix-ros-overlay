@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-euclidean-cluster-object-detector, autoware-ground-filter, autoware-lint-common, autoware-perception-objects-converter }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-core-perception";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_core_perception/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "0c4df03b2815425afec8e987438a822f7ffd5cd11f8cb016fa37f1f995e6e4cc";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_core_perception/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "6e5b64cf2489ccf65f5e06530b74b314d851c1cffcdc2ba98859c9961d917a92";
   };
 
   buildType = "ament_cmake";

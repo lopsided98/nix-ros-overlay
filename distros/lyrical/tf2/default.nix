@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-google-benchmark, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-uncrustify, ament-cmake-xmllint, builtin-interfaces, geometry-msgs, rcutils, rosidl-runtime-cpp }:
 buildRosPackage {
   pname = "ros-lyrical-tf2";
-  version = "0.45.8-r1";
+  version = "0.45.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/lyrical/tf2/0.45.8-1.tar.gz";
-    name = "0.45.8-1.tar.gz";
-    sha256 = "ec31284afd5d1b4efbc53e8f1095374e0af596bca6125aea255b503ab63a91d2";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/lyrical/tf2/0.45.9-1.tar.gz";
+    name = "0.45.9-1.tar.gz";
+    sha256 = "a82bdeed4e14a8fb6ef6743094cb007f6045cfe321a7ebe7206c9109d80541db";
   };
 
   buildType = "ament_cmake";
