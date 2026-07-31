@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, python3Packages, rclpy, yasmin, yasmin-factory }:
 buildRosPackage {
   pname = "ros-lyrical-yasmin-plugins-manager";
-  version = "6.0.0-r1";
+  version = "6.1.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/lyrical/yasmin_plugins_manager/6.0.0-1.tar.gz";
-    name = "6.0.0-1.tar.gz";
-    sha256 = "002d66d8b273e074cd7064ab06825e2c5ec191b3e2caadce080d1d2fb6d4e24c";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/lyrical/yasmin_plugins_manager/6.1.0-3.tar.gz";
+    name = "6.1.0-3.tar.gz";
+    sha256 = "fae4719e1297145af1697843a4a631143b18fcbbc1b8c2e45e2981875f0faa1a";
   };
 
   buildType = "ament_python";
-  propagatedBuildInputs = [ ament-index-python python3Packages.lxml python3Packages.pyyaml rclpy yasmin yasmin-factory ];
+  propagatedBuildInputs = [ ament-index-python python3Packages.lxml rclpy yasmin yasmin-factory ];
 
   meta = {
     description = "Plugin discovery and caching for YASMIN states.";

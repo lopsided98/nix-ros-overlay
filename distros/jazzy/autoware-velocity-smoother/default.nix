@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-internal-debug-msgs, autoware-internal-planning-msgs, autoware-interpolation, autoware-lint-common, autoware-motion-utils, autoware-osqp-interface, autoware-planning-msgs, autoware-planning-test-manager, autoware-qp-interface, autoware-trajectory, autoware-utils-debug, autoware-utils-diagnostics, autoware-utils-geometry, autoware-utils-logging, autoware-utils-math, autoware-utils-rclcpp, autoware-vehicle-info-utils, eigen3-cmake-module, geometry-msgs, nav-msgs, rclcpp, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-velocity-smoother";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_velocity_smoother/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "b809799fe00277867d45a715855592556a01ea1c9efe623e630d100c9b663ebe";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_velocity_smoother/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "d35e3a946bc5f319a6a6c5330ae9fb14099ef26bcf9f17320b151b3daa2cd16a";
   };
 
   buildType = "ament_cmake";

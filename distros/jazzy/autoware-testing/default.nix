@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-core, ament-cmake-lint-cmake, ament-copyright, ament-flake8, ament-pep257, autoware-cmake, ros-testing }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-testing";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_testing/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "2be857412247ca0cdd1016b89f97048cc3c539c29e98d7545fe480dc3424fd81";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_testing/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "6f161814619f8db537832eab476a515fac924aa5ae19bc3229f6805c0b0d1caa";
   };
 
   buildType = "ament_cmake";

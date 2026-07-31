@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-utils-geometry, eigen, geometry-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-interpolation";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_interpolation/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "02b398b56d3b05425752a93f8be132630ab4cec6d57ad9209d0a559730029822";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_interpolation/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "21275ca71bcd02327975996ed05ce56a669a1cf10a4189721497e539225364b2";
   };
 
   buildType = "ament_cmake";

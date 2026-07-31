@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-euclidean-cluster-object-detector, autoware-ground-filter, autoware-lint-common, autoware-perception-objects-converter }:
 buildRosPackage {
   pname = "ros-humble-autoware-core-perception";
-  version = "1.8.0-r3";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_core_perception/1.8.0-3.tar.gz";
-    name = "1.8.0-3.tar.gz";
-    sha256 = "8235cdceb8a8ac384fdf418d6546cc84256605abbbde7d748f40008920bd4c94";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_core_perception/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "bd2e7a4f53f28a1c08e993de7aab7224f269f5897d48430e3bd32236506df2ca";
   };
 
   buildType = "ament_cmake";

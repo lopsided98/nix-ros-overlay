@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, easynav-common, nav-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-easynav-simple-common";
-  version = "0.2.1-r2";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/jazzy/easynav_simple_common/0.2.1-2.tar.gz";
-    name = "0.2.1-2.tar.gz";
-    sha256 = "887134cf0dd9175e7fb029204dbd6f42361485396ae54b36a72f0c60980db318";
+    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/jazzy/easynav_simple_common/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "9b6c3b7a6e49b3ba0c813fdc09bceadaab6dfd3ac369648c2df5a48c945b5669";
   };
 
   buildType = "ament_cmake";

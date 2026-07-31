@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, eigen, eigen3-cmake-module }:
 buildRosPackage {
   pname = "ros-humble-fusioncore-core";
-  version = "0.3.3-r1";
+  version = "0.3.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/manankharwar/fusioncore-release/archive/release/humble/fusioncore_core/0.3.3-1.tar.gz";
-    name = "0.3.3-1.tar.gz";
-    sha256 = "ed49f43de64dae3f6b2bfba1790d7309a11bee2f689e1a1b2df5269831b193f6";
+    url = "https://github.com/manankharwar/fusioncore-release/archive/release/humble/fusioncore_core/0.3.5-1.tar.gz";
+    name = "0.3.5-1.tar.gz";
+    sha256 = "cb6676154f20a8547e92afd34a5b0bcd39d0c561e7c1702ce4b2dca50714d59a";
   };
 
   buildType = "ament_cmake";

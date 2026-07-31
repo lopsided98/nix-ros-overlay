@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gtest }:
 buildRosPackage {
   pname = "ros-kilted-nanoflann";
-  version = "1.10.1-r1";
+  version = "1.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nanoflann-release/archive/release/kilted/nanoflann/1.10.1-1.tar.gz";
-    name = "1.10.1-1.tar.gz";
-    sha256 = "bc2e27b15dd1cab07f85bc6d67e6ab1d0be2ea31061a82890e20a8b78a677828";
+    url = "https://github.com/ros2-gbp/nanoflann-release/archive/release/kilted/nanoflann/1.11.0-1.tar.gz";
+    name = "1.11.0-1.tar.gz";
+    sha256 = "06581139f65f4bcf9c00d8fbcbc9e107679e385f62c7fc4cd67ce49281453376";
   };
 
   buildType = "cmake";

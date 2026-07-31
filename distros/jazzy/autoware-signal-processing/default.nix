@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lint-common, boost, geometry-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-signal-processing";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_signal_processing/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "19eeaeaf611ba0849a071557007607c6061ec4d1ac95cc184b498721c5fa4690";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_signal_processing/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "d93369c5e961008d2c0e38644c443082efe145b992e9d519ac047a22c8eeac60";
   };
 
   buildType = "ament_cmake";

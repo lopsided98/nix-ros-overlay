@@ -1,0 +1,26 @@
+
+# Copyright 2026 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, lifecycle-msgs, plansys2-core, plansys2-domain-expert, plansys2-msgs, plansys2-pddl-parser, plansys2-popf-plan-solver, plansys2-problem-expert, pluginlib, rclcpp, rclcpp-lifecycle, ros2run }:
+buildRosPackage {
+  pname = "ros-lyrical-plansys2-planner";
+  version = "3.1.0-r1";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/lyrical/plansys2_planner/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "d03ab1cb4d3de3f9fe7287ff55794569b58b05a00a78acf3d1452e3fb2818aa8";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ros2run ];
+  propagatedBuildInputs = [ ament-index-cpp lifecycle-msgs plansys2-core plansys2-domain-expert plansys2-msgs plansys2-pddl-parser plansys2-popf-plan-solver plansys2-problem-expert pluginlib rclcpp rclcpp-lifecycle ];
+  nativeBuildInputs = [ ament-cmake ];
+
+  meta = {
+    description = "This package contains the PDDL-based Planner module for the ROS2 Planning System";
+    license = with lib.licenses; [ asl20 ];
+  };
+}

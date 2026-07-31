@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, bzip2, cmake, geometry-msgs, lz4, mola-common, mola-kernel, mrpt-libmaps, mrpt-libobs, opencv, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-mola-input-rosbag1";
-  version = "0.2.0-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_input_rosbag1-release/archive/release/rolling/mola_input_rosbag1/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "c4f03212ba22c9b8360a246b327c76c8509e11bde550b5ebadc1ab3046341ff5";
+    url = "https://github.com/ros2-gbp/mola_input_rosbag1-release/archive/release/rolling/mola_input_rosbag1/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "6468716c2b2b8b7a7357d3f17bee8999493de05413adb80efd2452f2a2b4d57c";
   };
 
   buildType = "cmake";

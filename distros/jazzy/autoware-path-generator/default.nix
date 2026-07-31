@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-internal-planning-msgs, autoware-lanelet2-utils, autoware-lint-common, autoware-motion-utils, autoware-planning-msgs, autoware-planning-test-manager, autoware-test-utils, autoware-trajectory, autoware-utils-debug, autoware-utils-rclcpp, autoware-utils-system, autoware-vehicle-info-utils, generate-parameter-library, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-path-generator";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_path_generator/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "50c91373c3d118558f7f83778bf4fa2cd8521453445dec7f6f3c50fdb45abb22";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_path_generator/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "bef30d358457cb295f41859b476c00a05ade05e0aa03df4d7ad8365862cb7237";
   };
 
   buildType = "ament_cmake";

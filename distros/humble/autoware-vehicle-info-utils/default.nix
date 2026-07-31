@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-index-cpp, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-utils-geometry, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-index-cpp, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-utils-geometry, autoware-utils-rclcpp, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-autoware-vehicle-info-utils";
-  version = "1.8.0-r3";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_vehicle_info_utils/1.8.0-3.tar.gz";
-    name = "1.8.0-3.tar.gz";
-    sha256 = "86e17a10607528aed5e3246bdb5a57fc5a8c7616dda6b68842ed5ebf25972b96";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_vehicle_info_utils/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "a85bd8fbd89f7abb3d52ed1aae27d7a23e041d9305de391a9d053843f3fb9dd4";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto autoware-cmake ];
   checkInputs = [ ament-cmake-ros ament-index-cpp ament-lint-auto autoware-lint-common ];
-  propagatedBuildInputs = [ autoware-utils-geometry rclcpp ];
+  propagatedBuildInputs = [ autoware-utils-geometry autoware-utils-rclcpp rclcpp ];
   nativeBuildInputs = [ ament-cmake-auto autoware-cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, lifecycle-msgs, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-kilted-easynav-planner";
-  version = "0.3.2-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_planner/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "2d5222a1f3ff797e13197028af67039a2ad47611d1fe5ceb578969f8f94f5a6f";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_planner/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "0d05f522b0e56c3efdc651f37e06f2cf52dc6d672da2ed35a3b55eba61aac89b";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Easy Navigation: Planner package.";
-    license = with lib.licenses; [ gpl3Only ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

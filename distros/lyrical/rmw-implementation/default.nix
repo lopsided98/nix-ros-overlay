@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, performance-test-fixture, rcpputils, rcutils, rmw, rmw-connextdds, rmw-cyclonedds-cpp, rmw-fastrtps-cpp, rmw-fastrtps-dynamic-cpp, rmw-implementation-cmake, rmw-zenoh-cpp }:
 buildRosPackage {
   pname = "ros-lyrical-rmw-implementation";
-  version = "3.1.5-r6";
+  version = "3.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_implementation-release/archive/release/lyrical/rmw_implementation/3.1.5-6.tar.gz";
-    name = "3.1.5-6.tar.gz";
-    sha256 = "5b2f0ea53a214323d8c01e72a62d455d911c3504b8cec252852327a168f813d8";
+    url = "https://github.com/ros2-gbp/rmw_implementation-release/archive/release/lyrical/rmw_implementation/3.1.6-1.tar.gz";
+    name = "3.1.6-1.tar.gz";
+    sha256 = "6ade0360b838ca645faf36010415d2b2490c731b044ff8822fb91917435bf2f7";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, pcl-conversions, python3Packages, rclcpp, rclpy, sensor-msgs, sensor-msgs-py, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-lyrical-pointcloud-conversions";
-  version = "0.0.3-r1";
+  version = "0.0.4-r3";
 
   src = fetchurl {
-    url = "https://github.com/li9i/pointcloud-conversions-release/archive/release/lyrical/pointcloud_conversions/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "597622e8f3b6a16fcd7843f7c7cf8578aeba9542ad74d9c22463a430af3eb14b";
+    url = "https://github.com/li9i/pointcloud-conversions-release/archive/release/lyrical/pointcloud_conversions/0.0.4-3.tar.gz";
+    name = "0.0.4-3.tar.gz";
+    sha256 = "02872f24e1853324f5fc068a6e26c1d5a44af370ae06471c56afc4c0e49cb1f0";
   };
 
   buildType = "ament_cmake";

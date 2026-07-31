@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, autoware-common-msgs, builtin-interfaces, geometry-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-planning-msgs";
-  version = "1.12.0-r1";
+  version = "1.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_msgs-release/archive/release/jazzy/autoware_planning_msgs/1.12.0-1.tar.gz";
-    name = "1.12.0-1.tar.gz";
-    sha256 = "7e2d8b56d1b13f1480b12851a49633abad0a7c68cac93fde59c048c2c0706390";
+    url = "https://github.com/ros2-gbp/autoware_msgs-release/archive/release/jazzy/autoware_planning_msgs/1.13.0-1.tar.gz";
+    name = "1.13.0-1.tar.gz";
+    sha256 = "79f8906ba802c130776e9db3ae7a50086bcffa45351fce174d64fa378ff96b9f";
   };
 
   buildType = "ament_cmake";

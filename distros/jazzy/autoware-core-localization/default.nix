@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-downsample-filters, autoware-ekf-localizer, autoware-lint-common, autoware-ndt-scan-matcher, autoware-pose-initializer, autoware-stop-filter, autoware-twist2accel, topic-tools }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-core-localization";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_core_localization/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "93c6c3b5be51fa5ebe762191d15f8dc185c0d7f3bd2cce45485a26fcf08c04c8";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_core_localization/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "b709160c42bbf8259d5152bc94439d05ce572e240954350b40c3867249552608";
   };
 
   buildType = "ament_cmake";

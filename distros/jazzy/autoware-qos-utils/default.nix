@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, autoware-cmake, rclcpp }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-qos-utils";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_qos_utils/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "8df86617e18a7bf0196b6cbea3860ecfb7575fa5d201e91e4e1edcb23ab76dd7";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_qos_utils/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "7d71f2b2e6b277e592d67b302b963592999d3124e7cb202ed7f0fa5dc6de3aa3";
   };
 
   buildType = "ament_cmake";

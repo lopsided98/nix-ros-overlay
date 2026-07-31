@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gtest }:
 buildRosPackage {
   pname = "ros-rolling-nanoflann";
-  version = "1.10.1-r1";
+  version = "1.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nanoflann-release/archive/release/rolling/nanoflann/1.10.1-1.tar.gz";
-    name = "1.10.1-1.tar.gz";
-    sha256 = "9311df8936f840c26e49932fc75973dc2ad6206dc4cc319d270092cb4946310c";
+    url = "https://github.com/ros2-gbp/nanoflann-release/archive/release/rolling/nanoflann/1.11.0-1.tar.gz";
+    name = "1.11.0-1.tar.gz";
+    sha256 = "4cddae34459e6cb30d920368d51942dfc46afc9f3b093e5aab689467e783d5da";
   };
 
   buildType = "cmake";

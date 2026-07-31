@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, geometry-msgs, nav-msgs, pluginlib, rclcpp-lifecycle, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, easynav-sensors, geometry-msgs, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-easynav-serest-controller";
-  version = "0.2.1-r2";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/jazzy/easynav_serest_controller/0.2.1-2.tar.gz";
-    name = "0.2.1-2.tar.gz";
-    sha256 = "49fc314062da592ca89199a7caf13036e8245dc00a65d714016aaa287983a4c0";
+    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/jazzy/easynav_serest_controller/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "7b70b58e1c1f1d34a7c2c493ae0c1e5747d8444075708370d0978461eb829b93";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common rclcpp-lifecycle std-srvs ];
-  propagatedBuildInputs = [ easynav-common easynav-core geometry-msgs nav-msgs pluginlib tf2 tf2-geometry-msgs tf2-ros ];
+  propagatedBuildInputs = [ easynav-common easynav-core easynav-sensors geometry-msgs nav-msgs pluginlib rclcpp tf2 tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

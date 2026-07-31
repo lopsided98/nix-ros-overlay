@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, geometry-msgs, lifecycle-msgs, pluginlib, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-kilted-easynav-controller";
-  version = "0.3.2-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_controller/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "d6704ba38262c9477067605e927bdce2b298e43404becb7ef6ff2bb96cf0c4b2";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_controller/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "241f2377d188021270541953daee9eed89043ca4708dc10d291eee547629c44c";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Easy Navigation: Controller package.";
-    license = with lib.licenses; [ gpl3Only ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

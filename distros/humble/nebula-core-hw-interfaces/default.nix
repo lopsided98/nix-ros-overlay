@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-lint-auto, autoware-cmake, nebula-core-common }:
 buildRosPackage {
   pname = "ros-humble-nebula-core-hw-interfaces";
-  version = "1.1.1-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_core_hw_interfaces/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "f2d419a59001ece609144e42252bc695af995a8b9a1dd22f568eb455a22c9c97";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_core_hw_interfaces/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "defda210d807d2ab7e0a4453472b403d776af3fe4a964cbcd16c47612c361298";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, autoware-common-msgs, autoware-control-msgs, autoware-localization-msgs, autoware-map-msgs, autoware-perception-msgs, autoware-planning-msgs, autoware-sensing-msgs, autoware-simulation-msgs, autoware-system-msgs, autoware-v2x-msgs, autoware-vehicle-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-msgs";
-  version = "1.12.0-r1";
+  version = "1.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_msgs-release/archive/release/jazzy/autoware_msgs/1.12.0-1.tar.gz";
-    name = "1.12.0-1.tar.gz";
-    sha256 = "e3302be5b1f7b9ab99497198f571893a3a9b39d219e06c3f36ba8e7199ba30ba";
+    url = "https://github.com/ros2-gbp/autoware_msgs-release/archive/release/jazzy/autoware_msgs/1.13.0-1.tar.gz";
+    name = "1.13.0-1.tar.gz";
+    sha256 = "9159e2f951eed574d28af8c11fb060a9243fd45de05d90abb6e749600b9a93c8";
   };
 
   buildType = "ament_cmake";

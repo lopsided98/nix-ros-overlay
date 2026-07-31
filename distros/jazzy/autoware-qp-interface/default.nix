@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lint-common, eigen, osqp-vendor, proxsuite, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-qp-interface";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_qp_interface/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "96e23445a664e91697483ad037989addc8369696063dcc4332ae6fdf70972ca3";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_qp_interface/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "e47a2e8df25b17212ecdf6091e0f46da7feb7aa7c26a6167e6a0f4815db4b233";
   };
 
   buildType = "ament_cmake";

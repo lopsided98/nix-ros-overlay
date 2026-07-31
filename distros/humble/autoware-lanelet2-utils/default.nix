@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-index-cpp, autoware-cmake, autoware-lanelet2-extension, autoware-map-msgs, autoware-planning-msgs, autoware-pyplot, autoware-test-utils, autoware-utils-geometry, autoware-utils-math, range-v3, rclcpp, rclpy-message-converter, yaml-cpp }:
 buildRosPackage {
   pname = "ros-humble-autoware-lanelet2-utils";
-  version = "1.8.0-r3";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_lanelet2_utils/1.8.0-3.tar.gz";
-    name = "1.8.0-3.tar.gz";
-    sha256 = "ac29cda0e88d71d0826e9be03764cf6f4767ff25cd3220a2b6f0f945a3671201";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_lanelet2_utils/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "4ca993c0b73b5fb700101480a9ee2596067a1af03cc6de34b3491781d08181ed";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-core, ament-cmake-lint-cmake, ament-copyright, ament-flake8, ament-pep257, autoware-cmake, ros-testing }:
 buildRosPackage {
   pname = "ros-humble-autoware-testing";
-  version = "1.8.0-r3";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_testing/1.8.0-3.tar.gz";
-    name = "1.8.0-3.tar.gz";
-    sha256 = "be66edc66faff9be6830cd6de19be8dadd53f0309ebc6aa4313990a44dc42874";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_testing/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "000e7daafd64d94b4bca0af779611a3fe79fada1569eec6bcdab16a744e5420e";
   };
 
   buildType = "ament_cmake";

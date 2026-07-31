@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-behavior-velocity-planner-common, autoware-cmake, autoware-internal-debug-msgs, autoware-internal-planning-msgs, autoware-lint-common, autoware-map-msgs, autoware-motion-utils, autoware-perception-msgs, autoware-planning-msgs, autoware-route-handler, autoware-trajectory, autoware-utils-debug, autoware-utils-logging, autoware-utils-pcl, autoware-utils-rclcpp, autoware-velocity-smoother, boost, diagnostic-msgs, eigen, eigen3-cmake-module, geometry-msgs, pcl-conversions, pluginlib, rclcpp, rclcpp-components, sensor-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-behavior-velocity-planner";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_behavior_velocity_planner/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "84b9f0bad86ab336f811be3ce32be380580e0539b43eda00a54ba3eeb2d0a5c6";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_behavior_velocity_planner/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "eff76c2db4269b427aeeaa64362d7bfcec1db8357b1d7ced68e6d4b34f3db6a3";
   };
 
   buildType = "ament_cmake";

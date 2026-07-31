@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-cppcheck, ament-cmake-export-dependencies, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-test, ament-cmake-xmllint, ament-lint-auto, autoware-cmake, autoware-lint-common, pcl-ros, point-cloud-msg-wrapper }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-cppcheck, ament-cmake-export-dependencies, ament-cmake-lint-cmake, ament-cmake-ros, ament-cmake-test, ament-cmake-xmllint, ament-lint-auto, autoware-cmake, autoware-lint-common, pcl-ros, point-cloud-msg-wrapper, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-point-types";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_point_types/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "a81f2e740d8ce9802d98fa77ecc072398b29f746ead4ca45e4058a69f3ccd04b";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_point_types/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "5d984c38ef67ccf96eea4f53a86bae916dde0650e43bd394b42358685fb0686b";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-export-dependencies autoware-cmake ];
   checkInputs = [ ament-cmake-ros ament-lint-auto autoware-lint-common point-cloud-msg-wrapper ];
-  propagatedBuildInputs = [ ament-cmake-copyright ament-cmake-core ament-cmake-cppcheck ament-cmake-lint-cmake ament-cmake-test ament-cmake-xmllint pcl-ros point-cloud-msg-wrapper ];
+  propagatedBuildInputs = [ ament-cmake-copyright ament-cmake-core ament-cmake-cppcheck ament-cmake-lint-cmake ament-cmake-test ament-cmake-xmllint pcl-ros point-cloud-msg-wrapper sensor-msgs ];
   nativeBuildInputs = [ ament-cmake-core ament-cmake-export-dependencies ament-cmake-test autoware-cmake ];
 
   meta = {

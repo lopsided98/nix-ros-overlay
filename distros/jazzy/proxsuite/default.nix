@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, doxygen, eigen, git, matio, python3Packages, simde }:
 buildRosPackage {
   pname = "ros-jazzy-proxsuite";
-  version = "0.6.5-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/proxsuite-release/archive/release/jazzy/proxsuite/0.6.5-1.tar.gz";
-    name = "0.6.5-1.tar.gz";
-    sha256 = "b3bad43f16f53a1e3896af5d80a7f78879c189457f36ece8d8c26644708c0666";
+    url = "https://github.com/ros2-gbp/proxsuite-release/archive/release/jazzy/proxsuite/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "1801e8cb199e27d3d7f7bba232c69f459f8da3fdda2b7138b1f0f06d0a321d88";
   };
 
   buildType = "cmake";

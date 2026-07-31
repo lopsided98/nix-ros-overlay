@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-behavior-velocity-planner, autoware-behavior-velocity-planner-common, autoware-cmake, autoware-internal-planning-msgs, autoware-lint-common, autoware-motion-utils, autoware-route-handler, autoware-trajectory, autoware-utils-debug, autoware-utils-geometry, autoware-utils-rclcpp, eigen, eigen3-cmake-module, geometry-msgs, pluginlib, rclcpp, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-behavior-velocity-stop-line-module";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_behavior_velocity_stop_line_module/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "51e26de2000970414a153d35cb82aac493282853684658d61a8fe8e623802c3e";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_behavior_velocity_stop_line_module/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "afdb5e0e7a72cc652a8fbc69718600f34ec570d2326187375d9e09b48e659617";
   };
 
   buildType = "ament_cmake";

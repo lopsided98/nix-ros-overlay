@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-index-cpp, autoware-cmake, autoware-internal-planning-msgs, autoware-lanelet2-utils, autoware-lint-common, autoware-motion-utils, autoware-planning-msgs, autoware-pyplot, autoware-test-utils, autoware-utils-geometry, fmt, geometry-msgs, lanelet2-core, pybind11-vendor, python-cmake-module, python3, python3Packages, range-v3, rclcpp, tf2, tf2-geometry-msgs, tl-expected, yaml-cpp }:
 buildRosPackage {
   pname = "ros-humble-autoware-trajectory";
-  version = "1.8.0-r3";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_trajectory/1.8.0-3.tar.gz";
-    name = "1.8.0-3.tar.gz";
-    sha256 = "7d72b2a38fca1952dbfc04e6bbce5e22b971a648d54d3f82339cd7fd522eb216";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_trajectory/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "72597b498326701a8d27ee1b72e978478e4d24967c03ccd0a5d92d1f0f2ce15c";
   };
 
   buildType = "ament_cmake";

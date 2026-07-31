@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, autoware-cmake, autoware-lint-common, autoware-point-types, autoware-utils-debug, autoware-utils-system, autoware-utils-tf, geometry-msgs, rclcpp, rclcpp-components, sensor-msgs, tf2-eigen }:
 buildRosPackage {
   pname = "ros-humble-autoware-crop-box-filter";
-  version = "1.8.0-r3";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_crop_box_filter/1.8.0-3.tar.gz";
-    name = "1.8.0-3.tar.gz";
-    sha256 = "af268e68a6722c83be03878502b986c0f9d2a65aaad4a5ea3dc54bf52cfde8c0";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_crop_box_filter/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "144d47911b4a785462ef8e49c7f1e99b97ae97206edfcc7f17b7336e71830d02";
   };
 
   buildType = "ament_cmake";

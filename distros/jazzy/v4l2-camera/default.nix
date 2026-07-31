@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, camera-info-manager, cv-bridge, image-transport, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-v4l2-camera";
-  version = "0.7.1-r1";
+  version = "0.7.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_v4l2_camera-release/archive/release/jazzy/v4l2_camera/0.7.1-1.tar.gz";
-    name = "0.7.1-1.tar.gz";
-    sha256 = "7c946521ab7370e515de5940c1732927a7c7524745e9d72c33f1161dbdbec228";
+    url = "https://github.com/ros2-gbp/ros2_v4l2_camera-release/archive/release/jazzy/v4l2_camera/0.7.3-1.tar.gz";
+    name = "0.7.3-1.tar.gz";
+    sha256 = "424f98f774c98397f5e9dae4eb5b760dd297fddff0467441417d394d731c61b5";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, pcl, pcl-conversions, pluginlib, sensor-msgs, yasmin }:
 buildRosPackage {
   pname = "ros-humble-yasmin-pcl";
-  version = "6.0.0-r1";
+  version = "6.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_pcl/6.0.0-1.tar.gz";
-    name = "6.0.0-1.tar.gz";
-    sha256 = "7e3fc21e83fd8a98d5e2e6044f8a6f42125cf786c376d0ad857ef64d6c2a3938";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_pcl/6.1.0-1.tar.gz";
+    name = "6.1.0-1.tar.gz";
+    sha256 = "28e81e539084163857380195f55ca6e49666762c74cb5e8acb807611979b1a71";
   };
 
   buildType = "ament_cmake";

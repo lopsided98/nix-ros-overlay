@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, builtin-interfaces, geographic-msgs, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, shape-msgs, std-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-adapi-v1-msgs";
-  version = "1.9.1-r1";
+  version = "1.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_adapi_msgs-release/archive/release/jazzy/autoware_adapi_v1_msgs/1.9.1-1.tar.gz";
-    name = "1.9.1-1.tar.gz";
-    sha256 = "c0c83eba4b51fcd2c481f5cc3993ec6332a0a1d8804b99b65d1bbfcd78321fec";
+    url = "https://github.com/ros2-gbp/autoware_adapi_msgs-release/archive/release/jazzy/autoware_adapi_v1_msgs/1.9.2-1.tar.gz";
+    name = "1.9.2-1.tar.gz";
+    sha256 = "27f32ff318c4290f7c244841be9f7cd9b6013a5854cac40e85166d790a8c690e";
   };
 
   buildType = "ament_cmake";

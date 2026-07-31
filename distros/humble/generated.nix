@@ -364,6 +364,8 @@ self: super: {
 
  autoware-cmake = self.callPackage ./autoware-cmake {};
 
+ autoware-command-gate = self.callPackage ./autoware-command-gate {};
+
  autoware-common-msgs = self.callPackage ./autoware-common-msgs {};
 
  autoware-component-interface-specs = self.callPackage ./autoware-component-interface-specs {};
@@ -633,6 +635,8 @@ self: super: {
  bosch-locator-bridge = self.callPackage ./bosch-locator-bridge {};
 
  bosch-locator-bridge-utils = self.callPackage ./bosch-locator-bridge-utils {};
+
+ bosch-navigator-bridge = self.callPackage ./bosch-navigator-bridge {};
 
  broll = self.callPackage ./broll {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, xacro }:
 buildRosPackage {
   pname = "ros-humble-autoware-sample-vehicle-description";
-  version = "1.8.0-r3";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_sample_vehicle_description/1.8.0-3.tar.gz";
-    name = "1.8.0-3.tar.gz";
-    sha256 = "06b0ff08ed09774b909451a66ca1eb18a828ee0943c5353d995157516ff5f107";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_sample_vehicle_description/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "886e01cb6c433e72a482a2cbdd001c6b8aa3e28eb6bba0fe2263c9b808e1fe23";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, velodyne-description, xacro }:
 buildRosPackage {
   pname = "ros-humble-autoware-sample-sensor-kit-description";
-  version = "1.8.0-r3";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_sample_sensor_kit_description/1.8.0-3.tar.gz";
-    name = "1.8.0-3.tar.gz";
-    sha256 = "3d322838d64cd180fa032c25be6222df231e7144ae1ee82121c2f197eb016acb";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_sample_sensor_kit_description/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "3401573b930cae5334f3d14923c2797da05ec69fa39206bd558ee815cdd0259f";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-lint-common, pybind11-vendor, python-cmake-module, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-pyplot";
-  version = "1.8.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_pyplot/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "f18d3bf9608ad8e81039bfac738b612930cc44be937501c3b8636809b1b72f33";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/jazzy/autoware_pyplot/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "3f1032ac25fe5c2dc5f473e16a4b655fc0d451e08130cf99f95fe9ea879ff92b";
   };
 
   buildType = "ament_cmake";

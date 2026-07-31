@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, bullet, geometry-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-tf2-bullet";
-  version = "0.45.8-r1";
+  version = "0.45.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/lyrical/tf2_bullet/0.45.8-1.tar.gz";
-    name = "0.45.8-1.tar.gz";
-    sha256 = "dc162312b56ca885c8c3c431975a37800dbb51287f26641eb0ed592d2310a620";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/lyrical/tf2_bullet/0.45.9-1.tar.gz";
+    name = "0.45.9-1.tar.gz";
+    sha256 = "36a58cad04f96ab40e69b4cfc1853a4c16caee71165ccbb25731aa018bcc6f88";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-ros, ament-lint-auto, autoware-cmake, autoware-internal-debug-msgs, autoware-internal-planning-msgs, autoware-interpolation, autoware-lint-common, autoware-motion-utils, autoware-osqp-interface, autoware-planning-msgs, autoware-planning-test-manager, autoware-qp-interface, autoware-trajectory, autoware-utils-debug, autoware-utils-diagnostics, autoware-utils-geometry, autoware-utils-logging, autoware-utils-math, autoware-utils-rclcpp, autoware-vehicle-info-utils, eigen3-cmake-module, geometry-msgs, nav-msgs, rclcpp, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-autoware-velocity-smoother";
-  version = "1.8.0-r3";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_velocity_smoother/1.8.0-3.tar.gz";
-    name = "1.8.0-3.tar.gz";
-    sha256 = "a0c7c3941c3409d1afd5fe310f3552f6998d2ace1e022bd4feeeb578365d99c9";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_velocity_smoother/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "146c8ad08a2c9167d8e2d8abed1db37d1e150b1f8b3136b5a9aa4ac15d2fbb92";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, boost, nebula-core-common, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-nebula-continental-common";
-  version = "1.1.1-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_continental_common/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "989177482bec813625d93bd702259ac4b8b9a94b5db964b71bee4837d179a5f3";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_continental_common/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "7a1cede31791aee6f5b3d08941c0bd63b4f3cece055738efae2cbdcb7a369d36";
   };
 
   buildType = "ament_cmake";

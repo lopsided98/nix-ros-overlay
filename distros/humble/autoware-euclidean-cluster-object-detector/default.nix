@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, autoware-cmake, autoware-crop-box-filter, autoware-lint-common, autoware-perception-msgs, autoware-point-types, autoware-utils-debug, autoware-utils-diagnostics, autoware-utils-system, geometry-msgs, pcl, pcl-conversions, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-autoware-euclidean-cluster-object-detector";
-  version = "1.8.0-r3";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_euclidean_cluster_object_detector/1.8.0-3.tar.gz";
-    name = "1.8.0-3.tar.gz";
-    sha256 = "80ba618ec16e49348d01f258495499da237865b0e5bbb04e3b9c368316665a4c";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_euclidean_cluster_object_detector/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "fcad0f35acbaec0ab8e4b92a06b803ddc5ff22a1670f1bbbe7c4ca7639a43802";
   };
 
   buildType = "ament_cmake";

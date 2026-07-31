@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, ament-lint-auto, autoware-adapi-v1-msgs, autoware-cmake, autoware-control-msgs, autoware-lint-common, autoware-localization-msgs, autoware-map-msgs, autoware-perception-msgs, autoware-planning-msgs, autoware-system-msgs, autoware-vehicle-msgs, nav-msgs, rcl, rclcpp, rosidl-runtime-cpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-autoware-component-interface-specs";
-  version = "1.8.0-r3";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_component_interface_specs/1.8.0-3.tar.gz";
-    name = "1.8.0-3.tar.gz";
-    sha256 = "58095b07f22c3878de9b256d86cf22404c47aa122c152e05e0f4675d7c816bf3";
+    url = "https://github.com/ros2-gbp/autoware_core-release/archive/release/humble/autoware_component_interface_specs/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "daa013c167c4183d3eae9d00aa0e8e515bfa9c38d42aea2939e293c38b853647";
   };
 
   buildType = "ament_cmake";

@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, autoware-internal-debug-msgs, autoware-internal-metric-msgs, autoware-internal-perception-msgs, autoware-internal-planning-msgs, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, autoware-internal-debug-msgs, autoware-internal-localization-msgs, autoware-internal-metric-msgs, autoware-internal-perception-msgs, autoware-internal-planning-msgs, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-autoware-internal-msgs";
-  version = "1.12.1-r1";
+  version = "1.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_internal_msgs-release/archive/release/jazzy/autoware_internal_msgs/1.12.1-1.tar.gz";
-    name = "1.12.1-1.tar.gz";
-    sha256 = "49c69a10be7edccb85bb1c1e60ee0cda02271fca527bfc9177bf200af6700c97";
+    url = "https://github.com/ros2-gbp/autoware_internal_msgs-release/archive/release/jazzy/autoware_internal_msgs/1.15.0-1.tar.gz";
+    name = "1.15.0-1.tar.gz";
+    sha256 = "22f1ef97a51c99c95bdb9b029220cf4b6f90a3b5d8482733c7055ef3e56452bb";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-auto rosidl-default-generators ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ autoware-internal-debug-msgs autoware-internal-metric-msgs autoware-internal-perception-msgs autoware-internal-planning-msgs builtin-interfaces rosidl-default-runtime std-msgs ];
+  propagatedBuildInputs = [ autoware-internal-debug-msgs autoware-internal-localization-msgs autoware-internal-metric-msgs autoware-internal-perception-msgs autoware-internal-planning-msgs builtin-interfaces rosidl-default-runtime std-msgs ];
   nativeBuildInputs = [ ament-cmake-auto rosidl-default-generators ];
 
   meta = {
