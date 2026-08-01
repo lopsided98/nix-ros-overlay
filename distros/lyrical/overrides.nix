@@ -479,6 +479,21 @@ in {
     ];
   });
 
+  popf = (rosSuper.popf.override {
+    # Fix "libfl.so.2: undefined reference to `yylex'"
+    flex = self.flex_2_5_35;
+  }).overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # cmake: fix missing includes, ref. https://github.com/fmrico/popf/pull/12
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/popf/commit/e8ba226f67e0513689d0efc84e9b4e8b55394bd4.patch?full_index=1";
+        hash = "sha256-fHorf5CyGDIbx3WLb4XOfGVSXhOXjtBq9iVNLywCDQQ=";
+      })
+    ];
+  });
+
   pybind11-json-vendor = lib.patchAmentVendorGit rosSuper.pybind11-json-vendor { };
 
   # This meta-package is referenced by the rosdep key python3-qt-bindings,
