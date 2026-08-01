@@ -479,6 +479,10 @@ in {
     ];
   });
 
+  # Build against Qt6. Upstream builds against qt5, but in Nix, we get
+  # a Qt version conflict.
+  plansys2-tools = rosSuper.plansys2-tools.override { qt5 = self.qt6; };
+
   popf = (rosSuper.popf.override {
     # Fix "libfl.so.2: undefined reference to `yylex'"
     flex = self.flex_2_5_35;
