@@ -1431,6 +1431,17 @@ in with lib; {
     '';
   });
 
+  yasmin-msgs = rosSuper.yasmin-msgs.overrideAttrs ({
+    buildInputs ? [], postPatch ? "", ...
+  }: {
+    # https://github.com/uleroboticsgroup/yasmin/pull/127
+    buildInputs = buildInputs ++ [ rosSelf.action-msgs ];
+    postPatch = postPatch + ''
+      substituteInPlace package.xml \
+        --replace-fail '</package>' '<depend>action_msgs</depend></package>'
+    '';
+  });
+
   zmqpp-vendor = lib.patchAmentVendorGit rosSuper.zmqpp-vendor {
     patchesFor.zmqpp_vendor = [ ./zmqpp-vendor/cmake-version.patch ];
   };
