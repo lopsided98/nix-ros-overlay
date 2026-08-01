@@ -56,7 +56,11 @@ let
             read -r version < $src/version_prefix.txt
             if [[ $version != "${rev}" ]]; then
               echo "MRPT version mismatch: $version != "${rev}". Is fetchgitArgs.hash in patchMrptExternalProjectGit up to date?"
-              exit 1
+              if [[ $version = "2.15.19" ]] && [[ "${rev}" = "2.15.20" ]]; then
+                : # TODO remove this if when MRPT releases a correct release (see https://github.com/MRPT/mrpt/issues/1385)
+              else
+                exit 1
+              fi
             fi
           '';
           buildInputs = buildInputs ++ [
