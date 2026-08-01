@@ -64,17 +64,6 @@ in {
     '';
   });
 
-  autoware-downsample-filters = rosSuper.autoware-downsample-filters.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    # fix "fatal error: pcl/io/io.h: No such file or directory"
-    # https://github.com/autowarefoundation/autoware_core/pull/1069
-    postPatch = postPatch + ''
-      substituteInPlace src/voxel_grid_downsample_filter/voxel_grid_downsample_filter_node.cpp --replace-fail \
-        "#include <pcl/io/io.h>" "#include <pcl/common/io.h>"
-    '';
-  });
-
   autoware-map-height-fitter = rosSuper.autoware-map-height-fitter.overrideAttrs ({
     postPatch ? "", ...
   }: {
@@ -132,27 +121,6 @@ in {
         "find_package(autoware_cmake REQUIRED)" \
         "find_package(PCL REQUIRED)
         find_package(autoware_cmake REQUIRED)" \
-    '';
-  });
-
-  autoware-ndt-scan-matcher = rosSuper.autoware-ndt-scan-matcher.overrideAttrs ({
-    patches ? [], postPatch ? "", ...
-  }: {
-    patches = patches ++ [
-      # fix(ndt_scan_matcher): explicitly include omp.h (#1166)
-      (self.fetchpatch2 {
-        url = "https://github.com/autowarefoundation/autoware_core/commit/801be9de40889d564ce3164a4b4f4eecd76b826f.patch?full_index=1";
-        hash = "sha256-zYuYJwXOym2RQbjuzrKOoMuMm85qYy6hXglqopT1CTE=";
-        stripLen = 2;
-      })
-    ];
-    # fix "fatal error: pcl/filters/boost.h: No such file or directory"
-    # pcl/filters/boost.h was removed in newer PCL versions
-    postPatch = postPatch + ''
-      substituteInPlace \
-        include/autoware/ndt_scan_matcher/ndt_omp/multi_voxel_grid_covariance_omp.h \
-        src/ndt_omp/multi_voxel_grid_covariance_omp_impl.hpp \
-        --replace-fail "#include <pcl/filters/boost.h>" ""
     '';
   });
 
