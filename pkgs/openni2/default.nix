@@ -50,6 +50,8 @@ in clangStdenv.mkDerivation rec {
       --replace-fail 'register ' ""
     substituteInPlace ThirdParty/GL/glh/glh_linear.h \
       --replace-fail 'register ' ""
+    substituteInPlace ThirdParty/LibJPEG/{j{c,d}color.c,jcdctmgr.c,j{c,cp,d,dp}huff.c,jcprepct.c,j{c,d}sample.c,jdhuff.h,jdmerge.c,jquant{1,2}.c,jutils.c} \
+      --replace-fail 'register ' ""
   '';
 
   makeFlags = [ "CFG=Release" "ALLOW_WARNINGS=1" ];
