@@ -165,15 +165,23 @@ self: super: with self.lib; {
       rospkg = pyFinal.callPackage ./rospkg { };
 
       setuptools_79 = pyPrev.setuptools.overrideAttrs ({
-        pname, src, ...
-      }: rec {
+        pname, src, postPatch, ...
+      }: let
         version = "79.0.1";
+      in {
+        inherit version;
         src = self.fetchFromGitHub {
           owner = "pypa";
           repo = "setuptools";
           tag = "v${version}";
           hash = "sha256-6Gv8R0nlSSz0IL8kD6uPU9MeheGTF1OpdzU7BoApRtk=";
         };
+        # Fix pythonMetadataCheckPhase error
+        postPatch = postPatch + ''
+          substituteInPlace setup.cfg \
+            --replace-fail "tag_build = .post" "" \
+            --replace-fail "tag_date = 1" ""
+        '';
       });
 
       vcstools = pyFinal.callPackage ./vcstools { };
