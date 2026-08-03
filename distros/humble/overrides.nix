@@ -453,7 +453,12 @@ in with lib; {
     })];
   });
 
-  lely-core-libraries = (lib.patchExternalProjectGit rosSuper.lely-core-libraries {
+  lely-core-libraries = let
+    fix-pkg-resources = self.fetchpatch2 {
+      url = "https://gitlab.com/lely_industries/lely-core/-/merge_requests/150.patch";
+      hash = "sha256-YDmLYVnwsxYtLOCaOy3LuqBNTo63LZ3bb2vStxN3yO0=";
+    };
+  in (lib.patchExternalProjectGit rosSuper.lely-core-libraries {
     url = "https://gitlab.com/lely_industries/lely-core.git";
     rev = "fb735b79cab5f0cdda45bc5087414d405ef8f3ab";
     fetchgitArgs = {
@@ -464,11 +469,13 @@ in with lib; {
     postPatch ? "", ...
   }: {
     # ref. https://gitlab.com/lely_industries/lely-core/-/merge_requests/143
+    # ref. https://gitlab.com/lely_industries/lely-core/-/merge_requests/150
     postPatch = postPatch + ''
       substituteInPlace CMakeLists.txt --replace-fail \
         "CONFIGURE_COMMAND autoreconf -i <SOURCE_DIR>" \
         "PATCH_COMMAND sed -i \"s|ATOMIC_VAR_INIT(0)|0|\" include/lely/util/spscring.h
         && sed -i \"s|static const char tab.64. =|static const char tab[] =|\" src/util/print.c
+        COMMAND git apply --whitespace=fix --reject ${fix-pkg-resources}
         CONFIGURE_COMMAND autoreconf -i <SOURCE_DIR>"
     '';
   });

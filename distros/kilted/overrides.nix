@@ -379,6 +379,19 @@ in {
       hash = "sha256-A7RsVQwzj59M9+eGTeNt+/yb3rFziJl3fy33K5c36z0=";
       leaveDotGit = true;
     };
+  }).overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix for python 3.14
+      # ref. https://github.com/ros-industrial/ros2_canopen/pull/441/changes
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-industrial/ros2_canopen/commit/56fc4ec3359dbd07f91b5240a13f633df7d2f785.patch?full_index=1";
+        stripLen = 1;
+        hash = "sha256-Sx9H06E1aOYPzcLNJcyb9y+FxcNbTgSkS5hxDny1IeA=";
+      })
+    ];
+
   });
 
   libphidget22 = lib.patchVendorUrl rosSuper.libphidget22 {
