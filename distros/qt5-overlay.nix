@@ -200,12 +200,12 @@ rosSelf: rosSuper: with rosSelf.lib; {
     qt6 = self.qt5;
     vtkWithQt6 = rosSelf.vtk;
   }).overrideAttrs ({
-    propagatedBuildInputs ? [], nativeBuildInputs ? [], buildInputs ? [], ...
+    propagatedBuildInputs ? [], nativeBuildInputs ? [], buildInputs ? [], version, ...
   }: {
     inherit (rosSuper.rtabmap)
       pname
-      version
-      src;
+      version;
+    src = rosSuper.rtabmap.src // { tag = head (split "-" version); };
     nativeBuildInputs = nativeBuildInputs ++ [ self.qt5.wrapQtAppsHook ];
     propagatedBuildInputs = propagatedBuildInputs ++ [
       self.librealsense
