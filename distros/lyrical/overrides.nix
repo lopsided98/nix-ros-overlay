@@ -574,12 +574,12 @@ in {
 
   # Use rtabmap derivation from nixpkgs, but with the source from ROS.
   rtabmap = self.rtabmap.overrideAttrs ({
-    propagatedBuildInputs ? [], ...
+    propagatedBuildInputs ? [], version, ...
   }: {
     inherit (rosSuper.rtabmap)
       pname
-      version
-      src;
+      version;
+    src = rosSuper.rtabmap.src // { tag = lib.head (lib.split "-" version); };
     propagatedBuildInputs = propagatedBuildInputs ++ [
       self.librealsense
       self.octomap
