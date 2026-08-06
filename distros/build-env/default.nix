@@ -17,7 +17,7 @@
 # take precedence over Nix-built packages. This can be achieved by setting
 # underlay to true.
 { lib, stdenv, buildPackages, writeText, buildEnv, makeWrapper, python, ros-environment }:
-{ paths ? [], wrapPrograms ? true, underlay ? false, postBuild ? "", passthru ? { }, ... }@args:
+{ paths ? [], wrapPrograms ? true, underlay ? false, derivationArgs ? { }, postBuild ? "", passthru ? { }, ... }@args:
 
 with lib;
 assert assertMsg (underlay -> wrapPrograms)
@@ -52,7 +52,7 @@ let
     # nix-shell -p does.
     paths = propagatedPaths.rosPackages;
 
-    derivationArgs = {
+    derivationArgs = derivationArgs // {
       nativeBuildInputs = optional wrapPrograms makeWrapper;
       propagatedBuildInputs = propagatedPaths.otherPackages;
 
