@@ -1,6 +1,8 @@
 { version, distro }:
 self: super:
 let
+  useQt5 = builtins.elem distro ["humble" "jazzy" "kilted"];
+
   pythonOverridesFor = with self.lib; prevPython: prevPython // {
     pkgs = prevPython.pkgs.overrideScope (pyFinal: pyPrev: {
       wxPython = pyFinal.wxPython_4_2;
@@ -245,6 +247,8 @@ let
       '';
     });
 
+    qt5or6 = if useQt5 then self.qt5 else self.qt6;
+
     rtabmap-viz = rosSuper.rtabmap-viz.overrideAttrs ({
       postFixup ? "", ...
     }: {
@@ -305,8 +309,8 @@ in self.lib.makeScopeWithSplicing
     overrides
   ]
   ++ self.lib.optional (version == 2) (import ./ros2-overlay.nix self)
-  ++ self.lib.optional (builtins.elem distro ["humble" "jazzy" "kilted"]) (import ./qt5-overlay.nix self)
-  ++ self.lib.optional (builtins.elem distro ["lyrical" "rolling"]) (import ./qt6-overlay.nix self)
+  ++ self.lib.optional useQt5 (import ./qt5-overlay.nix self)
+  ++ self.lib.optional (!useQt5) (import ./qt6-overlay.nix self)
   ++ [
     (import (./. + "/${distro}/overrides.nix") self)
   ]) rosSelf {})
