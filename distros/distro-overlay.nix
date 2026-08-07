@@ -29,7 +29,7 @@ let
     python3Packages = rosSelf.python3.pkgs;
 
     boost = self.boost.override {
-      python = rosSelf.python;
+      python = rosSelf.python3;
       enablePython = true;
     };
   };
@@ -134,7 +134,7 @@ let
         substituteInPlace CMakeLists.txt --replace-fail /usr/bin/env '${self.buildPackages.coreutils}/bin/env'
         patchShebangs pymavlink/tools/mavgen.py
       '';
-      ROS_PYTHON_VERSION = if rosSelf.python.isPy3k then 3 else 2;
+      ROS_PYTHON_VERSION = 3;
       # Fix eval failure. The future module is broken with Python
       # 3.13+, but mavlink does not need it despite declaring it as
       # dependency.
