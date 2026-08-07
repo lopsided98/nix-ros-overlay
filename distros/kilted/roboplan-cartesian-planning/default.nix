@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-python, python3, python3Packages, roboplan, roboplan-example-models, roboplan-oink, roboplan-toppra }:
 buildRosPackage {
   pname = "ros-kilted-roboplan-cartesian-planning";
-  version = "0.5.1-r1";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/kilted/roboplan_cartesian_planning/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "213cb017676bbacb73257bc8d826ca8c681175a243e81b52ed0865e88624b988";
+    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/kilted/roboplan_cartesian_planning/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "03d1571f2bdec29c821e23d9d8381dca6913b0ca38c607516c0a8c57aa61da78";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-roboplan-example-models";
-  version = "0.5.1-r1";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/kilted/roboplan_example_models/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "d880303d3d54de03e69c95bfa5d93f9baf53214323b5bf8abdb57525a4379198";
+    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/kilted/roboplan_example_models/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "0824782accc2b93280480e625fa740505d03c75ec7cf5a30a351e0d549e4f09f";
   };
 
   buildType = "ament_cmake";

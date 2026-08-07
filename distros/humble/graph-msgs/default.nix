@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-graph-msgs";
-  version = "0.2.0-r3";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/graph_msgs-release/archive/release/humble/graph_msgs/0.2.0-3.tar.gz";
-    name = "0.2.0-3.tar.gz";
-    sha256 = "b715949f2f7db997521cac9fd8f61da7fc53fccf8e6c4394150fe0d41acac447";
+    url = "https://github.com/ros2-gbp/graph_msgs-release/archive/release/humble/graph_msgs/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "3711ab642009191dbb978879740b6f74908d9a61f59ae93306b9b31074e60b2a";
   };
 
   buildType = "ament_cmake";

@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mola-common, mola-yaml, mrpt-libgui, mrpt-libmaps, mrpt-libobs }:
+{ lib, buildRosPackage, fetchurl, cmake, mola-common, mola-yaml, mrpt-libmaps, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-rolling-mola-kernel";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_kernel/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "06525015c840efae6c568cde28fe11979231305fa3d3050620ee162191a0459b";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_kernel/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "503b6f96e7a99c5784a96f6be8118b250e80449bb22c481bee5963c3621d8cfc";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ mola-common mola-yaml mrpt-libgui mrpt-libmaps mrpt-libobs ];
+  propagatedBuildInputs = [ mola-common mola-yaml mrpt-libmaps mrpt-libobs ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-pytest, ament-cmake-python, eigen, gtest, pinocchio, python3, python3Packages, roboplan-example-models, tinyxml2-vendor, tl-expected-nixpkgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-kilted-roboplan";
-  version = "0.5.1-r1";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/kilted/roboplan/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "942a4bef9fdfa87245dc284fd805d14d32891b9e5139e5d405379fa21c01afd6";
+    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/kilted/roboplan/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "ce5154ca6b8a796559744a95bc983d1260634460e92870e4a46c94b9789befc0";
   };
 
   buildType = "ament_cmake";

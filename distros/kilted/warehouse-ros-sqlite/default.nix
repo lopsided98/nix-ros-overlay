@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-gtest, ament-lint-auto, ament-lint-common, boost, class-loader, geometry-msgs, rclcpp, sqlite, warehouse-ros }:
 buildRosPackage {
   pname = "ros-kilted-warehouse-ros-sqlite";
-  version = "1.0.8-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/warehouse_ros_sqlite-release/archive/release/kilted/warehouse_ros_sqlite/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "aa674e87db0bad12b2ee8adb5fbf7f29c3a62882e55b00a3a44d80650942d020";
+    url = "https://github.com/ros2-gbp/warehouse_ros_sqlite-release/archive/release/kilted/warehouse_ros_sqlite/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "eada2865504e87fac8f152cb911ffd7f1c072850e14d83ee928211a64edf45c4";
   };
 
   buildType = "ament_cmake";

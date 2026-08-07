@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, launch-testing, launch-testing-ros, python3Packages, rclpy, ros2topic, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-joint-state-publisher";
-  version = "2.4.1-r1";
+  version = "2.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/joint_state_publisher-release/archive/release/kilted/joint_state_publisher/2.4.1-1.tar.gz";
-    name = "2.4.1-1.tar.gz";
-    sha256 = "982c27687ebd45fd400e979e8377428e0d048af18c7115c679db9cabc3ed7788";
+    url = "https://github.com/ros2-gbp/joint_state_publisher-release/archive/release/kilted/joint_state_publisher/2.4.3-1.tar.gz";
+    name = "2.4.3-1.tar.gz";
+    sha256 = "2dbfb357655cc5bedbf2ea219c46bc8e4410a362af31aab0e325d3b6be716b83";
   };
 
   buildType = "ament_python";
