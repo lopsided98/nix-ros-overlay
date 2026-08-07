@@ -2234,6 +2234,16 @@ self: super: {
 
  roboplan-oink = self.callPackage ./roboplan-oink {};
 
+ roboplan-ros-cpp = self.callPackage ./roboplan-ros-cpp {};
+
+ roboplan-ros-examples = self.callPackage ./roboplan-ros-examples {};
+
+ roboplan-ros-franka = self.callPackage ./roboplan-ros-franka {};
+
+ roboplan-ros-py = self.callPackage ./roboplan-ros-py {};
+
+ roboplan-ros-visualization = self.callPackage ./roboplan-ros-visualization {};
+
  roboplan-rrt = self.callPackage ./roboplan-rrt {};
 
  roboplan-simple-ik = self.callPackage ./roboplan-simple-ik {};
@@ -2638,6 +2648,8 @@ self: super: {
 
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
 
+ rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
+
  sdformat-test-files = self.callPackage ./sdformat-test-files {};
 
  sdformat-urdf = self.callPackage ./sdformat-urdf {};
@@ -2697,8 +2709,6 @@ self: super: {
  smach-ros = self.callPackage ./smach-ros {};
 
  smclib = self.callPackage ./smclib {};
-
- snowbot-operating-system = self.callPackage ./snowbot-operating-system {};
 
  soccer-geometry-msgs = self.callPackage ./soccer-geometry-msgs {};
 

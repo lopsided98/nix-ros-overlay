@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-gtest, ament-lint-auto, ament-lint-common, boost, class-loader, geometry-msgs, rclcpp, sqlite, warehouse-ros }:
 buildRosPackage {
   pname = "ros-humble-warehouse-ros-sqlite";
-  version = "1.0.8-r1";
+  version = "1.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/warehouse_ros_sqlite-release/archive/release/humble/warehouse_ros_sqlite/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "c87956600dbe7daccac64be231fa00f56ca9b7d157bccc02fb26416a07bdacd2";
+    url = "https://github.com/ros2-gbp/warehouse_ros_sqlite-release/archive/release/humble/warehouse_ros_sqlite/1.0.9-1.tar.gz";
+    name = "1.0.9-1.tar.gz";
+    sha256 = "909b56f1fb44cbd956419c0a291c6197c49e008fbb696036f80e70477e7a8e74";
   };
 
   buildType = "ament_cmake";

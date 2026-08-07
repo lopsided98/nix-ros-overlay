@@ -434,6 +434,8 @@ self: super: {
 
  controller-manager-msgs = self.callPackage ./controller-manager-msgs {};
 
+ costmap-queue = self.callPackage ./costmap-queue {};
+
  cras-bag-tools = self.callPackage ./cras-bag-tools {};
 
  cras-cpp-common = self.callPackage ./cras-cpp-common {};
@@ -579,6 +581,14 @@ self: super: {
  dummy-robot-bringup = self.callPackage ./dummy-robot-bringup {};
 
  dummy-sensors = self.callPackage ./dummy-sensors {};
+
+ dwb-core = self.callPackage ./dwb-core {};
+
+ dwb-critics = self.callPackage ./dwb-critics {};
+
+ dwb-msgs = self.callPackage ./dwb-msgs {};
+
+ dwb-plugins = self.callPackage ./dwb-plugins {};
 
  dynamixel-hardware = self.callPackage ./dynamixel-hardware {};
 
@@ -1129,6 +1139,14 @@ self: super: {
  joy-tester = self.callPackage ./joy-tester {};
 
  jrl-cmakemodules = self.callPackage ./jrl-cmakemodules {};
+
+ jsk-common-msgs = self.callPackage ./jsk-common-msgs {};
+
+ jsk-footstep-msgs = self.callPackage ./jsk-footstep-msgs {};
+
+ jsk-gui-msgs = self.callPackage ./jsk-gui-msgs {};
+
+ jsk-hark-msgs = self.callPackage ./jsk-hark-msgs {};
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
@@ -1776,13 +1794,87 @@ self: super: {
 
  nao-sensor-msgs = self.callPackage ./nao-sensor-msgs {};
 
+ nav2-amcl = self.callPackage ./nav2-amcl {};
+
+ nav2-behavior-tree = self.callPackage ./nav2-behavior-tree {};
+
+ nav2-behaviors = self.callPackage ./nav2-behaviors {};
+
+ nav2-bringup = self.callPackage ./nav2-bringup {};
+
+ nav2-bt-navigator = self.callPackage ./nav2-bt-navigator {};
+
+ nav2-collision-monitor = self.callPackage ./nav2-collision-monitor {};
+
+ nav2-common = self.callPackage ./nav2-common {};
+
+ nav2-constrained-smoother = self.callPackage ./nav2-constrained-smoother {};
+
+ nav2-controller = self.callPackage ./nav2-controller {};
+
+ nav2-core = self.callPackage ./nav2-core {};
+
+ nav2-costmap-2d = self.callPackage ./nav2-costmap-2d {};
+
+ nav2-dwb-controller = self.callPackage ./nav2-dwb-controller {};
+
+ nav2-graceful-controller = self.callPackage ./nav2-graceful-controller {};
+
+ nav2-lifecycle-manager = self.callPackage ./nav2-lifecycle-manager {};
+
+ nav2-loopback-sim = self.callPackage ./nav2-loopback-sim {};
+
+ nav2-map-server = self.callPackage ./nav2-map-server {};
+
  nav2-minimal-tb3-sim = self.callPackage ./nav2-minimal-tb3-sim {};
 
  nav2-minimal-tb4-description = self.callPackage ./nav2-minimal-tb4-description {};
 
  nav2-minimal-tb4-sim = self.callPackage ./nav2-minimal-tb4-sim {};
 
+ nav2-mppi-controller = self.callPackage ./nav2-mppi-controller {};
+
+ nav2-msgs = self.callPackage ./nav2-msgs {};
+
+ nav2-navfn-planner = self.callPackage ./nav2-navfn-planner {};
+
+ nav2-planner = self.callPackage ./nav2-planner {};
+
+ nav2-regulated-pure-pursuit-controller = self.callPackage ./nav2-regulated-pure-pursuit-controller {};
+
+ nav2-ros-common = self.callPackage ./nav2-ros-common {};
+
+ nav2-rotation-shim-controller = self.callPackage ./nav2-rotation-shim-controller {};
+
+ nav2-route = self.callPackage ./nav2-route {};
+
+ nav2-rviz-plugins = self.callPackage ./nav2-rviz-plugins {};
+
+ nav2-simple-commander = self.callPackage ./nav2-simple-commander {};
+
+ nav2-smac-planner = self.callPackage ./nav2-smac-planner {};
+
+ nav2-smoother = self.callPackage ./nav2-smoother {};
+
+ nav2-system-tests = self.callPackage ./nav2-system-tests {};
+
+ nav2-theta-star-planner = self.callPackage ./nav2-theta-star-planner {};
+
+ nav2-util = self.callPackage ./nav2-util {};
+
+ nav2-velocity-smoother = self.callPackage ./nav2-velocity-smoother {};
+
+ nav2-voxel-grid = self.callPackage ./nav2-voxel-grid {};
+
+ nav2-waypoint-follower = self.callPackage ./nav2-waypoint-follower {};
+
+ nav-2d-msgs = self.callPackage ./nav-2d-msgs {};
+
+ nav-2d-utils = self.callPackage ./nav-2d-utils {};
+
  nav-msgs = self.callPackage ./nav-msgs {};
+
+ navigation2 = self.callPackage ./navigation2 {};
 
  navmap-core = self.callPackage ./navmap-core {};
 
@@ -1901,6 +1993,14 @@ self: super: {
  open-manipulator-teleop = self.callPackage ./open-manipulator-teleop {};
 
  openeb-vendor = self.callPackage ./openeb-vendor {};
+
+ opennav-docking = self.callPackage ./opennav-docking {};
+
+ opennav-docking-bt = self.callPackage ./opennav-docking-bt {};
+
+ opennav-docking-core = self.callPackage ./opennav-docking-core {};
+
+ opennav-following = self.callPackage ./opennav-following {};
 
  openni2-camera = self.callPackage ./openni2-camera {};
 
@@ -2083,6 +2183,8 @@ self: super: {
  pose-broadcaster = self.callPackage ./pose-broadcaster {};
 
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
+
+ posedetection-msgs = self.callPackage ./posedetection-msgs {};
 
  protobuf-comm = self.callPackage ./protobuf-comm {};
 
@@ -2397,6 +2499,16 @@ self: super: {
  roboplan-examples = self.callPackage ./roboplan-examples {};
 
  roboplan-oink = self.callPackage ./roboplan-oink {};
+
+ roboplan-ros-cpp = self.callPackage ./roboplan-ros-cpp {};
+
+ roboplan-ros-examples = self.callPackage ./roboplan-ros-examples {};
+
+ roboplan-ros-franka = self.callPackage ./roboplan-ros-franka {};
+
+ roboplan-ros-py = self.callPackage ./roboplan-ros-py {};
+
+ roboplan-ros-visualization = self.callPackage ./roboplan-ros-visualization {};
 
  roboplan-rrt = self.callPackage ./roboplan-rrt {};
 
@@ -2967,6 +3079,8 @@ self: super: {
  spacenav = self.callPackage ./spacenav {};
 
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
+
+ speech-recognition-msgs = self.callPackage ./speech-recognition-msgs {};
 
  spinnaker-camera-driver = self.callPackage ./spinnaker-camera-driver {};
 

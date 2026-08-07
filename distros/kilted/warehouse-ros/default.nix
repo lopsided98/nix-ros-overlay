@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-lint-auto, boost, geometry-msgs, openssl, pluginlib, rclcpp, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-warehouse-ros";
-  version = "2.0.5-r2";
+  version = "2.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/warehouse_ros-release/archive/release/kilted/warehouse_ros/2.0.5-2.tar.gz";
-    name = "2.0.5-2.tar.gz";
-    sha256 = "646d75b9ef1b020f5efef925a3ba7f378701f9957807f4ace90a45c4b9cefe37";
+    url = "https://github.com/ros2-gbp/warehouse_ros-release/archive/release/kilted/warehouse_ros/2.0.7-1.tar.gz";
+    name = "2.0.7-1.tar.gz";
+    sha256 = "d3268cc44ab97387eb94c406c0ff6ccfdaf9fd219be1e635ead4ba5901f5ddd2";
   };
 
   buildType = "ament_cmake";

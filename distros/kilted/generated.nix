@@ -1202,6 +1202,14 @@ self: super: {
 
  jrl-cmakemodules = self.callPackage ./jrl-cmakemodules {};
 
+ jsk-common-msgs = self.callPackage ./jsk-common-msgs {};
+
+ jsk-footstep-msgs = self.callPackage ./jsk-footstep-msgs {};
+
+ jsk-gui-msgs = self.callPackage ./jsk-gui-msgs {};
+
+ jsk-hark-msgs = self.callPackage ./jsk-hark-msgs {};
+
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
  kdl-parser = self.callPackage ./kdl-parser {};
@@ -2188,6 +2196,8 @@ self: super: {
 
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
 
+ posedetection-msgs = self.callPackage ./posedetection-msgs {};
+
  position-controllers = self.callPackage ./position-controllers {};
 
  protobuf-comm = self.callPackage ./protobuf-comm {};
@@ -2491,6 +2501,16 @@ self: super: {
  roboplan-examples = self.callPackage ./roboplan-examples {};
 
  roboplan-oink = self.callPackage ./roboplan-oink {};
+
+ roboplan-ros-cpp = self.callPackage ./roboplan-ros-cpp {};
+
+ roboplan-ros-examples = self.callPackage ./roboplan-ros-examples {};
+
+ roboplan-ros-franka = self.callPackage ./roboplan-ros-franka {};
+
+ roboplan-ros-py = self.callPackage ./roboplan-ros-py {};
+
+ roboplan-ros-visualization = self.callPackage ./roboplan-ros-visualization {};
 
  roboplan-rrt = self.callPackage ./roboplan-rrt {};
 
@@ -3027,6 +3047,8 @@ self: super: {
  spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
 
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
+
+ speech-recognition-msgs = self.callPackage ./speech-recognition-msgs {};
 
  spinnaker-camera-driver = self.callPackage ./spinnaker-camera-driver {};
 

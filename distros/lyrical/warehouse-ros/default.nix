@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-lint-auto, boost, geometry-msgs, openssl, pluginlib, rclcpp, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-warehouse-ros";
-  version = "2.0.6-r3";
+  version = "2.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/warehouse_ros-release/archive/release/lyrical/warehouse_ros/2.0.6-3.tar.gz";
-    name = "2.0.6-3.tar.gz";
-    sha256 = "5ac65a3d564890f23134844f1f8b45404b8d64c9139d7f82d4f45461653ec519";
+    url = "https://github.com/ros2-gbp/warehouse_ros-release/archive/release/lyrical/warehouse_ros/2.0.7-1.tar.gz";
+    name = "2.0.7-1.tar.gz";
+    sha256 = "91073987f90c32c43c8ca01795a3e0329e1525433cd41eac5c8d306a9727642f";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, launch-ros, launch-testing-ros, python3Packages, rclpy, sensor-msgs, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-humble-ros2-controllers-test-nodes";
-  version = "2.53.2-r1";
+  version = "2.53.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/ros2_controllers_test_nodes/2.53.2-1.tar.gz";
-    name = "2.53.2-1.tar.gz";
-    sha256 = "c290be6c0a5752005b57e2aaffb2c481c282d680d6c15df8006318d327cf7578";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/ros2_controllers_test_nodes/2.53.3-1.tar.gz";
+    name = "2.53.3-1.tar.gz";
+    sha256 = "745da84956b96244f2ca491368b9c538b30e9610c9c98aabba7e35c973f64b87";
   };
 
   buildType = "ament_python";
