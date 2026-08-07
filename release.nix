@@ -14,8 +14,8 @@ in
 let
   pkgs = import nix-ros-overlay { inherit nixpkgs system; };
   inherit (pkgs.lib) isDerivation filterAttrs;
-  inherit (builtins) mapAttrs attrNames filter listToAttrs readDir;
-  cleanupDistro = (_: a: removeAttrs a [
+  inherit (builtins) mapAttrs attrNames filter listToAttrs readDir isAttrs;
+  cleanupDistro = (_: a: if !isAttrs a then a else removeAttrs a [
     "lib"
     "python"
     "python3"
