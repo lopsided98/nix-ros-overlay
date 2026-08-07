@@ -21,20 +21,6 @@ in {
     '';
   });
 
-  battery-state-broadcaster = rosSuper.battery-state-broadcaster.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = [
-      # Fix compile error with latest realtime_tools
-      # https://github.com/ipa320/ros_battery_monitoring/pull/12
-      (self.fetchpatch2 {
-        url = "https://github.com/ipa320/ros_battery_monitoring/commit/b9ee8af78e8154b95fc4b8202c53320466c4c69b.patch?full_index=1";
-        hash = "sha256-6rYpWL4w2s/BoADZHFNQHFrYQO0pewsvs5ri1M3dTIc=";
-        stripLen = 1;
-      })
-    ];
-  });
-
   cartographer = rosSuper.cartographer.overrideAttrs ({
     postPatch ? "", ...
   }: {
