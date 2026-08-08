@@ -678,6 +678,8 @@ in {
     '';
   });
 
+  slam-toolbox = rosSuper.slam-toolbox.override { qt5 = self.qt6; };
+
   turtlesim = rosSuper.turtlesim.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
