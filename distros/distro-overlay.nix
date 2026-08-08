@@ -93,7 +93,7 @@ let
 
     # Some third-party packages are available in rodistro,
     # but have a better packaging in nixpkgs, so use it instead
-    inherit (self.python3Packages) coal eigenpy pinocchio crocoddyl ndcurves tsid;
+    inherit (self.python3Packages) coal eigenpy pinocchio proxsuite crocoddyl ndcurves tsid;
 
     freeimage = null; # Get rid of freeimage
 
