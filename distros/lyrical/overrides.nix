@@ -449,6 +449,18 @@ in {
     ];
   });
 
+  nav2-mppi-controller = rosSuper.nav2-mppi-controller.overrideAttrs({
+    CXXFLAGS ? "", ...
+  }: {
+    CXXFLAGS = "${CXXFLAGS} -Wno-error=null-dereference";
+  });
+
+  nav2-smoother = rosSuper.nav2-smoother.overrideAttrs({
+    CXXFLAGS ? "", ...
+  }: {
+    CXXFLAGS = "${CXXFLAGS} -Wno-error=null-dereference";
+  });
+
   nav2-util = rosSuper.nav2-util.overrideAttrs({
     propagatedBuildInputs ? [], ...
   }: {
