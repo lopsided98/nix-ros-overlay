@@ -518,6 +518,13 @@ in {
     ];
   });
 
+  proxsuite = rosSuper.proxsuite.overrideAttrs ({
+    propagatedBuildInputs ? [], ...
+  }: {
+    # TODO: Remove after https://github.com/Simple-Robotics/proxsuite/pull/469 appears in a release
+    propagatedBuildInputs = propagatedBuildInputs ++ [ self.simde ];
+  });
+
   pybind11-json-vendor = lib.patchAmentVendorGit rosSuper.pybind11-json-vendor { };
 
   # This meta-package is referenced by the rosdep key python3-qt-bindings,
