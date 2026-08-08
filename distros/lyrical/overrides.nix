@@ -449,6 +449,13 @@ in {
     ];
   });
 
+  nav2-util = rosSuper.nav2-util.overrideAttrs({
+    propagatedBuildInputs ? [], ...
+  }: {
+    # https://github.com/ros-navigation/navigation2/pull/6323
+    propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.angles ];
+  });
+
   nlohmann-json-schema-validator-vendor = (lib.patchExternalProjectGit rosSuper.nlohmann-json-schema-validator-vendor {
     url = "https://github.com/pboettch/json-schema-validator.git";
     rev = "5ef4f903af055550e06955973a193e17efded896";
