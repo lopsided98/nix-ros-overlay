@@ -179,6 +179,7 @@ trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDS
 
 [cache-issue]: https://github.com/lopsided98/nix-ros-overlay/issues/754
 [@wentasah]: https://github.com/wentasah
+[Hydra instance]: https://hydra.iid.ciirc.cvut.cz/project/nix-ros-overlay
 
 ## Frequently Asked Questions
 
