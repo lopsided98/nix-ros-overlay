@@ -487,6 +487,40 @@ in {
     '';
   });
 
+  osqp-vendor = pipe rosSuper.osqp-vendor [
+    (pkg: pkg.overrideAttrs ({
+      preInstall ? "", postPatch ? "", ...
+    }: {
+      # osqp v1.0.0 fetches qdldl from GitHub via CMake FetchContent as part
+      # of its own configure step, which fails in the sandboxed build.
+      # Redirect it to a pre-fetched source instead.
+      postPatch = postPatch + ''
+        substituteInPlace CMakeLists.txt --replace-fail \
+          "set(extra_cmake_args)" \
+          "set(extra_cmake_args -DFETCHCONTENT_SOURCE_DIR_QDLDL=${self.fetchgit {
+            url = "https://github.com/osqp/qdldl.git";
+            rev = "v0.1.8";
+            hash = "sha256-qCeOs4UjZLuqlbiLgp6BMxvw4niduCPDOOqFt05zi2E=";
+          }})"
+      '';
+      # osqp installs into both lib/cmake/ and lib64/cmake/ which is
+      # problematic because moveLib64 doesn't attempt to merge overlapping
+      # directories but fails instead. Here we do the merge manually.
+      preInstall = preInstall + ''
+        mkdir -p ./osqp_install/lib/cmake/osqp
+        mv ./osqp_install/lib64/cmake/osqp/* ./osqp_install/lib/cmake/osqp
+        rm -r ./osqp_install/lib64/cmake
+      '';
+    }))
+
+    (pkg: patchExternalProjectGit pkg {
+      url = "https://github.com/osqp/osqp.git";
+      rev = "v1.0.0";
+      revVariable = "git_tag";
+      fetchgitArgs.hash = "sha256-BOAytzJzHcggncQzeDrXwJOq8B3doWERJ6CKIVg1yJY=";
+    })
+  ];
+
   pcl-conversions = rosSuper.pcl-conversions.overrideAttrs ({
     patches ? [], ...
   }: {
