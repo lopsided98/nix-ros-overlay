@@ -619,10 +619,6 @@ in {
     '';
   });
 
-  mapviz = rosSuper.mapviz.override { qt6 = self.qt5; };
-
-  mapviz-plugins = rosSuper.mapviz.override { qt6 = self.qt5; };
-
   mcap-vendor = lib.patchVendorUrl rosSuper.mcap-vendor {
     url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v1.3.1.tar.gz";
     hash = "sha256-JCTITBfe8WrEBhWX0rkqLdnHN6qXidUCj1Xz0fmPnac=";
@@ -831,8 +827,6 @@ in {
       })
     ];
   });
-
-  multires-image = rosSuper.multires-image.override { qt6 = self.qt5; };
 
   nav2-behavior-tree = rosSuper.nav2-behavior-tree.overrideAttrs({
     ...
@@ -1100,8 +1094,6 @@ in {
     '';
   });
 
-  rviz-mbf-plugins = rosSuper.rviz-mbf-plugins.override { qt6 = self.qt5; };
-
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     tarSourceArgs.hook = let
       version = "1.79";
@@ -1179,8 +1171,6 @@ in {
       substituteInPlace CMakeLists.txt --replace-fail "COMPONENTS system thread" "COMPONENTS thread"
     '';
   });
-
-  tile-map = rosSuper.tile-map.override { qt6 = self.qt5; };
 
   turtlebot3-panorama = rosSuper.turtlebot3-panorama.overrideAttrs ({
     postPatch ? "", ...
