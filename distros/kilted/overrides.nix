@@ -740,6 +740,32 @@ in {
     '';
   });
 
+  osqp-vendor = lib.pipe rosSuper.osqp-vendor [
+    (pkg: pkg.overrideAttrs ({
+      preInstall ? "", postPatch ? "", ...
+    }: {
+      postPatch = postPatch + ''
+        sed -i -e '/UPDATE_COMMAND/ a\PATCH_COMMAND sed -i -e "/cmake_minimum_required/ s/3.2/3.5/" CMakeLists.txt lin_sys/direct/qdldl/qdldl_sources/CMakeLists.txt' \
+          CMakeLists.txt
+      '';
+      # osqp installs into both lib/cmake/ and lib64/cmake/ which is
+      # problematic because moveLib64 doesn't attempt to merge overlapping
+      # directories but fails instead. Here we do the merge manually.
+      preInstall = preInstall + ''
+        mkdir -p ./osqp_install/lib/cmake/osqp
+        mv ./osqp_install/lib64/cmake/osqp/* ./osqp_install/lib/cmake/osqp
+        rm -r ./osqp_install/lib64/cmake
+      '';
+    }))
+
+    (pkg: lib.patchExternalProjectGit pkg {
+      url = "https://github.com/osqp/osqp.git";
+      rev = "v0.6.2";
+      revVariable = "git_tag";
+      fetchgitArgs.hash = "sha256-RYk3zuZrJXPcF27eMhdoZAio4DZ+I+nFaUEg1g/aLNk=";
+    })
+  ];
+
   popf = (rosSuper.popf.override {
     # Fix "libfl.so.2: undefined reference to `yylex'"
     flex = self.flex_2_5_35;
