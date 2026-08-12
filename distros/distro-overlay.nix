@@ -230,12 +230,6 @@ let
       '';
     });
 
-    # TODO: Replace with #905
-    rviz-visual-tools =
-      if builtins.elem distro ["humble" "jazzy" "kilted"]
-      then rosSuper.rviz-visual-tools.override { qt6 = self.qt5; }
-      else rosSuper.rviz-visual-tools;
-
     # We map ROS packages that depend on Ubuntu's libexpected-dev to
     # depend on tl-expected-nixpkgs. We cannot use the name
     # tl-expected because it is shadowed by tl-expected package from
