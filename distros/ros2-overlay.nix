@@ -65,7 +65,13 @@ with rosSelf.lib; {
     '';
   });
 
-  backward-ros = rosSuper.backward-ros.overrideAttrs ({ postPatch ? "", ... }: {
+  # elfutils is Linux-only, and BackwardConfigAment.cmake already degrades to
+  # libbfd or to no debug info when libdw is absent. Declaring it
+  # unconditionally makes backward-ros, and everything depending on it, fail
+  # to evaluate on Darwin.
+  backward-ros = (rosSuper.backward-ros.override (optionalAttrs self.stdenv.hostPlatform.isDarwin {
+    elfutils = null;
+  })).overrideAttrs ({ postPatch ? "", ... }: {
 
     # The `--as-needed` flag directs the linker to search all libraries specified
     # during its invocation to identify which ones contain the symbols required by the binary.
@@ -298,6 +304,13 @@ with rosSelf.lib; {
       buildInputs;
   });
 
+  # libcap is Linux-only, and realtime_tools already links it under
+  # `if(UNIX AND NOT APPLE)` and includes <sys/capability.h> under
+  # `#if defined(__unix__)`. Only the Nix dependency needs dropping.
+  realtime-tools = rosSuper.realtime-tools.override (optionalAttrs self.stdenv.hostPlatform.isDarwin {
+    libcap = null;
+  });
+
   ros-gz-sim = rosSuper.ros-gz-sim.overrideAttrs ({
     postPatch ? "", ...
   }: {
@@ -361,6 +374,15 @@ with rosSelf.lib; {
     meta = meta // {
       mainProgram = "rviz2";
     };
+  });
+
+  # tango-icon-theme is Linux-only, and tango_icons_vendor exists precisely to
+  # supply the icons where it is unavailable: its CMakeLists installs the
+  # bundled copy under `if(WIN32 OR APPLE)`. The exec_depend only applies to
+  # Linux, so nothing is lost by dropping it on Darwin. Without this,
+  # qt-gui and every rqt plugin fail to evaluate.
+  tango-icons-vendor = rosSuper.tango-icons-vendor.override (optionalAttrs self.stdenv.hostPlatform.isDarwin {
+    tango-icon-theme = null;
   });
 
   # The build gets stuck in an infinite loop with absolute CMAKE_INSTALL_LIBDIR:
