@@ -290,10 +290,14 @@ in with lib; {
       systemToPlatform = {
         "x86_64-linux" = "x86_64-unknown-linux-gnu";
         "aarch64-linux" = "aarch64-unknown-linux-gnu";
+        "x86_64-darwin" = "x86_64-apple-darwin";
+        "aarch64-darwin" = "aarch64-apple-darwin";
       };
       systemToHash = {
         "x86_64-linux" = "sha256-j7A7BhEneIrXCJGNGG101P21hxixHP+XydYFUTq1fMY=";
         "aarch64-linux" = "sha256-BxDy7Fq8OVSs9iA7k6lnaNzNGddCr5t4/Nj7u6X2Ilo=";
+        "x86_64-darwin" = "sha256-TlkrT+RHufq5EnBvhjp1gzz2vtxcF9PqR01FMe7HIq4=";
+        "aarch64-darwin" = "sha256-quLM/rzOS2/3LjZpEqktZXb2EA55zfcdeeQoiXet0PA=";
       };
       FOXGLOVE_SDK_PLATFORM = systemToPlatform.${self.stdenv.hostPlatform.system};
       sdk = self.fetchurl {
