@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, ament-cmake-xmllint, ament-lint-auto, git }:
 buildRosPackage {
   pname = "ros-rolling-ortools-vendor";
-  version = "9.9.0-r10";
+  version = "9.9.1-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ortools_vendor-release/archive/release/rolling/ortools_vendor/9.9.0-10.tar.gz";
-    name = "9.9.0-10.tar.gz";
-    sha256 = "966f36c6b409d858a5dfa81c511b85a0042195b9e5858770993a5813c90157ef";
+    url = "https://github.com/ros2-gbp/ortools_vendor-release/archive/release/rolling/ortools_vendor/9.9.1-5.tar.gz";
+    name = "9.9.1-5.tar.gz";
+    sha256 = "d0fdbb4617484dd990729ae1dbc11f3c7680ad172623084863f922135b841d76";
   };
 
   buildType = "ament_cmake";

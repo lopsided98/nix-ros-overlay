@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, rclpy, ros2cli, yasmin, yasmin-editor, yasmin-factory, yasmin-plugins-manager, yasmin-viewer }:
 buildRosPackage {
   pname = "ros-kilted-yasmin-cli";
-  version = "6.1.0-r1";
+  version = "6.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin_cli/6.1.0-1.tar.gz";
-    name = "6.1.0-1.tar.gz";
-    sha256 = "7bb4e1a98148297af2b8fed1df5c3fd382db20e909f3144381f8a7baf0af5f8d";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin_cli/6.1.1-1.tar.gz";
+    name = "6.1.1-1.tar.gz";
+    sha256 = "b8788989a8ad9a00ec08775adff2333b2395e307fc73d3d20f22a49d7c838eba";
   };
 
   buildType = "ament_python";

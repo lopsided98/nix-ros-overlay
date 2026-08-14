@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-mypy, ament-cmake-pytest, ament-cmake-python, builtin-interfaces, geometry-msgs, rcl-interfaces, rclpy, rmw-dds-common, ros2action, ros2interface, ros2node, ros2service, ros2topic, rosapi-msgs, rosbridge-library, rosidl-adapter, rosidl-runtime-py, sensor-msgs, shape-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-rosapi";
-  version = "4.2.0-r1";
+  version = "4.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/lyrical/rosapi/4.2.0-1.tar.gz";
-    name = "4.2.0-1.tar.gz";
-    sha256 = "181bd1dcce63a8f59fc09c93886308546d9af05b795ba1b58d23307240a5b6ff";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/lyrical/rosapi/4.2.1-1.tar.gz";
+    name = "4.2.1-1.tar.gz";
+    sha256 = "0e4256a1d7e6413249b14bfafe6721edaf680743bc962dddedf4b6d1554ecf5a";
   };
 
   buildType = "ament_cmake";

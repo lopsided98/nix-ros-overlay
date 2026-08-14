@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake }:
 buildRosPackage {
   pname = "ros-jazzy-sick-safetyscanners-base";
-  version = "1.0.3-r1";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sick_safetyscanners_base-release/archive/release/jazzy/sick_safetyscanners_base/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "55773fb7bd91ec167f176f0e41c8dc1d4ca53a0a3694fa264af1362aa82f9d9d";
+    url = "https://github.com/ros2-gbp/sick_safetyscanners_base-release/archive/release/jazzy/sick_safetyscanners_base/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "8a9a42cec4065d5dc11100e3379e256ae7bf9f7d5580dbe94e45d7c6db0b17db";
   };
 
   buildType = "cmake";

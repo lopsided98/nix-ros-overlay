@@ -1778,7 +1778,7 @@ self: super: {
 
  nanoeigenpy = self.callPackage ./nanoeigenpy {};
 
- nanoflann = self.callPackage ./nanoflann {};
+ nanoflann-vendor = self.callPackage ./nanoflann-vendor {};
 
  nao-button-sim = self.callPackage ./nao-button-sim {};
 
@@ -1904,6 +1904,8 @@ self: super: {
 
  nodl-to-policy = self.callPackage ./nodl-to-policy {};
 
+ nonpersistent-voxel-layer = self.callPackage ./nonpersistent-voxel-layer {};
+
  novatel-gps-driver = self.callPackage ./novatel-gps-driver {};
 
  novatel-gps-msgs = self.callPackage ./novatel-gps-msgs {};
@@ -2003,6 +2005,8 @@ self: super: {
  opennav-following = self.callPackage ./opennav-following {};
 
  openni2-camera = self.callPackage ./openni2-camera {};
+
+ openvdb-vendor = self.callPackage ./openvdb-vendor {};
 
  orocos-kdl-vendor = self.callPackage ./orocos-kdl-vendor {};
 
@@ -3077,6 +3081,8 @@ self: super: {
  sound-play-msgs = self.callPackage ./sound-play-msgs {};
 
  spacenav = self.callPackage ./spacenav {};
+
+ spatio-temporal-voxel-layer = self.callPackage ./spatio-temporal-voxel-layer {};
 
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
 

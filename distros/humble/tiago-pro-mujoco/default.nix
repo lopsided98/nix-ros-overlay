@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, launch, launch-pal, launch-ros, mujoco-ros2-control, omni-base-description, pal-pro-gripper-description, pal-urdf-utils, play-motion2-msgs, tiago-pro-bringup, tiago-pro-description, tiago-pro-head-description, tiago-pro-laser-sensors, tiago-pro-moveit-config }:
 buildRosPackage {
   pname = "ros-humble-tiago-pro-mujoco";
-  version = "1.17.1-r1";
+  version = "1.18.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tiago_pro_simulation-release/archive/release/humble/tiago_pro_mujoco/1.17.1-1.tar.gz";
-    name = "1.17.1-1.tar.gz";
-    sha256 = "6bd30ed062c7c75b10ffaae6e2831cb3d39d8e920ff5cabf28010f697372c4c7";
+    url = "https://github.com/ros2-gbp/tiago_pro_simulation-release/archive/release/humble/tiago_pro_mujoco/1.18.0-1.tar.gz";
+    name = "1.18.0-1.tar.gz";
+    sha256 = "6b02a284ad9ef834106820dfaf24b71644ff794c8395770922aca9a2d75e8a3d";
   };
 
   buildType = "ament_cmake";

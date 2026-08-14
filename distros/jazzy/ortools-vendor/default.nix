@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, ament-cmake-xmllint, ament-lint-auto, git }:
 buildRosPackage {
   pname = "ros-jazzy-ortools-vendor";
-  version = "9.9.0-r6";
+  version = "9.9.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ortools_vendor-release/archive/release/jazzy/ortools_vendor/9.9.0-6.tar.gz";
-    name = "9.9.0-6.tar.gz";
-    sha256 = "82bf4e4f1f8f867dbc29ebca2a9e397cef46d571c4bf6c60ab064ad2df86bac4";
+    url = "https://github.com/ros2-gbp/ortools_vendor-release/archive/release/jazzy/ortools_vendor/9.9.1-4.tar.gz";
+    name = "9.9.1-4.tar.gz";
+    sha256 = "7f0fb2ca657895e36cc0996b393d521fb17ade3bb6b16c99e3a465b606b7e115";
   };
 
   buildType = "ament_cmake";

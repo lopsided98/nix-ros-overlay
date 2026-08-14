@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, pluginlib, qt-gui-cpp, qt6, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, pluginlib, qt-gui-cpp, qt5or6, rclcpp }:
 buildRosPackage {
   pname = "ros-lyrical-rqt-gui-cpp";
   version = "1.10.6-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake qt6.qtbase ];
+  buildInputs = [ ament-cmake qt5or6.qtbase ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ pluginlib qt-gui-cpp rclcpp ];
   nativeBuildInputs = [ ament-cmake ];

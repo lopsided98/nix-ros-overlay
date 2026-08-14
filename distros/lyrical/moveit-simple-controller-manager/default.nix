@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, control-msgs, moveit-common, moveit-core, pluginlib, rclcpp, rclcpp-action }:
 buildRosPackage {
   pname = "ros-lyrical-moveit-simple-controller-manager";
-  version = "2.14.1-r3";
+  version = "2.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/lyrical/moveit_simple_controller_manager/2.14.1-3.tar.gz";
-    name = "2.14.1-3.tar.gz";
-    sha256 = "37721a49a44321f627a9659c6991e206b66e2770858c4f864759199a929a0898";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/lyrical/moveit_simple_controller_manager/2.15.0-1.tar.gz";
+    name = "2.15.0-1.tar.gz";
+    sha256 = "d301b1ce468b1d44afd8101ba7e5873f05375c62bc80bf4693db2c55cbf88e44";
   };
 
   buildType = "ament_cmake";

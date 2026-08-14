@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, filters, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-force-torque-sensor-broadcaster";
-  version = "6.8.0-r1";
+  version = "6.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/force_torque_sensor_broadcaster/6.8.0-1.tar.gz";
-    name = "6.8.0-1.tar.gz";
-    sha256 = "ac3e5e2943e03f6bbf97e8e3d6b6636c2bcaf0d5843b229fcd7b09be449f78d2";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/force_torque_sensor_broadcaster/6.9.0-1.tar.gz";
+    name = "6.9.0-1.tar.gz";
+    sha256 = "04411194e45c620c3af55b910bdf5ec0389039dcf9fd6f3f4d862a4b6b7dd7d6";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-forward-command-controller";
-  version = "2.53.3-r1";
+  version = "2.54.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/forward_command_controller/2.53.3-1.tar.gz";
-    name = "2.53.3-1.tar.gz";
-    sha256 = "721fb6b547043f8af67dabe7fb98e1c25b53a31394a32c30ddb1d6bfca94f51d";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/forward_command_controller/2.54.0-1.tar.gz";
+    name = "2.54.0-1.tar.gz";
+    sha256 = "40d685fddfcd6b1a65c432483d7a5dc39b4016957711aed8818bd7fb03651b95";
   };
 
   buildType = "ament_cmake";

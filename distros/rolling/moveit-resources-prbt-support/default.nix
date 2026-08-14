@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, xacro }:
 buildRosPackage {
   pname = "ros-rolling-moveit-resources-prbt-support";
-  version = "2.14.1-r2";
+  version = "2.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_resources_prbt_support/2.14.1-2.tar.gz";
-    name = "2.14.1-2.tar.gz";
-    sha256 = "102a423739d4cd4e64505165cb36e20be84a8686d453451845f92de055cb4262";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_resources_prbt_support/2.15.0-1.tar.gz";
+    name = "2.15.0-1.tar.gz";
+    sha256 = "e01fa67c073cee63988a572163d3bbe59574fdf72cc8003e8046c46d48325522";
   };
 
   buildType = "ament_cmake";

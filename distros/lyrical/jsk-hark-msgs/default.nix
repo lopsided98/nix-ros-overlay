@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-jsk-hark-msgs";
-  version = "5.0.1-r2";
+  version = "5.0.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/lyrical/jsk_hark_msgs/5.0.1-2.tar.gz";
-    name = "5.0.1-2.tar.gz";
-    sha256 = "1c3c7bdd5b2b563727a544b44638db3401b6bbe734f52e1096179a1179f1cd7a";
+    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/lyrical/jsk_hark_msgs/5.0.1-3.tar.gz";
+    name = "5.0.1-3.tar.gz";
+    sha256 = "2f54d8fb6c41dcaee79d3dbdb479cd4811d8f236312da87f83ea211eb474e52d";
   };
 
   buildType = "ament_cmake";

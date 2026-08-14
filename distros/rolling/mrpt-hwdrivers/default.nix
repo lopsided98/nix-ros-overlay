@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, ffmpeg, libdc1394, libpcap, libusb1, mrpt-comms, mrpt-maps, mrpt-viz, openni2 }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-hwdrivers";
-  version = "3.1.2-r1";
+  version = "3.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_hwdrivers/3.1.2-1.tar.gz";
-    name = "3.1.2-1.tar.gz";
-    sha256 = "8f2a4d6c46bc77730d7842f9735ae1c022e738bd9af73092dac331c10c94be92";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_hwdrivers/3.1.3-1.tar.gz";
+    name = "3.1.3-1.tar.gz";
+    sha256 = "67071931c4a3b67217cde52dc5d4bbf0b92a516ad76db261cbe64be33829ed67";
   };
 
   buildType = "cmake";

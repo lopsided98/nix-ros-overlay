@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-data";
-  version = "3.1.2-r1";
+  version = "3.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_data/3.1.2-1.tar.gz";
-    name = "3.1.2-1.tar.gz";
-    sha256 = "239322001ea254494390ab01144d855d5db650b2a2feb6be760ca864409b4b76";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_data/3.1.3-1.tar.gz";
+    name = "3.1.3-1.tar.gz";
+    sha256 = "7f446929a62c2996746e36d20b62752a5a196848daf456c277d04dc25c949c01";
   };
 
   buildType = "cmake";

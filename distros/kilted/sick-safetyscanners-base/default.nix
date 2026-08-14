@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake }:
 buildRosPackage {
   pname = "ros-kilted-sick-safetyscanners-base";
-  version = "1.0.3-r2";
+  version = "1.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sick_safetyscanners_base-release/archive/release/kilted/sick_safetyscanners_base/1.0.3-2.tar.gz";
-    name = "1.0.3-2.tar.gz";
-    sha256 = "3d3b3fe9a5136518863518a034cf82a710cae35f025f7a081e8d7c81235258bd";
+    url = "https://github.com/ros2-gbp/sick_safetyscanners_base-release/archive/release/kilted/sick_safetyscanners_base/1.0.4-1.tar.gz";
+    name = "1.0.4-1.tar.gz";
+    sha256 = "862506b8425154bcea7d41b40cf510f241bae895d1c662c90d8aaa81c41cdb0f";
   };
 
   buildType = "cmake";

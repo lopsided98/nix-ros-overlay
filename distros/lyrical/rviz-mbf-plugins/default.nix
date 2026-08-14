@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, mbf-msgs, pluginlib, qt6, rclcpp, rclcpp-action, rviz-common }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, mbf-msgs, pluginlib, qt5or6, rclcpp, rclcpp-action, rviz-common }:
 buildRosPackage {
   pname = "ros-lyrical-rviz-mbf-plugins";
   version = "1.2.1-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ geometry-msgs mbf-msgs pluginlib qt6.qtbase rclcpp rclcpp-action rviz-common ];
+  propagatedBuildInputs = [ geometry-msgs mbf-msgs pluginlib qt5or6.qtbase rclcpp rclcpp-action rviz-common ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-kinematics, mrpt-maps, mrpt-viz }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-nav";
-  version = "3.1.2-r1";
+  version = "3.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_nav/3.1.2-1.tar.gz";
-    name = "3.1.2-1.tar.gz";
-    sha256 = "0ad48c3e590b96510ad824cb2d93809163e5e5ff20a8c3e835be9848cb497a99";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_nav/3.1.3-1.tar.gz";
+    name = "3.1.3-1.tar.gz";
+    sha256 = "61d7f27b4b91965b103a58b8301b4adc63a70a1cfc2726388f284c4a326f6db5";
   };
 
   buildType = "cmake";

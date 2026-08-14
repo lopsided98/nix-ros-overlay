@@ -2454,7 +2454,7 @@ self: super: {
 
  nanoeigenpy = self.callPackage ./nanoeigenpy {};
 
- nanoflann = self.callPackage ./nanoflann {};
+ nanoflann-vendor = self.callPackage ./nanoflann-vendor {};
 
  nao-button-sim = self.callPackage ./nao-button-sim {};
 
@@ -2953,6 +2953,14 @@ self: super: {
  proto2ros = self.callPackage ./proto2ros {};
 
  protobuf-comm = self.callPackage ./protobuf-comm {};
+
+ prox-mpc-controller = self.callPackage ./prox-mpc-controller {};
+
+ prox-mpc-core = self.callPackage ./prox-mpc-core {};
+
+ prox-mpc-msgs = self.callPackage ./prox-mpc-msgs {};
+
+ prox-mpc-test-models = self.callPackage ./prox-mpc-test-models {};
 
  proxsuite = self.callPackage ./proxsuite {};
 

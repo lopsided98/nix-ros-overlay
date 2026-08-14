@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, omni-base-2dnav, omni-base-laser-sensors }:
 buildRosPackage {
   pname = "ros-humble-omni-base-navigation";
-  version = "2.22.1-r1";
+  version = "2.24.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/omni_base_navigation-release/archive/release/humble/omni_base_navigation/2.22.1-1.tar.gz";
-    name = "2.22.1-1.tar.gz";
-    sha256 = "30b95ec175d5a0606a2e2acfdd8567a2c0291f91f90b7b907a373c196e4df56c";
+    url = "https://github.com/ros2-gbp/omni_base_navigation-release/archive/release/humble/omni_base_navigation/2.24.2-1.tar.gz";
+    name = "2.24.2-1.tar.gz";
+    sha256 = "3c6bdf1ddfedf1302609a48794f594dd912157a14e4015733ba5e2f5daab6ce5";
   };
 
   buildType = "ament_cmake";

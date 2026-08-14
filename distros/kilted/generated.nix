@@ -1812,7 +1812,7 @@ self: super: {
 
  nanoeigenpy = self.callPackage ./nanoeigenpy {};
 
- nanoflann = self.callPackage ./nanoflann {};
+ nanoflann-vendor = self.callPackage ./nanoflann-vendor {};
 
  nao-button-sim = self.callPackage ./nao-button-sim {};
 

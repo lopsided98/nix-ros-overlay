@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-cmake-uncrustify, geometry-msgs, launch-pytest, launch-testing-ament-cmake, moveit-common, moveit-configs-utils, moveit-planners-ompl, moveit-resources, moveit-ros, moveit-ros-planning-interface, python3Packages, rclcpp, rclcpp-action, rmf-utils, robot-state-publisher, ros2-control, tf2-ros, trajectory-msgs, warehouse-ros-sqlite, xacro }:
 buildRosPackage {
   pname = "ros-lyrical-moveit-ros-trajectory-cache";
-  version = "2.14.1-r3";
+  version = "2.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/lyrical/moveit_ros_trajectory_cache/2.14.1-3.tar.gz";
-    name = "2.14.1-3.tar.gz";
-    sha256 = "50ead62f158199a9ad74ced3bf404033f74dd50a80e79c2efa24375abc572ac9";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/lyrical/moveit_ros_trajectory_cache/2.15.0-1.tar.gz";
+    name = "2.15.0-1.tar.gz";
+    sha256 = "ea192c23d6e0a27b65ed2be34f18dae6d9fc76b7a73777884b133a129fcc805e";
   };
 
   buildType = "ament_cmake";

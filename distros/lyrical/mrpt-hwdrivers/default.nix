@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, ffmpeg, libdc1394, libpcap, libusb1, mrpt-comms, mrpt-maps, mrpt-viz, openni2 }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-hwdrivers";
-  version = "3.1.2-r2";
+  version = "3.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_hwdrivers/3.1.2-2.tar.gz";
-    name = "3.1.2-2.tar.gz";
-    sha256 = "23b71034e9159418d433f98c8079376baa827efe6b6e59c008d1dafee91b9d12";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_hwdrivers/3.1.3-1.tar.gz";
+    name = "3.1.3-1.tar.gz";
+    sha256 = "9e13b4a90fe13ab14c71b21759c6243816fbdce7bb08ad9cceffcbcf498a86cb";
   };
 
   buildType = "cmake";

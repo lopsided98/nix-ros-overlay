@@ -1138,6 +1138,10 @@ self: super: {
 
  eiquadprog = self.callPackage ./eiquadprog {};
 
+ elite-cs-series-sdk = self.callPackage ./elite-cs-series-sdk {};
+
+ elite-robots-description = self.callPackage ./elite-robots-description {};
+
  ess-imu-driver2 = self.callPackage ./ess-imu-driver2 {};
 
  etsi-its-cam-coding = self.callPackage ./etsi-its-cam-coding {};
@@ -1725,6 +1729,14 @@ self: super: {
  joy-tester = self.callPackage ./joy-tester {};
 
  jrl-cmakemodules = self.callPackage ./jrl-cmakemodules {};
+
+ kangaroo-bringup = self.callPackage ./kangaroo-bringup {};
+
+ kangaroo-controller-configuration = self.callPackage ./kangaroo-controller-configuration {};
+
+ kangaroo-description = self.callPackage ./kangaroo-description {};
+
+ kangaroo-robot = self.callPackage ./kangaroo-robot {};
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
@@ -2448,7 +2460,7 @@ self: super: {
 
  nanoeigenpy = self.callPackage ./nanoeigenpy {};
 
- nanoflann = self.callPackage ./nanoflann {};
+ nanoflann-vendor = self.callPackage ./nanoflann-vendor {};
 
  nao-button-sim = self.callPackage ./nao-button-sim {};
 
@@ -4091,6 +4103,22 @@ self: super: {
  tiago-controller-configuration = self.callPackage ./tiago-controller-configuration {};
 
  tiago-description = self.callPackage ./tiago-description {};
+
+ tiago-dual-2dnav = self.callPackage ./tiago-dual-2dnav {};
+
+ tiago-dual-bringup = self.callPackage ./tiago-dual-bringup {};
+
+ tiago-dual-controller-configuration = self.callPackage ./tiago-dual-controller-configuration {};
+
+ tiago-dual-description = self.callPackage ./tiago-dual-description {};
+
+ tiago-dual-laser-sensors = self.callPackage ./tiago-dual-laser-sensors {};
+
+ tiago-dual-navigation = self.callPackage ./tiago-dual-navigation {};
+
+ tiago-dual-rgbd-sensors = self.callPackage ./tiago-dual-rgbd-sensors {};
+
+ tiago-dual-robot = self.callPackage ./tiago-dual-robot {};
 
  tiago-gazebo = self.callPackage ./tiago-gazebo {};
 

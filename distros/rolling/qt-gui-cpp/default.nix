@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, pkg-config, pluginlib, python-qt-binding, qt-gui, qt6, tinyxml-2 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, pkg-config, pluginlib, python-qt-binding, qt-gui, qt5or6, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-rolling-qt-gui-cpp";
   version = "3.0.2-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake pkg-config python-qt-binding ];
   checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ pluginlib qt-gui qt6.qtbase tinyxml-2 ];
+  propagatedBuildInputs = [ pluginlib qt-gui qt5or6.qtbase tinyxml-2 ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

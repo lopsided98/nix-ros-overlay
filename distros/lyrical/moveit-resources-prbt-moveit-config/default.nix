@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, joint-state-publisher, moveit-resources-prbt-ikfast-manipulator-plugin, moveit-resources-prbt-support, moveit-ros-move-group, robot-state-publisher, rviz2, xacro }:
 buildRosPackage {
   pname = "ros-lyrical-moveit-resources-prbt-moveit-config";
-  version = "2.14.1-r3";
+  version = "2.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/lyrical/moveit_resources_prbt_moveit_config/2.14.1-3.tar.gz";
-    name = "2.14.1-3.tar.gz";
-    sha256 = "a0cee853ead87d5074cbdbc611ca6686ce679d9ba0f4338b975025a674b275a6";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/lyrical/moveit_resources_prbt_moveit_config/2.15.0-1.tar.gz";
+    name = "2.15.0-1.tar.gz";
+    sha256 = "8b78a8c199faa5b73053f7c3d2909a57b149fad41d705944f50fdf7b27b882ec";
   };
 
   buildType = "ament_cmake";

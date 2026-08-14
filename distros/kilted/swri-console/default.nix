@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, qt5, rcl-interfaces, rclcpp, rmw, rosbag2-storage-mcap, rosbag2-transport, rosidl-default-generators, rosidl-default-runtime }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, qt5or6, rcl-interfaces, rclcpp, rcutils, rmw, rosbag2-storage, rosbag2-storage-mcap, rosbag2-transport }:
 buildRosPackage {
   pname = "ros-kilted-swri-console";
-  version = "2.1.4-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/swri_console-release/archive/release/kilted/swri_console/2.1.4-1.tar.gz";
-    name = "2.1.4-1.tar.gz";
-    sha256 = "a68f1dd95183d776a1b8a4a6aea9b8489ce4d06d944286e45925923b18377930";
+    url = "https://github.com/ros2-gbp/swri_console-release/archive/release/kilted/swri_console/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "350734576d9a903658abca6bbd1eee0db916937a8cd5f9c0e170ecddfdc259a5";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake rosidl-default-generators ];
-  propagatedBuildInputs = [ qt5.qtbase rcl-interfaces rclcpp rmw rosbag2-storage-mcap rosbag2-transport rosidl-default-runtime ];
-  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
+  buildInputs = [ ament-cmake ];
+  propagatedBuildInputs = [ qt5or6.qtbase rcl-interfaces rclcpp rcutils rmw rosbag2-storage rosbag2-storage-mcap rosbag2-transport ];
+  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
     description = "A rosout GUI viewer developed at Southwest Research Institute as an

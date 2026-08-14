@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, pluginlib, qt-gui-cpp, qt6, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, pluginlib, qt-gui-cpp, qt5or6, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-rqt-gui-cpp";
   version = "2.0.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-ros-core qt6.qtbase ];
+  buildInputs = [ ament-cmake ament-cmake-ros-core qt5or6.qtbase ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ pluginlib qt-gui-cpp rclcpp ];
   nativeBuildInputs = [ ament-cmake ament-cmake-ros-core ];

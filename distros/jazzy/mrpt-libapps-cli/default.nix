@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cli11, cmake, mrpt-hwdrivers, mrpt-slam, mrpt-topography }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-libapps-cli";
-  version = "3.1.2-r1";
+  version = "3.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_libapps_cli/3.1.2-1.tar.gz";
-    name = "3.1.2-1.tar.gz";
-    sha256 = "711832e74ee9d8cb4a8ecae196fdf3977edc84c7741b089fda2b9b45c2d6e643";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_libapps_cli/3.1.3-1.tar.gz";
+    name = "3.1.3-1.tar.gz";
+    sha256 = "aa5158f04da8d9b8b005c81059f8b2b7c269d568a1455384b9f3f5d977eec1ab";
   };
 
   buildType = "cmake";

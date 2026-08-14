@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, backward-ros, nav2-common, rclcpp }:
 buildRosPackage {
   pname = "ros-lyrical-nav2-voxel-grid";
-  version = "1.5.0-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_voxel_grid/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "8bde05dd71b547d2584d6632427009a48fde7b585b3c414274ed90b7bfb628ac";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_voxel_grid/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "9304821f816f558eab2a0777d86ee86e5e416b77db11f2712b938a038764f62f";
   };
 
   buildType = "ament_cmake";

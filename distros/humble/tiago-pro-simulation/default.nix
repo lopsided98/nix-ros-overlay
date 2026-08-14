@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tiago-pro-gazebo, tiago-pro-mujoco }:
 buildRosPackage {
   pname = "ros-humble-tiago-pro-simulation";
-  version = "1.17.1-r1";
+  version = "1.18.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tiago_pro_simulation-release/archive/release/humble/tiago_pro_simulation/1.17.1-1.tar.gz";
-    name = "1.17.1-1.tar.gz";
-    sha256 = "d4d856da4bf3b4694d968c9aacb9bf594c6c8a237864a0f55baa0af3c871e2d5";
+    url = "https://github.com/ros2-gbp/tiago_pro_simulation-release/archive/release/humble/tiago_pro_simulation/1.18.0-1.tar.gz";
+    name = "1.18.0-1.tar.gz";
+    sha256 = "6184ef64590c70d8841a5f5f5c5cad57d8b4b1c1e1dbd9e91ce2ee59276f20ea";
   };
 
   buildType = "ament_cmake";

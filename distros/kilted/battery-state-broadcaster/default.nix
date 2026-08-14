@@ -2,24 +2,25 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, controller-interface, pluginlib, realtime-tools, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-battery-state-broadcaster";
-  version = "1.2.0-r1";
+  version = "5.17.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_battery_monitoring-release/archive/release/kilted/battery_state_broadcaster/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "c2577f64cdc193079cf18067cb801f53ce630cec144534e3d7c3fa4198d62540";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/battery_state_broadcaster/5.17.0-1.tar.gz";
+    name = "5.17.0-1.tar.gz";
+    sha256 = "fe9b3a10a41e7505bae76b5fbe58da300b86c29df3265cab2ac2d95e74eee0c2";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ controller-interface pluginlib realtime-tools sensor-msgs ];
+  buildInputs = [ ament-cmake generate-parameter-library ros2-control-cmake ];
+  checkInputs = [ ament-cmake-gmock controller-manager hardware-interface hardware-interface-testing ros2-control-test-assets ];
+  propagatedBuildInputs = [ backward-ros control-msgs controller-interface hardware-interface pluginlib rclcpp rclcpp-lifecycle realtime-tools sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "ROS2 Control boradcaster for battery state sensors.";
-    license = with lib.licenses; [ mit ];
+    description = "ros2_control battery state broadcaster controller";
+    license = with lib.licenses; [ asl20 ];
   };
 }
