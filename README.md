@@ -63,7 +63,7 @@ What works:
 
 What still needs to be done:
 1. Updating ROS packages to recent nixpkgs and upstreaming that
-2. macOS support
+2. Improving macOS support
 
 ## Setup
 
