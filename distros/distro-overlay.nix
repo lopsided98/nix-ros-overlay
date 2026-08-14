@@ -94,6 +94,61 @@ let
     inherit (self) jrl-cmakemodules eiquadprog;
     inherit (self.python3Packages) coal eigenpy nanoeigenpy pinocchio proxsuite crocoddyl ndcurves tsid;
 
+    ament-copyright = rosSuper.ament-copyright.overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      # don't lint files in build/ dir
+      postPatch = postPatch + ''
+        substituteInPlace ament_copyright/crawler.py --replace-fail \
+          "dirnames[:] = [d for d in dirnames if d[0] not in ['.', '_']]" \
+          "dirnames[:] = [d for d in dirnames if d[0] not in ['.', '_'] and d != 'build']"
+      '';
+    });
+
+    ament-cpplint = rosSuper.ament-cpplint.overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      # don't lint files in build/ dir
+      postPatch = postPatch + ''
+        substituteInPlace ament_cpplint/main.py --replace-fail \
+          "dirnames[:] = [d for d in dirnames if d[0] not in ['.', '_']]" \
+          "dirnames[:] = [d for d in dirnames if d[0] not in ['.', '_'] and d != 'build']"
+      '';
+    });
+
+    ament-lint-cmake = rosSuper.ament-lint-cmake.overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      # don't lint files in build/ dir
+      postPatch = postPatch + ''
+        substituteInPlace ament_lint_cmake/main.py --replace-fail \
+          "dirnames[:] = [d for d in dirnames if d[0] not in ['.', '_']]" \
+          "dirnames[:] = [d for d in dirnames if d[0] not in ['.', '_'] and d != 'build']"
+      '';
+    });
+
+    ament-mypy = rosSuper.ament-mypy.overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      # don't lint files in build/ dir
+      postPatch = postPatch + ''
+        substituteInPlace ament_mypy/main.py --replace-fail \
+          "dirnames[:] = [d for d in dirnames if d[0] not in ['.', '_']]" \
+          "dirnames[:] = [d for d in dirnames if d[0] not in ['.', '_'] and d != 'build']"
+      '';
+    });
+
+    ament-uncrustify = rosSuper.ament-uncrustify.overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      # don't lint files in build/ dir
+      postPatch = postPatch + ''
+        substituteInPlace ament_uncrustify/main.py --replace-fail \
+          "dirnames[:] = [d for d in dirnames if d[0] not in ['.', '_']]" \
+          "dirnames[:] = [d for d in dirnames if d[0] not in ['.', '_'] and d != 'build']"
+      '';
+    });
+
     foonathan-memory-vendor = rosSuper.foonathan-memory-vendor.overrideAttrs ({
       propagatedBuildInputs ? [], ...
     }: {
