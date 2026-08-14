@@ -530,6 +530,30 @@ in {
     '';
   });
 
+  rcl-yaml-param-parser = rosSuper.rcl-yaml-param-parser.overrideAttrs ({
+    patches ? [], postPatch ? "", ...
+  }: {
+    # Apple platforms don't provide the C11 threads API; map
+    # once_flag/call_once to pthread_once.
+    # https://github.com/ros2/rcl/pull/1325
+    patches = patches ++ [
+      (self.fetchpatch2 {
+        url = "https://github.com/ros2/rcl/commit/15aeab9f4a2d93fdc45f3d84338453046c18ec22.patch?full_index=1";
+        hash = "sha256-xIR/axNf3yvNqhq1jsSQrkrlpV7bhYW+hS/IEfFleu8=";
+        stripLen = 1;
+      })
+    ];
+    # Apple's <locale.h> doesn't declare locale_t/newlocale/uselocale/
+    # LC_NUMERIC_MASK; they live in <xlocale.h>.
+    # https://github.com/ros2/rcl/pull/1327
+    postPatch = postPatch + lib.optionalString self.stdenv.hostPlatform.isDarwin ''
+      substituteInPlace src/parse.c --replace-fail \
+        '#include <locale.h>' \
+        '#include <locale.h>
+      #include <xlocale.h>'
+    '';
+  });
+
   roboplan-examples = rosSuper.roboplan-examples.overrideAttrs ({
     buildInputs ? [], ...
   }: {
