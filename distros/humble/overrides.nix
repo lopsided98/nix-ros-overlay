@@ -1412,48 +1412,16 @@ in with lib; {
     '';
   });
 
-  zenoh-cpp-vendor = (lib.patchAmentVendorGit rosSuper.zenoh-cpp-vendor {
-    # Patch the build.rs script to be able to build internal
-    # opaque-types crate without network access.
-    patchesFor.zenoh_c_vendor = [ 
-      ./zenoh-cpp-vendor/zenoh-c.patch 
+  zenoh-cpp-vendor = rosSuper.zenoh-cpp-vendor.overrideAttrs ({
+    propagatedBuildInputs ? [], cmakeFlags ? [], ...
+  }: {
+    propagatedBuildInputs = propagatedBuildInputs ++ [
+      self.zenoh-c
+      self.zenoh-cpp
     ];
-  }).overrideAttrs(finalAttrs: {
-    nativeBuildInputs ? [], postPatch ? "", passthru ? {}, ...
-  }: let
-    outputHashes = {
-      "zenoh-1.8.0" = "sha256-W0mVplCanR1zAoG/rExjD0h01altk0gC9wWeu3DNOqI=";
-    };
-    zenoh-c-source = finalAttrs.passthru.amentVendorSrcs.zenoh_c_vendor;
-  in {
-    postPatch = postPatch + ''
-      ln -s ${zenoh-c-source}/Cargo.lock Cargo.lock
-    '';
-    nativeBuildInputs = nativeBuildInputs ++ [
-      self.rustPlatform.cargoSetupHook
-      self.rustc
+    cmakeFlags = cmakeFlags ++ [
+      (lib.cmakeBool "USE_SYSTEM_ZENOH" true)
     ];
-    cargoDeps = self.rustPlatform.importCargoLock {
-      lockFile = "${zenoh-c-source}/Cargo.lock";
-      inherit outputHashes;
-    };
-
-    # Prepare vendored dependencies for internal opaque-types crate.
-    # Execute in subshell to not change variables set by the normal
-    # cargoSetupPostUnpackHook.
-    preBuild = ''
-      (
-        mkdir nix-zenoh-opaque-types
-        cd nix-zenoh-opaque-types
-        cargoDeps=${self.rustPlatform.importCargoLock {
-          lockFile = "${zenoh-c-source}/build-resources/opaque-types/Cargo.lock";
-          inherit outputHashes;
-        }}
-        cargoSetupPostUnpackHook
-      )
-      # Export information for use by our patched build.rs script.
-      export NIX_ZENOH_OPAQUE_TYPES_CARGO_CONFIG=$PWD/nix-zenoh-opaque-types/.cargo/config.toml
-    '';
   });
 
   zmqpp-vendor = lib.patchAmentVendorGit rosSuper.zmqpp-vendor {
