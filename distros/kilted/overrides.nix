@@ -83,12 +83,6 @@ in {
     '';
   });
 
-  foonathan-memory-vendor = lib.patchExternalProjectGit rosSuper.foonathan-memory-vendor {
-    url = "https://github.com/foonathan/memory.git";
-    rev = "v0.7-3";
-    fetchgitArgs.hash = "sha256-nLBnxPbPKiLCFF2TJgD/eJKJJfzktVBW3SRW2m3WK/s=";
-  };
-
   foxglove-bridge = rosSuper.foxglove-bridge.overrideAttrs({
     postPatch ? "", ...
   }: {

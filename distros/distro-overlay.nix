@@ -98,6 +98,13 @@ let
     inherit (self) jrl-cmakemodules eiquadprog;
     inherit (self.python3Packages) coal eigenpy nanoeigenpy pinocchio proxsuite crocoddyl ndcurves tsid;
 
+    foonathan-memory-vendor = rosSuper.foonathan-memory-vendor.overrideAttrs ({
+      propagatedBuildInputs ? [], ...
+    }: {
+      # Use system package instead of fetching source from github
+      propagatedBuildInputs = propagatedBuildInputs ++ [ self.foonathan-memory ];
+    });
+
     freeimage = null; # Get rid of freeimage
 
     gazebo-ros = rosSuper.gazebo-ros.overrideAttrs ({ ... }:{
