@@ -83,6 +83,20 @@ in {
     '';
   });
 
+  fastdds = rosSuper.fastdds.overrideAttrs ({
+    postPatch ? "", ...
+  }: lib.optionalAttrs self.stdenv.isDarwin {
+    # `value` (std::string) is implicitly constructed from a null
+    # `const char*` for the false branch, tripping -Wnonnull on
+    # Apple Clang. Fixed upstream in Fast-DDS 3.3 by
+    # https://github.com/eProsima/Fast-DDS/pull/6415.
+    postPatch = postPatch + ''
+      substituteInPlace src/cpp/fastdds/xtypes/type_representation/TypeObjectRegistry.cpp --replace-fail \
+        'TypeObjectUtils::build_annotation_parameter_value(!value.empty() ? value : 0);' \
+        "TypeObjectUtils::build_annotation_parameter_value(!value.empty() ? value[0] : '\\0');"
+    '';
+  });
+
   foxglove-bridge = rosSuper.foxglove-bridge.overrideAttrs({
     postPatch ? "", ...
   }: {
