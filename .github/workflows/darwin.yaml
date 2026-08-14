@@ -1,4 +1,4 @@
-name: "Eval Darwin"
+name: "Darwin"
 on:
   push:
   pull_request:
@@ -10,3 +10,18 @@ jobs:
     - uses: actions/checkout@v4
     - uses: cachix/install-nix-action@v31.8.1
     - run: maintainers/scripts/eval-darwin.sh
+  build-ros-base:
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        distro:
+          - humble
+          - jazzy
+          - kilted
+          - lyrical
+          - rolling
+    steps:
+    - uses: actions/checkout@v4
+    - uses: cachix/install-nix-action@v31.8.1
+    - run: nix-build -A rosPackages.${{ matrix.distro }}.ros-base
