@@ -1,0 +1,12 @@
+name: "Eval Darwin"
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  eval:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: cachix/install-nix-action@v31.8.1
+    - run: maintainers/scripts/eval-darwin.sh
