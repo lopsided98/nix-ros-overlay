@@ -395,15 +395,7 @@ in {
 
   gz-math-vendor = lib.patchGzAmentVendorGit rosSuper.gz-math-vendor { };
 
-  gz-msgs-vendor = lib.patchGzAmentVendorGit rosSuper.gz-msgs-vendor {
-    patchesFor.gz_msgs_vendor = [
-      # Fix compatibility with protobuf v30 (cpp 6.30.0)
-      (self.fetchpatch2 {
-        url = "https://github.com/gazebosim/gz-msgs/commit/ebdd05f6d51c990876085bcc9db9f79df59d375a.patch?full_index=1";
-        hash = "sha256-0uscwyYZafHfzooxcrrhtcfcxknpDTEcZ6Ie0WWySVw=";
-      })
-    ];
-  };
+  gz-msgs-vendor = lib.patchGzAmentVendorGit rosSuper.gz-msgs-vendor { };
 
   gz-ogre-next-vendor = (rosSelf.lib.patchAmentVendorGit rosSuper.gz-ogre-next-vendor {
     # https://github.com/OGRECave/ogre-next/pull/562
