@@ -565,6 +565,19 @@ in {
     propagatedNativeBuildInputs = [ self.qt6.wrapQtAppsHook ];
   };
 
+  rcutils = rosSuper.rcutils.overrideAttrs ({
+    postPatch ? "", ...
+  }: lib.optionalAttrs self.stdenv.hostPlatform.isDarwin {
+    # Apple Clang rejects brace-init of an _Atomic scalar ("illegal
+    # initializer type 'atomic_int_least64_t'").
+    # https://github.com/ros2/rcutils/pull/586
+    postPatch = postPatch + ''
+      substituteInPlace src/testing/fault_injection.c --replace-fail \
+        'atomic_int_least64_t g_rcutils_fault_injection_count = {-1};' \
+        'atomic_int_least64_t g_rcutils_fault_injection_count = -1;'
+    '';
+  });
+
   rmf-task-sequence = rosSuper.rmf-task-sequence.overrideAttrs ({
     postPatch ? "", ...
   }: {
