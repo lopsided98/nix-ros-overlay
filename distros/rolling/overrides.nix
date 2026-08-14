@@ -554,6 +554,19 @@ in {
     '';
   });
 
+  rclcpp-components = rosSuper.rclcpp-components.overrideAttrs ({
+    postPatch ? "", ...
+  }: lib.optionalAttrs self.stdenv.hostPlatform.isDarwin {
+    # debug_msg is passed as the format string instead of as an
+    # argument; -Wformat-security is an error on Apple Clang.
+    # https://github.com/ros2/rclcpp/pull/3229
+    postPatch = postPatch + ''
+      substituteInPlace src/component_container.cpp --replace-fail \
+        'RCUTILS_LOG_DEBUG_NAMED("component_container", debug_msg.c_str());' \
+        'RCUTILS_LOG_DEBUG_NAMED("component_container", "%s", debug_msg.c_str());'
+    '';
+  });
+
   roboplan-examples = rosSuper.roboplan-examples.overrideAttrs ({
     buildInputs ? [], ...
   }: {
