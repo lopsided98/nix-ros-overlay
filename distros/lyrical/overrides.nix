@@ -56,12 +56,6 @@ in {
     ];
   });
 
-  foonathan-memory-vendor = lib.patchExternalProjectGit rosSuper.foonathan-memory-vendor {
-    url = "https://github.com/eProsima/memory.git";
-    rev = "vendor-1.4.1";
-    fetchgitArgs.hash = "sha256-1cQgCT7NvhAgJ5dgF8ZCrrPG/p65zz1UuGDQGrGJOpo=";
-  };
-
   foxglove-bridge = rosSuper.foxglove-bridge.overrideAttrs({
     postPatch ? "", ...
   }: {
