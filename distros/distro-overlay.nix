@@ -149,6 +149,36 @@ let
       '';
     });
 
+    ament-xmllint = rosSuper.ament-xmllint.overrideAttrs ({
+      postPatch ? "", disabledTests ? [], ...
+    }:
+      let
+        packageFormat2Xsd = self.fetchurl {
+          url = "http://download.ros.org/schema/package_format2.xsd";
+          hash = "sha256-pzKK8IWbPxWuTwSRLYRqWO3GZk2x5pr/BhsilAwZQwQ=";
+        };
+        packageFormat3Xsd = self.fetchurl {
+          url = "http://download.ros.org/schema/package_format3.xsd";
+          hash = "sha256-WFIBgJy/jIHsWk19hNgn9Gdt1ipLwKgS2npIXeoq1Do=";
+        };
+        rosPackageCatalog = self.writeText "ros-packages-catalog.xml" ''
+          <?xml version="1.0"?>
+          <!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.1//EN" "http://www.oasis-open.org/committees/entity/release/1.1/catalog.dtd">
+          <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+            <uri name="http://download.ros.org/schema/package_format2.xsd" uri="${packageFormat2Xsd}"/>
+            <uri name="http://download.ros.org/schema/package_format3.xsd" uri="${packageFormat3Xsd}"/>
+          </catalog>
+        '';
+      in
+    {
+      disabledTests = [ "test_flake8" ]; # line too long because catalog path in patch
+      postPatch = postPatch + ''
+        substituteInPlace ament_xmllint/main.py --replace-fail \
+          "cmd, cwd=" \
+          "cmd, env={**os.environ, 'XML_CATALOG_FILES': '${rosPackageCatalog}'}, cwd="
+      '';
+    });
+
     foonathan-memory-vendor = rosSuper.foonathan-memory-vendor.overrideAttrs ({
       propagatedBuildInputs ? [], ...
     }: {
