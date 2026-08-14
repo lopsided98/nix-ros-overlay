@@ -166,7 +166,7 @@ with rosSelf.lib; {
   }: {
     cmakeFlags = cmakeFlags ++ optionals (!self.stdenv.buildPlatform.canExecute self.stdenv.hostPlatform) (
       [ "-DSM_RUN_RESULT=0" ] ++
-      optional (self.stdenv.isLinux || self.stdenv.isDarwin)
+      optional (self.stdenv.isLinux || self.stdenv.hostPlatform.isDarwin)
         "-DSM_RUN_RESULT__TRYRUN_OUTPUT=PTHREAD_RWLOCK_PREFER_READER_NP"
     );
   });
@@ -298,7 +298,7 @@ with rosSelf.lib; {
       rmw-fastrtps-cpp
     ] ++ propagatedBuildInputs;
     # rmw-cyclonedds-cpp fails to build on MacOS.
-    buildInputs = if self.stdenv.isDarwin then
+    buildInputs = if self.stdenv.hostPlatform.isDarwin then
       builtins.filter (p: p.pname != "ros-${p.rosDistro}-rmw-cyclonedds-cpp") buildInputs
     else
       buildInputs;

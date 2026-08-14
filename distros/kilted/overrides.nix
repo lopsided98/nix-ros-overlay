@@ -85,7 +85,7 @@ in {
 
   fastdds = rosSuper.fastdds.overrideAttrs ({
     postPatch ? "", ...
-  }: lib.optionalAttrs self.stdenv.isDarwin {
+  }: lib.optionalAttrs self.stdenv.hostPlatform.isDarwin {
     # `value` (std::string) is implicitly constructed from a null
     # `const char*` for the false branch, tripping -Wnonnull on
     # Apple Clang. Fixed upstream in Fast-DDS 3.3 by
