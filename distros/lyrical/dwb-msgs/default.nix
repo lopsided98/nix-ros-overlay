@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, backward-ros, builtin-interfaces, geometry-msgs, nav-2d-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-dwb-msgs";
-  version = "1.5.0-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/dwb_msgs/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "5506e27cf71a1fa16820f9ddd8ef8de2519e9367a878270516a3d894c9547c59";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/dwb_msgs/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "0a4edf2fe12563212a4ad7afff4afe3901ea7206fc0b921211831d34df462a70";
   };
 
   buildType = "ament_cmake";

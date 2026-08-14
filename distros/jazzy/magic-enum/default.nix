@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-jazzy-magic-enum";
-  version = "0.9.7-r3";
+  version = "0.9.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/magic_enum-release/archive/release/jazzy/magic_enum/0.9.7-3.tar.gz";
-    name = "0.9.7-3.tar.gz";
-    sha256 = "1196d3b7a2752b94c8ae621b2392b6929184fe6fee59aeff559a60e0bdf9f937";
+    url = "https://github.com/ros2-gbp/magic_enum-release/archive/release/jazzy/magic_enum/0.9.8-1.tar.gz";
+    name = "0.9.8-1.tar.gz";
+    sha256 = "0c4ec13ff7de85b2109878143acbbb82b947e07df1678deb7f4dd38b93e9b703";
   };
 
   buildType = "cmake";

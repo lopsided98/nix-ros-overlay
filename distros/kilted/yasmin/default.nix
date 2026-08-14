@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-yasmin";
-  version = "6.1.0-r1";
+  version = "6.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin/6.1.0-1.tar.gz";
-    name = "6.1.0-1.tar.gz";
-    sha256 = "b55f59ed40797abfccea21e44de2810f09e32fa08b2b561e18b39c453d0ecfd0";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin/6.1.1-1.tar.gz";
+    name = "6.1.1-1.tar.gz";
+    sha256 = "a464ca3d9fc554b1f02dada0b8d482ae642b6d03568bf76db04a09f2361a7b94";
   };
 
   buildType = "ament_cmake";

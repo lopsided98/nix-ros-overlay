@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake-mypy, ament-cmake-python, ament-cmake-ros, example-interfaces, launch, launch-ros, launch-testing-ament-cmake, python3Packages, rcl-interfaces, rclpy, rosapi, rosbridge-library, rosbridge-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-rolling-rosbridge-server";
-  version = "4.2.0-r1";
+  version = "4.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/rolling/rosbridge_server/4.2.0-1.tar.gz";
-    name = "4.2.0-1.tar.gz";
-    sha256 = "bc38fcf06d0cd547f78586e69ef6713626a33d9c8b745420a6379fbc417a927e";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/rolling/rosbridge_server/4.2.1-1.tar.gz";
+    name = "4.2.1-1.tar.gz";
+    sha256 = "afa6583f19cc03c49b041d394ec5953900857c3365c7a4c74ff0b41f720489a2";
   };
 
   buildType = "ament_cmake";

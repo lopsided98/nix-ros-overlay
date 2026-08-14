@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-cmake-python, python3Packages, rclpy, ros-environment, yasmin, yasmin-factory, yasmin-plugins-manager, yasmin-ros }:
 buildRosPackage {
   pname = "ros-humble-yasmin-editor";
-  version = "6.1.0-r1";
+  version = "6.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_editor/6.1.0-1.tar.gz";
-    name = "6.1.0-1.tar.gz";
-    sha256 = "bdad82650dd19cdde41dd12f5387c1fc57bd62c2458c59a362add9e967af411e";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_editor/6.1.1-1.tar.gz";
+    name = "6.1.1-1.tar.gz";
+    sha256 = "8dc0704e109bd8b03c44745445a5a95346df4fd6555caffc857e72c810815fd5";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-gui, mrpt-libapps-cli, wxGTK32 }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-libapps-gui";
-  version = "3.1.2-r1";
+  version = "3.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_libapps_gui/3.1.2-1.tar.gz";
-    name = "3.1.2-1.tar.gz";
-    sha256 = "3ee632b2750d4e8ebd43e0cad218d40a20bcd861c011826e52dcf5acbd5e92ff";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_libapps_gui/3.1.3-1.tar.gz";
+    name = "3.1.3-1.tar.gz";
+    sha256 = "aa130ce3f3d5ed050604b8ecce605341e3f615cda6c9fa008937a4fd408cfdd2";
   };
 
   buildType = "cmake";

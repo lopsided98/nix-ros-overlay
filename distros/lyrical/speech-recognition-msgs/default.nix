@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-speech-recognition-msgs";
-  version = "5.0.1-r2";
+  version = "5.0.1-r3";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/lyrical/speech_recognition_msgs/5.0.1-2.tar.gz";
-    name = "5.0.1-2.tar.gz";
-    sha256 = "c366b4411b7abed5e574fffa49b7cb3b7077f407aa149bfd8872fb9e57585601";
+    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/lyrical/speech_recognition_msgs/5.0.1-3.tar.gz";
+    name = "5.0.1-3.tar.gz";
+    sha256 = "855a7f76758bee62923309f11aaa9a3ddf4052376ee6f5c4a8ba2a7c469c676f";
   };
 
   buildType = "ament_cmake";

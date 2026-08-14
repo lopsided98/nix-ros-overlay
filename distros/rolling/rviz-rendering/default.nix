@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-ros, ament-cmake-ros-core, ament-index-cpp, ament-lint-auto, ament-lint-common, assimp, eigen, eigen3-cmake-module, qt6, resource-retriever, rviz-ogre-vendor }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-ros, ament-cmake-ros-core, ament-index-cpp, ament-lint-auto, ament-lint-common, assimp, eigen, eigen3-cmake-module, qt5or6, resource-retriever, rviz-ogre-vendor }:
 buildRosPackage {
   pname = "ros-rolling-rviz-rendering";
   version = "16.0.2-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];
   checkInputs = [ ament-cmake-gmock ament-cmake-gtest ament-lint-auto ament-lint-common assimp ];
-  propagatedBuildInputs = [ ament-cmake-ros-core ament-index-cpp assimp eigen eigen3-cmake-module qt6.qtbase qt6.qtsvg resource-retriever rviz-ogre-vendor ];
+  propagatedBuildInputs = [ ament-cmake-ros-core ament-index-cpp assimp eigen eigen3-cmake-module qt5or6.qtbase qt5or6.qtsvg resource-retriever rviz-ogre-vendor ];
   nativeBuildInputs = [ ament-cmake-ros ament-cmake-ros-core eigen3-cmake-module ];
 
   meta = {

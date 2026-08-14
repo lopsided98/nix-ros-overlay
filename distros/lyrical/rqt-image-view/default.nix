@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, geometry-msgs, image-transport, qt-gui-cpp, qt6, rclcpp, rqt-gui, rqt-gui-cpp, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, geometry-msgs, image-transport, qt-gui-cpp, qt5or6, rclcpp, rqt-gui, rqt-gui-cpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-rqt-image-view";
   version = "2.0.5-r3";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ cv-bridge geometry-msgs image-transport qt-gui-cpp qt6.qtbase rclcpp rqt-gui rqt-gui-cpp sensor-msgs ];
+  propagatedBuildInputs = [ cv-bridge geometry-msgs image-transport qt-gui-cpp qt5or6.qtbase rclcpp rqt-gui rqt-gui-cpp sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

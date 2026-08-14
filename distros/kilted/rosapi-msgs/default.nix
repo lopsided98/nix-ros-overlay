@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-rosapi-msgs";
-  version = "3.3.0-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/kilted/rosapi_msgs/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "625e2ead423017671940b65707d27bb91028650bd8655cdbb910f9c861b61ba7";
+    url = "https://github.com/ros2-gbp/rosbridge_suite-release/archive/release/kilted/rosapi_msgs/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "bfb12b338cef355d3f52afc7452300dd9b5614bd20040ed40c4ed564987690ae";
   };
 
   buildType = "ament_cmake";

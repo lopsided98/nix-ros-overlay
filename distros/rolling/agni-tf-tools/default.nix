@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, angles, boost, eigen, geometry-msgs, interactive-markers, pluginlib, rclcpp, rviz-common, rviz-default-plugins, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-agni-tf-tools";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/agni_tf_tools-release/archive/release/rolling/agni_tf_tools/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "8b28e758bf9c78f8101db073db30d531e72eaa5652a7655d83493ab7843cf37f";
+    url = "https://github.com/ros2-gbp/agni_tf_tools-release/archive/release/rolling/agni_tf_tools/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "7ff582ca32134f41b468e41cc3718d7726907e6eceeb3b34f81b4495e21e9ec2";
   };
 
   buildType = "ament_cmake";

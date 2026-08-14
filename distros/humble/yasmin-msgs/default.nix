@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators }:
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-humble-yasmin-msgs";
-  version = "6.1.0-r1";
+  version = "6.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_msgs/6.1.0-1.tar.gz";
-    name = "6.1.0-1.tar.gz";
-    sha256 = "ee07ee732930476b07c1bece4766bf399ec48d27d85c0ce3898abe4998653105";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_msgs/6.1.1-1.tar.gz";
+    name = "6.1.1-1.tar.gz";
+    sha256 = "de2ad2de9a81a78858ab67807fffb9a335d473a7339fa953e27142a6f0b9a695";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ rosidl-default-generators ];
+  propagatedBuildInputs = [ action-msgs rosidl-default-generators ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

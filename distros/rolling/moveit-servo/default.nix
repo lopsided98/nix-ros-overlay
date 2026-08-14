@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, control-msgs, controller-manager, generate-parameter-library, geometry-msgs, joint-state-broadcaster, joint-trajectory-controller, joy, launch-param-builder, moveit-common, moveit-configs-utils, moveit-core, moveit-msgs, moveit-resources-panda-moveit-config, moveit-ros-planning, moveit-ros-planning-interface, moveit-ros-visualization, pluginlib, realtime-tools, robot-state-publisher, ros-testing, sensor-msgs, std-msgs, std-srvs, tf2-eigen, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-rolling-moveit-servo";
-  version = "2.14.1-r2";
+  version = "2.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_servo/2.14.1-2.tar.gz";
-    name = "2.14.1-2.tar.gz";
-    sha256 = "2180ec910dc9d3d481a1f4a076afb283d6ef28b2d0b3737456728a06ad67ae0d";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_servo/2.15.0-1.tar.gz";
+    name = "2.15.0-1.tar.gz";
+    sha256 = "46da50902589b43b675b39df167869fda1a24a87dd5f19ca9b94c9e5b1d16153";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, backward-ros, nav2-common, nav2-costmap-2d, rclcpp }:
 buildRosPackage {
   pname = "ros-lyrical-costmap-queue";
-  version = "1.5.0-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/costmap_queue/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "dbf0ad75c9ffee55d7d32b11add7672281817ceb3dc9fdf1055180e372b3a1cd";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/costmap_queue/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "af87cb4815729de18ef11da7c1ad02282dab58118d28279e239393aaa2e9ac61";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, ament-lint-auto, ament-lint-common, backward-ros, geometry-msgs, nav2-common, nav2-ros-common, rclcpp-lifecycle, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-opennav-docking-core";
-  version = "1.5.0-r1";
+  version = "1.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/opennav_docking_core/1.5.0-1.tar.gz";
-    name = "1.5.0-1.tar.gz";
-    sha256 = "a9215ed9b2bae0495b0d8abef21b41eb5c1f2e54a170a4b7188bb11318cc2e93";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/opennav_docking_core/1.5.1-1.tar.gz";
+    name = "1.5.1-1.tar.gz";
+    sha256 = "3fa6e4127d03da66bb15da430ca1f34153bb5bda228838dee24fe52f8f7777b8";
   };
 
   buildType = "ament_cmake";

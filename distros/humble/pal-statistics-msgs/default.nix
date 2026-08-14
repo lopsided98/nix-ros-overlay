@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-pal-statistics-msgs";
-  version = "2.7.0-r1";
+  version = "2.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pal_statistics-release/archive/release/humble/pal_statistics_msgs/2.7.0-1.tar.gz";
-    name = "2.7.0-1.tar.gz";
-    sha256 = "1f95a186ec5b6f8b20f0e957190ccb44b0ff963bf61f7eedc047b717ee468da2";
+    url = "https://github.com/ros2-gbp/pal_statistics-release/archive/release/humble/pal_statistics_msgs/2.8.0-1.tar.gz";
+    name = "2.8.0-1.tar.gz";
+    sha256 = "5a940907528fd582d7bb7e16600f889894dcb803e270be0d58bae1d8b9c5b965";
   };
 
   buildType = "ament_cmake";

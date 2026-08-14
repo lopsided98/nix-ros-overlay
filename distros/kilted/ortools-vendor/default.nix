@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, ament-cmake-xmllint, ament-lint-auto, git }:
 buildRosPackage {
   pname = "ros-kilted-ortools-vendor";
-  version = "9.9.0-r10";
+  version = "9.9.1-r4";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ortools_vendor-release/archive/release/kilted/ortools_vendor/9.9.0-10.tar.gz";
-    name = "9.9.0-10.tar.gz";
-    sha256 = "db664e4828d6b6cee7b951d61fe6a14455bd84c6a6f032f5a5e5f9cc58cda183";
+    url = "https://github.com/ros2-gbp/ortools_vendor-release/archive/release/kilted/ortools_vendor/9.9.1-4.tar.gz";
+    name = "9.9.1-4.tar.gz";
+    sha256 = "b90a506ce7ecc8564985750b5e11594120c9790cb549f82c5c42c6e48f5bc942";
   };
 
   buildType = "ament_cmake";

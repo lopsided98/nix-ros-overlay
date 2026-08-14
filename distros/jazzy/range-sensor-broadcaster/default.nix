@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-range-sensor-broadcaster";
-  version = "4.41.0-r1";
+  version = "4.42.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/range_sensor_broadcaster/4.41.0-1.tar.gz";
-    name = "4.41.0-1.tar.gz";
-    sha256 = "9977a099c530f2201a179904381db3e775517a4c4791e52ab868efffbd8a3a7d";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/range_sensor_broadcaster/4.42.1-1.tar.gz";
+    name = "4.42.1-1.tar.gz";
+    sha256 = "09b8b4f9d03da87fc17610d7c3b1a589549f5d56876be60d06fdfcf2e046015e";
   };
 
   buildType = "ament_cmake";

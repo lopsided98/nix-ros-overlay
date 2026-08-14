@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, realsense2-description, xacro }:
 buildRosPackage {
   pname = "ros-humble-pal-urdf-utils";
-  version = "2.9.1-r1";
+  version = "2.9.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pal_urdf_utils-release/archive/release/humble/pal_urdf_utils/2.9.1-1.tar.gz";
-    name = "2.9.1-1.tar.gz";
-    sha256 = "af57c6cb0ad8409b9fd0a9753639ac3e2531961502c3a1311e2345b77031a70b";
+    url = "https://github.com/ros2-gbp/pal_urdf_utils-release/archive/release/humble/pal_urdf_utils/2.9.2-1.tar.gz";
+    name = "2.9.2-1.tar.gz";
+    sha256 = "fef7612423c56c18ba233aa560c44cf687d3abfaa5c4c033ae7f408e700c42dd";
   };
 
   buildType = "ament_cmake";

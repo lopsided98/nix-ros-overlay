@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_position_controllers, ament-cmake, ament-cmake-gtest, ament-index-cpp, controller-manager, moveit-common, moveit-configs-utils, moveit-core, moveit-msgs, moveit-planners-ompl, moveit-resources-panda-moveit-config, moveit-ros-planning, moveit-ros-planning-interface, moveit-simple-controller-manager, pluginlib, rclcpp, rclcpp-action, rclcpp-components, robot-state-publisher, ros-testing, rviz2, std-msgs, std-srvs, tf2-ros, trajectory-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, controller-manager, forward-command-controller, moveit-common, moveit-configs-utils, moveit-core, moveit-msgs, moveit-planners-ompl, moveit-resources-panda-moveit-config, moveit-ros-planning, moveit-ros-planning-interface, moveit-simple-controller-manager, pluginlib, rclcpp, rclcpp-action, rclcpp-components, robot-state-publisher, ros-testing, rviz2, std-msgs, std-srvs, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-rolling-moveit-hybrid-planning";
-  version = "2.14.1-r2";
+  version = "2.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_hybrid_planning/2.14.1-2.tar.gz";
-    name = "2.14.1-2.tar.gz";
-    sha256 = "891d957008f970f9a6d4b8362da5fc1dbe8db111f55cf9e1cfbc2f9540765814";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_hybrid_planning/2.15.0-1.tar.gz";
+    name = "2.15.0-1.tar.gz";
+    sha256 = "dff82a4c860dee3615eac7ffb2ed989b779e4835fb58ebd3c5399f12e86caebc";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ _unresolved_position_controllers ament-cmake-gtest controller-manager moveit-configs-utils moveit-planners-ompl moveit-resources-panda-moveit-config moveit-simple-controller-manager robot-state-publisher ros-testing ];
-  propagatedBuildInputs = [ _unresolved_position_controllers ament-index-cpp controller-manager moveit-common moveit-core moveit-msgs moveit-resources-panda-moveit-config moveit-ros-planning moveit-ros-planning-interface pluginlib rclcpp rclcpp-action rclcpp-components robot-state-publisher rviz2 std-msgs std-srvs tf2-ros trajectory-msgs ];
+  checkInputs = [ ament-cmake-gtest controller-manager forward-command-controller moveit-configs-utils moveit-planners-ompl moveit-resources-panda-moveit-config moveit-simple-controller-manager robot-state-publisher ros-testing ];
+  propagatedBuildInputs = [ ament-index-cpp controller-manager forward-command-controller moveit-common moveit-core moveit-msgs moveit-resources-panda-moveit-config moveit-ros-planning moveit-ros-planning-interface pluginlib rclcpp rclcpp-action rclcpp-components robot-state-publisher rviz2 std-msgs std-srvs tf2-ros trajectory-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, assimp, cmake, ffmpeg, freeglut, freenect, glfw3, libGL, libGLU, libjpeg, libpcap, libusb1, libxrandr, libxxf86vm, mrpt-libapps, mrpt-libnav, opencv, openni2, pkg-config, python3Packages, tinyxml-2, udev, wxGTK32, zlib }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-apps";
-  version = "2.15.20-r1";
+  version = "2.15.21-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/lyrical/mrpt_apps/2.15.20-1.tar.gz";
-    name = "2.15.20-1.tar.gz";
-    sha256 = "120d2196ecb9638e46e27e3a648c92712e7ee8a62817a935116a3e62388b75b3";
+    url = "https://github.com/ros2-gbp/mrpt_ros-release/archive/release/lyrical/mrpt_apps/2.15.21-1.tar.gz";
+    name = "2.15.21-1.tar.gz";
+    sha256 = "a0da0bf2071bfae16dcf1651d5e6d4211a9ca948af2860427f5f6191358e83c9";
   };
 
   buildType = "cmake";

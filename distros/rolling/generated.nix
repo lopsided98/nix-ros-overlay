@@ -1650,7 +1650,7 @@ self: super: {
 
  nanoeigenpy = self.callPackage ./nanoeigenpy {};
 
- nanoflann = self.callPackage ./nanoflann {};
+ nanoflann-vendor = self.callPackage ./nanoflann-vendor {};
 
  nao-button-sim = self.callPackage ./nao-button-sim {};
 
@@ -3001,6 +3001,8 @@ self: super: {
  udp-driver = self.callPackage ./udp-driver {};
 
  udp-msgs = self.callPackage ./udp-msgs {};
+
+ unbag = self.callPackage ./unbag {};
 
  uncrustify-vendor = self.callPackage ./uncrustify-vendor {};
 

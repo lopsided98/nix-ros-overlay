@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, angles, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, kinematics-interface, kinematics-interface-kdl, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, tf2, tf2-eigen, tf2-geometry-msgs, tf2-kdl, tf2-ros, tinyxml-2, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-admittance-controller";
-  version = "6.8.0-r1";
+  version = "6.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/admittance_controller/6.8.0-1.tar.gz";
-    name = "6.8.0-1.tar.gz";
-    sha256 = "c663f95875c95be2c7521d2ec7f2f6ba8b294f25cc28d3c89cf1dcb26dcfbe03";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/admittance_controller/6.9.0-1.tar.gz";
+    name = "6.9.0-1.tar.gz";
+    sha256 = "6c8173762e38f09069ba1f06d19f89455b453a8bc90a7fb1c273676ed196155d";
   };
 
   buildType = "ament_cmake";

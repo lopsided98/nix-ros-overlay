@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, filters, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-force-torque-sensor-broadcaster";
-  version = "5.16.0-r1";
+  version = "5.17.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/force_torque_sensor_broadcaster/5.16.0-1.tar.gz";
-    name = "5.16.0-1.tar.gz";
-    sha256 = "7d417ace21d64b3cc80a2e3e4dbae238d39f230f0c13da58036840ce332203a0";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/force_torque_sensor_broadcaster/5.17.0-1.tar.gz";
+    name = "5.17.0-1.tar.gz";
+    sha256 = "84f1ef25c184ac79a688ebb6a997ef9c412d8cbbb0d8b0728475afd686203bc0";
   };
 
   buildType = "ament_cmake";

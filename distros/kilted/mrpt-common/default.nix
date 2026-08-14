@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gtest }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-common";
-  version = "3.1.2-r1";
+  version = "3.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_common/3.1.2-1.tar.gz";
-    name = "3.1.2-1.tar.gz";
-    sha256 = "e833c817a579f65da711dddaf36769fa6dbc3bfcfd185778ce085795af9be93d";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_common/3.1.3-1.tar.gz";
+    name = "3.1.3-1.tar.gz";
+    sha256 = "d851d7192d2af1a76580d8ccd11f79436b509b4e9829a536994d9b977a1d50d9";
   };
 
   buildType = "cmake";

@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, geometry-msgs, qt6, rclcpp, rcutils, rviz-common, rviz-ogre-vendor, rviz-rendering, std-msgs, tf2, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, geometry-msgs, qt5or6, rclcpp, rcutils, rviz-common, rviz-ogre-vendor, rviz-rendering, std-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-rviz-visual-testing-framework";
   version = "16.0.2-r1";
@@ -14,7 +14,7 @@ buildRosPackage {
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake qt6.qtbase ];
+  buildInputs = [ ament-cmake qt5or6.qtbase ];
   checkInputs = [ ament-cmake-gmock ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ ament-cmake-gtest ament-cmake-ros-core geometry-msgs rclcpp rcutils rviz-common rviz-ogre-vendor rviz-rendering std-msgs tf2 tf2-ros ];
   nativeBuildInputs = [ ament-cmake ament-cmake-ros-core ];

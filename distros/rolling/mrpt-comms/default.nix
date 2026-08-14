@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, libftdi1, mrpt-common, mrpt-io, mrpt-poses, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-comms";
-  version = "3.1.2-r1";
+  version = "3.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_comms/3.1.2-1.tar.gz";
-    name = "3.1.2-1.tar.gz";
-    sha256 = "76c0210385f253002e720538f60878d120debe0dc80694e9e22291dc2eece292";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_comms/3.1.3-1.tar.gz";
+    name = "3.1.3-1.tar.gz";
+    sha256 = "74d4756b0f0699c289ee643d1cb2ebe7d2589b4a88cef5490bf922586cd59f28";
   };
 
   buildType = "cmake";

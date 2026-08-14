@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-humble-gpio-controllers";
-  version = "2.53.3-r1";
+  version = "2.54.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/gpio_controllers/2.53.3-1.tar.gz";
-    name = "2.53.3-1.tar.gz";
-    sha256 = "3406f5add4f853bfddadc08364b5bff90175d73d5c89f3faf00d8c9f81ba20c6";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/humble/gpio_controllers/2.54.0-1.tar.gz";
+    name = "2.54.0-1.tar.gz";
+    sha256 = "09096f8073ceb2682d3e97ff530770dcbad845c7b6a47f83ab53b4d47279e502";
   };
 
   buildType = "ament_cmake";

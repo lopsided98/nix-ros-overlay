@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, eigen, geos, opencv, pkg-config, tf2 }:
 buildRosPackage {
   pname = "ros-rolling-swri-geometry-util";
-  version = "3.9.0-r1";
+  version = "3.9.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_geometry_util/3.9.0-1.tar.gz";
-    name = "3.9.0-1.tar.gz";
-    sha256 = "6b247323af10b493d103fd6b4d6b3889e4e7b1c66772666b4c3f66523b972f52";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_geometry_util/3.9.0-2.tar.gz";
+    name = "3.9.0-2.tar.gz";
+    sha256 = "4071da8de4aebb58284fdb587fcb8db93e4c1fb5ed9318c75d23e50c4b9e92df";
   };
 
   buildType = "ament_cmake";

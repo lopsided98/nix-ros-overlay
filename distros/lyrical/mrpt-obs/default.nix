@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-common, mrpt-tfest, mrpt-viz, python3, python3Packages, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-obs";
-  version = "3.1.2-r2";
+  version = "3.1.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_obs/3.1.2-2.tar.gz";
-    name = "3.1.2-2.tar.gz";
-    sha256 = "10e1a9f1387f78e2e0f14dcbdc145fe9f227c240edd19290476b6a074c4440fa";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_obs/3.1.3-1.tar.gz";
+    name = "3.1.3-1.tar.gz";
+    sha256 = "e9678056321e36c145179a653a21b8147b0aab1ea793600c56098bf4ef343bc2";
   };
 
   buildType = "cmake";

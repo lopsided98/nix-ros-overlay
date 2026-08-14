@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-manager, forward-command-controller, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-kilted-position-controllers";
-  version = "5.16.0-r1";
+  version = "5.17.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/position_controllers/5.16.0-1.tar.gz";
-    name = "5.16.0-1.tar.gz";
-    sha256 = "896233b1ea0b909aa8f0897e5acbde957a785e4c7b4ce3b82a0934d71bae358c";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/position_controllers/5.17.0-1.tar.gz";
+    name = "5.17.0-1.tar.gz";
+    sha256 = "2fedcecb96b569c4627b7d7ea3f9a6d43846141c88f812f1b6767a8915bbde29";
   };
 
   buildType = "ament_cmake";
