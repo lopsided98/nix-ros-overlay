@@ -739,6 +739,8 @@ in {
 
   slam-toolbox = rosSuper.slam-toolbox.override { qt5 = self.qt6; };
 
+  test-rmw-zenoh-cpp = rosSelf.callPackage ./test-rmw-zenoh-cpp.nix {};
+
   turtlesim = rosSuper.turtlesim.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {

@@ -1,0 +1,104 @@
+{
+  lib,
+  buildRosPackage,
+  fetchFromGitHub,
+
+  # nativeBuildInputs
+  ament-cmake,
+
+  # buildInputs
+
+  # propagatedBuildInputs
+
+  # checkInputs
+  ament-cmake-copyright,
+  ament-cmake-cppcheck,
+  ament-cmake-cpplint,
+  ament-cmake-flake8,
+  ament-cmake-lint-cmake,
+  ament-cmake-pep257,
+  ament-cmake-ros,
+  ament-cmake-ros-core,
+  ament-cmake-uncrustify,
+  ament-cmake-xmllint,
+  ament-lint-auto,
+  ament-lint-common,
+  rclcpp,
+  rmw-zenoh-cpp,
+  zenoh-cpp-vendor,
+
+  # nativeCheckInputs
+  ament-copyright,
+  ament-cppcheck,
+  ament-cpplint,
+  ament-flake8,
+  ament-lint-cmake,
+  ament-pep257,
+  ament-uncrustify,
+  ament-xmllint,
+  writableTmpDirAsHomeHook,
+}:
+buildRosPackage rec {
+  pname = "ros-rolling-test-rmw-zenoh-cpp";
+  version = "0.12.0";
+
+  src = fetchFromGitHub {
+    owner = "ros2";
+    repo = "rmw_zenoh";
+    tag = version;
+    hash = "sha256-b/Zz0HKa9CqhfBC0HbbycQp/dChTavwSVnqoLilf8Q4=";
+  };
+  sourceRoot = "source/test_rmw_zenoh_cpp";
+
+  __structuredAttrs = true;
+  strictDeps = true;
+
+  buildType = "ament_cmake";
+
+  nativeBuildInputs = [
+    ament-cmake
+  ];
+  buildInputs = [
+    ament-cmake
+  ];
+  propagatedBuildInputs = [
+  ];
+  checkInputs = [
+    ament-cmake-ros
+    ament-cmake-ros-core
+    ament-lint-auto
+    ament-lint-common
+    rclcpp
+    rmw-zenoh-cpp
+    zenoh-cpp-vendor
+    ament-cmake-copyright
+    ament-cmake-cppcheck
+    ament-cmake-cpplint
+    ament-cmake-flake8
+    ament-cmake-lint-cmake
+    ament-cmake-pep257
+    ament-cmake-uncrustify
+    ament-cmake-xmllint
+  ];
+  nativeCheckInputs = [
+    ament-copyright
+    ament-cppcheck
+    ament-cpplint
+    ament-flake8
+    ament-lint-cmake
+    ament-pep257
+    ament-uncrustify
+    ament-xmllint
+    writableTmpDirAsHomeHook
+  ];
+
+  doCheck = true;
+
+  meta = {
+    description = "Test package for rmw_zenoh_cpp that uses rclcpp";
+    license = with lib.licenses; [ asl20 ];
+    homepage = "https://github.com/ros2/rmw_zenoh";
+    platforms = lib.platforms.linux;
+    maintainers = [ lib.maintainers.nim65s ];
+  };
+}

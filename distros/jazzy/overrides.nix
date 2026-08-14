@@ -1166,6 +1166,8 @@ in {
     '';
   });
 
+  test-rmw-zenoh-cpp = rosSelf.callPackage ./test-rmw-zenoh-cpp.nix {};
+
   turtlebot3-panorama = rosSuper.turtlebot3-panorama.overrideAttrs ({
     postPatch ? "", ...
   }: {

@@ -715,6 +715,8 @@ in {
     '';
   });
 
+  test-rmw-zenoh-cpp = rosSelf.callPackage ./test-rmw-zenoh-cpp.nix {};
+
   turtlesim = rosSuper.turtlesim.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
