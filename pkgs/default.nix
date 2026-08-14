@@ -228,6 +228,42 @@ self: super: with self.lib; {
       self.qt6.qttools
     ];
   });
+
+  # TODO: Remove after https://github.com/NixOS/nixpkgs/pull/552603 is
+  # merged and available in this overlay.
+  zenoh-c = super.zenoh-c.overrideAttrs ({
+    cmakeFlags ? [], patches ? [], ...
+  }: {
+    cmakeFlags = cmakeFlags ++ [
+      # Those features are used by
+      # https://github.com/ros2/rmw_zenoh/blob/rolling/zenoh_cpp_vendor/CMakeLists.txt
+      (self.lib.cmakeBool "ZENOHC_BUILD_WITH_SHARED_MEMORY" true)
+      (self.lib.cmakeBool "ZENOHC_BUILD_WITH_UNSTABLE_API" true)
+      (self.lib.cmakeFeature "ZENOHC_CARGO_FLAGS" "--features=zenoh/transport_serial")
+    ];
+    postInstall = ""; # fixed by the patch
+    patches = patches ++ [
+      # ref. https://github.com/eclipse-zenoh/zenoh-c/pull/1314 merged upstream
+      (self.fetchpatch2 {
+        name = "fix-cmake-exports.patch";
+        url = "https://github.com/eclipse-zenoh/zenoh-c/commit/c7c756282f3af45980ed8a85e9cd9113ce302b4f.patch?full_index=1";
+        hash = "sha256-vHBXkbwwE6Vra7PPPbeUWX6tIxenpaYbcleU2K4/4Ww=";
+      })
+    ];
+  });
+  zenoh-cpp = super.zenoh-cpp.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    postInstall = ""; # fixed by the patch
+    patches = patches ++ [
+      # ref. https://github.com/eclipse-zenoh/zenoh-cpp/pull/790 merged upstream
+      (self.fetchpatch2 {
+        name = "fix-cmake-exports.patch";
+        url = "https://github.com/eclipse-zenoh/zenoh-cpp/commit/a55543277ce93fa3d0871b5b30fb18c04a283db2.patch?full_index=true";
+        hash = "sha256-oaCeLTrQ7veWzpTEKGo4pDmNLKmnBIjBkuX71vRtjoo=";
+      })
+    ];
+  });
 } // super.lib.optionalAttrs super.stdenv.hostPlatform.isDarwin {
   # lttng is not available on Darwin and ROS packages depending it
   # fail to evaluate. If set to null, packages like tracetools can
