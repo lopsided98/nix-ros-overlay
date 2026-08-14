@@ -228,4 +228,11 @@ self: super: with self.lib; {
       self.qt6.qttools
     ];
   });
+} // super.lib.optionalAttrs super.stdenv.hostPlatform.isDarwin {
+  # lttng is not available on Darwin and ROS packages depending it
+  # fail to evaluate. If set to null, packages like tracetools can
+  # deal with that, because their CMakeLists.txt contains:
+  # if(WIN32 OR APPLE OR ANDROID OR BSD) set(DISABLED_DEFAULT ON) ...
+  lttng-tools = null;
+  lttng-ust = null;
 }
