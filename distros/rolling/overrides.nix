@@ -796,18 +796,6 @@ in {
     '';
   });
 
-  warehouse-ros = rosSuper.warehouse-ros.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    # rclcpp 33.x removed RCLCPP_NODE_INTERFACE_HELPERS_SUPPORT overloads for
-    # shared_ptr<Node>; pass the node by reference instead
-    postPatch = postPatch + ''
-      substituteInPlace include/warehouse_ros/transform_collection.h --replace-fail \
-        "std::make_shared<tf2_ros::TransformListener>(*tf_buffer_, node_, false)" \
-        "std::make_shared<tf2_ros::TransformListener>(*tf_buffer_, *node_, false)"
-    '';
-  });
-
   webots-ros2-driver = rosSuper.webots-ros2-driver.overrideAttrs ({
     postPatch ? "", ...
   }: {
