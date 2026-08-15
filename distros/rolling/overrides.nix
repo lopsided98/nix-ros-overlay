@@ -5,22 +5,6 @@ rosSelf: rosSuper: let
   inherit (rosSelf) lib;
   inherit (lib) pipe patchExternalProjectGit patchVendorUrl;
 in {
-  azure-iot-sdk-c = rosSuper.azure-iot-sdk-c.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail \
-        "cmake_minimum_required (VERSION 3.5)" \
-        "cmake_minimum_required (VERSION 3.10)"
-      substituteInPlace \
-        deps/azure-macro-utils-c/CMakeLists.txt \
-        deps/umock-c/CMakeLists.txt \
-        --replace-fail \
-        "cmake_minimum_required(VERSION 2.8.11)" \
-        "cmake_minimum_required(VERSION 3.10)"
-    '';
-  });
-
   cartographer = rosSuper.cartographer.overrideAttrs ({
     postPatch ? "", ...
   }: {
@@ -650,11 +634,6 @@ in {
   });
 
   sdformat-vendor = lib.patchAmentVendorGit rosSuper.sdformat-vendor { };
-
-  shared-queues-vendor = lib.patchVendorUrl rosSuper.shared-queues-vendor {
-    url = "https://github.com/cameron314/readerwriterqueue/archive/ef7dfbf553288064347d51b8ac335f1ca489032a.zip";
-    hash = "sha256-TyFt3d78GidhDGD17KgjAaZl/qvAcGJP8lmu4EOxpYg=";
-  };
 
   # Ensure that tinyxml-2 has the same major version as in
   # behaviortree-cpp, which vendors it. Other packages like
