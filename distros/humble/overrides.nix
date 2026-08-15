@@ -1037,6 +1037,15 @@ in with lib; {
     '';
   });
 
+  play-motion2 = rosSuper.play-motion2.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # ref. https://github.com/ros2/rclcpp/pull/3211
+    postPatch = postPatch + ''
+      sed -i "1i #include <functional>" src/utils/motion_loader.*
+    '';
+  });
+
   plotjuggler = rosSuper.plotjuggler.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
