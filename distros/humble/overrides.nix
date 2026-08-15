@@ -599,6 +599,14 @@ in with lib; {
     };
   };
 
+  mapviz = rosSuper.mapviz.overrideAttrs ({
+    propagatedNativeBuildInputs ? [], ...
+  }: {
+    # Fixes build failure in mapviz_plugins
+    # https://github.com/swri-robotics/mapviz/pull/905
+    propagatedNativeBuildInputs = propagatedNativeBuildInputs ++ [ self.pkg-config ];
+  });
+
   mcap-vendor = (patchExternalProjectGit (patchVendorUrl rosSuper.mcap-vendor {
     url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v0.8.0.tar.gz";
     sha256 = "sha256-KDP3I0QwjqWGOfOzY6DPF2aVgK56tDX0PzsQTP9u9Ug=";
