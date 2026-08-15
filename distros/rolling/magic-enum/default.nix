@@ -17,6 +17,11 @@ buildRosPackage {
   buildInputs = [ cmake ];
   nativeBuildInputs = [ cmake ];
 
+  # Upstream's GenPkgConfig.cmake module requires CMAKE_INSTALL_INCLUDEDIR to
+  # be a relative path, but nixpkgs' cmake setup hook sets it to an absolute
+  # path to support split outputs. Override it back to a relative path.
+  cmakeFlags = [ "-DCMAKE_INSTALL_INCLUDEDIR=include" ];
+
   meta = {
     description = "Static reflection for enums (to string, from string, iteration) for modern C++,
     work with any enum type without any macro or boilerplate code";
