@@ -320,8 +320,6 @@ in with lib; {
     buildInputs = buildInputs ++ [ self.sqlite ];
   });
 
-  gazebo = self.gazebo_11;
-
   gazebo-ros = rosSuper.gazebo-ros.overrideAttrs ({
     propagatedBuildInputs ? [ ], ...
   }: {
