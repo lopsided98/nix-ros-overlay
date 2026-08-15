@@ -364,17 +364,6 @@ in {
     NIX_CFLAGS_COMPILE = toString [ "-Wno-error=cpp" ];
   });
 
-  moveit-ros-occupancy-map-monitor = rosSuper.moveit-ros-occupancy-map-monitor.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    # Remove workaround for Ubuntu-specific dependency hell issue
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail \
-        'find_package(octomap 1.9.7...<1.10.0 REQUIRED)' \
-        'find_package(octomap REQUIRED)'
-    '';
-  });
-
   mp-units-vendor = lib.patchAmentVendorGit rosSuper.mp-units-vendor {};
 
   mrpt-containers = rosSuper.mrpt-containers.overrideAttrs ({
