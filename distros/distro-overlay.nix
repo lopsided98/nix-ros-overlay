@@ -50,7 +50,7 @@ let
           originalRev = "\${MRPT_VERSION_TO_DOWNLOAD}";
           inherit rev;
           fetchgitArgs.hash = {
-            "2.15.20" = "sha256-HdnUw74g4ywEpqCteNZlPaXW1lxJ7G9c5IZW06kZ5NE=";
+            "2.15.21" = "sha256-lx40Oma7HR2vgf2ZSZUMaPW60jIOUcf9i+RHbvzzp3Y=";
           }.${rev};
         }).overrideAttrs ({ postPatch ? "", buildInputs ? [], ... }: {
           postPatch = postPatch + ''
@@ -58,11 +58,7 @@ let
             read -r version < $src/version_prefix.txt
             if [[ $version != "${rev}" ]]; then
               echo "MRPT version mismatch: $version != "${rev}". Is fetchgitArgs.hash in patchMrptExternalProjectGit up to date?"
-              if [[ $version = "2.15.19" ]] && [[ "${rev}" = "2.15.20" ]]; then
-                : # TODO remove this if when MRPT releases a correct release (see https://github.com/MRPT/mrpt/issues/1385)
-              else
-                exit 1
-              fi
+              exit 1
             fi
           '';
           buildInputs = buildInputs ++ [
