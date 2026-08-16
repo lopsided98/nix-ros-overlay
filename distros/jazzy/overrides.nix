@@ -489,6 +489,8 @@ in {
     ];
   });
 
+  inverse-dynamics-solver = rosSuper.inverse-dynamics-solver.override { python = self.python3; };
+
   io-context = rosSuper.io-context.overrideAttrs ({
     patches ? [], ...
   }: {
