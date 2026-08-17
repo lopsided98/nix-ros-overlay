@@ -661,6 +661,8 @@ in {
     ];
   });
 
+  rtabmap-rviz-plugins = rosSuper.rtabmap-rviz-plugins.override { qt5 = self.qt6; };
+
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     tarSourceArgs.hook = let
       version = "1.79";
