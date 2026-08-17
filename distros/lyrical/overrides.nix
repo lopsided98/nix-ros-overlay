@@ -519,6 +519,19 @@ in {
   # a Qt version conflict.
   plansys2-tools = rosSuper.plansys2-tools.override { qt5 = self.qt6; };
 
+  plotjuggler-ros = rosSuper.plotjuggler-ros.overrideAttrs ({
+    version, ...
+  }: {
+    src = assert lib.assertMsg (version == "2.3.1-r3") "Unexpected plotjuggler-ros version. Remove or update the override!";
+      # fix: detect rclcpp API differences via RCLCPP_VERSION_GTE (#115)
+      self.fetchFromGitHub {
+        owner = "PlotJuggler";
+        repo = "plotjuggler-ros-plugins";
+        rev = "9cb0b596bc94bde4fa4e9f3a462dcbe78d5a2377";
+        sha256 = "sha256-KC61MW1pVYeLsSW7o2M/2Z5FKRblfhVPwtmesN6jsBk";
+      };
+  });
+
   popf = (rosSuper.popf.override {
     # Fix "libfl.so.2: undefined reference to `yylex'"
     flex = self.flex_2_5_35;
