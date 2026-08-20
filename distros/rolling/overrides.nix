@@ -356,6 +356,15 @@ in {
     hash = "sha256-GpzGMpQ02s/X/XEcGoozzMjigrbqvAu81bcb7QG+36E=";
   };
 
+  magic-enum = rosSuper.magic-enum.overrideAttrs ({
+    cmakeFlags ? [], ...
+  }: {
+    # Upstream's GenPkgConfig.cmake module requires CMAKE_INSTALL_INCLUDEDIR to
+    # be a relative path, but nixpkgs' cmake setup hook sets it to an absolute
+    # path to support split outputs. Override it back to a relative path.
+    cmakeFlags = cmakeFlags ++ [ "-DCMAKE_INSTALL_INCLUDEDIR=include" ];
+  });
+
   mcap-vendor = lib.patchVendorUrl rosSuper.mcap-vendor {
     url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v2.1.3.tar.gz";
     hash = "sha256-GBp8UsyYJETN71Mwh7MhU4sCX8xe7CWOBInWi5zlPe0=";
