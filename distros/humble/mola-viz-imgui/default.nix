@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, freeglut, glfw3, libGL, libGLU, mola-kernel, mrpt-libgui, mrpt-libmaps, mrpt-libobs, mrpt-libopengl }:
 buildRosPackage {
   pname = "ros-humble-mola-viz-imgui";
-  version = "3.1.0-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_viz_imgui/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "d6dab0280f6c3aeab117e79487bd74c1aef1d11b01f9a3fa29ed77c5a5307dc0";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_viz_imgui/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "1f5ad8a3f3ead66eaf824b1c6a71736fa12228f68b2018af88be8ab3007dc388";
   };
 
   buildType = "cmake";

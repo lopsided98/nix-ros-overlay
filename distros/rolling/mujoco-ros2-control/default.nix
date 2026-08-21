@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, backward-ros, control-toolbox, controller-manager, fmt, git, glfw3, hardware-interface, mujoco-ros2-control-msgs, mujoco-ros2-control-plugins, mujoco-vendor, nav-msgs, pluginlib, python3, python3Packages, rclcpp, rclcpp-lifecycle, ros2-control-cmake, sensor-msgs, transmission-interface }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-index-cpp, ament-index-python, backward-ros, control-toolbox, controller-manager, eigen, fmt, geometry-msgs, git, glfw3, hardware-interface, mujoco-ros2-control-msgs, mujoco-ros2-control-plugins, mujoco-vendor, nav-msgs, pluginlib, python3, python3Packages, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2pkg, rosgraph-msgs, sensor-msgs, std-msgs, tinyxml2-vendor, transmission-interface, urdfdom-py }:
 buildRosPackage {
   pname = "ros-rolling-mujoco-ros2-control";
-  version = "0.0.2-r2";
+  version = "0.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/rolling/mujoco_ros2_control/0.0.2-2.tar.gz";
-    name = "0.0.2-2.tar.gz";
-    sha256 = "73b4bf224bb2095fdc612bcb8f8a82b8d9924c658aca28fb725d8deb0a632e97";
+    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/rolling/mujoco_ros2_control/0.1.0-2.tar.gz";
+    name = "0.1.0-2.tar.gz";
+    sha256 = "6b63163dacc146481dfbf8f8642807d01baf21b70386d2d07f74fb60d9d66e96";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python git ros2-control-cmake ];
   checkInputs = [ ament-cmake-gtest ament-cmake-pytest ];
-  propagatedBuildInputs = [ backward-ros control-toolbox controller-manager fmt glfw3 hardware-interface mujoco-ros2-control-msgs mujoco-ros2-control-plugins mujoco-vendor nav-msgs pluginlib python3 python3Packages.pip python3Packages.pykdl rclcpp rclcpp-lifecycle sensor-msgs transmission-interface ];
+  propagatedBuildInputs = [ ament-index-cpp ament-index-python backward-ros control-toolbox controller-manager eigen fmt geometry-msgs glfw3 hardware-interface mujoco-ros2-control-msgs mujoco-ros2-control-plugins mujoco-vendor nav-msgs pluginlib python3 python3Packages.importlib-resources python3Packages.numpy python3Packages.pip python3Packages.pykdl rclcpp rclcpp-lifecycle realtime-tools ros2pkg rosgraph-msgs sensor-msgs std-msgs tinyxml2-vendor transmission-interface urdfdom-py ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python git ];
 
   meta = {

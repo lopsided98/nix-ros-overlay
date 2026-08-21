@@ -2,22 +2,22 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, camera-calibration-parsers, cv-bridge, eigen, image-geometry, image-transport, message-filters, opencv, pkg-config, rcl-interfaces, rclcpp, rclcpp-components, rclpy, swri-geometry-util, swri-math-util, swri-opencv-util, tf2 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, camera-calibration-parsers, cv-bridge, eigen, image-geometry, image-transport, message-filters, opencv, rcl-interfaces, rclcpp, rclcpp-components, rclpy, swri-geometry-util, swri-math-util, swri-opencv-util, tf2 }:
 buildRosPackage {
   pname = "ros-humble-swri-image-util";
-  version = "3.9.0-r1";
+  version = "3.9.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_image_util/3.9.0-1.tar.gz";
-    name = "3.9.0-1.tar.gz";
-    sha256 = "02b4ad351e9ce44a1390f4e47bd3dd91ff2b02842869eb15baf29fccc1dafb90";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_image_util/3.9.1-2.tar.gz";
+    name = "3.9.1-2.tar.gz";
+    sha256 = "a94fcd4c370d4bfa9d192d14ccef0f4e413c64bf40ae8375eba7504c182032d5";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake pkg-config ];
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ];
   propagatedBuildInputs = [ ament-index-cpp camera-calibration-parsers cv-bridge eigen image-geometry image-transport message-filters opencv opencv.cxxdev rcl-interfaces rclcpp rclcpp-components rclpy swri-geometry-util swri-math-util swri-opencv-util tf2 ];
-  nativeBuildInputs = [ ament-cmake pkg-config ];
+  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
     description = "A package of commonly image manipulation utilities.";

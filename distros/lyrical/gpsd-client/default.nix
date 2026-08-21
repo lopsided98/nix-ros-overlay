@@ -2,22 +2,22 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, gps-msgs, gpsd, pkg-config, rclcpp, rclcpp-components, ros-environment, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, gps-msgs, gpsd, pkg-config, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-gpsd-client";
-  version = "3.1.0-r1";
+  version = "3.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/lyrical/gpsd_client/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "1318b33b092622b936074917d8f4fca7ef441198489939de585e82aa39627e61";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/lyrical/gpsd_client/3.1.1-1.tar.gz";
+    name = "3.1.1-1.tar.gz";
+    sha256 = "46ba32c709414e3f96a0474a88b7d56e9f73d1e873c4afb04853f34ba1e7c0d6";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ros-environment ];
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ];
   propagatedBuildInputs = [ gps-msgs gpsd pkg-config rclcpp rclcpp-components sensor-msgs ];
-  nativeBuildInputs = [ ament-cmake ];
+  nativeBuildInputs = [ ament-cmake pkg-config ];
 
   meta = {
     description = "connects to a GPSd server and broadcasts GPS fixes 

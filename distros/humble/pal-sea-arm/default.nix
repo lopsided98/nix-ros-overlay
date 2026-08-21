@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, pal-sea-arm-bringup, pal-sea-arm-controller-configuration, pal-sea-arm-description }:
 buildRosPackage {
   pname = "ros-humble-pal-sea-arm";
-  version = "2.6.0-r1";
+  version = "2.8.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pal_sea_arm-release/archive/release/humble/pal_sea_arm/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "ecb05d5f23a475b08308c805646acf3de6b952001bfbc8b060460371fac9f078";
+    url = "https://github.com/ros2-gbp/pal_sea_arm-release/archive/release/humble/pal_sea_arm/2.8.4-1.tar.gz";
+    name = "2.8.4-1.tar.gz";
+    sha256 = "6de4e90ec4f30323d1ef27b57ff9926cfe71846a23073e355fece64196157bcc";
   };
 
   buildType = "ament_cmake";

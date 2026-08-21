@@ -452,6 +452,8 @@ self: super: {
 
  crazyflie-py = self.callPackage ./crazyflie-py {};
 
+ crazyflie-server-cpp = self.callPackage ./crazyflie-server-cpp {};
+
  crazyflie-server-py = self.callPackage ./crazyflie-server-py {};
 
  crazyflie-sim = self.callPackage ./crazyflie-sim {};
@@ -1634,6 +1636,8 @@ self: super: {
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
+ mujoco-3d-lidar = self.callPackage ./mujoco-3d-lidar {};
+
  mujoco-ros2-control = self.callPackage ./mujoco-ros2-control {};
 
  mujoco-ros2-control-demos = self.callPackage ./mujoco-ros2-control-demos {};
@@ -1805,6 +1809,8 @@ self: super: {
  pal-statistics = self.callPackage ./pal-statistics {};
 
  pal-statistics-msgs = self.callPackage ./pal-statistics-msgs {};
+
+ pal-urdf-utils = self.callPackage ./pal-urdf-utils {};
 
  pangolin = self.callPackage ./pangolin {};
 
@@ -2783,8 +2789,6 @@ self: super: {
  swri-math-util = self.callPackage ./swri-math-util {};
 
  swri-opencv-util = self.callPackage ./swri-opencv-util {};
-
- swri-roscpp = self.callPackage ./swri-roscpp {};
 
  swri-route-util = self.callPackage ./swri-route-util {};
 

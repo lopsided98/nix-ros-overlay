@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ceres-solver, fuse-core, gtest-vendor, libsForQt5, pluginlib, qt5, rclcpp }:
 buildRosPackage {
   pname = "ros-lyrical-fuse-loss";
-  version = "1.3.3-r1";
+  version = "1.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/lyrical/fuse_loss/1.3.3-1.tar.gz";
-    name = "1.3.3-1.tar.gz";
-    sha256 = "8c4ec94c3b874d538fc9d2c7e6d22664be2821015900dc835673998e99f6729d";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/lyrical/fuse_loss/1.3.4-1.tar.gz";
+    name = "1.3.4-1.tar.gz";
+    sha256 = "1c2eb17d01dab75e6efdffaaeaea234ffe4c30d7967a899658c30d0e0d7d8433";
   };
 
   buildType = "ament_cmake";

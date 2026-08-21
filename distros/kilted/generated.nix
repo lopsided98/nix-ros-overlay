@@ -1792,6 +1792,8 @@ self: super: {
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
+ mujoco-3d-lidar = self.callPackage ./mujoco-3d-lidar {};
+
  mujoco-ros2-control = self.callPackage ./mujoco-ros2-control {};
 
  mujoco-ros2-control-demos = self.callPackage ./mujoco-ros2-control-demos {};
@@ -3100,8 +3102,6 @@ self: super: {
 
  swri-opencv-util = self.callPackage ./swri-opencv-util {};
 
- swri-roscpp = self.callPackage ./swri-roscpp {};
-
  swri-route-util = self.callPackage ./swri-route-util {};
 
  swri-serial-util = self.callPackage ./swri-serial-util {};
@@ -3319,6 +3319,8 @@ self: super: {
  udp-driver = self.callPackage ./udp-driver {};
 
  udp-msgs = self.callPackage ./udp-msgs {};
+
+ unbag = self.callPackage ./unbag {};
 
  uncrustify-vendor = self.callPackage ./uncrustify-vendor {};
 

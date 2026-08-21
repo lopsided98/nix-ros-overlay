@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt-libhwdrivers, mrpt-libobs }:
 buildRosPackage {
   pname = "ros-humble-mola-input-video";
-  version = "3.1.0-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_video/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "4f94babcf35649817cdfb02c4133e902a8edee81114e916b5c6b583f5627f927";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_input_video/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "3fa296067253e31477c391118d234afcd25e85fef30a3449d61c9e310c75438a";
   };
 
   buildType = "cmake";

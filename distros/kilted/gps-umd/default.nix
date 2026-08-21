@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gps-msgs, gps-tools, gpsd-client }:
 buildRosPackage {
   pname = "ros-kilted-gps-umd";
-  version = "3.1.0-r1";
+  version = "3.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/kilted/gps_umd/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "fe60d1161f119cc62ca839195a8b08ef7f47f9b24e3f51acc7c73096bbb0abe9";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/kilted/gps_umd/3.1.1-1.tar.gz";
+    name = "3.1.1-1.tar.gz";
+    sha256 = "6792ebd70506965cd921e02bf141347962907c572db83f3ee870c7cd62930bba";
   };
 
   buildType = "ament_cmake";

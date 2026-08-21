@@ -840,6 +840,8 @@ self: super: {
 
  crazyflie-py = self.callPackage ./crazyflie-py {};
 
+ crazyflie-server-cpp = self.callPackage ./crazyflie-server-cpp {};
+
  crazyflie-server-py = self.callPackage ./crazyflie-server-py {};
 
  crazyflie-sim = self.callPackage ./crazyflie-sim {};
@@ -1140,7 +1142,21 @@ self: super: {
 
  elite-cs-series-sdk = self.callPackage ./elite-cs-series-sdk {};
 
+ elite-robots = self.callPackage ./elite-robots {};
+
+ elite-robots-calibration = self.callPackage ./elite-robots-calibration {};
+
+ elite-robots-controllers = self.callPackage ./elite-robots-controllers {};
+
+ elite-robots-dashboard-msgs = self.callPackage ./elite-robots-dashboard-msgs {};
+
  elite-robots-description = self.callPackage ./elite-robots-description {};
+
+ elite-robots-driver = self.callPackage ./elite-robots-driver {};
+
+ elite-robots-moveit-config = self.callPackage ./elite-robots-moveit-config {};
+
+ elite-robots-msgs = self.callPackage ./elite-robots-msgs {};
 
  ess-imu-driver2 = self.callPackage ./ess-imu-driver2 {};
 
@@ -1666,6 +1682,8 @@ self: super: {
 
  imu-transformer = self.callPackage ./imu-transformer {};
 
+ int2dds-ffi-vendor = self.callPackage ./int2dds-ffi-vendor {};
+
  integration-launch-testing = self.callPackage ./integration-launch-testing {};
 
  interactive-marker-twist-server = self.callPackage ./interactive-marker-twist-server {};
@@ -1736,7 +1754,13 @@ self: super: {
 
  kangaroo-description = self.callPackage ./kangaroo-description {};
 
+ kangaroo-moveit-config = self.callPackage ./kangaroo-moveit-config {};
+
+ kangaroo-mujoco = self.callPackage ./kangaroo-mujoco {};
+
  kangaroo-robot = self.callPackage ./kangaroo-robot {};
+
+ kangaroo-simulation = self.callPackage ./kangaroo-simulation {};
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
@@ -2439,6 +2463,8 @@ self: super: {
  mrpt-viz = self.callPackage ./mrpt-viz {};
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
+
+ mujoco-3d-lidar = self.callPackage ./mujoco-3d-lidar {};
 
  mujoco-ros2-control = self.callPackage ./mujoco-ros2-control {};
 
@@ -3354,6 +3380,10 @@ self: super: {
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
 
+ rmw-int2dds-cpp = self.callPackage ./rmw-int2dds-cpp {};
+
+ rmw-int2dds-validation = self.callPackage ./rmw-int2dds-validation {};
+
  rmw-stats-shim = self.callPackage ./rmw-stats-shim {};
 
  rmw-zenoh-cpp = self.callPackage ./rmw-zenoh-cpp {};
@@ -3998,8 +4028,6 @@ self: super: {
 
  swri-opencv-util = self.callPackage ./swri-opencv-util {};
 
- swri-roscpp = self.callPackage ./swri-roscpp {};
-
  swri-route-util = self.callPackage ./swri-route-util {};
 
  swri-serial-util = self.callPackage ./swri-serial-util {};
@@ -4112,13 +4140,19 @@ self: super: {
 
  tiago-dual-description = self.callPackage ./tiago-dual-description {};
 
+ tiago-dual-gazebo = self.callPackage ./tiago-dual-gazebo {};
+
  tiago-dual-laser-sensors = self.callPackage ./tiago-dual-laser-sensors {};
+
+ tiago-dual-moveit-config = self.callPackage ./tiago-dual-moveit-config {};
 
  tiago-dual-navigation = self.callPackage ./tiago-dual-navigation {};
 
  tiago-dual-rgbd-sensors = self.callPackage ./tiago-dual-rgbd-sensors {};
 
  tiago-dual-robot = self.callPackage ./tiago-dual-robot {};
+
+ tiago-dual-simulation = self.callPackage ./tiago-dual-simulation {};
 
  tiago-gazebo = self.callPackage ./tiago-gazebo {};
 
@@ -4407,6 +4441,8 @@ self: super: {
  udp-driver = self.callPackage ./udp-driver {};
 
  udp-msgs = self.callPackage ./udp-msgs {};
+
+ unbag = self.callPackage ./unbag {};
 
  uncrustify-vendor = self.callPackage ./uncrustify-vendor {};
 

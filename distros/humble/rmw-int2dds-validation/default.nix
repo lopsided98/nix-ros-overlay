@@ -1,0 +1,35 @@
+
+# Copyright 2026 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake, rcl, rclcpp, rclpy, rcutils, rmw, rmw-int2dds-cpp, std-msgs }:
+buildRosPackage {
+  pname = "ros-humble-rmw-int2dds-validation";
+  version = "0.1.0-r3";
+
+  src = fetchurl {
+    url = "https://github.com/IntellectusCorp/rmw_int2dds-release/archive/release/humble/rmw_int2dds_validation/0.1.0-3.tar.gz";
+    name = "0.1.0-3.tar.gz";
+    sha256 = "5307196d77a556e4ce34db43eecc74dc9c1b7579ae2ffbbdf918196d10344359";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
+  propagatedBuildInputs = [ rcl rclcpp rclpy rcutils rmw rmw-int2dds-cpp std-msgs ];
+  nativeBuildInputs = [ ament-cmake ];
+
+  meta = {
+    description = "rclcpp and rclpy validation probes for the int2DDS RMW implementation:
+    QoS behaviour checks (durability, history depth, deadline, liveliness,
+    lifespan), content-filtered topic lifecycle, executor callback smoke checks
+    and latency/throughput/readiness measurements.
+
+    These live outside rmw_int2dds_cpp on purpose. rclcpp sits above the RMW
+    layer (rclcpp -&gt; rcl -&gt; rmw_implementation -&gt; rmw_int2dds_cpp through the
+    rmw_implementation_packages group), so an RMW implementation that depended
+    on rclcpp would close a build dependency cycle. No upstream RMW does it;
+    ros2/rmw_zenoh keeps its rclcpp-based checks in test_rmw_zenoh_cpp for the
+    same reason.";
+    license = with lib.licenses; [ asl20 ];
+  };
+}

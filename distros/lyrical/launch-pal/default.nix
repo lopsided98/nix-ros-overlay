@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, launch, launch-ros, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-launch-pal";
-  version = "0.20.3-r3";
+  version = "0.22.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch_pal-release/archive/release/lyrical/launch_pal/0.20.3-3.tar.gz";
-    name = "0.20.3-3.tar.gz";
-    sha256 = "d54510bf6b371d815503b931cfafe624dde44ddcbccc82c6cf3604a114cc5251";
+    url = "https://github.com/ros2-gbp/launch_pal-release/archive/release/lyrical/launch_pal/0.22.1-1.tar.gz";
+    name = "0.22.1-1.tar.gz";
+    sha256 = "1c2a603d5846869d792e01f8bd9815f94f2e24d733c3e190868496817a428ba0";
   };
 
   buildType = "ament_python";

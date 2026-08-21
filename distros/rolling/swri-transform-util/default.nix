@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-python, ament-index-cpp, cv-bridge, diagnostic-msgs, diagnostic-updater, geographic-msgs, geographiclib, geometry-msgs, geos, gps-msgs, launch-ros, launch-testing, launch-testing-ament-cmake, marti-nav-msgs, opencv, pkg-config, proj, python3Packages, rcl-interfaces, rclcpp, rclcpp-components, rclpy, sensor-msgs, swri-math-util, swri-roscpp, tf2, tf2-geometry-msgs, tf2-ros, yaml-cpp-vendor }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-python, ament-index-cpp, cv-bridge, diagnostic-msgs, diagnostic-updater, geographic-msgs, geographiclib, geometry-msgs, geos, gps-msgs, launch-ros, launch-testing, launch-testing-ament-cmake, marti-nav-msgs, opencv, pkg-config, proj, python3Packages, rcl-interfaces, rclcpp, rclcpp-components, rclpy, sensor-msgs, swri-math-util, tf2, tf2-geometry-msgs, tf2-ros, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-rolling-swri-transform-util";
-  version = "3.9.0-r2";
+  version = "3.9.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_transform_util/3.9.0-2.tar.gz";
-    name = "3.9.0-2.tar.gz";
-    sha256 = "d3880523255e5d010a5027cd935a2fe2aa86e711eca90fd60b0a7c1d0dc2789f";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_transform_util/3.9.1-1.tar.gz";
+    name = "3.9.1-1.tar.gz";
+    sha256 = "2f504c05a315a2fd4f2033a2d271d1c7f4e1498d7457a01efdf534289d9d334b";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python pkg-config ];
   checkInputs = [ ament-cmake-gtest ament-index-cpp launch-ros launch-testing launch-testing-ament-cmake ];
-  propagatedBuildInputs = [ cv-bridge diagnostic-msgs diagnostic-updater geographic-msgs geographiclib geometry-msgs geos gps-msgs marti-nav-msgs opencv opencv.cxxdev proj python3Packages.numpy python3Packages.pyyaml rcl-interfaces rclcpp rclcpp-components rclpy sensor-msgs swri-math-util swri-roscpp tf2 tf2-geometry-msgs tf2-ros yaml-cpp-vendor ];
+  propagatedBuildInputs = [ cv-bridge diagnostic-msgs diagnostic-updater geographic-msgs geographiclib geometry-msgs geos gps-msgs marti-nav-msgs opencv opencv.cxxdev proj python3Packages.numpy python3Packages.pyyaml rcl-interfaces rclcpp rclcpp-components rclpy sensor-msgs swri-math-util tf2 tf2-geometry-msgs tf2-ros yaml-cpp-vendor ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python pkg-config ];
 
   meta = {

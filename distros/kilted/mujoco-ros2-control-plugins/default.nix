@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, backward-ros, geometry-msgs, mujoco-ros2-control-msgs, mujoco-vendor, pluginlib, rclcpp, realtime-tools, ros2-control-cmake, std-msgs, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, backward-ros, geometry-msgs, glfw3, libGL, libGLU, mujoco-3d-lidar, mujoco-ros2-control-msgs, mujoco-vendor, pluginlib, rclcpp, realtime-tools, ros2-control-cmake, sensor-msgs, std-msgs, std-srvs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kilted-mujoco-ros2-control-plugins";
-  version = "0.0.3-r1";
+  version = "0.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/kilted/mujoco_ros2_control_plugins/0.0.3-1.tar.gz";
-    name = "0.0.3-1.tar.gz";
-    sha256 = "c2731875dd80398b3c2d0ae458b4eab65c4ee6e07bdae9b63a155f39a123f1e9";
+    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/kilted/mujoco_ros2_control_plugins/0.1.0-2.tar.gz";
+    name = "0.1.0-2.tar.gz";
+    sha256 = "348d55797c6cb63cb8145de3af15b3e3a5fd0c700f58ed1fb1dc28e3c975ba81";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ backward-ros geometry-msgs mujoco-ros2-control-msgs mujoco-vendor pluginlib rclcpp realtime-tools ros2-control-cmake std-msgs visualization-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-index-cpp mujoco-3d-lidar ];
+  propagatedBuildInputs = [ backward-ros geometry-msgs glfw3 libGL libGLU mujoco-ros2-control-msgs mujoco-vendor pluginlib rclcpp realtime-tools ros2-control-cmake sensor-msgs std-msgs std-srvs visualization-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

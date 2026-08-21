@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, assimp, cv-bridge, geometry-msgs, gps-msgs, image-transport, map-msgs, mapviz, marti-common-msgs, marti-nav-msgs, marti-sensor-msgs, marti-visualization-msgs, opencv, pluginlib, qt-gui-cpp, qt5or6, rclcpp, rclcpp-action, sensor-msgs, std-msgs, std-srvs, stereo-msgs, swri-image-util, swri-math-util, swri-route-util, swri-transform-util, tf2, urdf, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kilted-mapviz-plugins";
-  version = "4.0.1-r1";
+  version = "4.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/kilted/mapviz_plugins/4.0.1-1.tar.gz";
-    name = "4.0.1-1.tar.gz";
-    sha256 = "33a07f4ec6ced75c1441df298cda767c6c3f7ec57077661a1c21b0a136e2c366";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/kilted/mapviz_plugins/4.0.2-1.tar.gz";
+    name = "4.0.2-1.tar.gz";
+    sha256 = "365cf5703fd6e3fb5022a69698c10a6de3b2d79ee9707d3f3b38e644def1afe4";
   };
 
   buildType = "ament_cmake";

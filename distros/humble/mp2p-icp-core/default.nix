@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cli11, cmake, mola-common, mola-imu-preintegration, mrpt-libbase, mrpt-libmaps, mrpt-libobs, mrpt-libposes, onetbb, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-mp2p-icp-core";
-  version = "2.12.0-r1";
+  version = "2.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/humble/mp2p_icp_core/2.12.0-1.tar.gz";
-    name = "2.12.0-1.tar.gz";
-    sha256 = "c7b501dfe1fe80527cbb6d0cdc4e9dcee7413527e91c41f905424cb51363b187";
+    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/humble/mp2p_icp_core/2.13.0-1.tar.gz";
+    name = "2.13.0-1.tar.gz";
+    sha256 = "7909aa04889467c0cc8b745f810f206e29316ffff282eb1e56f9c7aa6a979b78";
   };
 
   buildType = "cmake";

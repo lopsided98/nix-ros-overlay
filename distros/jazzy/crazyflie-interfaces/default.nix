@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cppcheck, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-jazzy-crazyflie-interfaces";
-  version = "1.0.5-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/crazyswarm2-release/archive/release/jazzy/crazyflie_interfaces/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "abb8e9faa4326ea6f9600e4a84e37918a0c01efd3d6a0b465ab021e2aa611411";
+    url = "https://github.com/ros2-gbp/crazyswarm2-release/archive/release/jazzy/crazyflie_interfaces/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "2c1ceb77a790638784eb5080b83d582e434641dc3279aaeff7d43c9893b2a966";
   };
 
   buildType = "ament_cmake";

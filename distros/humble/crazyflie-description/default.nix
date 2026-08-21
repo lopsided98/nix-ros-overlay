@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-humble-crazyflie-description";
-  version = "1.0.5-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/crazyswarm2-release/archive/release/humble/crazyflie_description/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "c145afdd40eea5d7c41864ef4667af68c1e06b81e8d51c8c8e56a68991c3104c";
+    url = "https://github.com/ros2-gbp/crazyswarm2-release/archive/release/humble/crazyflie_description/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "f2fe6eeb66f43af98c18545b5fe5c8acea5e1fe3e4a8db33316ac477b69f8c83";
   };
 
   buildType = "ament_cmake";

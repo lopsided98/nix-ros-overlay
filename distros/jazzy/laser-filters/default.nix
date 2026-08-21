@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, angles, diagnostic-msgs, diagnostic-updater, filters, laser-geometry, launch-testing-ament-cmake, message-filters, pluginlib, rclcpp, rclcpp-components, rclcpp-lifecycle, sensor-msgs, tf2, tf2-geometry-msgs, tf2-kdl, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-laser-filters";
-  version = "2.0.9-r1";
+  version = "2.0.10-r5";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/laser_filters-release/archive/release/jazzy/laser_filters/2.0.9-1.tar.gz";
-    name = "2.0.9-1.tar.gz";
-    sha256 = "a99dfe73fbbf60063833da89700a3bba5a4220efaa3fbd429cfbe6eacd4a177f";
+    url = "https://github.com/ros2-gbp/laser_filters-release/archive/release/jazzy/laser_filters/2.0.10-5.tar.gz";
+    name = "2.0.10-5.tar.gz";
+    sha256 = "caae4813df84d614eaa2d12ac1ceb70e9ba35a1e6b59e86768bcec52f2fd2dc4";
   };
 
   buildType = "ament_cmake";

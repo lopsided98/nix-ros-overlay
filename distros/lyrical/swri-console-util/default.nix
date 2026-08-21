@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp }:
 buildRosPackage {
   pname = "ros-lyrical-swri-console-util";
-  version = "3.9.0-r1";
+  version = "3.9.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/lyrical/swri_console_util/3.9.0-1.tar.gz";
-    name = "3.9.0-1.tar.gz";
-    sha256 = "eb69481bafefb47362ad73632b215820e60dc79b21f5f548aa729b8b0d5fcb99";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/lyrical/swri_console_util/3.9.1-2.tar.gz";
+    name = "3.9.1-2.tar.gz";
+    sha256 = "5b38a051025f54b3f6bb255df42a9fd4b9b6f091c94763cade73f8328e409370";
   };
 
   buildType = "ament_cmake";
