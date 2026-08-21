@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catch2, cmake, doxygen, eigen, git, matio, pkg-config, python3Packages, simde }:
 buildRosPackage {
   pname = "ros-humble-jrl-cmakemodules";
-  version = "2.0.0-r1";
+  version = "2.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/jrl_cmakemodules-release/archive/release/humble/jrl_cmakemodules/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "28e9764714799d1138c10fa916f58f8161d8bdc06b9635aa27f9397d6ebeb92e";
+    url = "https://github.com/ros2-gbp/jrl_cmakemodules-release/archive/release/humble/jrl_cmakemodules/2.2.4-1.tar.gz";
+    name = "2.2.4-1.tar.gz";
+    sha256 = "a020b19287a87a715df0c1fc4f44effe9fd0c19b32197bbf763263612efc5a46";
   };
 
   buildType = "cmake";

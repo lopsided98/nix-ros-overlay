@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, fuse-constraints, fuse-core, fuse-graphs, fuse-msgs, fuse-variables, geometry-msgs, nav-msgs, pluginlib, rclcpp, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-fuse-publishers";
-  version = "1.1.5-r1";
+  version = "1.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/jazzy/fuse_publishers/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "c5f026497f1a8fef8fcf2cbeec97af7590b1ba9cea85223e33b8fcc1eef94f2e";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/jazzy/fuse_publishers/1.1.6-1.tar.gz";
+    name = "1.1.6-1.tar.gz";
+    sha256 = "a5ad6c313a7ee98629e9ad45a7802984bd4f630ec19c7257dc619106681bdb9d";
   };
 
   buildType = "ament_cmake";

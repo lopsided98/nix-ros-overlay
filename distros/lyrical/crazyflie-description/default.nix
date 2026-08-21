@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-lyrical-crazyflie-description";
-  version = "1.0.5-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/crazyswarm2-release/archive/release/lyrical/crazyflie_description/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "92ceee20b38477da4e7bb5cb6bd66e156d8c5f6a6fa00b258e7bb4ad7a3f74c6";
+    url = "https://github.com/ros2-gbp/crazyswarm2-release/archive/release/lyrical/crazyflie_description/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "a7f5c413900bc3e94b65e94d9ec53290da7a769a08b3e74b0d358e37d1ba6e0b";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, boost, ceres-solver, diagnostic-updater, eigen, fuse-constraints, fuse-core, fuse-graphs, fuse-models, fuse-msgs, fuse-variables, geometry-msgs, launch, launch-pytest, launch-ros, nav-msgs, pluginlib, rclcpp, rclcpp-components, std-srvs }:
 buildRosPackage {
   pname = "ros-jazzy-fuse-optimizers";
-  version = "1.1.5-r1";
+  version = "1.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/jazzy/fuse_optimizers/1.1.5-1.tar.gz";
-    name = "1.1.5-1.tar.gz";
-    sha256 = "92d02da8c254a4f2dbb0715b7c13873d6eac32181dd1375e45480e849471fc94";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/jazzy/fuse_optimizers/1.1.6-1.tar.gz";
+    name = "1.1.6-1.tar.gz";
+    sha256 = "84d475abc54c6c319db2da59505aa66772ca675e80479a70c793f492260ddb09";
   };
 
   buildType = "ament_cmake";

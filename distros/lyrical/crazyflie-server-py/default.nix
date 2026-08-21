@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-flake8, ament-pep257, crazyflie-interfaces, geometry-msgs, motion-capture-tracking-interfaces, nav-msgs, python3Packages, rcl-interfaces, rclpy, sensor-msgs, std-msgs, std-srvs, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-crazyflie-server-py";
-  version = "1.0.5-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/crazyswarm2-release/archive/release/lyrical/crazyflie_server_py/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "8adf6a03d21277beec294100c915f84ad7e667dcfb837d23b4e5bd41d4161b8f";
+    url = "https://github.com/ros2-gbp/crazyswarm2-release/archive/release/lyrical/crazyflie_server_py/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "8855d7394b78daebf48644228c05b4170cf96f175f7fb03a1f187cb57487eb38";
   };
 
   buildType = "ament_python";

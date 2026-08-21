@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, crazyflie-interfaces, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-jazzy-crazyflie-py";
-  version = "1.0.5-r1";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/crazyswarm2-release/archive/release/jazzy/crazyflie_py/1.0.5-1.tar.gz";
-    name = "1.0.5-1.tar.gz";
-    sha256 = "f627c26435d129c5afe53e869d8c3d7ff6bbba45ebf1f180ff98e62e73f9f225";
+    url = "https://github.com/ros2-gbp/crazyswarm2-release/archive/release/jazzy/crazyflie_py/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "0d09a90e552b4ac4fca0a781b950a28dce8f1f002ea47cd09fc09e121192316d";
   };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.pytest ];
-  propagatedBuildInputs = [ crazyflie-interfaces rclpy ];
+  propagatedBuildInputs = [ crazyflie-interfaces python3Packages.transforms3d rclpy ];
 
   meta = {
     description = "Simple Python Interface for Crayzswarm2";

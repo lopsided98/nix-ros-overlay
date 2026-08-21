@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cli11, cmake, mola-common, mp2p-icp-core, mrpt-libgui, ros-environment }:
 buildRosPackage {
   pname = "ros-rolling-mp2p-icp-viz";
-  version = "2.12.0-r1";
+  version = "2.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/rolling/mp2p_icp_viz/2.12.0-1.tar.gz";
-    name = "2.12.0-1.tar.gz";
-    sha256 = "655824c7615c078819a441e287e5228f4da7a561fd18db208791756981167596";
+    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/rolling/mp2p_icp_viz/2.13.0-1.tar.gz";
+    name = "2.13.0-1.tar.gz";
+    sha256 = "05ceeb653af8a2cf1b11a0c96f0ecfa33f0bfaa9bb0e2307a4ecbc7afbb790a3";
   };
 
   buildType = "cmake";

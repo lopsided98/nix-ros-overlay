@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, gps-msgs, nav-msgs, rclcpp, rclcpp-components, rclpy, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-gps-tools";
-  version = "3.1.0-r1";
+  version = "3.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/rolling/gps_tools/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "e181b52fe73e88ce564c7498cfb2d2a32c85e0888c3a18d0310f6db0f6d37666";
+    url = "https://github.com/ros2-gbp/gps_umd-release/archive/release/rolling/gps_tools/3.1.1-1.tar.gz";
+    name = "3.1.1-1.tar.gz";
+    sha256 = "7672078c82a0e0c7f3c0db29b042f824efc8edef8127aa3aa7c1af8230a069f9";
   };
 
   buildType = "ament_cmake";

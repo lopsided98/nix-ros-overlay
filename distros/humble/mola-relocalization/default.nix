@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-pose-list, mola-test-datasets, mp2p-icp, mrpt-libmaps, mrpt-libobs, mrpt-libslam }:
 buildRosPackage {
   pname = "ros-humble-mola-relocalization";
-  version = "3.1.0-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_relocalization/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "f2409f411adb203b4110a70ae51debaf7d465becaafc7b693c5d3d7dbd1686be";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_relocalization/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "b17669b4f23886378a5d2b1798eeda78e42d8597275375f4b72a84a78c7683d2";
   };
 
   buildType = "cmake";

@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, mujoco-vendor, pluginlib, rclcpp, ros2-control-cmake, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, backward-ros, geometry-msgs, glfw3, libGL, libGLU, mujoco-3d-lidar, mujoco-ros2-control-msgs, mujoco-vendor, pluginlib, rclcpp, realtime-tools, ros2-control-cmake, sensor-msgs, std-msgs, std-srvs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-mujoco-ros2-control-plugins";
-  version = "0.0.2-r3";
+  version = "0.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/lyrical/mujoco_ros2_control_plugins/0.0.2-3.tar.gz";
-    name = "0.0.2-3.tar.gz";
-    sha256 = "00f580d3a3c16a1a567a90cc62d4e2f48cca06c02a4c94d63b69c479349c5521";
+    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/lyrical/mujoco_ros2_control_plugins/0.1.0-1.tar.gz";
+    name = "0.1.0-1.tar.gz";
+    sha256 = "330c112af53a7e840cd99eda5e5617a1a641ba5b36536cbab972fbf90b34fc7c";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ mujoco-vendor pluginlib rclcpp ros2-control-cmake std-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-index-cpp mujoco-3d-lidar ];
+  propagatedBuildInputs = [ backward-ros geometry-msgs glfw3 libGL libGLU mujoco-ros2-control-msgs mujoco-vendor pluginlib rclcpp realtime-tools ros2-control-cmake sensor-msgs std-msgs std-srvs visualization-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

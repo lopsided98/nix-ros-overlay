@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, ament-lint-auto, ament-lint-common, geometry-msgs, gtest-vendor, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-fuse-msgs";
-  version = "1.3.3-r1";
+  version = "1.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fuse-release/archive/release/lyrical/fuse_msgs/1.3.3-1.tar.gz";
-    name = "1.3.3-1.tar.gz";
-    sha256 = "4e9ef65a3cc683fd692a4b263fb62043d3020ca874e0bb9e8957d9416d14c85b";
+    url = "https://github.com/ros2-gbp/fuse-release/archive/release/lyrical/fuse_msgs/1.3.4-1.tar.gz";
+    name = "1.3.4-1.tar.gz";
+    sha256 = "a09304d81a432140ccd16e68ce5d333db388894a75e8b3ce965e419d82a2785b";
   };
 
   buildType = "ament_cmake";

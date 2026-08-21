@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, moveit-msgs, rosidl-default-generators, rosidl-default-runtime, visualization-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-moveit-task-constructor-msgs";
-  version = "0.1.5-r3";
+  version = "0.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_task_constructor-release/archive/release/lyrical/moveit_task_constructor_msgs/0.1.5-3.tar.gz";
-    name = "0.1.5-3.tar.gz";
-    sha256 = "c1e798d5637c24070e1cb90c0f84f99d5d0872927b0ad05dce184450f3d343ac";
+    url = "https://github.com/ros2-gbp/moveit_task_constructor-release/archive/release/lyrical/moveit_task_constructor_msgs/0.1.6-1.tar.gz";
+    name = "0.1.6-1.tar.gz";
+    sha256 = "5c3ae0775a8b11f9081b102e36f875687dbbd45d64d868a8eaa0dccc771002e0";
   };
 
   buildType = "ament_cmake";

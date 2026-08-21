@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, controller-manager, joint-trajectory-controller, launch, launch-pal, pal-pro-gripper-controller-configuration, ros2controlcli }:
 buildRosPackage {
   pname = "ros-humble-pal-sea-arm-controller-configuration";
-  version = "2.6.0-r1";
+  version = "2.8.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/pal_sea_arm-release/archive/release/humble/pal_sea_arm_controller_configuration/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "714bb4fb6f696f5790c2d7a1f8036aca7888cfbc9e7f9e596ccdab5b89d3c84f";
+    url = "https://github.com/ros2-gbp/pal_sea_arm-release/archive/release/humble/pal_sea_arm_controller_configuration/2.8.4-1.tar.gz";
+    name = "2.8.4-1.tar.gz";
+    sha256 = "4d15ad8df2059cbea45428ccabf562b86b3b3c95e89bb8d897b31c1c19e04649";
   };
 
   buildType = "ament_cmake";

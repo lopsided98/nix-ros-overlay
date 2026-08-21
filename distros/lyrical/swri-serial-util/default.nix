@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-lyrical-swri-serial-util";
-  version = "3.9.0-r1";
+  version = "3.9.1-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/lyrical/swri_serial_util/3.9.0-1.tar.gz";
-    name = "3.9.0-1.tar.gz";
-    sha256 = "55733b42fedcc2495f82047649f58886a3ce6b3bd24873f9ccd42b9a327c3d8c";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/lyrical/swri_serial_util/3.9.1-2.tar.gz";
+    name = "3.9.1-2.tar.gz";
+    sha256 = "cb825a2c24648f71ec45154b7dde0a37b04548311cc469379bfd1b4eeb751ef1";
   };
 
   buildType = "ament_cmake";

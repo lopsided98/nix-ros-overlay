@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-index-python, ament-lint-auto, ament-lint-common, diagnostic-aggregator, joint-state-broadcaster, joint-trajectory-controller, launch, launch-pal, ros2controlcli }:
 buildRosPackage {
   pname = "ros-humble-kangaroo-controller-configuration";
-  version = "2.14.1-r1";
+  version = "2.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kangaroo_robot-release/archive/release/humble/kangaroo_controller_configuration/2.14.1-1.tar.gz";
-    name = "2.14.1-1.tar.gz";
-    sha256 = "20743e74ad40b5216f98e91578dc4b5ada5aec3b8792a2bc0ab4b7944f9b4865";
+    url = "https://github.com/ros2-gbp/kangaroo_robot-release/archive/release/humble/kangaroo_controller_configuration/2.15.0-1.tar.gz";
+    name = "2.15.0-1.tar.gz";
+    sha256 = "f16a769770c7f1c50df5bd6fba4f06f9e33bb2fd776ed67dc99e2002012da104";
   };
 
   buildType = "ament_cmake";

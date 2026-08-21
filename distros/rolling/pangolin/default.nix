@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, catch2, cmake, eigen, glew, libGL, libGLU, libepoxy, libjpeg, libpng, libxkbcommon, python3, python3Packages, wayland }:
+{ lib, buildRosPackage, fetchurl, catch2, cmake, eigen, glew, libGL, libGLU, libepoxy, libjpeg, libpng, libxkbcommon, openexr, python3, python3Packages, wayland }:
 buildRosPackage {
   pname = "ros-rolling-pangolin";
-  version = "0.9.5-r2";
+  version = "0.9.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Pangolin-release/archive/release/rolling/pangolin/0.9.5-2.tar.gz";
-    name = "0.9.5-2.tar.gz";
-    sha256 = "2fd0bf9deddeffe4b642ab46f2d685e87c5413aab52fc13787eedd28ff400ac4";
+    url = "https://github.com/ros2-gbp/Pangolin-release/archive/release/rolling/pangolin/0.9.6-1.tar.gz";
+    name = "0.9.6-1.tar.gz";
+    sha256 = "4d3b128a4c8d9a67fbaeaa633da39ac9a422cf5a769aa67aa1edae6f8c96b5b1";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake eigen python3Packages.wheel ];
+  buildInputs = [ cmake eigen python3Packages.setuptools python3Packages.wheel ];
   checkInputs = [ catch2 ];
-  propagatedBuildInputs = [ glew libGL libGLU libepoxy libjpeg libpng libxkbcommon python3 wayland ];
+  propagatedBuildInputs = [ glew libGL libGLU libepoxy libjpeg libpng libxkbcommon openexr python3 wayland ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

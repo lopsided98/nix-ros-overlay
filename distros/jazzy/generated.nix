@@ -30,6 +30,10 @@ self: super: {
 
  adaptive-component = self.callPackage ./adaptive-component {};
 
+ adi-iio = self.callPackage ./adi-iio {};
+
+ adi-imu = self.callPackage ./adi-imu {};
+
  admittance-controller = self.callPackage ./admittance-controller {};
 
  ads-vendor = self.callPackage ./ads-vendor {};
@@ -771,6 +775,8 @@ self: super: {
  crazyflie-interfaces = self.callPackage ./crazyflie-interfaces {};
 
  crazyflie-py = self.callPackage ./crazyflie-py {};
+
+ crazyflie-server-cpp = self.callPackage ./crazyflie-server-cpp {};
 
  crazyflie-server-py = self.callPackage ./crazyflie-server-py {};
 
@@ -2434,6 +2440,8 @@ self: super: {
 
  mrt-cmake-modules = self.callPackage ./mrt-cmake-modules {};
 
+ mujoco-3d-lidar = self.callPackage ./mujoco-3d-lidar {};
+
  mujoco-ros2-control = self.callPackage ./mujoco-ros2-control {};
 
  mujoco-ros2-control-demos = self.callPackage ./mujoco-ros2-control-demos {};
@@ -4008,8 +4016,6 @@ self: super: {
 
  swri-opencv-util = self.callPackage ./swri-opencv-util {};
 
- swri-roscpp = self.callPackage ./swri-roscpp {};
-
  swri-route-util = self.callPackage ./swri-route-util {};
 
  swri-serial-util = self.callPackage ./swri-serial-util {};
@@ -4329,6 +4335,8 @@ self: super: {
  udp-driver = self.callPackage ./udp-driver {};
 
  udp-msgs = self.callPackage ./udp-msgs {};
+
+ unbag = self.callPackage ./unbag {};
 
  uncrustify-vendor = self.callPackage ./uncrustify-vendor {};
 

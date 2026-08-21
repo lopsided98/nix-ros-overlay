@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, fmt, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, libyaml-vendor, moveit-core, moveit-ros-visualization, moveit-task-constructor-core, moveit-task-constructor-msgs, qt5, rclcpp, rviz2 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, fmt, launch, launch-testing, launch-testing-ament-cmake, launch-testing-ros, libyaml-vendor, moveit-core, moveit-ros-visualization, moveit-task-constructor-core, moveit-task-constructor-msgs, qt5or6, rclcpp, rviz2 }:
 buildRosPackage {
   pname = "ros-lyrical-moveit-task-constructor-visualization";
-  version = "0.1.5-r3";
+  version = "0.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_task_constructor-release/archive/release/lyrical/moveit_task_constructor_visualization/0.1.5-3.tar.gz";
-    name = "0.1.5-3.tar.gz";
-    sha256 = "586c027b9771a1cf9032637fe54f307e22beed29cc3382aa1935aabe157e2eeb";
+    url = "https://github.com/ros2-gbp/moveit_task_constructor-release/archive/release/lyrical/moveit_task_constructor_visualization/0.1.6-1.tar.gz";
+    name = "0.1.6-1.tar.gz";
+    sha256 = "7e9fcfa3ce511263acf8f42990a2ac498a5e90721cb8457cbad586696358f100";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake qt5.qtbase ];
+  buildInputs = [ ament-cmake qt5or6.qtbase ];
   checkInputs = [ ament-cmake-gmock ament-cmake-gtest launch launch-testing launch-testing-ament-cmake launch-testing-ros ];
   propagatedBuildInputs = [ fmt libyaml-vendor moveit-core moveit-ros-visualization moveit-task-constructor-core moveit-task-constructor-msgs rclcpp rviz2 ];
   nativeBuildInputs = [ ament-cmake ];
