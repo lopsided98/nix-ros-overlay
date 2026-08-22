@@ -110,9 +110,16 @@ let
     gtsam = rosSuper.gtsam.overrideAttrs ({
       cmakeFlags ? [], ...
     }: {
-      # Don't use vendored version of Eigen, which can collide with
-      # Eigen version in dependent packages.
-      cmakeFlags = cmakeFlags ++ [ "-DGTSAM_USE_SYSTEM_EIGEN=ON" ];
+      cmakeFlags = cmakeFlags ++ [
+        # Don't use vendored version of Eigen, which can collide with
+        # Eigen version in dependent packages.
+        "-DGTSAM_USE_SYSTEM_EIGEN=ON"
+        # Don't depend on Boost. This is in line with
+        # https://github.com/borglab/gtsam/pull/2543, which disabled
+        # Boost dependency in ROS builds.
+        "-DGTSAM_ENABLE_BOOST_SERIALIZATION=OFF"
+        "-DGTSAM_USE_BOOST_FEATURES=OFF"
+      ];
     });
 
     # hpp-fcl was renamed to coal and we use the version from nixpkgs (see above)
