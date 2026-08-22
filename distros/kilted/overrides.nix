@@ -156,11 +156,8 @@ in {
   };
 
   gtsam = rosSuper.gtsam.overrideAttrs ({
-    nativeBuildInputs ? [], patches ? [], cmakeFlags ? [], ...
+    patches ? [], cmakeFlags ? [], ...
   }: {
-    # https://github.com/borglab/gtsam/pull/2171
-    # boost is optional but enabled by default
-    nativeBuildInputs = nativeBuildInputs ++ [ self.boost ];
     patches = [
       # https://github.com/borglab/gtsam/pull/2232 merged upstream
       (self.fetchpatch2 {
