@@ -250,6 +250,16 @@ with rosSelf.lib; {
     '';
   });
 
+  mujoco-3d-lidar = rosSuper.mujoco-3d-lidar.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # See https://github.com/google-deepmind/mujoco/commit/2810edd27ab70d86d297b91430a1d0903745abe3
+    postPatch = postPatch + ''
+      substituteInPlace include/mujoco_3d_lidar/3dlidar.h src/3dlidar.cpp \
+        --replace-fail '#include <mujoco/mjtnum.h>' '#include <mujoco/mjtype.h>'
+    '';
+  });
+
   plotjuggler = rosSuper.plotjuggler.override {
     lz4 = self.lz4.overrideAttrs ({
       cmakeFlags ? [], ...
