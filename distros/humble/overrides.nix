@@ -253,6 +253,13 @@ in with lib; {
     '';
   });
 
+  elite-robots-msgs = rosSuper.elite-robots-msgs.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    # https://github.com/EliteRobots/Elite_Robots_CS_ROS2_Driver/pull/1
+    buildInputs = buildInputs ++ [ rosSelf.geometry-msgs ];
+  });
+
   fastrtps = rosSuper.fastrtps.overrideAttrs ({
     patches ? [], ...
   }: {
