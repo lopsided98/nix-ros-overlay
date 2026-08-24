@@ -1,5 +1,5 @@
 self: super: with self.lib; {
-  inherit (self.python3Packages) bloom;
+  inherit (self.python3Packages) bloom ros-license-toolkit;
 
   cargo-ament-build = self.python3Packages.cargo-ament-build;
 
@@ -155,6 +155,8 @@ self: super: with self.lib; {
           hash = "sha256-NfMe/EK1Uj88S82xZSm+A6js3PK9mlgsaci/kinlsy8=";
         }) ];
       });
+
+      ros-license-toolkit = pyFinal.callPackage ./ros-license-toolkit { };
 
       rosdep = pyFinal.callPackage ./rosdep { };
 
