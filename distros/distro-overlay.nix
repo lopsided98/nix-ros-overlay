@@ -214,6 +214,16 @@ let
       '';
     });
 
+    swri-console = rosSuper.swri-console.overrideAttrs ({
+      nativeBuildInputs ? [], ...
+    }: {
+      dontWrapQtApps = false;
+      nativeBuildInputs = nativeBuildInputs ++ [ rosSelf.qt5or6.wrapQtAppsHook ];
+      postFixup = ''
+        wrapQtApp "$out/lib/swri_console/swri_console";
+      '';
+    });
+
     # We map ROS packages that depend on Ubuntu's libexpected-dev to
     # depend on tl-expected-nixpkgs. We cannot use the name
     # tl-expected because it is shadowed by tl-expected package from
