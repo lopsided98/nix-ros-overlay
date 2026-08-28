@@ -2,13 +2,13 @@
 
 buildPythonPackage rec {
   pname = "colcon-mixin";
-  version = "0.2.3";
+  version = "0.3.0";
 
   src = fetchFromGitHub {
     owner = "colcon";
     repo = pname;
     tag = version;
-    hash = "sha256-XQpRDBTtrFOOlCRXKVImUtwrwirO0ELWifUpfQuyrrY=";
+    hash = "sha256-MLK8ogTzlqi/5wgrS0gh9fm/oljk4BGvJwI9JrYj//M=";
   };
 
   pyproject = true;
