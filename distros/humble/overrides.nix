@@ -4,6 +4,18 @@ self:
 rosSelf: rosSuper: let
   inherit (rosSelf) lib;
 in with lib; {
+  async-web-server-cpp = rosSuper.async-web-server-cpp.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = [
+      # Fix compile errors with Boost >= 1.87
+      (self.fetchpatch2 {
+        url = "https://github.com/fkie/async_web_server_cpp/pull/8/commits/0aa036c4c3908ef0d9ac85bf623a15906bccaefd.patch?full_index=1";
+        hash = "sha256-uZym/R8c4e/Ypo8xGQwGdasuFixjbddX9hzQeNqXIDc=";
+      })
+    ];
+  });
+
   autoware-adapi-adaptors = rosSuper.autoware-adapi-adaptors.overrideAttrs ({
     postPatch ? "", ...
   }: {
@@ -76,7 +88,7 @@ in with lib; {
     '';
   });
 
-  autoware-motion-velocity-planner= rosSuper.autoware-motion-velocity-planner.overrideAttrs ({
+  autoware-motion-velocity-obstacle-stop-module = rosSuper.autoware-motion-velocity-obstacle-stop-module.overrideAttrs ({
     postPatch ? "", ...
   }: {
     # fix "visualization is required but vtk was not found" from PCLConfig.cmake when wrong order
@@ -100,7 +112,7 @@ in with lib; {
     '';
   });
 
-  autoware-motion-velocity-obstacle-stop-module = rosSuper.autoware-motion-velocity-obstacle-stop-module.overrideAttrs ({
+  autoware-motion-velocity-planner= rosSuper.autoware-motion-velocity-planner.overrideAttrs ({
     postPatch ? "", ...
   }: {
     # fix "visualization is required but vtk was not found" from PCLConfig.cmake when wrong order
@@ -144,18 +156,6 @@ in with lib; {
     cmakeFlags ? [], ...
   }: {
     cmakeFlags = cmakeFlags ++ [ "-DCMAKE_CXX_FLAGS=-Wno-error=array-bounds" ];
-  });
-
-  async-web-server-cpp = rosSuper.async-web-server-cpp.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = [
-      # Fix compile errors with Boost >= 1.87
-      (self.fetchpatch2 {
-        url = "https://github.com/fkie/async_web_server_cpp/pull/8/commits/0aa036c4c3908ef0d9ac85bf623a15906bccaefd.patch?full_index=1";
-        hash = "sha256-uZym/R8c4e/Ypo8xGQwGdasuFixjbddX9hzQeNqXIDc=";
-      })
-    ];
   });
 
   behaviortree-cpp-v3 = rosSuper.behaviortree-cpp-v3.overrideAttrs ({
@@ -407,8 +407,6 @@ in with lib; {
     ];
   });
 
-  inverse-dynamics-solver = rosSuper.inverse-dynamics-solver.override { python = self.python3; };
-
   int2dds-ffi-vendor = let
     version = "0.1.1";
   in
@@ -432,6 +430,8 @@ in with lib; {
           'file(DOWNLOAD "file://''${_url}"'
       '';
     });
+
+  inverse-dynamics-solver = rosSuper.inverse-dynamics-solver.override { python = self.python3; };
 
   io-context = rosSuper.io-context.overrideAttrs ({
     patches ? [], ...
@@ -465,16 +465,6 @@ in with lib; {
         --replace-fail "Boost::system" "Boost::boost" \
         --replace-fail "REQUIRED system" "REQUIRED"
     '';
-  });
-
-  lsc-ros2-driver = rosSuper.lsc-ros2-driver.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    # https://github.com/AutonicsLiDAR/lsc_ros2_driver/pull/3
-    patches = patches ++ [(self.fetchpatch2 {
-      url = "https://github.com/nim65s/lsc_ros2_driver/commit/6c2c5cf64fea0099358e610a7fff40db7c0922be.patch?full_index=1";
-      hash = "sha256-sCgXA4aZ6mTJmkTv41c8PjwsaiDC1/tlwyZJ6Cg5kEo=";
-    })];
   });
 
   lely-core-libraries = let
@@ -618,6 +608,16 @@ in with lib; {
       '';
     };
   };
+
+  lsc-ros2-driver = rosSuper.lsc-ros2-driver.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    # https://github.com/AutonicsLiDAR/lsc_ros2_driver/pull/3
+    patches = patches ++ [(self.fetchpatch2 {
+      url = "https://github.com/nim65s/lsc_ros2_driver/commit/6c2c5cf64fea0099358e610a7fff40db7c0922be.patch?full_index=1";
+      hash = "sha256-sCgXA4aZ6mTJmkTv41c8PjwsaiDC1/tlwyZJ6Cg5kEo=";
+    })];
+  });
 
   mapviz = rosSuper.mapviz.overrideAttrs ({
     propagatedNativeBuildInputs ? [], ...
@@ -852,16 +852,16 @@ in with lib; {
     ];
   });
 
-  nav2-behaviors = rosSuper.nav2-behaviors.overrideAttrs({
-    ...
-  }: {
-    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" "-Wno-error=maybe-uninitialized" ];
-  });
-
   nav2-behavior-tree = rosSuper.nav2-behavior-tree.overrideAttrs({
     ...
   }: {
     NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds"];
+  });
+
+  nav2-behaviors = rosSuper.nav2-behaviors.overrideAttrs({
+    ...
+  }: {
+    NIX_CFLAGS_COMPILE = toString [ "-Wno-error=array-bounds" "-Wno-error=maybe-uninitialized" ];
   });
 
   nav2-costmap-2d = rosSuper.nav2-costmap-2d.overrideAttrs({
@@ -1187,16 +1187,16 @@ in with lib; {
     ];
   });
 
-  ros2-ouster = rosSuper.ros2-ouster.overrideAttrs ({
-    buildInputs ? [], ...
-  }: {
-    buildInputs = buildInputs ++ [ self.jsoncpp self.libpcap ];
-  });
-
   ros2-medkit-linux-introspection = rosSuper.ros2-medkit-linux-introspection.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
     nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
+  });
+
+  ros2-ouster = rosSuper.ros2-ouster.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    buildInputs = buildInputs ++ [ self.jsoncpp self.libpcap ];
   });
 
   rosgraph-monitor = rosSuper.rosgraph-monitor.overrideAttrs ({
@@ -1258,6 +1258,14 @@ in with lib; {
     '';
   });
 
+  shared-queues-vendor = patchVendorUrl (patchVendorUrl rosSuper.shared-queues-vendor {
+    url = "https://github.com/cameron314/concurrentqueue/archive/8f65a8734d77c3cc00d74c0532efca872931d3ce.zip";
+    sha256 = "0cmsmgc87ndd9hiv187xkvjkn8fipn3hsijjc864h2lfcyigbxq1";
+  }) {
+    url = "https://github.com/cameron314/readerwriterqueue/archive/ef7dfbf553288064347d51b8ac335f1ca489032a.zip";
+    sha256 = "1255n51y1bjry97n4w60mgz6b9h14flfrxb01ihjf6pwvvfns8ag";
+  };
+
   sick-safevisionary-base = rosSuper.sick-safevisionary-base.overrideAttrs ({
     postPatch ? "", ...
   }: {
@@ -1279,14 +1287,6 @@ in with lib; {
       })
     ];
   });
-
-  shared-queues-vendor = patchVendorUrl (patchVendorUrl rosSuper.shared-queues-vendor {
-    url = "https://github.com/cameron314/concurrentqueue/archive/8f65a8734d77c3cc00d74c0532efca872931d3ce.zip";
-    sha256 = "0cmsmgc87ndd9hiv187xkvjkn8fipn3hsijjc864h2lfcyigbxq1";
-  }) {
-    url = "https://github.com/cameron314/readerwriterqueue/archive/ef7dfbf553288064347d51b8ac335f1ca489032a.zip";
-    sha256 = "1255n51y1bjry97n4w60mgz6b9h14flfrxb01ihjf6pwvvfns8ag";
-  };
 
   slam-toolbox = rosSuper.slam-toolbox.overrideAttrs ({
     postPatch ? "", ...

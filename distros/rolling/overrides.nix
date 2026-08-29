@@ -209,21 +209,6 @@ in {
     ];
   });
 
-  inverse-dynamics-solver = rosSuper.inverse-dynamics-solver.override { python = self.python3; };
-
-  io-context = rosSuper.io-context.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # fix for asio 1.36: https://github.com/ros-drivers/transport_drivers/pull/113
-      (self.fetchpatch2 {
-        url = "https://github.com/nim65s/transport_drivers/commit/7be52848f624c82ea720416360d7a754fff65c33.patch?full_index=1";
-        hash = "sha256-IYQTlSnJjUvnOp0RbN+1P7C/RclAjouyzmBT9LJpyN4=";
-        stripLen = 1;
-      })
-    ];
-  });
-
   iceoryx-hoofs = rosSuper.iceoryx-hoofs.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -258,6 +243,21 @@ in {
           'file(DOWNLOAD "file://''${_url}"'
       '';
     });
+
+  inverse-dynamics-solver = rosSuper.inverse-dynamics-solver.override { python = self.python3; };
+
+  io-context = rosSuper.io-context.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # fix for asio 1.36: https://github.com/ros-drivers/transport_drivers/pull/113
+      (self.fetchpatch2 {
+        url = "https://github.com/nim65s/transport_drivers/commit/7be52848f624c82ea720416360d7a754fff65c33.patch?full_index=1";
+        hash = "sha256-IYQTlSnJjUvnOp0RbN+1P7C/RclAjouyzmBT9LJpyN4=";
+        stripLen = 1;
+      })
+    ];
+  });
 
   lanelet2-core = rosSuper.lanelet2-core.overrideAttrs ({
     patches ? [], ...
@@ -335,6 +335,11 @@ in {
     ];
   });
 
+  libphidget22 = lib.patchVendorUrl rosSuper.libphidget22 {
+    url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.19.20240304.tar.gz";
+    hash = "sha256-GpzGMpQ02s/X/XEcGoozzMjigrbqvAu81bcb7QG+36E=";
+  };
+
   librealsense2 = (pipe rosSuper.librealsense2 [
     (pkg: patchExternalProjectGit pkg {
       file = "CMake/external_libcurl.cmake";
@@ -380,11 +385,6 @@ in {
     '';
   });
 
-  libphidget22 = lib.patchVendorUrl rosSuper.libphidget22 {
-    url = "https://www.phidgets.com/downloads/phidget22/libraries/linux/libphidget22/libphidget22-1.19.20240304.tar.gz";
-    hash = "sha256-GpzGMpQ02s/X/XEcGoozzMjigrbqvAu81bcb7QG+36E=";
-  };
-
   magic-enum = rosSuper.magic-enum.overrideAttrs ({
     cmakeFlags ? [], ...
   }: {
@@ -423,18 +423,18 @@ in {
     buildInputs = buildInputs ++ [ self.wayland-scanner ];
   });
 
-  mrpt-maps = rosSuper.mrpt-maps.overrideAttrs ({
-    buildInputs ? [], ...
-  }: {
-    # Don't use vendored octomap
-    buildInputs = buildInputs ++ [ self.octomap ];
-  });
-
   mrpt-io = rosSuper.mrpt-io.overrideAttrs ({
     buildInputs ? [], ...
   }: {
     # Don't use built-in zlib
     buildInputs = buildInputs ++ [ self.zlib ];
+  });
+
+  mrpt-maps = rosSuper.mrpt-maps.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    # Don't use vendored octomap
+    buildInputs = buildInputs ++ [ self.octomap ];
   });
 
   mrpt-opengl = rosSuper.mrpt-opengl.overrideAttrs ({
@@ -557,19 +557,6 @@ in {
     propagatedNativeBuildInputs = [ self.qt6.wrapQtAppsHook ];
   };
 
-  rcutils = rosSuper.rcutils.overrideAttrs ({
-    postPatch ? "", ...
-  }: lib.optionalAttrs self.stdenv.hostPlatform.isDarwin {
-    # Apple Clang rejects brace-init of an _Atomic scalar ("illegal
-    # initializer type 'atomic_int_least64_t'").
-    # https://github.com/ros2/rcutils/pull/586
-    postPatch = postPatch + ''
-      substituteInPlace src/testing/fault_injection.c --replace-fail \
-        'atomic_int_least64_t g_rcutils_fault_injection_count = {-1};' \
-        'atomic_int_least64_t g_rcutils_fault_injection_count = -1;'
-    '';
-  });
-
   rcl-yaml-param-parser = rosSuper.rcl-yaml-param-parser.overrideAttrs ({
     patches ? [], postPatch ? "", ...
   }: {
@@ -607,32 +594,18 @@ in {
     '';
   });
 
-  roboplan-examples = rosSuper.roboplan-examples.overrideAttrs ({
-    buildInputs ? [], ...
-  }: {
-    # Prevent cmake from fetching osqp-eigen via git
-    buildInputs = buildInputs ++ [ self.osqp-eigen rosSelf.toppra ];
+  rcutils = rosSuper.rcutils.overrideAttrs ({
+    postPatch ? "", ...
+  }: lib.optionalAttrs self.stdenv.hostPlatform.isDarwin {
+    # Apple Clang rejects brace-init of an _Atomic scalar ("illegal
+    # initializer type 'atomic_int_least64_t'").
+    # https://github.com/ros2/rcutils/pull/586
+    postPatch = postPatch + ''
+      substituteInPlace src/testing/fault_injection.c --replace-fail \
+        'atomic_int_least64_t g_rcutils_fault_injection_count = {-1};' \
+        'atomic_int_least64_t g_rcutils_fault_injection_count = -1;'
+    '';
   });
-
-  roboplan-toppra = rosSuper.roboplan-toppra.overrideAttrs ({
-    buildInputs ? [], ...
-  }: {
-    buildInputs = buildInputs ++ [ rosSelf.toppra ];
-  });
-
-  roboplan-oink = rosSuper.roboplan-oink.overrideAttrs ({
-    buildInputs ? [], ...
-  }: {
-    # Prevent cmake from fetching osqp-eigen via git
-    buildInputs = buildInputs ++ [ self.osqp-eigen ];
-  });
-
-  rosidlcpp-generator-core = rosSuper.rosidlcpp-generator-core.override { fmt = self.fmt_9; };
-  rosidlcpp-generator-cpp = rosSuper.rosidlcpp-generator-cpp.override { fmt = self.fmt_9; };
-  rosidlcpp-generator-py = rosSuper.rosidlcpp-generator-py.override { fmt = self.fmt_9; };
-  rosidlcpp-generator-type-description = rosSuper.rosidlcpp-generator-type-description.override { fmt = self.fmt_9; };
-  rosidlcpp-typesupport-fastrtps-c = rosSuper.rosidlcpp-typesupport-fastrtps-c.override { fmt = self.fmt_9; };
-  rosidlcpp-typesupport-fastrtps-cpp = rosSuper.rosidlcpp-typesupport-fastrtps-cpp.override { fmt = self.fmt_9; };
 
   rmf-task = rosSuper.rmf-task.overrideAttrs ({
     patches ? [], ...
@@ -659,6 +632,35 @@ in {
       })
     ];
   });
+
+  roboplan-examples = rosSuper.roboplan-examples.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    # Prevent cmake from fetching osqp-eigen via git
+    buildInputs = buildInputs ++ [ self.osqp-eigen rosSelf.toppra ];
+  });
+
+  roboplan-oink = rosSuper.roboplan-oink.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    # Prevent cmake from fetching osqp-eigen via git
+    buildInputs = buildInputs ++ [ self.osqp-eigen ];
+  });
+
+  roboplan-toppra = rosSuper.roboplan-toppra.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    buildInputs = buildInputs ++ [ rosSelf.toppra ];
+  });
+
+  rosidlcpp-generator-core = rosSuper.rosidlcpp-generator-core.override { fmt = self.fmt_9; };
+  rosidlcpp-generator-cpp = rosSuper.rosidlcpp-generator-cpp.override { fmt = self.fmt_9; };
+  rosidlcpp-generator-py = rosSuper.rosidlcpp-generator-py.override { fmt = self.fmt_9; };
+  rosidlcpp-generator-type-description = rosSuper.rosidlcpp-generator-type-description.override { fmt = self.fmt_9; };
+
+  rosidlcpp-typesupport-fastrtps-c = rosSuper.rosidlcpp-typesupport-fastrtps-c.override { fmt = self.fmt_9; };
+
+  rosidlcpp-typesupport-fastrtps-cpp = rosSuper.rosidlcpp-typesupport-fastrtps-cpp.override { fmt = self.fmt_9; };
 
   rqt-robot-monitor = rosSuper.rqt-robot-monitor.overrideAttrs ({
     nativeBuildInputs ? [], ...
@@ -717,6 +719,16 @@ in {
 
   sdformat-vendor = lib.patchAmentVendorGit rosSuper.sdformat-vendor { };
 
+  sick-safevisionary-base = rosSuper.sick-safevisionary-base.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.0.2)" \
+        "cmake_minimum_required(VERSION 3.10)"\
+    '';
+  });
+
   # Ensure that tinyxml-2 has the same major version as in
   # behaviortree-cpp, which vendors it. Other packages like
   # nav2-behavior-tree include tintinyxml-2 propagated via their
@@ -740,16 +752,6 @@ in {
       v1=$(tar xf ${rosSelf.behaviortree-cpp.src} --wildcards '*/tinyxml2.h' --to-stdout|grep TINYXML2_MAJOR_VERSION)
       v2=$(grep TINYXML2_MAJOR_VERSION tinyxml2.h)
       test "$v1" = "$v2" || { echo "tinyxml-2 version mismatch"; exit 1; }
-    '';
-  });
-
-  sick-safevisionary-base = rosSuper.sick-safevisionary-base.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail \
-        "cmake_minimum_required(VERSION 3.0.2)" \
-        "cmake_minimum_required(VERSION 3.10)"\
     '';
   });
 

@@ -321,19 +321,6 @@ in {
     ];
   });
 
-  lttngpy = rosSuper.lttngpy.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = [
-      # fix compile error
-      (self.fetchpatch2 {
-        url = "https://github.com/ros2/ros2_tracing/commit/e175cde407a2da7fab2a75890cdb9d0e626cc73b.patch?full_index=1";
-        hash = "sha256-U0G8/WNTmaDHu0NN8OxGBFJlnebgW2XZIVNeTpUqgmY=";
-        stripLen = 1;
-      })
-    ];
-  });
-
   lanelet2-core = rosSuper.lanelet2-core.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -438,6 +425,19 @@ in {
       substituteInPlace third-party/realsense-file/CMakeLists.txt \
         --replace-fail '$<$<COMPILE_LANGUAGE:C>:-include stdint.h>' ""
     '';
+  });
+
+  lttngpy = rosSuper.lttngpy.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = [
+      # fix compile error
+      (self.fetchpatch2 {
+        url = "https://github.com/ros2/ros2_tracing/commit/e175cde407a2da7fab2a75890cdb9d0e626cc73b.patch?full_index=1";
+        hash = "sha256-U0G8/WNTmaDHu0NN8OxGBFJlnebgW2XZIVNeTpUqgmY=";
+        stripLen = 1;
+      })
+    ];
   });
 
   mcap-vendor = (lib.patchVendorUrl rosSuper.mcap-vendor {
@@ -779,16 +779,6 @@ in {
     ];
   };
 
-  rcdiscover = rosSuper.rcdiscover.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail \
-        "cmake_minimum_required (VERSION 3.1)" \
-        "cmake_minimum_required (VERSION 3.10)"\
-    '';
-  });
-
   rc-genicam-api = rosSuper.rc-genicam-api.overrideAttrs ({
     postPatch ? "", ...
   }: {
@@ -797,6 +787,16 @@ in {
       substituteInPlace cmake/configure_link_libs.cmake --replace-fail \
         "cmake_policy(SET CMP0045 OLD)" \
         ""
+    '';
+  });
+
+  rcdiscover = rosSuper.rcdiscover.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required (VERSION 3.1)" \
+        "cmake_minimum_required (VERSION 3.10)"\
     '';
   });
 
@@ -826,17 +826,17 @@ in {
     ];
   });
 
-  roboplan-toppra = rosSuper.roboplan-toppra.overrideAttrs ({
-    propagatedBuildInputs ? [], ...
-  }: {
-    propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.toppra ];
-  });
-
   roboplan-oink = rosSuper.roboplan-oink.overrideAttrs ({
     propagatedBuildInputs ? [], ...
   }: {
     # Prevent cmake from fetching osqp-eigen via git
     propagatedBuildInputs = propagatedBuildInputs ++ [ self.osqp-eigen ];
+  });
+
+  roboplan-toppra = rosSuper.roboplan-toppra.overrideAttrs ({
+    propagatedBuildInputs ? [], ...
+  }: {
+    propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.toppra ];
   });
 
   rosidlcpp-generator-core = rosSuper.rosidlcpp-generator-core.override { fmt = self.fmt_9; };
@@ -897,6 +897,21 @@ in {
 
   sdformat-vendor = lib.patchGzAmentVendorGit rosSuper.sdformat-vendor { };
 
+  shared-queues-vendor = lib.patchVendorUrl rosSuper.shared-queues-vendor {
+    url = "https://github.com/cameron314/readerwriterqueue/archive/ef7dfbf553288064347d51b8ac335f1ca489032a.zip";
+    hash = "sha256-TyFt3d78GidhDGD17KgjAaZl/qvAcGJP8lmu4EOxpYg=";
+  };
+
+  sick-safevisionary-base = rosSuper.sick-safevisionary-base.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.0.2)" \
+        "cmake_minimum_required(VERSION 3.10)"\
+    '';
+  });
+
   sick-scan-xd = rosSuper.sick-scan-xd.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -916,21 +931,6 @@ in {
     postPatch = postPatch + ''
       substituteInPlace CMakeLists.txt lib/karto_sdk/CMakeLists.txt \
         --replace-fail " system" ""
-    '';
-  });
-
-  shared-queues-vendor = lib.patchVendorUrl rosSuper.shared-queues-vendor {
-    url = "https://github.com/cameron314/readerwriterqueue/archive/ef7dfbf553288064347d51b8ac335f1ca489032a.zip";
-    hash = "sha256-TyFt3d78GidhDGD17KgjAaZl/qvAcGJP8lmu4EOxpYg=";
-  };
-
-  sick-safevisionary-base = rosSuper.sick-safevisionary-base.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail \
-        "cmake_minimum_required(VERSION 3.0.2)" \
-        "cmake_minimum_required(VERSION 3.10)"\
     '';
   });
 
