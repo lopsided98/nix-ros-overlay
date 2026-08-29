@@ -336,14 +336,9 @@ in {
   gz-common-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-common-vendor {
     patchesFor.gz_common_vendor = [
       (self.fetchpatch2 {
-        # Replace FreeImage dependency with stb (gazebosim#725 updated for Jazzy)
-        url = "https://github.com/wentasah/gz-common/commit/9fbe891b3a8f30ff11e8367b1aecea5b0ef7521e.patch?full_index=1";
-        hash = "sha256-akHFbLY9RsYITWrw0/hTxDwXM1r5f9GqDLRAYHnhIf0=";
-      })
-      (self.fetchpatch2 {
-        # Added missing includes (#672)
-        url = "https://github.com/gazebosim/gz-common/commit/8f235cb2cb7ae9c2251c8ef155a2980ba4f0e764.patch?full_index=1";
-        hash = "sha256-B95SFeGraKR7/2SxmAlP4U4UDGe/ZpbhkftjoRJyi8M=";
+        # Replace FreeImage dependency with stb (#725 updated for Jazzy 2026-08-29)
+        url = "https://github.com/wentasah/gz-common/commit/6a6f8421dc1a69453c385248d146a5d5f15fb448.patch?full_index=1";
+        hash = "sha256-pytShFFdL/R+T3Ye3t6hbenmPa5wn6L78wS+A7KczV0=";
       })
     ];
   }).overrideAttrs ({
