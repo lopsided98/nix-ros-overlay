@@ -172,8 +172,6 @@ self: super: {
 
  ament-mypy = self.callPackage ./ament-mypy {};
 
- ament-nodl = self.callPackage ./ament-nodl {};
-
  ament-package = self.callPackage ./ament-package {};
 
  ament-pclint = self.callPackage ./ament-pclint {};
@@ -3421,6 +3419,14 @@ self: super: {
  robotraconteur = self.callPackage ./robotraconteur {};
 
  robotraconteur-companion = self.callPackage ./robotraconteur-companion {};
+
+ robstride-driver = self.callPackage ./robstride-driver {};
+
+ robstride-examples = self.callPackage ./robstride-examples {};
+
+ robstride-ros2 = self.callPackage ./robstride-ros2 {};
+
+ robstride-ros2-control = self.callPackage ./robstride-ros2-control {};
 
  ros2-control = self.callPackage ./ros2-control {};
 

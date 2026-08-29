@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mp2p-icp-core, mp2p-icp-viz }:
 buildRosPackage {
   pname = "ros-jazzy-mp2p-icp";
-  version = "2.13.0-r1";
+  version = "2.13.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/jazzy/mp2p_icp/2.13.0-1.tar.gz";
-    name = "2.13.0-1.tar.gz";
-    sha256 = "0b4204a14f4b2ff36620673bae888f46cc5cf6d45c3a1f40c3a36f094c5d1a27";
+    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/jazzy/mp2p_icp/2.13.1-1.tar.gz";
+    name = "2.13.1-1.tar.gz";
+    sha256 = "854f4051c9d59ae01d4919e6e731a96b638706998921247937552b7cec4cdff1";
   };
 
   buildType = "cmake";

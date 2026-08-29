@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "A package to visualiize the navigation graphs of fleets";
-    license = with lib.licenses; [ "Apache-license-2.0" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

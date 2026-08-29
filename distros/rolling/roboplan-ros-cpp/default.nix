@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, builtin-interfaces, eigen, geometry-msgs, pinocchio, python3, python3Packages, roboplan, roboplan-example-models, rosidl-generator-cpp, sensor-msgs, tf2-eigen, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-rolling-roboplan-ros-cpp";
-  version = "0.6.0-r1";
+  version = "0.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan_ros-release/archive/release/rolling/roboplan_ros_cpp/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "2ad25a7adb51f679114d4c2d310acbcf078ae360d92f2764f2d230bf89a32271";
+    url = "https://github.com/ros2-gbp/roboplan_ros-release/archive/release/rolling/roboplan_ros_cpp/0.6.1-1.tar.gz";
+    name = "0.6.1-1.tar.gz";
+    sha256 = "6242017bd41af31c0e610519bf595d1994051547fc1216e7a1d4a55767b5db4d";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake builtin-interfaces python3 python3Packages.nanobind ];
+  buildInputs = [ ament-cmake builtin-interfaces python3 python3Packages.nanobind python3Packages.typing-extensions ];
   checkInputs = [ ament-index-cpp roboplan-example-models ];
   propagatedBuildInputs = [ eigen geometry-msgs pinocchio roboplan rosidl-generator-cpp sensor-msgs tf2-eigen trajectory-msgs ];
   nativeBuildInputs = [ ament-cmake ];

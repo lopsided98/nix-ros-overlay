@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, angles, controller-interface, elite-robots-msgs, joint-trajectory-controller, lifecycle-msgs, pluginlib, rclcpp-lifecycle, rcutils, realtime-tools, std-msgs, std-srvs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, angles, controller-interface, elite-robots-msgs, generate-parameter-library, hardware-interface, joint-trajectory-controller, lifecycle-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, rcutils, realtime-tools, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-elite-robots-controllers";
-  version = "1.0.0-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/EliteRobots/Elite_Robots_CS_ROS2_Driver-release/archive/release/humble/elite_robots_controllers/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "bd196ff23f3e06a724cb8dd38d98c66e71cc7bc0d81a28bb540f3d3d626735a0";
+    url = "https://github.com/EliteRobots/Elite_Robots_CS_ROS2_Driver-release/archive/release/humble/elite_robots_controllers/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "babfa8f2439350241e772658ff471c2505f1611d24db3e1a945f5a1f9e1a24bd";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ angles controller-interface elite-robots-msgs joint-trajectory-controller lifecycle-msgs pluginlib rclcpp-lifecycle rcutils realtime-tools std-msgs std-srvs ];
+  propagatedBuildInputs = [ angles controller-interface elite-robots-msgs generate-parameter-library hardware-interface joint-trajectory-controller lifecycle-msgs pluginlib rclcpp rclcpp-lifecycle rcpputils rcutils realtime-tools std-msgs std-srvs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

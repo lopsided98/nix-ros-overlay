@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "messages related to flir camera driver";
-    license = with lib.licenses; [ "Apache-2" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

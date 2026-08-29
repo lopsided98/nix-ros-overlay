@@ -22,6 +22,6 @@ buildRosPackage {
   meta = {
     description = "A modern, lifecycle-managed ROS2 driver for Slamtec RPLidar.
     Features multithreaded scanning, non-blocking I/O, and C++17 architecture.";
-    license = with lib.licenses; [ "BSD-2-Clause" ];
+    license = with lib.licenses; [ bsd2 ];
   };
 }

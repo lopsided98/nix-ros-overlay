@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, angles, builtin-interfaces, eigen, eigen3-cmake-module, geometry-msgs, nav-msgs, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, nlohmann_json, ompl, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-smac-planner";
-  version = "1.3.12-r1";
+  version = "1.3.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_smac_planner/1.3.12-1.tar.gz";
-    name = "1.3.12-1.tar.gz";
-    sha256 = "636ec33b2024a044cfb121e1f1bf4cb03a471c23f2f2a7b46314a7d20e96ab71";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_smac_planner/1.3.13-1.tar.gz";
+    name = "1.3.13-1.tar.gz";
+    sha256 = "44b9ce13eb9f81a632d728301a8c4001fd7a94e59763ada5782094000d7d7dc4";
   };
 
   buildType = "ament_cmake";

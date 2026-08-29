@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Implementation of C++20's std::span";
-    license = with lib.licenses; [ "BSL-1.0" ];
+    license = with lib.licenses; [ boost ];
   };
 }

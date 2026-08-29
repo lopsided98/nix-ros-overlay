@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "The POPF package";
-    license = with lib.licenses; [ "GPL-2.0-only" ];
+    license = with lib.licenses; [ gpl2Only ];
   };
 }

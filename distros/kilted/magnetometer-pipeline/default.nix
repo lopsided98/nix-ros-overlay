@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-python, ament-cmake-ros, cras-cpp-common, cras-lint, eigen, message-filters, pluginlib, python3Packages, rclcpp, rclcpp-components, rclpy, sensor-msgs, std-msgs, std-srvs, tf2-eigen }:
 buildRosPackage {
   pname = "ros-kilted-magnetometer-pipeline";
-  version = "3.0.2-r1";
+  version = "4.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/compass-release/archive/release/kilted/magnetometer_pipeline/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "aa41a01a60cab53bee3badd02b142e6f6f4729f766e43d791bf22a4e747724c3";
+    url = "https://github.com/ros2-gbp/compass-release/archive/release/kilted/magnetometer_pipeline/4.0.1-1.tar.gz";
+    name = "4.0.1-1.tar.gz";
+    sha256 = "f9b08d4c41bc263a105142258446ea1ca8a57f90213a8e0bf3a0d302a88c1fb4";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Calibration and removing of magnetometer bias.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

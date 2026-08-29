@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Wrapper around OpenVDB, if not found on the system, will compile from source";
-    license = with lib.licenses; [ "LGPL-2.1-only" "MPL-2.0-license" ];
+    license = with lib.licenses; [ lgpl21Only mpl20 ];
   };
 }

@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Utilities for publishing / processing metro_benchmark_msgs";
-    license = with lib.licenses; [ "BSD-3-clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

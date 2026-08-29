@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-manager, joint-state-broadcaster, joint-trajectory-controller, parallel-gripper-controller, roboplan, roboplan-example-models, roboplan-ros-examples, robot-state-publisher, topic-tools, xacro }:
 buildRosPackage {
   pname = "ros-rolling-roboplan-ros-franka";
-  version = "0.6.0-r1";
+  version = "0.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan_ros-release/archive/release/rolling/roboplan_ros_franka/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "f838b97585478d37a96f79843b3af9d5a7cadcf57249ad1bea8428bf19d4ebde";
+    url = "https://github.com/ros2-gbp/roboplan_ros-release/archive/release/rolling/roboplan_ros_franka/0.6.1-1.tar.gz";
+    name = "0.6.1-1.tar.gz";
+    sha256 = "eacf8c1b5b26cd93b8f7c94aba107c475950a0e3f3f6a6da56a443f939f4a667";
   };
 
   buildType = "ament_cmake";

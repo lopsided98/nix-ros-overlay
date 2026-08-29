@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, eigen, flann, pkg-config, python3, yaml-cpp }:
 buildRosPackage {
   pname = "ros-rolling-ompl";
-  version = "2.0.1-r3";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ompl-release/archive/release/rolling/ompl/2.0.1-3.tar.gz";
-    name = "2.0.1-3.tar.gz";
-    sha256 = "53bbe0e7083e8561580de7d024e50fa31ecd2ba059173549b7d93fafcf36ae27";
+    url = "https://github.com/ros2-gbp/ompl-release/archive/release/rolling/ompl/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "046c40e53385c902b0889374daa3b55c83e1ae27e3c12b2cc9036286b3cfcabb";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake eigen pkg-config python3 ];
-  propagatedBuildInputs = [ boost flann yaml-cpp ];
+  buildInputs = [ cmake pkg-config python3 ];
+  propagatedBuildInputs = [ boost eigen flann yaml-cpp ];
   nativeBuildInputs = [ cmake pkg-config ];
 
   meta = {

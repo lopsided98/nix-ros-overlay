@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "ROS2 driver for flir spinnaker sdk";
-    license = with lib.licenses; [ "Apache-2" bsdOriginal ];
+    license = with lib.licenses; [ asl20 bsdOriginal ];
   };
 }

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catch2, cmake, doxygen, eigen, git, matio, pkg-config, python3Packages, simde }:
 buildRosPackage {
   pname = "ros-lyrical-jrl-cmakemodules";
-  version = "2.2.4-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/jrl_cmakemodules-release/archive/release/lyrical/jrl_cmakemodules/2.2.4-1.tar.gz";
-    name = "2.2.4-1.tar.gz";
-    sha256 = "18ab0479c08a377978c65de76a8973b6dfda082fda3f37e987236cbdf1839dcb";
+    url = "https://github.com/ros2-gbp/jrl_cmakemodules-release/archive/release/lyrical/jrl_cmakemodules/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "8c6c54dcc38fdfacbc574e5c040631aa757b0ee9026a64d5b2dbf5c48cc8aed3";
   };
 
   buildType = "cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "CMake utility toolbox";
-    license = with lib.licenses; [ "GPL-3.0" "LGPL-3.0" bsd3 mit asl20 ];
+    license = with lib.licenses; [ gpl3 lgpl3Only bsd3 mit asl20 ];
   };
 }

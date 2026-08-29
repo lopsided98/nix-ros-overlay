@@ -168,8 +168,6 @@ self: super: {
 
  ament-mypy = self.callPackage ./ament-mypy {};
 
- ament-nodl = self.callPackage ./ament-nodl {};
-
  ament-package = self.callPackage ./ament-package {};
 
  ament-pclint = self.callPackage ./ament-pclint {};
@@ -1668,6 +1666,8 @@ self: super: {
 
  insight-gui = self.callPackage ./insight-gui {};
 
+ int2dds-ffi-vendor = self.callPackage ./int2dds-ffi-vendor {};
+
  interactive-marker-twist-server = self.callPackage ./interactive-marker-twist-server {};
 
  interactive-markers = self.callPackage ./interactive-markers {};
@@ -1927,6 +1927,8 @@ self: super: {
  leo-teleop = self.callPackage ./leo-teleop {};
 
  leo-viz = self.callPackage ./leo-viz {};
+
+ lgdx-rplidar-c1 = self.callPackage ./lgdx-rplidar-c1 {};
 
  lgsvl-msgs = self.callPackage ./lgsvl-msgs {};
 
@@ -2760,6 +2762,8 @@ self: super: {
 
  opennav-docking-core = self.callPackage ./opennav-docking-core {};
 
+ opennav-following = self.callPackage ./opennav-following {};
+
  openni2-camera = self.callPackage ./openni2-camera {};
 
  openvdb-vendor = self.callPackage ./openvdb-vendor {};
@@ -3298,6 +3302,10 @@ self: super: {
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
 
+ rmw-int2dds-cpp = self.callPackage ./rmw-int2dds-cpp {};
+
+ rmw-int2dds-validation = self.callPackage ./rmw-int2dds-validation {};
+
  rmw-stats-shim = self.callPackage ./rmw-stats-shim {};
 
  rmw-zenoh-cpp = self.callPackage ./rmw-zenoh-cpp {};
@@ -3347,6 +3355,14 @@ self: super: {
  robotraconteur = self.callPackage ./robotraconteur {};
 
  robotraconteur-companion = self.callPackage ./robotraconteur-companion {};
+
+ robstride-driver = self.callPackage ./robstride-driver {};
+
+ robstride-examples = self.callPackage ./robstride-examples {};
+
+ robstride-ros2 = self.callPackage ./robstride-ros2 {};
+
+ robstride-ros2-control = self.callPackage ./robstride-ros2-control {};
 
  ros2-control = self.callPackage ./ros2-control {};
 
@@ -4161,6 +4177,12 @@ self: super: {
  tricycle-controller = self.callPackage ./tricycle-controller {};
 
  tricycle-steering-controller = self.callPackage ./tricycle-steering-controller {};
+
+ trimble-driver = self.callPackage ./trimble-driver {};
+
+ trimble-gsof-msgs = self.callPackage ./trimble-gsof-msgs {};
+
+ trimble-interfaces = self.callPackage ./trimble-interfaces {};
 
  tsid = self.callPackage ./tsid {};
 

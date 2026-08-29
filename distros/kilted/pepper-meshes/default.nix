@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = "Meshes for the Pepper robot, for ROS2";
-    license = with lib.licenses; [ "CC-BY-NC-ND-4.0" ];
+    license = with lib.licenses; [ cc-by-nc-nd-40 ];
   };
 }

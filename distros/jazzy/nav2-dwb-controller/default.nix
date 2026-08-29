@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, costmap-queue, dwb-core, dwb-critics, dwb-msgs, dwb-plugins, nav-2d-msgs, nav-2d-utils }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-dwb-controller";
-  version = "1.3.12-r1";
+  version = "1.3.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_dwb_controller/1.3.12-1.tar.gz";
-    name = "1.3.12-1.tar.gz";
-    sha256 = "c918d8e19e6a0ae7d4db6db834daf20caca60197d1f24526355744b704f0cc84";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_dwb_controller/1.3.13-1.tar.gz";
+    name = "1.3.13-1.tar.gz";
+    sha256 = "62fc2fa222397e6fb51dca5179fff5728dceca3dd87254825401a2ee4e17f6a0";
   };
 
   buildType = "ament_cmake";

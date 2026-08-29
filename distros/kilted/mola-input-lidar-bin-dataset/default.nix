@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmaps }:
 buildRosPackage {
   pname = "ros-kilted-mola-input-lidar-bin-dataset";
-  version = "3.0.0-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_input_lidar_bin_dataset/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "485390e86acd06b674a72ca83b12a27f7a270469e0a50714d243aaf0b512f9e0";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_input_lidar_bin_dataset/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "aa8aaabba4e9ad1fef1136e5a2bfd0a94f171a3f617fcb5814ad02be7349f738";
   };
 
   buildType = "cmake";

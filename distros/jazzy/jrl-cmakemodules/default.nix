@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catch2, cmake, doxygen, eigen, git, matio, pkg-config, python3Packages, simde }:
 buildRosPackage {
   pname = "ros-jazzy-jrl-cmakemodules";
-  version = "2.2.4-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/jrl_cmakemodules-release/archive/release/jazzy/jrl_cmakemodules/2.2.4-1.tar.gz";
-    name = "2.2.4-1.tar.gz";
-    sha256 = "5e317bcc475644452b512d29eff4d9975551fe9e0f5fd4540c21221b2f3e88fb";
+    url = "https://github.com/ros2-gbp/jrl_cmakemodules-release/archive/release/jazzy/jrl_cmakemodules/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "e2a9c94b368c3d4de58f2a7988095bf610cb93ed5631cb5a5a5774361f752f66";
   };
 
   buildType = "cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "CMake utility toolbox";
-    license = with lib.licenses; [ "GPL-3.0" "LGPL-3.0" bsd3 mit asl20 ];
+    license = with lib.licenses; [ gpl3 lgpl3Only bsd3 mit asl20 ];
   };
 }

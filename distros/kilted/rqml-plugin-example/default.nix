@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "An example plugin for RQml";
-    license = with lib.licenses; [ "MIT-0" ];
+    license = with lib.licenses; [ mit0 ];
   };
 }

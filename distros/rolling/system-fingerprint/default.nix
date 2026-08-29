@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = "The system_fingerprint package";
-    license = with lib.licenses; [ "BSD-2-clause" ];
+    license = with lib.licenses; [ bsd2 ];
   };
 }

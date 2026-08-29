@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-test, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-cras-lint";
-  version = "3.0.2-r2";
+  version = "4.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cras_ros_utils-release/archive/release/rolling/cras_lint/3.0.2-2.tar.gz";
-    name = "3.0.2-2.tar.gz";
-    sha256 = "99f7f2ee859cc623bba74cd7e001548bf1012ff8a1cf24b6ac0db7ffbe0a3ab8";
+    url = "https://github.com/ros2-gbp/cras_ros_utils-release/archive/release/rolling/cras_lint/4.0.2-1.tar.gz";
+    name = "4.0.2-1.tar.gz";
+    sha256 = "11c8f172079f1cdd52e34680238a0ff453c8086a2fd87d6edc53f82939da42bb";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Various utilities to work with bag files";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

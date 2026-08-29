@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "CX plugin to send and receive protobuf messages";
-    license = with lib.licenses; [ "GPL-2.0-or-later" ];
+    license = with lib.licenses; [ gpl2Plus ];
   };
 }

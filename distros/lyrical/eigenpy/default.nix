@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Bindings between Numpy and Eigen using Boost.Python";
-    license = with lib.licenses; [ "BSD-2-Clause" ];
+    license = with lib.licenses; [ bsd2 ];
   };
 }

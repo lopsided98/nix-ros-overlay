@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rcl, rclcpp, rclpy, rcutils, rmw, rmw-int2dds-cpp, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-rmw-int2dds-validation";
-  version = "0.1.0-r3";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntellectusCorp/rmw_int2dds-release/archive/release/humble/rmw_int2dds_validation/0.1.0-3.tar.gz";
-    name = "0.1.0-3.tar.gz";
-    sha256 = "5307196d77a556e4ce34db43eecc74dc9c1b7579ae2ffbbdf918196d10344359";
+    url = "https://github.com/ros2-gbp/rmw_int2dds-release/archive/release/humble/rmw_int2dds_validation/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "0a8c7ef1adfad8bb112d0ef05a9584597bcbd0e58204549f2da191f96f1d361c";
   };
 
   buildType = "ament_cmake";

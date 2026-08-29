@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "An open source camera stack and framework for Linux, Android, and ChromeOS";
-    license = with lib.licenses; [ "LGPL-2.1-only" ];
+    license = with lib.licenses; [ lgpl21Only ];
   };
 }

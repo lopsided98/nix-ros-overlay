@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "ROS interfaces for social navigation";
-    license = with lib.licenses; [ "BSD-3-clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

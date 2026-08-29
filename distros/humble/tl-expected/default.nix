@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = "C++11/14/17 std::expected with functional-style extensions";
-    license = with lib.licenses; [ "CC0-1.0" ];
+    license = with lib.licenses; [ cc0 ];
   };
 }

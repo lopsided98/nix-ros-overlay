@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "ROS msgs that interface the linear_feedback_controller package.";
-    license = with lib.licenses; [ "BSD-2-Clause" ];
+    license = with lib.licenses; [ bsd2 ];
   };
 }

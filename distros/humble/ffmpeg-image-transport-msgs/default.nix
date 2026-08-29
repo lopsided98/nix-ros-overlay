@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "messages for ffmpeg image transport plugin";
-    license = with lib.licenses; [ "Apache-2" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

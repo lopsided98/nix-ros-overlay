@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, clang, cmake, cppcheck, gtest, include-what-you-use, lcov }:
 buildRosPackage {
   pname = "ros-kilted-ros-industrial-cmake-boilerplate";
-  version = "0.5.4-r2";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_industrial_cmake_boilerplate-release/archive/release/kilted/ros_industrial_cmake_boilerplate/0.5.4-2.tar.gz";
-    name = "0.5.4-2.tar.gz";
-    sha256 = "be0ad84b53447f5a07b4efb5254c3e3d42c5dcf1d3b0cd95c5a8e3a473abda48";
+    url = "https://github.com/ros2-gbp/ros_industrial_cmake_boilerplate-release/archive/release/kilted/ros_industrial_cmake_boilerplate/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "766a020d9059368186b6a698509522e7bc9abb17a5d18834301692a5fd2d5b5c";
   };
 
   buildType = "cmake";

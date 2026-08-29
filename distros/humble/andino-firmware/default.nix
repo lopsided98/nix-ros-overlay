@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = "The andino_firmware package";
-    license = with lib.licenses; [ "BSD-Clause-3" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

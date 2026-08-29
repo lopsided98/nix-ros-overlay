@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, mujoco-vendor }:
 buildRosPackage {
   pname = "ros-kilted-mujoco-3d-lidar";
-  version = "0.1.0-r2";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/kilted/mujoco_3d_lidar/0.1.0-2.tar.gz";
-    name = "0.1.0-2.tar.gz";
-    sha256 = "2babbee27202a60e8b81f50745c7f2dd6c5790af5127ed2d1aab5008427abe08";
+    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/kilted/mujoco_3d_lidar/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "be3c7a850bc0156b639a5df06f95f508f0de7158a7ea4f70b87141e72cabe835";
   };
 
   buildType = "ament_cmake";
