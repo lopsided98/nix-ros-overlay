@@ -70,6 +70,16 @@ self: super: with self.lib; {
     utils = self.ignition.utils1;
   };
 
+  # dartsim (via gz-dartsim-vendor / gz-physics-vendor) assumes ODE is built
+  # with double precision (as it is on Ubuntu); nixpkgs' ode defaults to
+  # single precision, which breaks Eigen::Vector3d(contact.normal) in
+  # dartsim/src/GzCollisionDetector.cc with a float[4]-to-double mismatch.
+  ode = super.ode.overrideAttrs ({
+    configureFlags ? [], ...
+  }: {
+    configureFlags = configureFlags ++ [ "--enable-double-precision" ];
+  });
+
   # Needs unsecure freeimage. We want Gazebo to use gz-gz-ogre-next-vendor
   ogre1_9 = null;
 
