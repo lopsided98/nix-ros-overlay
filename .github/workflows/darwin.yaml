@@ -14,7 +14,7 @@ jobs:
         name: ros-darwin
         authToken: "${{ secrets.CACHIX_AUTH_TOKEN_ROS_DARWIN }}"
     - run: maintainers/scripts/eval-darwin.sh
-  build-ros-base:
+  build-selected:
     runs-on: macos-latest
     strategy:
       fail-fast: false
@@ -33,3 +33,5 @@ jobs:
         name: ros-darwin
         authToken: "${{ secrets.CACHIX_AUTH_TOKEN_ROS_DARWIN }}"
     - run: nix-build -A rosPackages.${{ matrix.distro }}.ros-base
+    - run: nix-build -A rosPackages.${{ matrix.distro }}.rviz2
+      if: matrix.distro != 'humble'  # rviz2 is broken for humble on darwin
