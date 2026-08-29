@@ -21,6 +21,6 @@ buildRosPackage {
   meta = {
     description = "nanoflann: a C++11 header-only library for Nearest Neighbor (NN) search
     with KD-trees, optimized for point clouds and Eigen matrices.";
-    license = with lib.licenses; [ "BSD-2-Clause" ];
+    license = with lib.licenses; [ bsd2 ];
   };
 }

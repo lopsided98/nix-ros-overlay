@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, gz-cmake-vendor, gz-common-vendor, gz-math-vendor, gz-msgs-vendor, gz-plugin-vendor, gz-rendering-vendor, gz-tools-vendor, gz-transport-vendor, gz-utils-vendor, protobuf, qt6, tinyxml-2, xorg }:
 buildRosPackage {
   pname = "ros-lyrical-gz-gui-vendor";
-  version = "0.3.1-r3";
+  version = "0.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_gui_vendor-release/archive/release/lyrical/gz_gui_vendor/0.3.1-3.tar.gz";
-    name = "0.3.1-3.tar.gz";
-    sha256 = "fc46531e7b13598cda57664847192e15f08260b8687ce09b1ea2d2411e0466c4";
+    url = "https://github.com/ros2-gbp/gz_gui_vendor-release/archive/release/lyrical/gz_gui_vendor/0.3.2-1.tar.gz";
+    name = "0.3.2-1.tar.gz";
+    sha256 = "e7ae5fcc8054c0dfef06acf98b7740f04935e7edb65737c2f48bd22368be032f";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cmake-vendor-package cmake ];
 
   meta = {
-    description = "Vendor package for: gz-gui 10.0.0
+    description = "Vendor package for: gz-gui 10.1.0
 
     Gazebo GUI : Graphical interfaces for robotics applications";
     license = with lib.licenses; [ asl20 ];

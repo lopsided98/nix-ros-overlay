@@ -21,6 +21,6 @@ buildRosPackage {
   meta = {
     description = "Wrapper around uncrustify, providing nothing but a dependency on uncrustify, on some systems.
     On others, it provides an ExternalProject build of uncrustify.";
-    license = with lib.licenses; [ asl20 "GPL-2.0-only" ];
+    license = with lib.licenses; [ asl20 gpl2Only ];
   };
 }

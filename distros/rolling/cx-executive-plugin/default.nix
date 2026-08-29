@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "CLIPS plugin to continuously refresh agendas and run CLIPS environments";
-    license = with lib.licenses; [ "GPLv2-license" ];
+    license = with lib.licenses; [ gpl2Only ];
   };
 }

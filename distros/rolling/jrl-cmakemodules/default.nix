@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, catch2, cmake, doxygen, eigen, git, matio, pkg-config, python3Packages, simde }:
 buildRosPackage {
   pname = "ros-rolling-jrl-cmakemodules";
-  version = "2.2.4-r1";
+  version = "2.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/jrl_cmakemodules-release/archive/release/rolling/jrl_cmakemodules/2.2.4-1.tar.gz";
-    name = "2.2.4-1.tar.gz";
-    sha256 = "04c3b22c0288db1c5b901267ff84ea198a34260f7a2b0397e6041d15bdfaaa84";
+    url = "https://github.com/ros2-gbp/jrl_cmakemodules-release/archive/release/rolling/jrl_cmakemodules/2.3.0-1.tar.gz";
+    name = "2.3.0-1.tar.gz";
+    sha256 = "8e018729d0ed1c1d9fedf0a910ebde4cecbbf6eae0ee39b8cc4987415178e8d8";
   };
 
   buildType = "cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "CMake utility toolbox";
-    license = with lib.licenses; [ "GPL-3.0" "LGPL-3.0" bsd3 mit asl20 ];
+    license = with lib.licenses; [ gpl3 lgpl3Only bsd3 mit asl20 ];
   };
 }

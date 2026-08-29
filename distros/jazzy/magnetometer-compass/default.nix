@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-ros, angles, builtin-interfaces, compass-conversions, compass-interfaces, cras-cpp-common, cras-lint, eigen, geometry-msgs, magnetometer-pipeline, message-filters, pluginlib, rclcpp, rclcpp-components, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-magnetometer-compass";
-  version = "3.0.2-r1";
+  version = "4.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/compass-release/archive/release/jazzy/magnetometer_compass/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "d370141dd2dbcbbd7e41406590eb4a835685e5dc4c6c81e1eb470100dabad984";
+    url = "https://github.com/ros2-gbp/compass-release/archive/release/jazzy/magnetometer_compass/4.0.1-1.tar.gz";
+    name = "4.0.1-1.tar.gz";
+    sha256 = "cfb472122d1db5aec5d1d62ac26ef9756a17b0bf788a367587820f88b0122514";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Compass based on a 3-axis magnetometer, attitude readings and possibly also GNSS.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

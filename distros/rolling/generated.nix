@@ -136,8 +136,6 @@ self: super: {
 
  ament-mypy = self.callPackage ./ament-mypy {};
 
- ament-nodl = self.callPackage ./ament-nodl {};
-
  ament-package = self.callPackage ./ament-package {};
 
  ament-pclint = self.callPackage ./ament-pclint {};
@@ -1009,6 +1007,8 @@ self: super: {
  imu-tools = self.callPackage ./imu-tools {};
 
  imu-transformer = self.callPackage ./imu-transformer {};
+
+ int2dds-ffi-vendor = self.callPackage ./int2dds-ffi-vendor {};
 
  interactive-markers = self.callPackage ./interactive-markers {};
 
@@ -2218,6 +2218,10 @@ self: super: {
 
  rmw-implementation-cmake = self.callPackage ./rmw-implementation-cmake {};
 
+ rmw-int2dds-cpp = self.callPackage ./rmw-int2dds-cpp {};
+
+ rmw-int2dds-validation = self.callPackage ./rmw-int2dds-validation {};
+
  rmw-security-common = self.callPackage ./rmw-security-common {};
 
  rmw-stats-shim = self.callPackage ./rmw-stats-shim {};
@@ -2273,6 +2277,14 @@ self: super: {
  robotraconteur = self.callPackage ./robotraconteur {};
 
  robotraconteur-companion = self.callPackage ./robotraconteur-companion {};
+
+ robstride-driver = self.callPackage ./robstride-driver {};
+
+ robstride-examples = self.callPackage ./robstride-examples {};
+
+ robstride-ros2 = self.callPackage ./robstride-ros2 {};
+
+ robstride-ros2-control = self.callPackage ./robstride-ros2-control {};
 
  ros2-control = self.callPackage ./ros2-control {};
 
@@ -2655,6 +2667,8 @@ self: super: {
  rviz-visual-testing-framework = self.callPackage ./rviz-visual-testing-framework {};
 
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
+
+ sbg-driver = self.callPackage ./sbg-driver {};
 
  sdformat-test-files = self.callPackage ./sdformat-test-files {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, asio, geometry-msgs, nlohmann_json, rcl-interfaces, rclcpp, rclcpp-components, rcpputils, rcutils, resource-retriever, ros-environment, rosgraph-msgs, rosidl-typesupport-introspection-cpp, rosx-introspection, sensor-msgs, service-msgs, std-msgs, std-srvs, test-msgs, websocketpp }:
 buildRosPackage {
   pname = "ros-lyrical-foxglove-bridge";
-  version = "3.4.3-r1";
+  version = "3.5.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/foxglove_bridge-release/archive/release/lyrical/foxglove_bridge/3.4.3-1.tar.gz";
-    name = "3.4.3-1.tar.gz";
-    sha256 = "fe38b014d1118dbaf77eaba929a24bc3333bd67f320383b3a164527f52961e1e";
+    url = "https://github.com/ros2-gbp/foxglove_bridge-release/archive/release/lyrical/foxglove_bridge/3.5.0-2.tar.gz";
+    name = "3.5.0-2.tar.gz";
+    sha256 = "efe892d9d3086bf16b5eacb5e4d70f7c3d0b45bdf1c5a675d2d730082b62539a";
   };
 
   buildType = "ament_cmake";

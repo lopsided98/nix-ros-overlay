@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "This package contains a number of URDF tutorials.";
-    license = with lib.licenses; [ "BSD-3-clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

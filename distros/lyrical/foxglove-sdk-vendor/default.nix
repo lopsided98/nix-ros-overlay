@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-lyrical-foxglove-sdk-vendor";
-  version = "0.2.0-r6";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/foxglove_sdk_vendor-release/archive/release/lyrical/foxglove_sdk_vendor/0.2.0-6.tar.gz";
-    name = "0.2.0-6.tar.gz";
-    sha256 = "48515c90fb9e66f6b9fa2701d4223a4f2f9bfc9389866c992eee215c821b6af6";
+    url = "https://github.com/ros2-gbp/foxglove_sdk_vendor-release/archive/release/lyrical/foxglove_sdk_vendor/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "ab5e574987962638391e190712132588b42dff69c5f86a5ddf9c88c83d94c142";
   };
 
   buildType = "ament_cmake";

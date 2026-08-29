@@ -23,6 +23,6 @@ buildRosPackage {
     description = "roscontrol controller package conputing a linear feedback. The user needs
     to provide a model of the robot and a list of controlled joint and the
     controller computes a linear feedback on the user defined state.";
-    license = with lib.licenses; [ "BSD-2-Clause" ];
+    license = with lib.licenses; [ bsd2 ];
   };
 }

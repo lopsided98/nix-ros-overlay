@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Interface definitions for ros2-snapd.";
-    license = with lib.licenses; [ "GPL-3.0" ];
+    license = with lib.licenses; [ gpl3 ];
   };
 }

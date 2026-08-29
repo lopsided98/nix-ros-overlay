@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, launch-ros, launch-testing, message-filters, nav-msgs, nav2-common, nav2-msgs, nav2-util, pluginlib, rclcpp, sensor-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-amcl";
-  version = "1.3.12-r1";
+  version = "1.3.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_amcl/1.3.12-1.tar.gz";
-    name = "1.3.12-1.tar.gz";
-    sha256 = "01d33155c28724ed60e6b7c05aa8d673f3036bef82158d1988efbe3785629535";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_amcl/1.3.13-1.tar.gz";
+    name = "1.3.13-1.tar.gz";
+    sha256 = "8c2ca38a2489fa6b3f7bf18153128cdc7b2c618e4828917bea0ba444224487e1";
   };
 
   buildType = "ament_cmake";
@@ -30,6 +30,6 @@ buildRosPackage {
       This node is derived, with thanks, from Andrew Howard's excellent
       'amcl' Player driver.
     </p>";
-    license = with lib.licenses; [ "LGPL-2.1-or-later" ];
+    license = with lib.licenses; [ lgpl21Plus ];
   };
 }

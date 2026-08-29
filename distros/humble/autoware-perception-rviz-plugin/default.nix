@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Contains plugins to visualize object detection outputs";
-    license = with lib.licenses; [ asl20 "CC-BY-SA-4.0" ];
+    license = with lib.licenses; [ asl20 cc-by-sa-40 ];
   };
 }

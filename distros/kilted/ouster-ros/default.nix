@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, class-loader, curl, cv-bridge, eigen, geometry-msgs, gtest, jsoncpp, launch, launch-ros, libtins, libzip, ouster-sensor-msgs, pcl, pcl-conversions, rclcpp, rclcpp-components, rclcpp-lifecycle, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, spdlog, std-msgs, std-srvs, tf2-eigen, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-ouster-ros";
-  version = "0.14.2-r1";
+  version = "0.15.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ouster-ros-release/archive/release/kilted/ouster_ros/0.14.2-1.tar.gz";
-    name = "0.14.2-1.tar.gz";
-    sha256 = "9acaf7c8d5077b464ea8a8bef1f5fd3046863a679ec44a61bbaa8d6ec7666658";
+    url = "https://github.com/ros2-gbp/ouster-ros-release/archive/release/kilted/ouster_ros/0.15.1-1.tar.gz";
+    name = "0.15.1-1.tar.gz";
+    sha256 = "3b2b5c452f342fc442de6079c5d1856cf354577e02f94d1398b9904fca1c19e8";
   };
 
   buildType = "ament_cmake";

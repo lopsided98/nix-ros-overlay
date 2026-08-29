@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "The rdl_benchmark package";
-    license = with lib.licenses; [ "Zlib" ];
+    license = with lib.licenses; [ zlib ];
   };
 }

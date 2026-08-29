@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = "Vendor package for the Boost SML (State Machine Language)";
-    license = with lib.licenses; [ mit "BSL-1.0" ];
+    license = with lib.licenses; [ mit boost ];
   };
 }

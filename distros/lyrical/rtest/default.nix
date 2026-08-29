@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-clang-tidy, ament-cmake, ament-cmake-copyright, ament-cmake-ros, ament-lint-auto, ament-lint-common, boost, gtest, rcl, rcl-action, rclcpp, rclcpp-action, ros-environment }:
 buildRosPackage {
   pname = "ros-lyrical-rtest";
-  version = "0.2.3-r1";
+  version = "0.2.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rtest-release/archive/release/lyrical/rtest/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "2873fd720120244054baa15ec1bb2296ec8a2a6e9326995f02e7711726233c3b";
+    url = "https://github.com/ros2-gbp/rtest-release/archive/release/lyrical/rtest/0.2.4-1.tar.gz";
+    name = "0.2.4-1.tar.gz";
+    sha256 = "fb492a4f367e0610cc37d78aa7b25704e8a985e67650d841a5950cd23f669de8";
   };
 
   buildType = "ament_cmake";

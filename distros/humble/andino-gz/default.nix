@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Launch Gazebo simulation with andino robot.";
-    license = with lib.licenses; [ "BSD-Clause-3" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, builtin-interfaces, geometry-msgs, python3Packages, rclpy, rosbag2, rqt-bag, rqt-gui, rqt-gui-py, rqt-plot, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rqt-bag-plugins";
-  version = "2.3.3-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_bag-release/archive/release/rolling/rqt_bag_plugins/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "18b52a7116f0e1c1994cc03e3b3dd8a84b7a0cf79381f6a812cb2fb7a81d8c71";
+    url = "https://github.com/ros2-gbp/rqt_bag-release/archive/release/rolling/rqt_bag_plugins/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "3c7fca5077a7c6d2a87014d5b24ee62002e9af78c73923227e0695378077acaf";
   };
 
   buildType = "ament_python";
@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = "rqt_bag provides a GUI plugin for displaying and replaying ROS bag files.";
-    license = with lib.licenses; [ bsdOriginal "HPND" ];
+    license = with lib.licenses; [ bsdOriginal hpnd ];
   };
 }

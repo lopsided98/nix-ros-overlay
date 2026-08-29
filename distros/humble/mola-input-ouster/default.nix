@@ -21,6 +21,6 @@ buildRosPackage {
   meta = {
     description = "MOLA input module for Ouster LiDAR sensors using the native Ouster C++ SDK.
     Provides direct sensor connection and PCAP replay without ROS middleware.";
-    license = with lib.licenses; [ "GPL-3.0" ];
+    license = with lib.licenses; [ gpl3 ];
   };
 }

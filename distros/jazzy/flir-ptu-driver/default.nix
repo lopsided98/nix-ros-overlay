@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "ROS 2 driver for FLIR pan-tilt units with serial and TCP/Ethernet support.";
-    license = with lib.licenses; [ "GPL-2.0-or-later" ];
+    license = with lib.licenses; [ gpl2Plus ];
   };
 }

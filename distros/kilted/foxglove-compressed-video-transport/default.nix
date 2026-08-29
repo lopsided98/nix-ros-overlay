@@ -22,6 +22,6 @@ buildRosPackage {
   meta = {
     description = "foxglove_compressed_video_transport provides a plugin to image_transport for
     transparently sending an image stream encoded in foxglove compressed video packets.";
-    license = with lib.licenses; [ "Apache-2" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

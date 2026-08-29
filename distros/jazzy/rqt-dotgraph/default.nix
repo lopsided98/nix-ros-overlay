@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = "rqt GUI plugin to visualize dot graphs.";
-    license = with lib.licenses; [ lgpl3Only "CC0" ];
+    license = with lib.licenses; [ lgpl3Only cc0 ];
   };
 }

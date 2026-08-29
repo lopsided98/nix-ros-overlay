@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, clang, cmake, cppcheck, gtest, include-what-you-use, lcov }:
 buildRosPackage {
   pname = "ros-jazzy-ros-industrial-cmake-boilerplate";
-  version = "0.5.4-r3";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_industrial_cmake_boilerplate-release/archive/release/jazzy/ros_industrial_cmake_boilerplate/0.5.4-3.tar.gz";
-    name = "0.5.4-3.tar.gz";
-    sha256 = "d4d856449e5a729cdb34844775b724d9940c31aac5342128961c171f3b5277b6";
+    url = "https://github.com/ros2-gbp/ros_industrial_cmake_boilerplate-release/archive/release/jazzy/ros_industrial_cmake_boilerplate/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "04fcc7925a9fd2a34205f0698161822b359af0e6563d6f61efb5f0c0d6eca021";
   };
 
   buildType = "cmake";

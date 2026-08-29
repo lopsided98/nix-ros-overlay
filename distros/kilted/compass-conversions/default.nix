@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-ros, angles, compass-interfaces, cras-cpp-common, cras-lint, geographiclib, geometry-msgs, magnetic-model, message-filters, pluginlib, rclcpp, rclcpp-components, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-compass-conversions";
-  version = "3.0.2-r1";
+  version = "4.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/compass-release/archive/release/kilted/compass_conversions/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "2571aac2b76d100134828e6f705e29b92c545760b0f0cd973ed61fd2bcf7fac9";
+    url = "https://github.com/ros2-gbp/compass-release/archive/release/kilted/compass_conversions/4.0.1-1.tar.gz";
+    name = "4.0.1-1.tar.gz";
+    sha256 = "1a3c413303202d4ec104beb70f590612c636f483e857eb5cb318b03965d6ba04";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Common conversions for compass data.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

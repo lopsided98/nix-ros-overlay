@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Driver for devices implementing CIA402 profile";
-    license = with lib.licenses; [ "LGPL-v3" ];
+    license = with lib.licenses; [ lgpl3Only ];
   };
 }

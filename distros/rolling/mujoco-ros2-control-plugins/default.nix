@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, backward-ros, geometry-msgs, glfw3, libGL, libGLU, mujoco-3d-lidar, mujoco-ros2-control-msgs, mujoco-vendor, pluginlib, rclcpp, realtime-tools, ros2-control-cmake, sensor-msgs, std-msgs, std-srvs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-mujoco-ros2-control-plugins";
-  version = "0.1.0-r2";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/rolling/mujoco_ros2_control_plugins/0.1.0-2.tar.gz";
-    name = "0.1.0-2.tar.gz";
-    sha256 = "2905ef6bcb33afbc525b81e975d767e0d88ce0c93b433affcace6cc9e2c69b83";
+    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/rolling/mujoco_ros2_control_plugins/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "247af0bb880944774afd7d2bc12cb3f2c64fde886759898e8ce8f2f4ad4def61";
   };
 
   buildType = "ament_cmake";

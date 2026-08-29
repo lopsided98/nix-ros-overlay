@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "ROS2 package wrapper for the MIT apriltag detector";
-    license = with lib.licenses; [ "LGPL-2.1-only" ];
+    license = with lib.licenses; [ lgpl21Only ];
   };
 }

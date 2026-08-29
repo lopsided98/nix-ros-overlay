@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "LZ4 compression vendor package, providing a dependency for LZ4.";
-    license = with lib.licenses; [ asl20 bsdOriginal "GPL-2.0-only" ];
+    license = with lib.licenses; [ asl20 bsdOriginal gpl2Only ];
   };
 }

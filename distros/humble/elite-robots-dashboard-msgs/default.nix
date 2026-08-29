@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-elite-robots-dashboard-msgs";
-  version = "1.0.0-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/EliteRobots/Elite_Robots_CS_ROS2_Driver-release/archive/release/humble/elite_robots_dashboard_msgs/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "0f5a2a7578a5c0c99ba82ce956e1e2c0b16dc1f6660ddddae398d50097df89db";
+    url = "https://github.com/EliteRobots/Elite_Robots_CS_ROS2_Driver-release/archive/release/humble/elite_robots_dashboard_msgs/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "64a5e8d91eb2221900230591b7617c01e9ee2581c674da90873703be842dd987";
   };
 
   buildType = "ament_cmake";

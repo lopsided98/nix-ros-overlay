@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Vendor package for the CLIPS rule based production system";
-    license = with lib.licenses; [ "MIT-0" ];
+    license = with lib.licenses; [ mit0 ];
   };
 }

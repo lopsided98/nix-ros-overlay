@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Launch files for common URDF operations";
-    license = with lib.licenses; [ "BSD-3-clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

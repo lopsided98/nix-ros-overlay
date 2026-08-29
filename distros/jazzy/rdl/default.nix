@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "The rdl meta-package";
-    license = with lib.licenses; [ "Zlib" ];
+    license = with lib.licenses; [ zlib ];
   };
 }

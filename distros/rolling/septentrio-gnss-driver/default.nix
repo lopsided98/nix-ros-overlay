@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, boost, diagnostic-msgs, geographiclib, geometry-msgs, gps-msgs, gtest-vendor, libpcap, nav-msgs, nmea-msgs, rclcpp, rclcpp-components, ros-environment, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-septentrio-gnss-driver";
-  version = "1.4.7-r2";
+  version = "1.4.8-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/septentrio_gnss_driver_ros2-release/archive/release/rolling/septentrio_gnss_driver/1.4.7-2.tar.gz";
-    name = "1.4.7-2.tar.gz";
-    sha256 = "7a3886e20870fa2c5160e468abe41048b47a2fd2ef6445331cad686d86ffd949";
+    url = "https://github.com/ros2-gbp/septentrio_gnss_driver_ros2-release/archive/release/rolling/septentrio_gnss_driver/1.4.8-3.tar.gz";
+    name = "1.4.8-3.tar.gz";
+    sha256 = "5d5ee80c2bdb5435d2eb85ec46f152aabf7b1df117e009e6b0499441cfb5a51e";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "ROSaic: C++ driver for Septentrio's GNSS and INS receivers";
-    license = with lib.licenses; [ "BSD-3-Clause-License" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

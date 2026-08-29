@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "GStreamer elements for bidirectional ROS 2 image streaming";
-    license = with lib.licenses; [ "AGPL-3.0-only" ];
+    license = with lib.licenses; [ agpl3Only ];
   };
 }

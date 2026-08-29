@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = "Visualization plugin for several sensors.";
-    license = with lib.licenses; [ "BSD-Clause-3" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

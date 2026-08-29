@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Vendor package for zmqpp";
-    license = with lib.licenses; [ asl20 "Mozilla-Public-License-2.0" ];
+    license = with lib.licenses; [ asl20 mpl20 ];
   };
 }

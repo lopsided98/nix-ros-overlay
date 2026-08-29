@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Interfaces for 2.5D kinematics";
-    license = with lib.licenses; [ "BSD-3-clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

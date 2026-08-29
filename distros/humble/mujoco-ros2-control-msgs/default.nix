@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-mujoco-ros2-control-msgs";
-  version = "0.1.0-r2";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/humble/mujoco_ros2_control_msgs/0.1.0-2.tar.gz";
-    name = "0.1.0-2.tar.gz";
-    sha256 = "69d3305764182bee1fc38b8a2a953ee5b746a7788e34c07979d6722a5c0fa35a";
+    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/humble/mujoco_ros2_control_msgs/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "e9530c2377c029681cc2136f47b33849c951403947b6f7dbccde465f1904ea15";
   };
 
   buildType = "ament_cmake";

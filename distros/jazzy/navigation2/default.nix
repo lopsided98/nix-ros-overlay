@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-amcl, nav2-behavior-tree, nav2-behaviors, nav2-bt-navigator, nav2-collision-monitor, nav2-constrained-smoother, nav2-controller, nav2-core, nav2-costmap-2d, nav2-dwb-controller, nav2-graceful-controller, nav2-lifecycle-manager, nav2-map-server, nav2-mppi-controller, nav2-msgs, nav2-navfn-planner, nav2-planner, nav2-regulated-pure-pursuit-controller, nav2-rotation-shim-controller, nav2-route, nav2-rviz-plugins, nav2-simple-commander, nav2-smac-planner, nav2-smoother, nav2-theta-star-planner, nav2-util, nav2-velocity-smoother, nav2-voxel-grid, nav2-waypoint-follower, opennav-docking, opennav-docking-bt, opennav-docking-core }:
 buildRosPackage {
   pname = "ros-jazzy-navigation2";
-  version = "1.3.12-r1";
+  version = "1.3.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/navigation2/1.3.12-1.tar.gz";
-    name = "1.3.12-1.tar.gz";
-    sha256 = "de59061a9e32ab199d52728efc6576887ec015087110c435c4fce33fd8e9e334";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/navigation2/1.3.13-1.tar.gz";
+    name = "1.3.13-1.tar.gz";
+    sha256 = "16f72dbf107041ccf4ba3cc0e62f6af3d944256083b11207d3cefe2fd635f2cc";
   };
 
   buildType = "ament_cmake";

@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "ROS2 vendor package for stbrumme/hash-library";
-    license = with lib.licenses; [ asl20 "Zlib-License" ];
+    license = with lib.licenses; [ asl20 zlib ];
   };
 }

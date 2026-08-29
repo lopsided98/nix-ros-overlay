@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-index-cpp, geometry-msgs, interactive-markers, python3, python3Packages, rclcpp, rclpy, roboplan, roboplan-ros-cpp, roboplan-simple-ik, rviz2, sensor-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-roboplan-ros-visualization";
-  version = "0.6.0-r1";
+  version = "0.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan_ros-release/archive/release/lyrical/roboplan_ros_visualization/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "f0ee96adf836ab38a04f142b73dd23da76d087901e0c852ea95924cdb36ef378";
+    url = "https://github.com/ros2-gbp/roboplan_ros-release/archive/release/lyrical/roboplan_ros_visualization/0.6.1-1.tar.gz";
+    name = "0.6.1-1.tar.gz";
+    sha256 = "fefaec10f84f4238a387108b06c032a8673f3ab05699195954786cc6f3dd2d07";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-python python3 python3Packages.nanobind ];
+  buildInputs = [ ament-cmake ament-cmake-python python3 python3Packages.nanobind python3Packages.typing-extensions ];
   propagatedBuildInputs = [ ament-index-cpp geometry-msgs interactive-markers rclcpp rclpy roboplan roboplan-ros-cpp roboplan-simple-ik rviz2 sensor-msgs visualization-msgs ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 

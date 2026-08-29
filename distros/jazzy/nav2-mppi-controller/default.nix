@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, gbenchmark, geometry-msgs, llvmPackages, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-util, pluginlib, rclcpp, std-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, visualization-msgs, xsimd, xtensor }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-mppi-controller";
-  version = "1.3.12-r1";
+  version = "1.3.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_mppi_controller/1.3.12-1.tar.gz";
-    name = "1.3.12-1.tar.gz";
-    sha256 = "1ac4e5efb726f564d3173ff43407e7f1334c7f366cc67d7b341100c3661c146b";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_mppi_controller/1.3.13-1.tar.gz";
+    name = "1.3.13-1.tar.gz";
+    sha256 = "f6c4976203d928a418214137f625884b21347af9fc285fafc332b8fa4356fc9c";
   };
 
   buildType = "ament_cmake";

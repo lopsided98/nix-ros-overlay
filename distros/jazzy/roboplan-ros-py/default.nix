@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, builtin-interfaces, python3Packages, rclpy, roboplan, roboplan-ros-cpp, sensor-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-roboplan-ros-py";
-  version = "0.6.0-r1";
+  version = "0.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan_ros-release/archive/release/jazzy/roboplan_ros_py/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "df27446125635b07b9183ec769e47f039b5b5c460251f6b7806581a876fe70b6";
+    url = "https://github.com/ros2-gbp/roboplan_ros-release/archive/release/jazzy/roboplan_ros_py/0.6.1-1.tar.gz";
+    name = "0.6.1-1.tar.gz";
+    sha256 = "7bff57aa4ec92ea87d6be2edde4d8a6bc94f4efd3c6211e03b718a857e41f858";
   };
 
   buildType = "ament_python";

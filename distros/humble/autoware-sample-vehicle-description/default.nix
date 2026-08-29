@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "The autoware_sample_vehicle_description package";
-    license = with lib.licenses; [ "Apache-2.0-License" ];
+    license = with lib.licenses; [ apl20 ];
   };
 }

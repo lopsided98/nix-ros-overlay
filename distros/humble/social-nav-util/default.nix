@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = "Utilities for social navigation work";
-    license = with lib.licenses; [ "BSD-3-clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

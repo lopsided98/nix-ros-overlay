@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, pkg-config }:
 buildRosPackage {
   pname = "ros-rolling-gz-cmake-vendor";
-  version = "0.5.1-r1";
+  version = "0.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_cmake_vendor-release/archive/release/rolling/gz_cmake_vendor/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "24667ba5133d40a681e548fbb0a76e6161696c390ffa1cc6d1a50000df542008";
+    url = "https://github.com/ros2-gbp/gz_cmake_vendor-release/archive/release/rolling/gz_cmake_vendor/0.5.2-1.tar.gz";
+    name = "0.5.2-1.tar.gz";
+    sha256 = "669c5feda6764f08a12f1b378615ee62ea100aac889788cca256c5f4803c273e";
   };
 
   buildType = "ament_cmake";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cmake-vendor-package cmake pkg-config ];
 
   meta = {
-    description = "Vendor package for: gz-cmake 5.1.1
+    description = "Vendor package for: gz-cmake 6.0.0
 
     Gazebo CMake : CMake Modules for Gazebo Projects";
     license = with lib.licenses; [ asl20 ];

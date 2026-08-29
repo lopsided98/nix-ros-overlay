@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, mujoco-vendor }:
 buildRosPackage {
   pname = "ros-humble-mujoco-3d-lidar";
-  version = "0.1.0-r2";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/humble/mujoco_3d_lidar/0.1.0-2.tar.gz";
-    name = "0.1.0-2.tar.gz";
-    sha256 = "71a336abc4e7b5d8190597dee512bdbf456eb92e29ec0a6b09ffff547f08e315";
+    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/humble/mujoco_3d_lidar/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "4715dda46da22d81e744fdbcfbc2b1a4b9e2c8b0fdbe621cfe32e00f1849fa83";
   };
 
   buildType = "ament_cmake";

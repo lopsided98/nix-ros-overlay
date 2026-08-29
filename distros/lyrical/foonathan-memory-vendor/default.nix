@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Foonathan/memory vendor package for Fast DDS.";
-    license = with lib.licenses; [ asl20 "Zlib" ];
+    license = with lib.licenses; [ asl20 zlib ];
   };
 }

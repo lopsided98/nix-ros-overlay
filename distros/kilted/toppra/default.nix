@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-python, eigen, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-toppra";
-  version = "0.6.9-r1";
+  version = "0.6.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/toppra-release/archive/release/kilted/toppra/0.6.9-1.tar.gz";
-    name = "0.6.9-1.tar.gz";
-    sha256 = "44e09cd1bb9300b3b1f91f7cb0c20b2ac177cc3ee8e5fefcfb4ba23f5d7a945c";
+    url = "https://github.com/ros2-gbp/toppra-release/archive/release/kilted/toppra/0.6.10-1.tar.gz";
+    name = "0.6.10-1.tar.gz";
+    sha256 = "cc4da91e3e808aab731de5d463be95a682dfb4134fe682d620519b66810152cb";
   };
 
   buildType = "catkin";

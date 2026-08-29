@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "ROSaic: C++ driver for Septentrio's GNSS and INS receivers";
-    license = with lib.licenses; [ "BSD-3-Clause-License" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

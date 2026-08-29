@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-pytest, ament-cmake-python, eigen, gtest, pinocchio, python3, python3Packages, roboplan-example-models, tinyxml2-vendor, tl-expected-nixpkgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-kilted-roboplan";
-  version = "0.6.0-r1";
+  version = "0.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/kilted/roboplan/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "ce5154ca6b8a796559744a95bc983d1260634460e92870e4a46c94b9789befc0";
+    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/kilted/roboplan/0.6.1-1.tar.gz";
+    name = "0.6.1-1.tar.gz";
+    sha256 = "1791babb6297a27b67f36539108089985a42f290682ecffd7b44d90a9c4d1a6a";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-python python3 python3Packages.nanobind ];
+  buildInputs = [ ament-cmake ament-cmake-python python3 python3Packages.nanobind python3Packages.typing-extensions ];
   checkInputs = [ ament-cmake-gmock ament-cmake-pytest gtest roboplan-example-models ];
   propagatedBuildInputs = [ eigen pinocchio tinyxml2-vendor tl-expected-nixpkgs yaml-cpp-vendor ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];

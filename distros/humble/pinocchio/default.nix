@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "A fast and flexible implementation of Rigid Body Dynamics algorithms and their analytical derivatives.";
-    license = with lib.licenses; [ "BSD-2-Clause" ];
+    license = with lib.licenses; [ bsd2 ];
   };
 }

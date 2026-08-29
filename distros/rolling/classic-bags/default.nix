@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "A ROS 2 interface in the style of ROS 1 for reading and writing bag files";
-    license = with lib.licenses; [ "BSD-3-clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -22,6 +22,6 @@ buildRosPackage {
   meta = {
     description = "ffmpeg_image_transport provides a plugin to image_transport for
     transparently sending an image stream encoded with ffmpeg.";
-    license = with lib.licenses; [ "Apache-2" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

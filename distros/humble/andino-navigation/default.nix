@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Bring up nav2 package with Andino.";
-    license = with lib.licenses; [ "BSD-Clause-3" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

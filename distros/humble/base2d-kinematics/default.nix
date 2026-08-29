@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Implementation of simple kinematics in two and half dimensions";
-    license = with lib.licenses; [ "BSD-3-clause" ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

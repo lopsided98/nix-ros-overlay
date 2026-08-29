@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-python, control-msgs, rclpy, roboplan, sensor-msgs, std-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-roboplan-ros-examples";
-  version = "0.6.0-r1";
+  version = "0.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan_ros-release/archive/release/jazzy/roboplan_ros_examples/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "c4c442306e18f6e9f7d04fac64e2e475f46b7935dc119d5ee8863fa9bd38498a";
+    url = "https://github.com/ros2-gbp/roboplan_ros-release/archive/release/jazzy/roboplan_ros_examples/0.6.1-1.tar.gz";
+    name = "0.6.1-1.tar.gz";
+    sha256 = "ed167bd0c359996a80b7aba1c2c6b4fb2d944d618b4dbbd21c9de06166e820d7";
   };
 
   buildType = "ament_cmake";

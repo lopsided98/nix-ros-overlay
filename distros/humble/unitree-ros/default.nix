@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Unitree ros package";
-    license = with lib.licenses; [ "GPL-3.0" ];
+    license = with lib.licenses; [ gpl3 ];
   };
 }
