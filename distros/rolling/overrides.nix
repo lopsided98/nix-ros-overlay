@@ -236,6 +236,29 @@ in {
     ];
   });
 
+  int2dds-ffi-vendor = let
+    version = "0.1.1";
+  in
+    (lib.patchVendorUrl rosSuper.int2dds-ffi-vendor {
+      originalUrl = "\${INT2DDS_FFI_BASE_URL}/\${_asset}";
+      url = "https://github.com/IntellectusCorp/int2dds_ffi_vendor/releases/download/v${version}/int2dds-ffi-${version}-linux.tar.gz";
+      hash = "sha256-sM6qG0+BEPCbcLpT3KOlfwsLUXbKXtB3LxUD6j9/B6o=";
+    }).overrideAttrs ({
+      postPatch ? "", ...
+    }: {
+      postPatch = postPatch + ''
+        # Fail if the version in CMakeLists.txt doesn't match the one in the URL above.
+        # See https://github.com/IntellectusCorp/rmw_int2dds/blob/humble/int2dds_ffi_vendor/CMakeLists.txt
+        substituteInPlace CMakeLists.txt --replace-fail \
+          'set(INT2DDS_FFI_VERSION "${version}")' \
+          'set(INT2DDS_FFI_VERSION "${version}")'
+
+        substituteInPlace CMakeLists.txt --replace-fail \
+          'file(DOWNLOAD "''${_url}"' \
+          'file(DOWNLOAD "file://''${_url}"'
+      '';
+    });
+
   lanelet2-core = rosSuper.lanelet2-core.overrideAttrs ({
     patches ? [], ...
   }: {
