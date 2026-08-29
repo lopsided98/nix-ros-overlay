@@ -242,30 +242,6 @@ in {
     ];
   });
 
-  fuse-core = rosSuper.fuse-core.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    # https://github.com/locusrobotics/fuse/pull/424
-    postPatch = postPatch + ''
-      substituteInPlace \
-        include/fuse_core/graph.hpp \
-        include/fuse_core/message_buffer.hpp \
-        include/fuse_core/transaction.hpp \
-        include/fuse_core/timestamp_manager.hpp \
-          --replace-fail \
-            "#include <boost/range/any_range.hpp>" \
-            "#include <boost/type_traits/add_const.hpp>
-             #include <boost/range/any_range.hpp>"
-    '';
-  });
-
-  fusioncore-ros = rosSuper.fusioncore-ros.overrideAttrs ({
-    buildInputs ? [], ...
-  }: {
-    # Nixpkgs contains newer proj than Ubuntu and it requires sqlite
-    buildInputs = buildInputs ++ [ self.sqlite ];
-  });
-
   foxglove-bridge = rosSuper.foxglove-bridge.overrideAttrs({
     postPatch ? "", ...
   }: {
@@ -299,6 +275,30 @@ in {
           'https://github.com/foxglove/foxglove-sdk/releases/download/sdk%2Fv''${FOXGLOVE_SDK_VERSION}/foxglove-v''${FOXGLOVE_SDK_VERSION}-cpp-''${FOXGLOVE_SDK_PLATFORM}.zip' \
           ${sdk}
       '';
+  });
+
+  fuse-core = rosSuper.fuse-core.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/locusrobotics/fuse/pull/424
+    postPatch = postPatch + ''
+      substituteInPlace \
+        include/fuse_core/graph.hpp \
+        include/fuse_core/message_buffer.hpp \
+        include/fuse_core/transaction.hpp \
+        include/fuse_core/timestamp_manager.hpp \
+          --replace-fail \
+            "#include <boost/range/any_range.hpp>" \
+            "#include <boost/type_traits/add_const.hpp>
+             #include <boost/range/any_range.hpp>"
+    '';
+  });
+
+  fusioncore-ros = rosSuper.fusioncore-ros.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    # Nixpkgs contains newer proj than Ubuntu and it requires sqlite
+    buildInputs = buildInputs ++ [ self.sqlite ];
   });
 
   google-benchmark-vendor = lib.patchExternalProjectGit rosSuper.google-benchmark-vendor {
@@ -1061,23 +1061,6 @@ in {
     '';
   });
 
-  rosidlcpp-generator-core = rosSuper.rosidlcpp-generator-core.override { fmt = self.fmt_9; };
-  rosidlcpp-generator-cpp = rosSuper.rosidlcpp-generator-cpp.override { fmt = self.fmt_9; };
-  rosidlcpp-generator-py = rosSuper.rosidlcpp-generator-py.override { fmt = self.fmt_9; };
-  rosidlcpp-generator-type-description = rosSuper.rosidlcpp-generator-type-description.override { fmt = self.fmt_9; };
-  rosidlcpp-typesupport-fastrtps-c = rosSuper.rosidlcpp-typesupport-fastrtps-c.override { fmt = self.fmt_9; };
-  rosidlcpp-typesupport-fastrtps-cpp = rosSuper.rosidlcpp-typesupport-fastrtps-cpp.override { fmt = self.fmt_9; };
-
-  rot-conv = rosSuper.rot-conv.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail \
-        "cmake_minimum_required(VERSION 3.3)" \
-        "cmake_minimum_required(VERSION 3.10)"\
-    '';
-  });
-
   rmf-task = rosSuper.rmf-task.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -1102,6 +1085,25 @@ in {
         stripLen = 1;
       })
     ];
+  });
+
+  rosidlcpp-generator-core = rosSuper.rosidlcpp-generator-core.override { fmt = self.fmt_9; };
+  rosidlcpp-generator-cpp = rosSuper.rosidlcpp-generator-cpp.override { fmt = self.fmt_9; };
+  rosidlcpp-generator-py = rosSuper.rosidlcpp-generator-py.override { fmt = self.fmt_9; };
+  rosidlcpp-generator-type-description = rosSuper.rosidlcpp-generator-type-description.override { fmt = self.fmt_9; };
+
+  rosidlcpp-typesupport-fastrtps-c = rosSuper.rosidlcpp-typesupport-fastrtps-c.override { fmt = self.fmt_9; };
+
+  rosidlcpp-typesupport-fastrtps-cpp = rosSuper.rosidlcpp-typesupport-fastrtps-cpp.override { fmt = self.fmt_9; };
+
+  rot-conv = rosSuper.rot-conv.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.3)" \
+        "cmake_minimum_required(VERSION 3.10)"\
+    '';
   });
 
   rtabmap = rosSuper.rtabmap.overrideAttrs ({
@@ -1143,13 +1145,23 @@ in {
     '';
   });
 
+  sdformat-vendor = lib.patchGzAmentVendorGit rosSuper.sdformat-vendor { };
+
   # See also overrides in ros2-overlay.nix.
   shared-queues-vendor = lib.patchVendorUrl rosSuper.shared-queues-vendor {
     url = "https://github.com/cameron314/readerwriterqueue/archive/ef7dfbf553288064347d51b8ac335f1ca489032a.zip";
     sha256 = "sha256-TyFt3d78GidhDGD17KgjAaZl/qvAcGJP8lmu4EOxpYg=";
   };
 
-  sdformat-vendor = lib.patchGzAmentVendorGit rosSuper.sdformat-vendor { };
+  sick-safevisionary-base = rosSuper.sick-safevisionary-base.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.0.2)" \
+        "cmake_minimum_required(VERSION 3.10)"\
+    '';
+  });
 
   sick-scan-xd = rosSuper.sick-scan-xd.overrideAttrs ({
     patches ? [], ...
@@ -1161,16 +1173,6 @@ in {
         hash = "sha256-UJQZO0cStf7b3890BBrpHBxzgWnJXPOxmW6SKsuAsWw=";
       })
     ];
-  });
-
-  sick-safevisionary-base = rosSuper.sick-safevisionary-base.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail \
-        "cmake_minimum_required(VERSION 3.0.2)" \
-        "cmake_minimum_required(VERSION 3.10)"\
-    '';
   });
 
   slam-toolbox = rosSuper.slam-toolbox.overrideAttrs ({

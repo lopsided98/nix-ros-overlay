@@ -155,11 +155,13 @@ let
       buildInputs = builtins.filter (p: p.pname != "future") buildInputs;
     });
 
-    mujoco-vendor = rosSuper.mujoco-vendor.overrideAttrs ({
-      cmakeFlags ? [], propagatedBuildInputs ? [], patches ? [], ...
+    mrt-cmake-modules = rosSuper.mrt-cmake-modules.overrideAttrs ({
+      postPatch ? "", ...
     }: {
-      cmakeFlags = cmakeFlags ++ [ "-DAMENT_VENDOR_POLICY=NEVER_VENDOR" ];
-      propagatedBuildInputs = propagatedBuildInputs ++ [ self.mujoco ];
+      postPatch = postPatch + ''
+        substituteInPlace CMakeLists.txt \
+          --replace-fail 'cmake_minimum_required(VERSION 3.0.2)' 'cmake_minimum_required(VERSION 3.5)'
+      '';
     });
 
     mujoco-ros2-control = (patchExternalProjectGit rosSuper.mujoco-ros2-control {
@@ -177,13 +179,11 @@ let
       '';
     });
 
-    mrt-cmake-modules = rosSuper.mrt-cmake-modules.overrideAttrs ({
-      postPatch ? "", ...
+    mujoco-vendor = rosSuper.mujoco-vendor.overrideAttrs ({
+      cmakeFlags ? [], propagatedBuildInputs ? [], patches ? [], ...
     }: {
-      postPatch = postPatch + ''
-        substituteInPlace CMakeLists.txt \
-          --replace-fail 'cmake_minimum_required(VERSION 3.0.2)' 'cmake_minimum_required(VERSION 3.5)'
-      '';
+      cmakeFlags = cmakeFlags ++ [ "-DAMENT_VENDOR_POLICY=NEVER_VENDOR" ];
+      propagatedBuildInputs = propagatedBuildInputs ++ [ self.mujoco ];
     });
 
     onnxruntime-vendor = rosSuper.onnxruntime-vendor.overrideAttrs ({

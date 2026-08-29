@@ -227,14 +227,13 @@ in {
     ];
   });
 
-  io-context = rosSuper.io-context.overrideAttrs ({
+  iceoryx-hoofs = rosSuper.iceoryx-hoofs.overrideAttrs ({
     patches ? [], ...
   }: {
     patches = patches ++ [
-      # fix for asio 1.36: https://github.com/ros-drivers/transport_drivers/pull/113
       (self.fetchpatch2 {
-        url = "https://github.com/nim65s/transport_drivers/commit/7be52848f624c82ea720416360d7a754fff65c33.patch?full_index=1";
-        hash = "sha256-IYQTlSnJjUvnOp0RbN+1P7C/RclAjouyzmBT9LJpyN4=";
+        url = "https://github.com/eclipse-iceoryx/iceoryx/commit/acc1e979a2d5ca30737efb077b00b42f1c4a8429.patch?full_index=1";
+        hash = "sha256-M2ItntTMGqH6YkUNMEF0opJobyqgbZq62vBkyWxxol0=";
         stripLen = 1;
       })
     ];
@@ -263,13 +262,14 @@ in {
       '';
     });
 
-  iceoryx-hoofs = rosSuper.iceoryx-hoofs.overrideAttrs ({
+  io-context = rosSuper.io-context.overrideAttrs ({
     patches ? [], ...
   }: {
     patches = patches ++ [
+      # fix for asio 1.36: https://github.com/ros-drivers/transport_drivers/pull/113
       (self.fetchpatch2 {
-        url = "https://github.com/eclipse-iceoryx/iceoryx/commit/acc1e979a2d5ca30737efb077b00b42f1c4a8429.patch?full_index=1";
-        hash = "sha256-M2ItntTMGqH6YkUNMEF0opJobyqgbZq62vBkyWxxol0=";
+        url = "https://github.com/nim65s/transport_drivers/commit/7be52848f624c82ea720416360d7a754fff65c33.patch?full_index=1";
+        hash = "sha256-IYQTlSnJjUvnOp0RbN+1P7C/RclAjouyzmBT9LJpyN4=";
         stripLen = 1;
       })
     ];
@@ -602,19 +602,6 @@ in {
     propagatedNativeBuildInputs = [ self.qt6.wrapQtAppsHook ];
   };
 
-  rcutils = rosSuper.rcutils.overrideAttrs ({
-    postPatch ? "", ...
-  }: lib.optionalAttrs self.stdenv.hostPlatform.isDarwin {
-    # Apple Clang rejects brace-init of an _Atomic scalar ("illegal
-    # initializer type 'atomic_int_least64_t'").
-    # https://github.com/ros2/rcutils/pull/586
-    postPatch = postPatch + ''
-      substituteInPlace src/testing/fault_injection.c --replace-fail \
-        'atomic_int_least64_t g_rcutils_fault_injection_count = {-1};' \
-        'atomic_int_least64_t g_rcutils_fault_injection_count = -1;'
-    '';
-  });
-
   rcl-yaml-param-parser = rosSuper.rcl-yaml-param-parser.overrideAttrs ({
     patches ? [], postPatch ? "", ...
   }: {
@@ -649,6 +636,19 @@ in {
       substituteInPlace src/component_container.cpp --replace-fail \
         'RCUTILS_LOG_DEBUG_NAMED("component_container", debug_msg.c_str());' \
         'RCUTILS_LOG_DEBUG_NAMED("component_container", "%s", debug_msg.c_str());'
+    '';
+  });
+
+  rcutils = rosSuper.rcutils.overrideAttrs ({
+    postPatch ? "", ...
+  }: lib.optionalAttrs self.stdenv.hostPlatform.isDarwin {
+    # Apple Clang rejects brace-init of an _Atomic scalar ("illegal
+    # initializer type 'atomic_int_least64_t'").
+    # https://github.com/ros2/rcutils/pull/586
+    postPatch = postPatch + ''
+      substituteInPlace src/testing/fault_injection.c --replace-fail \
+        'atomic_int_least64_t g_rcutils_fault_injection_count = {-1};' \
+        'atomic_int_least64_t g_rcutils_fault_injection_count = -1;'
     '';
   });
 
@@ -740,6 +740,18 @@ in {
     hash = "sha256-TyFt3d78GidhDGD17KgjAaZl/qvAcGJP8lmu4EOxpYg=";
   };
 
+  sick-safevisionary-base = rosSuper.sick-safevisionary-base.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        "cmake_minimum_required(VERSION 3.0.2)" \
+        "cmake_minimum_required(VERSION 3.10)"\
+    '';
+  });
+
+  slam-toolbox = rosSuper.slam-toolbox.override { qt5 = self.qt6; };
+
   # Ensure that tinyxml-2 has the same major version as in
   # behaviortree-cpp, which vendors it. Other packages like
   # nav2-behavior-tree include tintinyxml-2 propagated via their
@@ -765,18 +777,6 @@ in {
       test "$v1" = "$v2" || { echo "tinyxml-2 version mismatch"; exit 1; }
     '';
   });
-
-  sick-safevisionary-base = rosSuper.sick-safevisionary-base.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail \
-        "cmake_minimum_required(VERSION 3.0.2)" \
-        "cmake_minimum_required(VERSION 3.10)"\
-    '';
-  });
-
-  slam-toolbox = rosSuper.slam-toolbox.override { qt5 = self.qt6; };
 
   turtlesim = rosSuper.turtlesim.overrideAttrs ({
     nativeBuildInputs ? [], ...

@@ -14,13 +14,6 @@ let
 in
 with rosSelf.lib; {
 
-  ardrone-sdk = rosSuper.ardrone-sdk.overrideAttrs ({
-    nativeBuildInputs ? [], ...
-  }: {
-    # https://github.com/vtalpaert/ardrone-ros2/pull/2
-    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
-  });
-
   ament-cmake-core = rosSuper.ament-cmake-core.overrideAttrs ({
     propagatedBuildInputs ? [],
     nativeBuildInputs ? [], ...
@@ -59,6 +52,13 @@ with rosSelf.lib; {
       substituteInPlace CMakeLists.txt \
         --replace-fail 'CONFIG_EXTRAS' 'CONFIG_EXTRAS "ament_vendor_wrapper.cmake"'
     '';
+  });
+
+  ardrone-sdk = rosSuper.ardrone-sdk.overrideAttrs ({
+    nativeBuildInputs ? [], ...
+  }: {
+    # https://github.com/vtalpaert/ardrone-ros2/pull/2
+    nativeBuildInputs = nativeBuildInputs ++ [ self.pkg-config ];
   });
 
   # elfutils is Linux-only, and BackwardConfigAment.cmake already degrades to
@@ -289,6 +289,13 @@ with rosSelf.lib; {
     outputs = [ "out" "dev" ];
   });
 
+  # libcap is Linux-only, and realtime_tools already links it under
+  # `if(UNIX AND NOT APPLE)` and includes <sys/capability.h> under
+  # `#if defined(__unix__)`. Only the Nix dependency needs dropping.
+  realtime-tools = rosSuper.realtime-tools.override (optionalAttrs self.stdenv.hostPlatform.isDarwin {
+    libcap = null;
+  });
+
   rig-reconfigure = patchExternalProjectGit rosSuper.rig-reconfigure {
     url = "https://github.com/ocornut/imgui.git";
     rev = "v1.89.8-docking";
@@ -310,13 +317,6 @@ with rosSelf.lib; {
       buildInputs;
   });
 
-  # libcap is Linux-only, and realtime_tools already links it under
-  # `if(UNIX AND NOT APPLE)` and includes <sys/capability.h> under
-  # `#if defined(__unix__)`. Only the Nix dependency needs dropping.
-  realtime-tools = rosSuper.realtime-tools.override (optionalAttrs self.stdenv.hostPlatform.isDarwin {
-    libcap = null;
-  });
-
   ros-gz-sim = rosSuper.ros-gz-sim.overrideAttrs ({
     postPatch ? "", ...
   }: {
@@ -329,16 +329,16 @@ with rosSelf.lib; {
     '';
   });
 
-  rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({ ... }: {
-    setupHook = ./rosidl-generator-py-setup-hook.sh;
-  });
-
   rosidl-default-generators = rosSuper.rosidl-default-generators.overrideAttrs ({
     propagatedBuildInputs ? [], ...
   }: {
     # Add Rust support to all packages
     # FIXME: seems to break nav2-msgs
     # propagatedBuildInputs = propagatedBuildInputs ++ [ rosSelf.rosidl-generator-rs ];
+  });
+
+  rosidl-generator-py = rosSuper.rosidl-generator-py.overrideAttrs ({ ... }: {
+    setupHook = ./rosidl-generator-py-setup-hook.sh;
   });
 
   rosidl-generator-rs = rosSuper.rosidl-generator-rs or (rosSelf.callPackage ../pkgs/rosidl-generator-rs { });
