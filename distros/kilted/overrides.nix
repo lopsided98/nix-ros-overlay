@@ -176,9 +176,9 @@ in {
   gz-common-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-common-vendor {
     patchesFor.gz_common_vendor = [
       (self.fetchpatch2 {
-        # Replace FreeImage dependency with stb (#725 updated for Kilted)
-        url = "https://github.com/gazebosim/gz-common/commit/7a6bb5bf196c2e3f515fda5c3982190641be36c9.patch?full_index=1";
-        hash = "sha256-NMsj9WuOx4JxkF1Noy52s4X41nwqiVXlhWBAE2X/liw=";
+        # Replace FreeImage dependency with stb (#725 updated for Kilted 2026-08-29)
+        url = "https://github.com/gazebosim/gz-common/commit/58a2ebe805a97288254a9d0a0423d7df70ee8042.patch?full_index=1";
+        hash = "sha256-vUVdzMJBdAxskDDHNkOLwGzw9axng6JridSxN7MiWCo=";
         excludes = ["tutorials/install.md"];
       })
     ];
