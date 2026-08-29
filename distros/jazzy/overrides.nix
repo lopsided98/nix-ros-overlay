@@ -274,7 +274,7 @@ in {
       # https://github.com/foxglove/foxglove-sdk/blob/main/ros/src/foxglove_bridge/CMakeLists.txt.
       # If the version doesn't match, cmake fails with "Hash mismatch"
       # and we can fix it here.
-      FOXGLOVE_SDK_VERSION = "0.26.0";
+      FOXGLOVE_SDK_VERSION = "0.27.0";
       systemToPlatform = {
         "x86_64-linux" = "x86_64-unknown-linux-gnu";
         "aarch64-linux" = "aarch64-unknown-linux-gnu";
@@ -282,10 +282,10 @@ in {
         "aarch64-darwin" = "aarch64-apple-darwin";
       };
       systemToHash = {
-        "x86_64-linux" = "sha256-j7A7BhEneIrXCJGNGG101P21hxixHP+XydYFUTq1fMY=";
-        "aarch64-linux" = "sha256-BxDy7Fq8OVSs9iA7k6lnaNzNGddCr5t4/Nj7u6X2Ilo=";
-        "x86_64-darwin" = "sha256-TlkrT+RHufq5EnBvhjp1gzz2vtxcF9PqR01FMe7HIq4=";
-        "aarch64-darwin" = "sha256-quLM/rzOS2/3LjZpEqktZXb2EA55zfcdeeQoiXet0PA=";
+        "x86_64-linux" = "sha256-R5Da0mraztGl+BUw7UBrq3tgqiAqho63jPwEl2uc5tc=";
+        "aarch64-linux" = "sha256-2RnW5jWN4axezKJo/+udS+OIbUgggxs3gFPi7V2DRaI=";
+        "x86_64-darwin" = "sha256-xgksYVUj1GKp03eTE7jAM8+SPOMKQ9xTBdSP5PbSaYg=";
+        "aarch64-darwin" = "sha256-cMblnPdXrASAkSwTyyxjCjg53jTrpCjvcXQR2uaxaI4=";
       };
       FOXGLOVE_SDK_PLATFORM = systemToPlatform.${self.stdenv.hostPlatform.system};
       sdk = self.fetchurl {
