@@ -1,7 +1,7 @@
 {
   "gz_msgs_vendor": {
     "url": "https://github.com/gazebosim/gz-msgs.git",
-    "rev": "gz-msgs12_12.0.2",
-    "hash": "sha256-yKuD08jZtQmtCWO/TvLngqhRVAbu4bZC9B4e9KxKr4M="
+    "rev": "gz-msgs13_13.0.0-pre1",
+    "hash": "sha256-L3zEWYOKxCvryRSNss1cfYQ1iJEiRPU5DawzEvVxWxs="
   }
 }
