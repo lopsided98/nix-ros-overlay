@@ -137,11 +137,21 @@ in {
     dontFixCmake = true;
   }));
 
-  gz-physics-vendor = lib.patchAmentVendorGit rosSuper.gz-physics-vendor {
-    patchesFor.gz_physics_vendor = [
-
-    ];
-  };
+  gz-physics-vendor = (lib.patchAmentVendorGit rosSuper.gz-physics-vendor { }).overrideAttrs({
+    postPatch ? "", ...
+  }: {
+    # Temporary workaround until we can inject system mujoco.
+    # gz-physics/CMakeLists.txt contains:
+    #   # TODO(azeey) Remove this and depend on a system package before release
+    #   if(NOT SKIP_mujoco)
+    #     add_subdirectory(third_party/mujoco_vendor)
+    #   endif()
+    postPatch = postPatch + ''
+      substituteInPlace CMakeLists.txt --replace-fail \
+        'GLOBAL_HOOK' \
+        'GLOBAL_HOOK CMAKE_ARGS -DSKIP_mujoco=ON'
+    '';
+  });
 
   gz-plugin-vendor = lib.patchAmentVendorGit rosSuper.gz-plugin-vendor { };
 
