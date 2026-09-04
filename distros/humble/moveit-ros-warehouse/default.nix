@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, moveit-common, moveit-core, moveit-ros-planning, rclcpp, tf2-eigen, tf2-ros, warehouse-ros }:
 buildRosPackage {
   pname = "ros-humble-moveit-ros-warehouse";
-  version = "2.5.9-r1";
+  version = "2.5.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_ros_warehouse/2.5.9-1.tar.gz";
-    name = "2.5.9-1.tar.gz";
-    sha256 = "b1867b6eb6fecc4af06dc015b66d9f394ec125177cda7627b6f29e1c18ccfd9f";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_ros_warehouse/2.5.10-1.tar.gz";
+    name = "2.5.10-1.tar.gz";
+    sha256 = "87db608cf9581b5cb2bcaebc5f31786642b6603780c9debc50d417fd57ff5250";
   };
 
   buildType = "ament_cmake";

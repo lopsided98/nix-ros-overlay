@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-lyrical-ros2cli-test-interfaces";
-  version = "0.40.8-r1";
+  version = "0.40.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/lyrical/ros2cli_test_interfaces/0.40.8-1.tar.gz";
-    name = "0.40.8-1.tar.gz";
-    sha256 = "d8dbcaf599d4b1190b4c518d3aa9aefea64c1face68e002af5e335d9b1c6bce4";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/lyrical/ros2cli_test_interfaces/0.40.9-1.tar.gz";
+    name = "0.40.9-1.tar.gz";
+    sha256 = "2f0c5719ca05696c26e6b215ad6afacf596b5f42884cdb4c45a0af8d2d1a82fe";
   };
 
   buildType = "ament_cmake";

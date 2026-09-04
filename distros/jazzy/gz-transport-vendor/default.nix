@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, cppzmq, gz-cmake-vendor, gz-math-vendor, gz-msgs-vendor, gz-tools-vendor, gz-utils-vendor, pkg-config, protobuf, python3, python3Packages, sqlite, util-linux }:
 buildRosPackage {
   pname = "ros-jazzy-gz-transport-vendor";
-  version = "0.0.8-r1";
+  version = "0.0.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_transport_vendor-release/archive/release/jazzy/gz_transport_vendor/0.0.8-1.tar.gz";
-    name = "0.0.8-1.tar.gz";
-    sha256 = "e691ba974be785581313bd7e0667b948c57abe3bf36fa6f5f034faa82d41b3a5";
+    url = "https://github.com/ros2-gbp/gz_transport_vendor-release/archive/release/jazzy/gz_transport_vendor/0.0.9-1.tar.gz";
+    name = "0.0.9-1.tar.gz";
+    sha256 = "a22f592c2fdd7efff7ed23e4bbde382aa334792ae92eb64a6e7a2a3d68504868";
   };
 
   buildType = "ament_cmake";

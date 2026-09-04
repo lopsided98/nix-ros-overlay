@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, angles, controller-interface, elite-robots-msgs, generate-parameter-library, hardware-interface, joint-trajectory-controller, lifecycle-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, rcutils, realtime-tools, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-elite-robots-controllers";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/EliteRobots/Elite_Robots_CS_ROS2_Driver-release/archive/release/humble/elite_robots_controllers/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "babfa8f2439350241e772658ff471c2505f1611d24db3e1a945f5a1f9e1a24bd";
+    url = "https://github.com/EliteRobots/Elite_Robots_CS_ROS2_Driver-release/archive/release/humble/elite_robots_controllers/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "68963248468cd5b0e253beeeb083b7d7ab12e252a00cbec7f6e7bbb0db349faa";
   };
 
   buildType = "ament_cmake";

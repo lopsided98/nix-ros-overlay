@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-index-python, elite-robots-description, launch, launch-ros, moveit-kinematics, moveit-planners-ompl, moveit-ros-move-group, moveit-ros-visualization, moveit-servo, moveit-simple-controller-manager, python3Packages, rviz2, urdf, warehouse-ros-sqlite, xacro }:
 buildRosPackage {
   pname = "ros-humble-elite-robots-moveit-config";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/EliteRobots/Elite_Robots_CS_ROS2_Driver-release/archive/release/humble/elite_robots_moveit_config/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "5964ba6503eba15d33e66df22661c90277fb11cd13b8b2df371a3015f402f735";
+    url = "https://github.com/EliteRobots/Elite_Robots_CS_ROS2_Driver-release/archive/release/humble/elite_robots_moveit_config/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "0792536575122106172dca6cc03c57fe8fe3da14a673d362d230ff929959d799";
   };
 
   buildType = "ament_cmake";

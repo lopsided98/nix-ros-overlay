@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, eigen3-cmake-module, geometry-msgs, moveit-common, rclcpp, std-msgs, tf2-eigen, urdfdom-headers, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rviz-marker-tools";
-  version = "0.1.5-r1";
+  version = "0.1.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_task_constructor-release/archive/release/jazzy/rviz_marker_tools/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "2a8ecab53c3356798b0ec70fae0acffc56df698b2e0abb6da208157109ed6123";
+    url = "https://github.com/ros2-gbp/moveit_task_constructor-release/archive/release/jazzy/rviz_marker_tools/0.1.8-1.tar.gz";
+    name = "0.1.8-1.tar.gz";
+    sha256 = "c1aa429cb505134ad6aa80c666661ab2e98761e838cbb4d4623c238f82e5f325";
   };
 
   buildType = "ament_cmake";

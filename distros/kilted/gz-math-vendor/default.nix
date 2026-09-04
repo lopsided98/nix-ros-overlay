@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, eigen, gz-cmake-vendor, gz-utils-vendor, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-gz-math-vendor";
-  version = "0.2.8-r1";
+  version = "0.2.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_math_vendor-release/archive/release/kilted/gz_math_vendor/0.2.8-1.tar.gz";
-    name = "0.2.8-1.tar.gz";
-    sha256 = "a75ca403c52f26afcfdbe6b9078b7f63dbad4d1e0d4a2bb34ab2728afc5e3d12";
+    url = "https://github.com/ros2-gbp/gz_math_vendor-release/archive/release/kilted/gz_math_vendor/0.2.9-1.tar.gz";
+    name = "0.2.9-1.tar.gz";
+    sha256 = "9c7c8088be62dd1f78ec3d381e58f7c596978ebe827ccae508c1d471b2d278c1";
   };
 
   buildType = "ament_cmake";

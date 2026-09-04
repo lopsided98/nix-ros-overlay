@@ -2,19 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, rclcpp, sensor-msgs, std-msgs, std-srvs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-jazzy-rosbot-mavlink-bridge";
-  version = "2.0.1-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/husarion/rosbot_mavlink_bridge-release/archive/release/jazzy/rosbot_mavlink_bridge/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "d54d7c97fd460faab09e611587bb9c64bcb6e0d7d76ef4f62c1c3c11b103c357";
+    url = "https://github.com/husarion/rosbot_mavlink_bridge-release/archive/release/jazzy/rosbot_mavlink_bridge/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "2013b8c93a1906585c46a72f5fd898af880d67cf9c6ed3c90ee55f8a65dfd48f";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ rclcpp sensor-msgs std-msgs std-srvs ];
   nativeBuildInputs = [ ament-cmake ];
 

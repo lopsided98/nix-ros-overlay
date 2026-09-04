@@ -2514,8 +2514,6 @@ self: super: {
 
  rmw-int2dds-cpp = self.callPackage ./rmw-int2dds-cpp {};
 
- rmw-int2dds-validation = self.callPackage ./rmw-int2dds-validation {};
-
  rmw-security-common = self.callPackage ./rmw-security-common {};
 
  rmw-stats-shim = self.callPackage ./rmw-stats-shim {};
@@ -3078,6 +3076,8 @@ self: super: {
 
  simple-launch = self.callPackage ./simple-launch {};
 
+ simple-term-menu-vendor = self.callPackage ./simple-term-menu-vendor {};
+
  simulation = self.callPackage ./simulation {};
 
  simulation-interfaces = self.callPackage ./simulation-interfaces {};
@@ -3523,6 +3523,10 @@ self: super: {
  wireless-msgs = self.callPackage ./wireless-msgs {};
 
  wireless-watcher = self.callPackage ./wireless-watcher {};
+
+ wuji-hand2-beta1-description = self.callPackage ./wuji-hand2-beta1-description {};
+
+ wuji-hand2-beta2-description = self.callPackage ./wuji-hand2-beta2-description {};
 
  xacro = self.callPackage ./xacro {};
 

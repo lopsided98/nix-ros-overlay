@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-interface, controller-manager, controller-manager-msgs, hardware-interface, joint-limits, ros2-control-test-assets, ros2controlcli, transmission-interface }:
 buildRosPackage {
   pname = "ros-kilted-ros2-control";
-  version = "5.17.0-r1";
+  version = "5.18.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/ros2_control/5.17.0-1.tar.gz";
-    name = "5.17.0-1.tar.gz";
-    sha256 = "27257d2d80a13128b09af13b58d6ca138f05e0f5783a02ac0a0a6cb34e5b87e4";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/ros2_control/5.18.0-1.tar.gz";
+    name = "5.18.0-1.tar.gz";
+    sha256 = "3155f073ea3a1e89a1cba3bbae77f66aaa586d0213819ee5736c5b6d2faca4b2";
   };
 
   buildType = "ament_cmake";

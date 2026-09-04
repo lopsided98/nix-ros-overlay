@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-lint-auto, ament-lint-common, autoware-perception-msgs, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-autoware-internal-perception-msgs";
-  version = "1.12.1-r3";
+  version = "1.16.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoware_internal_msgs-release/archive/release/lyrical/autoware_internal_perception_msgs/1.12.1-3.tar.gz";
-    name = "1.12.1-3.tar.gz";
-    sha256 = "b3a18f2cf75b88c465a49be57474cce74f5dd2a66560e6b090e12529b5fc8d3c";
+    url = "https://github.com/ros2-gbp/autoware_internal_msgs-release/archive/release/lyrical/autoware_internal_perception_msgs/1.16.0-1.tar.gz";
+    name = "1.16.0-1.tar.gz";
+    sha256 = "03ad7c6109d4632ec60022a154cfbaf701f62474d970fd84f69e6079d242aaad";
   };
 
   buildType = "ament_cmake";

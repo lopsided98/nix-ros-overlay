@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, fmt, moveit-common, moveit-configs-utils, moveit-core, moveit-kinematics, moveit-resources-fanuc-moveit-config, moveit-resources-panda-moveit-config, moveit-ros-occupancy-map-monitor, moveit-ros-planning, pluginlib, rclcpp, rclcpp-action, ros-testing, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-moveit-ros-move-group";
-  version = "2.15.0-r1";
+  version = "2.15.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_ros_move_group/2.15.0-1.tar.gz";
-    name = "2.15.0-1.tar.gz";
-    sha256 = "016e357ce997043990dde44bbcc9d299e184e0b61fd9ba55267da51e4cc7bd58";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_ros_move_group/2.15.1-1.tar.gz";
+    name = "2.15.1-1.tar.gz";
+    sha256 = "6eb469e54e3e561004ea3c4f6c29ec4c2da9619678c08861e496748be832a20c";
   };
 
   buildType = "ament_cmake";

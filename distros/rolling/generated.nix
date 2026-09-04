@@ -908,8 +908,6 @@ self: super: {
 
  gz-gui-vendor = self.callPackage ./gz-gui-vendor {};
 
- gz-launch-vendor = self.callPackage ./gz-launch-vendor {};
-
  gz-math-vendor = self.callPackage ./gz-math-vendor {};
 
  gz-msgs-vendor = self.callPackage ./gz-msgs-vendor {};
@@ -2220,8 +2218,6 @@ self: super: {
 
  rmw-int2dds-cpp = self.callPackage ./rmw-int2dds-cpp {};
 
- rmw-int2dds-validation = self.callPackage ./rmw-int2dds-validation {};
-
  rmw-security-common = self.callPackage ./rmw-security-common {};
 
  rmw-stats-shim = self.callPackage ./rmw-stats-shim {};
@@ -2333,6 +2329,8 @@ self: super: {
  ros2lifecycle = self.callPackage ./ros2lifecycle {};
 
  ros2lifecycle-test-fixtures = self.callPackage ./ros2lifecycle-test-fixtures {};
+
+ ros2log = self.callPackage ./ros2log {};
 
  ros2multicast = self.callPackage ./ros2multicast {};
 
@@ -2589,6 +2587,8 @@ self: super: {
  rqt-image-view = self.callPackage ./rqt-image-view {};
 
  rqt-joint-trajectory-controller = self.callPackage ./rqt-joint-trajectory-controller {};
+
+ rqt-lifecycle-manager = self.callPackage ./rqt-lifecycle-manager {};
 
  rqt-moveit = self.callPackage ./rqt-moveit {};
 

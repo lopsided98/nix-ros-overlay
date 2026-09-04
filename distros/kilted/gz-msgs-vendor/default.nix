@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, gz-cmake-vendor, gz-math-vendor, gz-tools-vendor, protobuf, python3, python3Packages, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-kilted-gz-msgs-vendor";
-  version = "0.2.5-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_msgs_vendor-release/archive/release/kilted/gz_msgs_vendor/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "aeb1ebb6e15a199347679e4be03672dbfa9d280a256bbc23573f2685b25b97a2";
+    url = "https://github.com/ros2-gbp/gz_msgs_vendor-release/archive/release/kilted/gz_msgs_vendor/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "e027806eec28037075de5dc3d52b83fe60429cd3b73fe43a525d75a03d3a6194";
   };
 
   buildType = "ament_cmake";

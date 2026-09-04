@@ -1178,6 +1178,12 @@ self: super: {
 
  jacro = self.callPackage ./jacro {};
 
+ jig = self.callPackage ./jig {};
+
+ jig-cli = self.callPackage ./jig-cli {};
+
+ jig-example = self.callPackage ./jig-example {};
+
  joint-limits = self.callPackage ./joint-limits {};
 
  joint-state-broadcaster = self.callPackage ./joint-state-broadcaster {};
@@ -2553,6 +2559,8 @@ self: super: {
  ros2-controllers-test-nodes = self.callPackage ./ros2-controllers-test-nodes {};
 
  ros2-fmt-logger = self.callPackage ./ros2-fmt-logger {};
+
+ ros2-pulse = self.callPackage ./ros2-pulse {};
 
  ros2-snapshot = self.callPackage ./ros2-snapshot {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-ros-core, ament-cmake-version, ament-lint-auto, ament-lint-common, osrf-testing-tools-cpp, rcutils, rosidl-dynamic-typesupport, rosidl-runtime-c }:
 buildRosPackage {
   pname = "ros-lyrical-rmw";
-  version = "7.10.1-r5";
+  version = "7.10.2-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw-release/archive/release/lyrical/rmw/7.10.1-5.tar.gz";
-    name = "7.10.1-5.tar.gz";
-    sha256 = "a667e17f457e33e587b9d7ced8032ad3b9469313625e5303a63cbef900c6535f";
+    url = "https://github.com/ros2-gbp/rmw-release/archive/release/lyrical/rmw/7.10.2-3.tar.gz";
+    name = "7.10.2-3.tar.gz";
+    sha256 = "40bf8c8cd9d517deacfef61d7ac524be87a0de5eefeede18f483c708e16cd54d";
   };
 
   buildType = "ament_cmake";

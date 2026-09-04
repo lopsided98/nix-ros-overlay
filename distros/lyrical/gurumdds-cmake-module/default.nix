@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, _unresolved_gurumdds-3, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-lyrical-gurumdds-cmake-module";
-  version = "7.0.0-r1";
+  version = "7.0.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_gurumdds-release/archive/release/lyrical/gurumdds_cmake_module/7.0.0-1.tar.gz";
-    name = "7.0.0-1.tar.gz";
-    sha256 = "dfa16ab5d125e481e87fa1f18cf64a7915ed67be562660d4ab6bbe35dfb09a38";
+    url = "https://github.com/ros2-gbp/rmw_gurumdds-release/archive/release/lyrical/gurumdds_cmake_module/7.0.0-3.tar.gz";
+    name = "7.0.0-3.tar.gz";
+    sha256 = "560fa9c7bbf00c2681ec8541fdd7b10c7965618c10325096c34b8108453704be";
   };
 
   buildType = "ament_cmake";

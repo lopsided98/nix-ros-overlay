@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-clang-format, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-index-cpp, ament-lint-auto, moveit-common, moveit-core, moveit-ros-planning, moveit-ros-visualization, pluginlib, rclcpp, rviz-common, rviz-rendering, srdfdom, urdf }:
 buildRosPackage {
   pname = "ros-humble-moveit-setup-framework";
-  version = "2.5.9-r1";
+  version = "2.5.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_setup_framework/2.5.9-1.tar.gz";
-    name = "2.5.9-1.tar.gz";
-    sha256 = "a38ebbe9a13023ff7f08deed35932631130ef2912e781a470678dc90746fc1cc";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_setup_framework/2.5.10-1.tar.gz";
+    name = "2.5.10-1.tar.gz";
+    sha256 = "e84442d078b1058add310a366bf4cf75f4dab59306d34de0a498356893e9c20e";
   };
 
   buildType = "ament_cmake";

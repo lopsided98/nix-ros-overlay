@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, gz-cmake-vendor, gz-math-vendor, gz-tools-vendor, protobuf, python3, python3Packages, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-jazzy-gz-msgs-vendor";
-  version = "0.0.7-r1";
+  version = "0.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_msgs_vendor-release/archive/release/jazzy/gz_msgs_vendor/0.0.7-1.tar.gz";
-    name = "0.0.7-1.tar.gz";
-    sha256 = "a862e1416c4d5174f13f0b05130d8c72870c2a4724fe3274e7e43181f02e171b";
+    url = "https://github.com/ros2-gbp/gz_msgs_vendor-release/archive/release/jazzy/gz_msgs_vendor/0.0.8-1.tar.gz";
+    name = "0.0.8-1.tar.gz";
+    sha256 = "df68f952a8831e0cea74e5c9697e554b3ca15e971da01142e6a6e84bad56d8d7";
   };
 
   buildType = "ament_cmake";

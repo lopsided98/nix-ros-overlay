@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-cmake, geometry-msgs, object-recognition-msgs, octomap-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, shape-msgs, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-humble-moveit-msgs";
-  version = "2.2.1-r1";
+  version = "2.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_msgs-release/archive/release/humble/moveit_msgs/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "21b726427c912502976eeb44a81e415a6cfba075b289cd9cbd161bb263b906a9";
+    url = "https://github.com/ros2-gbp/moveit_msgs-release/archive/release/humble/moveit_msgs/2.2.3-1.tar.gz";
+    name = "2.2.3-1.tar.gz";
+    sha256 = "37226c334240a3547029d4a3da19554fd466a242966531e9cad6760e51dfb2ab";
   };
 
   buildType = "ament_cmake";

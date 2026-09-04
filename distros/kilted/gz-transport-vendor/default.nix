@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, cppzmq, gz-cmake-vendor, gz-math-vendor, gz-msgs-vendor, gz-tools-vendor, gz-utils-vendor, pkg-config, protobuf, python3, python3Packages, sqlite, util-linux }:
 buildRosPackage {
   pname = "ros-kilted-gz-transport-vendor";
-  version = "0.2.5-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_transport_vendor-release/archive/release/kilted/gz_transport_vendor/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "a6dcaa99454796a9e9e6dfde0c610f90a9f02671050ea2e2250d0f9edb95e1ba";
+    url = "https://github.com/ros2-gbp/gz_transport_vendor-release/archive/release/kilted/gz_transport_vendor/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "2de6dca8aeba4fa4821aba45736098ba501c7be68f2bb4a6c0846d2fa93ebe43";
   };
 
   buildType = "ament_cmake";

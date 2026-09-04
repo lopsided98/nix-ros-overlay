@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, cmake }:
 buildRosPackage {
   pname = "ros-jazzy-fastcdr";
-  version = "2.2.7-r1";
+  version = "2.2.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastcdr-release/archive/release/jazzy/fastcdr/2.2.7-1.tar.gz";
-    name = "2.2.7-1.tar.gz";
-    sha256 = "1ce18b3822fc6a4530533f2d6bc5d58ad32a6bc4d9fab6b05335def21371fb24";
+    url = "https://github.com/ros2-gbp/fastcdr-release/archive/release/jazzy/fastcdr/2.2.8-1.tar.gz";
+    name = "2.2.8-1.tar.gz";
+    sha256 = "de626529eacfd66d26ae4a52685f9dd628155d89728e5c932407bdbc2f9324f9";
   };
 
   buildType = "cmake";

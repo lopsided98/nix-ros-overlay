@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, gz-cmake-vendor, gz-math-vendor, gz-tools-vendor, gz-utils-vendor, libxml2, python3Packages, tinyxml-2, urdfdom }:
 buildRosPackage {
   pname = "ros-jazzy-sdformat-vendor";
-  version = "0.0.11-r1";
+  version = "0.0.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sdformat_vendor-release/archive/release/jazzy/sdformat_vendor/0.0.11-1.tar.gz";
-    name = "0.0.11-1.tar.gz";
-    sha256 = "3643ef2a52f1b01d4b1c4c83fc1b84ed7b4e27a7d8b78597f68cdc231d02464a";
+    url = "https://github.com/ros2-gbp/sdformat_vendor-release/archive/release/jazzy/sdformat_vendor/0.0.14-1.tar.gz";
+    name = "0.0.14-1.tar.gz";
+    sha256 = "9f0b11afc57a60dede715a8d98481e14f6eb54c8448540bbad6a70999d87635f";
   };
 
   buildType = "ament_cmake";
