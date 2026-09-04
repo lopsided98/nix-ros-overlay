@@ -1,7 +1,7 @@
 {
   "gz_physics_vendor": {
     "url": "https://github.com/gazebosim/gz-physics.git",
-    "rev": "gz-physics9_9.5.0",
-    "hash": "sha256-VYpURTf3n3EEBO4U3hGk7Jv2mT5up6DW4pGKUBVDz9U="
+    "rev": "gz-physics9_9.5.1",
+    "hash": "sha256-y4i5RBbdEW/vvPeMHCXDa1V0p9a+grAJop77xiD+WkA="
   }
 }
