@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, controller-manager, forward-command-controller, moveit-common, moveit-configs-utils, moveit-core, moveit-msgs, moveit-planners-ompl, moveit-resources-panda-moveit-config, moveit-ros-planning, moveit-ros-planning-interface, moveit-simple-controller-manager, pluginlib, rclcpp, rclcpp-action, rclcpp-components, robot-state-publisher, ros-testing, rviz2, std-msgs, std-srvs, tf2-ros, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-moveit-hybrid-planning";
-  version = "2.15.0-r1";
+  version = "2.15.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/lyrical/moveit_hybrid_planning/2.15.0-1.tar.gz";
-    name = "2.15.0-1.tar.gz";
-    sha256 = "61a49c0524ce300928b6c56336aad6c1665f6a891abda946729728b3eacb9860";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/lyrical/moveit_hybrid_planning/2.15.1-1.tar.gz";
+    name = "2.15.1-1.tar.gz";
+    sha256 = "d2ff3d6344085105950cd839a20193c489661788b89abfb3f2b8442e8bc859ce";
   };
 
   buildType = "ament_cmake";

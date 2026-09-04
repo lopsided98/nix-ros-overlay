@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-kilted-ros2-control-test-assets";
-  version = "5.17.0-r1";
+  version = "5.18.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/ros2_control_test_assets/5.17.0-1.tar.gz";
-    name = "5.17.0-1.tar.gz";
-    sha256 = "f4324322e02809e68ec8b82d9073417b437feeb05d36d2bcc7d361c819297f37";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/ros2_control_test_assets/5.18.0-1.tar.gz";
+    name = "5.18.0-1.tar.gz";
+    sha256 = "4c683ce2080af48613fd0afc49c933a0b83e787899fe181cf42ee5eb479954a7";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-index-cpp, moveit-ros-visualization, moveit-setup-framework, pluginlib, rclcpp, srdfdom, urdf }:
 buildRosPackage {
   pname = "ros-lyrical-moveit-setup-core-plugins";
-  version = "2.15.0-r1";
+  version = "2.15.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/lyrical/moveit_setup_core_plugins/2.15.0-1.tar.gz";
-    name = "2.15.0-1.tar.gz";
-    sha256 = "f59d671307e50bba5b7d1ec148e9b6ea54f2ae07a0f6a941392a8cc0eb032f7e";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/lyrical/moveit_setup_core_plugins/2.15.1-1.tar.gz";
+    name = "2.15.1-1.tar.gz";
+    sha256 = "c2beb8c2f039b52155727fd37c33d08fac492de4780aa1f2ea315852ddf46d00";
   };
 
   buildType = "ament_cmake";

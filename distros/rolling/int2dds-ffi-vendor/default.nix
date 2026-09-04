@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-rolling-int2dds-ffi-vendor";
-  version = "0.1.1-r1";
+  version = "0.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_int2dds-release/archive/release/rolling/int2dds_ffi_vendor/0.1.1-1.tar.gz";
-    name = "0.1.1-1.tar.gz";
-    sha256 = "cf297600fed2390a34cd2fc2e9935ec0118b9304e6d72fa409c8314b77d81ae5";
+    url = "https://github.com/ros2-gbp/rmw_int2dds-release/archive/release/rolling/int2dds_ffi_vendor/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
+    sha256 = "911d4d45872667dcf65c2fe2cfcee3684aa8b78271580fb6861ff27890f72e11";
   };
 
   buildType = "ament_cmake";

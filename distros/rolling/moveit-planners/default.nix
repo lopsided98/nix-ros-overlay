@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, moveit-planners-chomp, moveit-planners-ompl, moveit-planners-stomp, pilz-industrial-motion-planner }:
 buildRosPackage {
   pname = "ros-rolling-moveit-planners";
-  version = "2.15.0-r1";
+  version = "2.15.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_planners/2.15.0-1.tar.gz";
-    name = "2.15.0-1.tar.gz";
-    sha256 = "e056fd755df8de18963b0646b4f7fe4438b022fb5d955b3dbc4d791a397d668b";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_planners/2.15.1-1.tar.gz";
+    name = "2.15.1-1.tar.gz";
+    sha256 = "1c03dae8c49b0d4a271e6c96361c0211b5a2956a91b1b46c68a47eed944bf234";
   };
 
   buildType = "ament_cmake";

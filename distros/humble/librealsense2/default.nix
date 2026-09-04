@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, git, glfw3, libGL, libGLU, libusb1, libx11, openssl, pkg-config, udev }:
 buildRosPackage {
   pname = "ros-humble-librealsense2";
-  version = "2.58.3-r1";
+  version = "2.58.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/librealsense2-release/archive/release/humble/librealsense2/2.58.3-1.tar.gz";
-    name = "2.58.3-1.tar.gz";
-    sha256 = "1b29e60d6aea900681a872ef90e8e5dda910e9108e993ecbcfa3e02a6f84f725";
+    url = "https://github.com/ros2-gbp/librealsense2-release/archive/release/humble/librealsense2/2.58.4-1.tar.gz";
+    name = "2.58.4-1.tar.gz";
+    sha256 = "ac76e92c347b65c52b760b3cec0c402758bf1612cc4319ca83ee90b17e30eb55";
   };
 
   buildType = "cmake";
@@ -19,7 +19,7 @@ buildRosPackage {
   nativeBuildInputs = [ cmake ];
 
   meta = {
-    description = "Library for controlling and capturing data from the Intel(R) RealSense(TM) D400 devices.";
+    description = "Library for controlling and capturing data from the RealSense depth streaming devices.";
     license = with lib.licenses; [ asl20 ];
   };
 }

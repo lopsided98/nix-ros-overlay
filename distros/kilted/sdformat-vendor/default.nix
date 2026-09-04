@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, gz-cmake-vendor, gz-math-vendor, gz-tools-vendor, gz-utils-vendor, libxml2, python3Packages, tinyxml-2, urdfdom }:
 buildRosPackage {
   pname = "ros-kilted-sdformat-vendor";
-  version = "0.2.7-r1";
+  version = "0.2.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sdformat_vendor-release/archive/release/kilted/sdformat_vendor/0.2.7-1.tar.gz";
-    name = "0.2.7-1.tar.gz";
-    sha256 = "035b6dda9a9a727feb9aa657929d7c8d7ccb2ea0e6b04d9f1621bb22b6b31bb4";
+    url = "https://github.com/ros2-gbp/sdformat_vendor-release/archive/release/kilted/sdformat_vendor/0.2.8-1.tar.gz";
+    name = "0.2.8-1.tar.gz";
+    sha256 = "01f70a3ed743fc604f8bf5f88a7b4699614e104fb9e83fc7d4c5b08b244c79ef";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-realsense2-camera-msgs";
-  version = "4.58.3-r1";
+  version = "4.58.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/jazzy/realsense2_camera_msgs/4.58.3-1.tar.gz";
-    name = "4.58.3-1.tar.gz";
-    sha256 = "df0163e16568265f78449f5dec48f52cc47805eec8b53c6f24235b0213ca9854";
+    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/jazzy/realsense2_camera_msgs/4.58.4-1.tar.gz";
+    name = "4.58.4-1.tar.gz";
+    sha256 = "48a02c3bd4f84fca8c3a48174ecad085707e79b55a654dd2f43e50ef675df997";
   };
 
   buildType = "ament_cmake";

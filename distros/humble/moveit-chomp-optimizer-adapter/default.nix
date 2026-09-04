@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, chomp-motion-planner, moveit-common, moveit-core, pluginlib }:
 buildRosPackage {
   pname = "ros-humble-moveit-chomp-optimizer-adapter";
-  version = "2.5.9-r1";
+  version = "2.5.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_chomp_optimizer_adapter/2.5.9-1.tar.gz";
-    name = "2.5.9-1.tar.gz";
-    sha256 = "8e4bab48817f16f9f07bb8372b40d6446a2d690a174b02e0dd47ab5c2d06e275";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/humble/moveit_chomp_optimizer_adapter/2.5.10-1.tar.gz";
+    name = "2.5.10-1.tar.gz";
+    sha256 = "3883cfcb0094081c2d90dfbd8a076b3011e0613a3f8fbce498934717e9b54cd3";
   };
 
   buildType = "ament_cmake";

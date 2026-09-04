@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, moveit-configs-utils, moveit-resources-fanuc-moveit-config, moveit-resources-panda-moveit-config, moveit-setup-framework, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-lyrical-moveit-setup-controllers";
-  version = "2.15.0-r1";
+  version = "2.15.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/lyrical/moveit_setup_controllers/2.15.0-1.tar.gz";
-    name = "2.15.0-1.tar.gz";
-    sha256 = "eac7e08bec5816db144eb805e0889204bef67360e9cef5d89a6fe43b34780b33";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/lyrical/moveit_setup_controllers/2.15.1-1.tar.gz";
+    name = "2.15.1-1.tar.gz";
+    sha256 = "3d5c4aa6b087190758ea70e8d68f3d835180f003db16ac85277ab9fafbcbc436";
   };
 
   buildType = "ament_cmake";

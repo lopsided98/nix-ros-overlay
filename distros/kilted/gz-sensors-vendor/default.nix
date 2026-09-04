@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, gz-cmake-vendor, gz-common-vendor, gz-math-vendor, gz-msgs-vendor, gz-rendering-vendor, gz-tools-vendor, gz-transport-vendor, sdformat-vendor, xorg }:
 buildRosPackage {
   pname = "ros-kilted-gz-sensors-vendor";
-  version = "0.2.3-r1";
+  version = "0.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_sensors_vendor-release/archive/release/kilted/gz_sensors_vendor/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "4a215e3d2c2432921debf8e0aa34b1bbae3fe38a4a0a69f9f052dbcada0c0779";
+    url = "https://github.com/ros2-gbp/gz_sensors_vendor-release/archive/release/kilted/gz_sensors_vendor/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
+    sha256 = "9b2f51d65c315d00a2fe5312e8259f89b1de6eadeeb517443d1e5099ae872907";
   };
 
   buildType = "ament_cmake";

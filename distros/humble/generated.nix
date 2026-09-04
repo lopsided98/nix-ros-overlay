@@ -1724,6 +1724,12 @@ self: super: {
 
  jacro = self.callPackage ./jacro {};
 
+ jig = self.callPackage ./jig {};
+
+ jig-cli = self.callPackage ./jig-cli {};
+
+ jig-example = self.callPackage ./jig-example {};
+
  joint-group-impedance-controller = self.callPackage ./joint-group-impedance-controller {};
 
  joint-limits = self.callPackage ./joint-limits {};
@@ -2241,6 +2247,8 @@ self: super: {
  moveit-planners-ompl = self.callPackage ./moveit-planners-ompl {};
 
  moveit-plugins = self.callPackage ./moveit-plugins {};
+
+ moveit-py = self.callPackage ./moveit-py {};
 
  moveit-resources = self.callPackage ./moveit-resources {};
 
@@ -3170,6 +3178,8 @@ self: super: {
 
  raspimouse-slam-navigation = self.callPackage ./raspimouse-slam-navigation {};
 
+ rbq-msgs = self.callPackage ./rbq-msgs {};
+
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
  rc-dynamics-api = self.callPackage ./rc-dynamics-api {};
@@ -3380,8 +3390,6 @@ self: super: {
 
  rmw-int2dds-cpp = self.callPackage ./rmw-int2dds-cpp {};
 
- rmw-int2dds-validation = self.callPackage ./rmw-int2dds-validation {};
-
  rmw-stats-shim = self.callPackage ./rmw-stats-shim {};
 
  rmw-zenoh-cpp = self.callPackage ./rmw-zenoh-cpp {};
@@ -3473,6 +3481,8 @@ self: super: {
  ros2-medkit-topic-beacon = self.callPackage ./ros2-medkit-topic-beacon {};
 
  ros2-ouster = self.callPackage ./ros2-ouster {};
+
+ ros2-pulse = self.callPackage ./ros2-pulse {};
 
  ros2-socketcan = self.callPackage ./ros2-socketcan {};
 

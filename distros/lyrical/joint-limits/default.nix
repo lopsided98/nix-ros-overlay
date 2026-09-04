@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, backward-ros, fmt, generate-parameter-library, launch-ros, launch-testing-ament-cmake, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-lyrical-joint-limits";
-  version = "6.9.0-r1";
+  version = "6.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/lyrical/joint_limits/6.9.0-1.tar.gz";
-    name = "6.9.0-1.tar.gz";
-    sha256 = "52f909a2f37773ba3574cc3141a78b4416dddcdaacd01e02a00d54c3bd28300c";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/lyrical/joint_limits/6.10.0-1.tar.gz";
+    name = "6.10.0-1.tar.gz";
+    sha256 = "b6d6ac8cebaa94c13a961889d078c64c35239318d4efb6cdbb13991f724775c8";
   };
 
   buildType = "ament_cmake";

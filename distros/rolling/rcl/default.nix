@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-gen-version-h, ament-cmake-ros, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, libyaml, libyaml-vendor, mimick-vendor, osrf-testing-tools-cpp, rcl-interfaces, rcl-logging-implementation, rcl-logging-interface, rcl-logging-spdlog, rcl-yaml-param-parser, rcutils, rmw, rmw-implementation, rmw-implementation-cmake, rosidl-runtime-c, rosidl-runtime-cpp, service-msgs, test-msgs, tracetools, type-description-interfaces }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gen-version-h, ament-cmake-ros, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, libyaml, libyaml-vendor, mimick-vendor, osrf-testing-tools-cpp, rcl-interfaces, rcl-logging-implementation, rcl-logging-interface, rcl-logging-spdlog, rcl-yaml-param-parser, rcutils, rmw, rmw-implementation, rmw-implementation-cmake, rosidl-runtime-c, rosidl-runtime-cpp, service-msgs, test-msgs, tracetools, type-description-interfaces }:
 buildRosPackage {
   pname = "ros-rolling-rcl";
-  version = "10.5.1-r1";
+  version = "10.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl-release/archive/release/rolling/rcl/10.5.1-1.tar.gz";
-    name = "10.5.1-1.tar.gz";
-    sha256 = "ecb4e623e82ff913f0a5662e8b1988333557fed76b70f3303ea2d6ca60fe0d08";
+    url = "https://github.com/ros2-gbp/rcl-release/archive/release/rolling/rcl/10.5.2-1.tar.gz";
+    name = "10.5.2-1.tar.gz";
+    sha256 = "bd3d7d55cb403865d455b39a5fdf1c1238c1779a04881880cfddd7a20b1d945c";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-gen-version-h ament-cmake-ros ];
-  checkInputs = [ ament-lint-auto ament-lint-common launch launch-testing launch-testing-ament-cmake mimick-vendor osrf-testing-tools-cpp rmw rmw-implementation-cmake rosidl-runtime-cpp test-msgs ];
+  checkInputs = [ ament-cmake-ros-core ament-lint-auto ament-lint-common launch launch-testing launch-testing-ament-cmake mimick-vendor osrf-testing-tools-cpp rmw rmw-implementation-cmake rosidl-runtime-cpp test-msgs ];
   propagatedBuildInputs = [ libyaml libyaml-vendor rcl-interfaces rcl-logging-implementation rcl-logging-interface rcl-logging-spdlog rcl-yaml-param-parser rcutils rmw rmw-implementation rosidl-runtime-c service-msgs tracetools type-description-interfaces ];
   nativeBuildInputs = [ ament-cmake-gen-version-h ament-cmake-ros ];
 

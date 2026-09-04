@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, elite-cs-series-sdk, elite-robots-calibration, elite-robots-controllers, elite-robots-dashboard-msgs, elite-robots-driver, elite-robots-moveit-config, elite-robots-msgs }:
 buildRosPackage {
   pname = "ros-humble-elite-robots";
-  version = "1.0.2-r1";
+  version = "1.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/EliteRobots/Elite_Robots_CS_ROS2_Driver-release/archive/release/humble/elite_robots/1.0.2-1.tar.gz";
-    name = "1.0.2-1.tar.gz";
-    sha256 = "59fd30626bd3f635e4ea698e5ba83cf9bd3f641e3cffa03a93d94b57401f08bb";
+    url = "https://github.com/EliteRobots/Elite_Robots_CS_ROS2_Driver-release/archive/release/humble/elite_robots/1.0.3-1.tar.gz";
+    name = "1.0.3-1.tar.gz";
+    sha256 = "8c7f458f5afcf3126a9a16cfa86128937ad70013f90bd547cf5aaa7ba301f093";
   };
 
   buildType = "ament_cmake";

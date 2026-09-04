@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, launch, launch-ros, launch-testing, launch-testing-ros, python3Packages, rclpy, ros2cli, rosidl-runtime-py, test-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-ros2service";
-  version = "0.40.8-r1";
+  version = "0.40.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/lyrical/ros2service/0.40.8-1.tar.gz";
-    name = "0.40.8-1.tar.gz";
-    sha256 = "731ea51292813b2d03955d849d36b2f5e346c9316094620e8cec2f36d6b520a7";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/lyrical/ros2service/0.40.9-1.tar.gz";
+    name = "0.40.9-1.tar.gz";
+    sha256 = "25d7ecbed892081915e11848cb376b3d15906f261c91d36b20d8f0c28728c449";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-index-python, geometry-msgs, moveit-core, moveit-ros-planning, moveit-ros-planning-interface, octomap-msgs, python3Packages, rclcpp, rclpy }:
 buildRosPackage {
   pname = "ros-rolling-moveit-py";
-  version = "2.15.0-r1";
+  version = "2.15.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_py/2.15.0-1.tar.gz";
-    name = "2.15.0-1.tar.gz";
-    sha256 = "d671cb1103a98bb60465664d30e9f436ee8b20d8054da320e36feee9fb2d3a03";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_py/2.15.1-1.tar.gz";
+    name = "2.15.1-1.tar.gz";
+    sha256 = "0454377dc15c0b29bc4d02cdef77deca4e2ba04502a70e4a6d5d5d8b242fd9c5";
   };
 
   buildType = "ament_cmake";

@@ -1700,6 +1700,12 @@ self: super: {
 
  jacro = self.callPackage ./jacro {};
 
+ jig = self.callPackage ./jig {};
+
+ jig-cli = self.callPackage ./jig-cli {};
+
+ jig-example = self.callPackage ./jig-example {};
+
  joint-group-impedance-controller = self.callPackage ./joint-group-impedance-controller {};
 
  joint-limits = self.callPackage ./joint-limits {};
@@ -2720,6 +2726,8 @@ self: super: {
 
  off-highway-uss-msgs = self.callPackage ./off-highway-uss-msgs {};
 
+ olive-interfaces = self.callPackage ./olive-interfaces {};
+
  om-gravity-compensation-controller = self.callPackage ./om-gravity-compensation-controller {};
 
  om-joint-trajectory-command-broadcaster = self.callPackage ./om-joint-trajectory-command-broadcaster {};
@@ -3304,8 +3312,6 @@ self: super: {
 
  rmw-int2dds-cpp = self.callPackage ./rmw-int2dds-cpp {};
 
- rmw-int2dds-validation = self.callPackage ./rmw-int2dds-validation {};
-
  rmw-stats-shim = self.callPackage ./rmw-stats-shim {};
 
  rmw-zenoh-cpp = self.callPackage ./rmw-zenoh-cpp {};
@@ -3409,6 +3415,8 @@ self: super: {
  ros2-medkit-sovd-service-interface = self.callPackage ./ros2-medkit-sovd-service-interface {};
 
  ros2-medkit-topic-beacon = self.callPackage ./ros2-medkit-topic-beacon {};
+
+ ros2-pulse = self.callPackage ./ros2-pulse {};
 
  ros2-snapshot = self.callPackage ./ros2-snapshot {};
 
@@ -3725,6 +3733,8 @@ self: super: {
  rqt-image-view = self.callPackage ./rqt-image-view {};
 
  rqt-joint-trajectory-controller = self.callPackage ./rqt-joint-trajectory-controller {};
+
+ rqt-lifecycle-manager = self.callPackage ./rqt-lifecycle-manager {};
 
  rqt-moveit = self.callPackage ./rqt-moveit {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, gz-cmake-vendor, gz-tools-vendor, gz-utils-vendor }:
 buildRosPackage {
   pname = "ros-kilted-gz-plugin-vendor";
-  version = "0.2.3-r1";
+  version = "0.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_plugin_vendor-release/archive/release/kilted/gz_plugin_vendor/0.2.3-1.tar.gz";
-    name = "0.2.3-1.tar.gz";
-    sha256 = "88ce2d69decaf082a393ed077c63db84b51c7563185458d8d654517dfc2c3d81";
+    url = "https://github.com/ros2-gbp/gz_plugin_vendor-release/archive/release/kilted/gz_plugin_vendor/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
+    sha256 = "b2c3830e1296afedb61710b2b2c92e1fafcce06dd535f13450918833bb0b430e";
   };
 
   buildType = "ament_cmake";
