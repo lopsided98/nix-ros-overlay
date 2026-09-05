@@ -639,6 +639,12 @@ in {
         hash = "sha256-nMyFz9OCDcf8eYHYWOX1iziR9jAshm8jjhTK/qPAlEA=";
         stripLen = 1;
       })
+      # Fix missing lib : Add iomanip lib (#2480)
+      (self.fetchpatch2 {
+        url = "https://github.com/ros2/rosbag2/commit/60560d0f0676c8a0ffc66c8da62fb5ec36b02104.patch?full_index=1";
+        hash = "sha256-ZhqAxL/DAOd9kyPA3MhzInChT+MFKOUmC1QCvj71Lk8=";
+        stripLen = 1;
+      })
     ];
   });
 
