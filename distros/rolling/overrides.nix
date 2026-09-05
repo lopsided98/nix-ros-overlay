@@ -628,6 +628,20 @@ in {
     buildInputs = buildInputs ++ [ rosSelf.toppra ];
   });
 
+  rosbag2-transport = rosSuper.rosbag2-transport.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Added missing header
+      # https://github.com/ros2/rosbag2/pull/2464
+      (self.fetchpatch2 {
+        url = "https://github.com/ros2/rosbag2/commit/4dddf35d297a9c3ddd1da6589c90dac55706747e.patch?full_index=1";
+        hash = "sha256-nMyFz9OCDcf8eYHYWOX1iziR9jAshm8jjhTK/qPAlEA=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   rosidlcpp-generator-core = rosSuper.rosidlcpp-generator-core.override { fmt = self.fmt_9; };
   rosidlcpp-generator-cpp = rosSuper.rosidlcpp-generator-cpp.override { fmt = self.fmt_9; };
   rosidlcpp-generator-py = rosSuper.rosidlcpp-generator-py.override { fmt = self.fmt_9; };
