@@ -673,6 +673,20 @@ in {
     ];
   });
 
+  rviz-imu-plugin = rosSuper.rviz-imu-plugin.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = [
+      # Add missing includes
+      # https://github.com/CCNYRoboticsLab/imu_tools/pull/236
+      (self.fetchpatch2 {
+        url = "https://github.com/CCNYRoboticsLab/imu_tools/commit/4f6a8542a19556ccf1e9bde84c65e3d9bec69d1a.patch?full_index=1";
+        hash = "sha256-qx5Y9URCZauu05nPKE000GWpBj1cCqno+6etg0jYzcs=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   rviz-ogre-vendor = lib.patchAmentVendorGit rosSuper.rviz-ogre-vendor {
     tarSourceArgs.hook = let
       version = "1.79";
