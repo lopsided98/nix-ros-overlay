@@ -1,7 +1,3 @@
-# gz needs insecure packages, namely freeimage-unstable-2021-11-01
-# to run this dev shell use:
-# NIXPKGS_ALLOW_INSECURE=1 nix develop --impure .\#example-ros2-gz
-
 {
   pkgs ? import ../. {},
   rosDistro ? "jazzy",
