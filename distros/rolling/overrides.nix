@@ -96,8 +96,6 @@ in {
 
   gz-gui-vendor = lib.patchAmentVendorGit rosSuper.gz-gui-vendor { };
 
-  gz-launch-vendor = lib.patchAmentVendorGit rosSuper.gz-launch-vendor { };
-
   gz-math-vendor = lib.patchAmentVendorGit rosSuper.gz-math-vendor { };
 
   gz-msgs-vendor = lib.patchAmentVendorGit rosSuper.gz-msgs-vendor { };

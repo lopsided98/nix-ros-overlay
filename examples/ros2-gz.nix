@@ -18,8 +18,8 @@ with rosPackages.${rosDistro};
           python-cmake-module
 
           ros-gz
-          gz-launch-vendor
-        ];
+        ]
+        ++ lib.optional (rosDistro != "rolling") gz-launch-vendor;
       })
     ] ++ lib.optionals (builtins.elem rosDistro [ "lyrical" "rolling" ]) [
       # this is for the shellhook portion
