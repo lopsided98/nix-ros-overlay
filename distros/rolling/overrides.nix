@@ -609,6 +609,20 @@ in {
     ];
   });
 
+  rmw = rosSuper.rmw.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Add missing stdbool.h include to time.h (#423)
+      # https://github.com/ros2/rmw/pull/423
+      (self.fetchpatch2 {
+        url = "https://github.com/ros2/rmw/commit/5f213420c641498db5b9d20d16fafdf37305ffbc.patch?full_index=1";
+        hash = "sha256-ZzVrVmy2ViOx67Ca1dqHQuJZhxRTiyQfM4Mje+pXX9Q=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   roboplan-examples = rosSuper.roboplan-examples.overrideAttrs ({
     buildInputs ? [], ...
   }: {
