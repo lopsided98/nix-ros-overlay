@@ -155,8 +155,6 @@ self: super: with self.lib; {
         };
       });
 
-      osrf-pycommon = pyFinal.callPackage ./osrf-pycommon {};
-
       pyqt5 = pyPrev.pyqt5.overrideAttrs ({
         patches ? [], ...
       }: {
