@@ -536,6 +536,16 @@ in {
     })
   ];
 
+  # Some ROS packages in Lyrical depend on osrf_pycommon from
+  # rosdistro, others on python3-osrf-pycommon from rosdep. Both have
+  # the same version, but buildEnv complains:
+  # > pkgs.buildEnv error: two given paths contain a conflicting subpath:
+  # > `/nix/store/ja30k3h9akgjwh7cgaq764cdz6390lln-python3.14-osrf_pycommon-2.1.7/lib/python3.14/site-packages/osrf_pycommon/__pycache__/__init__.cpython-314.pyc' and
+  # > `/nix/store/wa62xv62l995ks1nscidwmliavhw1rlb-python3.14-ros-lyrical-osrf-pycommon-2.1.7-r3/lib/python3.14/site-packages/osrf_pycommon/__pycache__/__init__.cpython-314.pyc'
+  # Prevent that by making both the same. This is in line with
+  # https://github.com/ros2/launch/pull/817.
+  osrf-pycommon = self.python3Packages.osrf-pycommon;
+
   # Make the PCL derivation compatible with the rtabmap package. The
   # nixpkgs rtabmap derivation (see below) builds against PCL with
   # Qt6-enabled VTK (pcl.override { vtk = vtkWithQt6; }). As a result,
