@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-jsk-footstep-msgs";
-  version = "5.0.1-r3";
+  version = "5.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/jazzy/jsk_footstep_msgs/5.0.1-3.tar.gz";
-    name = "5.0.1-3.tar.gz";
-    sha256 = "e07f6c326e0282e280133eea8029fc68e65d54ec38fed786b2757772921e72df";
+    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/jazzy/jsk_footstep_msgs/5.0.2-1.tar.gz";
+    name = "5.0.2-1.tar.gz";
+    sha256 = "c550c4b8d6e903688aa2d4d07b40ad4d1bdf5ac40dc8bf9d26c421c1bd853b77";
   };
 
   buildType = "ament_cmake";

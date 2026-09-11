@@ -2,26 +2,26 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python-qt-bindings-deps, python3 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python-qt-bindings-deps, python3, python3Packages, qt6 }:
 buildRosPackage {
   pname = "ros-rolling-python-qt-binding";
-  version = "2.6.1-r1";
+  version = "2.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/python_qt_binding-release/archive/release/rolling/python_qt_binding/2.6.1-1.tar.gz";
-    name = "2.6.1-1.tar.gz";
-    sha256 = "ac987d11533f3c7e841ef5337f61f02684088f7ac82a4efce3bf46f134fcce54";
+    url = "https://github.com/ros2-gbp/python_qt_binding-release/archive/release/rolling/python_qt_binding/2.6.2-1.tar.gz";
+    name = "2.6.2-1.tar.gz";
+    sha256 = "f788fd5a8172489414ceacdbe1d872ab852a8da85dd1a47907cf9d37e5f009e8";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
+  buildInputs = [ ament-cmake qt6.qtbase ];
   checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ python-qt-bindings-deps python3 ];
+  propagatedBuildInputs = [ python-qt-bindings-deps python3 python3Packages.pyqt6 ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
     description = "This stack provides Python bindings for Qt.
-    There are two providers: pyside and pyqt.  PySide2 is available under
+    There are two providers: pyside and pyqt.  PySide6 is available under
     the GPL, LGPL and a commercial license.  PyQt is released under the GPL.
 
     Both the bindings and tools to build bindings are included from each

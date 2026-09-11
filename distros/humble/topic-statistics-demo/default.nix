@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rcutils, sensor-msgs, statistics-msgs }:
 buildRosPackage {
   pname = "ros-humble-topic-statistics-demo";
-  version = "0.20.9-r1";
+  version = "0.20.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/topic_statistics_demo/0.20.9-1.tar.gz";
-    name = "0.20.9-1.tar.gz";
-    sha256 = "51e474b78b0939f283eea8058e79c0724b68d4400f10ff8cb7ac47d7f9140073";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/topic_statistics_demo/0.20.10-1.tar.gz";
+    name = "0.20.10-1.tar.gz";
+    sha256 = "9840515bc9786cb29e17beb72906d8ac6da31e71757b768cfcdefc5cee3d922f";
   };
 
   buildType = "ament_cmake";

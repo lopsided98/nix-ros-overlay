@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-humble-rmw-implementation-cmake";
-  version = "6.1.3-r1";
+  version = "6.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw-release/archive/release/humble/rmw_implementation_cmake/6.1.3-1.tar.gz";
-    name = "6.1.3-1.tar.gz";
-    sha256 = "58365a9908f06c64a2a13c3a702ff48a74c8e8f80bf6343102ce34ffab31a1b2";
+    url = "https://github.com/ros2-gbp/rmw-release/archive/release/humble/rmw_implementation_cmake/6.1.4-1.tar.gz";
+    name = "6.1.4-1.tar.gz";
+    sha256 = "ab40dc41375855ca7b21bad943d6faccf5c3cfbee47aba602c0a362a57e50625";
   };
 
   buildType = "ament_cmake";

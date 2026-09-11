@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, ros-environment, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-jsk-gui-msgs";
-  version = "5.0.1-r3";
+  version = "5.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/kilted/jsk_gui_msgs/5.0.1-3.tar.gz";
-    name = "5.0.1-3.tar.gz";
-    sha256 = "110093a19dfa04fcd32bc2229ff42e030871f7d894ba7dc51a69eec192b6c72e";
+    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/kilted/jsk_gui_msgs/5.0.2-1.tar.gz";
+    name = "5.0.2-1.tar.gz";
+    sha256 = "2b686c04724fe09131eae416de2185c39c5e11df305993e0de2fefd15449c8b0";
   };
 
   buildType = "ament_cmake";

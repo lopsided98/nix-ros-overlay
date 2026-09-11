@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, geometry-msgs, ros-environment, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-jsk-gui-msgs";
-  version = "5.0.1-r3";
+  version = "5.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/lyrical/jsk_gui_msgs/5.0.1-3.tar.gz";
-    name = "5.0.1-3.tar.gz";
-    sha256 = "8ed51df752af956a9ac77e72d0f20e5406fe34da3ffbb1ccbd688a49c53ba9b9";
+    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/lyrical/jsk_gui_msgs/5.0.2-1.tar.gz";
+    name = "5.0.2-1.tar.gz";
+    sha256 = "90616ce9494f44197a38a6f2f1da0d01b6d58387b2c41de1ee0e17767080a557";
   };
 
   buildType = "ament_cmake";

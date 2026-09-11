@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-pytest, ament-lint-auto, ament-lint-common, kangaroo-controller-configuration, launch, launch-pal, launch-param-builder, launch-ros, launch-testing-ament-cmake, pal-sea-arm-description, pal-urdf-utils, rcl-interfaces, rclcpp, urdf-test, xacro }:
 buildRosPackage {
   pname = "ros-humble-kangaroo-description";
-  version = "2.15.0-r1";
+  version = "2.15.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kangaroo_robot-release/archive/release/humble/kangaroo_description/2.15.0-1.tar.gz";
-    name = "2.15.0-1.tar.gz";
-    sha256 = "f15087a6476408cd5e4b815e428dffef844a95ba21b0f6ea989f334750867ff9";
+    url = "https://github.com/ros2-gbp/kangaroo_robot-release/archive/release/humble/kangaroo_description/2.15.1-1.tar.gz";
+    name = "2.15.1-1.tar.gz";
+    sha256 = "a8d0562c843d0de07699de82d7acc2134c82672b16353143ecdb02dd5caff673";
   };
 
   buildType = "ament_cmake";

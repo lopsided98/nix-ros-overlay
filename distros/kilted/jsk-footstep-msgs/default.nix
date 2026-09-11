@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-jsk-footstep-msgs";
-  version = "5.0.1-r3";
+  version = "5.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/kilted/jsk_footstep_msgs/5.0.1-3.tar.gz";
-    name = "5.0.1-3.tar.gz";
-    sha256 = "c0524aaf3921a02502f5c0c0f8a817b94a57ca2e927a5f729d89ad31a42991bb";
+    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/kilted/jsk_footstep_msgs/5.0.2-1.tar.gz";
+    name = "5.0.2-1.tar.gz";
+    sha256 = "86eda177765b439466a5c9bc6075a6035d4ad36b20e19205bc32a76c5979fd0d";
   };
 
   buildType = "ament_cmake";

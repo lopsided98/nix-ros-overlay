@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cli11, cmake, mrpt-hwdrivers, mrpt-slam, mrpt-topography }:
 buildRosPackage {
   pname = "ros-humble-mrpt-libapps-cli";
-  version = "3.1.3-r1";
+  version = "3.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_libapps_cli/3.1.3-1.tar.gz";
-    name = "3.1.3-1.tar.gz";
-    sha256 = "cc863d7867533cd82736ef26d5f7f05d76cad40d982c097951a578f2b2a79c17";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_libapps_cli/3.1.4-1.tar.gz";
+    name = "3.1.4-1.tar.gz";
+    sha256 = "2c727b350ffc089518ddeb627f7a64f2f3016ac3be1860fc16c60a3f448bf7f9";
   };
 
   buildType = "cmake";

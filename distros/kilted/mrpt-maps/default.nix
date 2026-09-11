@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-graphs, mrpt-obs, octomap, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-maps";
-  version = "3.1.3-r1";
+  version = "3.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_maps/3.1.3-1.tar.gz";
-    name = "3.1.3-1.tar.gz";
-    sha256 = "c75c87c1b899b881ee16628a21863acf4061e1ab262a170386b6c6b17c7569bb";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_maps/3.1.4-1.tar.gz";
+    name = "3.1.4-1.tar.gz";
+    sha256 = "4c4923dffbe7fa4441277a3e4b16039879fca44ebcdd103bc0e460e2fd085119";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, git, glfw3, patchelf, pkg-config }:
 buildRosPackage {
   pname = "ros-humble-mujoco-vendor";
-  version = "0.1.0-r1";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mujoco_vendor-release/archive/release/humble/mujoco_vendor/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "37b448c4fc49d1c76e39999f8dd2da9f0aceba0287615cc280312cc9e01dbf6c";
+    url = "https://github.com/ros2-gbp/mujoco_vendor-release/archive/release/humble/mujoco_vendor/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "c6f7fac3ee5e6c7b07c24aaa7106190977cebeb84c1b2377e986f176a63f0964";
   };
 
   buildType = "ament_cmake";

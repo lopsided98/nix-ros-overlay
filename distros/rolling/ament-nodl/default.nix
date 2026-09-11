@@ -2,24 +2,25 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, launch, launch-ros, launch-testing, launch-testing-ament-cmake, python3Packages, ros2nodl }:
 buildRosPackage {
   pname = "ros-rolling-ament-nodl";
-  version = "0.1.0-r7";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_nodl-release/archive/release/rolling/ament_nodl/0.1.0-7.tar.gz";
-    name = "0.1.0-7.tar.gz";
-    sha256 = "b3b69491bb35328429430a308097d03b9687979ee0e979d2ae646b0bca372255";
+    url = "https://github.com/ros2-gbp/nodl-release/archive/release/rolling/ament_nodl/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "04cc142b75f7cafc285e219a69b49593ccd5688368a03a4b34dd057bc6e03f7a";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
+  checkInputs = [ ament-cmake-pytest python3Packages.pytest ];
+  propagatedBuildInputs = [ launch launch-ros launch-testing launch-testing-ament-cmake ros2nodl ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "Ament extension for exporting NoDL .xml files";
-    license = with lib.licenses; [ lgpl3Only ];
+    description = "CMake integration for NoDL features, such as ament index registration and test target creation.";
+    license = with lib.licenses; [ asl20 ];
   };
 }

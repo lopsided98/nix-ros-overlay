@@ -136,6 +136,8 @@ self: super: {
 
  ament-cmake-ros = self.callPackage ./ament-cmake-ros {};
 
+ ament-cmake-ros-core = self.callPackage ./ament-cmake-ros-core {};
+
  ament-cmake-target-dependencies = self.callPackage ./ament-cmake-target-dependencies {};
 
  ament-cmake-test = self.callPackage ./ament-cmake-test {};
@@ -171,6 +173,8 @@ self: super: {
  ament-lint-common = self.callPackage ./ament-lint-common {};
 
  ament-mypy = self.callPackage ./ament-mypy {};
+
+ ament-nodl = self.callPackage ./ament-nodl {};
 
  ament-package = self.callPackage ./ament-package {};
 
@@ -2658,7 +2662,19 @@ self: super: {
 
  nmea-navsat-driver = self.callPackage ./nmea-navsat-driver {};
 
- nodl-python = self.callPackage ./nodl-python {};
+ nodl = self.callPackage ./nodl {};
+
+ nodl-common-interfaces = self.callPackage ./nodl-common-interfaces {};
+
+ nodl-conformance = self.callPackage ./nodl-conformance {};
+
+ nodl-docgen = self.callPackage ./nodl-docgen {};
+
+ nodl-generator-cpp = self.callPackage ./nodl-generator-cpp {};
+
+ nodl-observe = self.callPackage ./nodl-observe {};
+
+ nodl-schema = self.callPackage ./nodl-schema {};
 
  nodl-to-policy = self.callPackage ./nodl-to-policy {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, console-bridge, console-bridge-vendor, rcpputils }:
 buildRosPackage {
   pname = "ros-rolling-class-loader";
-  version = "3.0.1-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/rolling/class_loader/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "c91781d38b1de5b93f44043f4b0eefca71b2cba1e944a1ed613de313aaf87569";
+    url = "https://github.com/ros2-gbp/class_loader-release/archive/release/rolling/class_loader/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "221444f700fa5cf41ff65ae72306af93f9347a5ab3c840e62c400db38d672239";
   };
 
   buildType = "ament_cmake";

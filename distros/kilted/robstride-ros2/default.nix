@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, robstride-driver, robstride-examples, robstride-ros2-control }:
 buildRosPackage {
   pname = "ros-kilted-robstride-ros2";
-  version = "0.1.2-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robstride_ros2-release/archive/release/kilted/robstride_ros2/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "3f50721a894199aaa32a2f43843587d7aa424861a6dd2a5d18c846ae7f25cef6";
+    url = "https://github.com/ros2-gbp/robstride_ros2-release/archive/release/kilted/robstride_ros2/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "c25e53fba66778e5155c1de59b520aee3f7a00855cc3bc8e73f814469b0c83b1";
   };
 
   buildType = "ament_cmake";

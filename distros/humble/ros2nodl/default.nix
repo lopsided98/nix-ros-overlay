@@ -2,23 +2,23 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-flake8, ament-index-python, ament-lint-auto, ament-lint-common, ament-mypy, nodl-python, python3Packages, ros2cli, ros2pkg, ros2run }:
+{ lib, buildRosPackage, fetchurl, ament-index-python, builtin-interfaces, nodl-conformance, nodl-observe, nodl-schema, python3Packages, rcl-interfaces, rclpy, ros2cli, rosgraph-msgs, rosidl-runtime-py, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-ros2nodl";
-  version = "0.3.1-r3";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nodl-release/archive/release/humble/ros2nodl/0.3.1-3.tar.gz";
-    name = "0.3.1-3.tar.gz";
-    sha256 = "f4ed8ea39c51ba105b641cf8a2249d84b52d9e94f364237ddd6d938833eb45f4";
+    url = "https://github.com/ros2-gbp/nodl-release/archive/release/humble/ros2nodl/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "06aeac22cd74bc739c4e14565a819cb3515d1dc134a1ed7c273d873a0548dc80";
   };
 
   buildType = "ament_python";
-  checkInputs = [ ament-flake8 ament-lint-auto ament-lint-common ament-mypy python3Packages.pytest python3Packages.pytest-mock ];
-  propagatedBuildInputs = [ ament-index-python nodl-python python3Packages.argcomplete ros2cli ros2pkg ros2run ];
+  checkInputs = [ builtin-interfaces python3Packages.pytest rcl-interfaces std-msgs ];
+  propagatedBuildInputs = [ ament-index-python nodl-conformance nodl-observe nodl-schema rclpy ros2cli rosgraph-msgs rosidl-runtime-py ];
 
   meta = {
-    description = "CLI tools for NoDL files.";
+    description = "ros2cli command entrypoint for NoDL.";
     license = with lib.licenses; [ asl20 ];
   };
 }

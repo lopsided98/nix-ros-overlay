@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-ros-core, ament-cmake-version, ament-lint-auto, ament-lint-common, osrf-testing-tools-cpp, rcutils, rosidl-dynamic-typesupport, rosidl-runtime-c }:
 buildRosPackage {
   pname = "ros-kilted-rmw";
-  version = "7.8.2-r2";
+  version = "7.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw-release/archive/release/kilted/rmw/7.8.2-2.tar.gz";
-    name = "7.8.2-2.tar.gz";
-    sha256 = "e77a152b6c3773fb4f0a5c55a95b36485a779850ba52c2f4004990c4fd4a4afd";
+    url = "https://github.com/ros2-gbp/rmw-release/archive/release/kilted/rmw/7.8.3-1.tar.gz";
+    name = "7.8.3-1.tar.gz";
+    sha256 = "e19a6f362b20cae93481e7f522ddf683b5d8b45f0876dec99a15fd5f2f932726";
   };
 
   buildType = "ament_cmake";

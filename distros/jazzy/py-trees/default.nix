@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-py-trees";
-  version = "2.5.0-r1";
+  version = "2.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_trees-release/archive/release/jazzy/py_trees/2.5.0-1.tar.gz";
-    name = "2.5.0-1.tar.gz";
-    sha256 = "e614e8d58311f4bb2d48c9d730b16638d8b06de43d72334da2716917b281d289";
+    url = "https://github.com/ros2-gbp/py_trees-release/archive/release/jazzy/py_trees/2.6.0-1.tar.gz";
+    name = "2.6.0-1.tar.gz";
+    sha256 = "2efcef183b2513803574c528517ac0f6e40be5acfa4ecff1c7f3ecc2dfeb936c";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, curl, fmt, gfortran, libusb1, nlohmann_json, opencv, ros-environment, spdlog, udev, unzip, zip }:
 buildRosPackage {
   pname = "ros-lyrical-depthai";
-  version = "3.9.0-r2";
+  version = "3.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-core-release/archive/release/lyrical/depthai/3.9.0-2.tar.gz";
-    name = "3.9.0-2.tar.gz";
-    sha256 = "11808bb681c5260bb8f0782894b31e77800936bf5e90bfb7a86abdf64725c60f";
+    url = "https://github.com/luxonis/depthai-core-release/archive/release/lyrical/depthai/3.10.0-1.tar.gz";
+    name = "3.10.0-1.tar.gz";
+    sha256 = "c5526dc75b0d83278478934e46ec97a24dd6f9de9a4ce1fd74b93251d0bb52a7";
   };
 
   buildType = "ament_cmake";

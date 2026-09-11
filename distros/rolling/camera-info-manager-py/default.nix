@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-mypy, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, python3Packages, rclpy, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-camera-info-manager-py";
-  version = "7.0.3-r1";
+  version = "7.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/camera_info_manager_py/7.0.3-1.tar.gz";
-    name = "7.0.3-1.tar.gz";
-    sha256 = "bab2a6e1ebd59b7684cc641d9019de15e75e77f022fa2def6632d8046894ae0d";
+    url = "https://github.com/ros2-gbp/image_common-release/archive/release/rolling/camera_info_manager_py/7.0.4-1.tar.gz";
+    name = "7.0.4-1.tar.gz";
+    sha256 = "1bdcf6087f659f1bcd4dcff19e9f6500a74399ec53c32e068e8a8f19ee0888cd";
   };
 
   buildType = "ament_python";

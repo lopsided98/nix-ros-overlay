@@ -142,6 +142,8 @@ self: super: {
 
  ament-mypy = self.callPackage ./ament-mypy {};
 
+ ament-nodl = self.callPackage ./ament-nodl {};
+
  ament-package = self.callPackage ./ament-package {};
 
  ament-pclint = self.callPackage ./ament-pclint {};
@@ -331,6 +333,8 @@ self: super: {
  bondpy = self.callPackage ./bondpy {};
 
  boost-geometry-util = self.callPackage ./boost-geometry-util {};
+
+ boost-plugin-loader = self.callPackage ./boost-plugin-loader {};
 
  boost-sml-vendor = self.callPackage ./boost-sml-vendor {};
 
@@ -1926,7 +1930,19 @@ self: super: {
 
  nobleo-socketcan-bridge = self.callPackage ./nobleo-socketcan-bridge {};
 
- nodl-python = self.callPackage ./nodl-python {};
+ nodl = self.callPackage ./nodl {};
+
+ nodl-common-interfaces = self.callPackage ./nodl-common-interfaces {};
+
+ nodl-conformance = self.callPackage ./nodl-conformance {};
+
+ nodl-docgen = self.callPackage ./nodl-docgen {};
+
+ nodl-generator-cpp = self.callPackage ./nodl-generator-cpp {};
+
+ nodl-observe = self.callPackage ./nodl-observe {};
+
+ nodl-schema = self.callPackage ./nodl-schema {};
 
  nodl-to-policy = self.callPackage ./nodl-to-policy {};
 

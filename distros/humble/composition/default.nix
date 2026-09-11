@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, rclcpp, rclcpp-components, rcutils, rmw-implementation-cmake, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-composition";
-  version = "0.20.9-r1";
+  version = "0.20.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/composition/0.20.9-1.tar.gz";
-    name = "0.20.9-1.tar.gz";
-    sha256 = "a2fc7b64f51c53fce69e9a1d6ea39049471702d8729cbe8ad02f49fd3370fa29";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/composition/0.20.10-1.tar.gz";
+    name = "0.20.10-1.tar.gz";
+    sha256 = "38f73a70f9f721b53c6946c33b03544495549eefa679a366750b63e81c1f5c55";
   };
 
   buildType = "ament_cmake";

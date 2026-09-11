@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, geometry-msgs, message-filters, rclcpp, ros-environment, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-posedetection-msgs";
-  version = "5.0.1-r3";
+  version = "5.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/lyrical/posedetection_msgs/5.0.1-3.tar.gz";
-    name = "5.0.1-3.tar.gz";
-    sha256 = "1135c9d655ab477b83decaceb31fbe15f1e77b59cb86bce184841119629d2047";
+    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/lyrical/posedetection_msgs/5.0.2-1.tar.gz";
+    name = "5.0.2-1.tar.gz";
+    sha256 = "055983b4dbb48907d43ca1c0b2194f80b8c10cc22625d0119fab3cb98039da39";
   };
 
   buildType = "ament_cmake";

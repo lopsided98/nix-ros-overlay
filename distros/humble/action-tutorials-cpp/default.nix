@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-tutorials-interfaces, ament-cmake, ament-lint-auto, ament-lint-common, rclcpp, rclcpp-action, rclcpp-components }:
 buildRosPackage {
   pname = "ros-humble-action-tutorials-cpp";
-  version = "0.20.9-r1";
+  version = "0.20.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/action_tutorials_cpp/0.20.9-1.tar.gz";
-    name = "0.20.9-1.tar.gz";
-    sha256 = "ab4c67cecfe3fac3ef2403723d1c168cb786e01217dd769573e766f081a2e617";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/action_tutorials_cpp/0.20.10-1.tar.gz";
+    name = "0.20.10-1.tar.gz";
+    sha256 = "511e18bc9210352f324f5af126bb4b64afc544c65c389bdb906906f258b5c650";
   };
 
   buildType = "ament_cmake";

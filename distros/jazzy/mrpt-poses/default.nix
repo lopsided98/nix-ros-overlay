@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-bayes, mrpt-common, mrpt-io, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-poses";
-  version = "3.1.3-r1";
+  version = "3.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_poses/3.1.3-1.tar.gz";
-    name = "3.1.3-1.tar.gz";
-    sha256 = "39d09c258ca6ffffcd80b3ac5a151684cc8f8032ad237c54f93967caa0812fdd";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_poses/3.1.4-1.tar.gz";
+    name = "3.1.4-1.tar.gz";
+    sha256 = "0b010213b48d90580c943ea0ccdde6c3e9f89c1bbdf5d85b4126f53e22fb72ad";
   };
 
   buildType = "cmake";

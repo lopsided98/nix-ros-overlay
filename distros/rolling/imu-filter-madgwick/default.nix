@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, builtin-interfaces, geometry-msgs, nav-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, sensor-msgs, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-imu-filter-madgwick";
-  version = "2.2.4-r2";
+  version = "2.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/rolling/imu_filter_madgwick/2.2.4-2.tar.gz";
-    name = "2.2.4-2.tar.gz";
-    sha256 = "96eafd4a09d3f0014351968cb6af8e581a0db6a871cb048e199bd35dff6c128d";
+    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/rolling/imu_filter_madgwick/2.2.5-1.tar.gz";
+    name = "2.2.5-1.tar.gz";
+    sha256 = "479fe6ddf9fa3fe6248a6291716dc5adfc2343c3bf7af3f71a607cfdbce116e2";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Filter which fuses angular velocities, accelerations, and (optionally) magnetic readings from a generic IMU device into an orientation. Based on code by Sebastian Madgwick, http://www.x-io.co.uk/node/8#open_source_ahrs_and_imu_algorithms.";
-    license = with lib.licenses; [ "GPL" ];
+    license = with lib.licenses; [ "GPL-3.0-or-later" ];
   };
 }

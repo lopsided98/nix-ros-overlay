@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, sqlite }:
 buildRosPackage {
   pname = "ros-humble-sqlite3-vendor";
-  version = "0.15.16-r1";
+  version = "0.15.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/humble/sqlite3_vendor/0.15.16-1.tar.gz";
-    name = "0.15.16-1.tar.gz";
-    sha256 = "17c10e4ea2e0b27dc382a9b541bf67b18abf8f622960ee169ebdbcb06c684cdb";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/humble/sqlite3_vendor/0.15.17-1.tar.gz";
+    name = "0.15.17-1.tar.gz";
+    sha256 = "4c78cc9289f1664bd3f1a143f2385b0a0f78a4686e099a590719b707c37942ac";
   };
 
   buildType = "ament_cmake";

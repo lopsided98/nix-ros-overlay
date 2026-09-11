@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-ros, ament-cmake-version, ament-lint-auto, ament-lint-common, osrf-testing-tools-cpp, rcutils, rosidl-runtime-c }:
 buildRosPackage {
   pname = "ros-humble-rmw";
-  version = "6.1.3-r1";
+  version = "6.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw-release/archive/release/humble/rmw/6.1.3-1.tar.gz";
-    name = "6.1.3-1.tar.gz";
-    sha256 = "8ce3722b42a15d35f5189b0c2cb21f768274be85a1d49f59093feb48ebdce87c";
+    url = "https://github.com/ros2-gbp/rmw-release/archive/release/humble/rmw/6.1.4-1.tar.gz";
+    name = "6.1.4-1.tar.gz";
+    sha256 = "04ce4e0ec9c956f5d8c7f777bf1ca8646e4f4af3970c2c0e0ebf64e7057e9c2f";
   };
 
   buildType = "ament_cmake";

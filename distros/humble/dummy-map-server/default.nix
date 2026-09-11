@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-dummy-map-server";
-  version = "0.20.9-r1";
+  version = "0.20.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/dummy_map_server/0.20.9-1.tar.gz";
-    name = "0.20.9-1.tar.gz";
-    sha256 = "de9fe50059a466b4bfcc1a437b236d6ad5a4028cea1dc8c897582d9ada133719";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/dummy_map_server/0.20.10-1.tar.gz";
+    name = "0.20.10-1.tar.gz";
+    sha256 = "8c3a35d8fc56cabe5b4589a18af949dfd56f39948e4eb1352450f90f5e06b020";
   };
 
   buildType = "ament_cmake";

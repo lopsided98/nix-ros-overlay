@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, libfyaml, mrpt-common, mrpt-core, mrpt-typemeta, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-mrpt-containers";
-  version = "3.1.3-r1";
+  version = "3.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_containers/3.1.3-1.tar.gz";
-    name = "3.1.3-1.tar.gz";
-    sha256 = "5bd8f2f61e9149f8911d922c3e4c4527f8aab27354bd816d44cb5cfd952cabb1";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_containers/3.1.4-1.tar.gz";
+    name = "3.1.4-1.tar.gz";
+    sha256 = "cb30b448c619025ef6f2e4959d73ead64e55d78c659aa3f480281c0efddbdd9f";
   };
 
   buildType = "cmake";

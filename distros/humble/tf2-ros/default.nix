@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, message-filters, rcl-interfaces, rclcpp, rclcpp-action, rclcpp-components, rosgraph-msgs, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-humble-tf2-ros";
-  version = "0.25.22-r1";
+  version = "0.25.23-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/tf2_ros/0.25.22-1.tar.gz";
-    name = "0.25.22-1.tar.gz";
-    sha256 = "ff66ab0491794d56481b2017dcae3714d945015c59fb2d422874c75ad9feb0d1";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/tf2_ros/0.25.23-1.tar.gz";
+    name = "0.25.23-1.tar.gz";
+    sha256 = "9d46fcc37ae57fc711ec0ca5909373391b4b51337e15917c0c5bee1049049d41";
   };
 
   buildType = "ament_cmake";

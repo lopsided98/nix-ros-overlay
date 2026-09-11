@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, can-msgs, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, can-msgs, diagnostic-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-kilted-robstride-driver";
-  version = "0.1.2-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robstride_ros2-release/archive/release/kilted/robstride_driver/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "9112e771725315f7d7bf6dfb983bd803105ea29bbed8d3b88a76b8f3de2be12e";
+    url = "https://github.com/ros2-gbp/robstride_ros2-release/archive/release/kilted/robstride_driver/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "00f1ad86b4f082b03c7c1c1fd5861332010433f0643e5839d5bc2dac09dea711";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ can-msgs rclcpp ];
+  propagatedBuildInputs = [ can-msgs diagnostic-msgs rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

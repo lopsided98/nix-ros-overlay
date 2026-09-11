@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, launch-ros, python3Packages, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-humble-examples-tf2-py";
-  version = "0.25.22-r1";
+  version = "0.25.23-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/examples_tf2_py/0.25.22-1.tar.gz";
-    name = "0.25.22-1.tar.gz";
-    sha256 = "c4baf94c466a210caa7a47e27279402c1a0faf0c4a151ecc74f409339120371b";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/examples_tf2_py/0.25.23-1.tar.gz";
+    name = "0.25.23-1.tar.gz";
+    sha256 = "6c6975ba228006cafb358c050f30e96bcd24cf0f994d490cb79bf543d5ce4c1a";
   };
 
   buildType = "ament_python";
