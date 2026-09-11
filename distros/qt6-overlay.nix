@@ -19,6 +19,13 @@ rosSelf: rosSuper: with rosSelf.lib; {
     propagatedBuildInputs = filter (p: ! hasPrefix "qt" (p.name or "")) propagatedBuildInputs;
     buildInputs = filter (p: hasPrefix "qt" (p.name or "")) propagatedBuildInputs;
   });
+  plotjuggler-ros = rosSuper.plotjuggler-ros.overrideAttrs ({
+    buildInputs ? [], propagatedBuildInputs ? [], ...
+  }: {
+    # See plotjuggler comment above
+    propagatedBuildInputs = filter (p: ! hasPrefix "qt" (p.name or "")) propagatedBuildInputs;
+    buildInputs = filter (p: hasPrefix "qt" (p.name or "")) propagatedBuildInputs;
+  });
 
   # keep-sorted end
 }
