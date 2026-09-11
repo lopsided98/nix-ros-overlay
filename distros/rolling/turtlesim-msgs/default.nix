@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-turtlesim-msgs";
-  version = "1.11.2-r1";
+  version = "1.11.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_tutorials-release/archive/release/rolling/turtlesim_msgs/1.11.2-1.tar.gz";
-    name = "1.11.2-1.tar.gz";
-    sha256 = "6f2392f4396c42eeafa0d2472c618782fba907f4e7753dfcbd2968ed1aa7b108";
+    url = "https://github.com/ros2-gbp/ros_tutorials-release/archive/release/rolling/turtlesim_msgs/1.11.3-1.tar.gz";
+    name = "1.11.3-1.tar.gz";
+    sha256 = "7cd035d93c6ca8ec745fbdee9b0fe54c5da48c4aa85302947f009de11cb642d0";
   };
 
   buildType = "ament_cmake";

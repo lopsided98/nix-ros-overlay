@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, py-trees, py-trees-ros-interfaces, python3Packages, rcl-interfaces, rclpy, ros2topic, sensor-msgs, std-msgs, std-srvs, tf2-ros-py, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-py-trees-ros";
-  version = "2.5.0-r1";
+  version = "2.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_trees_ros-release/archive/release/jazzy/py_trees_ros/2.5.0-1.tar.gz";
-    name = "2.5.0-1.tar.gz";
-    sha256 = "664d1c87e5070c0c21481ebbdba600cba787ec9b16d92274d95b1dbe00953e8d";
+    url = "https://github.com/ros2-gbp/py_trees_ros-release/archive/release/jazzy/py_trees_ros/2.6.0-1.tar.gz";
+    name = "2.6.0-1.tar.gz";
+    sha256 = "313b6ca0c19e9f33edd45087269bee4a9edb3eb7a310968ae565a09ace154dec";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, performance-test-fixture, rcl-logging-interface, rcpputils, rcutils, rsyslog }:
 buildRosPackage {
   pname = "ros-rolling-rcl-logging-syslog";
-  version = "0.1.2-r2";
+  version = "0.2.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_logging_syslog-release/archive/release/rolling/rcl_logging_syslog/0.1.2-2.tar.gz";
-    name = "0.1.2-2.tar.gz";
-    sha256 = "716d4d6c21c89fbf3971689a3f271b98f83827630a69b1c3de71ddb2ce4a06e6";
+    url = "https://github.com/ros2-gbp/rcl_logging_syslog-release/archive/release/rolling/rcl_logging_syslog/0.2.0-2.tar.gz";
+    name = "0.2.0-2.tar.gz";
+    sha256 = "da212f6f1fa640a928fea485c93809daefb8eda519f4e3ba3dcbd7980d50bdb3";
   };
 
   buildType = "ament_cmake";

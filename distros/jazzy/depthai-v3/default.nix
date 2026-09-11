@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, curl, fmt, gfortran, libusb1, nlohmann_json, opencv, ros-environment, spdlog, udev, unzip, zip }:
 buildRosPackage {
   pname = "ros-jazzy-depthai-v3";
-  version = "3.9.0-r1";
+  version = "3.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-core-v3-release/archive/release/jazzy/depthai_v3/3.9.0-1.tar.gz";
-    name = "3.9.0-1.tar.gz";
-    sha256 = "91e167db986b955bf161a00da39af6eeecd2b684d2d99cf219c32a7321ea1429";
+    url = "https://github.com/luxonis/depthai-core-v3-release/archive/release/jazzy/depthai_v3/3.10.0-1.tar.gz";
+    name = "3.10.0-1.tar.gz";
+    sha256 = "7d1618d3f65b1deb6c5ea0252f09e879858f08829e586043d99684a55371d385";
   };
 
   buildType = "ament_cmake";

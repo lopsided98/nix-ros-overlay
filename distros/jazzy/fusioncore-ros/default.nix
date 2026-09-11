@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, compass-msgs, diagnostic-msgs, eigen3-cmake-module, fusioncore-core, geographic-msgs, geometry-msgs, gps-msgs, launch-testing-ament-cmake, launch-testing-ros, lifecycle-msgs, nav-msgs, proj, rclcpp, rclcpp-lifecycle, robot-localization, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-fusioncore-ros";
-  version = "0.3.8-r1";
+  version = "0.3.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/manankharwar/fusioncore-release/archive/release/jazzy/fusioncore_ros/0.3.8-1.tar.gz";
-    name = "0.3.8-1.tar.gz";
-    sha256 = "93b3dc86d96047ef793513595622b993c31a39fb57ee92cf53dd35e3448519bb";
+    url = "https://github.com/manankharwar/fusioncore-release/archive/release/jazzy/fusioncore_ros/0.3.9-1.tar.gz";
+    name = "0.3.9-1.tar.gz";
+    sha256 = "068b54b2c9898471dbf9279091dc993199c2e43aeb6956712e436a07a35fc6bf";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, fmt, geometry-msgs, hardware-interface, pal-statistics, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-controller-interface";
-  version = "6.10.0-r1";
+  version = "6.10.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/lyrical/controller_interface/6.10.0-1.tar.gz";
-    name = "6.10.0-1.tar.gz";
-    sha256 = "cd0b2202af5bb6e87317d3bbcda4dd8dfa8d1917532798ace3fd2665e89c3a98";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/lyrical/controller_interface/6.10.1-1.tar.gz";
+    name = "6.10.1-1.tar.gz";
+    sha256 = "9fd01ac0ed35157e0af24f1e1a9272f79aa18b402ca64c2834db6f559501a3d5";
   };
 
   buildType = "ament_cmake";

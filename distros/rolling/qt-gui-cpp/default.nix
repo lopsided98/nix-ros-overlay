@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, pkg-config, pluginlib, python-qt-binding, qt-gui, qt5or6, tinyxml-2 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, pkg-config, pluginlib, python-qt-binding, qt-gui, qt6, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-rolling-qt-gui-cpp";
-  version = "3.0.2-r1";
+  version = "3.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui_cpp/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "93ffe167c403c055a4baf06501dc1ae3f7e2883f403642b08d4d40a563225614";
+    url = "https://github.com/ros2-gbp/qt_gui_core-release/archive/release/rolling/qt_gui_cpp/3.0.3-1.tar.gz";
+    name = "3.0.3-1.tar.gz";
+    sha256 = "0dfb40724d10e811eaff45f14819357c7e1e5457b3373b8627be604fde14d403";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake pkg-config python-qt-binding ];
   checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ pluginlib qt-gui qt5or6.qtbase tinyxml-2 ];
+  propagatedBuildInputs = [ pluginlib qt-gui qt6.qtbase tinyxml-2 ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

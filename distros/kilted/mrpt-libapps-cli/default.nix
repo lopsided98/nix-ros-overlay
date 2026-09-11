@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cli11, cmake, mrpt-hwdrivers, mrpt-slam, mrpt-topography }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-libapps-cli";
-  version = "3.1.3-r1";
+  version = "3.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_libapps_cli/3.1.3-1.tar.gz";
-    name = "3.1.3-1.tar.gz";
-    sha256 = "98c3adb5e0f6286183dfefc765a6da2d7f6f0bd5ad9f8c070d61e3f327deda2e";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_libapps_cli/3.1.4-1.tar.gz";
+    name = "3.1.4-1.tar.gz";
+    sha256 = "0b66c1f5f27e9b11407c87255d0b6b38094981a30971971570a3c4acb4da2283";
   };
 
   buildType = "cmake";

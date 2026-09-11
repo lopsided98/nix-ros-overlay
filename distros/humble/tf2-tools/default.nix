@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, graphviz, python3Packages, rclpy, tf2-msgs, tf2-py, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-humble-tf2-tools";
-  version = "0.25.22-r1";
+  version = "0.25.23-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/tf2_tools/0.25.22-1.tar.gz";
-    name = "0.25.22-1.tar.gz";
-    sha256 = "fb86d2dd88269b0794c86fd021e1caf5af9c9e50b7ca2819fe7f4954c797abe1";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/humble/tf2_tools/0.25.23-1.tar.gz";
+    name = "0.25.23-1.tar.gz";
+    sha256 = "000b6e84336049fe3835e11d12c08de0a4d34d72e5c0899565c719f5ed5c52ec";
   };
 
   buildType = "ament_python";

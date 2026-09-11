@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-index-python, controller-manager, forward-command-controller, joint-state-broadcaster, launch, launch-ros, robot-state-publisher, robstride-ros2-control, ros2-socketcan, xacro }:
 buildRosPackage {
   pname = "ros-kilted-robstride-examples";
-  version = "0.1.2-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robstride_ros2-release/archive/release/kilted/robstride_examples/0.1.2-1.tar.gz";
-    name = "0.1.2-1.tar.gz";
-    sha256 = "25cb0eb991c2dc941aca64fb0445ee72097fadffb4413df4807fbb28fc766aaf";
+    url = "https://github.com/ros2-gbp/robstride_ros2-release/archive/release/kilted/robstride_examples/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "e97418c367c47b1d690eeb20ab5f597a1dba6085dad75055f7e25118784eb4de";
   };
 
   buildType = "ament_cmake";

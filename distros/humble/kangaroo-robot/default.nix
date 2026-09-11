@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, kangaroo-bringup, kangaroo-controller-configuration, kangaroo-description }:
 buildRosPackage {
   pname = "ros-humble-kangaroo-robot";
-  version = "2.15.0-r1";
+  version = "2.15.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kangaroo_robot-release/archive/release/humble/kangaroo_robot/2.15.0-1.tar.gz";
-    name = "2.15.0-1.tar.gz";
-    sha256 = "6ebd47b7094f1c9c49230c70797e447c408cd0b5432f0eb2316b8bdec28f42fa";
+    url = "https://github.com/ros2-gbp/kangaroo_robot-release/archive/release/humble/kangaroo_robot/2.15.1-1.tar.gz";
+    name = "2.15.1-1.tar.gz";
+    sha256 = "e1be4ffda03c1aa91a85c1895c65dd327d60104cbf7b2690d104606966c059cd";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-lint-auto, ament-lint-common, lifecycle, lifecycle-msgs, rclpy, ros-testing, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-lifecycle-py";
-  version = "0.20.9-r1";
+  version = "0.20.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/lifecycle_py/0.20.9-1.tar.gz";
-    name = "0.20.9-1.tar.gz";
-    sha256 = "891b203764ad15a69a5a9c87964b302d77170005d6bd089afc071c4d5545da7d";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/humble/lifecycle_py/0.20.10-1.tar.gz";
+    name = "0.20.10-1.tar.gz";
+    sha256 = "a44b60de28d0f75c1137c4b9513fb646d4c7db2eae797874bfa0d86d265a0f87";
   };
 
   buildType = "ament_python";

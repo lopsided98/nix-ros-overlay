@@ -132,6 +132,8 @@ self: super: {
 
  ament-cmake-ros = self.callPackage ./ament-cmake-ros {};
 
+ ament-cmake-ros-core = self.callPackage ./ament-cmake-ros-core {};
+
  ament-cmake-target-dependencies = self.callPackage ./ament-cmake-target-dependencies {};
 
  ament-cmake-test = self.callPackage ./ament-cmake-test {};
@@ -167,6 +169,8 @@ self: super: {
  ament-lint-common = self.callPackage ./ament-lint-common {};
 
  ament-mypy = self.callPackage ./ament-mypy {};
+
+ ament-nodl = self.callPackage ./ament-nodl {};
 
  ament-package = self.callPackage ./ament-package {};
 
@@ -537,6 +541,8 @@ self: super: {
  bondpy = self.callPackage ./bondpy {};
 
  boost-geometry-util = self.callPackage ./boost-geometry-util {};
+
+ boost-plugin-loader = self.callPackage ./boost-plugin-loader {};
 
  boost-sml-vendor = self.callPackage ./boost-sml-vendor {};
 
@@ -2654,7 +2660,19 @@ self: super: {
 
  nobleo-socketcan-bridge = self.callPackage ./nobleo-socketcan-bridge {};
 
- nodl-python = self.callPackage ./nodl-python {};
+ nodl = self.callPackage ./nodl {};
+
+ nodl-common-interfaces = self.callPackage ./nodl-common-interfaces {};
+
+ nodl-conformance = self.callPackage ./nodl-conformance {};
+
+ nodl-docgen = self.callPackage ./nodl-docgen {};
+
+ nodl-generator-cpp = self.callPackage ./nodl-generator-cpp {};
+
+ nodl-observe = self.callPackage ./nodl-observe {};
+
+ nodl-schema = self.callPackage ./nodl-schema {};
 
  nodl-to-policy = self.callPackage ./nodl-to-policy {};
 
@@ -3925,6 +3943,8 @@ self: super: {
  sick-safevisionary-tests = self.callPackage ./sick-safevisionary-tests {};
 
  sick-scan-xd = self.callPackage ./sick-scan-xd {};
+
+ sicks300-ros2 = self.callPackage ./sicks300-ros2 {};
 
  simple-actions = self.callPackage ./simple-actions {};
 

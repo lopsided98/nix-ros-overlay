@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rqt-gui, rqt-gui-cpp, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-humble-rqt";
-  version = "1.1.9-r1";
+  version = "1.1.10-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/humble/rqt/1.1.9-1.tar.gz";
-    name = "1.1.9-1.tar.gz";
-    sha256 = "e9e9bf4e56e307193543f26e6b337f1171439723aa26a68ebe501968ddbbf808";
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/humble/rqt/1.1.10-2.tar.gz";
+    name = "1.1.10-2.tar.gz";
+    sha256 = "f64fb9adf5598c0dff0046015c4f27d0e4543c87f53c0795b063cf9bb6362ddb";
   };
 
   buildType = "ament_python";

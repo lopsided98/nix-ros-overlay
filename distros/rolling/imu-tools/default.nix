@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, imu-complementary-filter, imu-filter-madgwick, rviz-imu-plugin }:
 buildRosPackage {
   pname = "ros-rolling-imu-tools";
-  version = "2.2.4-r2";
+  version = "2.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/rolling/imu_tools/2.2.4-2.tar.gz";
-    name = "2.2.4-2.tar.gz";
-    sha256 = "f1c31f157ac4cce88d168fab29b95360cd9fc1d387c1c025d9f958303fb50937";
+    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/rolling/imu_tools/2.2.5-1.tar.gz";
+    name = "2.2.5-1.tar.gz";
+    sha256 = "36385e21aa502dbe289096c3ec13797f5f805ca26a3bb401cd8e82ad82f99566";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Various tools for IMU devices";
-    license = with lib.licenses; [ "BSD-&-GPL" ];
+    license = with lib.licenses; [ bsd3 "GPL-3.0-or-later" ];
   };
 }

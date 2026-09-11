@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-flake8, ament-xmllint, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-ament-mypy";
-  version = "0.21.1-r1";
+  version = "0.21.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_mypy/0.21.1-1.tar.gz";
-    name = "0.21.1-1.tar.gz";
-    sha256 = "05f04cfeb0c33f798812683feab8d10daaf076d51e0b311cf085227b608ba3c5";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_mypy/0.21.2-1.tar.gz";
+    name = "0.21.2-1.tar.gz";
+    sha256 = "d21ff589a0966a01dc398e2e779fd1997196c594dda992b5937fdd487d372b8b";
   };
 
   buildType = "ament_python";

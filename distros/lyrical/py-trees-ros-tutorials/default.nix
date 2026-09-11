@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, geometry-msgs, launch, launch-ros, py-trees, py-trees-ros, py-trees-ros-interfaces, python3Packages, qt5, rcl-interfaces, rclpy, ros2launch, ros2param, ros2run, ros2service, ros2topic, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-py-trees-ros-tutorials";
-  version = "2.5.0-r1";
+  version = "2.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_trees_ros_tutorials-release/archive/release/lyrical/py_trees_ros_tutorials/2.5.0-1.tar.gz";
-    name = "2.5.0-1.tar.gz";
-    sha256 = "753726304f71447a39b19b6834d6dda1db6469f0dc7ced09b38231c3f8b9c087";
+    url = "https://github.com/ros2-gbp/py_trees_ros_tutorials-release/archive/release/lyrical/py_trees_ros_tutorials/2.6.0-1.tar.gz";
+    name = "2.6.0-1.tar.gz";
+    sha256 = "a165dff5c6100f23e3722a7eede46ec07594e06b1411bda06b03c1f0e9957757";
   };
 
   buildType = "ament_python";

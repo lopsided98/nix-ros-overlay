@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, jsk-footstep-msgs, jsk-gui-msgs, jsk-hark-msgs, posedetection-msgs, ros-environment, speech-recognition-msgs }:
 buildRosPackage {
   pname = "ros-kilted-jsk-common-msgs";
-  version = "5.0.1-r3";
+  version = "5.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/kilted/jsk_common_msgs/5.0.1-3.tar.gz";
-    name = "5.0.1-3.tar.gz";
-    sha256 = "959bf2809278798dde471e8bb2ab2b5b2c44fbb42134622ca96b4fa5fa3221db";
+    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/kilted/jsk_common_msgs/5.0.2-1.tar.gz";
+    name = "5.0.2-1.tar.gz";
+    sha256 = "f0f2e88fe885ecdbeeda57d80f6a5b6b6748d5967e1257f9337d400ca78b79a0";
   };
 
   buildType = "ament_cmake";

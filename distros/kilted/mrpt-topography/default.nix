@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-math, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-topography";
-  version = "3.1.3-r1";
+  version = "3.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_topography/3.1.3-1.tar.gz";
-    name = "3.1.3-1.tar.gz";
-    sha256 = "e8758a837c51c8d86d35f4654cec2165ebb0d581b263176dd9755483500170ff";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_topography/3.1.4-1.tar.gz";
+    name = "3.1.4-1.tar.gz";
+    sha256 = "0d14e27ac6f45e963214e95e504aea66db9d6c44f466713f9694c72fba35ef9b";
   };
 
   buildType = "cmake";

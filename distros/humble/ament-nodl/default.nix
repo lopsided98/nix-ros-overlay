@@ -2,24 +2,24 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ros2nodl }:
 buildRosPackage {
   pname = "ros-humble-ament-nodl";
-  version = "0.1.0-r4";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_nodl-release/archive/release/humble/ament_nodl/0.1.0-4.tar.gz";
-    name = "0.1.0-4.tar.gz";
-    sha256 = "c5582c2a5856fabbe768ed8b465b35ee95fa905f422630e82454e95d01640873";
+    url = "https://github.com/ros2-gbp/nodl-release/archive/release/humble/ament_nodl/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "189f591206a929636a1560fb470bdf89bcf85d17672ffb4a3dc9d26028483a81";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ ros2nodl ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "Ament extension for exporting NoDL .xml files";
-    license = with lib.licenses; [ lgpl3Only ];
+    description = "CMake macros for registering NoDL documents with the ament index.";
+    license = with lib.licenses; [ asl20 ];
   };
 }

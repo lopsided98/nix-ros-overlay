@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, eigen, mrpt-common, mrpt-img, mrpt-poses, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-viz";
-  version = "3.1.3-r1";
+  version = "3.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_viz/3.1.3-1.tar.gz";
-    name = "3.1.3-1.tar.gz";
-    sha256 = "1cd36f65d670fba58077dff1923e3866fa92ddcbf0ab53d7e81f3682cdc089b1";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_viz/3.1.4-1.tar.gz";
+    name = "3.1.4-1.tar.gz";
+    sha256 = "a82339a9453bc5b63e1016b5d018020de3c75f6578d80817ff0719e2df388fe4";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, jsk-footstep-msgs, jsk-gui-msgs, jsk-hark-msgs, posedetection-msgs, ros-environment, speech-recognition-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-jsk-common-msgs";
-  version = "5.0.1-r3";
+  version = "5.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/lyrical/jsk_common_msgs/5.0.1-3.tar.gz";
-    name = "5.0.1-3.tar.gz";
-    sha256 = "b40acd37df4222c3aa217fbf6bd04d74a6a341e006e68c608f9fdda0e4fb68fd";
+    url = "https://github.com/tork-a/jsk_common_msgs-release/archive/release/lyrical/jsk_common_msgs/5.0.2-1.tar.gz";
+    name = "5.0.2-1.tar.gz";
+    sha256 = "dd23b5182ff4432d0ba0d2221361a6af0a30798a6c7117e7802b1119f90428ad";
   };
 
   buildType = "ament_cmake";
