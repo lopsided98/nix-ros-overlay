@@ -174,6 +174,9 @@ self: super: with self.lib; {
 
       rospkg = pyFinal.callPackage ./rospkg { };
 
+      # # TODO: Remove after https://github.com/ros/rosdistro/pull/53923 is merged
+      ruamel_yaml = pyFinal.ruamel-yaml;
+
       setuptools_79 = pyPrev.setuptools.overrideAttrs ({
         pname, src, postPatch, ...
       }: let
