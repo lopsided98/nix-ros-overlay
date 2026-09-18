@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-swri-console-util";
-  version = "3.9.1-r2";
+  version = "3.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_console_util/3.9.1-2.tar.gz";
-    name = "3.9.1-2.tar.gz";
-    sha256 = "ed423899fdb63f1d5fe3e0c7af979fc20db24ef39907237f1cb73ab87d92f4b3";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_console_util/3.11.0-1.tar.gz";
+    name = "3.11.0-1.tar.gz";
+    sha256 = "e1439e751edba49947f6788867cbcd09e4a845d2d1ab82ee95439186d807945b";
   };
 
   buildType = "ament_cmake";

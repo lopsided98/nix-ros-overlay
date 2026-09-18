@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libposes }:
 buildRosPackage {
   pname = "ros-rolling-mola-traj-tools";
-  version = "3.2.0-r1";
+  version = "3.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_traj_tools/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "62283d782626ccb39e5e9847529de55a5724bbec50a00a19aa2093da89e8b4aa";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_traj_tools/3.2.1-1.tar.gz";
+    name = "3.2.1-1.tar.gz";
+    sha256 = "faafaffda2e4757df634b50aae29ca52744346e06790122d67eb217e24b6ea0c";
   };
 
   buildType = "cmake";

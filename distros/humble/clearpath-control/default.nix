@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, clearpath-mecanum-drive-controller, controller-manager, diff-drive-controller, imu-filter-madgwick, interactive-marker-twist-server, joint-state-broadcaster, joint-trajectory-controller, joy-linux, robot-localization, robot-state-publisher, teleop-twist-joy, twist-mux }:
 buildRosPackage {
   pname = "ros-humble-clearpath-control";
-  version = "1.3.12-r1";
+  version = "1.3.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/humble/clearpath_control/1.3.12-1.tar.gz";
-    name = "1.3.12-1.tar.gz";
-    sha256 = "aa384382b55ce306aadeec5fa63ea6e29e1949df089e09ddbe9cf04d3da8f240";
+    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/humble/clearpath_control/1.3.13-1.tar.gz";
+    name = "1.3.13-1.tar.gz";
+    sha256 = "7fb52cebc2d054f286853b2bacc437c4741cf72e97eb067eaccc06ef4f5cb8fc";
   };
 
   buildType = "ament_cmake";

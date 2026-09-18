@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, opencv, swri-math-util }:
 buildRosPackage {
   pname = "ros-humble-swri-opencv-util";
-  version = "3.9.1-r2";
+  version = "3.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_opencv_util/3.9.1-2.tar.gz";
-    name = "3.9.1-2.tar.gz";
-    sha256 = "86166f2b41d8ac66e31dbb2b2ad969c12c2d2342a77a88c51e5f76b2cd95f796";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/humble/swri_opencv_util/3.11.0-1.tar.gz";
+    name = "3.11.0-1.tar.gz";
+    sha256 = "ec6688c33b36bc080273c28d1b4169304a098a41ec1f1d357d47870233ff0bdf";
   };
 
   buildType = "ament_cmake";

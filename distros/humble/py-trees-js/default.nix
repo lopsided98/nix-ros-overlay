@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages, qt5 }:
 buildRosPackage {
   pname = "ros-humble-py-trees-js";
-  version = "0.6.7-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_trees_js-release/archive/release/humble/py_trees_js/0.6.7-1.tar.gz";
-    name = "0.6.7-1.tar.gz";
-    sha256 = "57377069d6a2249a8bb3cbac352528ea40f42b62474382793dea68ac337c7024";
+    url = "https://github.com/ros2-gbp/py_trees_js-release/archive/release/humble/py_trees_js/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "1825f0b72ff0c95e80f7e70cf99c0377e6884f3e99dac92105921f6e59a2c999";
   };
 
   buildType = "ament_python";

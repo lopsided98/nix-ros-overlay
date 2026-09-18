@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp }:
 buildRosPackage {
   pname = "ros-kilted-swri-console-util";
-  version = "3.9.1-r1";
+  version = "3.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/kilted/swri_console_util/3.9.1-1.tar.gz";
-    name = "3.9.1-1.tar.gz";
-    sha256 = "197dc594b53c7e4c4b5f77c150fec5a3101cc2c8ce5004597f037185a1c0cef7";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/kilted/swri_console_util/3.11.0-1.tar.gz";
+    name = "3.11.0-1.tar.gz";
+    sha256 = "172dddc309945820ceaa7fdb23dc95d95142a008f7727898cfb2aec611f61c4e";
   };
 
   buildType = "ament_cmake";
