@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, camera-calibration-parsers, cv-bridge, eigen, image-geometry, image-transport, message-filters, opencv, rcl-interfaces, rclcpp, rclcpp-components, rclpy, swri-geometry-util, swri-math-util, swri-opencv-util, tf2 }:
 buildRosPackage {
   pname = "ros-kilted-swri-image-util";
-  version = "3.9.1-r1";
+  version = "3.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/kilted/swri_image_util/3.9.1-1.tar.gz";
-    name = "3.9.1-1.tar.gz";
-    sha256 = "366c3e3cb89a2ecf4975c594fa5adfcbe80f5aa67d69ace530ace95953c92cee";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/kilted/swri_image_util/3.11.0-1.tar.gz";
+    name = "3.11.0-1.tar.gz";
+    sha256 = "a46a35d6aaa58bf510870e73a78053423dbb576366d9aa913510a7ed3f1864df";
   };
 
   buildType = "ament_cmake";

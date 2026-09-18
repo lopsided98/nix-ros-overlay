@@ -2,20 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, lttng-tools, rclcpp, ros2run, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, lttng-tools, rclcpp, rclpy, ros2run, statistics-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ros2-pulse";
-  version = "0.4.1-r2";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/TanayK07/ros2_pulse-release/archive/release/jazzy/ros2_pulse/0.4.1-2.tar.gz";
-    name = "0.4.1-2.tar.gz";
-    sha256 = "ec1eb3278b18bd91302f47a364ca3f52adf6baf1005f7c0946aa43bf3c0593c1";
+    url = "https://github.com/TanayK07/ros2_pulse-release/archive/release/jazzy/ros2_pulse/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "81ba2d9f22f43b8ac0501b04d4ca9b306addeda0e87129ce61c273e3f3599fd5";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest ament-cmake-pytest lttng-tools rclcpp ros2run std-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest lttng-tools rclpy ros2run std-msgs ];
+  propagatedBuildInputs = [ rclcpp statistics-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

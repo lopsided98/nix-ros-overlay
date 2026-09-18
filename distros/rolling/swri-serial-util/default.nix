@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-rolling-swri-serial-util";
-  version = "3.9.1-r1";
+  version = "3.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_serial_util/3.9.1-1.tar.gz";
-    name = "3.9.1-1.tar.gz";
-    sha256 = "d41f90261927ceafe0f5f85411f962de5a2b42eedbd4c3d2f72c8ee5c15b0bf5";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_serial_util/3.11.0-1.tar.gz";
+    name = "3.11.0-1.tar.gz";
+    sha256 = "94b5e64b7a60234e86cb219bd01a65808a325766e70aeb3fadb5e02e4fe2dfd7";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, nodl-schema, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-nodl-docgen";
-  version = "2.0.2-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nodl-release/archive/release/humble/nodl_docgen/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "af7ac38ef648da58a8e24953d4785b92c59d3d4ee736d1ebe1a242541fb03404";
+    url = "https://github.com/ros2-gbp/nodl-release/archive/release/humble/nodl_docgen/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "de3a1ff2086a2148c1633862285febe98bc80ed727b19dda9b12606b0f6f2b04";
   };
 
   buildType = "ament_python";

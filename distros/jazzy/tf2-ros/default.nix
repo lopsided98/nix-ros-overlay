@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, message-filters, rcl-interfaces, rclcpp, rclcpp-action, rclcpp-components, rosgraph-msgs, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-tf2-ros";
-  version = "0.36.22-r1";
+  version = "0.36.23-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_ros/0.36.22-1.tar.gz";
-    name = "0.36.22-1.tar.gz";
-    sha256 = "5239c99590d16f319a089f54ac07b47b2077703565d05da5fab792e64db442c2";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/tf2_ros/0.36.23-1.tar.gz";
+    name = "0.36.23-1.tar.gz";
+    sha256 = "8cd0cb6ea1914ce3fb5dad03109cd0088205aa5346d0fbcdec9f8c625838f502";
   };
 
   buildType = "ament_cmake";

@@ -1890,6 +1890,10 @@ self: super: {
 
  picknik-ament-copyright = self.callPackage ./picknik-ament-copyright {};
 
+ picknik-reset-fault-controller = self.callPackage ./picknik-reset-fault-controller {};
+
+ picknik-twist-controller = self.callPackage ./picknik-twist-controller {};
+
  pid-controller = self.callPackage ./pid-controller {};
 
  pilz-industrial-motion-planner = self.callPackage ./pilz-industrial-motion-planner {};
@@ -2237,8 +2241,6 @@ self: super: {
  rmw-security-common = self.callPackage ./rmw-security-common {};
 
  rmw-stats-shim = self.callPackage ./rmw-stats-shim {};
-
- rmw-swiftdds-cpp = self.callPackage ./rmw-swiftdds-cpp {};
 
  rmw-test-fixture = self.callPackage ./rmw-test-fixture {};
 

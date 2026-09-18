@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-ur-dashboard-msgs";
-  version = "4.8.0-r1";
+  version = "4.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/kilted/ur_dashboard_msgs/4.8.0-1.tar.gz";
-    name = "4.8.0-1.tar.gz";
-    sha256 = "89ff70143fc57ddb9427a9304502a70d185a57be149c4bfcc1aaecb43a46fbee";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/kilted/ur_dashboard_msgs/4.9.0-1.tar.gz";
+    name = "4.9.0-1.tar.gz";
+    sha256 = "0c0ccc41ec9eaf32b7b0fb2e0399e86b73b02e4e442ff1dad82cd0e226a27301";
   };
 
   buildType = "ament_cmake";

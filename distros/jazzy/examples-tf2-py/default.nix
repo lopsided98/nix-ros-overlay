@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, launch-ros, python3Packages, rclpy, sensor-msgs, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-jazzy-examples-tf2-py";
-  version = "0.36.22-r1";
+  version = "0.36.23-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/examples_tf2_py/0.36.22-1.tar.gz";
-    name = "0.36.22-1.tar.gz";
-    sha256 = "dc8130da0f74b051b471ab1a282c712cf534e6cec06a57bef42aa72c3951f955";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/examples_tf2_py/0.36.23-1.tar.gz";
+    name = "0.36.23-1.tar.gz";
+    sha256 = "8eafd53738bad0f8f27c56bdff55be73485ce811aeb131f3ef3d2dfaf36bf542";
   };
 
   buildType = "ament_python";

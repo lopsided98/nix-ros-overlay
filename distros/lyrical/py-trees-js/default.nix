@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages, qt5 }:
 buildRosPackage {
   pname = "ros-lyrical-py-trees-js";
-  version = "0.6.7-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_trees_js-release/archive/release/lyrical/py_trees_js/0.6.7-1.tar.gz";
-    name = "0.6.7-1.tar.gz";
-    sha256 = "d41efed59df1fc487081fe2ecd4adb7efa27f0179dfc0f21d9fac9bd5553edb8";
+    url = "https://github.com/ros2-gbp/py_trees_js-release/archive/release/lyrical/py_trees_js/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "ff47537d01e6eb6ba41c9317500cebec5709be34bbe8f388e949da329313b7d5";
   };
 
   buildType = "ament_python";

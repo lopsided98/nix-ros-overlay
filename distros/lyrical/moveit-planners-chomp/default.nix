@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, chomp-motion-planner, moveit-common, moveit-core, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-lyrical-moveit-planners-chomp";
-  version = "2.15.1-r1";
+  version = "2.15.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/lyrical/moveit_planners_chomp/2.15.1-1.tar.gz";
-    name = "2.15.1-1.tar.gz";
-    sha256 = "3bf3f6a29a77668776f2c7c33e03a4dff18316dadc59b428c25d36aa4f645129";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/lyrical/moveit_planners_chomp/2.15.2-1.tar.gz";
+    name = "2.15.2-1.tar.gz";
+    sha256 = "b9dcc4030ececb4d28f06153d704b3c9a3d606e129c3658f6be12aeb699585a1";
   };
 
   buildType = "ament_cmake";

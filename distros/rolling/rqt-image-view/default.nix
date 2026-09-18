@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cv-bridge, geometry-msgs, image-transport, qt-gui-cpp, qt5or6, rclcpp, rqt-gui, rqt-gui-cpp, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, cv-bridge, geometry-msgs, image-transport, opencv, qt-gui-cpp, qt6, rclcpp, rqt-gui, rqt-gui-cpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rqt-image-view";
-  version = "2.0.5-r2";
+  version = "2.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_image_view-release/archive/release/rolling/rqt_image_view/2.0.5-2.tar.gz";
-    name = "2.0.5-2.tar.gz";
-    sha256 = "9398f3f1c9a14b189d0bb31786976bc7ffdf238711a812c9cbe09189b1f71e64";
+    url = "https://github.com/ros2-gbp/rqt_image_view-release/archive/release/rolling/rqt_image_view/2.0.6-1.tar.gz";
+    name = "2.0.6-1.tar.gz";
+    sha256 = "393cd2ef35ced7ba969baaeba697789529443ebf8fb1c690de77dbb7bfd9fd19";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ cv-bridge geometry-msgs image-transport qt-gui-cpp qt5or6.qtbase rclcpp rqt-gui rqt-gui-cpp sensor-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common opencv opencv.cxxdev ];
+  propagatedBuildInputs = [ cv-bridge geometry-msgs image-transport qt-gui-cpp qt6.qtbase rclcpp rqt-gui rqt-gui-cpp sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

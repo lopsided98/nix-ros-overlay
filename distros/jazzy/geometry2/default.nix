@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tf2, tf2-bullet, tf2-eigen, tf2-eigen-kdl, tf2-geometry-msgs, tf2-kdl, tf2-msgs, tf2-py, tf2-ros, tf2-sensor-msgs, tf2-tools }:
 buildRosPackage {
   pname = "ros-jazzy-geometry2";
-  version = "0.36.22-r1";
+  version = "0.36.23-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/geometry2/0.36.22-1.tar.gz";
-    name = "0.36.22-1.tar.gz";
-    sha256 = "fde07592623b72ead85ef2f2d47fbb3abd61a33c721bbdfdc7b35a3b9675fad8";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/jazzy/geometry2/0.36.23-1.tar.gz";
+    name = "0.36.23-1.tar.gz";
+    sha256 = "39f37e1a0c2593690ae77c4710ee2d5fd5cf510c665ca28ab241cf814bbd3a45";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, eigen, geos, opencv, tf2 }:
 buildRosPackage {
   pname = "ros-lyrical-swri-geometry-util";
-  version = "3.9.1-r2";
+  version = "3.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/lyrical/swri_geometry_util/3.9.1-2.tar.gz";
-    name = "3.9.1-2.tar.gz";
-    sha256 = "eb30ae04ae43fb8ee34b233aabc8852a92a850c0d18354245e38dbc1228a20a7";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/lyrical/swri_geometry_util/3.11.0-1.tar.gz";
+    name = "3.11.0-1.tar.gz";
+    sha256 = "1fe139c026e33e2b367b60ea76665f3d96c7de6d4f1189be068e33401dab2563";
   };
 
   buildType = "ament_cmake";

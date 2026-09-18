@@ -1160,6 +1160,8 @@ self: super: {
 
  elite-robots-msgs = self.callPackage ./elite-robots-msgs {};
 
+ elite-robots-simulation-gz = self.callPackage ./elite-robots-simulation-gz {};
+
  ess-imu-driver2 = self.callPackage ./ess-imu-driver2 {};
 
  etsi-its-cam-coding = self.callPackage ./etsi-its-cam-coding {};
