@@ -28,13 +28,13 @@ let
 
   package = buildPythonPackage rec {
     pname = "colcon-core";
-    version = "0.21.1";
+    version = "0.21.3";
 
     src = fetchFromGitHub {
       owner = "colcon";
       repo = pname;
       tag = version;
-      hash = "sha256-nIROvz5HdL8s9gCcXGhbygce1M/0O0KXaHDDs2rP1i0=";
+      hash = "sha256-ZjfOgw/fvRe1WhZTX7FdExsN95PNOrKcy46/m3JeerA=";
     };
 
     pyproject = true;
