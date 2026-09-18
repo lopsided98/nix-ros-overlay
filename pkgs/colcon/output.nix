@@ -2,13 +2,13 @@
 
 buildPythonPackage rec {
   pname = "colcon-output";
-  version = "0.2.14";
+  version = "0.2.15";
 
   src = fetchFromGitHub {
     owner = "colcon";
     repo = pname;
     tag = version;
-    hash = "sha256-Zt8ZG2SZAgS1iXMnu3b2dSoP9IzrwLwMUXVSJWqRV9w=";
+    hash = "sha256-kRMe4cg7ZUHAHdbyopJK61XQn7mPKpmbHj+qisrGO1E=";
   };
 
   pyproject = true;
