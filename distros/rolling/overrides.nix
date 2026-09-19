@@ -629,18 +629,6 @@ in {
 
   rosidlcpp-typesupport-fastrtps-cpp = rosSuper.rosidlcpp-typesupport-fastrtps-cpp.override { fmt = self.fmt_9; };
 
-  rqt-image-view = rosSuper.rqt-image-view.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    # https://github.com/ros-visualization/rqt_image_view/pull/108 (subset of)
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail \
-        '"''${qt_gui_cpp_USE_QT_MAJOR_VERSION}"' '6'
-      substituteInPlace CMakeLists.txt --replace-fail \
-        'Qt''${qt_gui_cpp_USE_QT_MAJOR_VERSION}' 'Qt6'
-    '';
-  });
-
   rqt-robot-monitor = rosSuper.rqt-robot-monitor.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
