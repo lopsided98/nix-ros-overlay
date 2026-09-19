@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, geometry-msgs, python3Packages, rclcpp, sensor-msgs, sensor-msgs-py, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-lyrical-tf2-sensor-msgs";
-  version = "0.45.9-r1";
+  version = "0.45.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/lyrical/tf2_sensor_msgs/0.45.9-1.tar.gz";
-    name = "0.45.9-1.tar.gz";
-    sha256 = "8c21bb45d35dcb8a0a4a3f5f95585cc5d830b879744f35328fbd3187921d2e60";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/lyrical/tf2_sensor_msgs/0.45.10-1.tar.gz";
+    name = "0.45.10-1.tar.gz";
+    sha256 = "fe983470c38ca672759d6b428ad4cbec9b294716bd81d7d4f6a9dc06ce6f029d";
   };
 
   buildType = "ament_cmake";

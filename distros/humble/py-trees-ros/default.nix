@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, py-trees, py-trees-ros-interfaces, python3Packages, rcl-interfaces, rclpy, ros2topic, sensor-msgs, std-msgs, std-srvs, tf2-ros-py, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-humble-py-trees-ros";
-  version = "2.5.0-r1";
+  version = "2.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/py_trees_ros-release/archive/release/humble/py_trees_ros/2.5.0-1.tar.gz";
-    name = "2.5.0-1.tar.gz";
-    sha256 = "f69aaf893cdfef1795eb0d3660b72583c267e17180fd3d7028776b574d275eab";
+    url = "https://github.com/ros2-gbp/py_trees_ros-release/archive/release/humble/py_trees_ros/2.6.0-1.tar.gz";
+    name = "2.6.0-1.tar.gz";
+    sha256 = "823f00728696ad08415bbbce54a5bf4891a721519afaf75bd7a39451aad1db76";
   };
 
   buildType = "ament_python";

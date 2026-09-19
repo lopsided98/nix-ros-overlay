@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-nodl-schema";
-  version = "2.0.2-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nodl-release/archive/release/humble/nodl_schema/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "cf20b0729e27c52274e2f6ad457f58921d89c4e41865dbbd3f14e23a3c60e1bb";
+    url = "https://github.com/ros2-gbp/nodl-release/archive/release/humble/nodl_schema/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "d000fcaf8f9365bcedc61337e0b4f04ba166aa954b2c558fb37b0f656d164ea0";
   };
 
   buildType = "ament_python";

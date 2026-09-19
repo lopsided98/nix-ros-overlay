@@ -405,6 +405,12 @@ in {
 
   mp-units-vendor = lib.patchAmentVendorGit rosSuper.mp-units-vendor {};
 
+  mp2p-icp-viz = rosSuper.mp2p-icp-viz.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    buildInputs = buildInputs ++ [ self.libGLU ];
+  });
+
   mrpt-containers = rosSuper.mrpt-containers.overrideAttrs ({
     buildInputs ? [], nativeBuildInputs ? [], ...
   }: {
@@ -614,26 +620,6 @@ in {
     buildInputs = buildInputs ++ [ rosSelf.toppra ];
   });
 
-  rosbag2-transport = rosSuper.rosbag2-transport.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # Added missing header
-      # https://github.com/ros2/rosbag2/pull/2464
-      (self.fetchpatch2 {
-        url = "https://github.com/ros2/rosbag2/commit/4dddf35d297a9c3ddd1da6589c90dac55706747e.patch?full_index=1";
-        hash = "sha256-nMyFz9OCDcf8eYHYWOX1iziR9jAshm8jjhTK/qPAlEA=";
-        stripLen = 1;
-      })
-      # Fix missing lib : Add iomanip lib (#2480)
-      (self.fetchpatch2 {
-        url = "https://github.com/ros2/rosbag2/commit/60560d0f0676c8a0ffc66c8da62fb5ec36b02104.patch?full_index=1";
-        hash = "sha256-ZhqAxL/DAOd9kyPA3MhzInChT+MFKOUmC1QCvj71Lk8=";
-        stripLen = 1;
-      })
-    ];
-  });
-
   rosidlcpp-generator-core = rosSuper.rosidlcpp-generator-core.override { fmt = self.fmt_9; };
   rosidlcpp-generator-cpp = rosSuper.rosidlcpp-generator-cpp.override { fmt = self.fmt_9; };
   rosidlcpp-generator-py = rosSuper.rosidlcpp-generator-py.override { fmt = self.fmt_9; };
@@ -642,18 +628,6 @@ in {
   rosidlcpp-typesupport-fastrtps-c = rosSuper.rosidlcpp-typesupport-fastrtps-c.override { fmt = self.fmt_9; };
 
   rosidlcpp-typesupport-fastrtps-cpp = rosSuper.rosidlcpp-typesupport-fastrtps-cpp.override { fmt = self.fmt_9; };
-
-  rqt-image-view = rosSuper.rqt-image-view.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    # https://github.com/ros-visualization/rqt_image_view/pull/108 (subset of)
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt --replace-fail \
-        '"''${qt_gui_cpp_USE_QT_MAJOR_VERSION}"' '6'
-      substituteInPlace CMakeLists.txt --replace-fail \
-        'Qt''${qt_gui_cpp_USE_QT_MAJOR_VERSION}' 'Qt6'
-    '';
-  });
 
   rqt-robot-monitor = rosSuper.rqt-robot-monitor.overrideAttrs ({
     nativeBuildInputs ? [], ...

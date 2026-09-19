@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-nodl }:
 buildRosPackage {
   pname = "ros-humble-nodl-common-interfaces";
-  version = "2.0.2-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nodl-release/archive/release/humble/nodl_common_interfaces/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "2ab81da3e5e0b7401b2c2e27b134f55299602ba99fb7d3e23e65b7e58e81f521";
+    url = "https://github.com/ros2-gbp/nodl-release/archive/release/humble/nodl_common_interfaces/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "d0cdd08cd567b2b2e466f2ad3af819e029f1cbb7758c20c0f943578e76a5d258";
   };
 
   buildType = "ament_cmake";

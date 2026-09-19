@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-gtest, ament-cmake-pytest, builtin-interfaces, cli11, example-interfaces, python3Packages, rcl-action, rcl-interfaces, rclcpp, rclpy, rmw, rmw-cyclonedds-cpp, rmw-fastrtps-cpp, rmw-implementation-cmake, ros-environment, rosgraph-msgs, rosidl-runtime-py, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-nodl-observe";
-  version = "2.0.2-r1";
+  version = "2.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nodl-release/archive/release/humble/nodl_observe/2.0.2-1.tar.gz";
-    name = "2.0.2-1.tar.gz";
-    sha256 = "defe1d2ff7fbbdd20850f8322d22cda8569788c658839b6f93a3021827627f85";
+    url = "https://github.com/ros2-gbp/nodl-release/archive/release/humble/nodl_observe/2.0.3-1.tar.gz";
+    name = "2.0.3-1.tar.gz";
+    sha256 = "87bff92e62d1c4959be893e5ffc27fe9b9144265e7d5bb59f2375fe74eb451f8";
   };
 
   buildType = "ament_cmake";

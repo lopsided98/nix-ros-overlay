@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, camera-calibration-parsers, cv-bridge, eigen, image-geometry, image-transport, message-filters, opencv, rcl-interfaces, rclcpp, rclcpp-components, rclpy, swri-geometry-util, swri-math-util, swri-opencv-util, tf2 }:
 buildRosPackage {
   pname = "ros-rolling-swri-image-util";
-  version = "3.9.1-r1";
+  version = "3.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_image_util/3.9.1-1.tar.gz";
-    name = "3.9.1-1.tar.gz";
-    sha256 = "e7aa3bd52bf08fd2e2bd9084e229e94ac899f0977f3e299f42ffeb4e589f21da";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_image_util/3.11.0-1.tar.gz";
+    name = "3.11.0-1.tar.gz";
+    sha256 = "cbe66293e11fc18a6030b8561b34a7c13d174dc40b7947b874655a5dd22849cb";
   };
 
   buildType = "ament_cmake";

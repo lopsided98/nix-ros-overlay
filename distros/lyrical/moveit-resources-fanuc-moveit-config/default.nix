@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-manager, joint-state-publisher, moveit-resources-fanuc-description, robot-state-publisher, ros2cli-common-extensions, tf2-ros, xacro }:
 buildRosPackage {
   pname = "ros-lyrical-moveit-resources-fanuc-moveit-config";
-  version = "3.2.0-r1";
+  version = "3.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/lyrical/moveit_resources_fanuc_moveit_config/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "fe49527ce07af508dab26fff5f90e8f591713a4afbc74ae671dd84f102eca85c";
+    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/lyrical/moveit_resources_fanuc_moveit_config/3.2.1-1.tar.gz";
+    name = "3.2.1-1.tar.gz";
+    sha256 = "1a531eda44dbbfe1fd1c45cf422b3a7960adb78a920efbf3b6bdf6b67f35047d";
   };
 
   buildType = "ament_cmake";

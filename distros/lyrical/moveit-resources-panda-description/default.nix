@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-lyrical-moveit-resources-panda-description";
-  version = "3.2.0-r1";
+  version = "3.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/lyrical/moveit_resources_panda_description/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "0310a85681132a352fa5d6f01bf858ee79af64e2c3feb3a03db12007159ba6f9";
+    url = "https://github.com/ros2-gbp/moveit_resources-release/archive/release/lyrical/moveit_resources_panda_description/3.2.1-1.tar.gz";
+    name = "3.2.1-1.tar.gz";
+    sha256 = "1a7b0739dd56b04ac815082935f9e82331a78a1d247f96d9aea1e921ffd9acee";
   };
 
   buildType = "ament_cmake";

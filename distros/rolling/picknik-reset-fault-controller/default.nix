@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, controller-interface, example-interfaces, geometry-msgs, rclcpp, realtime-tools }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-ros, controller-interface, example-interfaces, geometry-msgs, hardware-interface, rclcpp, realtime-tools }:
 buildRosPackage {
   pname = "ros-rolling-picknik-reset-fault-controller";
-  version = "0.0.4-r3";
+  version = "0.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/picknik_controllers-release/archive/release/rolling/picknik_reset_fault_controller/0.0.4-3.tar.gz";
-    name = "0.0.4-3.tar.gz";
-    sha256 = "8376050019aa8d6b7a5eff996129e5c68f5a64560dd77ac16d490fcf74eb2499";
+    url = "https://github.com/ros2-gbp/picknik_controllers-release/archive/release/rolling/picknik_reset_fault_controller/0.0.5-1.tar.gz";
+    name = "0.0.5-1.tar.gz";
+    sha256 = "a7e318037d1617a8a47780de02303e041adc86ac53ff9e0631ed1e3cfaf7afae";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-ros ];
-  propagatedBuildInputs = [ controller-interface example-interfaces geometry-msgs rclcpp realtime-tools ];
+  propagatedBuildInputs = [ controller-interface example-interfaces geometry-msgs hardware-interface rclcpp realtime-tools ];
   nativeBuildInputs = [ ament-cmake-ros ];
 
   meta = {

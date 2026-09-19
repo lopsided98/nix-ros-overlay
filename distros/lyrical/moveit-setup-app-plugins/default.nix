@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, moveit-configs-utils, moveit-ros-visualization, moveit-setup-framework, pluginlib, rclcpp }:
 buildRosPackage {
   pname = "ros-lyrical-moveit-setup-app-plugins";
-  version = "2.15.1-r1";
+  version = "2.15.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/lyrical/moveit_setup_app_plugins/2.15.1-1.tar.gz";
-    name = "2.15.1-1.tar.gz";
-    sha256 = "fb69e9b5e8aec23ab961d8baab614a4229d5b0fe16f775fe123d87a73751e4f8";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/lyrical/moveit_setup_app_plugins/2.15.2-1.tar.gz";
+    name = "2.15.2-1.tar.gz";
+    sha256 = "211b29df7e181e39bacdb63c2261da02f01fccace4204dae69f76ea1587dd9e9";
   };
 
   buildType = "ament_cmake";

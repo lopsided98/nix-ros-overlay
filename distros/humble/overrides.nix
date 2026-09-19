@@ -408,13 +408,13 @@ in with lib; {
   });
 
   int2dds-ffi-vendor = let
-    version = "0.1.4";
+    version = "0.1.5";
   in
     (patchVendorUrl rosSuper.int2dds-ffi-vendor {
       #revVariable = "INT2DDS_FFI_VERSION";
       originalUrl = "\${INT2DDS_FFI_BASE_URL}/\${_asset}";
       url = "https://github.com/IntellectusCorp/int2dds_ffi_vendor/releases/download/v${version}/int2dds-ffi-${version}-linux.tar.gz";
-      hash = "sha256-xDvs1icUsFsd2gXehiPoLACKheIW5buRkDP+9w/k19w=";
+      hash = "sha256-2adVH7nmPYyIw2MhTBmLr7TE4on6sKSB30wt+hTU5zk=";
     }).overrideAttrs ({
       postPatch ? "", ...
     }: {
