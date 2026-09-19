@@ -405,6 +405,12 @@ in {
 
   mp-units-vendor = lib.patchAmentVendorGit rosSuper.mp-units-vendor {};
 
+  mp2p-icp-viz = rosSuper.mp2p-icp-viz.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    buildInputs = buildInputs ++ [ self.libGLU ];
+  });
+
   mrpt-containers = rosSuper.mrpt-containers.overrideAttrs ({
     buildInputs ? [], nativeBuildInputs ? [], ...
   }: {
