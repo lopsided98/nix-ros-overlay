@@ -1,0 +1,51 @@
+name: "Replace cache pins"
+# Replaces the cachix pins created by the Build workflow with a tiny
+# dummy store path. This releases the pinned closures so that they can
+# be garbage collected from the cache and make space for new pins,
+# which are otherwise not allowed.
+on:
+  workflow_dispatch:
+    inputs:
+      cache:
+        description: "Cachix cache name"
+        required: false
+        default: "ros"
+      pins:
+        description: "Space separated pin names (default: the pins created by the Build workflow)"
+        required: false
+        default: ""
+jobs:
+  replace-pins:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: cachix/install-nix-action@v31.8.1
+    - uses: cachix/cachix-action@v15
+      with:
+        name: ${{ inputs.cache }}
+        authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+        signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
+        skipPush: true
+    - name: "Replace pins with a dummy store path"
+      env:
+        CACHE: ${{ inputs.cache }}
+        PINS: ${{ inputs.pins }}
+      run: |
+        set -euo pipefail
+        pins="$PINS"
+        if [ -z "$pins" ]; then
+          # Same pin names as created by the "Pin built packages in the
+          # cache" step of the Build workflow.
+          for distro in humble jazzy; do
+            for system in x86_64-linux aarch64-linux; do
+              pins="$pins master-$distro-$system"
+            done
+          done
+        fi
+        echo ROS > dummy
+        dummy=$(nix store add --mode flat dummy)
+        echo "Dummy store path: $dummy"
+        cachix push "$CACHE" "$dummy"
+        for pin in $pins; do
+          echo "Pinning $pin -> $dummy"
+          cachix pin "$CACHE" "$pin" "$dummy" --keep-revisions 1
+        done
