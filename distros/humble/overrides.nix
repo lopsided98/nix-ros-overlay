@@ -1315,13 +1315,18 @@ in with lib; {
   });
 
   slam-toolbox = rosSuper.slam-toolbox.overrideAttrs ({
-    postPatch ? "", ...
+    postPatch ? "", meta ? {}, ...
   }: {
     # https://github.com/SteveMacenski/slam_toolbox/pull/854
     postPatch = postPatch + ''
       substituteInPlace CMakeLists.txt lib/karto_sdk/CMakeLists.txt \
         --replace-fail " system" ""
     '';
+    # package.xml only says "LGPL", without specifying the version
+    # https://github.com/SteveMacenski/slam_toolbox/pull/899
+    meta = meta // {
+      license = map (l: if l == "LGPL" then lib.licenses.lgpl21Only else l) meta.license;
+    };
   });
 
   spatio-temporal-voxel-layer = rosSuper.spatio-temporal-voxel-layer.overrideAttrs ({
