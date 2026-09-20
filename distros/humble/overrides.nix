@@ -845,16 +845,6 @@ in with lib; {
     '';
   });
 
-  moveit-task-constructor-core= rosSuper.moveit-task-constructor-core.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    # ref. https://github.com/moveit/moveit_task_constructor/pull/756
-    postPatch = postPatch + ''
-      substituteInPlace include/moveit/task_constructor/stage_p.h \
-        --replace-fail "<fmt/core.h>" "<fmt/format.h>"
-    '';
-  });
-
   moveit-task-constructor-capabilities = rosSuper.moveit-task-constructor-capabilities.overrideAttrs ({
     patches ? [], ...
   }: {
@@ -866,6 +856,16 @@ in with lib; {
         stripLen = 1;
       })
     ];
+  });
+
+  moveit-task-constructor-core= rosSuper.moveit-task-constructor-core.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # ref. https://github.com/moveit/moveit_task_constructor/pull/756
+    postPatch = postPatch + ''
+      substituteInPlace include/moveit/task_constructor/stage_p.h \
+        --replace-fail "<fmt/core.h>" "<fmt/format.h>"
+    '';
   });
 
   moveit-task-constructor-visualization= rosSuper.moveit-task-constructor-visualization.overrideAttrs ({
