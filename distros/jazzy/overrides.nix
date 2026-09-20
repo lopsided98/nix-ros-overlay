@@ -90,6 +90,17 @@ in {
     '';
   });
 
+  autoware-gyro-odometer = rosSuper.autoware-gyro-odometer.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # ref. https://github.com/autowarefoundation/autoware_core/pull/1385
+    postPatch = postPatch + ''
+      substituteInPlace \
+        src/gyro_odometer_fusion.cpp \
+        --replace-fail "<fmt/core.h>" "<fmt/format.h>"
+    '';
+  });
+
   autoware-map-height-fitter = rosSuper.autoware-map-height-fitter.overrideAttrs ({
     postPatch ? "", ...
   }: {
