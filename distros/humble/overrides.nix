@@ -4,6 +4,17 @@ self:
 rosSelf: rosSuper: let
   inherit (rosSelf) lib;
 in with lib; {
+  as2-platform-dji-psdk = rosSuper.as2-platform-dji-psdk.overrideAttrs ({
+    meta ? {}, ...
+  }: {
+    # package.xml has a typo in the license name ("BDS-3" instead of
+    # "BSD-3") Fixed in https://github.com/aerostack2/as2_platform_dji_psdk/pull/7,
+    # but not release to ROS.
+    meta = meta // {
+      license = map (l: if l == "BDS-3" then lib.licenses.bsd3 else l) meta.license;
+    };
+  });
+
   async-web-server-cpp = rosSuper.async-web-server-cpp.overrideAttrs ({
     patches ? [], ...
   }: {
