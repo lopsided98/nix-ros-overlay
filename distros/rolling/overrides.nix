@@ -546,6 +546,17 @@ in {
     ];
   });
 
+  pick-ik = rosSuper.pick-ik.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # ref. https://github.com/PickNikRobotics/pick_ik/pull/84 closed
+    postPatch = postPatch + ''
+      substituteInPlace \
+        src/robot.cpp \
+        --replace-fail "<fmt/core.h>" "<fmt/format.h>"
+    '';
+  });
+
   # This meta-package is referenced by the rosdep key python3-qt-bindings,
   # which is used by packages such as rqt. These packages depend on Qt5 in
   # older ROS distributions and Qt6 in Lyrical and newer releases.
