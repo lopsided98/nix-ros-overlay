@@ -1064,6 +1064,17 @@ in {
     })
   ];
 
+  pick-ik = rosSuper.pick-ik.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # ref. https://github.com/PickNikRobotics/pick_ik/pull/84 closed
+    postPatch = postPatch + ''
+      substituteInPlace \
+        src/robot.cpp \
+        --replace-fail "<fmt/core.h>" "<fmt/format.h>"
+    '';
+  });
+
   plotjuggler-ros = rosSuper.plotjuggler-ros.overrideAttrs ({
     patches ? [], ...
   }: {
