@@ -11,9 +11,9 @@ buildPythonPackage rec {
     owner = "wentasah";
     repo = "superflore";
     # ref = "refs/heads/nixos";
-    rev = "ebdf7ae676e17da9c1f0dc53303c8e2764afa85f";
-    hash = "sha256-uoBc97g7ZhuvrMAbp/fNMg0wvtuAK8u40HKwB3T4KGg=";
-    # date = "2026-08-29T09:01:29+02:00";
+    rev = "12843e96b8ed8493465902b1c1b2936379a71b14";
+    hash = "sha256-ZYQX2vkUDVfLgp5a+g2rW2t2aQvHFTCv6KzmGQ7bQ8Y=";
+    # date = "2026-09-18T22:03:29+02:00";
   };
 
   pyproject = true;
