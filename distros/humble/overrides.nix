@@ -868,6 +868,16 @@ in with lib; {
     ];
   });
 
+  moveit-task-constructor-visualization= rosSuper.moveit-task-constructor-visualization.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # ref. https://github.com/moveit/moveit_task_constructor/pull/756
+    postPatch = postPatch + ''
+      substituteInPlace visualization_tools/src/display_solution.cpp \
+        --replace-fail "<fmt/core.h>" "<fmt/format.h>"
+    '';
+  });
+
   mrpt-containers = rosSuper.mrpt-containers.overrideAttrs ({
     buildInputs ? [], nativeBuildInputs ? [], ...
   }: {
