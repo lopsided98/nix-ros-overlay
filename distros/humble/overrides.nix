@@ -748,6 +748,16 @@ in with lib; {
     fetchgitArgs.hash = "sha256-rd7Qb85xyrqm3GWwIUns56jIo62kBTRmXf2UfuUXNR0=";
   });
 
+  motion-capture-tracking = rosSuper.motion-capture-tracking.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/moveit/moveit2/pull/3727
+    postPatch = postPatch + ''
+      substituteInPlace src/motion_capture_tracking_node.cpp \
+        --replace-fail "<fmt/core.h>" "<fmt/format.h>"
+    '';
+  });
+
   moveit-core = rosSuper.moveit-core.overrideAttrs ({
     postPatch ? "", ...
   }: {
