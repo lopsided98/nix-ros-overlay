@@ -433,6 +433,26 @@ in with lib; {
     ];
   });
 
+  imu-filter-madgwick = rosSuper.imu-filter-madgwick.overrideAttrs ({
+    meta ? {}, ...
+  }: {
+    # package.xml only says "GPL", without specifying the version
+    # https://github.com/CCNYRoboticsLab/imu_tools/pull/235
+    meta = meta // {
+      license = map (l: if l == "GPL" then lib.licenses.gpl3Plus else l) meta.license;
+    };
+  });
+
+  imu-tools = rosSuper.imu-tools.overrideAttrs ({
+    meta ? {}, ...
+  }: {
+    # package.xml only says "BSD, GPL", without specifying the versions
+    # https://github.com/CCNYRoboticsLab/imu_tools/pull/235
+    meta = meta // {
+      license = lib.concatMap (l: if l == "BSD-&-GPL" then [ lib.licenses.bsd3 lib.licenses.gpl3Plus ] else [ l ]) meta.license;
+    };
+  });
+
   int2dds-ffi-vendor = let
     version = "0.1.5";
   in
