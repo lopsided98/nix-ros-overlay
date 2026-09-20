@@ -760,7 +760,15 @@ in {
     '';
   });
 
-  slam-toolbox = rosSuper.slam-toolbox.override { qt5 = self.qt6; };
+  slam-toolbox = (rosSuper.slam-toolbox.override { qt5 = self.qt6; }).overrideAttrs ({
+    meta ? {}, ...
+  }: {
+    # package.xml only says "LGPL", without specifying the version
+    # https://github.com/SteveMacenski/slam_toolbox/pull/899
+    meta = meta // {
+      license = map (l: if l == "LGPL" then lib.licenses.lgpl21Only else l) meta.license;
+    };
+  });
 
   # Ensure that tinyxml-2 has the same major version as in
   # behaviortree-cpp, which vendors it. Other packages like
