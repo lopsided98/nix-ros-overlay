@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "ROS2-control system interface for the Schunk SVH";
-    license = with lib.licenses; [ "GPL-3.0-or-later" ];
+    license = with lib.licenses; [ gpl3Plus ];
   };
 }

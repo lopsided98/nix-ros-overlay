@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Kinematic and visual descriptions of the Schunk SVH";
-    license = with lib.licenses; [ "GPL-3.0-or-later" ];
+    license = with lib.licenses; [ gpl3Plus ];
   };
 }

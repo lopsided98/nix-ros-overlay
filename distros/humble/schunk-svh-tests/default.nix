@@ -18,6 +18,6 @@ buildRosPackage {
 
   meta = {
     description = "Integration tests for the Schunk SVH ROS2 driver";
-    license = with lib.licenses; [ "GPL-3.0-or-later" ];
+    license = with lib.licenses; [ gpl3Plus ];
   };
 }

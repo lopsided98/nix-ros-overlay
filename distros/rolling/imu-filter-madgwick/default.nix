@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Filter which fuses angular velocities, accelerations, and (optionally) magnetic readings from a generic IMU device into an orientation. Based on code by Sebastian Madgwick, http://www.x-io.co.uk/node/8#open_source_ahrs_and_imu_algorithms.";
-    license = with lib.licenses; [ "GPL-3.0-or-later" ];
+    license = with lib.licenses; [ gpl3Plus ];
   };
 }
