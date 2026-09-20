@@ -64,6 +64,32 @@ in {
     '';
   });
 
+  autoware-ekf-localizer = rosSuper.autoware-ekf-localizer.overrideAttrs ({
+    patches ? [], postPatch ? "", ...
+  }: {
+    # Fix "error: 'format' is not a member of 'fmt'" with newer fmt
+    # versions. Only src/ekf_localizer.cpp is part of this version of
+    # the package; filter out the rest and substitute the missing.
+    patches = patches ++ [
+      (self.fetchpatch2 {
+        url = "https://github.com/autowarefoundation/autoware_core/commit/b76c73cf828a7d970c4d18fb0916ac1db1128239.patch?full_index=1";
+        hash = "sha256-Z2uLlsG/5HaYGyNSdZDArq3m5FmHO7Lp+tTWmkiIgN0=";
+        stripLen = 2;
+        excludes = [
+          "src/ekf_localizer_node.cpp"
+          "src/utils/warning_message.cpp"
+          "src/gyro_odometer_diagnostics.cpp"
+        ];
+      })
+    ];
+    postPatch = postPatch + ''
+      substituteInPlace src/warning_message.cpp src/ekf_module.cpp --replace-fail \
+        "#include <fmt/core.h>" \
+        "#include <fmt/core.h>
+      #include <fmt/format.h>"
+    '';
+  });
+
   autoware-map-height-fitter = rosSuper.autoware-map-height-fitter.overrideAttrs ({
     postPatch ? "", ...
   }: {
