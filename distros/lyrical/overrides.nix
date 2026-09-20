@@ -437,6 +437,16 @@ in {
     NIX_CFLAGS_COMPILE = toString [ "-Wno-error=cpp" ];
   });
 
+  motion-capture-tracking = rosSuper.motion-capture-tracking.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # https://github.com/moveit/moveit2/pull/3727
+    postPatch = postPatch + ''
+      substituteInPlace src/motion_capture_tracking_node.cpp \
+        --replace-fail "<fmt/core.h>" "<fmt/format.h>"
+    '';
+  });
+
   mp-units-vendor = lib.patchAmentVendorGit rosSuper.mp-units-vendor {};
 
   mrpt-containers = rosSuper.mrpt-containers.overrideAttrs ({
