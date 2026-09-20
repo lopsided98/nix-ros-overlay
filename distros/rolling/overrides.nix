@@ -598,6 +598,16 @@ in {
     '';
   });
 
+  rmf-reservation-msgs = rosSuper.rmf-reservation-msgs.overrideAttrs ({
+    meta ? {}, ...
+  }: {
+    # package.xml only says "Apache", without specifying the version
+    # https://github.com/open-rmf/rmf_internal_msgs/pull/99
+    meta = meta // {
+      license = map (l: if l == "Apache" then lib.licenses.asl20 else l) meta.license;
+    };
+  });
+
   rmf-task = rosSuper.rmf-task.overrideAttrs ({
     patches ? [], ...
   }: {
