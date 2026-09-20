@@ -616,6 +616,17 @@ in {
     ];
   });
 
+  pick-ik = rosSuper.pick-ik.overrideAttrs ({
+    postPatch ? "", ...
+  }: {
+    # ref. https://github.com/PickNikRobotics/pick_ik/pull/84 closed
+    postPatch = postPatch + ''
+      substituteInPlace \
+        src/robot.cpp \
+        --replace-fail "<fmt/core.h>" "<fmt/format.h>"
+    '';
+  });
+
   # Build against Qt6. Upstream builds against qt5, but in Nix, we get
   # a Qt version conflict.
   plansys2-tools = rosSuper.plansys2-tools.override { qt5 = self.qt6; };
