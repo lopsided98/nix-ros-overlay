@@ -19,6 +19,6 @@ buildRosPackage {
 
   meta = {
     description = "multimedia RTSP streaming library";
-    license = with lib.licenses; [ "LGPL-3.0-or-later" "BSD-1-Clause" ];
+    license = with lib.licenses; [ lgpl3Plus bsd1 ];
   };
 }
