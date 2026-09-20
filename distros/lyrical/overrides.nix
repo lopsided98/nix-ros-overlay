@@ -33,6 +33,19 @@ in {
 
   clips-vendor = lib.patchAmentVendorFile rosSuper.clips-vendor { };
 
+  control-toolbox = rosSuper.control-toolbox.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix "error: 'fmt::format' has not been declared" with fmt 11+
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-controls/control_toolbox/commit/f2d1a85c2cf5a61b17218790d5969eaef171370d.patch?full_index=1";
+        hash = "sha256-rVRKJvMyo1k/0GOuhrmDC/GPz65i47JuxBv8TvucpHE=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   ecl-build = rosSuper.ecl-build.overrideAttrs ({
     postPatch ? "", ...
   }: {
