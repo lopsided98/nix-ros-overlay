@@ -2518,6 +2518,10 @@ self: super: {
 
  roboplan-cartesian-planning = self.callPackage ./roboplan-cartesian-planning {};
 
+ roboplan-common = self.callPackage ./roboplan-common {};
+
+ roboplan-core = self.callPackage ./roboplan-core {};
+
  roboplan-example-models = self.callPackage ./roboplan-example-models {};
 
  roboplan-examples = self.callPackage ./roboplan-examples {};

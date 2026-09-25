@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, ament-lint-auto, ament-lint-common, backward-ros, geometry-msgs, nav-msgs, nav2-common, nav2-lifecycle-manager, nav2-msgs, nav2-ros-common, nav2-route, nav2-util, pluginlib, qt6, rclcpp, rclcpp-action, rviz-common, rviz-default-plugins, rviz-ogre-vendor, rviz-rendering, std-msgs, tf2-geometry-msgs, visualization-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-lyrical-nav2-rviz-plugins";
-  version = "1.5.1-r1";
+  version = "1.5.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_rviz_plugins/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "d8fb12ef81366c3751c58790ef359f882221390fce9b1e46ed44997ba2554e9b";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_rviz_plugins/1.5.2-2.tar.gz";
+    name = "1.5.2-2.tar.gz";
+    sha256 = "d411d822a65361b0bcc0ed2acd3d55a2620cccf9579528186054fadcd91473af";
   };
 
   buildType = "ament_cmake";

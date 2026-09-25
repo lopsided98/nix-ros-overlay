@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-gtest, angles, diagnostic-msgs, diagnostic-updater, filters, laser-geometry, launch-testing-ament-cmake, message-filters, pluginlib, rclcpp, rclcpp-components, rclcpp-lifecycle, sensor-msgs, tf2, tf2-geometry-msgs, tf2-kdl, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-laser-filters";
-  version = "2.3.2-r2";
+  version = "2.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/laser_filters-release/archive/release/rolling/laser_filters/2.3.2-2.tar.gz";
-    name = "2.3.2-2.tar.gz";
-    sha256 = "6a6718bfb91b275a4acf1f3ee16689ba984db6b5e2d3e9b383de893f9f0ddb96";
+    url = "https://github.com/ros2-gbp/laser_filters-release/archive/release/rolling/laser_filters/2.3.3-1.tar.gz";
+    name = "2.3.3-1.tar.gz";
+    sha256 = "3d45d09d66c0b27048b82033179ebcb3bc7b8c2106347462c71f2e3056d68700";
   };
 
   buildType = "ament_cmake";

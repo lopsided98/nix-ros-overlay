@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, backward-ros, bondcpp, diagnostic-updater, geometry-msgs, lifecycle-msgs, nav2-common, nav2-msgs, nav2-ros-common, nav2-util, rclcpp, rclcpp-action, rclcpp-components, rclcpp-lifecycle, std-srvs }:
 buildRosPackage {
   pname = "ros-lyrical-nav2-lifecycle-manager";
-  version = "1.5.1-r1";
+  version = "1.5.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_lifecycle_manager/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "433c3eaa27eca5250d0add60bee7b8e69862b851aafd71cfca1cfe91de6f7ca6";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_lifecycle_manager/1.5.2-2.tar.gz";
+    name = "1.5.2-2.tar.gz";
+    sha256 = "9ba593978687022feaf9a12c65abf618aadef5265a0e8edd0a611c7482dd355a";
   };
 
   buildType = "ament_cmake";

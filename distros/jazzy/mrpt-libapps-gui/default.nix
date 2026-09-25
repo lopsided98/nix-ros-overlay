@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-gui, mrpt-libapps-cli, wxGTK32 }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-libapps-gui";
-  version = "3.1.4-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_libapps_gui/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "4248180cfe11a5a6ceb96eff00d6a7831cad7415a890d8605478d7720d181be4";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_libapps_gui/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "2c8b359816b472a316714525e505b07d63b542abad88198543558c38c70abbad";
   };
 
   buildType = "cmake";

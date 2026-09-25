@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, boost, fmt, libcap, lifecycle-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, ros2-control-cmake, test-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-realtime-tools";
-  version = "5.3.0-r1";
+  version = "5.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realtime_tools-release/archive/release/lyrical/realtime_tools/5.3.0-1.tar.gz";
-    name = "5.3.0-1.tar.gz";
-    sha256 = "0d506181397a9d0861bc74dc4fea74928d58adae32a032d35c81167e38dc8372";
+    url = "https://github.com/ros2-gbp/realtime_tools-release/archive/release/lyrical/realtime_tools/5.4.0-1.tar.gz";
+    name = "5.4.0-1.tar.gz";
+    sha256 = "93a59204fb5b46ba5be3bd3ec9552cccb32b54b9ab05d5e9c89dc5c6652a9c0f";
   };
 
   buildType = "ament_cmake";

@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cli11, cmake, mola-common, mp2p-icp-core, mrpt-libgui, ros-environment }:
+{ lib, buildRosPackage, fetchurl, cli11, cmake, freeglut, glfw3, mola-common, mp2p-icp-core, mrpt-libgui, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-mp2p-icp-viz";
-  version = "2.14.0-r1";
+  version = "2.14.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/jazzy/mp2p_icp_viz/2.14.0-1.tar.gz";
-    name = "2.14.0-1.tar.gz";
-    sha256 = "10a70f3810178ffd2912c8fb02179bfdeca5562af8d10dffd4bbb0057490121b";
+    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/jazzy/mp2p_icp_viz/2.14.1-1.tar.gz";
+    name = "2.14.1-1.tar.gz";
+    sha256 = "deefef714f6f67b3fa2c535ac4b2b4a4c23ecc8add738429efa140428ea45d0a";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ros-environment ];
-  propagatedBuildInputs = [ cli11 mola-common mp2p-icp-core mrpt-libgui ];
+  propagatedBuildInputs = [ cli11 freeglut glfw3 mola-common mp2p-icp-core mrpt-libgui ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

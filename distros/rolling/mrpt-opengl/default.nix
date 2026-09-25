@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, libGL, libGLU, mrpt-img, mrpt-poses, mrpt-viz }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-opengl";
-  version = "3.1.3-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_opengl/3.1.3-1.tar.gz";
-    name = "3.1.3-1.tar.gz";
-    sha256 = "81252199a2d9d64db4c4315f7651a1ff5775e25116a65466a2670118d9a4e879";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_opengl/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "747464686df0d447f9ad00c2ac2d5ca36136bfca73e98e5335f288fc41b981b9";
   };
 
   buildType = "cmake";

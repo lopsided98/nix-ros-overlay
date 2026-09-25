@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, ffmpeg, libdc1394, libpcap, libusb1, mrpt-comms, mrpt-maps, mrpt-viz, openni2 }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-hwdrivers";
-  version = "3.1.4-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_hwdrivers/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "078e2b4eb76d0a595ef6b76cbd7931a040d51d6973db0b845a037e2ba95d2cc9";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_hwdrivers/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "f7860d65bfa38b0b15e57a1caaa814458bdd4eea49f0cb8caf5bb86044ee2b6a";
   };
 
   buildType = "cmake";

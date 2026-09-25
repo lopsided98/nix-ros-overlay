@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake }:
 buildRosPackage {
   pname = "ros-kilted-vrpn";
-  version = "7.35.0-r21";
+  version = "7.36.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vrpn-release/archive/release/kilted/vrpn/7.35.0-21.tar.gz";
-    name = "7.35.0-21.tar.gz";
-    sha256 = "63b292c2e484810f447af32c880a893b22e75cb6f7e1a316f9a1cecc525afc29";
+    url = "https://github.com/ros2-gbp/vrpn-release/archive/release/kilted/vrpn/7.36.0-1.tar.gz";
+    name = "7.36.0-1.tar.gz";
+    sha256 = "6e89ea8425198787877196a8962d15aae096432118189149b831c53a13b4889b";
   };
 
   buildType = "cmake";

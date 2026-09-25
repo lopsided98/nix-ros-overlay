@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, audio-common-msgs, boost, diagnostic-updater, gst_all_1, launch-xml, rclcpp, rclcpp-components }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, audio-common-msgs, boost, diagnostic-updater, gst_all_1, launch-xml, pkg-config, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-lyrical-audio-capture";
-  version = "0.4.0-r2";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/audio_common-release/archive/release/lyrical/audio_capture/0.4.0-2.tar.gz";
-    name = "0.4.0-2.tar.gz";
-    sha256 = "352d35144ca63adcb46d9d889ce6e5dc92e958b1b7b81d4a288cd90c7823006b";
+    url = "https://github.com/ros2-gbp/audio_common-release/archive/release/lyrical/audio_capture/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "72f1ab7d6bed6c316dde4956aea935d56c9f7fd640b38d97de1f7e1f1b07c1b8";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake boost ];
+  buildInputs = [ ament-cmake boost pkg-config ];
   propagatedBuildInputs = [ audio-common-msgs diagnostic-updater gst_all_1.gst-plugins-base gst_all_1.gst-plugins-good gst_all_1.gst-plugins-ugly gst_all_1.gstreamer launch-xml rclcpp rclcpp-components ];
-  nativeBuildInputs = [ ament-cmake ];
+  nativeBuildInputs = [ ament-cmake pkg-config ];
 
   meta = {
     description = "Transports audio from a source to a destination. Audio sources can come

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-gtest, ament-cmake-test, ament-lint-auto, ament-lint-common, int2dds-ffi-vendor, rcutils, rmw, rmw-dds-common, rosidl-dynamic-typesupport, rosidl-runtime-c, rosidl-runtime-cpp, rosidl-typesupport-c, rosidl-typesupport-cpp, rosidl-typesupport-introspection-c, rosidl-typesupport-introspection-cpp, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rmw-int2dds-cpp";
-  version = "0.1.5-r1";
+  version = "0.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_int2dds-release/archive/release/jazzy/rmw_int2dds_cpp/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "9cb6a77d1e053357cf0b756bf9a5d3bd4e9a7003416bfdecad35fe5cbf48b7e8";
+    url = "https://github.com/ros2-gbp/rmw_int2dds-release/archive/release/jazzy/rmw_int2dds_cpp/0.1.7-1.tar.gz";
+    name = "0.1.7-1.tar.gz";
+    sha256 = "77c7fa3d1d3aae3ee0699df44edeee1ea6a40b0cc2e6bdce49cd7e729b06ef07";
   };
 
   buildType = "ament_cmake";

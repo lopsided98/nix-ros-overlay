@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, onetbb }:
 buildRosPackage {
   pname = "ros-lyrical-gtsam";
-  version = "4.3.0-r5";
+  version = "4.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gtsam-release/archive/release/lyrical/gtsam/4.3.0-5.tar.gz";
-    name = "4.3.0-5.tar.gz";
-    sha256 = "62613a535b8837779aefcf99ecde403169a3df25a7d0b4b43463aa24c1aadf28";
+    url = "https://github.com/ros2-gbp/gtsam-release/archive/release/lyrical/gtsam/4.3.1-1.tar.gz";
+    name = "4.3.1-1.tar.gz";
+    sha256 = "e0ed90012dc41404d99df15db43fea1e8a166c21a843c32bd15234fb89e2ff63";
   };
 
   buildType = "cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "gtsam";
-    license = with lib.licenses; [ bsd3 bsd3 bsd3 mpl20 asl20 mpl20 ];
+    license = with lib.licenses; [ bsd3 bsd3 mpl20 asl20 mpl20 ];
   };
 }

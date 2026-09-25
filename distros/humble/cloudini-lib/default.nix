@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, lz4, pcl, zstd }:
 buildRosPackage {
   pname = "ros-humble-cloudini-lib";
-  version = "1.1.0-r2";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/facontidavide/cloudini-release/archive/release/humble/cloudini_lib/1.1.0-2.tar.gz";
-    name = "1.1.0-2.tar.gz";
-    sha256 = "3e7b536f3609c19b48c22747286509a792ff477ee56bbbc4c66aecde836ffd24";
+    url = "https://github.com/facontidavide/cloudini-release/archive/release/humble/cloudini_lib/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "9d8db95f61edeb217a97019b9e7536653c658faaacd4b9e1a7487ae5276cb7cf";
   };
 
   buildType = "ament_cmake";

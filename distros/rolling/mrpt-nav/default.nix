@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-kinematics, mrpt-maps, mrpt-viz }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-nav";
-  version = "3.1.3-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_nav/3.1.3-1.tar.gz";
-    name = "3.1.3-1.tar.gz";
-    sha256 = "1029c793f5b9078271a2e7a8b438864c6701ed11f943dddcd70e9284720eeeb0";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_nav/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "5f75bdc3e0bbd31d6608ebf383ad7116dec7d455bd267183b8b9ee91878c45d5";
   };
 
   buildType = "cmake";

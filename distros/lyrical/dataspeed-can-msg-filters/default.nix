@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, can-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-lyrical-dataspeed-can-msg-filters";
-  version = "2.0.7-r1";
+  version = "2.0.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/lyrical/dataspeed_can_msg_filters/2.0.7-1.tar.gz";
-    name = "2.0.7-1.tar.gz";
-    sha256 = "b059f85b6a6ed59f74689edd734e307aba6f8a490b520c94df9020a75609b991";
+    url = "https://github.com/DataspeedInc-release/dataspeed_can-release/archive/release/lyrical/dataspeed_can_msg_filters/2.0.8-1.tar.gz";
+    name = "2.0.8-1.tar.gz";
+    sha256 = "fa48e11bf31095e30a634813ae1e80bf6e8baf9a4ac4a7a3ceb6bf920c5145e1";
   };
 
   buildType = "ament_cmake";

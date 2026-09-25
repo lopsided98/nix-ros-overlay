@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-lyrical-rmf-visualization-msgs";
-  version = "1.5.0-r3";
+  version = "1.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_visualization_msgs-release/archive/release/lyrical/rmf_visualization_msgs/1.5.0-3.tar.gz";
-    name = "1.5.0-3.tar.gz";
-    sha256 = "3e32b45eb5d8432c6d743c6bea029ff6a1165876250c1356480f2dee990f2c7b";
+    url = "https://github.com/ros2-gbp/rmf_visualization_msgs-release/archive/release/lyrical/rmf_visualization_msgs/1.6.0-1.tar.gz";
+    name = "1.6.0-1.tar.gz";
+    sha256 = "76352a8b28277e0516c3aab1903a1bb018ee1a638e9968b93b3b658ac8b9201d";
   };
 
   buildType = "ament_cmake";

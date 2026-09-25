@@ -1446,6 +1446,16 @@ self: super: {
 
  fri-state-broadcaster = self.callPackage ./fri-state-broadcaster {};
 
+ fss-bringup = self.callPackage ./fss-bringup {};
+
+ fss-px4-sim = self.callPackage ./fss-px4-sim {};
+
+ fss-sensing = self.callPackage ./fss-sensing {};
+
+ fss-time = self.callPackage ./fss-time {};
+
+ fss-time-interfaces = self.callPackage ./fss-time-interfaces {};
+
  fusioncore-core = self.callPackage ./fusioncore-core {};
 
  fusioncore-datasets = self.callPackage ./fusioncore-datasets {};
@@ -4633,6 +4643,8 @@ self: super: {
  wireless-msgs = self.callPackage ./wireless-msgs {};
 
  wireless-watcher = self.callPackage ./wireless-watcher {};
+
+ wirestead = self.callPackage ./wirestead {};
 
  wrapyfi-ros2-interfaces = self.callPackage ./wrapyfi-ros2-interfaces {};
 
