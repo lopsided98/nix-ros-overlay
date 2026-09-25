@@ -240,11 +240,11 @@ let
       '';
     });
 
+  } // (if self ? vcs2l then {
     # vcstool was replaced by vcs2l in nixpkgs (https://github.com/NixOS/nixpkgs/pull/499630)
     # TODO: Make this change in rosdep after master is moved to nixpkgs without vcstool.
     vcstool = self.vcs2l;
-
-  } // (mrptOverrides rosSelf rosSuper);
+  } else {}) // (mrptOverrides rosSelf rosSuper);
 
   otherSplices = {
     selfBuildBuild = self.pkgsBuildBuild.rosPackages.${distro};
