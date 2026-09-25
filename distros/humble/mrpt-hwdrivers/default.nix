@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, ffmpeg, libdc1394, libpcap, libusb1, mrpt-comms, mrpt-maps, mrpt-viz, openni2 }:
 buildRosPackage {
   pname = "ros-humble-mrpt-hwdrivers";
-  version = "3.1.4-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_hwdrivers/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "95a287d0058834359afaf6f58494233a99e7535b962d10456d2a60dac848b3b2";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_hwdrivers/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "1868e415206237648d5e7a9090b75aa7562ac146c9a59d4ce7a530fdff5de42b";
   };
 
   buildType = "cmake";

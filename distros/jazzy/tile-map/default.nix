@@ -2,20 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, jsoncpp, mapviz, pluginlib, qt-gui-cpp, qt5or6, rclcpp, swri-math-util, swri-transform-util, tf2, yaml-cpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, jsoncpp, mapviz, pluginlib, qt5or6, rclcpp, swri-math-util, swri-transform-util, tf2, yaml-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-tile-map";
-  version = "4.0.3-r1";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/jazzy/tile_map/4.0.3-1.tar.gz";
-    name = "4.0.3-1.tar.gz";
-    sha256 = "505f707d5db3fa472e933ec8f153cd7db1c56e5b53e62cd16efd04db29c860ee";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/jazzy/tile_map/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "ac47e088ef3a4c4794f2de28ecefef58b3de64856e66d5c34c90491b61345bb4";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ jsoncpp mapviz pluginlib qt-gui-cpp qt5or6.qtbase rclcpp swri-math-util swri-transform-util tf2 yaml-cpp ];
+  checkInputs = [ ament-cmake-gtest ];
+  propagatedBuildInputs = [ jsoncpp mapviz pluginlib qt5or6.qtbase rclcpp swri-math-util swri-transform-util tf2 yaml-cpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

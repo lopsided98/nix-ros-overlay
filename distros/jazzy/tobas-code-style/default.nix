@@ -1,0 +1,25 @@
+
+# Copyright 2026 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake, tobas-cpp-code-style-example }:
+buildRosPackage {
+  pname = "ros-jazzy-tobas-code-style";
+  version = "2.16.4-r1";
+
+  src = fetchurl {
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_code_style/2.16.4-1.tar.gz";
+    name = "2.16.4-1.tar.gz";
+    sha256 = "2d80ecaa9e849b350dbd66868050ef43ae4def6e1e4a617fb43051917d7f8b05";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
+  propagatedBuildInputs = [ tobas-cpp-code-style-example ];
+  nativeBuildInputs = [ ament-cmake ];
+
+  meta = {
+    description = "Reference package demonstrating the Tobas C++ and CMake coding style.";
+    license = with lib.licenses; [ gpl3Plus ];
+  };
+}

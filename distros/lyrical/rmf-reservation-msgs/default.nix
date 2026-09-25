@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-lyrical-rmf-reservation-msgs";
-  version = "4.0.0-r3";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/lyrical/rmf_reservation_msgs/4.0.0-3.tar.gz";
-    name = "4.0.0-3.tar.gz";
-    sha256 = "c0e881af51df7bcce8638ec44cd46da43a2cca30323b7b710ccefcec244f6d00";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/lyrical/rmf_reservation_msgs/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "3a64c7d42209d85bce6783a2cae5fb9b1b10ded67eb668b4bef464afef93c4c5";
   };
 
   buildType = "ament_cmake";

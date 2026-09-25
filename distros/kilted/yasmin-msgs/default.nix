@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, rosidl-default-generators }:
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-yasmin-msgs";
-  version = "6.1.1-r1";
+  version = "6.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin_msgs/6.1.1-1.tar.gz";
-    name = "6.1.1-1.tar.gz";
-    sha256 = "ef1cad65ffcf2787b33d546278f68b4337e63eac39812c1287df29ee6425d03d";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/kilted/yasmin_msgs/6.1.2-1.tar.gz";
+    name = "6.1.2-1.tar.gz";
+    sha256 = "b5c7584f7c350f6442c85b1010959fc799aed1ca3f44db7a2f7744f861f41b4c";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ action-msgs rosidl-default-generators ];
+  propagatedBuildInputs = [ action-msgs rosidl-default-generators rosidl-default-runtime ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

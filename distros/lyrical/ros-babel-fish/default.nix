@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, example-interfaces, geometry-msgs, rclcpp, rclcpp-action, rcpputils, ros-babel-fish-test-msgs, rosidl-runtime-cpp, rosidl-typesupport-cpp, rosidl-typesupport-introspection-cpp, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-ros-babel-fish";
-  version = "4.26.43-r3";
+  version = "4.26.90-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_babel_fish-release/archive/release/lyrical/ros_babel_fish/4.26.43-3.tar.gz";
-    name = "4.26.43-3.tar.gz";
-    sha256 = "ba775d21226ba3ae72e326c5198c244432f450a38dd8c7257409c123ce1432e0";
+    url = "https://github.com/ros2-gbp/ros_babel_fish-release/archive/release/lyrical/ros_babel_fish/4.26.90-1.tar.gz";
+    name = "4.26.90-1.tar.gz";
+    sha256 = "8d4ea03a3296ec6ca4ea52d90c84dbff593aa30b7f99a02c0eb7333cae642300";
   };
 
   buildType = "ament_cmake";

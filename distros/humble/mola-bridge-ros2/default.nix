@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, cmake, diagnostic-msgs, geographic-msgs, geometry-msgs, gps-msgs, mola-common, mola-kernel, mola-msgs, mrpt-libmaps, mrpt-libros-bridge, mrpt-nav-interfaces, nav-msgs, rclcpp, ros-environment, sensor-msgs, tf2, tf2-geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, cmake, diagnostic-msgs, geographic-msgs, geometry-msgs, gps-msgs, mola-common, mola-kernel, mola-msgs, mrpt-libros-bridge, mrpt-maps, mrpt-nav-interfaces, nav-msgs, rclcpp, ros-environment, sensor-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-humble-mola-bridge-ros2";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_bridge_ros2/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "7baa0c26c7340bd0879bb6c288eeda23255b14c6d307a68929d5259a4ccf7952";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_bridge_ros2/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "c4869ce328b89c6745364c95c9dd2e54791905b08b96c8c785342a0d4f06c29a";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-gmock ament-cmake-gtest cmake ros-environment ];
   checkInputs = [ ament-cmake-xmllint ament-lint-auto ament-lint-cmake ];
-  propagatedBuildInputs = [ diagnostic-msgs geographic-msgs geometry-msgs gps-msgs mola-common mola-kernel mola-msgs mrpt-libmaps mrpt-libros-bridge mrpt-nav-interfaces nav-msgs rclcpp sensor-msgs tf2 tf2-geometry-msgs ];
+  propagatedBuildInputs = [ diagnostic-msgs geographic-msgs geometry-msgs gps-msgs mola-common mola-kernel mola-msgs mrpt-libros-bridge mrpt-maps mrpt-nav-interfaces nav-msgs rclcpp sensor-msgs tf2 tf2-geometry-msgs ];
   nativeBuildInputs = [ ament-cmake ament-cmake-gmock ament-cmake-gtest cmake ];
 
   meta = {

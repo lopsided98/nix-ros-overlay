@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mrpt-libmaps }:
+{ lib, buildRosPackage, fetchurl, cmake, eigen, mola-common, mola-kernel, mrpt-maps, mrpt-math }:
 buildRosPackage {
   pname = "ros-jazzy-mola-input-paris-luco-dataset";
-  version = "3.0.0-r2";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_academic_datasets-release/archive/release/jazzy/mola_input_paris_luco_dataset/3.0.0-2.tar.gz";
-    name = "3.0.0-2.tar.gz";
-    sha256 = "5826ef39aec5425daccdb3c33d08b9c850ae285778cc569f9d401a6f92dee6de";
+    url = "https://github.com/ros2-gbp/mola_academic_datasets-release/archive/release/jazzy/mola_input_paris_luco_dataset/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "8a36c54b5216333f89eb6fab42c6c4e8f8513eb9b88f2c22fbf8e26feb106367";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ];
-  propagatedBuildInputs = [ mola-common mola-kernel mrpt-libmaps ];
+  buildInputs = [ cmake eigen ];
+  propagatedBuildInputs = [ mola-common mola-kernel mrpt-maps mrpt-math ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

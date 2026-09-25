@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, bzip2, cmake, geometry-msgs, lz4, mola-common, mola-kernel, mrpt-libmaps, mrpt-libobs, opencv, tf2, tf2-geometry-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, boost, bzip2, cmake, geometry-msgs, lz4, mola-common, mola-kernel, mrpt-maps, mrpt-obs, opencv, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-mola-input-rosbag1";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_input_rosbag1-release/archive/release/jazzy/mola_input_rosbag1/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "78b929f82a6248fcc40b5b1e0ac03c1b1dce07fb99228a6758ef3fcecd4e4ef4";
+    url = "https://github.com/ros2-gbp/mola_input_rosbag1-release/archive/release/jazzy/mola_input_rosbag1/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "c48afe55dc67d545ad4db8f116526a24d5f3df991658c8a250ee1a37a09ee718";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ boost bzip2 geometry-msgs lz4 mola-common mola-kernel mrpt-libmaps mrpt-libobs opencv opencv.cxxdev tf2 tf2-geometry-msgs tf2-ros ];
+  propagatedBuildInputs = [ boost bzip2 geometry-msgs lz4 mola-common mola-kernel mrpt-maps mrpt-obs opencv opencv.cxxdev tf2 tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

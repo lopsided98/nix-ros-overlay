@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-jazzy-clearpath-customization";
-  version = "2.9.16-r1";
+  version = "2.9.17-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/jazzy/clearpath_customization/2.9.16-1.tar.gz";
-    name = "2.9.16-1.tar.gz";
-    sha256 = "e1568fbff1786079433bd143a68ca8c0d512bd21ff99478aef9c5ecc934fbdbe";
+    url = "https://github.com/clearpath-gbp/clearpath_common-release/archive/release/jazzy/clearpath_customization/2.9.17-1.tar.gz";
+    name = "2.9.17-1.tar.gz";
+    sha256 = "a343056cf20a8ead93bc11c39d0a3f0a1f288c393aaad3692ca959fc677f16d7";
   };
 
   buildType = "ament_cmake";

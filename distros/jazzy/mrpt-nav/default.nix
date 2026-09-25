@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-kinematics, mrpt-maps, mrpt-viz }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-nav";
-  version = "3.1.4-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_nav/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "cb0e1e3ddc4c5ede4c7cd78ea5d736a6382d7b84a869844750a703aa4911e39d";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_nav/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "525fb00783d198ab113294bdee058ffb4d45705c839febe1dd7d67d0ec7f5f9d";
   };
 
   buildType = "cmake";

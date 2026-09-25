@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, geometry-msgs, rclcpp, std-msgs, tf2, vrpn }:
 buildRosPackage {
   pname = "ros-kilted-vrpn-mocap";
-  version = "1.1.0-r4";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vrpn_mocap-release/archive/release/kilted/vrpn_mocap/1.1.0-4.tar.gz";
-    name = "1.1.0-4.tar.gz";
-    sha256 = "03f1e72e7b5b7ad62206d086cf16559d3f615d07c7b3151f53385eebe708fb6f";
+    url = "https://github.com/ros2-gbp/vrpn_mocap-release/archive/release/kilted/vrpn_mocap/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "3ca86e17f4cc521dc1694ae754c3671d26c578243739a8ba630daf9f4e35e811";
   };
 
   buildType = "ament_cmake";

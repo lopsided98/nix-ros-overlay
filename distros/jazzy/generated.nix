@@ -928,6 +928,8 @@ self: super: {
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
 
+ dispatcher = self.callPackage ./dispatcher {};
+
  dolly = self.callPackage ./dolly {};
 
  dolly-follow = self.callPackage ./dolly-follow {};
@@ -1494,6 +1496,8 @@ self: super: {
 
  graph-msgs = self.callPackage ./graph-msgs {};
 
+ grasp-synergy-adapter = self.callPackage ./grasp-synergy-adapter {};
+
  grasping-msgs = self.callPackage ./grasping-msgs {};
 
  grbl-msgs = self.callPackage ./grbl-msgs {};
@@ -1991,6 +1995,8 @@ self: super: {
  live555-vendor = self.callPackage ./live555-vendor {};
 
  lms1xx = self.callPackage ./lms1xx {};
+
+ localization-msgs-tools = self.callPackage ./localization-msgs-tools {};
 
  log-view = self.callPackage ./log-view {};
 
@@ -3338,6 +3344,10 @@ self: super: {
 
  roboplan-cartesian-planning = self.callPackage ./roboplan-cartesian-planning {};
 
+ roboplan-common = self.callPackage ./roboplan-common {};
+
+ roboplan-core = self.callPackage ./roboplan-core {};
+
  roboplan-example-models = self.callPackage ./roboplan-example-models {};
 
  roboplan-examples = self.callPackage ./roboplan-examples {};
@@ -3435,6 +3445,10 @@ self: super: {
  ros2-medkit-topic-beacon = self.callPackage ./ros2-medkit-topic-beacon {};
 
  ros2-pulse = self.callPackage ./ros2-pulse {};
+
+ ros2-shadow = self.callPackage ./ros2-shadow {};
+
+ ros2-shadow-demos = self.callPackage ./ros2-shadow-demos {};
 
  ros2-snapshot = self.callPackage ./ros2-snapshot {};
 
@@ -4158,6 +4172,352 @@ self: super: {
 
  tlsf-cpp = self.callPackage ./tlsf-cpp {};
 
+ tobas = self.callPackage ./tobas {};
+
+ tobas-actuator-test = self.callPackage ./tobas-actuator-test {};
+
+ tobas-algorithm = self.callPackage ./tobas-algorithm {};
+
+ tobas-bootmedia-config = self.callPackage ./tobas-bootmedia-config {};
+
+ tobas-camera = self.callPackage ./tobas-camera {};
+
+ tobas-camera-msgs = self.callPackage ./tobas-camera-msgs {};
+
+ tobas-camera-ros-interface = self.callPackage ./tobas-camera-ros-interface {};
+
+ tobas-code-style = self.callPackage ./tobas-code-style {};
+
+ tobas-colcon-cpp = self.callPackage ./tobas-colcon-cpp {};
+
+ tobas-command-msgs = self.callPackage ./tobas-command-msgs {};
+
+ tobas-command-msgs-adapter = self.callPackage ./tobas-command-msgs-adapter {};
+
+ tobas-common = self.callPackage ./tobas-common {};
+
+ tobas-components-rt = self.callPackage ./tobas-components-rt {};
+
+ tobas-config-servers = self.callPackage ./tobas-config-servers {};
+
+ tobas-connection-monitor = self.callPackage ./tobas-connection-monitor {};
+
+ tobas-constants = self.callPackage ./tobas-constants {};
+
+ tobas-control = self.callPackage ./tobas-control {};
+
+ tobas-control-system = self.callPackage ./tobas-control-system {};
+
+ tobas-controllers = self.callPackage ./tobas-controllers {};
+
+ tobas-core = self.callPackage ./tobas-core {};
+
+ tobas-cpp-code-style-example = self.callPackage ./tobas-cpp-code-style-example {};
+
+ tobas-crypt = self.callPackage ./tobas-crypt {};
+
+ tobas-cui = self.callPackage ./tobas-cui {};
+
+ tobas-cyclonedds-config = self.callPackage ./tobas-cyclonedds-config {};
+
+ tobas-debug-msgs = self.callPackage ./tobas-debug-msgs {};
+
+ tobas-debug-msgs-adapter = self.callPackage ./tobas-debug-msgs-adapter {};
+
+ tobas-debug-tools = self.callPackage ./tobas-debug-tools {};
+
+ tobas-description = self.callPackage ./tobas-description {};
+
+ tobas-disturbance-observer = self.callPackage ./tobas-disturbance-observer {};
+
+ tobas-dparam = self.callPackage ./tobas-dparam {};
+
+ tobas-dparam-client = self.callPackage ./tobas-dparam-client {};
+
+ tobas-dparam-common = self.callPackage ./tobas-dparam-common {};
+
+ tobas-dparam-msgs = self.callPackage ./tobas-dparam-msgs {};
+
+ tobas-dparam-server = self.callPackage ./tobas-dparam-server {};
+
+ tobas-drone = self.callPackage ./tobas-drone {};
+
+ tobas-drone-core = self.callPackage ./tobas-drone-core {};
+
+ tobas-drone-msgs = self.callPackage ./tobas-drone-msgs {};
+
+ tobas-drone-msgs-adapter = self.callPackage ./tobas-drone-msgs-adapter {};
+
+ tobas-drone-server = self.callPackage ./tobas-drone-server {};
+
+ tobas-drone-tools = self.callPackage ./tobas-drone-tools {};
+
+ tobas-dsp = self.callPackage ./tobas-dsp {};
+
+ tobas-dummy-pkg = self.callPackage ./tobas-dummy-pkg {};
+
+ tobas-dynamixel = self.callPackage ./tobas-dynamixel {};
+
+ tobas-dynamixel-handler = self.callPackage ./tobas-dynamixel-handler {};
+
+ tobas-dynamixel-msgs = self.callPackage ./tobas-dynamixel-msgs {};
+
+ tobas-dynamixel-ros-interface = self.callPackage ./tobas-dynamixel-ros-interface {};
+
+ tobas-eigen-conversions = self.callPackage ./tobas-eigen-conversions {};
+
+ tobas-eigen-msgs = self.callPackage ./tobas-eigen-msgs {};
+
+ tobas-eigen-msgs-adapter = self.callPackage ./tobas-eigen-msgs-adapter {};
+
+ tobas-eigen-tools = self.callPackage ./tobas-eigen-tools {};
+
+ tobas-eskf = self.callPackage ./tobas-eskf {};
+
+ tobas-examples = self.callPackage ./tobas-examples {};
+
+ tobas-examples-cpp = self.callPackage ./tobas-examples-cpp {};
+
+ tobas-examples-py = self.callPackage ./tobas-examples-py {};
+
+ tobas-external = self.callPackage ./tobas-external {};
+
+ tobas-failsafe = self.callPackage ./tobas-failsafe {};
+
+ tobas-fake-publishers = self.callPackage ./tobas-fake-publishers {};
+
+ tobas-fc1xx = self.callPackage ./tobas-fc1xx {};
+
+ tobas-fc1xx-core = self.callPackage ./tobas-fc1xx-core {};
+
+ tobas-fc1xx-ros = self.callPackage ./tobas-fc1xx-ros {};
+
+ tobas-fc1xx-test = self.callPackage ./tobas-fc1xx-test {};
+
+ tobas-fc2xx = self.callPackage ./tobas-fc2xx {};
+
+ tobas-fc2xx-core = self.callPackage ./tobas-fc2xx-core {};
+
+ tobas-fc2xx-ros = self.callPackage ./tobas-fc2xx-ros {};
+
+ tobas-fc2xx-test = self.callPackage ./tobas-fc2xx-test {};
+
+ tobas-fixed-wing-controller = self.callPackage ./tobas-fixed-wing-controller {};
+
+ tobas-flight-log-gui = self.callPackage ./tobas-flight-log-gui {};
+
+ tobas-gamepad = self.callPackage ./tobas-gamepad {};
+
+ tobas-gamepad-core = self.callPackage ./tobas-gamepad-core {};
+
+ tobas-gamepad-ros = self.callPackage ./tobas-gamepad-ros {};
+
+ tobas-gazebo = self.callPackage ./tobas-gazebo {};
+
+ tobas-gazebo-common = self.callPackage ./tobas-gazebo-common {};
+
+ tobas-gazebo-conversions = self.callPackage ./tobas-gazebo-conversions {};
+
+ tobas-gazebo-gui-plugins = self.callPackage ./tobas-gazebo-gui-plugins {};
+
+ tobas-gazebo-msgs = self.callPackage ./tobas-gazebo-msgs {};
+
+ tobas-gazebo-ros = self.callPackage ./tobas-gazebo-ros {};
+
+ tobas-gazebo-sim = self.callPackage ./tobas-gazebo-sim {};
+
+ tobas-gazebo-system-plugins = self.callPackage ./tobas-gazebo-system-plugins {};
+
+ tobas-gazebo-tools = self.callPackage ./tobas-gazebo-tools {};
+
+ tobas-gcs = self.callPackage ./tobas-gcs {};
+
+ tobas-geographic = self.callPackage ./tobas-geographic {};
+
+ tobas-git = self.callPackage ./tobas-git {};
+
+ tobas-gui = self.callPackage ./tobas-gui {};
+
+ tobas-gui-common = self.callPackage ./tobas-gui-common {};
+
+ tobas-hardware = self.callPackage ./tobas-hardware {};
+
+ tobas-hardware-common = self.callPackage ./tobas-hardware-common {};
+
+ tobas-ic-drivers = self.callPackage ./tobas-ic-drivers {};
+
+ tobas-ic-drivers-ros = self.callPackage ./tobas-ic-drivers-ros {};
+
+ tobas-image-processing = self.callPackage ./tobas-image-processing {};
+
+ tobas-inja-vendor = self.callPackage ./tobas-inja-vendor {};
+
+ tobas-joint-states-bridge = self.callPackage ./tobas-joint-states-bridge {};
+
+ tobas-kdl = self.callPackage ./tobas-kdl {};
+
+ tobas-kdl-conversions = self.callPackage ./tobas-kdl-conversions {};
+
+ tobas-kdl-msgs = self.callPackage ./tobas-kdl-msgs {};
+
+ tobas-kdl-msgs-adapter = self.callPackage ./tobas-kdl-msgs-adapter {};
+
+ tobas-kdl-parser = self.callPackage ./tobas-kdl-parser {};
+
+ tobas-keyboard = self.callPackage ./tobas-keyboard {};
+
+ tobas-keyboard-teleop = self.callPackage ./tobas-keyboard-teleop {};
+
+ tobas-landing-detection = self.callPackage ./tobas-landing-detection {};
+
+ tobas-linux = self.callPackage ./tobas-linux {};
+
+ tobas-manipulation = self.callPackage ./tobas-manipulation {};
+
+ tobas-math = self.callPackage ./tobas-math {};
+
+ tobas-mission = self.callPackage ./tobas-mission {};
+
+ tobas-mission-execution-mc = self.callPackage ./tobas-mission-execution-mc {};
+
+ tobas-mission-items = self.callPackage ./tobas-mission-items {};
+
+ tobas-mission-msgs = self.callPackage ./tobas-mission-msgs {};
+
+ tobas-mission-msgs-adapter = self.callPackage ./tobas-mission-msgs-adapter {};
+
+ tobas-msgs = self.callPackage ./tobas-msgs {};
+
+ tobas-msgs-adapter = self.callPackage ./tobas-msgs-adapter {};
+
+ tobas-nlp = self.callPackage ./tobas-nlp {};
+
+ tobas-node = self.callPackage ./tobas-node {};
+
+ tobas-nonplanar-multi-controller = self.callPackage ./tobas-nonplanar-multi-controller {};
+
+ tobas-object-avoidance = self.callPackage ./tobas-object-avoidance {};
+
+ tobas-parameter-tuning = self.callPackage ./tobas-parameter-tuning {};
+
+ tobas-path-tools = self.callPackage ./tobas-path-tools {};
+
+ tobas-planar-multi-controller = self.callPackage ./tobas-planar-multi-controller {};
+
+ tobas-pose-pid = self.callPackage ./tobas-pose-pid {};
+
+ tobas-property = self.callPackage ./tobas-property {};
+
+ tobas-property-client = self.callPackage ./tobas-property-client {};
+
+ tobas-property-common = self.callPackage ./tobas-property-common {};
+
+ tobas-property-msgs = self.callPackage ./tobas-property-msgs {};
+
+ tobas-property-server = self.callPackage ./tobas-property-server {};
+
+ tobas-property-tree = self.callPackage ./tobas-property-tree {};
+
+ tobas-qt-tools = self.callPackage ./tobas-qt-tools {};
+
+ tobas-quadprog = self.callPackage ./tobas-quadprog {};
+
+ tobas-qwt-wrapper = self.callPackage ./tobas-qwt-wrapper {};
+
+ tobas-random-axis-tilt-multi-controller = self.callPackage ./tobas-random-axis-tilt-multi-controller {};
+
+ tobas-rapidcsv-vendor = self.callPackage ./tobas-rapidcsv-vendor {};
+
+ tobas-rc-teleop = self.callPackage ./tobas-rc-teleop {};
+
+ tobas-real = self.callPackage ./tobas-real {};
+
+ tobas-real-common = self.callPackage ./tobas-real-common {};
+
+ tobas-real-msgs = self.callPackage ./tobas-real-msgs {};
+
+ tobas-real-ros = self.callPackage ./tobas-real-ros {};
+
+ tobas-ros2-tools = self.callPackage ./tobas-ros2-tools {};
+
+ tobas-ros-interface = self.callPackage ./tobas-ros-interface {};
+
+ tobas-rosbag-recorder = self.callPackage ./tobas-rosbag-recorder {};
+
+ tobas-rotor-anomaly-detection = self.callPackage ./tobas-rotor-anomaly-detection {};
+
+ tobas-rotor-controller = self.callPackage ./tobas-rotor-controller {};
+
+ tobas-rqt-bridge = self.callPackage ./tobas-rqt-bridge {};
+
+ tobas-rviz-plugin = self.callPackage ./tobas-rviz-plugin {};
+
+ tobas-rviz-wrapper = self.callPackage ./tobas-rviz-wrapper {};
+
+ tobas-sbus-driver = self.callPackage ./tobas-sbus-driver {};
+
+ tobas-sensor-calibration = self.callPackage ./tobas-sensor-calibration {};
+
+ tobas-setup-assistant = self.callPackage ./tobas-setup-assistant {};
+
+ tobas-simulation-gui = self.callPackage ./tobas-simulation-gui {};
+
+ tobas-ssh = self.callPackage ./tobas-ssh {};
+
+ tobas-ssh-authkey = self.callPackage ./tobas-ssh-authkey {};
+
+ tobas-ssh-client = self.callPackage ./tobas-ssh-client {};
+
+ tobas-ssh-msgs = self.callPackage ./tobas-ssh-msgs {};
+
+ tobas-ssh-server = self.callPackage ./tobas-ssh-server {};
+
+ tobas-std-msgs = self.callPackage ./tobas-std-msgs {};
+
+ tobas-std-msgs-adapter = self.callPackage ./tobas-std-msgs-adapter {};
+
+ tobas-std-tools = self.callPackage ./tobas-std-tools {};
+
+ tobas-string-tools = self.callPackage ./tobas-string-tools {};
+
+ tobas-tile-proxy = self.callPackage ./tobas-tile-proxy {};
+
+ tobas-time-tools = self.callPackage ./tobas-time-tools {};
+
+ tobas-tools = self.callPackage ./tobas-tools {};
+
+ tobas-topic-throttle = self.callPackage ./tobas-topic-throttle {};
+
+ tobas-trajectory-generation = self.callPackage ./tobas-trajectory-generation {};
+
+ tobas-tree-server = self.callPackage ./tobas-tree-server {};
+
+ tobas-uadf = self.callPackage ./tobas-uadf {};
+
+ tobas-udev = self.callPackage ./tobas-udev {};
+
+ tobas-urdf = self.callPackage ./tobas-urdf {};
+
+ tobas-urdf-builder = self.callPackage ./tobas-urdf-builder {};
+
+ tobas-urdf-builder-plugin = self.callPackage ./tobas-urdf-builder-plugin {};
+
+ tobas-version = self.callPackage ./tobas-version {};
+
+ tobas-vibration-filter = self.callPackage ./tobas-vibration-filter {};
+
+ tobas-visualization-msgs = self.callPackage ./tobas-visualization-msgs {};
+
+ tobas-wind-model = self.callPackage ./tobas-wind-model {};
+
+ tobas-wpa-supplicant = self.callPackage ./tobas-wpa-supplicant {};
+
+ tobas-xml-tools = self.callPackage ./tobas-xml-tools {};
+
+ tobas-y-axis-tilt-multi-controller = self.callPackage ./tobas-y-axis-tilt-multi-controller {};
+
+ tobas-yaml-tools = self.callPackage ./tobas-yaml-tools {};
+
  topic-monitor = self.callPackage ./topic-monitor {};
 
  topic-statistics-demo = self.callPackage ./topic-statistics-demo {};
@@ -4521,6 +4881,8 @@ self: super: {
  wireless-msgs = self.callPackage ./wireless-msgs {};
 
  wireless-watcher = self.callPackage ./wireless-watcher {};
+
+ wirestead = self.callPackage ./wirestead {};
 
  xacro = self.callPackage ./xacro {};
 

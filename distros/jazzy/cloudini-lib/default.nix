@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, lz4, pcl, zstd }:
 buildRosPackage {
   pname = "ros-jazzy-cloudini-lib";
-  version = "1.1.0-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/facontidavide/cloudini-release/archive/release/jazzy/cloudini_lib/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "575d6cce4ae6df0486f170264814608a52008dbdb32b56c6a18766dc7a7f1067";
+    url = "https://github.com/facontidavide/cloudini-release/archive/release/jazzy/cloudini_lib/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "feb33c1e47d15d4f3c71aeab5d1eb41eeee5172ca03071c85ac3886bf5b10cd1";
   };
 
   buildType = "ament_cmake";

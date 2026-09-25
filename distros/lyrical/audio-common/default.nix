@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, audio-capture, audio-common-msgs, audio-play, sound-play, sound-play-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-audio-common";
-  version = "0.4.0-r2";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/audio_common-release/archive/release/lyrical/audio_common/0.4.0-2.tar.gz";
-    name = "0.4.0-2.tar.gz";
-    sha256 = "1ca48d469c828009be291fa8fa8d97bfedf505322fed2f379c81db6db1b2f4f9";
+    url = "https://github.com/ros2-gbp/audio_common-release/archive/release/lyrical/audio_common/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "75f99c48d45da8350ee40ec41059ae62ab90e9ce472643741a19495c6a73cec3";
   };
 
   buildType = "ament_cmake";
