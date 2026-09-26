@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, pcl, pcl-conversions, pluginlib, sensor-msgs, yasmin }:
 buildRosPackage {
   pname = "ros-lyrical-yasmin-pcl";
-  version = "6.1.1-r1";
+  version = "6.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/lyrical/yasmin_pcl/6.1.1-1.tar.gz";
-    name = "6.1.1-1.tar.gz";
-    sha256 = "6fb659296688e8ee62757846d70f6f5dc2109964e20d1cd30292a76bb0f3160a";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/lyrical/yasmin_pcl/6.1.2-1.tar.gz";
+    name = "6.1.2-1.tar.gz";
+    sha256 = "dd71cc385d70b4e38806cad806ed9cbe6f3be785c7280d929a00392fee6d6a1e";
   };
 
   buildType = "ament_cmake";

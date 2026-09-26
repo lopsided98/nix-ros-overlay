@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, icu, mrpt-common, mrpt-expr, python3, python3Packages, simpleini }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-config";
-  version = "3.1.3-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_config/3.1.3-1.tar.gz";
-    name = "3.1.3-1.tar.gz";
-    sha256 = "cf8b75ac23999dbbb7f5e1c6178c65f8e8a4f9d3a4fa7514684ca149438fbbc4";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_config/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "04da333fcf8e6e416a4400ce11f67dc6f29b0bfcd9b1323be8c7af023946e250";
   };
 
   buildType = "cmake";

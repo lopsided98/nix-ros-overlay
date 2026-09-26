@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, freeglut, glfw3, libGL, libGLU, mola-kernel, mrpt-libgui, mrpt-libmaps, mrpt-libobs, mrpt-libopengl }:
+{ lib, buildRosPackage, fetchurl, cmake, glfw3, mola-kernel, mrpt-gui, mrpt-imgui, mrpt-maps, mrpt-obs, mrpt-opengl, mrpt-viz }:
 buildRosPackage {
   pname = "ros-kilted-mola-viz-imgui";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_viz_imgui/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "4d0eced2ab8059c2199e1973a57f05f1d54649b35ddd1537b525683e1786e577";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_viz_imgui/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "077028f22d1825f37a2a081db3d6a20f06ed6da893fe88cff63cdebf80eeae48";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ freeglut glfw3 libGL libGLU mola-kernel mrpt-libgui mrpt-libmaps mrpt-libobs mrpt-libopengl ];
+  propagatedBuildInputs = [ glfw3 mola-kernel mrpt-gui mrpt-imgui mrpt-maps mrpt-obs mrpt-opengl mrpt-viz ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

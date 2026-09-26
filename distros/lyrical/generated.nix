@@ -402,6 +402,10 @@ self: super: {
 
  clips-vendor = self.callPackage ./clips-vendor {};
 
+ cloudini-lib = self.callPackage ./cloudini-lib {};
+
+ cloudini-ros = self.callPackage ./cloudini-ros {};
+
  cm-topic-hardware-component = self.callPackage ./cm-topic-hardware-component {};
 
  coal = self.callPackage ./coal {};
@@ -839,6 +843,10 @@ self: super: {
  examples-tf2-py = self.callPackage ./examples-tf2-py {};
 
  executive-smach = self.callPackage ./executive-smach {};
+
+ fadecandy-driver = self.callPackage ./fadecandy-driver {};
+
+ fadecandy-msgs = self.callPackage ./fadecandy-msgs {};
 
  fastcdr = self.callPackage ./fastcdr {};
 
@@ -2543,6 +2551,10 @@ self: super: {
  roboplan = self.callPackage ./roboplan {};
 
  roboplan-cartesian-planning = self.callPackage ./roboplan-cartesian-planning {};
+
+ roboplan-common = self.callPackage ./roboplan-common {};
+
+ roboplan-core = self.callPackage ./roboplan-core {};
 
  roboplan-example-models = self.callPackage ./roboplan-example-models {};
 

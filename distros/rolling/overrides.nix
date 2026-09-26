@@ -233,12 +233,12 @@ in {
   });
 
   int2dds-ffi-vendor = let
-    version = "0.1.5";
+    version = "0.1.7";
   in
     (lib.patchVendorUrl rosSuper.int2dds-ffi-vendor {
       originalUrl = "\${INT2DDS_FFI_BASE_URL}/\${_asset}";
       url = "https://github.com/IntellectusCorp/int2dds_ffi_vendor/releases/download/v${version}/int2dds-ffi-${version}-linux.tar.gz";
-      hash = "sha256-2adVH7nmPYyIw2MhTBmLr7TE4on6sKSB30wt+hTU5zk=";
+      hash = "sha256-Fu5tjxYdPSH7vjoaj37EohOAtPyg8WyENcdRngpEhqM=";
     }).overrideAttrs ({
       postPatch ? "", ...
     }: {
@@ -291,27 +291,6 @@ in {
     postPatch = postPatch + ''
       sed -i -e '/mrt_add_library/,+3 d' CMakeLists.txt
     '';
-  });
-
-  laser-filters = rosSuper.laser-filters.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # tf2_ros::CreateTimerROS constructor changed to take NodeInterfaces bundle
-      # instead of separate NodeBaseInterface + NodeTimersInterface shared_ptrs
-      (self.writeText "fix-create-timer-ros.patch" ''
-        --- a/src/scan_to_cloud_filter_chain.cpp
-        +++ b/src/scan_to_cloud_filter_chain.cpp
-        @@ -84,8 +84,7 @@ ScanToCloudFilterChain::ScanToCloudFilterChain(
-           filter_.setTolerance(std::chrono::duration<double>(tf_tolerance_));
-
-           auto timer_interface = std::make_shared<tf2_ros::CreateTimerROS>(
-        -    this->get_node_base_interface(),
-        -    this->get_node_timers_interface());
-        +    *this);
-           buffer_.setCreateTimerInterface(timer_interface);
-      '')
-    ];
   });
 
   ld08-driver = rosSuper.ld08-driver.overrideAttrs ({

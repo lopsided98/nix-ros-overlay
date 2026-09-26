@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libobs }:
+{ lib, buildRosPackage, fetchurl, cmake, eigen, mola-common, mrpt-containers, mrpt-obs, mrpt-poses }:
 buildRosPackage {
   pname = "ros-lyrical-mola-imu-preintegration";
-  version = "2.0.0-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_imu_preintegration-release/archive/release/lyrical/mola_imu_preintegration/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "8f5fb3501b6853eb6d5d3c3503e2fc21e0179cc555a55d2993345e2b01b8e63c";
+    url = "https://github.com/ros2-gbp/mola_imu_preintegration-release/archive/release/lyrical/mola_imu_preintegration/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "ddbc4fa98f22692bc0965b5542d2c984dbbff0d50ee3c7d57e4d09022a6e2bca";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ];
-  propagatedBuildInputs = [ mola-common mrpt-libobs ];
+  buildInputs = [ cmake eigen ];
+  propagatedBuildInputs = [ mola-common mrpt-containers mrpt-obs mrpt-poses ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

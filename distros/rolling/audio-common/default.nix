@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, audio-capture, audio-common-msgs, audio-play, sound-play, sound-play-msgs }:
 buildRosPackage {
   pname = "ros-rolling-audio-common";
-  version = "0.4.0-r2";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/audio_common-release/archive/release/rolling/audio_common/0.4.0-2.tar.gz";
-    name = "0.4.0-2.tar.gz";
-    sha256 = "77808304fe637e435692e4decf488239153c7c7dab3c8a9ae1bb7d453a4e4211";
+    url = "https://github.com/ros2-gbp/audio_common-release/archive/release/rolling/audio_common/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "01a74f15f34c5e52053a254766ce71eb5dd68cebed3699bcee6daa1e9211c8f9";
   };
 
   buildType = "ament_cmake";

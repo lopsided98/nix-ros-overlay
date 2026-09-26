@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, glfw3, mrpt-common, mrpt-data, mrpt-graphslam, mrpt-gui, mrpt-imgui, mrpt-libapps-cli, mrpt-libapps-gui, mrpt-nav }:
 buildRosPackage {
   pname = "ros-humble-mrpt-examples-cpp";
-  version = "3.1.4-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_examples_cpp/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "1671831acf8e139aecca3759ef111fbb25c420dc57ea5ee343241b70de15d51e";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_examples_cpp/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "665f13c956d8a6f9bd3180064f0a9ff4895a767fc5dcf4df1a1ce6e6b3dca61a";
   };
 
   buildType = "cmake";

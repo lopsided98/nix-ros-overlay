@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, eigen, gdal, geos, git, gtest, lcov, onetbb, ortools-vendor, python3, python3Packages, swig, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-rolling-fields2cover";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fields2cover-release/archive/release/rolling/fields2cover/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "0546dc687601e4751038ccf83e948cbada5e492f77fffce837d135c8bdcf2524";
+    url = "https://github.com/ros2-gbp/fields2cover-release/archive/release/rolling/fields2cover/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "090338f7c25bd9630a872a548ad5e79f3c1f6d614930d6393fc6f35a72a86159";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, onetbb }:
 buildRosPackage {
   pname = "ros-rolling-gtsam";
-  version = "4.3.0-r4";
+  version = "4.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gtsam-release/archive/release/rolling/gtsam/4.3.0-4.tar.gz";
-    name = "4.3.0-4.tar.gz";
-    sha256 = "f7e36da66b3f952209db56b33753026a4109080c12425eac1649096551171a46";
+    url = "https://github.com/ros2-gbp/gtsam-release/archive/release/rolling/gtsam/4.3.1-1.tar.gz";
+    name = "4.3.1-1.tar.gz";
+    sha256 = "5528360a3b5591fc8ed8f62491fb8d769960da91e9793a838168ab476617e497";
   };
 
   buildType = "cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "gtsam";
-    license = with lib.licenses; [ bsd3 bsd3 bsd3 mpl20 asl20 mpl20 ];
+    license = with lib.licenses; [ bsd3 bsd3 mpl20 asl20 mpl20 ];
   };
 }

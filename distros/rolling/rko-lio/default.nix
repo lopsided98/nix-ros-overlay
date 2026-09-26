@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, geometry-msgs, nav-msgs, onetbb, rclcpp, rclcpp-components, rclpy, robin-map, rosbag2-cpp, rosbag2-py, rosbag2-storage, rosidl-runtime-py, sensor-msgs, sophus, spdlog, std-msgs, tf2, tf2-ros, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-rolling-rko-lio";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rko_lio-release/archive/release/rolling/rko_lio/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "a2635f03d02fa6f6aebfb4a2dd654a917028e0a23f50341dfab0a584d50b9cc0";
+    url = "https://github.com/ros2-gbp/rko_lio-release/archive/release/rolling/rko_lio/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "5e94b45224047eda2a429c05d13ed699038fb6a7c55a140c362963576c9933c4";
   };
 
   buildType = "ament_cmake";

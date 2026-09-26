@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-bridge-ros2, mola-demos, mola-input-rawlog, mola-input-rosbag2, mola-input-video, mola-kernel, mola-launcher, mola-metric-maps, mola-pose-list, mola-relocalization, mola-traj-tools, mola-viz, mola-yaml }:
 buildRosPackage {
   pname = "ros-kilted-mola";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "447709ecb58403eefe626d0af90bcfc622ee811588376e12e6c2f3d47fb3c2d4";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "035cd37941762e1cfb82b831155cf8c0cd07d46fb298cfc7f38724192c8d0d48";
   };
 
   buildType = "cmake";

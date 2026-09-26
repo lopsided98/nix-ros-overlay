@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-audio-common-msgs";
-  version = "0.4.0-r2";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/audio_common-release/archive/release/rolling/audio_common_msgs/0.4.0-2.tar.gz";
-    name = "0.4.0-2.tar.gz";
-    sha256 = "ef265045b34a5edc96a614677f7f2d6784e32816dd79b9f41afb3d79ec804d8c";
+    url = "https://github.com/ros2-gbp/audio_common-release/archive/release/rolling/audio_common_msgs/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "cfe08bc8985ee7013edc4a133acb6bbe1af9069c2f386826fb053b98be00c7f9";
   };
 
   buildType = "ament_cmake";
