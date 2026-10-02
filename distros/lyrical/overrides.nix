@@ -24,10 +24,12 @@ in {
     postPatch ? "", ...
   }: {
     # Fix "ld.bfd: libcartographer.a(tsdf_2d.cc.o): undefined reference to symbol '_ZN4absl12lts_2026010712log_internal17MakeCheckOpStringImmEEPKcT_T0_S4_'"
+    # and "ld.bfd: libcartographer.a(motion_filter.cc.o): undefined reference to symbol '_ZN4absl12lts_2026010712log_internal14LogEveryNState9ShouldLogEi'"
+    # (glog's LOG_EVERY_N/CHECK_EQ macros now pull in absl's logging implementation)
     postPatch = postPatch + ''
       substituteInPlace CMakeLists.txt --replace-fail \
         "absl::utility" \
-        "absl::utility absl::log_internal_check_op"
+        "absl::utility absl::log_internal_check_op absl::log_internal_conditions"
     '';
   });
 
