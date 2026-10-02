@@ -1398,13 +1398,21 @@ in with lib; {
   });
 
   slam-toolbox = rosSuper.slam-toolbox.overrideAttrs ({
-    postPatch ? "", meta ? {}, ...
+    postPatch ? "", patches ? [], meta ? {}, ...
   }: {
     # https://github.com/SteveMacenski/slam_toolbox/pull/854
     postPatch = postPatch + ''
       substituteInPlace CMakeLists.txt lib/karto_sdk/CMakeLists.txt \
         --replace-fail " system" ""
     '';
+    # ceres-solver >=2.2 dropped ceres::LocalParameterization in favor of ceres::Manifold;
+    # https://github.com/SteveMacenski/slam_toolbox/pull/687
+    patches = patches ++ [
+      (self.fetchpatch2 {
+        url = "https://github.com/SteveMacenski/slam_toolbox/commit/8749e3392f80e400409da00a9e7fc401ba0818d5.patch?full_index=1";
+        hash = "sha256-5trmJZZWBXQhwo8bHnMKCfToET5WMXdiNaXGgpInE9Q=";
+      })
+    ];
     # package.xml only says "LGPL", without specifying the version
     # https://github.com/SteveMacenski/slam_toolbox/pull/899
     meta = meta // {
