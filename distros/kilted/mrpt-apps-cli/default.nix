@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-libapps-cli }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-apps-cli";
-  version = "3.1.4-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_apps_cli/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "819668d74bb95b4638a35197566a59418cdc7a6ef72dd83f9c5d8064e1e3dcaf";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_apps_cli/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "94dd5d29ddf7d243305ba8ab1077336bd62a0c8e2401ee45c08e7cea4e271f36";
   };
 
   buildType = "cmake";

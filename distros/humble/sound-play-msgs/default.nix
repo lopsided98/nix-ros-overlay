@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-sound-play-msgs";
-  version = "0.4.0-r2";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/audio_common-release/archive/release/humble/sound_play_msgs/0.4.0-2.tar.gz";
-    name = "0.4.0-2.tar.gz";
-    sha256 = "cf661b6f1d02cb719c54f08efedf780e5133cb647f61a37db6c6cb07d873d2c5";
+    url = "https://github.com/ros2-gbp/audio_common-release/archive/release/humble/sound_play_msgs/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "e6fc1ad46c5e6cdba21dba044c83a523c71e730f7daf2d9d250ff93a18fd9ecc";
   };
 
   buildType = "ament_cmake";

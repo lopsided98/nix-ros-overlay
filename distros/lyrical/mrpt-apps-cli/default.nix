@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-libapps-cli }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-apps-cli";
-  version = "3.1.4-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_apps_cli/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "74f9ac0914b66216e6412eb33692a8b83800d912277ebc833ceabdd519ede234";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_apps_cli/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "a1166d7fb44f3359f095e79524c3436402ffab63abe8c8f25fab5c9e041918b0";
   };
 
   buildType = "cmake";

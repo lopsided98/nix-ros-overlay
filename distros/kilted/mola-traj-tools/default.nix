@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libposes }:
+{ lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-poses }:
 buildRosPackage {
   pname = "ros-kilted-mola-traj-tools";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_traj_tools/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "1a67aa0a5f5372e81b7252e44deff9be4961750976adfa9a8b2e7051878ae72b";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_traj_tools/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "8f58f9b006ad7f9f40f7d25f86e0dede2244c8042c804c2e0db6069a2f46c289";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ mola-common mrpt-libposes ];
+  propagatedBuildInputs = [ mola-common mrpt-poses ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

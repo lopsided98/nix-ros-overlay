@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, geometry-msgs, launch, launch-ros, launch-testing, lcov, nav-msgs, nav2-amcl, nav2-behavior-tree, nav2-bringup, nav2-common, nav2-lifecycle-manager, nav2-map-server, nav2-minimal-tb3-sim, nav2-msgs, nav2-navfn-planner, nav2-planner, nav2-ros-common, nav2-util, navigation2, python3Packages, rclcpp, rclcpp-lifecycle, rclpy, robot-state-publisher, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-nav2-system-tests";
-  version = "1.5.1-r1";
+  version = "1.5.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_system_tests/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "144637a16adb40ee73efb5840d3c82e2c654c07c5b2384eabcbba362667ca767";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_system_tests/1.5.2-2.tar.gz";
+    name = "1.5.2-2.tar.gz";
+    sha256 = "542375c708404f9703be025f9b3c8d700a1162f2f347c48314f08ba8d85f8633";
   };
 
   buildType = "ament_cmake";

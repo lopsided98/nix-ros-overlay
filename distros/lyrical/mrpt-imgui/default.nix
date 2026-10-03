@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-opengl }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-imgui";
-  version = "3.1.4-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_imgui/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "91e9fd1327c8459528a9ff01c8d69b9741f990542462f9a7fb963e398ca093cf";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_imgui/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "e9e9776e632270e769bfdec6d26de3dabb6ec6525fe42e3ad362060ee9e8ee0e";
   };
 
   buildType = "cmake";

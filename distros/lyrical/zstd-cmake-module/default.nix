@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, zstd }:
 buildRosPackage {
   pname = "ros-lyrical-zstd-cmake-module";
-  version = "0.33.3-r1";
+  version = "0.33.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/lyrical/zstd_cmake_module/0.33.3-1.tar.gz";
-    name = "0.33.3-1.tar.gz";
-    sha256 = "42da7e0012aa120178d121b1a2af36628b7a04abcc8279109daceb250bbe8a77";
+    url = "https://github.com/ros2-gbp/rosbag2-release/archive/release/lyrical/zstd_cmake_module/0.33.4-1.tar.gz";
+    name = "0.33.4-1.tar.gz";
+    sha256 = "5972d67c2c2091db79e18f77a87331d6fe3311e344121d0bcb16923e298ddd07";
   };
 
   buildType = "ament_cmake";

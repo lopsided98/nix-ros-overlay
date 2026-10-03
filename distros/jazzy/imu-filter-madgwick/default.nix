@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, builtin-interfaces, geometry-msgs, nav-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, sensor-msgs, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-imu-filter-madgwick";
-  version = "2.1.5-r1";
+  version = "2.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/jazzy/imu_filter_madgwick/2.1.5-1.tar.gz";
-    name = "2.1.5-1.tar.gz";
-    sha256 = "245e8e210c35b5ba09d176fa72aa8d6193aa896b259605b451c8b357171778d6";
+    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/jazzy/imu_filter_madgwick/2.1.6-1.tar.gz";
+    name = "2.1.6-1.tar.gz";
+    sha256 = "00b0ad844a6ed8f906cc5939621a43235683111fcf12162c55a2f3ca9c102514";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Filter which fuses angular velocities, accelerations, and (optionally) magnetic readings from a generic IMU device into an orientation. Based on code by Sebastian Madgwick, http://www.x-io.co.uk/node/8#open_source_ahrs_and_imu_algorithms.";
-    license = with lib.licenses; [ "GPL" ];
+    license = with lib.licenses; [ gpl3Plus ];
   };
 }

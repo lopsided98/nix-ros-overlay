@@ -1700,6 +1700,8 @@ self: super: {
 
  mrpt-imgui = self.callPackage ./mrpt-imgui {};
 
+ mrpt-imgui-vendor = self.callPackage ./mrpt-imgui-vendor {};
+
  mrpt-io = self.callPackage ./mrpt-io {};
 
  mrpt-kinematics = self.callPackage ./mrpt-kinematics {};
@@ -1756,6 +1758,10 @@ self: super: {
 
  mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
 
+ mrpt-path-planning-apps = self.callPackage ./mrpt-path-planning-apps {};
+
+ mrpt-path-planning-core = self.callPackage ./mrpt-path-planning-core {};
+
  mrpt-pf-localization = self.callPackage ./mrpt-pf-localization {};
 
  mrpt-pointcloud-pipeline = self.callPackage ./mrpt-pointcloud-pipeline {};
@@ -1791,6 +1797,8 @@ self: super: {
  mrpt-topography = self.callPackage ./mrpt-topography {};
 
  mrpt-tps-astar-planner = self.callPackage ./mrpt-tps-astar-planner {};
+
+ mrpt-trajectory-follower = self.callPackage ./mrpt-trajectory-follower {};
 
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
@@ -2517,6 +2525,10 @@ self: super: {
  roboplan = self.callPackage ./roboplan {};
 
  roboplan-cartesian-planning = self.callPackage ./roboplan-cartesian-planning {};
+
+ roboplan-common = self.callPackage ./roboplan-common {};
+
+ roboplan-core = self.callPackage ./roboplan-core {};
 
  roboplan-example-models = self.callPackage ./roboplan-example-models {};
 

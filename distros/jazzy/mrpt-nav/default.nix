@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-kinematics, mrpt-maps, mrpt-viz }:
+{ lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-kinematics, mrpt-maps, mrpt-viz, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-nav";
-  version = "3.1.4-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_nav/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "cb0e1e3ddc4c5ede4c7cd78ea5d736a6382d7b84a869844750a703aa4911e39d";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_nav/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "457abd8050f719853ed90dba0a3f393053e02bb94fee44ececb1ff7b2ce45fc8";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake eigen ];
+  buildInputs = [ cmake eigen python3 python3Packages.pybind11 ];
   propagatedBuildInputs = [ mrpt-kinematics mrpt-maps mrpt-viz ];
   nativeBuildInputs = [ cmake ];
 

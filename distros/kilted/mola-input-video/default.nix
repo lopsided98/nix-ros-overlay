@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt-libhwdrivers, mrpt-libobs }:
+{ lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt-hwdrivers, mrpt-obs }:
 buildRosPackage {
   pname = "ros-kilted-mola-input-video";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_input_video/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "aa882102bdf8315c841ccaccdcf4c0433ad97667ae5fa965eb007321ebfff342";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_input_video/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "272689f9529471a07156a0fc265c4b0a2b683b96df23cc57cc268b1bd21fbf79";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ mola-kernel mrpt-libhwdrivers mrpt-libobs ];
+  propagatedBuildInputs = [ mola-kernel mrpt-hwdrivers mrpt-obs ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

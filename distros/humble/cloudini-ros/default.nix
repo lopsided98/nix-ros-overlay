@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, cloudini-lib, pcl-conversions, pluginlib, point-cloud-interfaces, point-cloud-transport, rclcpp, rclcpp-components, rosbag2-cpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-cloudini-ros";
-  version = "1.1.0-r2";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/facontidavide/cloudini-release/archive/release/humble/cloudini_ros/1.1.0-2.tar.gz";
-    name = "1.1.0-2.tar.gz";
-    sha256 = "236ab726e023223f770bc25563fcb8459619077df6ae10f3d16259ee8329bc76";
+    url = "https://github.com/facontidavide/cloudini-release/archive/release/humble/cloudini_ros/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "4acba764df13303b2e07efce95489212f756a54c0369a5692bd0f417d417994c";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Main library of Cloudini, the pointcloud compression library";
-    license = with lib.licenses; [ "Apache" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

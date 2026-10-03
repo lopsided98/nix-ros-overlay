@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake }:
 buildRosPackage {
   pname = "ros-lyrical-vrpn";
-  version = "7.35.0-r22";
+  version = "7.36.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vrpn-release/archive/release/lyrical/vrpn/7.35.0-22.tar.gz";
-    name = "7.35.0-22.tar.gz";
-    sha256 = "4aaf3ad6e7aa4e92e13be471a1885a2619562e69a75e69fd58b1a641db049876";
+    url = "https://github.com/ros2-gbp/vrpn-release/archive/release/lyrical/vrpn/7.36.0-1.tar.gz";
+    name = "7.36.0-1.tar.gz";
+    sha256 = "9425ad956d6ca5b8ad1230b56b7bf4837dee1bd82da9b712dfdf36000256ce32";
   };
 
   buildType = "cmake";

@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, camera-calibration-parsers, cv-bridge, eigen, image-geometry, image-transport, message-filters, opencv, rcl-interfaces, rclcpp, rclcpp-components, rclpy, swri-geometry-util, swri-math-util, swri-opencv-util, tf2 }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, cv-bridge, eigen, image-transport, message-filters, opencv, rcl-interfaces, rclcpp, rclcpp-components, sensor-msgs, swri-geometry-util, swri-math-util, swri-opencv-util, tf2 }:
 buildRosPackage {
   pname = "ros-kilted-swri-image-util";
-  version = "3.11.0-r1";
+  version = "3.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/kilted/swri_image_util/3.11.0-1.tar.gz";
-    name = "3.11.0-1.tar.gz";
-    sha256 = "a46a35d6aaa58bf510870e73a78053423dbb576366d9aa913510a7ed3f1864df";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/kilted/swri_image_util/3.12.0-1.tar.gz";
+    name = "3.12.0-1.tar.gz";
+    sha256 = "75fb1a9b96744d1fb76c00277348baeebc956347d458fe1865a0e725dd54f176";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
+  buildInputs = [ ament-cmake eigen ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ ament-index-cpp camera-calibration-parsers cv-bridge eigen image-geometry image-transport message-filters opencv opencv.cxxdev rcl-interfaces rclcpp rclcpp-components rclpy swri-geometry-util swri-math-util swri-opencv-util tf2 ];
+  propagatedBuildInputs = [ ament-index-cpp cv-bridge image-transport message-filters opencv opencv.cxxdev rcl-interfaces rclcpp rclcpp-components sensor-msgs swri-geometry-util swri-math-util swri-opencv-util tf2 ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

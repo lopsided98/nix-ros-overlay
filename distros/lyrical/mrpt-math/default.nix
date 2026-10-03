@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-common, mrpt-io, mrpt-random, mrpt-serialization, mrpt-system, nanoflann-vendor, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-math";
-  version = "3.1.4-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_math/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "3e04025eb1bbca1b4d2d55a398db19404d8c419e2d585da685fbb7be3a7f5e68";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_math/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "008ef7519b09efa38aca8e456826c7b29fbe483246a877a0c511aa7e64c40a43";
   };
 
   buildType = "cmake";

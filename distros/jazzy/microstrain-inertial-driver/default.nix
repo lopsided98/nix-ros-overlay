@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-target-dependencies, ament-cpplint, diagnostic-aggregator, diagnostic-updater, eigen, geographiclib, geometry-msgs, git, lifecycle-msgs, microstrain-inertial-msgs, nav-msgs, nmea-msgs, rclcpp-lifecycle, ros-environment, rosidl-default-generators, rosidl-default-runtime, rtcm-msgs, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-microstrain-inertial-driver";
-  version = "4.9.0-r1";
+  version = "4.10.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/jazzy/microstrain_inertial_driver/4.9.0-1.tar.gz";
-    name = "4.9.0-1.tar.gz";
-    sha256 = "f74046adaf84bf666f5f2776aed94424f8fc24a3ba8db3afd95bc5f213fc9be2";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/jazzy/microstrain_inertial_driver/4.10.0-2.tar.gz";
+    name = "4.10.0-2.tar.gz";
+    sha256 = "33e46cb1991a3fd33fc5e5f6ef6746bd50a87831fefde25f842ba5f94549c3a6";
   };
 
   buildType = "ament_cmake";

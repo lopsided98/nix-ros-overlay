@@ -4,8 +4,6 @@
 
 self: super: {
 
- acado-vendor = self.callPackage ./acado-vendor {};
-
  ackermann-msgs = self.callPackage ./ackermann-msgs {};
 
  ackermann-nlmpc = self.callPackage ./ackermann-nlmpc {};
@@ -550,6 +548,8 @@ self: super: {
 
  diff-drive-controller = self.callPackage ./diff-drive-controller {};
 
+ dispatcher = self.callPackage ./dispatcher {};
+
  domain-coordinator = self.callPackage ./domain-coordinator {};
 
  draco-point-cloud-transport = self.callPackage ./draco-point-cloud-transport {};
@@ -654,6 +654,8 @@ self: super: {
 
  ecl-utilities = self.callPackage ./ecl-utilities {};
 
+ ehukai = self.callPackage ./ehukai {};
+
  eigen3-cmake-module = self.callPackage ./eigen3-cmake-module {};
 
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
@@ -661,6 +663,8 @@ self: super: {
  eigenpy = self.callPackage ./eigenpy {};
 
  eiquadprog = self.callPackage ./eiquadprog {};
+
+ enpose-tracking = self.callPackage ./enpose-tracking {};
 
  event-camera-codecs = self.callPackage ./event-camera-codecs {};
 
@@ -1132,8 +1136,6 @@ self: super: {
 
  launch-ros = self.callPackage ./launch-ros {};
 
- launch-system-modes = self.callPackage ./launch-system-modes {};
-
  launch-testing = self.callPackage ./launch-testing {};
 
  launch-testing-ament-cmake = self.callPackage ./launch-testing-ament-cmake {};
@@ -1538,6 +1540,8 @@ self: super: {
 
  mrpt-imgui = self.callPackage ./mrpt-imgui {};
 
+ mrpt-imgui-vendor = self.callPackage ./mrpt-imgui-vendor {};
+
  mrpt-io = self.callPackage ./mrpt-io {};
 
  mrpt-kinematics = self.callPackage ./mrpt-kinematics {};
@@ -1594,6 +1598,10 @@ self: super: {
 
  mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
 
+ mrpt-path-planning-apps = self.callPackage ./mrpt-path-planning-apps {};
+
+ mrpt-path-planning-core = self.callPackage ./mrpt-path-planning-core {};
+
  mrpt-pf-localization = self.callPackage ./mrpt-pf-localization {};
 
  mrpt-pointcloud-pipeline = self.callPackage ./mrpt-pointcloud-pipeline {};
@@ -1629,6 +1637,8 @@ self: super: {
  mrpt-topography = self.callPackage ./mrpt-topography {};
 
  mrpt-tps-astar-planner = self.callPackage ./mrpt-tps-astar-planner {};
+
+ mrpt-trajectory-follower = self.callPackage ./mrpt-trajectory-follower {};
 
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
@@ -1808,8 +1818,6 @@ self: super: {
 
  osqp-vendor = self.callPackage ./osqp-vendor {};
 
- osrf-pycommon = self.callPackage ./osrf-pycommon {};
-
  osrf-testing-tools-cpp = self.callPackage ./osrf-testing-tools-cpp {};
 
  ouster-ros = self.callPackage ./ouster-ros {};
@@ -1979,8 +1987,6 @@ self: super: {
  python-qt-binding = self.callPackage ./python-qt-binding {};
 
  qml6-ros2-plugin = self.callPackage ./qml6-ros2-plugin {};
-
- qml-ros2-plugin = self.callPackage ./qml-ros2-plugin {};
 
  qpoases-vendor = self.callPackage ./qpoases-vendor {};
 
@@ -2251,6 +2257,10 @@ self: super: {
  roboplan = self.callPackage ./roboplan {};
 
  roboplan-cartesian-planning = self.callPackage ./roboplan-cartesian-planning {};
+
+ roboplan-common = self.callPackage ./roboplan-common {};
+
+ roboplan-core = self.callPackage ./roboplan-core {};
 
  roboplan-example-models = self.callPackage ./roboplan-example-models {};
 
@@ -2833,12 +2843,6 @@ self: super: {
  sync-tooling-msgs = self.callPackage ./sync-tooling-msgs {};
 
  system-fingerprint = self.callPackage ./system-fingerprint {};
-
- system-modes = self.callPackage ./system-modes {};
-
- system-modes-examples = self.callPackage ./system-modes-examples {};
-
- system-modes-msgs = self.callPackage ./system-modes-msgs {};
 
  system-webview = self.callPackage ./system-webview {};
 

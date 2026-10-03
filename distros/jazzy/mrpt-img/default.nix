@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, glfw3, mrpt-common, mrpt-config, mrpt-io, mrpt-math, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-img";
-  version = "3.1.4-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_img/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "8fda4a4dca3da2cfb4c9b3a495e49db5298fef7cc72fe01e44ed41baf5f35895";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_img/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "5c760cd4656e7c534230cde5a3a3333b089fa32df8254e3e85ca52302caa5c54";
   };
 
   buildType = "cmake";

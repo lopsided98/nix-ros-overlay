@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-novatel-oem6-msgs";
-  version = "0.3.0-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/humble/novatel_oem6_msgs/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "2180ea055663b2b9e4190cc9787a31480bac5018005af3854bcf261dc28f5500";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/humble/novatel_oem6_msgs/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "0d5d0a0fb1aa76eb6531e6d5d6f071b46e52e933b23761ed7166f0892db2caef";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, xacro }:
 buildRosPackage {
   pname = "ros-rolling-microstrain-inertial-description";
-  version = "4.9.0-r1";
+  version = "4.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/rolling/microstrain_inertial_description/4.9.0-1.tar.gz";
-    name = "4.9.0-1.tar.gz";
-    sha256 = "1bc683fd5c51474fe924926962fb625650b9053d3a82b38413607b4de99fa73e";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/rolling/microstrain_inertial_description/4.10.0-1.tar.gz";
+    name = "4.10.0-1.tar.gz";
+    sha256 = "670fd094d377fb167fb337efaa919e2b02cef417e469297794e080e988461651";
   };
 
   buildType = "ament_cmake";

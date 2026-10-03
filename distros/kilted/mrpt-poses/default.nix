@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-bayes, mrpt-common, mrpt-io, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-poses";
-  version = "3.1.4-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_poses/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "c2a50854d1ca086acbbdaba0dfaab3542f24185bd61ebcd5dd73f8ba750a54c9";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_poses/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "65c4f9373025eed36a71fc419b66195e4dbfada351567fb7017f8c048df51727";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-lyrical-int2dds-ffi-vendor";
-  version = "0.1.5-r1";
+  version = "0.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_int2dds-release/archive/release/lyrical/int2dds_ffi_vendor/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "f3116e6a3a3c4935f58e6612ff1fe454bab0fa3bf99b504920583357107752f2";
+    url = "https://github.com/ros2-gbp/rmw_int2dds-release/archive/release/lyrical/int2dds_ffi_vendor/0.1.7-1.tar.gz";
+    name = "0.1.7-1.tar.gz";
+    sha256 = "c1950f903d0be2ef8255a18d7e1a9fedd0d646bc0f071268bae6f1201f415956";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, geometry-msgs, rclcpp, std-msgs, tf2, vrpn }:
 buildRosPackage {
   pname = "ros-lyrical-vrpn-mocap";
-  version = "1.1.0-r5";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vrpn_mocap-release/archive/release/lyrical/vrpn_mocap/1.1.0-5.tar.gz";
-    name = "1.1.0-5.tar.gz";
-    sha256 = "6fda564ed92ebee160963c931be90cb370c700b9e43014fd7ab69adea4a3db69";
+    url = "https://github.com/ros2-gbp/vrpn_mocap-release/archive/release/lyrical/vrpn_mocap/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "2882ca599caa99890073f922f5d82498ce507d563b07c5b8ce67fef500116447";
   };
 
   buildType = "ament_cmake";

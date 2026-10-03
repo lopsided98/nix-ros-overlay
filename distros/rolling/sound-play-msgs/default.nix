@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-sound-play-msgs";
-  version = "0.4.0-r2";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/audio_common-release/archive/release/rolling/sound_play_msgs/0.4.0-2.tar.gz";
-    name = "0.4.0-2.tar.gz";
-    sha256 = "227e5df820913436a9cfe0cdaf667febbe93fbd89d4c3df1cda7d3dc6fdded78";
+    url = "https://github.com/ros2-gbp/audio_common-release/archive/release/rolling/sound_play_msgs/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "0a541d7044012d7ae17fe77c6a720ee0c6c46f1555f5ebb172a7ccacf78ad248";
   };
 
   buildType = "ament_cmake";

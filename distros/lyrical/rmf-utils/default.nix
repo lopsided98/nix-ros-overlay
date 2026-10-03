@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-catch2, ament-cmake-uncrustify, cmake }:
 buildRosPackage {
   pname = "ros-lyrical-rmf-utils";
-  version = "1.8.0-r1";
+  version = "1.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_utils-release/archive/release/lyrical/rmf_utils/1.8.0-1.tar.gz";
-    name = "1.8.0-1.tar.gz";
-    sha256 = "daa1c760a924cfc29bcccee29542674189db391ec737c769f566f02c7393174b";
+    url = "https://github.com/ros2-gbp/rmf_utils-release/archive/release/lyrical/rmf_utils/1.8.1-1.tar.gz";
+    name = "1.8.1-1.tar.gz";
+    sha256 = "03e74fa51d99a9cbab897daf83c846f10a711257ae6cf9e341ee766df3b88d8b";
   };
 
   buildType = "cmake";

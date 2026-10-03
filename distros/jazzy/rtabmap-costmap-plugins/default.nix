@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, nav2-costmap-2d, pluginlib, rclcpp, ros-environment, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rtabmap-costmap-plugins";
-  version = "0.23.7-r1";
+  version = "0.23.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/jazzy/rtabmap_costmap_plugins/0.23.7-1.tar.gz";
-    name = "0.23.7-1.tar.gz";
-    sha256 = "3364ff403fbae693d459ce463f3d3c291d6e70915225ba6b8e6bcde3e5ff3d9f";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/jazzy/rtabmap_costmap_plugins/0.23.13-1.tar.gz";
+    name = "0.23.13-1.tar.gz";
+    sha256 = "a69611b481321ec35a1ec80446965b83c0cc6cf1d36b7a1a2ecd2422e24c58df";
   };
 
   buildType = "ament_cmake";

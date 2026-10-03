@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-system, python3, python3Packages, zstd }:
+{ lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-serialization, mrpt-system, python3, python3Packages, zlib, zstd }:
 buildRosPackage {
   pname = "ros-humble-mrpt-io";
-  version = "3.1.4-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_io/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "b03ebd8c9746ef0401f674aa37e1404e1b27d4bc7d1fef81ce9e88bcddffe4ac";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_io/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "2982551339b14a4df5b1ee76c1bf385cab9f64348abd39e0dc46ddedffa4bbc6";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake python3 python3Packages.pybind11 zstd ];
-  propagatedBuildInputs = [ mrpt-common mrpt-system ];
+  buildInputs = [ cmake python3 python3Packages.pybind11 zlib zstd ];
+  propagatedBuildInputs = [ mrpt-common mrpt-serialization mrpt-system ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

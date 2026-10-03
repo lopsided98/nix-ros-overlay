@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-novatel-oem6-msgs";
-  version = "0.3.0-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/kilted/novatel_oem6_msgs/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "562ecafc2a445363919a2797f58884af886f71de63e8968fbe28b18bf3a4bce9";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/kilted/novatel_oem6_msgs/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "dbb3c4bc8999b3b6177d4d65b4faa7faf8bbcb65ddfa66ba158e5fabcf05e89a";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gtest, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, message-filters, rcl-interfaces, rclcpp, rclcpp-action, rclcpp-components, rosgraph-msgs, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-kilted-tf2-ros";
-  version = "0.41.9-r1";
+  version = "0.41.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/tf2_ros/0.41.9-1.tar.gz";
-    name = "0.41.9-1.tar.gz";
-    sha256 = "fc16971ab99e5e5ec57370bec7c9d287c13774fcd230ed9d42ac358cd94773f7";
+    url = "https://github.com/ros2-gbp/geometry2-release/archive/release/kilted/tf2_ros/0.41.10-1.tar.gz";
+    name = "0.41.10-1.tar.gz";
+    sha256 = "361b16bf519fd875a1ad934d156784e473be3ee77a74e4db9aa731bff27d8ba5";
   };
 
   buildType = "ament_cmake";

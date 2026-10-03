@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, geometry-msgs, ros-environment, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-humble-rtabmap-msgs";
-  version = "0.23.7-r1";
+  version = "0.23.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/humble/rtabmap_msgs/0.23.7-1.tar.gz";
-    name = "0.23.7-1.tar.gz";
-    sha256 = "977098eee8edad0db9ee3769559ca66462e78cf10252d0bbfae41c53637bee22";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/humble/rtabmap_msgs/0.23.13-1.tar.gz";
+    name = "0.23.13-1.tar.gz";
+    sha256 = "3ff4f3e82931953f135f730100f6a4f3cc65379ca059c7e79067c8caf75f62b7";
   };
 
   buildType = "ament_cmake";

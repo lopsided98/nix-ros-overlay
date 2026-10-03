@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-microstrain-inertial-msgs";
-  version = "4.9.0-r1";
+  version = "4.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/kilted/microstrain_inertial_msgs/4.9.0-1.tar.gz";
-    name = "4.9.0-1.tar.gz";
-    sha256 = "42639e9f8986a3dd60fcd8ebb56b25469c49750926abaa06357755b61f33c3b6";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/kilted/microstrain_inertial_msgs/4.10.0-1.tar.gz";
+    name = "4.10.0-1.tar.gz";
+    sha256 = "a91d8db278a52a4ecace950eee8d6e59543c6d93f4c9aa3d0f64a7e6809e8443";
   };
 
   buildType = "ament_cmake";

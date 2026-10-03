@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, rmf-traffic }:
 buildRosPackage {
   pname = "ros-lyrical-rmf-traffic-examples";
-  version = "3.8.0-r1";
+  version = "3.8.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_traffic-release/archive/release/lyrical/rmf_traffic_examples/3.8.0-1.tar.gz";
-    name = "3.8.0-1.tar.gz";
-    sha256 = "848d9ad13da757998094581d4f15eb8e30898291556e5ce7dda2edffff857d51";
+    url = "https://github.com/ros2-gbp/rmf_traffic-release/archive/release/lyrical/rmf_traffic_examples/3.8.1-1.tar.gz";
+    name = "3.8.1-1.tar.gz";
+    sha256 = "4368e755703933caceab4e598eb175e60f0e58b5885014033cab0c25341d8d2c";
   };
 
   buildType = "cmake";

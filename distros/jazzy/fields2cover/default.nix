@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, eigen, gdal, geos, git, gtest, lcov, onetbb, ortools-vendor, python3, python3Packages, swig, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-jazzy-fields2cover";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fields2cover-release/archive/release/jazzy/fields2cover/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "a0e78018e2b580b14d208e0cc7fdf2aaac2cd2bc00b3d2287b20993fd870c316";
+    url = "https://github.com/ros2-gbp/fields2cover-release/archive/release/jazzy/fields2cover/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "c4dd77832fdaa268266cf4da05fb6649f253a3a7fc13f7473c1fc7535356e661";
   };
 
   buildType = "cmake";
