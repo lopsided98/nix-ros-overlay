@@ -871,9 +871,17 @@ in with lib; {
     ];
   });
 
-  moveit-task-constructor-core= rosSuper.moveit-task-constructor-core.overrideAttrs ({
-    postPatch ? "", ...
+  moveit-task-constructor-core = rosSuper.moveit-task-constructor-core.overrideAttrs ({
+    patches ? [], postPatch ? "", ...
   }: {
+    patches = patches ++ [
+      # Add missing #include <boost/core/demangle.hpp>
+      (self.fetchpatch2 {
+        url = "https://github.com/moveit/moveit_task_constructor/commit/b8b53cf1d9f8168defa863b034199e2629c0bfdc.patch?full_index=1";
+        hash = "sha256-diIqBBDVDSjg2P62ClPY0/SuQWnq2B2uZJK1yiin6bU=";
+        stripLen = 1;
+      })
+    ];
     # ref. https://github.com/moveit/moveit_task_constructor/pull/756
     postPatch = postPatch + ''
       substituteInPlace include/moveit/task_constructor/stage_p.h \
