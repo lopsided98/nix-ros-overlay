@@ -397,6 +397,20 @@ in {
     NIX_CFLAGS_COMPILE = toString [ "-Wno-error=cpp" ];
   });
 
+  mola-viz-imgui = rosSuper.mola-viz-imgui.overrideAttrs ({
+    cmakeFlags ? [], ...
+  }: {
+    # mrpt/imgui/CImGuiSceneView.h calls raw GL functions (e.g.
+    # glBindFramebuffer) assuming the including translation unit already
+    # declared their prototypes. GLFW's <GL/gl.h> pulls in <GL/glext.h>
+    # before mrpt/opengl/opengl_api.h gets a chance to define
+    # GL_GLEXT_PROTOTYPES, so glext.h's header guard makes it a no-op the
+    # second time around. Define the macro globally so the first inclusion
+    # already declares the prototypes.
+    # See https://github.com/MOLAorg/mola/issues/239
+    cmakeFlags = cmakeFlags ++ [ "-DCMAKE_CXX_FLAGS=-DGL_GLEXT_PROTOTYPES=1" ];
+  });
+
   mp-units-vendor = lib.patchAmentVendorGit rosSuper.mp-units-vendor {};
 
   mp2p-icp-viz = rosSuper.mp2p-icp-viz.overrideAttrs ({
