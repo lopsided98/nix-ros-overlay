@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "Vendored Dear ImGui (docking branch), ImPlot, portable-file-dialogs and an embedded icon font, built as one library for use by MRPT packages";
-    license = with lib.licenses; [ bsdOriginal mit mit "WTFPL" zlib asl20 ];
+    license = with lib.licenses; [ bsdOriginal mit mit wtfpl zlib asl20 ];
   };
 }
