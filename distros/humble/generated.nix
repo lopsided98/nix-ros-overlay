@@ -1446,6 +1446,16 @@ self: super: {
 
  fri-state-broadcaster = self.callPackage ./fri-state-broadcaster {};
 
+ fss-bringup = self.callPackage ./fss-bringup {};
+
+ fss-px4-sim = self.callPackage ./fss-px4-sim {};
+
+ fss-sensing = self.callPackage ./fss-sensing {};
+
+ fss-time = self.callPackage ./fss-time {};
+
+ fss-time-interfaces = self.callPackage ./fss-time-interfaces {};
+
  fusioncore-core = self.callPackage ./fusioncore-core {};
 
  fusioncore-datasets = self.callPackage ./fusioncore-datasets {};
@@ -2376,6 +2386,8 @@ self: super: {
 
  mrpt-imgui = self.callPackage ./mrpt-imgui {};
 
+ mrpt-imgui-vendor = self.callPackage ./mrpt-imgui-vendor {};
+
  mrpt-io = self.callPackage ./mrpt-io {};
 
  mrpt-kinematics = self.callPackage ./mrpt-kinematics {};
@@ -2432,6 +2444,10 @@ self: super: {
 
  mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
 
+ mrpt-path-planning-apps = self.callPackage ./mrpt-path-planning-apps {};
+
+ mrpt-path-planning-core = self.callPackage ./mrpt-path-planning-core {};
+
  mrpt-pf-localization = self.callPackage ./mrpt-pf-localization {};
 
  mrpt-pointcloud-pipeline = self.callPackage ./mrpt-pointcloud-pipeline {};
@@ -2467,6 +2483,8 @@ self: super: {
  mrpt-topography = self.callPackage ./mrpt-topography {};
 
  mrpt-tps-astar-planner = self.callPackage ./mrpt-tps-astar-planner {};
+
+ mrpt-trajectory-follower = self.callPackage ./mrpt-trajectory-follower {};
 
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
@@ -4633,6 +4651,8 @@ self: super: {
  wireless-msgs = self.callPackage ./wireless-msgs {};
 
  wireless-watcher = self.callPackage ./wireless-watcher {};
+
+ wirestead = self.callPackage ./wirestead {};
 
  wrapyfi-ros2-interfaces = self.callPackage ./wrapyfi-ros2-interfaces {};
 

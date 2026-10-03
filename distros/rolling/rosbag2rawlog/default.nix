@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, cli11, cmake, cv-bridge, mrpt-libmaps, mrpt-libros-bridge, mrpt-msgs, nav-msgs, rosbag2-cpp, sensor-msgs, tf2-geometry-msgs, tf2-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, cli11, cmake, cv-bridge, mrpt-containers, mrpt-libros-bridge, mrpt-maps, mrpt-msgs, nav-msgs, rosbag2-cpp, sensor-msgs, tf2-geometry-msgs, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-rosbag2rawlog";
-  version = "3.5.3-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros_bridge-release/archive/release/rolling/rosbag2rawlog/3.5.3-1.tar.gz";
-    name = "3.5.3-1.tar.gz";
-    sha256 = "85d676a81466eed905ca21dd58cdef69abdeb2f0b48d3b4aa2a1c5eb369320cd";
+    url = "https://github.com/ros2-gbp/mrpt_ros_bridge-release/archive/release/rolling/rosbag2rawlog/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "9e185e029a2fb1cb9cb5ffea8929e9324e0526d5ce3d88e203054242ac6a44b3";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake cmake ];
-  propagatedBuildInputs = [ ament-cmake-lint-cmake ament-cmake-xmllint ament-lint-auto cli11 cv-bridge mrpt-libmaps mrpt-libros-bridge mrpt-msgs nav-msgs rosbag2-cpp sensor-msgs tf2-geometry-msgs tf2-msgs tf2-ros ];
+  propagatedBuildInputs = [ ament-cmake-lint-cmake ament-cmake-xmllint ament-lint-auto cli11 cv-bridge mrpt-containers mrpt-libros-bridge mrpt-maps mrpt-msgs nav-msgs rosbag2-cpp sensor-msgs tf2-geometry-msgs tf2-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake cmake ];
 
   meta = {

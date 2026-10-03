@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, eigen, gdal, geos, git, gtest, lcov, onetbb, ortools-vendor, python3, python3Packages, swig, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-kilted-fields2cover";
-  version = "2.1.0-r1";
+  version = "2.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fields2cover-release/archive/release/kilted/fields2cover/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "9169cc99c6fcff09f61916204766547b4a3c504cf1fb72af7fc41cd32655f684";
+    url = "https://github.com/ros2-gbp/fields2cover-release/archive/release/kilted/fields2cover/2.1.1-1.tar.gz";
+    name = "2.1.1-1.tar.gz";
+    sha256 = "cacfc071cc69a91b10316e4c384424687c20ff52ffcc00cebbebfcb50ab8a18c";
   };
 
   buildType = "cmake";

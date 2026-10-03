@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, cli11, cmake, mola-bridge-ros2, mola-common, mola-imu-preintegration, mola-input-kitti-dataset, mola-input-kitti360-dataset, mola-input-mulran-dataset, mola-input-paris-luco-dataset, mola-input-rawlog, mola-input-rosbag2, mola-kernel, mola-launcher, mola-metric-maps, mola-pose-list, mola-state-estimation-simple, mola-state-estimation-smoother, mola-test-datasets, mola-viz, mola-viz-imgui, mola-yaml, mp2p-icp, mrpt-libmaps, ros-environment, rosbag2-storage-mcap }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, cli11, cmake, eigen, mola-bridge-ros2, mola-common, mola-imu-preintegration, mola-input-kitti-dataset, mola-input-kitti360-dataset, mola-input-mulran-dataset, mola-input-paris-luco-dataset, mola-input-rawlog, mola-input-rosbag1, mola-input-rosbag2, mola-kernel, mola-launcher, mola-metric-maps, mola-pose-list, mola-state-estimation-simple, mola-state-estimation-smoother, mola-test-datasets, mola-viz, mola-viz-imgui, mola-yaml, mp2p-icp, mrpt-maps, mrpt-obs, ros-environment, rosbag2-storage-mcap }:
 buildRosPackage {
   pname = "ros-jazzy-mola-lidar-odometry";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_lidar_odometry-release/archive/release/jazzy/mola_lidar_odometry/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "3b9cee32360723a134ed2b60e624797419ebb474b754c29c2b7e9f1e12f733ef";
+    url = "https://github.com/ros2-gbp/mola_lidar_odometry-release/archive/release/jazzy/mola_lidar_odometry/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "eadda4a9ea8e68e5a1a0c2cb24bd70518b053c6a001cf163823c8b6dbc038420";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-gtest ament-cmake-xmllint cmake ros-environment ];
-  checkInputs = [ ament-lint-auto ament-lint-cmake mola-metric-maps mola-test-datasets rosbag2-storage-mcap ];
-  propagatedBuildInputs = [ cli11 mola-bridge-ros2 mola-common mola-imu-preintegration mola-input-kitti-dataset mola-input-kitti360-dataset mola-input-mulran-dataset mola-input-paris-luco-dataset mola-input-rawlog mola-input-rosbag2 mola-kernel mola-launcher mola-pose-list mola-state-estimation-simple mola-state-estimation-smoother mola-viz mola-viz-imgui mola-yaml mp2p-icp mrpt-libmaps ];
+  buildInputs = [ ament-cmake ament-cmake-gtest ament-cmake-xmllint cmake eigen ros-environment ];
+  checkInputs = [ ament-lint-auto ament-lint-cmake mola-metric-maps mola-test-datasets mrpt-obs rosbag2-storage-mcap ];
+  propagatedBuildInputs = [ cli11 mola-bridge-ros2 mola-common mola-imu-preintegration mola-input-kitti-dataset mola-input-kitti360-dataset mola-input-mulran-dataset mola-input-paris-luco-dataset mola-input-rawlog mola-input-rosbag1 mola-input-rosbag2 mola-kernel mola-launcher mola-pose-list mola-state-estimation-simple mola-state-estimation-smoother mola-viz mola-viz-imgui mola-yaml mp2p-icp mrpt-maps ];
   nativeBuildInputs = [ ament-cmake ament-cmake-gtest cmake ];
 
   meta = {

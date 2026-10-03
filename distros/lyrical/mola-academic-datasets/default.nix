@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, kitti-metrics-eval, mola-input-euroc-dataset, mola-input-kitti-dataset, mola-input-kitti360-dataset, mola-input-mulran-dataset, mola-input-paris-luco-dataset }:
 buildRosPackage {
   pname = "ros-lyrical-mola-academic-datasets";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_academic_datasets-release/archive/release/lyrical/mola_academic_datasets/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "01d054dcfc336e7e7a1973d86fbd24b4f76f6e8dfafc3a898f09970169366c18";
+    url = "https://github.com/ros2-gbp/mola_academic_datasets-release/archive/release/lyrical/mola_academic_datasets/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "ee8c587142f905a8997ae2d34b801cbda074bb5b20aa37edc3d75b9bfd09ae47";
   };
 
   buildType = "cmake";

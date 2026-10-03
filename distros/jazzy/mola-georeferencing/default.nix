@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, gtsam, mola-common, mola-gtsam-factors, mola-yaml, mp2p-icp, mrpt-libmaps, mrpt-libtclap }:
+{ lib, buildRosPackage, fetchurl, cli11, cmake, gtsam, mola-common, mola-gtsam-factors, mola-yaml, mp2p-icp, mrpt-maps }:
 buildRosPackage {
   pname = "ros-jazzy-mola-georeferencing";
-  version = "2.4.2-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/jazzy/mola_georeferencing/2.4.2-1.tar.gz";
-    name = "2.4.2-1.tar.gz";
-    sha256 = "246c05199100ff7bbe42cbbe358653eedd517e24c981cef6d52330d70cd3e1de";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/jazzy/mola_georeferencing/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "6dc5b9a48b7919f6ef5f84205933818bd4871dae84349ccd7c56c8ecae391ca2";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ gtsam mola-common mola-gtsam-factors mola-yaml mp2p-icp mrpt-libmaps mrpt-libtclap ];
+  propagatedBuildInputs = [ cli11 gtsam mola-common mola-gtsam-factors mola-yaml mp2p-icp mrpt-maps ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

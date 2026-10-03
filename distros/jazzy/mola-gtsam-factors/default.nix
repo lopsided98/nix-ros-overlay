@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, gtsam, mola-common, mrpt-libposes }:
+{ lib, buildRosPackage, fetchurl, cmake, gtsam, mola-common, mrpt-poses }:
 buildRosPackage {
   pname = "ros-jazzy-mola-gtsam-factors";
-  version = "2.4.2-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/jazzy/mola_gtsam_factors/2.4.2-1.tar.gz";
-    name = "2.4.2-1.tar.gz";
-    sha256 = "16a4bb104222baafada0292f558dad31c6291dd72dfc68e8fdae138ea6f1ca10";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/jazzy/mola_gtsam_factors/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "ad0233939d16d0c8fbc2b5ccb9387b83ac6ab523522ceba51a7206b775ad268f";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ gtsam mola-common mrpt-libposes ];
+  propagatedBuildInputs = [ gtsam mola-common mrpt-poses ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, backward-ros, builtin-interfaces, geographic-msgs, geometry-msgs, nav-msgs, nav2-common, rclcpp, rosidl-default-generators, rosidl-default-runtime, std-msgs, unique-identifier-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-nav2-msgs";
-  version = "1.5.1-r1";
+  version = "1.5.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_msgs/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "8a864d9f57397a6dd56e392a32880ce5c9ff7bd44688d9053bbe0800c9dd6583";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_msgs/1.5.2-2.tar.gz";
+    name = "1.5.2-2.tar.gz";
+    sha256 = "bb642e9e7644140425e9cb77cbb1083cbeda104906f7cc020d95d778a1f7a1c1";
   };
 
   buildType = "ament_cmake";

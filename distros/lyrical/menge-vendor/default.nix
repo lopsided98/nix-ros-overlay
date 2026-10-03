@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, pkg-config, tinyxml }:
 buildRosPackage {
   pname = "ros-lyrical-menge-vendor";
-  version = "1.3.0-r3";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/menge_vendor-release/archive/release/lyrical/menge_vendor/1.3.0-3.tar.gz";
-    name = "1.3.0-3.tar.gz";
-    sha256 = "a951ebbd753a5afe3c7baddf356110eb8605c743c05b345e7ce9e95fc9a0b5a9";
+    url = "https://github.com/ros2-gbp/menge_vendor-release/archive/release/lyrical/menge_vendor/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "cf9756bbc15361c2f01b774eba8953449d30a61050d1ad3aeb61994a4d67d3ba";
   };
 
   buildType = "catkin";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-viz, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-mrpt-kinematics";
-  version = "3.1.4-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_kinematics/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "d7cb9c82412bddc36d3c60f0d506a5e47eff7952bacff926cc929179fde60210";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_kinematics/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "a12e8650558bf2d927ec9ac789f9bfd0a03a451a5e6d01ff98b7c91e24aa34f8";
   };
 
   buildType = "cmake";

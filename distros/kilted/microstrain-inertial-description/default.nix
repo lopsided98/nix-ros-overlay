@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, xacro }:
 buildRosPackage {
   pname = "ros-kilted-microstrain-inertial-description";
-  version = "4.9.0-r1";
+  version = "4.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/kilted/microstrain_inertial_description/4.9.0-1.tar.gz";
-    name = "4.9.0-1.tar.gz";
-    sha256 = "240533f0ef3ed5223fd3f10ecd6ba6906c8190993261b1c095298196aef2b1fa";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/kilted/microstrain_inertial_description/4.10.0-1.tar.gz";
+    name = "4.10.0-1.tar.gz";
+    sha256 = "76d0a5f46db762a9c45a11c5f7fd7590ae91beccb76eb6ad3502401f5ad97793";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-copyright, ament-flake8, ament-mypy, ament-pep257, ament-xmllint, geometry-msgs, lifecycle-msgs, nav2-msgs, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-lyrical-nav2-simple-commander";
-  version = "1.5.1-r1";
+  version = "1.5.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_simple_commander/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "554d4e2086dd60d1de83265a553b5f5386a579a99708a48ddfb28c16d4cf828a";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_simple_commander/1.5.2-2.tar.gz";
+    name = "1.5.2-2.tar.gz";
+    sha256 = "a854bba1a08f220a65068049a0cfe0a659413ad9e7d2fb3649ea699527479fb6";
   };
 
   buildType = "ament_python";

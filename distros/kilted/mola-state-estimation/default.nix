@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, mola-state-estimation-simple, mola-state-estimation-smoother }:
 buildRosPackage {
   pname = "ros-kilted-mola-state-estimation";
-  version = "2.4.2-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/kilted/mola_state_estimation/2.4.2-1.tar.gz";
-    name = "2.4.2-1.tar.gz";
-    sha256 = "f78c135f6a2e194bcaf8d1ed61315c85baa10fbe8cfd3c620a6845513a8ed8a5";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/kilted/mola_state_estimation/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "0ce016d2fac5f03909317c3fa310b7ce05346df3c379597c915b5ad452580759";
   };
 
   buildType = "ament_cmake";

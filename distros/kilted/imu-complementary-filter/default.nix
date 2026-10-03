@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, message-filters, rclcpp, sensor-msgs, std-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-imu-complementary-filter";
-  version = "2.2.1-r1";
+  version = "2.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/kilted/imu_complementary_filter/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "3ad9ec1c3f1c067fc72549f821aa27693678f77a5e6d2b4346104bc59854f880";
+    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/kilted/imu_complementary_filter/2.2.3-1.tar.gz";
+    name = "2.2.3-1.tar.gz";
+    sha256 = "7a27aa68f2b89a55fc344b668e2a76524c0a8d69921d19bd0f163c1e32a9c5ac";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-uncrustify, ament-index-cpp, ceres-solver, eigen, glog, proj, qt5, rmf-utils, yaml-cpp }:
 buildRosPackage {
   pname = "ros-lyrical-rmf-traffic-editor";
-  version = "1.14.0-r3";
+  version = "1.14.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/lyrical/rmf_traffic_editor/1.14.0-3.tar.gz";
-    name = "1.14.0-3.tar.gz";
-    sha256 = "0b64dc9505abdb3d1aeff4d8d1db19f9ca4a81c6a41bed85d4c7380a77b35f79";
+    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/lyrical/rmf_traffic_editor/1.14.1-1.tar.gz";
+    name = "1.14.1-1.tar.gz";
+    sha256 = "b46b46ac180908bf0c114e42955b44eca1f4659b559a6d95474af68d1d407f6a";
   };
 
   buildType = "ament_cmake";

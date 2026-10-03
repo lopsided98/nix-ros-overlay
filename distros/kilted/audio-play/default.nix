@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, audio-common-msgs, boost, gst_all_1, launch-xml, rclcpp, rclcpp-components }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, audio-common-msgs, boost, gst_all_1, launch-xml, pkg-config, rclcpp, rclcpp-components }:
 buildRosPackage {
   pname = "ros-kilted-audio-play";
-  version = "0.4.0-r2";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/audio_common-release/archive/release/kilted/audio_play/0.4.0-2.tar.gz";
-    name = "0.4.0-2.tar.gz";
-    sha256 = "68d15267a53af3615606a4e734335024b2403562e1842f83f62f4f2610a5b5d2";
+    url = "https://github.com/ros2-gbp/audio_common-release/archive/release/kilted/audio_play/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "65e1f77208e772d3d68bb9ce32b0d44b44f46e3c9c3bf2f652a9071a0edb7fbd";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake boost ];
+  buildInputs = [ ament-cmake boost pkg-config ];
   propagatedBuildInputs = [ audio-common-msgs gst_all_1.gst-plugins-base gst_all_1.gst-plugins-good gst_all_1.gst-plugins-ugly gst_all_1.gstreamer launch-xml rclcpp rclcpp-components ];
-  nativeBuildInputs = [ ament-cmake ];
+  nativeBuildInputs = [ ament-cmake pkg-config ];
 
   meta = {
     description = "Outputs audio to a speaker from a source node.";

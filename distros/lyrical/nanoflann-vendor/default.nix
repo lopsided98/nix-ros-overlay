@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gtest }:
 buildRosPackage {
   pname = "ros-lyrical-nanoflann-vendor";
-  version = "1.12.1-r1";
+  version = "1.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nanoflann-release/archive/release/lyrical/nanoflann_vendor/1.12.1-1.tar.gz";
-    name = "1.12.1-1.tar.gz";
-    sha256 = "45161a8fb9561374adc533aba2e257000cc73134cf9f6b2b65a5211f5c89eb47";
+    url = "https://github.com/ros2-gbp/nanoflann-release/archive/release/lyrical/nanoflann_vendor/1.14.0-1.tar.gz";
+    name = "1.14.0-1.tar.gz";
+    sha256 = "212c7bba13230bd7adbb482e01fb274e8cd6c04103327aaff587f2ea243c002f";
   };
 
   buildType = "cmake";

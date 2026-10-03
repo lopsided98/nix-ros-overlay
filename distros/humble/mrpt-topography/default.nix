@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-math, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-mrpt-topography";
-  version = "3.1.4-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_topography/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "93435d31bea88b05dd53b451d687ec5562e4add78ecf6315c85ed9063c11e60d";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_topography/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "5e54ba28db8dbf77553f5e2a59fffb71f77e9cf5d42015a59056ecd70b1711fb";
   };
 
   buildType = "cmake";

@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, freeglut, glfw3, libGL, libGLU, mola-kernel, mrpt-libgui, mrpt-libmaps, mrpt-libobs, mrpt-libopengl }:
+{ lib, buildRosPackage, fetchurl, cmake, glfw3, mola-kernel, mrpt-gui, mrpt-imgui, mrpt-maps, mrpt-obs, mrpt-opengl, mrpt-viz }:
 buildRosPackage {
   pname = "ros-jazzy-mola-viz-imgui";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_viz_imgui/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "6004847df92d65dbda6f4e16e8915658acc647b4a1b4bd8b8f1125fd259e7e53";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_viz_imgui/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "b56cc0d270b305572ceb26bfc432cd252e8b274759f3ebd8b93825a8ee0f8f8d";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ freeglut glfw3 libGL libGLU mola-kernel mrpt-libgui mrpt-libmaps mrpt-libobs mrpt-libopengl ];
+  propagatedBuildInputs = [ glfw3 mola-kernel mrpt-gui mrpt-imgui mrpt-maps mrpt-obs mrpt-opengl mrpt-viz ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

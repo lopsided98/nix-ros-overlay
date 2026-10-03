@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, imu-complementary-filter, imu-filter-madgwick, rviz-imu-plugin }:
 buildRosPackage {
   pname = "ros-kilted-imu-tools";
-  version = "2.2.1-r1";
+  version = "2.2.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/kilted/imu_tools/2.2.1-1.tar.gz";
-    name = "2.2.1-1.tar.gz";
-    sha256 = "b9a5e945ae510d7937c18f2621a0a0fbdff8dc8a4870b7e7e73a33e062dcdebc";
+    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/kilted/imu_tools/2.2.3-1.tar.gz";
+    name = "2.2.3-1.tar.gz";
+    sha256 = "31fe222a7f80b771a31e8c7a0a5c8eab767f004f9870c7fda374b97fec83669e";
   };
 
   buildType = "ament_cmake";

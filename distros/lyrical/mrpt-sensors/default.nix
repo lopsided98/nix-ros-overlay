@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, mrpt-generic-sensor, mrpt-sensor-bumblebee-stereo, mrpt-sensor-gnss-nmea, mrpt-sensor-gnss-novatel, mrpt-sensor-imu-taobotics, mrpt-sensorlib }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-sensors";
-  version = "0.3.0-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/lyrical/mrpt_sensors/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "2724e2e2626f7659372e85fb83a8d1a135ec1546f016c5566620c1a63f3cbc19";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/lyrical/mrpt_sensors/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "90add16174c89f3e811fa7a7aab9190603f8e7640aa74bda500191892efd7fd4";
   };
 
   buildType = "ament_cmake";

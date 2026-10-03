@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, geometry-msgs, rclcpp, std-msgs, tf2, vrpn }:
 buildRosPackage {
   pname = "ros-jazzy-vrpn-mocap";
-  version = "1.1.0-r4";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vrpn_mocap-release/archive/release/jazzy/vrpn_mocap/1.1.0-4.tar.gz";
-    name = "1.1.0-4.tar.gz";
-    sha256 = "0bbeb5a860ff8b8e822033bccbb755ced8ade2a5866d1e8f892a979d759a8c8e";
+    url = "https://github.com/ros2-gbp/vrpn_mocap-release/archive/release/jazzy/vrpn_mocap/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "6311412147558fba890457e3efe1243ec2a653229c6d0919c49ecbff413133dd";
   };
 
   buildType = "ament_cmake";

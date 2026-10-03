@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, curl, eigen, flatbuffers, libpng, libtins, libzip, mola-kernel, mola-yaml, mrpt-libmaps, mrpt-libobs, openssl, zstd }:
+{ lib, buildRosPackage, fetchurl, cmake, curl, eigen, flatbuffers, libpng, libtins, libzip, mola-kernel, mola-yaml, mrpt-maps, mrpt-obs, openssl, zstd }:
 buildRosPackage {
   pname = "ros-humble-mola-input-ouster";
-  version = "0.1.0-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_input_ouster-release/archive/release/humble/mola_input_ouster/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "0aa31802d241120f3ac49fec0b1a2e43b2309fd790f6f9c654fdba4d1e46e968";
+    url = "https://github.com/ros2-gbp/mola_input_ouster-release/archive/release/humble/mola_input_ouster/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "0b157ff82148edf8d1949b407168d7d59d4204e962fec0244a42f9038b67056c";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake eigen flatbuffers libpng libtins libzip openssl zstd ];
-  propagatedBuildInputs = [ curl mola-kernel mola-yaml mrpt-libmaps mrpt-libobs ];
+  propagatedBuildInputs = [ curl mola-kernel mola-yaml mrpt-maps mrpt-obs ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_libpointmatcher, cmake, cv-bridge, gtsam, libg2o, octomap, onetbb, pcl, proj, qt5, sqlite, zlib }:
+{ lib, buildRosPackage, fetchurl, cmake, cv-bridge, gtsam, libg2o, octomap, pcl, proj, qt5, sqlite, zlib }:
 buildRosPackage {
   pname = "ros-rolling-rtabmap";
-  version = "0.22.1-r2";
+  version = "0.23.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rtabmap-release/archive/release/rolling/rtabmap/0.22.1-2.tar.gz";
-    name = "0.22.1-2.tar.gz";
-    sha256 = "0565814fd5ee62caccfe41e51789a6b0fd0a82ed905975dcbed2775dafa84fec";
+    url = "https://github.com/ros2-gbp/rtabmap-release/archive/release/rolling/rtabmap/0.23.13-1.tar.gz";
+    name = "0.23.13-1.tar.gz";
+    sha256 = "a9f207d5e0bd2db05add291670fb7b8d0f0853e22daaf9a4552010ba93e2a8dd";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake proj ];
-  propagatedBuildInputs = [ _unresolved_libpointmatcher cv-bridge gtsam libg2o octomap onetbb pcl qt5.qtbase sqlite zlib ];
+  propagatedBuildInputs = [ cv-bridge gtsam libg2o octomap pcl qt5.qtbase sqlite zlib ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

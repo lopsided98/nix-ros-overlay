@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, nav-msgs, rclcpp, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-odom-to-tf-ros2";
-  version = "1.0.8-r1";
+  version = "1.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/odom_to_tf_ros2-release/archive/release/jazzy/odom_to_tf_ros2/1.0.8-1.tar.gz";
-    name = "1.0.8-1.tar.gz";
-    sha256 = "dc7552e62729feec740f9eb7bb4b50404fcf503241d0e20832cee297ea5e8d11";
+    url = "https://github.com/ros2-gbp/odom_to_tf_ros2-release/archive/release/jazzy/odom_to_tf_ros2/1.1.1-1.tar.gz";
+    name = "1.1.1-1.tar.gz";
+    sha256 = "1096de2a4ad876cc027f0cd610c789a561e5e03a3f81174a088455fd0dc2f1b2";
   };
 
   buildType = "ament_cmake";

@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, python3, python3Packages, roboplan, roboplan-example-models }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, python3, python3Packages, roboplan-common, roboplan-core, roboplan-example-models }:
 buildRosPackage {
   pname = "ros-jazzy-roboplan-rrt";
-  version = "0.6.1-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/jazzy/roboplan_rrt/0.6.1-1.tar.gz";
-    name = "0.6.1-1.tar.gz";
-    sha256 = "53b4bad108a60c17e540f84fda46acd8c6477fd765ac85c91938165a988b52cc";
+    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/jazzy/roboplan_rrt/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "dbcf6084479f3dc613f2d6134c72315ddd776a388dae94f2cffbf781076255a6";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python python3 python3Packages.nanobind python3Packages.typing-extensions ];
   checkInputs = [ ament-cmake-gtest ament-cmake-pytest roboplan-example-models ];
-  propagatedBuildInputs = [ roboplan ];
+  propagatedBuildInputs = [ roboplan-common roboplan-core ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {

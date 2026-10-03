@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-libposes }:
+{ lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-poses }:
 buildRosPackage {
   pname = "ros-humble-mola-traj-tools";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_traj_tools/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "d010dd4118ef3c78c4ec25ce532f22e5209237b299c4e91d03a35ab0dac832c4";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_traj_tools/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "6877ea970e2ee87dd5a119e6d3a8c584ffa3e03c9ebd3cd8d4ea8c39a6073b0b";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ mola-common mrpt-libposes ];
+  propagatedBuildInputs = [ mola-common mrpt-poses ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

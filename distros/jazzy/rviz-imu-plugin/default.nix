@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, message-filters, pluginlib, qt5, rclcpp, rviz-common, rviz-ogre-vendor, rviz-rendering, sensor-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-rviz-imu-plugin";
-  version = "2.1.5-r1";
+  version = "2.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/jazzy/rviz_imu_plugin/2.1.5-1.tar.gz";
-    name = "2.1.5-1.tar.gz";
-    sha256 = "c32256849d7ec1ad7ac414a9dc538dd63e1a2bcbce92da546cf3dcdeef554b65";
+    url = "https://github.com/ros2-gbp/imu_tools-release/archive/release/jazzy/rviz_imu_plugin/2.1.6-1.tar.gz";
+    name = "2.1.6-1.tar.gz";
+    sha256 = "fba5723ab160bb1b8dd754eda0eae37c60ecf256e57e2afcb9bfdc5a3d106fa3";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "RVIZ plugin for IMU visualization";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

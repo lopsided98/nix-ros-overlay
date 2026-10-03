@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, eigen, geos, opencv, tf2 }:
 buildRosPackage {
   pname = "ros-rolling-swri-geometry-util";
-  version = "3.11.0-r1";
+  version = "3.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_geometry_util/3.11.0-1.tar.gz";
-    name = "3.11.0-1.tar.gz";
-    sha256 = "f1449919b3fba95fbb2a09ff67fdc855aef1f912195c46ae0579c442a48fc6f3";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_geometry_util/3.12.0-1.tar.gz";
+    name = "3.12.0-1.tar.gz";
+    sha256 = "eb8884cbbd5ce455cc5d244fdc376e56b9f513d720323d17b1a581274e142d3b";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
+  buildInputs = [ ament-cmake eigen ];
   checkInputs = [ ament-cmake-gtest ];
-  propagatedBuildInputs = [ eigen geos opencv opencv.cxxdev tf2 ];
+  propagatedBuildInputs = [ geos opencv opencv.cxxdev tf2 ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

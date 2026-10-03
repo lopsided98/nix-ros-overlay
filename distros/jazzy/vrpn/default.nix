@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake }:
 buildRosPackage {
   pname = "ros-jazzy-vrpn";
-  version = "7.35.0-r18";
+  version = "7.36.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vrpn-release/archive/release/jazzy/vrpn/7.35.0-18.tar.gz";
-    name = "7.35.0-18.tar.gz";
-    sha256 = "45a2878841c72f7e66cc337d63ce941dcd22fc1f728d7ef671457edfc346da8b";
+    url = "https://github.com/ros2-gbp/vrpn-release/archive/release/jazzy/vrpn/7.36.0-1.tar.gz";
+    name = "7.36.0-1.tar.gz";
+    sha256 = "372108f5e89bf0f068c08299bc930cf450f2d056caafb92d7ca9586c37e7667f";
   };
 
   buildType = "cmake";

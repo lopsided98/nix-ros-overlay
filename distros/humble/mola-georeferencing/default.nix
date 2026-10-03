@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, gtsam, mola-common, mola-gtsam-factors, mola-yaml, mp2p-icp, mrpt-libmaps, mrpt-libtclap }:
+{ lib, buildRosPackage, fetchurl, cli11, cmake, gtsam, mola-common, mola-gtsam-factors, mola-yaml, mp2p-icp, mrpt-maps }:
 buildRosPackage {
   pname = "ros-humble-mola-georeferencing";
-  version = "2.4.2-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/humble/mola_georeferencing/2.4.2-1.tar.gz";
-    name = "2.4.2-1.tar.gz";
-    sha256 = "0b68ee2ef9a527d186e75328a76679f1e1a12f8c9cf34649b78f8f580dd3dac9";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/humble/mola_georeferencing/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "9f56050a45b94ffe30c7e9fa676ee5e3b6891bbc8c487452075b9c52d08bc80c";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ gtsam mola-common mola-gtsam-factors mola-yaml mp2p-icp mrpt-libmaps mrpt-libtclap ];
+  propagatedBuildInputs = [ cli11 gtsam mola-common mola-gtsam-factors mola-yaml mp2p-icp mrpt-maps ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

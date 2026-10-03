@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-gui, mrpt-slam }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-graphslam";
-  version = "3.1.4-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_graphslam/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "ea96bfe92fd0aaef514721dfaceebdfda7fd28e20c389ab91e994ce5567595ed";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_graphslam/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "a122b84ae37daf6df0cce57fd152676de5f81696333972c67434d49deaa0e614";
   };
 
   buildType = "cmake";

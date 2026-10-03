@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, rclcpp }:
 buildRosPackage {
   pname = "ros-kilted-swri-math-util";
-  version = "3.11.0-r1";
+  version = "3.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/kilted/swri_math_util/3.11.0-1.tar.gz";
-    name = "3.11.0-1.tar.gz";
-    sha256 = "807623ff4a4d0a283d9bc73c1801dd210b44bebd9be7705910f2e16954d909c9";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/kilted/swri_math_util/3.12.0-1.tar.gz";
+    name = "3.12.0-1.tar.gz";
+    sha256 = "c98a431aee5870b480366499566266f3c32f2831e15cf4169e735a8d178733c2";
   };
 
   buildType = "ament_cmake";

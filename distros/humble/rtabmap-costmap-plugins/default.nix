@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, nav2-costmap-2d, pluginlib, rclcpp, ros-environment, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-rtabmap-costmap-plugins";
-  version = "0.23.7-r1";
+  version = "0.23.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/humble/rtabmap_costmap_plugins/0.23.7-1.tar.gz";
-    name = "0.23.7-1.tar.gz";
-    sha256 = "6e856e21254cc56f18a2cd816610abd847d173705234357479e7793a3c0c93fe";
+    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/humble/rtabmap_costmap_plugins/0.23.13-1.tar.gz";
+    name = "0.23.13-1.tar.gz";
+    sha256 = "b8465d59909099e722e30d78d11d4a207f14652b7192e1e22476c9c7df40c200";
   };
 
   buildType = "ament_cmake";

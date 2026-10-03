@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, angles, backward-ros, costmap-queue, dwb-core, dwb-msgs, geometry-msgs, nav-2d-msgs, nav-2d-utils, nav2-common, nav2-costmap-2d, nav2-ros-common, nav2-util, pluginlib, rclcpp, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-dwb-critics";
-  version = "1.5.1-r1";
+  version = "1.5.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/dwb_critics/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "58cf375519a325c383b3a452ab5cfb280f8408ccb8fbdaad7ffe63ffa074358b";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/dwb_critics/1.5.2-2.tar.gz";
+    name = "1.5.2-2.tar.gz";
+    sha256 = "681a4aeb3bb3ed4252ad4c72b6f4bc76b7e2030cb2b7aa85553a23dda741ca2e";
   };
 
   buildType = "ament_cmake";

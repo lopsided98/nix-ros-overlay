@@ -2,21 +2,22 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, builtin-interfaces, marti-common-msgs, rosidl-default-generators, rosidl-default-runtime }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, marti-common-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-mapviz-interfaces";
-  version = "4.0.3-r1";
+  version = "4.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/kilted/mapviz_interfaces/4.0.3-1.tar.gz";
-    name = "4.0.3-1.tar.gz";
-    sha256 = "284edb2a63c2ef76e99b12f17e72a07e30c2227e33b1df9fdfb38446695760dd";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/kilted/mapviz_interfaces/4.1.2-1.tar.gz";
+    name = "4.1.2-1.tar.gz";
+    sha256 = "856796e6be84ba5d2b271d06250c5ccbe4b9fb887999347e3545be8866eb2462";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ builtin-interfaces marti-common-msgs rosidl-default-generators ];
-  propagatedBuildInputs = [ rosidl-default-runtime ];
-  nativeBuildInputs = [ rosidl-default-generators ];
+  buildInputs = [ ament-cmake rosidl-default-generators ];
+  checkInputs = [ ament-lint-auto ament-lint-common ];
+  propagatedBuildInputs = [ marti-common-msgs rosidl-default-runtime ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
     description = "ROS interfaces used by Mapviz";

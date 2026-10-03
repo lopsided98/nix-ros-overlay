@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, geometry-msgs, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-microstrain-inertial-msgs";
-  version = "4.9.0-r1";
+  version = "4.10.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/jazzy/microstrain_inertial_msgs/4.9.0-1.tar.gz";
-    name = "4.9.0-1.tar.gz";
-    sha256 = "ddf61369135e2e9d81c39d8b7785fdeb41de4d5ed24b9c8c79e496b076a31972";
+    url = "https://github.com/ros2-gbp/microstrain_inertial-release/archive/release/jazzy/microstrain_inertial_msgs/4.10.0-2.tar.gz";
+    name = "4.10.0-2.tar.gz";
+    sha256 = "4e048ac5938291510b030d3bd1f07ecc2fca6d9f807a01d42136846833e8f986";
   };
 
   buildType = "ament_cmake";

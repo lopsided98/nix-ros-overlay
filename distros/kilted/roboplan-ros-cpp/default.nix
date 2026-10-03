@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, builtin-interfaces, eigen, geometry-msgs, pinocchio, python3, python3Packages, roboplan, roboplan-example-models, rosidl-generator-cpp, sensor-msgs, tf2-eigen, trajectory-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, builtin-interfaces, eigen, geometry-msgs, pinocchio, python3, python3Packages, roboplan-core, roboplan-example-models, rosidl-generator-cpp, sensor-msgs, tf2-eigen, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kilted-roboplan-ros-cpp";
-  version = "0.6.1-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan_ros-release/archive/release/kilted/roboplan_ros_cpp/0.6.1-1.tar.gz";
-    name = "0.6.1-1.tar.gz";
-    sha256 = "b8abfc635f04f19d71a3bc78de0bc8488d3ee741021afdb5f42493ce6ff0ddc6";
+    url = "https://github.com/ros2-gbp/roboplan_ros-release/archive/release/kilted/roboplan_ros_cpp/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "06f273e464df0fc3d05d567638143489baf535ee600ae533ef1c9765a9a1afec";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake builtin-interfaces python3 python3Packages.nanobind python3Packages.typing-extensions ];
   checkInputs = [ ament-index-cpp roboplan-example-models ];
-  propagatedBuildInputs = [ eigen geometry-msgs pinocchio roboplan rosidl-generator-cpp sensor-msgs tf2-eigen trajectory-msgs ];
+  propagatedBuildInputs = [ eigen geometry-msgs pinocchio roboplan-core rosidl-generator-cpp sensor-msgs tf2-eigen trajectory-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

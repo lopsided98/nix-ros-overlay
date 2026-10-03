@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mp2p-icp-core, mp2p-icp-viz }:
 buildRosPackage {
   pname = "ros-kilted-mp2p-icp";
-  version = "2.14.0-r1";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/kilted/mp2p_icp/2.14.0-1.tar.gz";
-    name = "2.14.0-1.tar.gz";
-    sha256 = "75bbc2577bceb3e47190197dbd7eba9228e5a5dd4f54ed4e5e706d0cb3a26a9c";
+    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/kilted/mp2p_icp/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "d4f67d730804f5f4811f405f5c335c1c5ab3508953e6d3fb0790d0c3ab49ca65";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, geometry-msgs, marti-common-msgs, marti-nav-msgs, rclcpp, rclcpp-components, std-msgs, swri-geometry-util, swri-math-util, swri-transform-util, tf2-geometry-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-swri-route-util";
-  version = "3.11.0-r1";
+  version = "3.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_route_util/3.11.0-1.tar.gz";
-    name = "3.11.0-1.tar.gz";
-    sha256 = "141211f9be275adc766ec01b351fae5748708fcedfc638a86ce336f041dba377";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/jazzy/swri_route_util/3.12.0-1.tar.gz";
+    name = "3.12.0-1.tar.gz";
+    sha256 = "7b31c73a939cfaf32e84635af105746784d76484a123c2fdac1f8b09f47cb894";
   };
 
   buildType = "ament_cmake";

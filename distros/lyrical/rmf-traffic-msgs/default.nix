@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-lyrical-rmf-traffic-msgs";
-  version = "4.0.0-r3";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/lyrical/rmf_traffic_msgs/4.0.0-3.tar.gz";
-    name = "4.0.0-3.tar.gz";
-    sha256 = "ac44f1bdc7ec0a20cb5312c3475932f379ae2ade428e8dc8f5af094b90154995";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/lyrical/rmf_traffic_msgs/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "741da635f9dbb06b34d57d392c3741b5daacf7f72fa08b0216ad78c185d030bb";
   };
 
   buildType = "ament_cmake";

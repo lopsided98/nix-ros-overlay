@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-common, mrpt-graphslam, mrpt-kinematics, mrpt-libapps-gui, mrpt-nav }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-apps-gui";
-  version = "3.1.3-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_apps_gui/3.1.3-1.tar.gz";
-    name = "3.1.3-1.tar.gz";
-    sha256 = "f977068a94bdd77f0b84d20c1b94ff72726753a30ea90c4e0ad7d427515e6026";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_apps_gui/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "23ecd9b85b5d757daa4555589c30b64b8183cbbe2cbdca6cc6e66fa4019f6ab4";
   };
 
   buildType = "cmake";

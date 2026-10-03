@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt-libobs }:
+{ lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt-obs }:
 buildRosPackage {
   pname = "ros-lyrical-mola-input-rawlog";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_input_rawlog/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "f1f67c3b162a98198b7b559e2f20a273e4b5c46191baff7a49611de86e2bd556";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_input_rawlog/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "bf359bcc901585187b5221b5b73b6004dbaf46cf4b6a5e4266b790a2f954df14";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ mola-kernel mrpt-libobs ];
+  propagatedBuildInputs = [ mola-kernel mrpt-obs ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

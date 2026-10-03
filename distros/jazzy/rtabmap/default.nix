@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, cv-bridge, gtsam, libg2o, libpointmatcher, octomap, onetbb, pcl, proj, qt-gui-cpp, sqlite, zlib }:
 buildRosPackage {
   pname = "ros-jazzy-rtabmap";
-  version = "0.23.7-r1";
+  version = "0.23.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rtabmap-release/archive/release/jazzy/rtabmap/0.23.7-1.tar.gz";
-    name = "0.23.7-1.tar.gz";
-    sha256 = "ce59d390e488ef1e26d04a4c7c3954b23686d154f723f1c38752044817d79b01";
+    url = "https://github.com/ros2-gbp/rtabmap-release/archive/release/jazzy/rtabmap/0.23.13-1.tar.gz";
+    name = "0.23.13-1.tar.gz";
+    sha256 = "4323fc4c56a0d77c5a1ffde1ec0338e867cedc97295440aae08622c8217a21b7";
   };
 
   buildType = "cmake";

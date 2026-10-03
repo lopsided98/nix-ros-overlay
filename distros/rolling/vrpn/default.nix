@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake }:
 buildRosPackage {
   pname = "ros-rolling-vrpn";
-  version = "7.35.0-r21";
+  version = "7.36.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vrpn-release/archive/release/rolling/vrpn/7.35.0-21.tar.gz";
-    name = "7.35.0-21.tar.gz";
-    sha256 = "301afc0d284181a74f4bc5b43c0e8b9ef508090645b1cfdb886aa19a7f998c98";
+    url = "https://github.com/ros2-gbp/vrpn-release/archive/release/rolling/vrpn/7.36.0-1.tar.gz";
+    name = "7.36.0-1.tar.gz";
+    sha256 = "7b75e571ce6eeb25ad4b7496428f931a8a29b95a24f2ec16eeb48967281c33b3";
   };
 
   buildType = "cmake";

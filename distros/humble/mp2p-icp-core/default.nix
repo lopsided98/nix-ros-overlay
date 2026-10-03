@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cli11, cmake, mola-common, mola-imu-preintegration, mrpt-libbase, mrpt-libmaps, mrpt-libobs, mrpt-libposes, onetbb, ros-environment }:
+{ lib, buildRosPackage, fetchurl, cli11, cmake, eigen, mola-common, mola-imu-preintegration, mrpt-containers, mrpt-maps, mrpt-obs, mrpt-poses, mrpt-rtti, mrpt-serialization, mrpt-system, mrpt-tfest, mrpt-topography, onetbb, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-mp2p-icp-core";
-  version = "2.14.0-r1";
+  version = "3.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/humble/mp2p_icp_core/2.14.0-1.tar.gz";
-    name = "2.14.0-1.tar.gz";
-    sha256 = "9d238dc13fb32d2d71c6a4bf94fa5d3d4853bbe9f7cb9f069d571d01189f4d7f";
+    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/humble/mp2p_icp_core/3.0.1-1.tar.gz";
+    name = "3.0.1-1.tar.gz";
+    sha256 = "39e402724ae5a33cd68b1edf63199581c34861e057745cd82b1c526722eb8704";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ros-environment ];
-  propagatedBuildInputs = [ cli11 mola-common mola-imu-preintegration mrpt-libbase mrpt-libmaps mrpt-libobs mrpt-libposes onetbb ];
+  propagatedBuildInputs = [ cli11 eigen mola-common mola-imu-preintegration mrpt-containers mrpt-maps mrpt-obs mrpt-poses mrpt-rtti mrpt-serialization mrpt-system mrpt-tfest mrpt-topography onetbb ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

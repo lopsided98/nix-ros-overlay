@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-math, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-topography";
-  version = "3.1.4-r1";
+  version = "3.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_topography/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "49d0ec9a345364182b572b1c43488f308f979a55024e5d481aefab71a71ceed4";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_topography/3.3.1-1.tar.gz";
+    name = "3.3.1-1.tar.gz";
+    sha256 = "bc584ceb6729145858003d3cfcfa698f9e6b09280f8552ba0621546351aaa46b";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, mrpt-msgs, mrpt-sensorlib, rclcpp, rclcpp-components, ros-environment, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-mrpt-generic-sensor";
-  version = "0.3.0-r1";
+  version = "0.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/humble/mrpt_generic_sensor/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "d34490f0233b87574202798fca2c9913381cd435f76cec1210971611626bc4b7";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/humble/mrpt_generic_sensor/0.4.0-1.tar.gz";
+    name = "0.4.0-1.tar.gz";
+    sha256 = "8c74c20647bca65635893c7f66cdd6cc1c30e2d9f3571c677ae41ad363898e81";
   };
 
   buildType = "ament_cmake";

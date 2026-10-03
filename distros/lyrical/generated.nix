@@ -402,6 +402,10 @@ self: super: {
 
  clips-vendor = self.callPackage ./clips-vendor {};
 
+ cloudini-lib = self.callPackage ./cloudini-lib {};
+
+ cloudini-ros = self.callPackage ./cloudini-ros {};
+
  cm-topic-hardware-component = self.callPackage ./cm-topic-hardware-component {};
 
  coal = self.callPackage ./coal {};
@@ -772,6 +776,8 @@ self: super: {
 
  ecl-utilities = self.callPackage ./ecl-utilities {};
 
+ ehukai = self.callPackage ./ehukai {};
+
  eigen3-cmake-module = self.callPackage ./eigen3-cmake-module {};
 
  eigen-stl-containers = self.callPackage ./eigen-stl-containers {};
@@ -839,6 +845,10 @@ self: super: {
  examples-tf2-py = self.callPackage ./examples-tf2-py {};
 
  executive-smach = self.callPackage ./executive-smach {};
+
+ fadecandy-driver = self.callPackage ./fadecandy-driver {};
+
+ fadecandy-msgs = self.callPackage ./fadecandy-msgs {};
 
  fastcdr = self.callPackage ./fastcdr {};
 
@@ -1346,6 +1356,8 @@ self: super: {
 
  live555-vendor = self.callPackage ./live555-vendor {};
 
+ localization-msgs-tools = self.callPackage ./localization-msgs-tools {};
+
  log-view = self.callPackage ./log-view {};
 
  logging-demo = self.callPackage ./logging-demo {};
@@ -1690,6 +1702,8 @@ self: super: {
 
  mrpt-imgui = self.callPackage ./mrpt-imgui {};
 
+ mrpt-imgui-vendor = self.callPackage ./mrpt-imgui-vendor {};
+
  mrpt-io = self.callPackage ./mrpt-io {};
 
  mrpt-kinematics = self.callPackage ./mrpt-kinematics {};
@@ -1746,6 +1760,10 @@ self: super: {
 
  mrpt-path-planning = self.callPackage ./mrpt-path-planning {};
 
+ mrpt-path-planning-apps = self.callPackage ./mrpt-path-planning-apps {};
+
+ mrpt-path-planning-core = self.callPackage ./mrpt-path-planning-core {};
+
  mrpt-pf-localization = self.callPackage ./mrpt-pf-localization {};
 
  mrpt-pointcloud-pipeline = self.callPackage ./mrpt-pointcloud-pipeline {};
@@ -1781,6 +1799,8 @@ self: super: {
  mrpt-topography = self.callPackage ./mrpt-topography {};
 
  mrpt-tps-astar-planner = self.callPackage ./mrpt-tps-astar-planner {};
+
+ mrpt-trajectory-follower = self.callPackage ./mrpt-trajectory-follower {};
 
  mrpt-tutorials = self.callPackage ./mrpt-tutorials {};
 
@@ -2981,6 +3001,8 @@ self: super: {
  rtabmap = self.callPackage ./rtabmap {};
 
  rtabmap-conversions = self.callPackage ./rtabmap-conversions {};
+
+ rtabmap-costmap-plugins = self.callPackage ./rtabmap-costmap-plugins {};
 
  rtabmap-demos = self.callPackage ./rtabmap-demos {};
 

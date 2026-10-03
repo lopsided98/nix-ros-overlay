@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, marti-introspection-msgs, python3Packages, rcl-interfaces, rclpy, ros2cli, ros2node, ros2param, ros2topic }:
 buildRosPackage {
   pname = "ros-rolling-swri-cli-tools";
-  version = "3.11.0-r1";
+  version = "3.12.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_cli_tools/3.11.0-1.tar.gz";
-    name = "3.11.0-1.tar.gz";
-    sha256 = "e252521c7516419d07c6dbe503910cd75ec18d24152fbdf1522ee10ae066c937";
+    url = "https://github.com/ros2-gbp/marti_common-release/archive/release/rolling/swri_cli_tools/3.12.0-1.tar.gz";
+    name = "3.12.0-1.tar.gz";
+    sha256 = "e0c9ad61c149fa58236768b6789df1542ca8b6320b5cddbf8fdcdc66ca85b9ac";
   };
 
   buildType = "ament_python";

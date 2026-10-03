@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-cpplint, ament-cmake-flake8, ament-cmake-gtest, ament-lint-auto, ament-lint-common, int2dds-ffi-vendor, rcutils, rmw, rmw-dds-common, rosidl-runtime-c, rosidl-runtime-cpp, rosidl-typesupport-c, rosidl-typesupport-cpp, rosidl-typesupport-introspection-c, rosidl-typesupport-introspection-cpp, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-rmw-int2dds-cpp";
-  version = "0.1.5-r1";
+  version = "0.1.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_int2dds-release/archive/release/humble/rmw_int2dds_cpp/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "2b0c431e06d2dacd2621c984e522b6b5aff612c3ebaccb7f16daebe5b764bb99";
+    url = "https://github.com/ros2-gbp/rmw_int2dds-release/archive/release/humble/rmw_int2dds_cpp/0.1.7-1.tar.gz";
+    name = "0.1.7-1.tar.gz";
+    sha256 = "a7f1bf9fa2c9531671ad50bbf5c543c18dffe0537b57eee15888e3b239fa26e2";
   };
 
   buildType = "ament_cmake";
