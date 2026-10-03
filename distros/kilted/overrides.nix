@@ -1074,22 +1074,6 @@ in {
     ];
   });
 
-  vrpn = rosSuper.vrpn.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    postPatch = postPatch + ''
-      substituteInPlace quat/CMakeLists.txt --replace-fail \
-        "cmake_minimum_required(VERSION 2.6)" \
-        "cmake_minimum_required(VERSION 3.5)"
-      substituteInPlace cmake/FindOpenHaptics.cmake --replace-fail \
-        "cmake_minimum_required(VERSION 2.6.3)" \
-        "cmake_minimum_required(VERSION 3.5)"
-      substituteInPlace client_src/CMakeLists.txt --replace-fail \
-        "cmake_minimum_required(VERSION 2.6)" \
-        "cmake_minimum_required(VERSION 3.5)"
-    '';
-  });
-
   web-video-server = rosSuper.web-video-server.overrideAttrs ({
     postPatch ? "", ...
   }: {
