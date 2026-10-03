@@ -170,6 +170,12 @@ in {
     fetchgitArgs.hash = "sha256-gztnxui9Fe/FTieMjdvfJjWHjkImtlsHn6fM1FruyME=";
   };
 
+  gtsam = rosSuper.gtsam.overrideAttrs ({
+    cmakeFlags ? [], ...
+  }: {
+    cmakeFlags = cmakeFlags ++ [ "-DCMAKE_CXX_FLAGS=-Wno-maybe-uninitialized" ];
+  });
+
   gz-cmake-vendor = lib.patchGzAmentVendorGit rosSuper.gz-cmake-vendor { };
 
   gz-common-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-common-vendor {
