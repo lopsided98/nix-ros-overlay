@@ -170,22 +170,6 @@ in {
     fetchgitArgs.hash = "sha256-gztnxui9Fe/FTieMjdvfJjWHjkImtlsHn6fM1FruyME=";
   };
 
-  gtsam = rosSuper.gtsam.overrideAttrs ({
-    patches ? [], cmakeFlags ? [], ...
-  }: {
-    patches = [
-      # https://github.com/borglab/gtsam/pull/2232 merged upstream
-      (self.fetchpatch2 {
-        name = "drop-boost-system.patch";
-        url = "https://github.com/borglab/gtsam/commit/a0592a6b5ab161194da1b162caaedda78ef3f2bf.patch?full_index=1";
-        hash = "sha256-S9YI8/MVthAuuBl3DRR8JCTxTw5Hi+hVz41T95APDu4=";
-      })
-    ];
-    # GCC 15 enables -Woverloaded-virtual by default; DecisionTreeFactor hides
-    # base class operator* overloads and has no upstream fix yet
-    cmakeFlags = cmakeFlags ++ [ "-DCMAKE_CXX_FLAGS=-Wno-overloaded-virtual" ];
-  });
-
   gz-cmake-vendor = lib.patchGzAmentVendorGit rosSuper.gz-cmake-vendor { };
 
   gz-common-vendor = (lib.patchGzAmentVendorGit rosSuper.gz-common-vendor {
