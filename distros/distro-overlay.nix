@@ -92,7 +92,7 @@ let
     # Some third-party packages are available in rodistro,
     # but have a better packaging in nixpkgs, so use it instead
     inherit (self) jrl-cmakemodules eiquadprog;
-    inherit (self.python3Packages) coal eigenpy nanoeigenpy pinocchio proxsuite crocoddyl ndcurves tsid;
+    inherit (self.python3Packages) coal eigenpy nanoeigenpy pinocchio proxsuite crocoddyl ndcurves tsid osrf-pycommon;
 
     foonathan-memory-vendor = rosSuper.foonathan-memory-vendor.overrideAttrs ({
       propagatedBuildInputs ? [], ...
