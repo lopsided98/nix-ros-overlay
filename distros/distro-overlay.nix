@@ -98,6 +98,13 @@ let
       eigenpy
       nanoeigenpy
       ndcurves
+      # osrf_pycommon is being replaced by a system package in Lyrical
+      # and later (see https://github.com/ros2/launch/pull/817). Don't
+      # use the rosdistro package anywhere to to prevent conflicts in
+      # buildEnv like this:
+      # > pkgs.buildEnv error: two given paths contain a conflicting subpath:
+      # > `/nix/store/ja30k3h9akgjwh7cgaq764cdz6390lln-python3.14-osrf_pycommon-2.1.7/lib/python3.14/site-packages/osrf_pycommon/__pycache__/__init__.cpython-314.pyc' and
+      # > `/nix/store/wa62xv62l995ks1nscidwmliavhw1rlb-python3.14-ros-lyrical-osrf-pycommon-2.1.7-r3/lib/python3.14/site-packages/osrf_pycommon/__pycache__/__init__.cpython-314.pyc'
       osrf-pycommon
       pinocchio
       proxsuite
