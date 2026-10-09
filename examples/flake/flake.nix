@@ -12,9 +12,9 @@
         };
       in {
         devShells.default = pkgs.mkShell {
-          name = "Example project";
+          name = "Example ROS project";
           packages = [
-            pkgs.colcon
+            (pkgs.colcon.withExtensions [ pkgs.python3Packages.colcon-alias ])
             # ... other non-ROS packages
             (with pkgs.rosPackages.humble; buildEnv {
               underlay = true;
