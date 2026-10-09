@@ -105,7 +105,11 @@ self: super: with self.lib; {
 
       colcon-cmake = pyFinal.callPackage ./colcon/cmake.nix { };
 
-      colcon-core = pyFinal.callPackage ./colcon/core.nix { setuptools = pyFinal.setuptools_79; };
+      colcon-core = pyFinal.callPackage ./colcon/core.nix {
+        # Newer setuptools result in colcon not supporting --symlink-install.
+        # See https://github.com/colcon/colcon-core/pull/735
+        setuptools = pyFinal.setuptools_79;
+      };
 
       colcon-defaults = pyFinal.callPackage ./colcon/defaults.nix { };
 
