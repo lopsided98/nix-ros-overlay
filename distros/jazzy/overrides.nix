@@ -467,15 +467,7 @@ in {
 
   gz-plugin-vendor = lib.patchGzAmentVendorGit rosSuper.gz-plugin-vendor { };
 
-  gz-rendering-vendor = lib.patchGzAmentVendorGit rosSuper.gz-rendering-vendor {
-    patchesFor.gz_rendering_vendor = [
-      (self.fetchpatch2 {
-        # Added missing includes (#1128)
-        url = "https://github.com/gazebosim/gz-rendering/commit/b7973e14778baba95c94798b15391183d9261c16.patch?full_index=1";
-        hash = "sha256-oO5awcuPZ4PqDyo08zxq3mKQxJ4Y4MnywRbs7ZNk0KM=";
-      })
-    ];
-  };
+  gz-rendering-vendor = lib.patchGzAmentVendorGit rosSuper.gz-rendering-vendor { };
 
   gz-sensors-vendor = lib.patchGzAmentVendorGit rosSuper.gz-sensors-vendor { };
 
