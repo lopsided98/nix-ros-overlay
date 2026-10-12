@@ -1,7 +1,7 @@
 {
   "gz_gui_vendor": {
     "url": "https://github.com/gazebosim/gz-gui.git",
-    "rev": "gz-gui11_11.0.0-pre1",
-    "hash": "sha256-8GMqeGAFAYhOlAXdUozG5apKau3EKJYt6/bYeIHOi4I="
+    "rev": "gz-gui11_11.0.0-pre2",
+    "hash": "sha256-WFau+OzbHw0ZxvM4jZh3NWgXwhoOsoMcHuNzvYFsKwU="
   }
 }
