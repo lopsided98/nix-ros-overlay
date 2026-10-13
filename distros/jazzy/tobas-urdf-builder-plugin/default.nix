@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, qt5, rviz-common, rviz-default-plugins, rviz-rendering, tobas-constants, tobas-property-client, tobas-qt-tools, tobas-ros2-tools, tobas-std-tools, tobas-urdf }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-urdf-builder-plugin";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_urdf_builder_plugin/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "ff0373ae7033e02a97bb19d9a5788746202ac5643f2278c2ca3d47f69639a76a";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_urdf_builder_plugin/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "f8a9713aa010d606bd1467cb5a8f40dc385b67f4e08376d2db71769fac352709";
   };
 
   buildType = "ament_cmake";

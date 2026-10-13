@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-dparam-msgs";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_dparam_msgs/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "97cbc9ba7be872c1aeae62f20d244052be264a8cd12aa8790bbb58b45332320a";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_dparam_msgs/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "e75b52460787e572e19d2cb40de23a506eecf9d2b9e837baff4aeb5a5fd7b799";
   };
 
   buildType = "ament_cmake";

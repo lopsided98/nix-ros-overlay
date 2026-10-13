@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, mrpt-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-mola-msgs";
-  version = "3.3.0-r1";
+  version = "3.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_msgs/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "fdc922e463b53e05a8e7e0581f977dd189fc4840b40330fac3be140b8cc82053";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_msgs/3.3.2-1.tar.gz";
+    name = "3.3.2-1.tar.gz";
+    sha256 = "b4602a98b1c3cced29fdb11bf832ece370f6454283b8dfaaa7cc5b3a177c646d";
   };
 
   buildType = "ament_cmake";

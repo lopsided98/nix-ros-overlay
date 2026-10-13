@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cli11, cmake, eigen, mola-common, mola-imu-preintegration, mrpt-containers, mrpt-maps, mrpt-obs, mrpt-poses, mrpt-rtti, mrpt-serialization, mrpt-system, mrpt-tfest, mrpt-topography, onetbb, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-mp2p-icp-core";
-  version = "3.0.0-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/jazzy/mp2p_icp_core/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "0b62028df236be1c9132ce215401b79b900ef903d6f3fc69e36cefb87227738a";
+    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/jazzy/mp2p_icp_core/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "afb4d73ca71c2d60268ee46da7ca35dbc867e7e6be20380d7d57a1fff7705d3f";
   };
 
   buildType = "cmake";

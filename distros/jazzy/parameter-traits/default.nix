@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, fmt, rclcpp, rsl, tcb-span, tl-expected }:
 buildRosPackage {
   pname = "ros-jazzy-parameter-traits";
-  version = "0.7.6-r1";
+  version = "0.7.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/jazzy/parameter_traits/0.7.6-1.tar.gz";
-    name = "0.7.6-1.tar.gz";
-    sha256 = "df82486aa50f9f9fec814dc1dad12c1aa0bfc014728dd06d7bc18192c9abf0dc";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/jazzy/parameter_traits/0.7.7-1.tar.gz";
+    name = "0.7.7-1.tar.gz";
+    sha256 = "9cc8e35e1212211875876cdaccfcbbe2a52e6d7ce529a23f6e2345942ec9ede7";
   };
 
   buildType = "ament_cmake";

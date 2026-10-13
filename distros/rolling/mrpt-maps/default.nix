@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-graphs, mrpt-obs, octomap, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-maps";
-  version = "3.3.1-r1";
+  version = "3.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_maps/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "e12e71aeea2733b436bc85af837eca8586bb0058ec849df8d170af18f37a1da0";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_maps/3.5.2-1.tar.gz";
+    name = "3.5.2-1.tar.gz";
+    sha256 = "803f44a373356e71af72b94a8600b5d0eef07a400a54435b79516f10d8ba161d";
   };
 
   buildType = "cmake";

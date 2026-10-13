@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-pep257 }:
 buildRosPackage {
   pname = "ros-lyrical-ament-cmake-pep257";
-  version = "0.20.6-r1";
+  version = "0.20.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/lyrical/ament_cmake_pep257/0.20.6-1.tar.gz";
-    name = "0.20.6-1.tar.gz";
-    sha256 = "3ec7ce95be07b09f68746883b9a689415efab2e097bae3aa3594af510f214dfc";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/lyrical/ament_cmake_pep257/0.20.7-1.tar.gz";
+    name = "0.20.7-1.tar.gz";
+    sha256 = "074e49e1d90178e4e88bfcfa50777ac87fe592b214d1e4d3f209e003c54deb41";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, octomap, octomap-msgs, tobas-constants, tobas-msgs-adapter, tobas-node }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-object-avoidance";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_object_avoidance/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "fb35a5d12db24e6975d462df18c22f171ec7741439d92e90785679776aa1ce5c";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_object_avoidance/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "eb2543d6b8c3f5384b359107615e0d77b76bac8f3a554ab61cc624ef14ee8c47";
   };
 
   buildType = "ament_cmake";

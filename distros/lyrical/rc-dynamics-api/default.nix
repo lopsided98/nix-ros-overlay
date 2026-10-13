@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, curl, protobuf }:
 buildRosPackage {
   pname = "ros-lyrical-rc-dynamics-api";
-  version = "0.10.5-r3";
+  version = "0.10.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_dynamics_api-release/archive/release/lyrical/rc_dynamics_api/0.10.5-3.tar.gz";
-    name = "0.10.5-3.tar.gz";
-    sha256 = "8e02b5470047797306a4ae858888147f25c4f402cf2188b9422646079393b6e1";
+    url = "https://github.com/ros2-gbp/rc_dynamics_api-release/archive/release/lyrical/rc_dynamics_api/0.10.7-1.tar.gz";
+    name = "0.10.7-1.tar.gz";
+    sha256 = "5d57c62612ab7dbf21c4d5a9d31553711892d5321cd04ab783d03dd7d4534205";
   };
 
   buildType = "cmake";

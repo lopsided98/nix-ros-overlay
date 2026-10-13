@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-libapps-cli }:
 buildRosPackage {
   pname = "ros-humble-mrpt-apps-cli";
-  version = "3.3.1-r1";
+  version = "3.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_apps_cli/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "3f8f1f878c8b90d3b915fa1097cca24d40a5eb431d8417dd753c8ba3c749f3fd";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_apps_cli/3.5.2-1.tar.gz";
+    name = "3.5.2-1.tar.gz";
+    sha256 = "00bc9f8464c176544c7365559d25e75603783f8d0f8dbda33be7fc817725ee79";
   };
 
   buildType = "cmake";

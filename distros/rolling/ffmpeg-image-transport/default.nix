@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-black, ament-cmake-clang-format, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, ffmpeg-encoder-decoder, ffmpeg-image-transport-msgs, image-transport, pluginlib, rclcpp, rcutils, ros-environment, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ffmpeg-image-transport";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ffmpeg_image_transport-release/archive/release/rolling/ffmpeg_image_transport/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "12020319042292462c855e14f170e926191f60eb80e507a789f15593c3418055";
+    url = "https://github.com/ros2-gbp/ffmpeg_image_transport-release/archive/release/rolling/ffmpeg_image_transport/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "bb286aba72dfa96404e34ecade2c025fa45035e79fa1ba90acfba358f12c0b34";
   };
 
   buildType = "ament_cmake";

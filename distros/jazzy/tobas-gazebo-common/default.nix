@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-gazebo-common";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_gazebo_common/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "536b27c69c8d92697682e9b806a16396dca2306ab837c5aa57508d52aa40c752";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_gazebo_common/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "deffc2ba1577305ed7160c6cf0c3c1753a1f5119337db01fcf4f1e006b416726";
   };
 
   buildType = "ament_cmake";

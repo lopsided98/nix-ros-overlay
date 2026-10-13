@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-humble-int2dds-ffi-vendor";
-  version = "0.1.7-r1";
+  version = "0.1.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_int2dds-release/archive/release/humble/int2dds_ffi_vendor/0.1.7-1.tar.gz";
-    name = "0.1.7-1.tar.gz";
-    sha256 = "e5b1f75a07b9bde90753f91393e150a1fb60a6c5ac6f18cb0b9f59536cd96b52";
+    url = "https://github.com/ros2-gbp/rmw_int2dds-release/archive/release/humble/int2dds_ffi_vendor/0.1.8-1.tar.gz";
+    name = "0.1.8-1.tar.gz";
+    sha256 = "2e101ca912c6ce13e4e7ce9ef99eee2e473b80f509a6eb9c9faed6567d9818ba";
   };
 
   buildType = "ament_cmake";

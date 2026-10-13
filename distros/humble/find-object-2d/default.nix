@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, cv-bridge, geometry-msgs, image-transport, message-filters, qt5, rclcpp, ros-environment, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, cv-bridge, geometry-msgs, image-transport, message-filters, qt5, rclcpp, ros-environment, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, zlib }:
 buildRosPackage {
   pname = "ros-humble-find-object-2d";
-  version = "0.7.0-r1";
+  version = "0.7.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/find_object_2d-release/archive/release/humble/find_object_2d/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "01e262c4209580ebb7b339b6b2f9333e592eb8dd1b00fb0881eae099eda14bc8";
+    url = "https://github.com/ros2-gbp/find_object_2d-release/archive/release/humble/find_object_2d/0.7.5-1.tar.gz";
+    name = "0.7.5-1.tar.gz";
+    sha256 = "b34a23efb753d19740761993a9ac90abd95bd35acefadb8cfea7f2477dcc11e8";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment rosidl-default-generators ];
-  propagatedBuildInputs = [ builtin-interfaces cv-bridge geometry-msgs image-transport message-filters qt5.qtbase rclcpp rosidl-default-runtime sensor-msgs std-msgs std-srvs tf2 tf2-geometry-msgs tf2-ros ];
+  propagatedBuildInputs = [ builtin-interfaces cv-bridge geometry-msgs image-transport message-filters qt5.qtbase rclcpp rosidl-default-runtime sensor-msgs std-msgs std-srvs tf2 tf2-geometry-msgs tf2-ros zlib ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

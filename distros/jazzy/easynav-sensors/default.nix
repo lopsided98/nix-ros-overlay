@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, cv-bridge, easynav-common, geometry-msgs, nav-msgs, pcl-conversions, pcl-ros, pluginlib, rclcpp, rclcpp-lifecycle, sensor-msgs, tf2-geometry-msgs, tf2-ros, vision-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, cv-bridge, diagnostic-msgs, easynav-common, geometry-msgs, lifecycle-msgs, nav-msgs, pcl, pcl-conversions, pluginlib, rclcpp, rclcpp-lifecycle, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, vision-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-easynav-sensors";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/jazzy/easynav_sensors/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "35d9d6e4c7063c9905c6e4de6399090a11a4b1044d195b8e13aafbb2ad40ee85";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/jazzy/easynav_sensors/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "25bbaec12d552c761ad0e399e4fb8f9bf59ef4b1a7feead2ae86c7fbf058d48d";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ cv-bridge easynav-common geometry-msgs nav-msgs pcl-conversions pcl-ros pluginlib rclcpp rclcpp-lifecycle sensor-msgs tf2-geometry-msgs tf2-ros vision-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common std-msgs ];
+  propagatedBuildInputs = [ cv-bridge diagnostic-msgs easynav-common geometry-msgs lifecycle-msgs nav-msgs pcl pcl-conversions pluginlib rclcpp rclcpp-lifecycle sensor-msgs tf2 tf2-geometry-msgs tf2-ros vision-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

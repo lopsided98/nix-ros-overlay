@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, git, pkg-config }:
 buildRosPackage {
   pname = "ros-lyrical-onnxruntime-vendor";
-  version = "0.1.0-r2";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/onnxruntime_vendor-release/archive/release/lyrical/onnxruntime_vendor/0.1.0-2.tar.gz";
-    name = "0.1.0-2.tar.gz";
-    sha256 = "8d902208d7f077c1ce7dd32b36380e67e62e6478d12ee7a59246621d7b3bf6d5";
+    url = "https://github.com/ros2-gbp/onnxruntime_vendor-release/archive/release/lyrical/onnxruntime_vendor/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "6f99c3887bea57a6b076c32e9a05f7f76f928f9005789ca544db214ea1ec4f7c";
   };
 
   buildType = "ament_cmake";

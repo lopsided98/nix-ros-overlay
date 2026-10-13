@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, cmake, diagnostic-msgs, geographic-msgs, geometry-msgs, gps-msgs, mola-common, mola-kernel, mola-msgs, mrpt-libros-bridge, mrpt-maps, mrpt-nav-interfaces, nav-msgs, rclcpp, ros-environment, sensor-msgs, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-mola-bridge-ros2";
-  version = "3.3.0-r1";
+  version = "3.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_bridge_ros2/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "46494d4557da4b902f5e56ba7851c2639b850eb64bc83f0b426eb949663ddfe8";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_bridge_ros2/3.3.2-1.tar.gz";
+    name = "3.3.2-1.tar.gz";
+    sha256 = "5e4837e041999a656e2077055081d6a695b1be272e01187c785908628cc4b682";
   };
 
   buildType = "ament_cmake";

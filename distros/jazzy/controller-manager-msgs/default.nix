@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, lifecycle-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-controller-manager-msgs";
-  version = "4.48.1-r1";
+  version = "4.49.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/controller_manager_msgs/4.48.1-1.tar.gz";
-    name = "4.48.1-1.tar.gz";
-    sha256 = "36e3169a7c0477c2eb5e9265971ca0b4215e6cf66ad47b91d03a110a8ec722cb";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/controller_manager_msgs/4.49.0-1.tar.gz";
+    name = "4.49.0-1.tar.gz";
+    sha256 = "441a16005c1acd2e0057afd448216d5168d2d5424253eac5c40d0094ab4a4fc0";
   };
 
   buildType = "ament_cmake";

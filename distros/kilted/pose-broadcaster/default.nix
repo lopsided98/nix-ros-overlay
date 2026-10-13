@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, tf2-msgs }:
 buildRosPackage {
   pname = "ros-kilted-pose-broadcaster";
-  version = "5.17.0-r1";
+  version = "5.18.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/pose_broadcaster/5.17.0-1.tar.gz";
-    name = "5.17.0-1.tar.gz";
-    sha256 = "f0e721bee20f4bb973230ca3fefe16e66add761db93b2ba76e766fbd1b1d9f2c";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/pose_broadcaster/5.18.0-1.tar.gz";
+    name = "5.18.0-1.tar.gz";
+    sha256 = "d285aeee4000ae559bdfef85e55159508dde37c29a1506568c8472efe6004289";
   };
 
   buildType = "ament_cmake";

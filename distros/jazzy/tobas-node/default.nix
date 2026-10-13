@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp-components, tobas-constants, tobas-dparam-msgs, tobas-msgs, tobas-ros2-tools, tobas-std-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-node";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_node/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "f7337ce7773e00c89e8fd778c645862cb766db960ad16aaee6adf2da03992ac4";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_node/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "db818337fff95045fead9e1e0a2f630a353f1f22614006d6004e0ee36253c0ef";
   };
 
   buildType = "ament_cmake";

@@ -1008,9 +1008,9 @@ self: super: {
 
  easynav-costmap-planner = self.callPackage ./easynav-costmap-planner {};
 
- easynav-fusion-localizer = self.callPackage ./easynav-fusion-localizer {};
+ easynav-diagnostic-recovery = self.callPackage ./easynav-diagnostic-recovery {};
 
- easynav-gps-localizer = self.callPackage ./easynav-gps-localizer {};
+ easynav-fusion-localizer = self.callPackage ./easynav-fusion-localizer {};
 
  easynav-interfaces = self.callPackage ./easynav-interfaces {};
 
@@ -1018,9 +1018,13 @@ self: super: {
 
  easynav-maps-manager = self.callPackage ./easynav-maps-manager {};
 
+ easynav-mhamcl-localizer = self.callPackage ./easynav-mhamcl-localizer {};
+
  easynav-mpc-controller = self.callPackage ./easynav-mpc-controller {};
 
  easynav-mppi-controller = self.callPackage ./easynav-mppi-controller {};
+
+ easynav-nav2-bridge = self.callPackage ./easynav-nav2-bridge {};
 
  easynav-navmap-localizer = self.callPackage ./easynav-navmap-localizer {};
 
@@ -1031,6 +1035,32 @@ self: super: {
  easynav-octomap-maps-manager = self.callPackage ./easynav-octomap-maps-manager {};
 
  easynav-planner = self.callPackage ./easynav-planner {};
+
+ easynav-playground-kobuki = self.callPackage ./easynav-playground-kobuki {};
+
+ easynav-playground-kobuki-description = self.callPackage ./easynav-playground-kobuki-description {};
+
+ easynav-playground-kobuki-worlds = self.callPackage ./easynav-playground-kobuki-worlds {};
+
+ easynav-playground-omni = self.callPackage ./easynav-playground-omni {};
+
+ easynav-playground-omni-description = self.callPackage ./easynav-playground-omni-description {};
+
+ easynav-playground-omni-worlds = self.callPackage ./easynav-playground-omni-worlds {};
+
+ easynav-playground-summit = self.callPackage ./easynav-playground-summit {};
+
+ easynav-playground-summit-description = self.callPackage ./easynav-playground-summit-description {};
+
+ easynav-playground-summit-worlds = self.callPackage ./easynav-playground-summit-worlds {};
+
+ easynav-playground-tiago = self.callPackage ./easynav-playground-tiago {};
+
+ easynav-playground-tiago-description = self.callPackage ./easynav-playground-tiago-description {};
+
+ easynav-playground-tiago-worlds = self.callPackage ./easynav-playground-tiago-worlds {};
+
+ easynav-recovery = self.callPackage ./easynav-recovery {};
 
  easynav-regulated-pp-controller = self.callPackage ./easynav-regulated-pp-controller {};
 
@@ -1049,6 +1079,8 @@ self: super: {
  easynav-simple-maps-manager = self.callPackage ./easynav-simple-maps-manager {};
 
  easynav-simple-planner = self.callPackage ./easynav-simple-planner {};
+
+ easynav-simple-recovery = self.callPackage ./easynav-simple-recovery {};
 
  easynav-support-py = self.callPackage ./easynav-support-py {};
 
@@ -2604,6 +2636,8 @@ self: super: {
 
  navmap-rviz-plugin = self.callPackage ./navmap-rviz-plugin {};
 
+ navmap-tools = self.callPackage ./navmap-tools {};
+
  ndcurves = self.callPackage ./ndcurves {};
 
  nebula = self.callPackage ./nebula {};
@@ -2759,6 +2793,8 @@ self: super: {
  off-highway-uss-msgs = self.callPackage ./off-highway-uss-msgs {};
 
  olive-interfaces = self.callPackage ./olive-interfaces {};
+
+ olive-openrmf-fleet-adapter = self.callPackage ./olive-openrmf-fleet-adapter {};
 
  om-gravity-compensation-controller = self.callPackage ./om-gravity-compensation-controller {};
 
@@ -4851,6 +4887,8 @@ self: super: {
  warehouse-ros = self.callPackage ./warehouse-ros {};
 
  warehouse-ros-sqlite = self.callPackage ./warehouse-ros-sqlite {};
+
+ web-tf-editor = self.callPackage ./web-tf-editor {};
 
  web-video-server = self.callPackage ./web-video-server {};
 

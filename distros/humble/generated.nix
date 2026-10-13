@@ -38,8 +38,6 @@ self: super: {
 
  aerostack2 = self.callPackage ./aerostack2 {};
 
- affordance-primitives = self.callPackage ./affordance-primitives {};
-
  agni-tf-tools = self.callPackage ./agni-tf-tools {};
 
  agnocast = self.callPackage ./agnocast {};
@@ -1057,6 +1055,82 @@ self: super: {
  dynamixel-workbench-msgs = self.callPackage ./dynamixel-workbench-msgs {};
 
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
+
+ easynav = self.callPackage ./easynav {};
+
+ easynav-bonxai-maps-manager = self.callPackage ./easynav-bonxai-maps-manager {};
+
+ easynav-common = self.callPackage ./easynav-common {};
+
+ easynav-controller = self.callPackage ./easynav-controller {};
+
+ easynav-core = self.callPackage ./easynav-core {};
+
+ easynav-costmap-common = self.callPackage ./easynav-costmap-common {};
+
+ easynav-costmap-localizer = self.callPackage ./easynav-costmap-localizer {};
+
+ easynav-costmap-maps-manager = self.callPackage ./easynav-costmap-maps-manager {};
+
+ easynav-costmap-planner = self.callPackage ./easynav-costmap-planner {};
+
+ easynav-diagnostic-recovery = self.callPackage ./easynav-diagnostic-recovery {};
+
+ easynav-fusion-localizer = self.callPackage ./easynav-fusion-localizer {};
+
+ easynav-interfaces = self.callPackage ./easynav-interfaces {};
+
+ easynav-localizer = self.callPackage ./easynav-localizer {};
+
+ easynav-maps-manager = self.callPackage ./easynav-maps-manager {};
+
+ easynav-mhamcl-localizer = self.callPackage ./easynav-mhamcl-localizer {};
+
+ easynav-mpc-controller = self.callPackage ./easynav-mpc-controller {};
+
+ easynav-mppi-controller = self.callPackage ./easynav-mppi-controller {};
+
+ easynav-nav2-bridge = self.callPackage ./easynav-nav2-bridge {};
+
+ easynav-navmap-localizer = self.callPackage ./easynav-navmap-localizer {};
+
+ easynav-navmap-maps-manager = self.callPackage ./easynav-navmap-maps-manager {};
+
+ easynav-navmap-planner = self.callPackage ./easynav-navmap-planner {};
+
+ easynav-octomap-maps-manager = self.callPackage ./easynav-octomap-maps-manager {};
+
+ easynav-planner = self.callPackage ./easynav-planner {};
+
+ easynav-recovery = self.callPackage ./easynav-recovery {};
+
+ easynav-regulated-pp-controller = self.callPackage ./easynav-regulated-pp-controller {};
+
+ easynav-routes-maps-manager = self.callPackage ./easynav-routes-maps-manager {};
+
+ easynav-sensors = self.callPackage ./easynav-sensors {};
+
+ easynav-serest-controller = self.callPackage ./easynav-serest-controller {};
+
+ easynav-simple-common = self.callPackage ./easynav-simple-common {};
+
+ easynav-simple-controller = self.callPackage ./easynav-simple-controller {};
+
+ easynav-simple-localizer = self.callPackage ./easynav-simple-localizer {};
+
+ easynav-simple-maps-manager = self.callPackage ./easynav-simple-maps-manager {};
+
+ easynav-simple-planner = self.callPackage ./easynav-simple-planner {};
+
+ easynav-simple-recovery = self.callPackage ./easynav-simple-recovery {};
+
+ easynav-support-py = self.callPackage ./easynav-support-py {};
+
+ easynav-system = self.callPackage ./easynav-system {};
+
+ easynav-tools = self.callPackage ./easynav-tools {};
+
+ easynav-vff-controller = self.callPackage ./easynav-vff-controller {};
 
  ecal = self.callPackage ./ecal {};
 
@@ -2608,6 +2682,18 @@ self: super: {
 
  navigation2 = self.callPackage ./navigation2 {};
 
+ navmap-core = self.callPackage ./navmap-core {};
+
+ navmap-examples = self.callPackage ./navmap-examples {};
+
+ navmap-ros = self.callPackage ./navmap-ros {};
+
+ navmap-ros-interfaces = self.callPackage ./navmap-ros-interfaces {};
+
+ navmap-rviz-plugin = self.callPackage ./navmap-rviz-plugin {};
+
+ navmap-tools = self.callPackage ./navmap-tools {};
+
  ndcurves = self.callPackage ./ndcurves {};
 
  ndt-omp = self.callPackage ./ndt-omp {};
@@ -2765,6 +2851,8 @@ self: super: {
  off-highway-uss-msgs = self.callPackage ./off-highway-uss-msgs {};
 
  olive-interfaces = self.callPackage ./olive-interfaces {};
+
+ olive-openrmf-fleet-adapter = self.callPackage ./olive-openrmf-fleet-adapter {};
 
  omni-base-2dnav = self.callPackage ./omni-base-2dnav {};
 
@@ -4657,6 +4745,8 @@ self: super: {
  wrapyfi-ros2-interfaces = self.callPackage ./wrapyfi-ros2-interfaces {};
 
  xacro = self.callPackage ./xacro {};
+
+ yaets = self.callPackage ./yaets {};
 
  yaml-cpp-vendor = self.callPackage ./yaml-cpp-vendor {};
 

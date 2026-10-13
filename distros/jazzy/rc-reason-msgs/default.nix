@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, geometry-msgs, rc-common-msgs, rosidl-default-generators, rosidl-default-runtime, shape-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rc-reason-msgs";
-  version = "0.5.0-r1";
+  version = "0.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_reason_clients-release/archive/release/jazzy/rc_reason_msgs/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "57e94257716f34dd3bb7dd33a2e13b11de2b7c99807346e1bfe2cfa094b9f8a7";
+    url = "https://github.com/ros2-gbp/rc_reason_clients-release/archive/release/jazzy/rc_reason_msgs/0.6.1-1.tar.gz";
+    name = "0.6.1-1.tar.gz";
+    sha256 = "0b0deaa9b1176d4f6f6436d8ff09dc1c3e2359886c0232a75fc700b52a24641b";
   };
 
   buildType = "ament_cmake";

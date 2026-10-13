@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, controller-interface, controller-manager, controller-manager-msgs, hardware-interface, joint-limits, ros2-control-test-assets, ros2controlcli, transmission-interface }:
 buildRosPackage {
   pname = "ros-humble-ros2-control";
-  version = "2.54.2-r1";
+  version = "2.54.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/ros2_control/2.54.2-1.tar.gz";
-    name = "2.54.2-1.tar.gz";
-    sha256 = "a9aa8b56136ac541501d53068582ac51423973d81654cf6e21a1b780277f825b";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/humble/ros2_control/2.54.3-1.tar.gz";
+    name = "2.54.3-1.tar.gz";
+    sha256 = "53cc1aa40d06f6800fc0221df21fb9d9e77e9f6b7691ee9ac7e85f72f0d56b7a";
   };
 
   buildType = "ament_cmake";

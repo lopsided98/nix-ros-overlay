@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-common, mrpt-config, mrpt-math, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-bayes";
-  version = "3.3.1-r1";
+  version = "3.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_bayes/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "37c7b495ffd37dd28015b44ff90d1109f5c9be8e071d6130c7a4794a1aff9124";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_bayes/3.5.2-1.tar.gz";
+    name = "3.5.2-1.tar.gz";
+    sha256 = "4cf18a3d45f9c9c43931f75a9d638c6d41ee90b09a5dbcfb5f7fb86a93318da6";
   };
 
   buildType = "cmake";

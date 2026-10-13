@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, glfw3, mola-kernel, mrpt-gui, mrpt-imgui, mrpt-maps, mrpt-obs, mrpt-opengl, mrpt-viz }:
 buildRosPackage {
   pname = "ros-lyrical-mola-viz-imgui";
-  version = "3.3.0-r1";
+  version = "3.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_viz_imgui/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "f2b994d7796dcd77d5d0d383d0d199a5ae57bbb5956073d32157e10d94608b64";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_viz_imgui/3.3.2-1.tar.gz";
+    name = "3.3.2-1.tar.gz";
+    sha256 = "c7d13ba078e4d3994ff5fdad4a3ab05b3e52773abdee861bd4a9e0ec6bc546b6";
   };
 
   buildType = "cmake";

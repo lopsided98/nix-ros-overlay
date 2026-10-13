@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, boost, launch-testing, launch-testing-ament-cmake, launch-testing-ros, pkg-config, pluginlib, rclcpp, std-msgs, tf2-msgs, tf2-ros, zstd }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-index-python, ament-lint-auto, ament-lint-common, boost, cppzmq, demo-nodes-cpp, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, pkg-config, pluginlib, rclcpp, rclpy, std-msgs, tf2-msgs, tf2-ros, zstd }:
 buildRosPackage {
   pname = "ros-lyrical-network-bridge";
-  version = "3.0.0-r3";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/network_bridge-release/archive/release/lyrical/network_bridge/3.0.0-3.tar.gz";
-    name = "3.0.0-3.tar.gz";
-    sha256 = "2de902fef6922852f6339a989bb201494cb12e56924843fe6c308657885542a4";
+    url = "https://github.com/ros2-gbp/network_bridge-release/archive/release/lyrical/network_bridge/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "0acc15297fe97dba03cf68bb71906b2b64e68ff3ef9f557686fd405b23f6a8f2";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake pkg-config ];
-  checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common launch-testing launch-testing-ament-cmake launch-testing-ros ];
-  propagatedBuildInputs = [ boost pluginlib rclcpp std-msgs tf2-msgs tf2-ros zstd ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch-testing launch-testing-ament-cmake launch-testing-ros rclpy ];
+  propagatedBuildInputs = [ ament-index-python boost cppzmq demo-nodes-cpp launch-ros pluginlib rclcpp std-msgs tf2-msgs tf2-ros zstd ];
   nativeBuildInputs = [ ament-cmake pkg-config ];
 
   meta = {

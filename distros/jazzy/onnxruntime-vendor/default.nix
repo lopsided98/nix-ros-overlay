@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, git, pkg-config }:
 buildRosPackage {
   pname = "ros-jazzy-onnxruntime-vendor";
-  version = "0.1.0-r2";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/onnxruntime_vendor-release/archive/release/jazzy/onnxruntime_vendor/0.1.0-2.tar.gz";
-    name = "0.1.0-2.tar.gz";
-    sha256 = "3c1f6d288b885166709e4ac9a3396dc7b5bfbaff217f6628d06a84a9d4a68669";
+    url = "https://github.com/ros2-gbp/onnxruntime_vendor-release/archive/release/jazzy/onnxruntime_vendor/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "92e02953c156db96c5c849139176fb68a8c89e2f2da11b8f8e8592a44b642be1";
   };
 
   buildType = "ament_cmake";

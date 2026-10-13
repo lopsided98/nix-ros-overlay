@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, easynav-common, easynav-controller, easynav-core, easynav-interfaces, easynav-localizer, easynav-maps-manager, easynav-planner, easynav-sensors, easynav-support-py, easynav-system, easynav-tools }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, easynav-common, easynav-controller, easynav-core, easynav-interfaces, easynav-localizer, easynav-maps-manager, easynav-planner, easynav-recovery, easynav-sensors, easynav-support-py, easynav-system, easynav-tools }:
 buildRosPackage {
   pname = "ros-kilted-easynav";
-  version = "0.4.1-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "2155cbba44820d1c62e74673cd4833893735860e81fac3c97960e2eb6052761f";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "0515859eaeec200008473f7b31f77097e49b6169155b70ef85bef2640697212c";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ easynav-common easynav-controller easynav-core easynav-interfaces easynav-localizer easynav-maps-manager easynav-planner easynav-sensors easynav-support-py easynav-system easynav-tools ];
+  propagatedBuildInputs = [ easynav-common easynav-controller easynav-core easynav-interfaces easynav-localizer easynav-maps-manager easynav-planner easynav-recovery easynav-sensors easynav-support-py easynav-system easynav-tools ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

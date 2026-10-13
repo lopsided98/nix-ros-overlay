@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, action-msgs, ament-clang-tidy, ament-cmake, ament-cmake-copyright, ament-cmake-ros, ament-lint-auto, ament-lint-common, boost, gtest, rcl, rcl-action, rclcpp, rclcpp-action, ros-environment }:
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-clang-tidy, ament-cmake, ament-cmake-copyright, ament-cmake-gmock, ament-cmake-ros, ament-lint-auto, ament-lint-common, boost, example-interfaces, gtest, rcl, rcl-action, rclcpp, rclcpp-action, ros-environment, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-rolling-rtest";
-  version = "0.2.4-r1";
+  version = "0.2.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rtest-release/archive/release/rolling/rtest/0.2.4-1.tar.gz";
-    name = "0.2.4-1.tar.gz";
-    sha256 = "96ef3d552e0dfa24bd8a9d9c671000aba0d8b6a239b58a5e5b76cce4c690329b";
+    url = "https://github.com/ros2-gbp/rtest-release/archive/release/rolling/rtest/0.2.5-1.tar.gz";
+    name = "0.2.5-1.tar.gz";
+    sha256 = "6888cbe2eef220c776b20c976ce394ca41f8eea444705b84af1f2fdcce5c5d88";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-ros boost gtest ros-environment ];
-  checkInputs = [ ament-clang-tidy ament-cmake-copyright ament-lint-auto ament-lint-common ];
+  checkInputs = [ ament-clang-tidy ament-cmake-copyright ament-cmake-gmock ament-lint-auto ament-lint-common example-interfaces std-msgs std-srvs ];
   propagatedBuildInputs = [ action-msgs rcl rcl-action rclcpp rclcpp-action ];
   nativeBuildInputs = [ ament-cmake ament-cmake-ros ];
 

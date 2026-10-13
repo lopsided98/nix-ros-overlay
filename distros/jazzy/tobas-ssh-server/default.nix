@@ -5,15 +5,16 @@
 { lib, buildRosPackage, fetchurl, python3Packages, rclpy, tobas-ssh-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-ssh-server";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_ssh_server/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "1b3d8fcc9e2b089f9f218ba67083b1ef95db8ff963619ff5d77d4370e80ec1ec";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_ssh_server/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "76af882589ee13f220b0ad21b00e2a05e3fd4b052e47d1c98691a0b012ef54bd";
   };
 
   buildType = "ament_python";
+  checkInputs = [ python3Packages.pytest ];
   propagatedBuildInputs = [ python3Packages.paramiko python3Packages.scp rclpy tobas-ssh-msgs ];
 
   meta = {

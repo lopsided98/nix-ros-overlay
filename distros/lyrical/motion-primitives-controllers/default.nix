@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, std-srvs }:
 buildRosPackage {
   pname = "ros-lyrical-motion-primitives-controllers";
-  version = "6.9.0-r1";
+  version = "6.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/motion_primitives_controllers/6.9.0-1.tar.gz";
-    name = "6.9.0-1.tar.gz";
-    sha256 = "2ea32b186c4b18354c5d1f65804fdc3b25dbaade9e6dbc2ba0208f9fd5000fa8";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/motion_primitives_controllers/6.10.0-1.tar.gz";
+    name = "6.10.0-1.tar.gz";
+    sha256 = "36604321de39cef781d1a8b59100e30b3035eff9aabeefc5afba60312c11aff6";
   };
 
   buildType = "ament_cmake";

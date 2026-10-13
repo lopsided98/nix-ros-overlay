@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-dparam-client, tobas-drone-core, tobas-gui-common, tobas-qt-tools, tobas-ros2-tools, tobas-ssh-client, tobas-string-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-parameter-tuning";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_parameter_tuning/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "f2c4904371e5d23f5c6465d188025a33284787aa73695407fd6d36eb086af72d";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_parameter_tuning/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "e615226b99e6d9fd483dc9bab1c117264013547bd0f33c48d359b9a1228b6df3";
   };
 
   buildType = "ament_cmake";

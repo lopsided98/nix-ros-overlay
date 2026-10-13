@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-serialization, mrpt-system, python3, python3Packages, zlib, zstd }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-io";
-  version = "3.3.1-r1";
+  version = "3.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_io/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "f5275cc8023e2e77c1972cc4e6732a3abda1744cff59a7a6becda91ecf1255bc";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_io/3.5.2-1.tar.gz";
+    name = "3.5.2-1.tar.gz";
+    sha256 = "43c9eb3514f6aa58bec99f18904d22a98ead917ac8e982185a5aa2e00badce72";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, cargo, clang, git }:
 buildRosPackage {
   pname = "ros-jazzy-zenoh-cpp-vendor";
-  version = "0.2.11-r1";
+  version = "0.2.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_zenoh-release/archive/release/jazzy/zenoh_cpp_vendor/0.2.11-1.tar.gz";
-    name = "0.2.11-1.tar.gz";
-    sha256 = "75b1a5e1b459fde6d0eba125ec8bf6e45f41350e942e559668d39bb3b1e99673";
+    url = "https://github.com/ros2-gbp/rmw_zenoh-release/archive/release/jazzy/zenoh_cpp_vendor/0.2.12-1.tar.gz";
+    name = "0.2.12-1.tar.gz";
+    sha256 = "b2d355c86e405f68f10d81a900d2d6cd089458b0017d68bc786bf9b32691b33e";
   };
 
   buildType = "ament_cmake";

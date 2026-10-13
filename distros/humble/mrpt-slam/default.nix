@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-maps, mrpt-topography, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-mrpt-slam";
-  version = "3.3.1-r1";
+  version = "3.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_slam/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "4261d46d4046e4a67618f30efa0b053fa7bc0cabfef6fc418bbf2bfba3f83ac2";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_slam/3.5.2-1.tar.gz";
+    name = "3.5.2-1.tar.gz";
+    sha256 = "370ff8f4c7d2ff060cb63ea68d91ab58013e205962b3367356cc68eb52e9885a";
   };
 
   buildType = "cmake";

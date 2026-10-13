@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, eigen }:
 buildRosPackage {
   pname = "ros-jazzy-aruco";
-  version = "5.0.5-r1";
+  version = "5.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aruco_ros-release/archive/release/jazzy/aruco/5.0.5-1.tar.gz";
-    name = "5.0.5-1.tar.gz";
-    sha256 = "488ace2de0ec55f71ec3d3d5aead000ad53fcbb6b71550019b6703b02e9578bc";
+    url = "https://github.com/ros2-gbp/aruco_ros-release/archive/release/jazzy/aruco/5.0.6-1.tar.gz";
+    name = "5.0.6-1.tar.gz";
+    sha256 = "ae5c7e9469316692a97d05aca8095dd366d3cf079bd27b330d6c73d24da30098";
   };
 
   buildType = "ament_cmake";

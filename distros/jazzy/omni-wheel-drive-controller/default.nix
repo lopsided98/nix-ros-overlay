@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, controller-interface, controller-manager, eigen, generate-parameter-library, geometry-msgs, hardware-interface, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-omni-wheel-drive-controller";
-  version = "4.42.1-r1";
+  version = "4.43.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/omni_wheel_drive_controller/4.42.1-1.tar.gz";
-    name = "4.42.1-1.tar.gz";
-    sha256 = "93433eb3811e84c6e4a87fb54e5e2d50a1f9c578ba475de722e31818827f7110";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/omni_wheel_drive_controller/4.43.0-1.tar.gz";
+    name = "4.43.0-1.tar.gz";
+    sha256 = "aa1f8e26016fec1830a335c70aee0ae6d415a62bfa5d6e2684b0eaf95ebd2fff";
   };
 
   buildType = "ament_cmake";

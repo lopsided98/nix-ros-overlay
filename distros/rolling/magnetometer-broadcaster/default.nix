@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, eigen, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-magnetometer-broadcaster";
-  version = "6.9.0-r1";
+  version = "6.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/magnetometer_broadcaster/6.9.0-1.tar.gz";
-    name = "6.9.0-1.tar.gz";
-    sha256 = "276788f56c439801a2c6705992eb79f81214e3c9ad1cfa35d45fa8db565cbc16";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/magnetometer_broadcaster/6.10.0-1.tar.gz";
+    name = "6.10.0-1.tar.gz";
+    sha256 = "81fa24d26795eca507ffeab3904d8c07aec741c2657d9af1df3e8c8c7b94a24e";
   };
 
   buildType = "ament_cmake";

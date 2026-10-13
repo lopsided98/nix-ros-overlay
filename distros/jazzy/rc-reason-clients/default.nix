@@ -5,17 +5,18 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, python3Packages, rc-reason-msgs, rclpy, ros2pkg, tf2-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rc-reason-clients";
-  version = "0.5.0-r1";
+  version = "0.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rc_reason_clients-release/archive/release/jazzy/rc_reason_clients/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "a1d65c4a985b68284ed66979892dd719d7c94ef285174beec085afeb0f978d38";
+    url = "https://github.com/ros2-gbp/rc_reason_clients-release/archive/release/jazzy/rc_reason_clients/0.6.1-1.tar.gz";
+    name = "0.6.1-1.tar.gz";
+    sha256 = "9fc65afe0e887e24f8fe63070210e84e20136de32a8b62e248e13a80ce6f448e";
   };
 
   buildType = "ament_python";
+  buildInputs = [ python3Packages.grpcio-tools ];
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.pytest ];
-  propagatedBuildInputs = [ geometry-msgs python3Packages.requests rc-reason-msgs rclpy ros2pkg tf2-msgs visualization-msgs ];
+  propagatedBuildInputs = [ geometry-msgs python3Packages.grpcio python3Packages.protobuf python3Packages.requests rc-reason-msgs rclpy ros2pkg tf2-msgs visualization-msgs ];
 
   meta = {
     description = "Clients for interfacing with Roboception reason modules on rc_visard and rc_cube.";

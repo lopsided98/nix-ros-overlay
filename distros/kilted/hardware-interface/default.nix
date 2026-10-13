@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, backward-ros, control-msgs, fmt, joint-limits, lifecycle-msgs, pal-statistics, pluginlib, rclcpp-lifecycle, rcpputils, rcutils, realtime-tools, ros2-control-cmake, ros2-control-test-assets, sdformat-urdf, tinyxml2-vendor, urdf }:
 buildRosPackage {
   pname = "ros-kilted-hardware-interface";
-  version = "5.18.1-r1";
+  version = "5.19.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/hardware_interface/5.18.1-1.tar.gz";
-    name = "5.18.1-1.tar.gz";
-    sha256 = "1a172dc4086cd18d84643297e5b5e8037b205d1d871123a42fa2b398dae30df7";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/hardware_interface/5.19.0-1.tar.gz";
+    name = "5.19.0-1.tar.gz";
+    sha256 = "784ba05a9f57f9565082ee89693bd4267914d966764c44d4a9da5d3057e2514b";
   };
 
   buildType = "ament_cmake";
