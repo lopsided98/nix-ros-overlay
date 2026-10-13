@@ -2,21 +2,22 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, python-cmake-module }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-yaets";
-  version = "1.1.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/fmrico/yaets-release/archive/release/lyrical/yaets/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "24b66419aab56447bbb0c3d0d920be68ad0c9a03c855ca644f90211a61efa0b4";
+    url = "https://github.com/fmrico/yaets-release/archive/release/lyrical/yaets/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "d659af6ea193c689d6bc84a8800e48109f5bbfff9c9415ab3b0761e268cf0ff6";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake python-cmake-module ];
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
-  nativeBuildInputs = [ python-cmake-module ];
+  propagatedBuildInputs = [ python3Packages.matplotlib ];
+  nativeBuildInputs = [ ament-cmake ];
 
   meta = {
     description = "This package provides a execution tracing library.";

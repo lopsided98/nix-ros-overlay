@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-drone-msgs-adapter, tobas-kdl-conversions, tobas-msgs-adapter, tobas-node, tobas-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-manipulation";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_manipulation/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "f25c7b8f2093dcddff1628294704f6d758fd90f3bf07f417b456d4bcd25b44b1";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_manipulation/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "8073134883584c355c93ee0274bce86b7575c2f7926a124e94bb68568855661e";
   };
 
   buildType = "ament_cmake";

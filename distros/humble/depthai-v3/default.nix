@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, curl, fmt, gfortran, libusb1, nlohmann_json, opencv, ros-environment, spdlog, udev, unzip, zip }:
 buildRosPackage {
   pname = "ros-humble-depthai-v3";
-  version = "3.10.0-r1";
+  version = "3.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/luxonis/depthai-core-v3-release/archive/release/humble/depthai_v3/3.10.0-1.tar.gz";
-    name = "3.10.0-1.tar.gz";
-    sha256 = "d7e0227ac76f4ac39189da95f4c4d3559a9349a36cd5684e0e3210116c846eae";
+    url = "https://github.com/luxonis/depthai-core-v3-release/archive/release/humble/depthai_v3/3.11.0-1.tar.gz";
+    name = "3.11.0-1.tar.gz";
+    sha256 = "a2f023de67fa178c66c10d4860eef4f6d8538f3a1da454fe2a7bf7969a2fc8ee";
   };
 
   buildType = "ament_cmake";

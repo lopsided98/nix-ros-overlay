@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gtest }:
 buildRosPackage {
   pname = "ros-humble-nanoflann-vendor";
-  version = "1.14.0-r1";
+  version = "2.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nanoflann-release/archive/release/humble/nanoflann_vendor/1.14.0-1.tar.gz";
-    name = "1.14.0-1.tar.gz";
-    sha256 = "62268017df2e3f832fd8b3867148fbc55bb34c432cd1d3577f64567ac4d2eb32";
+    url = "https://github.com/ros2-gbp/nanoflann-release/archive/release/humble/nanoflann_vendor/2.0.1-1.tar.gz";
+    name = "2.0.1-1.tar.gz";
+    sha256 = "29c41e634c8f54b0e774bf4bd29c6aab564625b9ef336acaa138c6d9b881adc8";
   };
 
   buildType = "cmake";

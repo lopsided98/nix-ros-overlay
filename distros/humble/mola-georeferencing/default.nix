@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cli11, cmake, gtsam, mola-common, mola-gtsam-factors, mola-yaml, mp2p-icp, mrpt-maps }:
 buildRosPackage {
   pname = "ros-humble-mola-georeferencing";
-  version = "3.0.2-r1";
+  version = "3.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/humble/mola_georeferencing/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "9f56050a45b94ffe30c7e9fa676ee5e3b6891bbc8c487452075b9c52d08bc80c";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/humble/mola_georeferencing/3.0.4-1.tar.gz";
+    name = "3.0.4-1.tar.gz";
+    sha256 = "79bb03eac76399c5f326191fc082fad6eb8f0aab07e424d00b83063cb7fc624c";
   };
 
   buildType = "cmake";

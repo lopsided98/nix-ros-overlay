@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, gz-plugin-vendor, gz-sim-vendor, sensor-msgs, std-srvs, tobas-drone-tools, tobas-dsp, tobas-gazebo-common, tobas-gazebo-conversions, tobas-gazebo-msgs, tobas-gazebo-tools, tobas-geographic, tobas-msgs-adapter, tobas-nlp, tobas-node, tobas-tools, tobas-wind-model }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-gazebo-system-plugins";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_gazebo_system_plugins/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "227fb8aea6c62117252c0503c2d3cfa79f087f5683680a9bb175b49515a4c40e";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_gazebo_system_plugins/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "0720f2f064c32f01f02d3b6f6cc87893255f4787fbae305153e0e4d4ebe8ba13";
   };
 
   buildType = "ament_cmake";

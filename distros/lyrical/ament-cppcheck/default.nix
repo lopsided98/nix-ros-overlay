@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-pycodestyle, ament-xmllint, cppcheck, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-ament-cppcheck";
-  version = "0.20.6-r1";
+  version = "0.20.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/lyrical/ament_cppcheck/0.20.6-1.tar.gz";
-    name = "0.20.6-1.tar.gz";
-    sha256 = "55e5a59481c8fb0083f99df64ff0787b02eed65358376e8f187c7736b100552d";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/lyrical/ament_cppcheck/0.20.7-1.tar.gz";
+    name = "0.20.7-1.tar.gz";
+    sha256 = "7e5b339f6be440f86ecb8deb7fe029f0e1583b06b5c29670a6f63d8d2c705050";
   };
 
   buildType = "ament_python";

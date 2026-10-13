@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, easynav-common, nav-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, nav-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-easynav-simple-common";
-  version = "0.4.2-r2";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/lyrical/easynav_simple_common/0.4.2-2.tar.gz";
-    name = "0.4.2-2.tar.gz";
-    sha256 = "3e4b9bc34eabc3d94a6a0db36a1b1aea32b71bf16dbdc02226763e5168852890";
+    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/lyrical/easynav_simple_common/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "66e9197fb7d3ad6f55e0180119290b9f39305671c5d6c1790c4174c593120fb0";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ament-index-cpp easynav-common nav-msgs ];
+  propagatedBuildInputs = [ easynav-common nav-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

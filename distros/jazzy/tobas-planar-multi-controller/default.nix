@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-debug-msgs-adapter, tobas-drone-msgs-adapter, tobas-drone-tools, tobas-node, tobas-tools, tobas-trajectory-generation }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-planar-multi-controller";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_planar_multi_controller/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "583884b271f1b34ec5691a927e423864098b30f265c4d69532d58dec7f11b057";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_planar_multi_controller/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "138af4ea2c5a3ebeb0700aa9d521ce50618aae6e48e1b04caf43299a6a2ad45c";
   };
 
   buildType = "ament_cmake";

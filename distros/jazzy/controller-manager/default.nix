@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, ament-cmake-pytest, ament-cmake-python, backward-ros, controller-interface, controller-manager-msgs, diagnostic-msgs, diagnostic-updater, example-interfaces, fmt, generate-parameter-library, hardware-interface, hardware-interface-testing, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, libstatistics-collector, lifecycle-msgs, pluginlib, python3Packages, rcl-interfaces, rclcpp, rclpy, realtime-tools, robot-state-publisher, ros2-control-cmake, ros2-control-test-assets, ros2param, ros2pkg, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-controller-manager";
-  version = "4.48.1-r1";
+  version = "4.49.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/controller_manager/4.48.1-1.tar.gz";
-    name = "4.48.1-1.tar.gz";
-    sha256 = "9cf10349cae1b35a8883c897bd06da1e39cf0fb1e544ee7fefc6e5f47735a28f";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/controller_manager/4.49.0-1.tar.gz";
+    name = "4.49.0-1.tar.gz";
+    sha256 = "ebeace7021caf9a2ce08caefc17d9918d23866249ddb84a09af6c946e4582cee";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-linux, tobas-time-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-ic-drivers";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_ic_drivers/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "b235cb102b8e37fab7d664b09850a0a28d08ed1edabf66bc39a0d220ddd0145d";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_ic_drivers/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "21da83522287a6b94e136aad0e3acaf2721a531c9d5ef9d86ca504db9b01c497";
   };
 
   buildType = "ament_cmake";

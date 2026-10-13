@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, eigen, eigen3-cmake-module, graphicsmagick, nav-msgs, pcl-conversions, pcl-ros, pluginlib, rclcpp, sensor-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, yaets, yaml-cpp-vendor }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, eigen, graphicsmagick, nav-msgs, pcl, pcl-conversions, pluginlib, rclcpp, rclcpp-lifecycle, sensor-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, yaets, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-kilted-easynav-bonxai-maps-manager";
-  version = "0.4.1-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/kilted/easynav_bonxai_maps_manager/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "df1b8cf9da7d326a92df61ed99101398cf883a9569c4ae3dcf17903b2e8a6355";
+    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/kilted/easynav_bonxai_maps_manager/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "7a8586807be6578b0c15967439fef792871416fb8f40c2be5495ab76cf20edda";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ament-index-cpp easynav-common easynav-core eigen eigen3-cmake-module graphicsmagick nav-msgs pcl-conversions pcl-ros pluginlib rclcpp sensor-msgs std-srvs tf2 tf2-geometry-msgs tf2-ros yaets yaml-cpp-vendor ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common rclcpp-lifecycle ];
+  propagatedBuildInputs = [ ament-index-cpp easynav-common easynav-core eigen graphicsmagick nav-msgs pcl pcl-conversions pluginlib rclcpp sensor-msgs std-srvs tf2 tf2-geometry-msgs tf2-ros yaets yaml-cpp-vendor ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

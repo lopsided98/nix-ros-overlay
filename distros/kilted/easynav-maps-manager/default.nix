@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, lifecycle-msgs, pluginlib, rclcpp, rclcpp-lifecycle }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, lifecycle-msgs, pluginlib, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-kilted-easynav-maps-manager";
-  version = "0.4.1-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_maps_manager/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "d630d523c3e8a12b56765ab394ed0abdfcfea743679c5d4a31b3a244251e38ea";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_maps_manager/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "fec9f396bcf73ef9f00e132a1cc98de26f3c8192feddcb66f4142c3873c19a53";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-lint-auto ament-lint-common ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ easynav-common easynav-core lifecycle-msgs pluginlib rclcpp rclcpp-lifecycle ];
   nativeBuildInputs = [ ament-cmake ];
 

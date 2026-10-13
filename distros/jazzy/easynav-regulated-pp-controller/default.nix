@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, easynav-sensors, easynav-system, geometry-msgs, nav-msgs, pluginlib, rclcpp-lifecycle, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, easynav-controller, easynav-core, easynav-planner, easynav-sensors, easynav-system, geometry-msgs, lifecycle-msgs, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-easynav-regulated-pp-controller";
-  version = "0.4.0-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/jazzy/easynav_regulated_pp_controller/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "07192fa134684b3a364f3cd7f2f051f9eefbdce7a6321088501efa0cb82fdca5";
+    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/jazzy/easynav_regulated_pp_controller/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "66d5ca3f6185b0ec51b8f17f451cbd972248ff6319ecc6a1154ef74ea858caaf";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common rclcpp-lifecycle ];
-  propagatedBuildInputs = [ easynav-common easynav-core easynav-sensors easynav-system geometry-msgs nav-msgs pluginlib std-msgs tf2 tf2-geometry-msgs tf2-ros ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common easynav-controller easynav-planner lifecycle-msgs rclcpp-lifecycle ];
+  propagatedBuildInputs = [ easynav-common easynav-core easynav-sensors easynav-system geometry-msgs nav-msgs pluginlib rclcpp std-msgs tf2 tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-export-dependencies, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-cppcheck, ament-cmake-cpplint, ament-cmake-export-dependencies, ament-cmake-flake8, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-copyright, ament-cppcheck, ament-cpplint, ament-flake8, ament-lint-cmake, ament-pep257, ament-uncrustify, ament-xmllint }:
 buildRosPackage {
   pname = "ros-lyrical-ament-lint-common";
-  version = "0.20.6-r1";
+  version = "0.20.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/lyrical/ament_lint_common/0.20.6-1.tar.gz";
-    name = "0.20.6-1.tar.gz";
-    sha256 = "01a1ebcc3e9d8cd8abcbfed20b84122be858a8f6d6c07af65603f70f0dbe0287";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/lyrical/ament_lint_common/0.20.7-1.tar.gz";
+    name = "0.20.7-1.tar.gz";
+    sha256 = "af437e87b7f568839daee83b6adccc3a7d1547519c5c060aa07a453f9e1dd67b";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-export-dependencies ];
-  propagatedBuildInputs = [ ament-cmake-copyright ament-cmake-core ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-flake8 ament-cmake-lint-cmake ament-cmake-pep257 ament-cmake-uncrustify ament-cmake-xmllint ];
-  nativeBuildInputs = [ ament-cmake-core ament-cmake-export-dependencies ];
+  propagatedBuildInputs = [ ament-cmake-copyright ament-cmake-core ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-flake8 ament-cmake-lint-cmake ament-cmake-pep257 ament-cmake-uncrustify ament-cmake-xmllint ament-copyright ament-cppcheck ament-cpplint ament-flake8 ament-lint-cmake ament-pep257 ament-uncrustify ament-xmllint ];
+  nativeBuildInputs = [ ament-cmake-copyright ament-cmake-core ament-cmake-cppcheck ament-cmake-cpplint ament-cmake-export-dependencies ament-cmake-flake8 ament-cmake-lint-cmake ament-cmake-pep257 ament-cmake-uncrustify ament-cmake-xmllint ];
 
   meta = {
     description = "The list of commonly used linters in the ament build system in CMake.";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-copyright, ament-cmake-cppcheck, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, rviz2, xacro }:
 buildRosPackage {
   pname = "ros-lyrical-zed-description";
-  version = "0.1.5-r1";
+  version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/zed-ros2-description-release/archive/release/lyrical/zed_description/0.1.5-1.tar.gz";
-    name = "0.1.5-1.tar.gz";
-    sha256 = "e09c62d0a1c1be0bc0d87a1e8986819eee47492aa55ef4834a5c796aca0f8fc2";
+    url = "https://github.com/ros2-gbp/zed-ros2-description-release/archive/release/lyrical/zed_description/0.2.0-1.tar.gz";
+    name = "0.2.0-1.tar.gz";
+    sha256 = "bf63fd51af493daca9a92327de174fcab2488bdf7919a05401474b5a92123282";
   };
 
   buildType = "ament_cmake";

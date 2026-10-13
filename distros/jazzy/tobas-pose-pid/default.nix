@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-kdl }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-pose-pid";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_pose_pid/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "660539745d79efd981b73db920152632facf8c65e91beb7ed33498ca82f4dd2c";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_pose_pid/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "dd03c57ea2e22a2168001ebf0df72a309af3549fcf2a73b73e0025536a960b0d";
   };
 
   buildType = "ament_cmake";

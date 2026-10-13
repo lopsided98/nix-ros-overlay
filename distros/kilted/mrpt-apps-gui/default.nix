@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-common, mrpt-graphslam, mrpt-kinematics, mrpt-libapps-gui, mrpt-nav }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-apps-gui";
-  version = "3.3.1-r1";
+  version = "3.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_apps_gui/3.3.1-1.tar.gz";
-    name = "3.3.1-1.tar.gz";
-    sha256 = "06bdc1ea334924293a35b45767bb8aee0075d62bf448d14dcae4b2c567676750";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_apps_gui/3.5.2-1.tar.gz";
+    name = "3.5.2-1.tar.gz";
+    sha256 = "740dc65cf0392ef039bc7eee969091522ee2f372e6038748e2372f7a18c319d7";
   };
 
   buildType = "cmake";

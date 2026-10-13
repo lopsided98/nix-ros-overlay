@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, aruco, aruco-msgs, cv-bridge, geometry-msgs, image-transport, rclcpp, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-aruco-ros";
-  version = "5.0.5-r2";
+  version = "5.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aruco_ros-release/archive/release/rolling/aruco_ros/5.0.5-2.tar.gz";
-    name = "5.0.5-2.tar.gz";
-    sha256 = "f2e8a685cf3f36d5c4f412beca09c85e6dbd632dbe42adfad08c362643d80d3c";
+    url = "https://github.com/ros2-gbp/aruco_ros-release/archive/release/rolling/aruco_ros/5.0.6-1.tar.gz";
+    name = "5.0.6-1.tar.gz";
+    sha256 = "e1380ee4b5583dd2b2c05d8b8df6cfe1ed21597a3f4dc0be05b7810c928dd080";
   };
 
   buildType = "ament_cmake";

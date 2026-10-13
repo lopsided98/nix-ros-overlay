@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-linux, tobas-ros2-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-colcon-cpp";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_colcon_cpp/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "16a012a1d673b770379f80e685dccefe6bf6d403af5a85cd553ed7603eb8b5c4";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_colcon_cpp/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "12b4e69301bba476b544b5d8745e45e12962bc29be8a5be30e316fad6204af84";
   };
 
   buildType = "ament_cmake";

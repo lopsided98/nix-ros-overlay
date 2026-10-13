@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, qt5, tobas-colcon-cpp, tobas-constants, tobas-linux, tobas-qt-tools, tobas-ssh-client, tobas-std-tools, tobas-version, tobas-yaml-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-gui-common";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_gui_common/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "3ab5d05f3f4b6b0c5697c423f2eee21a26549221528f408c4aab98754fb319cc";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_gui_common/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "8f8a886a77bb4f76c9bb6208fc07b948eea6ee4c0b966bb1500f1a462625749c";
   };
 
   buildType = "ament_cmake";

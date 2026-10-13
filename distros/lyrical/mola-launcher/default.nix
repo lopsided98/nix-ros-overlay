@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pep257, ament-cmake-xmllint, ament-lint-auto, cli11, cmake, mola-kernel, mrpt-core, ros-environment }:
 buildRosPackage {
   pname = "ros-lyrical-mola-launcher";
-  version = "3.3.0-r1";
+  version = "3.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_launcher/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "d69dd652a93f4f3d1a1ae7e280599d550c03b47410842458024cd02af03fb099";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_launcher/3.3.2-1.tar.gz";
+    name = "3.3.2-1.tar.gz";
+    sha256 = "4a6115513deab21b88e736a0d88a0d1e850627d42b4179958dc9a67aa6c47983";
   };
 
   buildType = "ament_cmake";

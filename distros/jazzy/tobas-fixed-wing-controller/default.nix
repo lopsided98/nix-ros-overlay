@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-control, tobas-debug-msgs-adapter, tobas-drone-msgs-adapter, tobas-drone-tools, tobas-node, tobas-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-fixed-wing-controller";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_fixed_wing_controller/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "5fe1b93ebfa56007cd6bfbe6917ab2fb78b873b134de4fa35af3be5f8efd5f00";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_fixed_wing_controller/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "0ac99b1a3e87b1d42951afb6041388bd26f3d06d49db38edd57f4fafc361305d";
   };
 
   buildType = "ament_cmake";

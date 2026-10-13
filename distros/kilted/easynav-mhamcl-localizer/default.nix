@@ -1,0 +1,26 @@
+
+# Copyright 2026 Open Source Robotics Foundation
+# Distributed under the terms of the BSD license
+
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, easynav-costmap-common, easynav-localizer, easynav-sensors, eigen, geometry-msgs, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
+buildRosPackage {
+  pname = "ros-kilted-easynav-mhamcl-localizer";
+  version = "0.5.0-r1";
+
+  src = fetchurl {
+    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/kilted/easynav_mhamcl_localizer/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "4a80951e43d6c1be070446cbc56b5a3d7e602a75ed4c91ae1d07de260ec4e80e";
+  };
+
+  buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common rclcpp-lifecycle std-srvs ];
+  propagatedBuildInputs = [ easynav-common easynav-core easynav-costmap-common easynav-localizer easynav-sensors eigen geometry-msgs nav-msgs pluginlib rclcpp tf2 tf2-geometry-msgs tf2-ros visualization-msgs ];
+  nativeBuildInputs = [ ament-cmake ];
+
+  meta = {
+    description = "Easy Navigation: Multi-Hypothesis AMCL Localizer package.";
+    license = with lib.licenses; [ asl20 ];
+  };
+}

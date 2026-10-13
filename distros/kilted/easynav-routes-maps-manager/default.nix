@@ -2,22 +2,22 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, easynav-costmap-common, geometry-msgs, interactive-markers, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, std-srvs, tf2-ros, visualization-msgs, yaets, yaml-cpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, easynav-costmap-common, geometry-msgs, interactive-markers, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rosidl-default-generators, rosidl-default-runtime, std-srvs, tf2-ros, visualization-msgs, yaets, yaml-cpp }:
 buildRosPackage {
   pname = "ros-kilted-easynav-routes-maps-manager";
-  version = "0.4.1-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/kilted/easynav_routes_maps_manager/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "ce8de2b4b219a84163e3a7ce67828ade4462d033ecc744fcb993ea1d17c76469";
+    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/kilted/easynav_routes_maps_manager/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "e0772e229741211089d8d2c6789bc5dbb2cf6241cd20176586b5ecfe37f287d5";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
+  buildInputs = [ ament-cmake rosidl-default-generators ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ament-index-cpp easynav-common easynav-core easynav-costmap-common geometry-msgs interactive-markers nav-msgs pluginlib rclcpp rclcpp-lifecycle std-srvs tf2-ros visualization-msgs yaets yaml-cpp ];
-  nativeBuildInputs = [ ament-cmake ];
+  propagatedBuildInputs = [ ament-index-cpp easynav-common easynav-core easynav-costmap-common geometry-msgs interactive-markers nav-msgs pluginlib rclcpp rclcpp-lifecycle rosidl-default-runtime std-srvs tf2-ros visualization-msgs yaets yaml-cpp ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
     description = "Easy Navigation: Routes MapsManager package.";

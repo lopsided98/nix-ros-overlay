@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-generate-parameter-library-py";
-  version = "0.7.6-r1";
+  version = "0.7.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/jazzy/generate_parameter_library_py/0.7.6-1.tar.gz";
-    name = "0.7.6-1.tar.gz";
-    sha256 = "3e3526b6a141692184a875dce5e9bc907c18e279e07871ec3cc5f0c115d31020";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/jazzy/generate_parameter_library_py/0.7.7-1.tar.gz";
+    name = "0.7.7-1.tar.gz";
+    sha256 = "b8f20d39d90e6a324d6ade314f73d9f118b82d37076ff7b72ad8545581f2bd76";
   };
 
   buildType = "ament_python";

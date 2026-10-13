@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, eigen }:
 buildRosPackage {
   pname = "ros-lyrical-aruco";
-  version = "5.0.5-r3";
+  version = "5.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aruco_ros-release/archive/release/lyrical/aruco/5.0.5-3.tar.gz";
-    name = "5.0.5-3.tar.gz";
-    sha256 = "94bd6bc6715f20d4e4aec8bed393dc421d655dcfa982de905565064d20689ede";
+    url = "https://github.com/ros2-gbp/aruco_ros-release/archive/release/lyrical/aruco/5.0.6-1.tar.gz";
+    name = "5.0.6-1.tar.gz";
+    sha256 = "bee16543bb2186d67b68fa39f4493f1d15e4569c48d6d127653e31983024b53c";
   };
 
   buildType = "ament_cmake";

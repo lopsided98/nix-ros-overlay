@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, std-srvs, tobas-property-common, tobas-property-msgs, tobas-ros2-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-property-client";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_property_client/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "f5d55571f9cc6f83d672b6d767c14c43fecd8eacfb4cc9b43fd90ce6c0e7488d";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_property_client/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "64652c4cc1c8920a260dbd71c419d38467d910c48adc35d3bb53a19f3f7ddd35";
   };
 
   buildType = "ament_cmake";

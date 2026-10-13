@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-int2dds-ffi-vendor";
-  version = "0.1.7-r1";
+  version = "0.1.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_int2dds-release/archive/release/jazzy/int2dds_ffi_vendor/0.1.7-1.tar.gz";
-    name = "0.1.7-1.tar.gz";
-    sha256 = "dba50ab5f8b229ad163e062626dfcbf45a148730c6e5842fac1df9e65d13e6a1";
+    url = "https://github.com/ros2-gbp/rmw_int2dds-release/archive/release/jazzy/int2dds_ffi_vendor/0.1.8-1.tar.gz";
+    name = "0.1.8-1.tar.gz";
+    sha256 = "75031e9971bf420b1d82df1e4fe213e81a781793d626b5b25c93fb74fc0f89f6";
   };
 
   buildType = "ament_cmake";

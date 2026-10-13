@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-kernel, mola-yaml, mrpt-core, mrpt-maps, mrpt-obs, mrpt-system }:
 buildRosPackage {
   pname = "ros-rolling-mola-input-lidar-bin-dataset";
-  version = "3.3.0-r1";
+  version = "3.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_input_lidar_bin_dataset/3.3.0-1.tar.gz";
-    name = "3.3.0-1.tar.gz";
-    sha256 = "750d991a2c6272ddd3c635e1ce2578c8e6197b4a46bfdbf4cd4d189b2a4747bf";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_input_lidar_bin_dataset/3.3.2-1.tar.gz";
+    name = "3.3.2-1.tar.gz";
+    sha256 = "1f9239100b4354bdc889556b11a46e47fec9e82898e48661d69e5d02f16665d9";
   };
 
   buildType = "cmake";

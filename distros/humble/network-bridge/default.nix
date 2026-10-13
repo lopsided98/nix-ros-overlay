@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-lint-auto, ament-lint-common, boost, launch-testing, launch-testing-ament-cmake, launch-testing-ros, pkg-config, pluginlib, rclcpp, std-msgs, tf2-msgs, tf2-ros, zstd }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-index-python, ament-lint-auto, ament-lint-common, boost, cppzmq, demo-nodes-cpp, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, pkg-config, pluginlib, rclcpp, rclpy, std-msgs, tf2-msgs, tf2-ros, zstd }:
 buildRosPackage {
   pname = "ros-humble-network-bridge";
-  version = "3.0.0-r1";
+  version = "3.1.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/network_bridge-release/archive/release/humble/network_bridge/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "dbd7259a3dd561e9ea26749aed0eba3bd0a1b04e1835a271ba3acd5d29c38fb0";
+    url = "https://github.com/ros2-gbp/network_bridge-release/archive/release/humble/network_bridge/3.1.0-2.tar.gz";
+    name = "3.1.0-2.tar.gz";
+    sha256 = "27baf71649d87466d40a1c806636ee1fba63b3d12cf36dbf90c99eab156260d9";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake pkg-config ];
-  checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common launch-testing launch-testing-ament-cmake launch-testing-ros ];
-  propagatedBuildInputs = [ boost pluginlib rclcpp std-msgs tf2-msgs tf2-ros zstd ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest ament-lint-auto ament-lint-common launch-testing launch-testing-ament-cmake launch-testing-ros rclpy ];
+  propagatedBuildInputs = [ ament-index-python boost cppzmq demo-nodes-cpp launch-ros pluginlib rclcpp std-msgs tf2-msgs tf2-ros zstd ];
   nativeBuildInputs = [ ament-cmake pkg-config ];
 
   meta = {

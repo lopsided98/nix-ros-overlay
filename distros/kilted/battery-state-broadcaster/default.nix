@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-battery-state-broadcaster";
-  version = "5.17.0-r1";
+  version = "5.18.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/battery_state_broadcaster/5.17.0-1.tar.gz";
-    name = "5.17.0-1.tar.gz";
-    sha256 = "fe9b3a10a41e7505bae76b5fbe58da300b86c29df3265cab2ac2d95e74eee0c2";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/battery_state_broadcaster/5.18.0-1.tar.gz";
+    name = "5.18.0-1.tar.gz";
+    sha256 = "5e29ef62126fd0c5d04456c6a8dd006ab4729cf8aed83be0ca6853b6ea7da3f8";
   };
 
   buildType = "ament_cmake";

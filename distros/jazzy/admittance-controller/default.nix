@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, angles, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, kinematics-interface, kinematics-interface-kdl, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, tf2, tf2-eigen, tf2-geometry-msgs, tf2-kdl, tf2-ros, tinyxml-2, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-admittance-controller";
-  version = "4.42.1-r1";
+  version = "4.43.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/admittance_controller/4.42.1-1.tar.gz";
-    name = "4.42.1-1.tar.gz";
-    sha256 = "1ea3482be44c9fb0506d43baa11782f876375763614bf518062da1e5df0dfeb8";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/admittance_controller/4.43.0-1.tar.gz";
+    name = "4.43.0-1.tar.gz";
+    sha256 = "0af74ccb2a173c8f3d530ce251f87e7576db32248aa55f4d9e77b24d8dc7d28f";
   };
 
   buildType = "ament_cmake";

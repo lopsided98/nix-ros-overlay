@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cli11, cmake, glfw3, mola-common, mp2p-icp-core, mrpt-gui, mrpt-imgui, mrpt-imgui-vendor, mrpt-opengl, ros-environment }:
 buildRosPackage {
   pname = "ros-kilted-mp2p-icp-viz";
-  version = "3.0.0-r1";
+  version = "3.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/kilted/mp2p_icp_viz/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "c6e0c66f8f7211e9195a21fa7aa314f11feb041e5ff5e8a867335d983d730249";
+    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/kilted/mp2p_icp_viz/3.0.2-1.tar.gz";
+    name = "3.0.2-1.tar.gz";
+    sha256 = "1f7f3cfc4d90aaba7ea945c99782754991cf8a02bcb033dce7515addb71596bf";
   };
 
   buildType = "cmake";

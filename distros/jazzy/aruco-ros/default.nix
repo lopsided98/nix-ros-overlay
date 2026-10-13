@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, aruco, aruco-msgs, cv-bridge, geometry-msgs, image-transport, rclcpp, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-aruco-ros";
-  version = "5.0.5-r1";
+  version = "5.0.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/aruco_ros-release/archive/release/jazzy/aruco_ros/5.0.5-1.tar.gz";
-    name = "5.0.5-1.tar.gz";
-    sha256 = "a6184c66040493c17c3622de6f98ae4960f7a7c1588d6cabf603f1cfc41b24aa";
+    url = "https://github.com/ros2-gbp/aruco_ros-release/archive/release/jazzy/aruco_ros/5.0.6-1.tar.gz";
+    name = "5.0.6-1.tar.gz";
+    sha256 = "b0f95ee9cdb9f3b197e23e847992df089d9a3aa6b181dfe721eda6207f0c09c8";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, gtest }:
 buildRosPackage {
   pname = "ros-lyrical-navmap-core";
-  version = "0.5.1-r1";
+  version = "0.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/lyrical/navmap_core/0.5.1-1.tar.gz";
-    name = "0.5.1-1.tar.gz";
-    sha256 = "cda926b2fa73a34c5f2a70237283c1d61194baaa804688a0c0de29af39778ff9";
+    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/lyrical/navmap_core/0.6.0-1.tar.gz";
+    name = "0.6.0-1.tar.gz";
+    sha256 = "c8f67bf4461f404a1b9a00e868fa7224d24560d6b21f48df0b6414b0bb1644ae";
   };
 
   buildType = "ament_cmake";

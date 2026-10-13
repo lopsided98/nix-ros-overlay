@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-drone-msgs-adapter, tobas-dsp, tobas-msgs-adapter, tobas-node, tobas-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-disturbance-observer";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_disturbance_observer/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "74938b853de19431a73ebfca2a01cc869a11799622fe9ab20cb0e6c90aa3e300";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_disturbance_observer/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "5137a7a6733dc119d61071fd17e3507341c97b470cc344a62ebe3f72404c14fa";
   };
 
   buildType = "ament_cmake";

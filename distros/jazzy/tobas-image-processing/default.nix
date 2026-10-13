@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, ffmpeg, ffmpeg-encoder-decoder, ffmpeg-image-transport-msgs, launch, launch-ros, opencv, pkg-config, sensor-msgs, tobas-camera-msgs, tobas-camera-ros-interface, tobas-ic-drivers, tobas-msgs-adapter, tobas-node }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-image-processing";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_image_processing/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "18ce26aa6b5fd7fef58c1905e771d2eb446a0e6fd11d1e56b8acfcdc1815b5e1";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_image_processing/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "bb43c73115b2aaa6ad5a053c28011ea3548e38dbad4825022b3d0407598e167b";
   };
 
   buildType = "ament_cmake";

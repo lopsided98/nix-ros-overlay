@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rclcpp, rclcpp-components, tobas-ic-drivers }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-ic-drivers-ros";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_ic_drivers_ros/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "af2f686e1b43d3de1121cbce0edb8d307e2a3e08c9c46aaceb5dd66d1f1060db";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_ic_drivers_ros/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "1ddb42a60cd52369811663aeb964c9a36861ca981904a792c0edb2730f7e94e5";
   };
 
   buildType = "ament_cmake";

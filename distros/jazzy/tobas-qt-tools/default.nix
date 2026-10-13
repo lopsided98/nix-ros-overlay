@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, eigen, qt5, tobas-math, tobas-std-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-qt-tools";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_qt_tools/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "2d6c08c79c240c694bccbc8f0677512b8f0760c2adfb448131fb9d0361502cbd";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_qt_tools/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "bb6c606907aed5edb5006b4e959878b5d91b87a9dca9638a2a96a6b532032609";
   };
 
   buildType = "ament_cmake";

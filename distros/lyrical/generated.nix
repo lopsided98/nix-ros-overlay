@@ -654,9 +654,9 @@ self: super: {
 
  easynav-costmap-planner = self.callPackage ./easynav-costmap-planner {};
 
- easynav-fusion-localizer = self.callPackage ./easynav-fusion-localizer {};
+ easynav-diagnostic-recovery = self.callPackage ./easynav-diagnostic-recovery {};
 
- easynav-gps-localizer = self.callPackage ./easynav-gps-localizer {};
+ easynav-fusion-localizer = self.callPackage ./easynav-fusion-localizer {};
 
  easynav-interfaces = self.callPackage ./easynav-interfaces {};
 
@@ -664,9 +664,13 @@ self: super: {
 
  easynav-maps-manager = self.callPackage ./easynav-maps-manager {};
 
+ easynav-mhamcl-localizer = self.callPackage ./easynav-mhamcl-localizer {};
+
  easynav-mpc-controller = self.callPackage ./easynav-mpc-controller {};
 
  easynav-mppi-controller = self.callPackage ./easynav-mppi-controller {};
+
+ easynav-nav2-bridge = self.callPackage ./easynav-nav2-bridge {};
 
  easynav-navmap-localizer = self.callPackage ./easynav-navmap-localizer {};
 
@@ -677,6 +681,32 @@ self: super: {
  easynav-octomap-maps-manager = self.callPackage ./easynav-octomap-maps-manager {};
 
  easynav-planner = self.callPackage ./easynav-planner {};
+
+ easynav-playground-kobuki = self.callPackage ./easynav-playground-kobuki {};
+
+ easynav-playground-kobuki-description = self.callPackage ./easynav-playground-kobuki-description {};
+
+ easynav-playground-kobuki-worlds = self.callPackage ./easynav-playground-kobuki-worlds {};
+
+ easynav-playground-omni = self.callPackage ./easynav-playground-omni {};
+
+ easynav-playground-omni-description = self.callPackage ./easynav-playground-omni-description {};
+
+ easynav-playground-omni-worlds = self.callPackage ./easynav-playground-omni-worlds {};
+
+ easynav-playground-summit = self.callPackage ./easynav-playground-summit {};
+
+ easynav-playground-summit-description = self.callPackage ./easynav-playground-summit-description {};
+
+ easynav-playground-summit-worlds = self.callPackage ./easynav-playground-summit-worlds {};
+
+ easynav-playground-tiago = self.callPackage ./easynav-playground-tiago {};
+
+ easynav-playground-tiago-description = self.callPackage ./easynav-playground-tiago-description {};
+
+ easynav-playground-tiago-worlds = self.callPackage ./easynav-playground-tiago-worlds {};
+
+ easynav-recovery = self.callPackage ./easynav-recovery {};
 
  easynav-regulated-pp-controller = self.callPackage ./easynav-regulated-pp-controller {};
 
@@ -695,6 +725,8 @@ self: super: {
  easynav-simple-maps-manager = self.callPackage ./easynav-simple-maps-manager {};
 
  easynav-simple-planner = self.callPackage ./easynav-simple-planner {};
+
+ easynav-simple-recovery = self.callPackage ./easynav-simple-recovery {};
 
  easynav-support-py = self.callPackage ./easynav-support-py {};
 
@@ -889,6 +921,8 @@ self: super: {
  fields2cover = self.callPackage ./fields2cover {};
 
  filters = self.callPackage ./filters {};
+
+ find-object-2d = self.callPackage ./find-object-2d {};
 
  fkie-message-filters = self.callPackage ./fkie-message-filters {};
 
@@ -1936,6 +1970,8 @@ self: super: {
 
  navmap-rviz-plugin = self.callPackage ./navmap-rviz-plugin {};
 
+ navmap-tools = self.callPackage ./navmap-tools {};
+
  ndcurves = self.callPackage ./ndcurves {};
 
  neobotix-usboard-msgs = self.callPackage ./neobotix-usboard-msgs {};
@@ -2069,6 +2105,12 @@ self: super: {
  openni2-camera = self.callPackage ./openni2-camera {};
 
  openvdb-vendor = self.callPackage ./openvdb-vendor {};
+
+ orbbec-camera = self.callPackage ./orbbec-camera {};
+
+ orbbec-camera-msgs = self.callPackage ./orbbec-camera-msgs {};
+
+ orbbec-description = self.callPackage ./orbbec-description {};
 
  orocos-kdl-vendor = self.callPackage ./orocos-kdl-vendor {};
 
@@ -3069,6 +3111,32 @@ self: super: {
  rviz-visual-tools = self.callPackage ./rviz-visual-tools {};
 
  sbg-driver = self.callPackage ./sbg-driver {};
+
+ scenario-execution = self.callPackage ./scenario-execution {};
+
+ scenario-execution-control = self.callPackage ./scenario-execution-control {};
+
+ scenario-execution-coverage = self.callPackage ./scenario-execution-coverage {};
+
+ scenario-execution-dataops = self.callPackage ./scenario-execution-dataops {};
+
+ scenario-execution-gazebo = self.callPackage ./scenario-execution-gazebo {};
+
+ scenario-execution-interfaces = self.callPackage ./scenario-execution-interfaces {};
+
+ scenario-execution-nav2 = self.callPackage ./scenario-execution-nav2 {};
+
+ scenario-execution-network = self.callPackage ./scenario-execution-network {};
+
+ scenario-execution-os = self.callPackage ./scenario-execution-os {};
+
+ scenario-execution-ros = self.callPackage ./scenario-execution-ros {};
+
+ scenario-execution-rviz = self.callPackage ./scenario-execution-rviz {};
+
+ scenario-execution-sim = self.callPackage ./scenario-execution-sim {};
+
+ scenario-execution-x11 = self.callPackage ./scenario-execution-x11 {};
 
  sdformat-test-files = self.callPackage ./sdformat-test-files {};
 

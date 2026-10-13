@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, git, pkg-config }:
 buildRosPackage {
   pname = "ros-humble-onnxruntime-vendor";
-  version = "0.1.0-r2";
+  version = "0.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/onnxruntime_vendor-release/archive/release/humble/onnxruntime_vendor/0.1.0-2.tar.gz";
-    name = "0.1.0-2.tar.gz";
-    sha256 = "42a3c4c973336a2a53470b15981de97b7e072afc8fcfd19794e5e1335c1f609b";
+    url = "https://github.com/ros2-gbp/onnxruntime_vendor-release/archive/release/humble/onnxruntime_vendor/0.1.1-1.tar.gz";
+    name = "0.1.1-1.tar.gz";
+    sha256 = "74e38725f532b90ee1322c5f84b414fa0e236cedced5cb3a59de83a74728d8fc";
   };
 
   buildType = "ament_cmake";

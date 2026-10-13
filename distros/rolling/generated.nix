@@ -772,6 +772,8 @@ self: super: {
 
  filters = self.callPackage ./filters {};
 
+ find-object-2d = self.callPackage ./find-object-2d {};
+
  fkie-message-filters = self.callPackage ./fkie-message-filters {};
 
  flex-sync = self.callPackage ./flex-sync {};
@@ -1811,6 +1813,12 @@ self: super: {
  openeb-vendor = self.callPackage ./openeb-vendor {};
 
  openni2-camera = self.callPackage ./openni2-camera {};
+
+ orbbec-camera = self.callPackage ./orbbec-camera {};
+
+ orbbec-camera-msgs = self.callPackage ./orbbec-camera-msgs {};
+
+ orbbec-description = self.callPackage ./orbbec-description {};
 
  orocos-kdl-vendor = self.callPackage ./orocos-kdl-vendor {};
 

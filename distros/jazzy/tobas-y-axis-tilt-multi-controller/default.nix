@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-debug-msgs-adapter, tobas-drone-msgs-adapter, tobas-drone-tools, tobas-node, tobas-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-y-axis-tilt-multi-controller";
-  version = "2.16.5-r1";
+  version = "2.16.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_y_axis_tilt_multi_controller/2.16.5-1.tar.gz";
-    name = "2.16.5-1.tar.gz";
-    sha256 = "0980de83e33eef04fed624fb662406c7ce1f90a0af8f2614c2f5a523cf106f60";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_y_axis_tilt_multi_controller/2.16.6-1.tar.gz";
+    name = "2.16.6-1.tar.gz";
+    sha256 = "2e3090880e6c9b84b68f8aa0b34d48c67d4eb4f658f9688532f3e4a5d5924b49";
   };
 
   buildType = "ament_cmake";
