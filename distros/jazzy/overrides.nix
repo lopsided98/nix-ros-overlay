@@ -658,9 +658,15 @@ in {
       fetchgitArgs.hash = "sha256-2tFWccifn0c2lU/U1WNg2FHrBohjx8CXMllPJCevaNk=";
     })
   ]).overrideAttrs ({
-    buildInputs ? [], postPatch ? "", ...
+    buildInputs ? [], patches ? [], postPatch ? "", ...
   }: {
-    buildInputs = buildInputs ++ [ self.nlohmann_json ];
+    buildInputs = buildInputs ++ [ self.libdeflate self.nlohmann_json ];
+    # Allow use of system libdeflate
+    # ref. https://github.com/realsenseai/librealsense/pull/15824
+    patches = patches ++ [(self.fetchpatch2 {
+      url = "https://github.com/nim65s/librealsense/commit/b1b7124407e030d0abf031ff84fe47ebdb67455b.patch?full_index=1";
+      hash = "sha256-VXnJ2VndMl5bOP1EEmmL1YYG/gOfmg+mbncbl5ywyok=";
+    })];
     postPatch = postPatch + ''
       # Get rid of nlohmann_json vendoring
       substituteInPlace third-party/CMakeLists.txt \
