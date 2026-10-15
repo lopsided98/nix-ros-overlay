@@ -48,6 +48,12 @@ in {
     ];
   });
 
+  easynav-mpc-controller = rosSuper.easynav-mpc-controller.overrideAttrs ({
+    buildInputs ? [], ...
+  }: {
+    buildInputs = buildInputs ++ [ self.nlopt ];
+  });
+
   ecl-build = rosSuper.ecl-build.overrideAttrs ({
     postPatch ? "", ...
   }: {
