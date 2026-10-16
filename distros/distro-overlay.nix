@@ -20,10 +20,12 @@
   upstreamOverrides ? true,
   # Further rosSelf: rosSuper: overlays, applied last.
   overrides ? [ ],
+  # "5" or "6"; picks the Qt fixups. Defaults by distro, and to Qt 6 for a
+  # distro this repo doesn't know.
+  qtVersion ? if builtins.elem distro [ "humble" "jazzy" "kilted" ] then "5" else "6",
 }:
 self: super:
 let
-  qtVersion = if (builtins.elem distro ["humble" "jazzy" "kilted"]) then "5" else "6";
 
   pythonOverridesFor = with self.lib; prevPython: prevPython // {
     pkgs = prevPython.pkgs.overrideScope (pyFinal: pyPrev: {
@@ -302,12 +304,15 @@ let
   bundledGenerated = ./. + "/${distro}/generated.nix";
   usesBundledSet = builtins.elem bundledGenerated (self.lib.toList generated);
 
-  # The bundled overrides name every package in the bundled distro. Against a
+  # The bundled overrides name every package in the bundled distros. Against a
   # set generated elsewhere, keep only those that override a package that
-  # exists or that add something the bundled set doesn't define (aliases,
-  # packages taken from nixpkgs).
-  bundledNames = self.lib.optionalAttrs (builtins.pathExists bundledGenerated)
-    (import bundledGenerated { } { });
+  # exists or that add something no bundled distro defines (aliases, packages
+  # taken from nixpkgs). Names come from every bundled distro, so a set
+  # generated from a rosdistro of its own, under a name this repo doesn't
+  # know, is pruned as well as one derived from a bundled distro.
+  bundledNames = self.lib.foldl' (acc: d: acc // import (./. + "/${d}/generated.nix") { } { }) { }
+    (builtins.filter (d: builtins.pathExists (./. + "/${d}/generated.nix"))
+      (builtins.attrNames (builtins.readDir ./.)));
   pruneMissing = overlay:
     if usesBundledSet then overlay
     else rosSelf: rosSuper: self.lib.filterAttrs

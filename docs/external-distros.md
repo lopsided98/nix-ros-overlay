@@ -70,6 +70,14 @@ overlays = [
 | `generated` | An overlay, a `generated.nix`, a directory of `<pkg>/default.nix`, or a list of those. |
 | `upstreamOverrides` | Apply this repo's fixups for `distro` (default `true`). Fixups for packages missing from `generated` are dropped. |
 | `overrides` | Further `rosSelf: rosSuper:` overlays, applied last. |
+| `qtVersion` | `"5"` or `"6"`, for the Qt fixups. Defaults by distro, and to `"6"` for a name this repo doesn't know. |
+
+A distro generated in full from a rosdistro of your own needs no bundled
+distro under it. Set `generated` to your `distros/<distro>` alone. `distro`
+can be your own name; the pnames superflore writes and `ROS_DISTRO` follow
+it. The ROS 2 fixups still apply by package name, and fixups for packages
+you don't have are dropped. Your set has to include the core packages
+(ament, rclcpp and the rest), and nothing falls through to a bundled distro.
 
 `rosPackages.mkRosDistro` takes the same arguments and returns the scope
 without adding it to `rosPackages`. Add it there, as `rosDistroOverlay` does,
