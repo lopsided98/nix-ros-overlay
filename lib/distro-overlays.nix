@@ -23,6 +23,11 @@ rec {
       }) dirs))
     else import g;
 
+  # The package set generated for a bundled distro, for building a distro of
+  # your own on top of it: generated = [ (bundledGenerated "jazzy") ./mine ].
+  # Passing this path, rather than a copy, keeps every bundled fixup applied.
+  bundledGenerated = distro: ../distros + "/${distro}/generated.nix";
+
   # Add rosPackages.${name}, a distro built from `generated`. Takes the
   # arguments of distros/distro-overlay.nix; `name` defaults to `distro`,
   # which replaces the bundled distro of that name.
