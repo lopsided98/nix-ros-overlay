@@ -744,7 +744,9 @@ in {
       tag = version;
       hash = "sha256-rYVQSvxA0nxlZFHwGcOWkxcXZWEvTxR9P+d8E7CSm6U=";
     };
-    preConfigure = ''
+    # Only checkable where behaviortree-cpp is in the set; a distro generated
+    # elsewhere may not include it.
+    preConfigure = lib.optionalString (rosSelf ? behaviortree-cpp) ''
       v1=$(tar xf ${rosSelf.behaviortree-cpp.src} --wildcards '*/tinyxml2.h' --to-stdout|grep TINYXML2_MAJOR_VERSION)
       v2=$(grep TINYXML2_MAJOR_VERSION tinyxml2.h)
       test "$v1" = "$v2" || { echo "tinyxml-2 version mismatch"; exit 1; }
