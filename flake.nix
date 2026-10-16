@@ -43,6 +43,9 @@
       ;
     }) // {
       overlays.default = import ./overlay.nix;
+      # For repos that generate their own distro or packages; see
+      # lib/distro-overlays.nix.
+      lib = import ./lib/distro-overlays.nix;
       nixosModules.default = ./modules;
 
       overlay = nixpkgs.lib.warn
