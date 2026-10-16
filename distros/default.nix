@@ -5,12 +5,16 @@ self: super: {
     recurseForDerivations = true;
     lib = super.lib // import ../lib { inherit lib self; };
 
+    # Build a distro scope; see distro-overlay.nix for the arguments. To add
+    # one to rosPackages from outside this repo, use lib.rosDistroOverlay,
+    # which also puts it where cross-compilation splicing looks for it.
+    mkRosDistro = args: import ./distro-overlay.nix args self super;
     mkRosDistroOverlay = args: import ./distro-overlay.nix args;
 
-    humble = mkRosDistroOverlay { version = 2; distro = "humble"; } self super;
-    jazzy = mkRosDistroOverlay { version = 2; distro = "jazzy"; } self super;
-    kilted = mkRosDistroOverlay { version = 2; distro = "kilted"; } self super;
-    lyrical = mkRosDistroOverlay { version = 2; distro = "lyrical"; } self super;
-    rolling = mkRosDistroOverlay { version = 2; distro = "rolling"; } self super;
+    humble = mkRosDistro { version = 2; distro = "humble"; };
+    jazzy = mkRosDistro { version = 2; distro = "jazzy"; };
+    kilted = mkRosDistro { version = 2; distro = "kilted"; };
+    lyrical = mkRosDistro { version = 2; distro = "lyrical"; };
+    rolling = mkRosDistro { version = 2; distro = "rolling"; };
   };
 }

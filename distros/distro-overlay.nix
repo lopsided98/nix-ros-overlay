@@ -1,7 +1,35 @@
-{ version, distro }:
+# Builds one ROS distro package set as a scope. The bundled distros call this
+# with their own generated.nix; a separate repo can call it (through
+# rosPackages.mkRosDistro or lib.rosDistroOverlay) with expressions it
+# generated itself, and still get this repo's build functions and fixups.
+{
+  # The ROS distro the packages are built for: ROS_DISTRO, and the default
+  # for overridesFrom.
+  distro,
+  version,
+  # Attribute under rosPackages the scope is published at. Cross-compilation
+  # splicing finds the build and target platform sets through it, so it must
+  # match where the scope actually lives.
+  name ? distro,
+  # The generated package set: an overlay function, a generated.nix, a
+  # directory of <pkg>/default.nix, or a list of those, applied in order.
+  generated ? ./. + "/${distro}/generated.nix",
+  # Apply this repo's fixups (ros2-overlay.nix, the Qt overlays and
+  # <overridesFrom>/overrides.nix). Fixups for packages missing from `generated`
+  # are dropped instead of left dangling.
+  upstreamOverrides ? true,
+  # Further rosSelf: rosSuper: overlays, applied last.
+  overrides ? [ ],
+  # The bundled distro whose fixups (<distro>/overrides.nix) and Qt version
+  # apply. A distro generated from its own rosdistro under a new
+  # name sets this to the bundled distro it was snapshotted from.
+  overridesFrom ? distro,
+  # "5" or "6"; picks the Qt fixups. Defaults by overridesFrom, and to Qt 6
+  # for a distro this repo doesn't know.
+  qtVersion ? if builtins.elem overridesFrom [ "humble" "jazzy" "kilted" ] then "5" else "6",
+}:
 self: super:
 let
-  qtVersion = if (builtins.elem distro ["humble" "jazzy" "kilted"]) then "5" else "6";
 
   pythonOverridesFor = with self.lib; prevPython: prevPython // {
     pkgs = prevPython.pkgs.overrideScope (pyFinal: pyPrev: {
@@ -86,7 +114,7 @@ let
       "mrpt-libtclap"
     ] (name: patchMrptExternalProjectGit rosSuper.${name});
 
-  overrides = rosSelf: rosSuper: with rosSelf.lib; {
+  commonOverrides = rosSelf: rosSuper: with rosSelf.lib; {
     # ROS package overrides/fixups
 
     # Some third-party packages are available in rodistro,
@@ -264,30 +292,51 @@ let
   } // (mrptOverrides rosSelf rosSuper);
 
   otherSplices = {
-    selfBuildBuild = self.pkgsBuildBuild.rosPackages.${distro};
-    selfBuildHost = self.pkgsBuildHost.rosPackages.${distro};
-    selfBuildTarget = self.pkgsBuildTarget.rosPackages.${distro};
-    selfHostHost = self.pkgsHostHost.rosPackages.${distro};
-    selfTargetTarget = self.pkgsTargetTarget.rosPackages.${distro} or {};
+    selfBuildBuild = self.pkgsBuildBuild.rosPackages.${name};
+    selfBuildHost = self.pkgsBuildHost.rosPackages.${name};
+    selfBuildTarget = self.pkgsBuildTarget.rosPackages.${name};
+    selfHostHost = self.pkgsHostHost.rosPackages.${name};
+    selfTargetTarget = self.pkgsTargetTarget.rosPackages.${name} or {};
   };
 
   keep = rosSelf: {
     inherit (rosSelf) lib buildRosPackage;
   };
+
+  generatedOverlays = map (import ../lib/distro-overlays.nix).generatedOverlay (self.lib.toList generated);
+
+  bundledGenerated = ./. + "/${distro}/generated.nix";
+  usesBundledSet = builtins.elem bundledGenerated (self.lib.toList generated);
+
+  # The bundled overrides name every package in the bundled distros. Against a
+  # set generated elsewhere, keep only those that override a package that
+  # exists or that add something no bundled distro defines (aliases, packages
+  # taken from nixpkgs). Names come from every bundled distro, so a set
+  # generated from a rosdistro of its own, under a name this repo doesn't
+  # know, is pruned as well as one derived from a bundled distro.
+  bundledNames = self.lib.foldl' (acc: d: acc // import (./. + "/${d}/generated.nix") { } { }) { }
+    (builtins.filter (d: builtins.pathExists (./. + "/${d}/generated.nix"))
+      (builtins.attrNames (builtins.readDir ./.)));
+  pruneMissing = overlay:
+    if usesBundledSet then overlay
+    else rosSelf: rosSuper: self.lib.filterAttrs
+      (n: _: rosSuper ? ${n} || !(bundledNames ? ${n}))
+      (overlay rosSelf rosSuper);
+
+  bundledOverrides = map pruneMissing ([ commonOverrides ]
+    ++ self.lib.optional (version == 2) (import ./ros2-overlay.nix self)
+    ++ self.lib.optional (qtVersion == "5") (import ./qt5-overlay.nix self)
+    ++ self.lib.optional (qtVersion == "6") (import ./qt6-overlay.nix self)
+    ++ self.lib.optional (builtins.pathExists (./. + "/${overridesFrom}/overrides.nix"))
+      (import (./. + "/${overridesFrom}/overrides.nix") self));
 in self.lib.makeScopeWithSplicing
   self.splicePackages
   self.newScope
   otherSplices
   keep
   (_: {})
-  (rosSelf: self.lib.composeManyExtensions ([
-    base
-    (import (./. + "/${distro}/generated.nix"))
-    overrides
-  ]
-  ++ self.lib.optional (version == 2) (import ./ros2-overlay.nix self)
-  ++ self.lib.optional (qtVersion == "5") (import ./qt5-overlay.nix self)
-  ++ self.lib.optional (qtVersion == "6") (import ./qt6-overlay.nix self)
-  ++ [
-    (import (./. + "/${distro}/overrides.nix") self)
-  ]) rosSelf {})
+  (rosSelf: self.lib.composeManyExtensions ([ base ]
+    ++ generatedOverlays
+    ++ self.lib.optionals upstreamOverrides bundledOverrides
+    ++ overrides
+  ) rosSelf {})
