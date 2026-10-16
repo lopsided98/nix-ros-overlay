@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-fc1xx-core, tobas-ic-drivers, tobas-sbus-driver }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-fc1xx-test";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_fc1xx_test/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "7199cd46be5e6f5889af9711b64a790e22cbed18718ab9aa647e85ce5c0df943";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_fc1xx_test/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "0559f6ac1a0e3c7b8dad2b870289de7d100a0d3e481100802b21581e94bfa025";
   };
 
   buildType = "ament_cmake";

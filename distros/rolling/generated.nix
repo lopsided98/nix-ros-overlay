@@ -2124,6 +2124,8 @@ self: super: {
 
  rko-lio = self.callPackage ./rko-lio {};
 
+ rko-slam = self.callPackage ./rko-slam {};
+
  rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
 
  rmf-battery = self.callPackage ./rmf-battery {};
@@ -2629,6 +2631,8 @@ self: super: {
  rqt-moveit = self.callPackage ./rqt-moveit {};
 
  rqt-msg = self.callPackage ./rqt-msg {};
+
+ rqt-multiplot = self.callPackage ./rqt-multiplot {};
 
  rqt-play-motion-builder = self.callPackage ./rqt-play-motion-builder {};
 

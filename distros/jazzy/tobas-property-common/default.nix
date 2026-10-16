@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-property-common";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_property_common/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "8fba773f841b39ff0f45949876fb72446b47a476152191e7e3237f39ce3d0f08";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_property_common/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "eaf8faf4f004d67fa1a16d97433fa07c08a7e97bd3bc6cb69111f3f84d06a62c";
   };
 
   buildType = "ament_cmake";

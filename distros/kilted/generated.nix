@@ -2416,6 +2416,8 @@ self: super: {
 
  rko-lio = self.callPackage ./rko-lio {};
 
+ rko-slam = self.callPackage ./rko-slam {};
+
  rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
 
  rmf-battery = self.callPackage ./rmf-battery {};

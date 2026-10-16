@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-common, mrpt-poses, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-mrpt-tfest";
-  version = "3.5.2-r1";
+  version = "3.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_tfest/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "264a31b7bc6f9e01b51cae2517aa8331983c8dc003f19cfcbf6a1cbedc3f17e5";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_tfest/3.5.3-1.tar.gz";
+    name = "3.5.3-1.tar.gz";
+    sha256 = "28001c180a389f81e4ca0c2fba16b7abc62cccc7983739b2b3bef642d38cbf44";
   };
 
   buildType = "cmake";

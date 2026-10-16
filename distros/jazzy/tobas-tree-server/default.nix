@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-kdl-msgs-adapter, tobas-kdl-parser, tobas-node }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-tree-server";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_tree_server/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "c38daff95c35cb99631629f757c7b3296b0e0d3f858bcfc6ad678ba44acb4c9b";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_tree_server/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "6869c2a97ac838991e5f157b089bfa2de7fbec5e33fe6ea1994059e1500857a1";
   };
 
   buildType = "ament_cmake";
