@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-drone-core }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-drone-tools";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_drone_tools/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "4f9a43b0eebff743ffd317d67b6a477cebed25f5cf8c2365e4c0693baeaafaeb";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_drone_tools/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "bc1893d2f79281b93a308dbfd96b372d52adca4977d0e134d1147ccf654880c8";
   };
 
   buildType = "ament_cmake";

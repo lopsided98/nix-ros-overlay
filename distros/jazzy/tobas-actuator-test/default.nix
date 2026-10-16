@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libsForQt5, tobas-dparam-client, tobas-drone-core, tobas-gui-common, tobas-qt-tools, tobas-rqt-bridge }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-actuator-test";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_actuator_test/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "4b6eadae47e375eeabaa7354ca2091503e6e19b705c325fbc106de87c0e4a9e5";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_actuator_test/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "a51f30350669c4b0b4db22918197ef1169b1db5793d802142a9b8d11787a4a57";
   };
 
   buildType = "ament_cmake";

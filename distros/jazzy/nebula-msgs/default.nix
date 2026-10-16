@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-nebula-msgs";
-  version = "1.2.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_msgs/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "651b63571df084ca1e8c6f4bc6182380f5399d7c60e1869afa589bc3950cd3b5";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_msgs/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "bc3417aa1119db325ffc755710012103d32fae1a29d8fd749a7d3798485598c0";
   };
 
   buildType = "ament_cmake";

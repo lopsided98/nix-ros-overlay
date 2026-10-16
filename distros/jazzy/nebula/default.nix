@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nebula-continental, nebula-hesai, nebula-robosense, nebula-velodyne, ros-testing }:
 buildRosPackage {
   pname = "ros-jazzy-nebula";
-  version = "1.2.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "f2d0d831ddbb75964d9fff86e8fccc9ed75a16b20c15ad9b73cff5160cc33dcb";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "5a64c17fa538ea0193ea35709376638fec3c7fb9a2be68b9bc3afca637e4048b";
   };
 
   buildType = "ament_cmake";

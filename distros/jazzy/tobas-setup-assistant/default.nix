@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, hardware-interface, launch, launch-ros, magic-enum, robot-state-publisher, sensor-msgs, tobas-drone-msgs-adapter, tobas-git, tobas-gui-common, tobas-inja-vendor, tobas-kdl-parser, tobas-path-tools, tobas-property-client, tobas-property-server, tobas-qt-tools, tobas-rapidcsv-vendor, tobas-ros2-tools, tobas-rviz-plugin, tobas-rviz-wrapper, tobas-string-tools, tobas-uadf, tobas-urdf, tobas-visualization-msgs, tobas-xml-tools, visualization-msgs, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-setup-assistant";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_setup_assistant/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "bf9e3266c776a559c5a23a697c42cad2f93eab2d9ec65a43a6c07d1c50694bd4";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_setup_assistant/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "de384698300c8ecb8a4cc024770d8dba5a4a1e8d6a584241e2f1a3fe2ea16ead";
   };
 
   buildType = "ament_cmake";

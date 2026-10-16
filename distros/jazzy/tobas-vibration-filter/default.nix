@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-dsp, tobas-msgs-adapter, tobas-node }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-vibration-filter";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_vibration_filter/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "0ae5a664f68f6c1acef7e7ae42c8cf1655c7e6169e83298829e551a2fee1cba5";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_vibration_filter/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "ac1a3f3da1d9f79134309a4561cc50f48769f60e212ac256c80d853ce8f34dfb";
   };
 
   buildType = "ament_cmake";

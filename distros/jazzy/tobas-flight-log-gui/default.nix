@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libsForQt5, tobas-debug-msgs, tobas-gui-common, tobas-kdl, tobas-msgs, tobas-property-client, tobas-qt-tools, tobas-qwt-wrapper, tobas-ros2-tools, tobas-rqt-bridge, tobas-string-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-flight-log-gui";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_flight_log_gui/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "3666eb20ba8c617769b3a18843dd9a7385e26bda4ea964aca15e795afe7b733c";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_flight_log_gui/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "b6dcf9243b6f7b277b9dff37330860f14b4c2b0d168ccd87c215db4284097463";
   };
 
   buildType = "ament_cmake";

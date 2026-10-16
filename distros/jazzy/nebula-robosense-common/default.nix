@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, nebula-core-common, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-nebula-robosense-common";
-  version = "1.2.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_robosense_common/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "015e1f8c6936f5c11b7cad33370dfad234bdf8abd60a1f20160a94407c64cf18";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_robosense_common/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "c1d39e9f43280065be95f19f9f300198aae536fef2759d48b4d7192a6c65dd82";
   };
 
   buildType = "ament_cmake";

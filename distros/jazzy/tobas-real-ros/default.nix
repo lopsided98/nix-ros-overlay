@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, magic-enum, sensor-msgs, tobas-drone-msgs-adapter, tobas-dsp, tobas-linux, tobas-msgs-adapter, tobas-node, tobas-property-tree, tobas-real-common, tobas-real-msgs, tobas-string-tools, tobas-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-real-ros";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_real_ros/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "112d2112e1633599c9851a56f51bcf707a839dbfd2b541792f155bed27951d53";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_real_ros/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "b7a48f23f53403bf2a8c2c659ff0ab879fdd79e79127986c54d38a758eb7b2e7";
   };
 
   buildType = "ament_cmake";

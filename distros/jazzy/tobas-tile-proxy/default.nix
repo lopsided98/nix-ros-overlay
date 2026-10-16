@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-tile-proxy";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_tile_proxy/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "b86a7b8b6e3369eb2f08d213e8d13191ec7cc89210994b0a7dbd303fcfe77b3d";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_tile_proxy/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "b28d3eb9bcdbab4188e00fa934a96d9dd4deef5b8a43aed7a5daa47f24380a5d";
   };
 
   buildType = "ament_python";
