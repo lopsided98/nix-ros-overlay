@@ -3,8 +3,8 @@
 # rosPackages.mkRosDistro or lib.rosDistroOverlay) with expressions it
 # generated itself, and still get this repo's build functions and fixups.
 {
-  # The ROS distro the packages are built for. Sets ROS_DISTRO, the default Qt
-  # version, and which of this repo's overrides apply.
+  # The ROS distro the packages are built for: ROS_DISTRO, and the default
+  # for overridesFrom.
   distro,
   version,
   # Attribute under rosPackages the scope is published at. Cross-compilation
@@ -14,15 +14,19 @@
   # The generated package set: an overlay function, a generated.nix, a
   # directory of <pkg>/default.nix, or a list of those, applied in order.
   generated ? ./. + "/${distro}/generated.nix",
-  # Apply this repo's fixups for `distro` (ros2-overlay.nix, the Qt overlays
-  # and <distro>/overrides.nix). Fixups for packages missing from `generated`
+  # Apply this repo's fixups (ros2-overlay.nix, the Qt overlays and
+  # <overridesFrom>/overrides.nix). Fixups for packages missing from `generated`
   # are dropped instead of left dangling.
   upstreamOverrides ? true,
   # Further rosSelf: rosSuper: overlays, applied last.
   overrides ? [ ],
-  # "5" or "6"; picks the Qt fixups. Defaults by distro, and to Qt 6 for a
-  # distro this repo doesn't know.
-  qtVersion ? if builtins.elem distro [ "humble" "jazzy" "kilted" ] then "5" else "6",
+  # The bundled distro whose fixups (<distro>/overrides.nix) and Qt version
+  # apply. A distro generated from its own rosdistro under a new
+  # name sets this to the bundled distro it was snapshotted from.
+  overridesFrom ? distro,
+  # "5" or "6"; picks the Qt fixups. Defaults by overridesFrom, and to Qt 6
+  # for a distro this repo doesn't know.
+  qtVersion ? if builtins.elem overridesFrom [ "humble" "jazzy" "kilted" ] then "5" else "6",
 }:
 self: super:
 let
@@ -323,8 +327,8 @@ let
     ++ self.lib.optional (version == 2) (import ./ros2-overlay.nix self)
     ++ self.lib.optional (qtVersion == "5") (import ./qt5-overlay.nix self)
     ++ self.lib.optional (qtVersion == "6") (import ./qt6-overlay.nix self)
-    ++ self.lib.optional (builtins.pathExists (./. + "/${distro}/overrides.nix"))
-      (import (./. + "/${distro}/overrides.nix") self));
+    ++ self.lib.optional (builtins.pathExists (./. + "/${overridesFrom}/overrides.nix"))
+      (import (./. + "/${overridesFrom}/overrides.nix") self));
 in self.lib.makeScopeWithSplicing
   self.splicePackages
   self.newScope
