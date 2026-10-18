@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, tobas-camera, tobas-command-msgs, tobas-command-msgs-adapter, tobas-common, tobas-components-rt, tobas-config-servers, tobas-connection-monitor, tobas-constants, tobas-controllers, tobas-cui, tobas-debug-msgs, tobas-debug-msgs-adapter, tobas-debug-tools, tobas-description, tobas-disturbance-observer, tobas-dparam, tobas-drone, tobas-dummy-pkg, tobas-eskf, tobas-failsafe, tobas-fake-publishers, tobas-hardware, tobas-joint-states-bridge, tobas-landing-detection, tobas-manipulation, tobas-mission, tobas-msgs, tobas-msgs-adapter, tobas-node, tobas-object-avoidance, tobas-pose-pid, tobas-property, tobas-rc-teleop, tobas-real, tobas-ros-interface, tobas-rosbag-recorder, tobas-rotor-anomaly-detection, tobas-rotor-controller, tobas-tools, tobas-topic-throttle, tobas-tree-server, tobas-version, tobas-vibration-filter, tobas-wind-model }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, tobas-camera, tobas-command-msgs, tobas-command-msgs-adapter, tobas-common, tobas-components-rt, tobas-config-servers, tobas-connection-monitor, tobas-constants, tobas-controllers, tobas-cui, tobas-debug-msgs, tobas-debug-msgs-adapter, tobas-debug-tools, tobas-description, tobas-disturbance-observer, tobas-dparam, tobas-drone, tobas-dummy-pkg, tobas-eskf, tobas-failsafe, tobas-fake-publishers, tobas-hardware, tobas-joint-states-bridge, tobas-landing-detection, tobas-manipulation, tobas-mission, tobas-msgs, tobas-msgs-adapter, tobas-node, tobas-pose-pid, tobas-property, tobas-rc-teleop, tobas-real, tobas-ros-interface, tobas-rosbag-recorder, tobas-rotor-anomaly-detection, tobas-rotor-controller, tobas-tools, tobas-topic-throttle, tobas-tree-server, tobas-version, tobas-vibration-filter, tobas-wind-model }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-core";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_core/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "e897d0cc6bc82ad6d402b8412c1ed65c3212a8776d6e0c623597b75627a0f4d1";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_core/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "257235539f4f22acc305f9a84148eb200fd3322541b6bf03e79d213fb2754a64";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ tobas-camera tobas-command-msgs tobas-command-msgs-adapter tobas-common tobas-components-rt tobas-config-servers tobas-connection-monitor tobas-constants tobas-controllers tobas-cui tobas-debug-msgs tobas-debug-msgs-adapter tobas-debug-tools tobas-description tobas-disturbance-observer tobas-dparam tobas-drone tobas-dummy-pkg tobas-eskf tobas-failsafe tobas-fake-publishers tobas-hardware tobas-joint-states-bridge tobas-landing-detection tobas-manipulation tobas-mission tobas-msgs tobas-msgs-adapter tobas-node tobas-object-avoidance tobas-pose-pid tobas-property tobas-rc-teleop tobas-real tobas-ros-interface tobas-rosbag-recorder tobas-rotor-anomaly-detection tobas-rotor-controller tobas-tools tobas-topic-throttle tobas-tree-server tobas-version tobas-vibration-filter tobas-wind-model ];
+  propagatedBuildInputs = [ tobas-camera tobas-command-msgs tobas-command-msgs-adapter tobas-common tobas-components-rt tobas-config-servers tobas-connection-monitor tobas-constants tobas-controllers tobas-cui tobas-debug-msgs tobas-debug-msgs-adapter tobas-debug-tools tobas-description tobas-disturbance-observer tobas-dparam tobas-drone tobas-dummy-pkg tobas-eskf tobas-failsafe tobas-fake-publishers tobas-hardware tobas-joint-states-bridge tobas-landing-detection tobas-manipulation tobas-mission tobas-msgs tobas-msgs-adapter tobas-node tobas-pose-pid tobas-property tobas-rc-teleop tobas-real tobas-ros-interface tobas-rosbag-recorder tobas-rotor-anomaly-detection tobas-rotor-controller tobas-tools tobas-topic-throttle tobas-tree-server tobas-version tobas-vibration-filter tobas-wind-model ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

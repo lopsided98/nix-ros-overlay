@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-actuator-test, tobas-bootmedia-config, tobas-colcon-cpp, tobas-control-system, tobas-crypt, tobas-cyclonedds-config, tobas-flight-log-gui, tobas-gamepad, tobas-gazebo, tobas-gcs, tobas-git, tobas-gui-common, tobas-parameter-tuning, tobas-qt-tools, tobas-qwt-wrapper, tobas-rviz-plugin, tobas-rviz-wrapper, tobas-sensor-calibration, tobas-setup-assistant, tobas-simulation-gui, tobas-ssh, tobas-tile-proxy, tobas-uadf, tobas-udev, tobas-urdf-builder, tobas-urdf-builder-plugin, tobas-visualization-msgs, tobas-wpa-supplicant }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-gui";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_gui/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "d238cd0987eb5aa0ae5b01d8b27572275f4aacbc4f369527a6ab1e327edcee18";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_gui/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "a5f8009abd1aa269d9eecc6138643d34d0a415a088277bf1614f2c3cb255fb37";
   };
 
   buildType = "ament_cmake";

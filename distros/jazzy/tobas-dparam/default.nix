@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-dparam-client, tobas-dparam-common, tobas-dparam-msgs, tobas-dparam-server }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-dparam";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_dparam/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "0f7aa39650334a3ab036b541259d1df806bf600fe28b07427605a7f25fb2eac0";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_dparam/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "1df2e60d70f7f6509ee4118ef44627bf0d632d79159fa3fed6aa3aeb9f0e67ef";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-lint-auto, autoware-cmake, nebula-core-common }:
 buildRosPackage {
   pname = "ros-jazzy-nebula-core-hw-interfaces";
-  version = "1.2.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_core_hw_interfaces/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "1277167b65721e88d05916c18fd01045e5bfcb9b4051039a8a13b92c5d18495b";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_core_hw_interfaces/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "f5be922fd38f6abdd95da408559b84d090295fb1a05c00a4ed8db40989f67e50";
   };
 
   buildType = "ament_cmake";

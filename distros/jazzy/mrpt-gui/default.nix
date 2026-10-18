@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, glfw3, libGL, libGLU, libxrandr, libxxf86vm, mrpt-opengl, python3, python3Packages, qt5, wxwidgets_3_2, xorg }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-gui";
-  version = "3.5.2-r1";
+  version = "3.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_gui/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "70960ac8c1ebc1b73c663d0bca9968e8e3ed9d6407d43f2d382be90a55b62a72";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_gui/3.5.3-1.tar.gz";
+    name = "3.5.3-1.tar.gz";
+    sha256 = "232331c55fd8f3bc659ce88a362e9d1734cf714abb9ba5cfb2e54f70d8dcccaf";
   };
 
   buildType = "cmake";

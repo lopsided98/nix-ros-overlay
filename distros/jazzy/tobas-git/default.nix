@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libgit2, pkg-config }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-git";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_git/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "f23a65b7f064b5469ef67d3fdf58f03264875fdead2c100640084515922cf3f2";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_git/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "da7e25485ca0ec6a33a52370ab3ec48b7d5162a62534f51174a562477694511e";
   };
 
   buildType = "ament_cmake";

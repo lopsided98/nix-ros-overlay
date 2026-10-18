@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp, ros2launch, rosbag2-cpp, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-ros2-tools";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_ros2_tools/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "36925367a9f2e2af78bfde3788e996ad17d2bed7204788b3de55d168f694981d";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_ros2_tools/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "788533ce4e490394a3b440837568b52219582c4f16dbcb1015a8b734bf7bd42d";
   };
 
   buildType = "ament_cmake";

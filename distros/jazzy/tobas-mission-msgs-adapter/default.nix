@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-mission-items, tobas-mission-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-mission-msgs-adapter";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_mission_msgs_adapter/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "d39bb76145c90df5c25072a7ecf964869e50eb1d33d4e002f4bb61c7dc79c92c";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_mission_msgs_adapter/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "8df153ea4bfc886e0284e9594104fde99f400d02908dec2656e3c2e8c73fbfe3";
   };
 
   buildType = "ament_cmake";

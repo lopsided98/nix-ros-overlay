@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, std-srvs, tobas-drone-msgs-adapter, tobas-msgs-adapter, tobas-node, tobas-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-rotor-anomaly-detection";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_rotor_anomaly_detection/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "58c0457a3efc5af40afb6fc7b24d2658c05964979e631eb927995593c425b4a3";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_rotor_anomaly_detection/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "301bed479b43d206dac382d88f13a64244fd215d5a062fbcb57102a324904571";
   };
 
   buildType = "ament_cmake";

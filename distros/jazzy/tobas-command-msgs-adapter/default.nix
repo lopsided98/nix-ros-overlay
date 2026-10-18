@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-command-msgs, tobas-kdl-msgs-adapter }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-command-msgs-adapter";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_command_msgs_adapter/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "237d70840c62b463674570ddb352e6611b6229534fe048599faf8f31f0ea6fae";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_command_msgs_adapter/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "211e677f0bc5fae8c564165cd06fe4fc4e1c0c9ee880664f7a041111d84bc7a4";
   };
 
   buildType = "ament_cmake";

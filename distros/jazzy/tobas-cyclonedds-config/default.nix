@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-string-tools, tobas-xml-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-cyclonedds-config";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_cyclonedds_config/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "0a20b55dcdb9487858d7cb42011c8bcde17c8983a8cdb98c9d91f2728d916cbf";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_cyclonedds_config/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "935237c144c2e2f871a3ceb0cb2a921df70c1990f31816ad8ae181e803881d87";
   };
 
   buildType = "ament_cmake";

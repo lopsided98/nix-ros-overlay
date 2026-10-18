@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, std-srvs, tobas-drone-msgs, tobas-mission-msgs, tobas-msgs, tobas-node, tobas-real-common, tobas-real-msgs, tobas-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-ros-interface";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_ros_interface/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "9c1bf74755325a447bb600fd4433877bdc74982e6bd2707c71b921662a679232";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_ros_interface/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "602af881aecee4ecd9c82aa7e63033ef0ac659ce3617f27e95a5f6fb78183514";
   };
 
   buildType = "ament_cmake";

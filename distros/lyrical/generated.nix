@@ -2462,6 +2462,8 @@ self: super: {
 
  rko-lio = self.callPackage ./rko-lio {};
 
+ rko-slam = self.callPackage ./rko-slam {};
+
  rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
 
  rmf-battery = self.callPackage ./rmf-battery {};
@@ -2999,6 +3001,8 @@ self: super: {
  rqt-moveit = self.callPackage ./rqt-moveit {};
 
  rqt-msg = self.callPackage ./rqt-msg {};
+
+ rqt-multiplot = self.callPackage ./rqt-multiplot {};
 
  rqt-play-motion-builder = self.callPackage ./rqt-play-motion-builder {};
 
@@ -3630,9 +3634,9 @@ self: super: {
 
  wireless-watcher = self.callPackage ./wireless-watcher {};
 
- wuji-hand2-beta1-description = self.callPackage ./wuji-hand2-beta1-description {};
+ wuji-hand2-1-description = self.callPackage ./wuji-hand2-1-description {};
 
- wuji-hand2-beta2-description = self.callPackage ./wuji-hand2-beta2-description {};
+ wuji-hand2-2-description = self.callPackage ./wuji-hand2-2-description {};
 
  xacro = self.callPackage ./xacro {};
 

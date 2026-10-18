@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libx11 }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-keyboard";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_keyboard/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "ecf0e99d29b876734f827e11f39b683db8431e219e86bbc4b43459c055c772c8";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_keyboard/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "cbfd800c361f0362e4cdfd6dbac84aad5627c56158fb00f66ca63dda38c6971c";
   };
 
   buildType = "ament_cmake";

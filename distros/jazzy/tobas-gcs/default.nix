@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, launch, launch-ros, rmw-cyclonedds-cpp, tobas-actuator-test, tobas-connection-monitor, tobas-control-system, tobas-cyclonedds-config, tobas-flight-log-gui, tobas-gazebo-sim, tobas-parameter-tuning, tobas-property-server, tobas-sensor-calibration, tobas-simulation-gui, tobas-ssh-server, tobas-tile-proxy }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-gcs";
-  version = "2.16.6-r1";
+  version = "2.16.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_gcs/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "e04ad7cb37c5e1afc87d2b98c520182b45154e2cb27ce72754fc51a8ac1ad27a";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_gcs/2.16.8-1.tar.gz";
+    name = "2.16.8-1.tar.gz";
+    sha256 = "fe3b69a3f9b360a5c714348ce2be711fdbf896302fda0ef8e438b10746f48c5d";
   };
 
   buildType = "ament_cmake";
