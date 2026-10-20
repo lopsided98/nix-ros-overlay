@@ -3,10 +3,11 @@
 # rosPackages.mkRosDistro or lib.rosDistroOverlay) with expressions it
 # generated itself, and still get this repo's build functions and fixups.
 {
-  # The ROS distro the packages are built for: ROS_DISTRO, and the default
+  # The ROS distro the packages are built for: ROS_DISTRO envvar, and the default
   # for overridesFrom.
   distro,
-  version,
+  # The ROS version being built: ROS_VERSION envvar.
+  version ? 2,
   # Attribute under rosPackages the scope is published at. Cross-compilation
   # splicing finds the build and target platform sets through it, so it must
   # match where the scope actually lives.
