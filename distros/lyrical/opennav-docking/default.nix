@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, angles, backward-ros, geometry-msgs, nav-msgs, nav2-common, nav2-graceful-controller, nav2-msgs, nav2-ros-common, nav2-util, opennav-docking-core, pluginlib, rcl-interfaces, rclcpp, rclcpp-action, rclcpp-components, rclcpp-lifecycle, sensor-msgs, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-lyrical-opennav-docking";
-  version = "1.5.2-r2";
+  version = "1.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/opennav_docking/1.5.2-2.tar.gz";
-    name = "1.5.2-2.tar.gz";
-    sha256 = "fe2f92c895e7c53460187c40c526aa5acd8ca38e21e514917c0eb2765f83fd6e";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/opennav_docking/1.5.3-1.tar.gz";
+    name = "1.5.3-1.tar.gz";
+    sha256 = "096bf16b39661ee533af6754b84b1b7337bce7971230ec38c066112112c338a4";
   };
 
   buildType = "ament_cmake";

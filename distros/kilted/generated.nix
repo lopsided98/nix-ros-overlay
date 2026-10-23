@@ -1250,6 +1250,8 @@ self: super: {
 
  jsk-hark-msgs = self.callPackage ./jsk-hark-msgs {};
 
+ kairos = self.callPackage ./kairos {};
+
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
  kdl-parser = self.callPackage ./kdl-parser {};
@@ -2194,6 +2196,8 @@ self: super: {
 
  plansys2-executor = self.callPackage ./plansys2-executor {};
 
+ plansys2-kairos-plan-solver = self.callPackage ./plansys2-kairos-plan-solver {};
+
  plansys2-lifecycle-manager = self.callPackage ./plansys2-lifecycle-manager {};
 
  plansys2-msgs = self.callPackage ./plansys2-msgs {};
@@ -2210,9 +2214,9 @@ self: super: {
 
  plansys2-terminal = self.callPackage ./plansys2-terminal {};
 
- plansys2-tests = self.callPackage ./plansys2-tests {};
-
  plansys2-tools = self.callPackage ./plansys2-tools {};
+
+ plansys2-tui-cli = self.callPackage ./plansys2-tui-cli {};
 
  play-motion2 = self.callPackage ./play-motion2 {};
 
@@ -2415,6 +2419,8 @@ self: super: {
  rig-reconfigure = self.callPackage ./rig-reconfigure {};
 
  rko-lio = self.callPackage ./rko-lio {};
+
+ rko-slam = self.callPackage ./rko-slam {};
 
  rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
 

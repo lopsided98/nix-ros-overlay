@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-kdl-conversions, tobas-urdf }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-kdl-parser";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_kdl_parser/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "54467fcc7bcb6d0552b516ba66e28483d77bbdd91fb1fe7922d1ec05821b86bc";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_kdl_parser/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "d554d9ac15641f84afe27db32ceffcb70661f63c8021e2a8ba497506a7c532fe";
   };
 
   buildType = "ament_cmake";

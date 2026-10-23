@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-python, launch, launch-ros, osrf-pycommon, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-common";
-  version = "1.3.13-r1";
+  version = "1.3.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_common/1.3.13-1.tar.gz";
-    name = "1.3.13-1.tar.gz";
-    sha256 = "607fffaaffb88e963d6c3ed0ca5fd047c5b2f115cb8632230f7ca7bfe7da7f51";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_common/1.3.14-1.tar.gz";
+    name = "1.3.14-1.tar.gz";
+    sha256 = "4ab0f28a499a9f256e8f68cdd99f0e060f3521f9a82f799f1a43dd18469812da";
   };
 
   buildType = "ament_cmake";

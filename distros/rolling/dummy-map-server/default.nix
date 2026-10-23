@@ -2,22 +2,22 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav-msgs, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, nav-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-dummy-map-server";
-  version = "0.38.0-r1";
+  version = "0.38.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/dummy_map_server/0.38.0-1.tar.gz";
-    name = "0.38.0-1.tar.gz";
-    sha256 = "082cf6e94bf5181b5eaec9d959c6c916171a19cdc68d28d1111d6e86e714f84c";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/dummy_map_server/0.38.1-1.tar.gz";
+    name = "0.38.1-1.tar.gz";
+    sha256 = "2508da8541aa713aaa0eacf80e85623bf4f5498d943dd27ee6d1d54182bc3d32";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
+  buildInputs = [ ament-cmake ament-cmake-ros-core ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ nav-msgs rclcpp ];
-  nativeBuildInputs = [ ament-cmake ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-ros-core ];
 
   meta = {
     description = "dummy map server node";

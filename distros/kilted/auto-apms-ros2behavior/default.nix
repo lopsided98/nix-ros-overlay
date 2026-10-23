@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-index-python, auto-apms-behavior-tree, auto-apms-interfaces, python3Packages, rcl-interfaces, rclpy, ros2cli, ros2param, ros2run, std-srvs }:
 buildRosPackage {
   pname = "ros-kilted-auto-apms-ros2behavior";
-  version = "1.5.1-r1";
+  version = "1.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/kilted/auto_apms_ros2behavior/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "6e37c83853978a40ea492b068a7a77b5f7082a3163fba13d3745b5da5000e2d3";
+    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/kilted/auto_apms_ros2behavior/1.7.0-1.tar.gz";
+    name = "1.7.0-1.tar.gz";
+    sha256 = "04015236579527b5770738ad2ce1dba370a9f904b23fb736c8bb69afcb7a882c";
   };
 
   buildType = "ament_python";

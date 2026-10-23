@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, libGL, libGLU, libglvnd, mrpt-img, mrpt-poses, mrpt-viz, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-opengl";
-  version = "3.5.2-r1";
+  version = "3.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_opengl/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "0c2cadc7a7b87cf4a068b2bd5985aea149be6a8c239ae28e741ca0eb633cdf87";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_opengl/3.5.3-1.tar.gz";
+    name = "3.5.3-1.tar.gz";
+    sha256 = "98e1eddfd3b69d1534bc96809460d72074b5aae5045f41d82517fd66effcb7f6";
   };
 
   buildType = "cmake";

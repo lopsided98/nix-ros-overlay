@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, plansys2-msgs, plansys2-pddl-parser, pluginlib, rclcpp, rclcpp-lifecycle }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, lifecycle-msgs, plansys2-msgs, plansys2-pddl-parser, rclcpp, rclcpp-lifecycle, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-plansys2-core";
-  version = "2.0.18-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/jazzy/plansys2_core/2.0.18-1.tar.gz";
-    name = "2.0.18-1.tar.gz";
-    sha256 = "1b979f4a33be3eef4b66dbced92a3306c2215f801675d8197d97ade701fa7af4";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/jazzy/plansys2_core/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "e50652fbc857a09cda53865a7ee37e65055ed284c49f1b849f45680c838e46bb";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ plansys2-msgs plansys2-pddl-parser pluginlib rclcpp rclcpp-lifecycle ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-ros ament-lint-auto ament-lint-common std-msgs ];
+  propagatedBuildInputs = [ ament-index-cpp lifecycle-msgs plansys2-msgs plansys2-pddl-parser rclcpp rclcpp-lifecycle ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

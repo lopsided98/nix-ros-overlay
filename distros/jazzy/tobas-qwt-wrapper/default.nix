@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libsForQt5, qt5 }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-qwt-wrapper";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_qwt_wrapper/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "a433ffb9da79654bc27a0b958e165dac3355ac190833236d21ebc15eceeb643f";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_qwt_wrapper/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "36e0aec016cc9c9f1c54faa20ebbcee1ff28e197f429430a02990e1e2499c322";
   };
 
   buildType = "ament_cmake";

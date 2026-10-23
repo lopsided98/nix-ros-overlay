@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros-core, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-rolling-rttest";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realtime_support-release/archive/release/rolling/rttest/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "05552b2346542210a10cb8d7dbbe9fef2cea68239be7eb9e1c58ed92fddad643";
+    url = "https://github.com/ros2-gbp/realtime_support-release/archive/release/rolling/rttest/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "2202ed90645591252e97110920aa887b21cacc036dec5be701a642c81467f68b";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rcl-interfaces";
-  version = "2.5.1-r1";
+  version = "2.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/rolling/rcl_interfaces/2.5.1-1.tar.gz";
-    name = "2.5.1-1.tar.gz";
-    sha256 = "b59f295df0ea27fd52468fa9454ea6e9f1a79bb2b8c177eed8b16f8894b8fc7b";
+    url = "https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/rolling/rcl_interfaces/2.5.2-1.tar.gz";
+    name = "2.5.2-1.tar.gz";
+    sha256 = "a0bfd8a0de3d0d731593fc4b8817729a9c1ff99341828edf50f1b36ebe2d9236";
   };
 
   buildType = "ament_cmake";

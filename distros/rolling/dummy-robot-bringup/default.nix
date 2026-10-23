@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-python, ament-lint-auto, ament-lint-common, dummy-map-server, dummy-sensors, launch, launch-ros, robot-state-publisher, rviz2 }:
 buildRosPackage {
   pname = "ros-rolling-dummy-robot-bringup";
-  version = "0.38.0-r1";
+  version = "0.38.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/dummy_robot_bringup/0.38.0-1.tar.gz";
-    name = "0.38.0-1.tar.gz";
-    sha256 = "3670c69d8e5b6af9a26065d9a6ed8bbe340fcc7b91530f532e70f98d1fa01f09";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/dummy_robot_bringup/0.38.1-1.tar.gz";
+    name = "0.38.1-1.tar.gz";
+    sha256 = "47d7d3230b463aba50691ed5b2ada726b806bdd054d950e11f8fcf70689ef55a";
   };
 
   buildType = "ament_cmake";

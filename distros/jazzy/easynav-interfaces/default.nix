@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, nav-msgs, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-easynav-interfaces";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/jazzy/easynav_interfaces/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "81f1153f8bb4127bc6f2da475b894d714fdbe8119fa078b282c526cdfe78fb31";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/jazzy/easynav_interfaces/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "02252448ad59abeec0ca81283accaf3609129519d74c50e069d84b6d87b7557c";
   };
 
   buildType = "ament_cmake";

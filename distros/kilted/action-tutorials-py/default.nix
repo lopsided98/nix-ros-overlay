@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, example-interfaces, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-kilted-action-tutorials-py";
-  version = "0.36.5-r1";
+  version = "0.36.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/action_tutorials_py/0.36.5-1.tar.gz";
-    name = "0.36.5-1.tar.gz";
-    sha256 = "7c0311628745f7057b7a744b96f6d3eed397152e72375f6367d124bcb2622422";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/kilted/action_tutorials_py/0.36.6-1.tar.gz";
+    name = "0.36.6-1.tar.gz";
+    sha256 = "e8649ce9f87eeb732059bb3d1b7bc6f0af6ff35786004a45726173b065ff46dd";
   };
 
   buildType = "ament_python";

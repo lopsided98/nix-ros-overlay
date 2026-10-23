@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-lyrical-ur-dashboard-msgs";
-  version = "6.1.0-r1";
+  version = "6.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/lyrical/ur_dashboard_msgs/6.1.0-1.tar.gz";
-    name = "6.1.0-1.tar.gz";
-    sha256 = "aa6b8e26f1dbe84264392959d29be49a485095bdb1f14982ec5fa61eaa88ebfc";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/lyrical/ur_dashboard_msgs/6.2.0-1.tar.gz";
+    name = "6.2.0-1.tar.gz";
+    sha256 = "3188167feb486f9302236f7713c00253fe2f4a2612c5823a7ace66891be7407e";
   };
 
   buildType = "ament_cmake";

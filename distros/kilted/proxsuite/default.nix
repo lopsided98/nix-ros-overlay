@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, doxygen, eigen, git, matio, python3Packages }:
+{ lib, buildRosPackage, fetchurl, _unresolved_libcereal-dev, catch2, cmake, doxygen, eigen, git, graphviz, jrl-cmakemodules, matio, python3, python3Packages, simde }:
 buildRosPackage {
   pname = "ros-kilted-proxsuite";
-  version = "0.7.3-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/proxsuite-release/archive/release/kilted/proxsuite/0.7.3-1.tar.gz";
-    name = "0.7.3-1.tar.gz";
-    sha256 = "72d85ce655617630717856f23f0605ced47c3676fe4f3e14983acaeb3cf48b22";
+    url = "https://github.com/ros2-gbp/proxsuite-release/archive/release/kilted/proxsuite/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "ad472d044e424249ff130107c114e1b5606b049745bdebac3ac7e3b6e05a3a0d";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake doxygen git ];
-  checkInputs = [ matio ];
-  propagatedBuildInputs = [ eigen python3Packages.numpy python3Packages.scipy ];
+  buildInputs = [ _unresolved_libcereal-dev cmake doxygen git graphviz jrl-cmakemodules python3 ];
+  checkInputs = [ catch2 matio ];
+  propagatedBuildInputs = [ eigen python3Packages.numpy python3Packages.scipy simde ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

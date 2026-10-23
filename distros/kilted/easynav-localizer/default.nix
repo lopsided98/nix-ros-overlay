@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, lifecycle-msgs, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-easynav-localizer";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_localizer/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "83c394f6653a632533f3c857127283cd9683fe0eb55634cddb54abc23d59fc7a";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_localizer/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "a75dd9aef32bd2c76714a8b5446a8aade1c04e1991a39c98f28a131f9ffcd165";
   };
 
   buildType = "ament_cmake";

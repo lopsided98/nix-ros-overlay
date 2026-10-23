@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, easynav-controller, easynav-core, easynav-sensors, easynav-system, geometry-msgs, lifecycle-msgs, nav-msgs, pcl, pluginlib, rclcpp, rclcpp-lifecycle, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kilted-easynav-mppi-controller";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/kilted/easynav_mppi_controller/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "08ac8fef742942d819fb7acb104d7c96396663e88aac279d9452a58f9a08895b";
+    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/kilted/easynav_mppi_controller/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "3638d7cce518270694b7ea40b26f22e0e7710bac09ed62a4fe3ec72cae3cb3bd";
   };
 
   buildType = "ament_cmake";

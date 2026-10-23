@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-command-msgs-adapter, tobas-keyboard, tobas-mission-items, tobas-mission-msgs, tobas-msgs-adapter, tobas-node }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-keyboard-teleop";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_keyboard_teleop/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "6bd0c725344329e412cfe16d8e076b30e18b3913024e22f9144b9ed47014fbdb";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_keyboard_teleop/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "c8fbcad855ec70a1344f80410af227a9700b7bd3b03f1320d445734340038433";
   };
 
   buildType = "ament_cmake";

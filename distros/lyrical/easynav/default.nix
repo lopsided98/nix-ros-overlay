@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, easynav-common, easynav-controller, easynav-core, easynav-interfaces, easynav-localizer, easynav-maps-manager, easynav-planner, easynav-recovery, easynav-sensors, easynav-support-py, easynav-system, easynav-tools }:
 buildRosPackage {
   pname = "ros-lyrical-easynav";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/lyrical/easynav/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "40ee993aac4131f761f3f48337fe47dd3afbed80bb964ef6d171f54dd80bad67";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/lyrical/easynav/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "cef3fa72870fa3214c9a0fc29e61f825f6b99303aacff4c5f97bac3528a68f54";
   };
 
   buildType = "ament_cmake";

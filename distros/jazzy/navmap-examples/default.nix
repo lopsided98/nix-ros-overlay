@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, eigen, launch-ros, nav-msgs, navmap-core, navmap-ros, navmap-ros-interfaces, nlohmann_json, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, eigen, launch-ros, nav-msgs, navmap-core, navmap-ros, navmap-ros-interfaces, navmap-rviz-plugin, nlohmann_json, rclcpp, rviz2 }:
 buildRosPackage {
   pname = "ros-jazzy-navmap-examples";
-  version = "0.6.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/jazzy/navmap_examples/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "c8a14200422ecdfb09671bcbe2b9dff67cd402bbb975a26bfdf38ebca29a1611";
+    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/jazzy/navmap_examples/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "d76b4138fdcd40ffb7c86160bf34973d444667ed45332daf7ea6a2875319c940";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ eigen launch-ros nav-msgs navmap-core navmap-ros navmap-ros-interfaces nlohmann_json rclcpp ];
+  propagatedBuildInputs = [ eigen launch-ros nav-msgs navmap-core navmap-ros navmap-ros-interfaces navmap-rviz-plugin nlohmann_json rclcpp rviz2 ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

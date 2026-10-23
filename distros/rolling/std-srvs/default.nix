@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-std-srvs";
-  version = "5.10.2-r1";
+  version = "5.10.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/std_srvs/5.10.2-1.tar.gz";
-    name = "5.10.2-1.tar.gz";
-    sha256 = "257f90583ef2d531aca2c260a401396fd5f32c37b833335b171f6218473d33cf";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/rolling/std_srvs/5.10.3-1.tar.gz";
+    name = "5.10.3-1.tar.gz";
+    sha256 = "bac322595164991d849d74d9d21cdc71f258b90de8a1ea085ed4a2f6f698f5d2";
   };
 
   buildType = "ament_cmake";

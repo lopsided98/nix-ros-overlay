@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-lint-auto, ament-lint-common, angles, builtin-interfaces, geometry-msgs, nav-msgs, nav2-graceful-controller, nav2-msgs, nav2-util, opennav-docking-core, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, sensor-msgs, tf2-ros, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-opennav-docking";
-  version = "1.3.13-r1";
+  version = "1.3.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/opennav_docking/1.3.13-1.tar.gz";
-    name = "1.3.13-1.tar.gz";
-    sha256 = "4aabd7d184f74948c44c67da766de084f6534c093a217b1175ca471574b11138";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/opennav_docking/1.3.14-1.tar.gz";
+    name = "1.3.14-1.tar.gz";
+    sha256 = "ac737c3ae3f33386d1dbfac3bade2e1b6aa08d9d16e1c82a3e9f34cca0a7f195";
   };
 
   buildType = "ament_cmake";

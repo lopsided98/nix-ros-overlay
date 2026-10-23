@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, easynav-controller, easynav-core, easynav-simple-common, geometry-msgs, lifecycle-msgs, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, std-srvs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-easynav-simple-controller";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/lyrical/easynav_simple_controller/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "c9c64265a3a60e2958e816818f99c92a172f8b05e451ab3c8b88c92a6686b509";
+    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/lyrical/easynav_simple_controller/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "9fe41f19c900d72ad8c515f3f0094db0f7d7c23967d267b3baf5adc305f20cc5";
   };
 
   buildType = "ament_cmake";

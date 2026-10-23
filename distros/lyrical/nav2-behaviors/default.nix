@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, backward-ros, geometry-msgs, nav2-common, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-ros-common, nav2-util, pluginlib, rclcpp, rclcpp-action, rclcpp-components, rclcpp-lifecycle, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-nav2-behaviors";
-  version = "1.5.2-r2";
+  version = "1.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_behaviors/1.5.2-2.tar.gz";
-    name = "1.5.2-2.tar.gz";
-    sha256 = "4dd413e5d648e187409050739f3b74dc79873a0b2ec5522a91306ea4d221d164";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_behaviors/1.5.3-1.tar.gz";
+    name = "1.5.3-1.tar.gz";
+    sha256 = "d1ba9b955e658ed9f704389c110f408402189eca68e181407c5407f635a711aa";
   };
 
   buildType = "ament_cmake";

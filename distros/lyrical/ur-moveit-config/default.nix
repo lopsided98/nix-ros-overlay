@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, moveit-configs-utils, moveit-kinematics, moveit-planners, moveit-planners-chomp, moveit-ros-move-group, moveit-ros-visualization, moveit-servo, moveit-simple-controller-manager, ur-description, warehouse-ros-sqlite, xacro }:
 buildRosPackage {
   pname = "ros-lyrical-ur-moveit-config";
-  version = "6.1.0-r1";
+  version = "6.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/lyrical/ur_moveit_config/6.1.0-1.tar.gz";
-    name = "6.1.0-1.tar.gz";
-    sha256 = "fa32f47040014f7fff6b94de94d5394ff2c7f3c4ed6d5c8400ecad688ef97bb4";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/lyrical/ur_moveit_config/6.2.0-1.tar.gz";
+    name = "6.2.0-1.tar.gz";
+    sha256 = "9427c4d2d2551d54bafa059abe92857962cc91433c0b70f1947393620ade42d6";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "An example package with MoveIt2 configurations for UR robots.";
-    license = with lib.licenses; [ asl20 ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

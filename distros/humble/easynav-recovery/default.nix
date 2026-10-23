@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, lifecycle-msgs, pluginlib, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-humble-easynav-recovery";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/humble/easynav_recovery/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "1c7ef1f12eddd44c01e5920b650fc4963ca5a5f6a5683aa5470612cce23d0e2d";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/humble/easynav_recovery/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "3123b43a68119267260699a23a3356c4757e12f438ca365c2e0b13c05a854b38";
   };
 
   buildType = "ament_cmake";

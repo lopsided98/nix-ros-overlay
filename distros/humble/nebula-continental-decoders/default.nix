@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, boost, continental-msgs, diagnostic-msgs, nebula-continental-common, nebula-core-common, nebula-msgs, rclcpp, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-nebula-continental-decoders";
-  version = "1.2.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_continental_decoders/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "a68845d59faaad0a1b5ba3397aa86188fbd382880dd590b3c3f26afe2fd98480";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_continental_decoders/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "9bc028e472c7044cd45c80ad65965109fbf31e21b13af99b889864b8f4f5cc31";
   };
 
   buildType = "ament_cmake";

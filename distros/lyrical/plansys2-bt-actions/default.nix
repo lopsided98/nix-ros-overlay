@@ -2,25 +2,25 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, behaviortree-cpp, geometry-msgs, lifecycle-msgs, plansys2-executor, plansys2-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, std-msgs, test-msgs, tf2-geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, behaviortree-cpp, geometry-msgs, lifecycle-msgs, plansys2-core, plansys2-executor, plansys2-msgs, rclcpp, rclcpp-action, rclcpp-cascade-lifecycle, rclcpp-lifecycle, std-msgs, test-msgs, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-plansys2-bt-actions";
-  version = "3.1.0-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/lyrical/plansys2_bt_actions/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "d1c7be1f5877a4168f27acc629428119b3a4f68325411ba310e13550cc6f14a2";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/lyrical/plansys2_bt_actions/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "8e5ab8d58979ee67078f8ba397d9629ea456fdf9be4866a08c271a4839df7f7e";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common geometry-msgs plansys2-msgs test-msgs tf2-geometry-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-ros ament-index-cpp ament-lint-auto ament-lint-common geometry-msgs plansys2-core plansys2-msgs rclcpp-cascade-lifecycle test-msgs tf2-geometry-msgs ];
   propagatedBuildInputs = [ behaviortree-cpp lifecycle-msgs plansys2-executor rclcpp rclcpp-action rclcpp-lifecycle std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "This package contains the Problem Expert module for the ROS2 Planning System";
+    description = "Base classes to implement PlanSys2 actions as behavior trees (BT.CPP)";
     license = with lib.licenses; [ asl20 ];
   };
 }

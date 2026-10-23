@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nav-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-lyrical-dummy-map-server";
-  version = "0.37.9-r1";
+  version = "0.37.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/lyrical/dummy_map_server/0.37.9-1.tar.gz";
-    name = "0.37.9-1.tar.gz";
-    sha256 = "4dc410538e587a8d81dd6173f923b7ceaaf4e0c67a6e9286975403410a570c0f";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/lyrical/dummy_map_server/0.37.10-1.tar.gz";
+    name = "0.37.10-1.tar.gz";
+    sha256 = "b94736eace0a1e1cdbf0b8ed10418376d972d3967ed1b94af61c387d0fbe4748";
   };
 
   buildType = "ament_cmake";

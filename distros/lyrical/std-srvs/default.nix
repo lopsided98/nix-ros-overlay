@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-lyrical-std-srvs";
-  version = "5.9.3-r1";
+  version = "5.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/lyrical/std_srvs/5.9.3-1.tar.gz";
-    name = "5.9.3-1.tar.gz";
-    sha256 = "dfd49b10d0ea1a06cdc9dcb35d1aea2cc0489fd679d0cbb218e21cf7b34fb741";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/lyrical/std_srvs/5.9.4-1.tar.gz";
+    name = "5.9.4-1.tar.gz";
+    sha256 = "8b6c4be50d2177067a77e167ae66c02d5a798926504924313e31030a7bec1839";
   };
 
   buildType = "ament_cmake";

@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, lifecycle-msgs, plansys2-domain-expert, plansys2-msgs, plansys2-pddl-parser, qt5, rclcpp, rclcpp-action, rclcpp-lifecycle, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, kairos, lifecycle-msgs, plansys2-core, plansys2-domain-expert, plansys2-msgs, plansys2-pddl-parser, rclcpp, rclcpp-lifecycle, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-plansys2-problem-expert";
-  version = "2.0.18-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/jazzy/plansys2_problem_expert/2.0.18-1.tar.gz";
-    name = "2.0.18-1.tar.gz";
-    sha256 = "d76cb660ead86ffd759fbd6050a7407757b53d5fbf6a7478841fd95fddba5403";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/jazzy/plansys2_problem_expert/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "0ac39674ac193b0bec272d3790d8f1bc0e8d55d9d1af3948de4b1e8acdd24504";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ament-index-cpp lifecycle-msgs plansys2-domain-expert plansys2-msgs plansys2-pddl-parser qt5.qtbase rclcpp rclcpp-action rclcpp-lifecycle std-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-ros ament-lint-auto ament-lint-common kairos ];
+  propagatedBuildInputs = [ ament-index-cpp lifecycle-msgs plansys2-core plansys2-domain-expert plansys2-msgs plansys2-pddl-parser rclcpp rclcpp-lifecycle std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

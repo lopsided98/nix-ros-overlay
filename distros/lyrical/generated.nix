@@ -618,8 +618,6 @@ self: super: {
 
  dwb-plugins = self.callPackage ./dwb-plugins {};
 
- dynamixel-hardware = self.callPackage ./dynamixel-hardware {};
-
  dynamixel-hardware-interface = self.callPackage ./dynamixel-hardware-interface {};
 
  dynamixel-interfaces = self.callPackage ./dynamixel-interfaces {};
@@ -1217,6 +1215,8 @@ self: super: {
  jsk-gui-msgs = self.callPackage ./jsk-gui-msgs {};
 
  jsk-hark-msgs = self.callPackage ./jsk-hark-msgs {};
+
+ kairos = self.callPackage ./kairos {};
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
@@ -2224,6 +2224,8 @@ self: super: {
 
  plansys2-executor = self.callPackage ./plansys2-executor {};
 
+ plansys2-kairos-plan-solver = self.callPackage ./plansys2-kairos-plan-solver {};
+
  plansys2-lifecycle-manager = self.callPackage ./plansys2-lifecycle-manager {};
 
  plansys2-msgs = self.callPackage ./plansys2-msgs {};
@@ -2239,8 +2241,6 @@ self: super: {
  plansys2-support-py = self.callPackage ./plansys2-support-py {};
 
  plansys2-terminal = self.callPackage ./plansys2-terminal {};
-
- plansys2-tests = self.callPackage ./plansys2-tests {};
 
  plansys2-tools = self.callPackage ./plansys2-tools {};
 
@@ -2461,6 +2461,8 @@ self: super: {
  rig-reconfigure = self.callPackage ./rig-reconfigure {};
 
  rko-lio = self.callPackage ./rko-lio {};
+
+ rko-slam = self.callPackage ./rko-slam {};
 
  rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
 
@@ -2697,6 +2699,8 @@ self: super: {
  ros2-medkit-sovd-service-interface = self.callPackage ./ros2-medkit-sovd-service-interface {};
 
  ros2-medkit-topic-beacon = self.callPackage ./ros2-medkit-topic-beacon {};
+
+ ros2-pulse = self.callPackage ./ros2-pulse {};
 
  ros2-snapshot = self.callPackage ./ros2-snapshot {};
 
@@ -2999,6 +3003,8 @@ self: super: {
  rqt-moveit = self.callPackage ./rqt-moveit {};
 
  rqt-msg = self.callPackage ./rqt-msg {};
+
+ rqt-multiplot = self.callPackage ./rqt-multiplot {};
 
  rqt-play-motion-builder = self.callPackage ./rqt-play-motion-builder {};
 
@@ -3630,9 +3636,9 @@ self: super: {
 
  wireless-watcher = self.callPackage ./wireless-watcher {};
 
- wuji-hand2-beta1-description = self.callPackage ./wuji-hand2-beta1-description {};
+ wuji-hand2-1-description = self.callPackage ./wuji-hand2-1-description {};
 
- wuji-hand2-beta2-description = self.callPackage ./wuji-hand2-beta2-description {};
+ wuji-hand2-2-description = self.callPackage ./wuji-hand2-2-description {};
 
  xacro = self.callPackage ./xacro {};
 

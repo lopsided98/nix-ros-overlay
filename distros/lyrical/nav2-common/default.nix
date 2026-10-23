@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, ament-cmake-test, ament-lint-auto, ament-lint-common, ament-mypy, backward-ros, launch, launch-ros, python3Packages, rclpy }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, ament-cmake-test, ament-lint-auto, ament-lint-common, backward-ros, launch, launch-ros, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-lyrical-nav2-common";
-  version = "1.5.2-r2";
+  version = "1.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_common/1.5.2-2.tar.gz";
-    name = "1.5.2-2.tar.gz";
-    sha256 = "8af78cb60175870522e3ee7262714850648a383dcf375e6e40fb72ccd6848426";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_common/1.5.3-1.tar.gz";
+    name = "1.5.3-1.tar.gz";
+    sha256 = "539bb9210d9d4d07129f9854db17f495826be4500e424ddbefd4fa2879c6acb9";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-python ];
-  checkInputs = [ ament-cmake-pytest ament-cmake-ros ament-cmake-test ament-lint-auto ament-lint-common ament-mypy python3Packages.pytest ];
+  checkInputs = [ ament-cmake-pytest ament-cmake-ros ament-cmake-test ament-lint-auto ament-lint-common python3Packages.pytest ];
   propagatedBuildInputs = [ ament-cmake-core backward-ros launch launch-ros python3Packages.osrf-pycommon python3Packages.pyyaml python3Packages.types-pyyaml rclpy ];
   nativeBuildInputs = [ ament-cmake-core ];
 

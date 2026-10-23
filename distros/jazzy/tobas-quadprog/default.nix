@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-eigen-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-quadprog";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_quadprog/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "e7add487fb1b8d0a8302246ccee3b7a7a078ee972e9183e97e832e96c0ee5ec5";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_quadprog/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "55d8d31d78e419d3b6f01bfc2fe7f6b913c73852eefc2f34f7bdf8b3f1be06b6";
   };
 
   buildType = "ament_cmake";

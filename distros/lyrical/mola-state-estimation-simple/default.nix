@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mola-common, mola-imu-preintegration, mola-kernel, mola-yaml, mrpt-obs }:
 buildRosPackage {
   pname = "ros-lyrical-mola-state-estimation-simple";
-  version = "3.0.4-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/lyrical/mola_state_estimation_simple/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "2529347f2d13b5c4c832cc0bc5084f0ed6547b173733f2999e078a9789158408";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/lyrical/mola_state_estimation_simple/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "23dbe9b8cdc2e4f27db8dc7a265590b42a606ecd29263f71e7bd71d71188707a";
   };
 
   buildType = "cmake";
