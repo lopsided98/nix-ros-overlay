@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cpplint }:
 buildRosPackage {
   pname = "ros-rolling-ament-cmake-cpplint";
-  version = "0.21.3-r1";
+  version = "0.21.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_cmake_cpplint/0.21.3-1.tar.gz";
-    name = "0.21.3-1.tar.gz";
-    sha256 = "1127471247855d5b38892d02b189af0712f6205ff51bd91ed08605b817deff01";
+    url = "https://github.com/ros2-gbp/ament_lint-release/archive/release/rolling/ament_cmake_cpplint/0.21.4-1.tar.gz";
+    name = "0.21.4-1.tar.gz";
+    sha256 = "d5753b27bd56e68f1f2ffcde2e2a6952bb9eaf37900b7025ab54cf5ce3c330c5";
   };
 
   buildType = "ament_cmake";

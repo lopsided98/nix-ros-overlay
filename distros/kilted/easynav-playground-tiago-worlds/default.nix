@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, controller-manager, diff-drive-controller, easynav-playground-tiago-description, force-torque-sensor-broadcaster, gz-ros2-control, gz-sim-vendor, imu-sensor-broadcaster, joint-state-broadcaster, joint-trajectory-controller, launch, launch-ros, launch-yaml, robot-state-publisher, ros-gz-bridge, ros-gz-sim, xacro }:
 buildRosPackage {
   pname = "ros-kilted-easynav-playground-tiago-worlds";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/kilted/easynav_playground_tiago_worlds/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "5761a4bbd149a96fb35488ff8e0a2ebdad63ebc45bb99765e6bd6b2663744e94";
+    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/kilted/easynav_playground_tiago_worlds/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "c381b1af3a541b4294f9c7c1b1fc1a619bc083237c0091d72f3cf2829d264ea7";
   };
 
   buildType = "ament_cmake";

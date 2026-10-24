@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-common, mrpt-io, mrpt-poses, mrpt-viz, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-graphs";
-  version = "3.5.2-r1";
+  version = "3.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_graphs/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "d19f0fb800577fe0eb24334af36303f9d295927a7b83b15d3c815c1239a8b677";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_graphs/3.5.3-1.tar.gz";
+    name = "3.5.3-1.tar.gz";
+    sha256 = "da44b63c0f66e757f5ef5fa4d794f4382099381a9541037fb34426afe43aac0c";
   };
 
   buildType = "cmake";

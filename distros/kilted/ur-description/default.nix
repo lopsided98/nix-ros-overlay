@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, joint-state-publisher-gui, launch, launch-ros, launch-testing-ament-cmake, launch-testing-ros, robot-state-publisher, rviz2, urdf, urdfdom, xacro }:
 buildRosPackage {
   pname = "ros-kilted-ur-description";
-  version = "4.3.1-r1";
+  version = "4.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ur_description-release/archive/release/kilted/ur_description/4.3.1-1.tar.gz";
-    name = "4.3.1-1.tar.gz";
-    sha256 = "eb09170a5b5c7f3bb7f565096233dd55dd0e783e0959530dbfaf97036794343b";
+    url = "https://github.com/ros2-gbp/ur_description-release/archive/release/kilted/ur_description/4.4.0-1.tar.gz";
+    name = "4.4.0-1.tar.gz";
+    sha256 = "8644df051e735cf68b03b393201ae15d57b43de398edb7a54f6ccdf40cfe66c8";
   };
 
   buildType = "ament_cmake";

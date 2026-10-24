@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-index-python, ament-pep257, ament-xmllint, example-interfaces, python3Packages, rcl-interfaces, rclpy }:
 buildRosPackage {
   pname = "ros-rolling-demo-nodes-py";
-  version = "0.38.0-r1";
+  version = "0.38.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/demo_nodes_py/0.38.0-1.tar.gz";
-    name = "0.38.0-1.tar.gz";
-    sha256 = "52adb0cee57676714e86402e3751892d05b4d75636ae7434fcaef74fd3c76f4a";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/demo_nodes_py/0.38.1-1.tar.gz";
+    name = "0.38.1-1.tar.gz";
+    sha256 = "0e713fc5ceb401f7630dc777ff32b9a4c4928cc8c162c71063fcfc11a3fa1c22";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-navmap-ros-interfaces";
-  version = "0.6.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/jazzy/navmap_ros_interfaces/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "480e1feab6c43e6d93a57a610143ecd0073fc62c3a83b5b21b6f64b791ab82c9";
+    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/jazzy/navmap_ros_interfaces/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "6525fe20931026bc3ebf513945eed163bce1ae842767b4b378caf65c4207c71c";
   };
 
   buildType = "ament_cmake";

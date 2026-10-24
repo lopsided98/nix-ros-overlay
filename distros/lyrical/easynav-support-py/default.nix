@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-pytest, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, easynav-interfaces, geometry-msgs, nav-msgs, python3Packages, rclpy }:
 buildRosPackage {
   pname = "ros-lyrical-easynav-support-py";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/lyrical/easynav_support_py/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "d8de6c252e22201788857dab69b72373f52aae76aa773d57c8c81f9c6ac0398d";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/lyrical/easynav_support_py/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "425ceaca4366f6070f5a07f492c603293ae1342a8814f85ea3cc0ef7333c5c02";
   };
 
   buildType = "ament_python";

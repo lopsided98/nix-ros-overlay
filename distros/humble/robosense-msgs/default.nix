@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-robosense-msgs";
-  version = "1.2.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/robosense_msgs/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "22e782c2057494e09937ba9ff929cdf2675848ebe532d2687db310ac10a4cc20";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/robosense_msgs/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "8ae8ff8504b91932c27a99c25b4ea9739a81ac858078c583b4bd6adb98d8449f";
   };
 
   buildType = "ament_cmake";

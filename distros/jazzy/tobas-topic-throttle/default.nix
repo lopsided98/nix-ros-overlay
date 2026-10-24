@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-msgs-adapter, tobas-node, tobas-real-common, tobas-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-topic-throttle";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_topic_throttle/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "6b11cf42f7d479a73879292798cca3ae8b64ddeb54662f5eb02317fa6d9aa7b1";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_topic_throttle/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "17080dd6c24fb7e07652bf057925c67708377132f2f50a34e9cc9ad5d44dc431";
   };
 
   buildType = "ament_cmake";

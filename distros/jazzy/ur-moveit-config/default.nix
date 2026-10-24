@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, moveit-configs-utils, moveit-kinematics, moveit-planners, moveit-planners-chomp, moveit-ros-move-group, moveit-ros-visualization, moveit-servo, moveit-simple-controller-manager, ur-description, warehouse-ros-sqlite, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-ur-moveit-config";
-  version = "3.9.0-r1";
+  version = "3.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/jazzy/ur_moveit_config/3.9.0-1.tar.gz";
-    name = "3.9.0-1.tar.gz";
-    sha256 = "4650fc990dc4c8b8ce041897fec5af0a35b4f3f364ebac8953366a21295f93df";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/jazzy/ur_moveit_config/3.10.0-1.tar.gz";
+    name = "3.10.0-1.tar.gz";
+    sha256 = "f7274fee56bdfa653404069a9136d0587a3f4966993319f6ebbd59054d7f7d0f";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "An example package with MoveIt2 configurations for UR robots.";
-    license = with lib.licenses; [ asl20 ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-dsp, tobas-msgs-adapter, tobas-node }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-landing-detection";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_landing_detection/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "62e94d13dc47e84cfdcacec31cf3542e5d79550ddc505b62914d1cbb22c09644";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_landing_detection/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "7458d651ed54c38b9c8e0ea8df85acf2ba962e94a8275415301296960b463c6b";
   };
 
   buildType = "ament_cmake";

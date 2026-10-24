@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, lifecycle-msgs, pluginlib, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-kilted-easynav-recovery";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_recovery/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "766b75d1976bb0247f031cf5a040dbe5ff1462390fe7986ab4f99cdca1dad2fd";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_recovery/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "ed1e7ad093a45bebc61914a2176a31be7afb590df52ecb7289578651a355a4f0";
   };
 
   buildType = "ament_cmake";

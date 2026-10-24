@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, sensor-msgs, tobas-constants, tobas-msgs-adapter, tobas-node }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-joint-states-bridge";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_joint_states_bridge/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "56e36d0bcb30d1908ee6613a81d50f7f2eb8ba57b755be874da733f410512bc8";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_joint_states_bridge/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "f3cce818266a39b60249c523f4b24cbb9b6fd52b932294e247c9d377103f8e6e";
   };
 
   buildType = "ament_cmake";

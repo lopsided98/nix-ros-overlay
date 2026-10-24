@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, plansys2-domain-expert, plansys2-executor, plansys2-lifecycle-manager, plansys2-planner, plansys2-problem-expert, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, launch-testing-ament-cmake, lifecycle-msgs, plansys2-domain-expert, plansys2-executor, plansys2-lifecycle-manager, plansys2-msgs, plansys2-planner, plansys2-popf-plan-solver, plansys2-problem-expert, rcl-interfaces, rclcpp, rclcpp-lifecycle, rclpy }:
 buildRosPackage {
   pname = "ros-jazzy-plansys2-bringup";
-  version = "2.0.18-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/jazzy/plansys2_bringup/2.0.18-1.tar.gz";
-    name = "2.0.18-1.tar.gz";
-    sha256 = "ca781cc33b1727538f20c1cc53ab1862fc6af1360737d4207a69c01f9e52ed68";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/jazzy/plansys2_bringup/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "6c2ff65bb1f045d46df348be4ca0d056eb956bf510bdf61846c50ce62e191f99";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-lint-auto ament-lint-common launch launch-testing ];
-  propagatedBuildInputs = [ launch-ros plansys2-domain-expert plansys2-executor plansys2-lifecycle-manager plansys2-planner plansys2-problem-expert rclcpp ];
+  checkInputs = [ ament-index-python ament-lint-auto ament-lint-common launch launch-testing launch-testing-ament-cmake plansys2-msgs plansys2-popf-plan-solver rcl-interfaces rclpy ];
+  propagatedBuildInputs = [ launch-ros lifecycle-msgs plansys2-domain-expert plansys2-executor plansys2-lifecycle-manager plansys2-planner plansys2-problem-expert rclcpp rclcpp-lifecycle ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

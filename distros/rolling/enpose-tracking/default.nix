@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cargo, geometry-msgs, git, rclcpp, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-enpose-tracking";
-  version = "0.2.0-r4";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/enpose-ros-release/archive/release/rolling/enpose_tracking/0.2.0-4.tar.gz";
-    name = "0.2.0-4.tar.gz";
-    sha256 = "d89e62f15aa4442c4ed578644e71ceb6e543e1741de090b0a2a67ec9e20b46e0";
+    url = "https://github.com/ros2-gbp/enpose-ros-release/archive/release/rolling/enpose_tracking/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "34a38b7d847d89f1fc7db9a55117e5fd8a3ff2113ad064639689a09c8bf274e7";
   };
 
   buildType = "ament_cmake";

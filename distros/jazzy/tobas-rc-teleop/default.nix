@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, magic-enum, tobas-command-msgs-adapter, tobas-msgs-adapter, tobas-node, tobas-path-tools, tobas-ros2-tools, tobas-trajectory-generation }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-rc-teleop";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_rc_teleop/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "2b0d2efeb12522f7a50d7933d2706eb0ec222138ab55f217606e1c085b0861a6";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_rc_teleop/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "f953ec4bf9f953f5968c90fcd75dad4018d78fafa38723d52209157e514652c3";
   };
 
   buildType = "ament_cmake";

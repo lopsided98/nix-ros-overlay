@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, tobas-drone-core, tobas-drone-msgs, tobas-kdl-msgs-adapter, tobas-std-msgs-adapter }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-drone-msgs-adapter";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_drone_msgs_adapter/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "07b06fd88f7576c783d04e05d3835fe0307f25e02eb4b5d7150851923001f458";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_drone_msgs_adapter/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "b0fa19c7a8348ab2641d59ec98db988f6c397b612dfd4ee8217b011699ebd2f7";
   };
 
   buildType = "ament_cmake";

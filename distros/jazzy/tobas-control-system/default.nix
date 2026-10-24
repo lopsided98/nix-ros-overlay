@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, magic-enum, qt5, tobas-constants, tobas-drone-core, tobas-geographic, tobas-gui-common, tobas-mission-msgs-adapter, tobas-msgs-adapter, tobas-path-tools, tobas-property-client, tobas-qt-tools, tobas-ros2-tools, tobas-rqt-bridge, tobas-trajectory-generation }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-control-system";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_control_system/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "eb4cd4b7403770bbd67a9e6df3155fba0329c5187daedad1971081b817f26342";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_control_system/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "1d6b970fcc1e9b423dadf29434e1538ba07cbacc86788ae91c0dcac32712f532";
   };
 
   buildType = "ament_cmake";

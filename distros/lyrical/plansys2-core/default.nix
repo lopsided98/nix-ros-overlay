@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, plansys2-msgs, plansys2-pddl-parser, rclcpp, rclcpp-lifecycle }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, lifecycle-msgs, plansys2-msgs, plansys2-pddl-parser, rclcpp, rclcpp-lifecycle, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-plansys2-core";
-  version = "3.1.0-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/lyrical/plansys2_core/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "81dc42ed7dfe21cb2ed81f215f522d9f93d7e10d5f97261f1b5f8f4b43b749bb";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/lyrical/plansys2_core/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "9950847dfe61e920c65f86a7b932c96c36f884d817c18182388ba75e14ab2eea";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ plansys2-msgs plansys2-pddl-parser rclcpp rclcpp-lifecycle ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-ros ament-lint-auto ament-lint-common std-msgs ];
+  propagatedBuildInputs = [ ament-index-cpp lifecycle-msgs plansys2-msgs plansys2-pddl-parser rclcpp rclcpp-lifecycle ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

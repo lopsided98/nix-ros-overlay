@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros, ament-lint-auto, ament-lint-common, builtin-interfaces, rclcpp, rclcpp-lifecycle, rclpy, rcutils, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-message-filters";
-  version = "7.1.11-r1";
+  version = "7.1.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/kilted/message_filters/7.1.11-1.tar.gz";
-    name = "7.1.11-1.tar.gz";
-    sha256 = "5a4d480e19ce157204cf9e5e8571bd79622f19cc41962e55c56371b5957def93";
+    url = "https://github.com/ros2-gbp/ros2_message_filters-release/archive/release/kilted/message_filters/7.1.12-1.tar.gz";
+    name = "7.1.12-1.tar.gz";
+    sha256 = "a0f9eba9b90b9b59e87e46fd028f14e331d239cfd38bd448ad4d34fc7157fc49";
   };
 
   buildType = "ament_cmake";

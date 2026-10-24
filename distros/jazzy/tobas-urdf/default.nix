@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, tobas-ros2-tools, tobas-string-tools, urdf, urdfdom }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-urdf";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_urdf/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "014be109c7b5528b6fec7cb3666805a4a04cbf2c23e12bbf429c81874980e11f";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_urdf/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "799e74ff0a09b3ed1cdcc3602fa1430488e59d987cb7244a77cbc617d394f893";
   };
 
   buildType = "ament_cmake";

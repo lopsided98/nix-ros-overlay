@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-navmap-ros-interfaces";
-  version = "0.6.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/lyrical/navmap_ros_interfaces/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "f7528da2e94bd04f262d2f0af49b90e48ac89557483441e47df5877819842f6a";
+    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/lyrical/navmap_ros_interfaces/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "a8d7f6a8b83cfce39ee5732cdd5e56be64859963a6d8a5d043c2c32bc4612abd";
   };
 
   buildType = "ament_cmake";

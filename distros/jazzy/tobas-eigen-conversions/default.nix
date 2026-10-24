@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, geometry-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-eigen-conversions";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_eigen_conversions/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "77c895d5d6a82a2667043118db97ef028aea49ba26f02ac064975f7000a322fb";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_eigen_conversions/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "bd1a40d85cc420050f2b2937fd22312425924c555a901e5ee208dfcb311113a6";
   };
 
   buildType = "ament_cmake";

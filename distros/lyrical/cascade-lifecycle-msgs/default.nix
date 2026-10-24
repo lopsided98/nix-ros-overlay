@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, lifecycle-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-lyrical-cascade-lifecycle-msgs";
-  version = "2.0.6-r1";
+  version = "2.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cascade_lifecycle-release/archive/release/lyrical/cascade_lifecycle_msgs/2.0.6-1.tar.gz";
-    name = "2.0.6-1.tar.gz";
-    sha256 = "1709ed02f5a35abdbf66f28df4e5a5a2a7ba9eec3180914c1cf169dd89bd2f1c";
+    url = "https://github.com/ros2-gbp/cascade_lifecycle-release/archive/release/lyrical/cascade_lifecycle_msgs/2.0.7-1.tar.gz";
+    name = "2.0.7-1.tar.gz";
+    sha256 = "674fe4983b8cfb41eacef1275529c26ecca4a508456fd5079fa3a342ae4cfbff";
   };
 
   buildType = "ament_cmake";

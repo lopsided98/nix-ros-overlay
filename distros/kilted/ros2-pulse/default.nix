@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, lttng-tools, rclcpp, rclpy, ros2run, statistics-msgs, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, diagnostic-msgs, lttng-tools, rcl, rclcpp, rclpy, ros2run, rosgraph-monitor-msgs, statistics-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-ros2-pulse";
-  version = "0.5.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/TanayK07/ros2_pulse-release/archive/release/kilted/ros2_pulse/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "af28c1044330dfce1e0dfd0828978e4443dcfcec0e4d9213166bfdd8d36c5a50";
+    url = "https://github.com/TanayK07/ros2_pulse-release/archive/release/kilted/ros2_pulse/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "c85f650357bca418fa769849c28a1a481e67836315ba15e1c0b68fd76e3dfc38";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest ament-cmake-pytest lttng-tools rclpy ros2run std-msgs ];
-  propagatedBuildInputs = [ rclcpp statistics-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-pytest lttng-tools rcl rclpy ros2run std-msgs ];
+  propagatedBuildInputs = [ diagnostic-msgs rclcpp rosgraph-monitor-msgs statistics-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

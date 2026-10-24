@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-lint-auto, autoware-cmake, boost, eigen, libpng, nebula-core-common, pngpp, ros-environment, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-nebula-core-decoders";
-  version = "1.2.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_core_decoders/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "9b5de2015c6389a0f5f617cc4126fd66f1548b09575720148875cfafb7cbbec2";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_core_decoders/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "821bc6a5cde5c0e895138a8bab35c1d3ddb931b15279ce8da886c30aefafe056";
   };
 
   buildType = "ament_cmake";

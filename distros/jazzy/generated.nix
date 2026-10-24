@@ -1780,6 +1780,8 @@ self: super: {
 
  jsk-hark-msgs = self.callPackage ./jsk-hark-msgs {};
 
+ kairos = self.callPackage ./kairos {};
+
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
  kdl-inverse-dynamics-solver = self.callPackage ./kdl-inverse-dynamics-solver {};
@@ -2954,6 +2956,8 @@ self: super: {
 
  pinocchio = self.callPackage ./pinocchio {};
 
+ plansys2 = self.callPackage ./plansys2 {};
+
  plansys2-bringup = self.callPackage ./plansys2-bringup {};
 
  plansys2-bt-actions = self.callPackage ./plansys2-bt-actions {};
@@ -2963,6 +2967,8 @@ self: super: {
  plansys2-domain-expert = self.callPackage ./plansys2-domain-expert {};
 
  plansys2-executor = self.callPackage ./plansys2-executor {};
+
+ plansys2-kairos-plan-solver = self.callPackage ./plansys2-kairos-plan-solver {};
 
  plansys2-lifecycle-manager = self.callPackage ./plansys2-lifecycle-manager {};
 
@@ -2980,9 +2986,9 @@ self: super: {
 
  plansys2-terminal = self.callPackage ./plansys2-terminal {};
 
- plansys2-tests = self.callPackage ./plansys2-tests {};
-
  plansys2-tools = self.callPackage ./plansys2-tools {};
+
+ plansys2-tui-cli = self.callPackage ./plansys2-tui-cli {};
 
  play-motion2 = self.callPackage ./play-motion2 {};
 
@@ -3216,6 +3222,8 @@ self: super: {
 
  rclpy = self.callPackage ./rclpy {};
 
+ rclpy-cascade-lifecycle = self.callPackage ./rclpy-cascade-lifecycle {};
+
  rclpy-message-converter = self.callPackage ./rclpy-message-converter {};
 
  rclpy-message-converter-msgs = self.callPackage ./rclpy-message-converter-msgs {};
@@ -3259,6 +3267,8 @@ self: super: {
  rig-reconfigure = self.callPackage ./rig-reconfigure {};
 
  rko-lio = self.callPackage ./rko-lio {};
+
+ rko-slam = self.callPackage ./rko-slam {};
 
  rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
 
@@ -3815,6 +3825,8 @@ self: super: {
  rqt-moveit = self.callPackage ./rqt-moveit {};
 
  rqt-msg = self.callPackage ./rqt-msg {};
+
+ rqt-multiplot = self.callPackage ./rqt-multiplot {};
 
  rqt-play-motion-builder = self.callPackage ./rqt-play-motion-builder {};
 
@@ -4439,8 +4451,6 @@ self: super: {
  tobas-node = self.callPackage ./tobas-node {};
 
  tobas-nonplanar-multi-controller = self.callPackage ./tobas-nonplanar-multi-controller {};
-
- tobas-object-avoidance = self.callPackage ./tobas-object-avoidance {};
 
  tobas-parameter-tuning = self.callPackage ./tobas-parameter-tuning {};
 

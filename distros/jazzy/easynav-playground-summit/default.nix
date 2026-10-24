@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, easynav-bonxai-maps-manager, easynav-diagnostic-recovery, easynav-fusion-localizer, easynav-mpc-controller, easynav-mppi-controller, easynav-navmap-localizer, easynav-navmap-maps-manager, easynav-navmap-planner, easynav-playground-summit-worlds, easynav-regulated-pp-controller, easynav-serest-controller, easynav-simple-controller, easynav-system, launch, launch-ros, launch-yaml, navmap-rviz-plugin, rviz2, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-easynav-playground-summit";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/jazzy/easynav_playground_summit/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "ea9f1997e78eb58940d4ef06a4663ab2fd8f52b0c726e02abe8d5dd5821452b0";
+    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/jazzy/easynav_playground_summit/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "abc6bcad797bbc74275b600d690dd6e3d6c2bd0939db70f9dc70601193424733";
   };
 
   buildType = "ament_cmake";

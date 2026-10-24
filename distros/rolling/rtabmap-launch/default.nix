@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rtabmap-msgs, rtabmap-odom, rtabmap-rviz-plugins, rtabmap-slam, rtabmap-util, rtabmap-viz }:
 buildRosPackage {
   pname = "ros-rolling-rtabmap-launch";
-  version = "0.22.1-r1";
+  version = "0.23.13-r2";
 
   src = fetchurl {
-    url = "https://github.com/introlab/rtabmap_ros-release/archive/release/rolling/rtabmap_launch/0.22.1-1.tar.gz";
-    name = "0.22.1-1.tar.gz";
-    sha256 = "4cc3185a4d5c7de4b8dbbca9618983b1ce9a8dbe6884c9db565daebcdfbd6d30";
+    url = "https://github.com/ros2-gbp/rtabmap_ros-release/archive/release/rolling/rtabmap_launch/0.23.13-2.tar.gz";
+    name = "0.23.13-2.tar.gz";
+    sha256 = "c6b9a08b163ef69537fc7c3126e006172f9294b5c142bb85eb56fabe1ed67e5c";
   };
 
   buildType = "ament_cmake";

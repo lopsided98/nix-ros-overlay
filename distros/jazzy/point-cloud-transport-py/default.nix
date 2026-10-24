@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-python, ament-cmake-ros, pluginlib, point-cloud-transport, pybind11-vendor, python-cmake-module, rclcpp, rpyutils, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-point-cloud-transport-py";
-  version = "4.0.9-r1";
+  version = "4.0.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/point_cloud_transport-release/archive/release/jazzy/point_cloud_transport_py/4.0.9-1.tar.gz";
-    name = "4.0.9-1.tar.gz";
-    sha256 = "f3e35fbb7467b000263cd7faa2f35106a1ad0a7af606556c2d05d88784ff9671";
+    url = "https://github.com/ros2-gbp/point_cloud_transport-release/archive/release/jazzy/point_cloud_transport_py/4.0.10-1.tar.gz";
+    name = "4.0.10-1.tar.gz";
+    sha256 = "dc8c566643786b67c5696403ea7fa01eae937658ad4a454aa02adf9ebedb9be8";
   };
 
   buildType = "ament_cmake";
