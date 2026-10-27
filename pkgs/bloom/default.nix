@@ -7,19 +7,20 @@
   rosdep,
   rosdistro,
   setuptools,
+  tomli-w,
   vcstools,
 }:
 
 buildPythonPackage rec {
   pname = "bloom";
-  version = "0.14.3";
+  version = "0.14.4";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ros-infrastructure";
     repo = "bloom";
     rev = version;
-    hash = "sha256-gQNk3HbSSsN8yet330x438+HIZBrS48z55kWt6ASBeI=";
+    hash = "sha256-zLmxIbCOfQFXsko7Vfy7L97hV1rSnvEcYjnyObWJGSI=";
   };
 
   build-system = [ setuptools ];
@@ -29,6 +30,7 @@ buildPythonPackage rec {
     empy_3
     rosdep
     rosdistro
+    tomli-w
     vcstools
   ];
 
