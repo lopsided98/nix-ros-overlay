@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, glfw3, libGL, libGLU, mrpt-common }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-imgui-vendor";
-  version = "3.5.2-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_imgui_vendor/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "89a606f718ae074ce0a0e1c279c7d3b916d24317075c604b81683281d2d86a4e";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_imgui_vendor/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "4749376cb143cd214c78803c4455cbae1a75a65602a16a1dd23f3535d5b3e16d";
   };
 
   buildType = "cmake";

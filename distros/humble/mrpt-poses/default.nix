@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-bayes, mrpt-common, mrpt-io, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-mrpt-poses";
-  version = "3.5.2-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_poses/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "6ffed65021e38614d752473af8ed5b3fc111d38c2cc82faab23330dd432ea46a";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_poses/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "10611aa2298129e1f90c41025115d7777ff671738ce0ef754d60d69a6734faa8";
   };
 
   buildType = "cmake";

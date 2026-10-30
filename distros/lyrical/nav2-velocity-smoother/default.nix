@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, backward-ros, geometry-msgs, nav-msgs, nav2-common, nav2-ros-common, nav2-util, rclcpp, rclcpp-components, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-lyrical-nav2-velocity-smoother";
-  version = "1.5.2-r2";
+  version = "1.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_velocity_smoother/1.5.2-2.tar.gz";
-    name = "1.5.2-2.tar.gz";
-    sha256 = "8e4d790b7664c2627d72f4aeaf0d52d5c2a12b0bccef615d64e3c8ff25170230";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_velocity_smoother/1.5.3-1.tar.gz";
+    name = "1.5.3-1.tar.gz";
+    sha256 = "53cfa1542317ad26961628d465f7b92358354965acd8ce41b7f052ddbb148799";
   };
 
   buildType = "ament_cmake";

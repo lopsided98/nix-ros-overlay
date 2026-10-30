@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, spdlog }:
 buildRosPackage {
   pname = "ros-jazzy-wirestead";
-  version = "0.10.0-r1";
+  version = "0.10.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/wirestead-release/archive/release/jazzy/wirestead/0.10.0-1.tar.gz";
-    name = "0.10.0-1.tar.gz";
-    sha256 = "643bcecb21604288a179ce23ec6f746ea2d309ca330fe115461b41c8f2aa0278";
+    url = "https://github.com/ros2-gbp/wirestead-release/archive/release/jazzy/wirestead/0.10.1-1.tar.gz";
+    name = "0.10.1-1.tar.gz";
+    sha256 = "3b2688a43fb96023a3f1d5d6ba1ac2fc45633e1da69ca4e73230b5e7d1d5484f";
   };
 
   buildType = "cmake";

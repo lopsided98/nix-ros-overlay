@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-std-msgs";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_std_msgs/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "ff5549c3651996361118ebabc3d5a50d73fec2e4d62875cf9007e379615df91c";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_std_msgs/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "55706e832cfe7556aee301ef37113a1e2d4d253df43c79cf90a653636cbc8a7a";
   };
 
   buildType = "ament_cmake";

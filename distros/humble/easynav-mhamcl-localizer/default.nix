@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, easynav-costmap-common, easynav-localizer, easynav-sensors, eigen, geometry-msgs, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, std-srvs, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-easynav-mhamcl-localizer";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/humble/easynav_mhamcl_localizer/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "dc5621520185fe15ac906f6b0666140da3328164fe24b01aab2b337d81e917ab";
+    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/humble/easynav_mhamcl_localizer/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "85c75953273693099b383d0f3c3a6749ba48acd46e45a0de94983dd06342592d";
   };
 
   buildType = "ament_cmake";

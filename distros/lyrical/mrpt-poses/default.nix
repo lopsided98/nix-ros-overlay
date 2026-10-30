@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-bayes, mrpt-common, mrpt-io, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-poses";
-  version = "3.5.2-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_poses/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "a9c7d5f9b0f58fcc70ed15dec5e17065f736ea60853c5c286de56c34a675ff42";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_poses/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "bcf33daad682fd586c007016b9041f4f1c3bd8a2baf0a0a3611e95c686475347";
   };
 
   buildType = "cmake";

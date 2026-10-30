@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, easynav-common, easynav-controller, easynav-core, easynav-interfaces, easynav-localizer, easynav-maps-manager, easynav-planner, easynav-recovery, easynav-sensors, easynav-support-py, easynav-system, easynav-tools }:
 buildRosPackage {
   pname = "ros-humble-easynav";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/humble/easynav/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "462d887f7e7a188a1ca58e47f7319d3fc58e9c2246180bd7e3f11f82213de39b";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/humble/easynav/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "a13a0343ec18a1c2ab88bc644c8f882410fd9bca27860f4be13adf90965d8cba";
   };
 
   buildType = "ament_cmake";

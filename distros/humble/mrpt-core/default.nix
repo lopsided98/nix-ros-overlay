@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-mrpt-core";
-  version = "3.5.2-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_core/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "c4c006701d7a6cb4a48f974180b57e2e8a68a83d7723cadb8d2774a165d6fa79";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_core/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "6e3eda3013faa801765d20df360c1985817b90c326a36bfa1baf463e104204b6";
   };
 
   buildType = "cmake";

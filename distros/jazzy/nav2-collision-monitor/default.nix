@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, nav2-common, nav2-costmap-2d, nav2-msgs, nav2-util, rclcpp, rclcpp-components, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-nav2-collision-monitor";
-  version = "1.3.13-r1";
+  version = "1.3.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_collision_monitor/1.3.13-1.tar.gz";
-    name = "1.3.13-1.tar.gz";
-    sha256 = "cede8d2bb3058a0f116f0419aebfa5593cbd090f40d7edb3bea89e6151a0057e";
+    url = "https://github.com/SteveMacenski/navigation2-release/archive/release/jazzy/nav2_collision_monitor/1.3.14-1.tar.gz";
+    name = "1.3.14-1.tar.gz";
+    sha256 = "45d69a6f353f4283abb5fffab568fdb7f4d7229c16309f0b6d1ebda3b265a989";
   };
 
   buildType = "ament_cmake";

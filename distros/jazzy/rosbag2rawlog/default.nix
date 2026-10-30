@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, cli11, cmake, cv-bridge, mrpt-containers, mrpt-libros-bridge, mrpt-maps, mrpt-msgs, nav-msgs, rosbag2-cpp, sensor-msgs, tf2-geometry-msgs, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-rosbag2rawlog";
-  version = "4.0.0-r1";
+  version = "4.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros_bridge-release/archive/release/jazzy/rosbag2rawlog/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "308b1e70f08c486779cecd5cd1b33ac5025acb05724c77888bdc8a98c6101aa6";
+    url = "https://github.com/ros2-gbp/mrpt_ros_bridge-release/archive/release/jazzy/rosbag2rawlog/4.0.1-1.tar.gz";
+    name = "4.0.1-1.tar.gz";
+    sha256 = "04abf0af2f5bd6e534010f585e36040ae10a3fe99f403f495de5b0053a79ba8a";
   };
 
   buildType = "ament_cmake";

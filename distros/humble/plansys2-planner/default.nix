@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, lifecycle-msgs, plansys2-core, plansys2-domain-expert, plansys2-msgs, plansys2-pddl-parser, plansys2-popf-plan-solver, plansys2-problem-expert, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, ros2run, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, kairos, lifecycle-msgs, plansys2-core, plansys2-domain-expert, plansys2-kairos-plan-solver, plansys2-msgs, plansys2-pddl-parser, plansys2-popf-plan-solver, plansys2-problem-expert, pluginlib, rclcpp, rclcpp-lifecycle, ros2run }:
 buildRosPackage {
   pname = "ros-humble-plansys2-planner";
-  version = "2.0.9-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/humble/plansys2_planner/2.0.9-1.tar.gz";
-    name = "2.0.9-1.tar.gz";
-    sha256 = "9679a922f17c3822e00f0f82937ae263eb3a6592447f85cf3be2386331e381c0";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/humble/plansys2_planner/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "b48f8a79674b4a46fb3a70bf7ebdaeac9f8513e2617b7e0df564cf84a9166685";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ros2run ];
-  propagatedBuildInputs = [ ament-index-cpp lifecycle-msgs plansys2-core plansys2-domain-expert plansys2-msgs plansys2-pddl-parser plansys2-popf-plan-solver plansys2-problem-expert pluginlib rclcpp rclcpp-action rclcpp-lifecycle std-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-ros ament-lint-auto ament-lint-common kairos plansys2-popf-plan-solver ros2run ];
+  propagatedBuildInputs = [ ament-index-cpp lifecycle-msgs plansys2-core plansys2-domain-expert plansys2-kairos-plan-solver plansys2-msgs plansys2-pddl-parser plansys2-problem-expert pluginlib rclcpp rclcpp-lifecycle ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

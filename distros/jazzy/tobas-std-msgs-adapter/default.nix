@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rclcpp, tobas-std-msgs, tobas-std-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-std-msgs-adapter";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_std_msgs_adapter/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "0d9d245e6e4f7870d863c2b29cbe3cbb7ea38bf9d88dc9d7ec8461a5b5509927";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_std_msgs_adapter/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "2323612908440e13ff9309b86b1905bbfeb372cb8074283882b9c1bffc5880d7";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, easynav-costmap-localizer, easynav-costmap-maps-manager, easynav-costmap-planner, easynav-diagnostic-recovery, easynav-playground-omni-worlds, easynav-regulated-pp-controller, easynav-system, launch, launch-ros, launch-yaml, rviz2 }:
 buildRosPackage {
   pname = "ros-lyrical-easynav-playground-omni";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/lyrical/easynav_playground_omni/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "bfed18e3677d5c4d9aeb90e9f7d0e7927fbc248a40b67eadec9878764db480a0";
+    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/lyrical/easynav_playground_omni/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "be2770a7df642b2ed5fa1fdcee2071aebb1d0a2f56b18435e41f8c663bb1cdb2";
   };
 
   buildType = "ament_cmake";

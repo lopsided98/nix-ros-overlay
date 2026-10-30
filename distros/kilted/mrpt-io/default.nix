@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-serialization, mrpt-system, python3, python3Packages, zlib, zstd }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-io";
-  version = "3.5.2-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_io/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "0b1d32f588f9e21b4fc7a97e7522af6c2adcbcd35c2423f9707a630ab0ebe176";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_io/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "30703323e60dd929198dd1d49ca59fb38c643a7743367f1ccdf4bdc6cec191cc";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake python3 python3Packages.pybind11 zlib zstd ];
-  propagatedBuildInputs = [ mrpt-common mrpt-serialization mrpt-system ];
+  buildInputs = [ cmake python3 python3Packages.pybind11 ];
+  propagatedBuildInputs = [ mrpt-common mrpt-serialization mrpt-system zlib zstd ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

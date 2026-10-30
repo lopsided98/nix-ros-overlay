@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-common, mrpt-io, mrpt-poses, mrpt-viz, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-graphs";
-  version = "3.5.2-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_graphs/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "8d10fed0d0ece9b037f964e804124e4d6360ad090db8d7f4158f7c69fb1f2912";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_graphs/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "6badbe796e4566ed665bdb33bf3539e3aef44fe141adf9bf756d7ddf218de808";
   };
 
   buildType = "cmake";

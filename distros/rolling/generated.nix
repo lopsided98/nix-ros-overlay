@@ -564,8 +564,6 @@ self: super: {
 
  dummy-sensors = self.callPackage ./dummy-sensors {};
 
- dynamixel-hardware = self.callPackage ./dynamixel-hardware {};
-
  dynamixel-hardware-interface = self.callPackage ./dynamixel-hardware-interface {};
 
  dynamixel-interfaces = self.callPackage ./dynamixel-interfaces {};
@@ -2124,6 +2122,8 @@ self: super: {
 
  rko-lio = self.callPackage ./rko-lio {};
 
+ rko-slam = self.callPackage ./rko-slam {};
+
  rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
 
  rmf-battery = self.callPackage ./rmf-battery {};
@@ -2630,6 +2630,8 @@ self: super: {
 
  rqt-msg = self.callPackage ./rqt-msg {};
 
+ rqt-multiplot = self.callPackage ./rqt-multiplot {};
+
  rqt-play-motion-builder = self.callPackage ./rqt-play-motion-builder {};
 
  rqt-plot = self.callPackage ./rqt-plot {};
@@ -2665,6 +2667,32 @@ self: super: {
  rslidar-msg = self.callPackage ./rslidar-msg {};
 
  rtabmap = self.callPackage ./rtabmap {};
+
+ rtabmap-conversions = self.callPackage ./rtabmap-conversions {};
+
+ rtabmap-demos = self.callPackage ./rtabmap-demos {};
+
+ rtabmap-examples = self.callPackage ./rtabmap-examples {};
+
+ rtabmap-launch = self.callPackage ./rtabmap-launch {};
+
+ rtabmap-msgs = self.callPackage ./rtabmap-msgs {};
+
+ rtabmap-odom = self.callPackage ./rtabmap-odom {};
+
+ rtabmap-python = self.callPackage ./rtabmap-python {};
+
+ rtabmap-ros = self.callPackage ./rtabmap-ros {};
+
+ rtabmap-rviz-plugins = self.callPackage ./rtabmap-rviz-plugins {};
+
+ rtabmap-slam = self.callPackage ./rtabmap-slam {};
+
+ rtabmap-sync = self.callPackage ./rtabmap-sync {};
+
+ rtabmap-util = self.callPackage ./rtabmap-util {};
+
+ rtabmap-viz = self.callPackage ./rtabmap-viz {};
 
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
 
@@ -2925,8 +2953,6 @@ self: super: {
  tlsf-cpp = self.callPackage ./tlsf-cpp {};
 
  topic-monitor = self.callPackage ./topic-monitor {};
-
- topic-statistics-demo = self.callPackage ./topic-statistics-demo {};
 
  topic-tools = self.callPackage ./topic-tools {};
 

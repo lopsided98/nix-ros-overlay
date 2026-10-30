@@ -242,6 +242,8 @@ self: super: {
 
  audio-play = self.callPackage ./audio-play {};
 
+ audio-video-recorder = self.callPackage ./audio-video-recorder {};
+
  auto-apms-behavior-tree = self.callPackage ./auto-apms-behavior-tree {};
 
  auto-apms-behavior-tree-core = self.callPackage ./auto-apms-behavior-tree-core {};
@@ -972,6 +974,8 @@ self: super: {
 
  dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
+ dynamic-tf-publisher = self.callPackage ./dynamic-tf-publisher {};
+
  dynamixel-hardware = self.callPackage ./dynamixel-hardware {};
 
  dynamixel-hardware-interface = self.callPackage ./dynamixel-hardware-interface {};
@@ -1171,6 +1175,8 @@ self: super: {
  eigenpy = self.callPackage ./eigenpy {};
 
  eiquadprog = self.callPackage ./eiquadprog {};
+
+ elite-cs-series-sdk = self.callPackage ./elite-cs-series-sdk {};
 
  ess-imu-driver2 = self.callPackage ./ess-imu-driver2 {};
 
@@ -1692,6 +1698,8 @@ self: super: {
 
  image-view = self.callPackage ./image-view {};
 
+ image-view2 = self.callPackage ./image-view2 {};
+
  imu-complementary-filter = self.callPackage ./imu-complementary-filter {};
 
  imu-filter-madgwick = self.callPackage ./imu-filter-madgwick {};
@@ -1772,13 +1780,27 @@ self: super: {
 
  jrl-cmakemodules = self.callPackage ./jrl-cmakemodules {};
 
+ jsk-common = self.callPackage ./jsk-common {};
+
  jsk-common-msgs = self.callPackage ./jsk-common-msgs {};
+
+ jsk-data = self.callPackage ./jsk-data {};
 
  jsk-footstep-msgs = self.callPackage ./jsk-footstep-msgs {};
 
  jsk-gui-msgs = self.callPackage ./jsk-gui-msgs {};
 
  jsk-hark-msgs = self.callPackage ./jsk-hark-msgs {};
+
+ jsk-ros1-ros2-compat = self.callPackage ./jsk-ros1-ros2-compat {};
+
+ jsk-rosbag-tools = self.callPackage ./jsk-rosbag-tools {};
+
+ jsk-tools = self.callPackage ./jsk-tools {};
+
+ jsk-topic-tools = self.callPackage ./jsk-topic-tools {};
+
+ kairos = self.callPackage ./kairos {};
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
@@ -2954,6 +2976,8 @@ self: super: {
 
  pinocchio = self.callPackage ./pinocchio {};
 
+ plansys2 = self.callPackage ./plansys2 {};
+
  plansys2-bringup = self.callPackage ./plansys2-bringup {};
 
  plansys2-bt-actions = self.callPackage ./plansys2-bt-actions {};
@@ -2963,6 +2987,8 @@ self: super: {
  plansys2-domain-expert = self.callPackage ./plansys2-domain-expert {};
 
  plansys2-executor = self.callPackage ./plansys2-executor {};
+
+ plansys2-kairos-plan-solver = self.callPackage ./plansys2-kairos-plan-solver {};
 
  plansys2-lifecycle-manager = self.callPackage ./plansys2-lifecycle-manager {};
 
@@ -2980,9 +3006,9 @@ self: super: {
 
  plansys2-terminal = self.callPackage ./plansys2-terminal {};
 
- plansys2-tests = self.callPackage ./plansys2-tests {};
-
  plansys2-tools = self.callPackage ./plansys2-tools {};
+
+ plansys2-tui-cli = self.callPackage ./plansys2-tui-cli {};
 
  play-motion2 = self.callPackage ./play-motion2 {};
 
@@ -3216,6 +3242,8 @@ self: super: {
 
  rclpy = self.callPackage ./rclpy {};
 
+ rclpy-cascade-lifecycle = self.callPackage ./rclpy-cascade-lifecycle {};
+
  rclpy-message-converter = self.callPackage ./rclpy-message-converter {};
 
  rclpy-message-converter-msgs = self.callPackage ./rclpy-message-converter-msgs {};
@@ -3250,6 +3278,8 @@ self: super: {
 
  realtime-tools = self.callPackage ./realtime-tools {};
 
+ reduct-bridge = self.callPackage ./reduct-bridge {};
+
  reductstore-agent = self.callPackage ./reductstore-agent {};
 
  replay-testing = self.callPackage ./replay-testing {};
@@ -3259,6 +3289,8 @@ self: super: {
  rig-reconfigure = self.callPackage ./rig-reconfigure {};
 
  rko-lio = self.callPackage ./rko-lio {};
+
+ rko-slam = self.callPackage ./rko-slam {};
 
  rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
 
@@ -3815,6 +3847,8 @@ self: super: {
  rqt-moveit = self.callPackage ./rqt-moveit {};
 
  rqt-msg = self.callPackage ./rqt-msg {};
+
+ rqt-multiplot = self.callPackage ./rqt-multiplot {};
 
  rqt-play-motion-builder = self.callPackage ./rqt-play-motion-builder {};
 
@@ -4439,8 +4473,6 @@ self: super: {
  tobas-node = self.callPackage ./tobas-node {};
 
  tobas-nonplanar-multi-controller = self.callPackage ./tobas-nonplanar-multi-controller {};
-
- tobas-object-avoidance = self.callPackage ./tobas-object-avoidance {};
 
  tobas-parameter-tuning = self.callPackage ./tobas-parameter-tuning {};
 

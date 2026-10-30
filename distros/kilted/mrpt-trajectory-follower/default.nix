@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, geometry-msgs, mrpt-containers, mrpt-libros-bridge, mrpt-maps, mrpt-math, mrpt-path-planning-core, mrpt-system, nav-msgs, rclcpp, sensor-msgs, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-pytest, ament-cmake-ros, ament-cmake-xmllint, ament-lint-auto, geometry-msgs, launch-testing, launch-testing-ros, mrpt-containers, mrpt-libros-bridge, mrpt-maps, mrpt-math, mrpt-nav-interfaces, mrpt-path-planning-core, mrpt-system, mvsim, nav-msgs, rclcpp, rclcpp-components, rclpy, sensor-msgs, sensor-msgs-py, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-trajectory-follower";
-  version = "2.6.0-r1";
+  version = "2.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/kilted/mrpt_trajectory_follower/2.6.0-1.tar.gz";
-    name = "2.6.0-1.tar.gz";
-    sha256 = "5d001cfca9741293a723cdd2ec5a5018d77a3a432a4239c045ae154c05115361";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/kilted/mrpt_trajectory_follower/2.7.0-1.tar.gz";
+    name = "2.7.0-1.tar.gz";
+    sha256 = "457c0629534acace98b81091bdb7441cd313d0ea5bf89867d4a533f4f2d73249";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-lint-cmake ament-cmake-xmllint ament-lint-auto ];
-  propagatedBuildInputs = [ geometry-msgs mrpt-containers mrpt-libros-bridge mrpt-maps mrpt-math mrpt-path-planning-core mrpt-system nav-msgs rclcpp sensor-msgs std-msgs tf2 tf2-geometry-msgs tf2-ros ];
+  checkInputs = [ ament-cmake-lint-cmake ament-cmake-pytest ament-cmake-ros ament-cmake-xmllint ament-lint-auto launch-testing launch-testing-ros mvsim rclpy sensor-msgs-py ];
+  propagatedBuildInputs = [ geometry-msgs mrpt-containers mrpt-libros-bridge mrpt-maps mrpt-math mrpt-nav-interfaces mrpt-path-planning-core mrpt-system nav-msgs rclcpp rclcpp-components sensor-msgs std-msgs tf2 tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

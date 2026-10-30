@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-copyright, ament-flake8, ament-index-python, ament-lint-auto, ament-lint-common, ament-pep257, ament-xmllint, nav-msgs, navmap-core, navmap-ros, navmap-ros-interfaces, pcl-conversions, python3Packages, rclcpp, rclpy, sensor-msgs, sensor-msgs-py, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-lyrical-navmap-tools";
-  version = "0.6.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/lyrical/navmap_tools/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "177f8f97c88af485dc1b9e72c51f0edd3094ebfa169f1d499283618e5fd56c2a";
+    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/lyrical/navmap_tools/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "6e1a1010ba4f44c71b1aea8cd55be04f10d525878b149b5e66d58cb4ed67f624";
   };
 
   buildType = "ament_cmake";

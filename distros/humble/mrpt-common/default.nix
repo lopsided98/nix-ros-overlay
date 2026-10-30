@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gtest }:
 buildRosPackage {
   pname = "ros-humble-mrpt-common";
-  version = "3.5.2-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_common/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "ae7b01f0ba285a2ab9dc339c10825a2b08892bac25c6fff2047b75b3144a6a15";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_common/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "87615c3a59f478e8f4ecf7992ac93785431c6596b898a479294281e11d53215a";
   };
 
   buildType = "cmake";

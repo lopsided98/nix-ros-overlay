@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-novatel-oem6-msgs";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/jazzy/novatel_oem6_msgs/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "56e075490f4dcc31e257561bf7051f2f227568c4d76b48c3ecb766a17ed97123";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/jazzy/novatel_oem6_msgs/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "dad9af8a0cf94458f248690ff1b7146adf51199ac1affda9f19a0cdcd0467000";
   };
 
   buildType = "ament_cmake";

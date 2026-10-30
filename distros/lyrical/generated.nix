@@ -210,6 +210,8 @@ self: super: {
 
  audio-play = self.callPackage ./audio-play {};
 
+ audio-video-recorder = self.callPackage ./audio-video-recorder {};
+
  auto-apms-behavior-tree = self.callPackage ./auto-apms-behavior-tree {};
 
  auto-apms-behavior-tree-core = self.callPackage ./auto-apms-behavior-tree-core {};
@@ -618,7 +620,7 @@ self: super: {
 
  dwb-plugins = self.callPackage ./dwb-plugins {};
 
- dynamixel-hardware = self.callPackage ./dynamixel-hardware {};
+ dynamic-tf-publisher = self.callPackage ./dynamic-tf-publisher {};
 
  dynamixel-hardware-interface = self.callPackage ./dynamixel-hardware-interface {};
 
@@ -1158,6 +1160,8 @@ self: super: {
 
  image-view = self.callPackage ./image-view {};
 
+ image-view2 = self.callPackage ./image-view2 {};
+
  imu-complementary-filter = self.callPackage ./imu-complementary-filter {};
 
  imu-filter-madgwick = self.callPackage ./imu-filter-madgwick {};
@@ -1210,13 +1214,27 @@ self: super: {
 
  jrl-cmakemodules = self.callPackage ./jrl-cmakemodules {};
 
+ jsk-common = self.callPackage ./jsk-common {};
+
  jsk-common-msgs = self.callPackage ./jsk-common-msgs {};
+
+ jsk-data = self.callPackage ./jsk-data {};
 
  jsk-footstep-msgs = self.callPackage ./jsk-footstep-msgs {};
 
  jsk-gui-msgs = self.callPackage ./jsk-gui-msgs {};
 
  jsk-hark-msgs = self.callPackage ./jsk-hark-msgs {};
+
+ jsk-ros1-ros2-compat = self.callPackage ./jsk-ros1-ros2-compat {};
+
+ jsk-rosbag-tools = self.callPackage ./jsk-rosbag-tools {};
+
+ jsk-tools = self.callPackage ./jsk-tools {};
+
+ jsk-topic-tools = self.callPackage ./jsk-topic-tools {};
+
+ kairos = self.callPackage ./kairos {};
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
@@ -2224,6 +2242,8 @@ self: super: {
 
  plansys2-executor = self.callPackage ./plansys2-executor {};
 
+ plansys2-kairos-plan-solver = self.callPackage ./plansys2-kairos-plan-solver {};
+
  plansys2-lifecycle-manager = self.callPackage ./plansys2-lifecycle-manager {};
 
  plansys2-msgs = self.callPackage ./plansys2-msgs {};
@@ -2239,8 +2259,6 @@ self: super: {
  plansys2-support-py = self.callPackage ./plansys2-support-py {};
 
  plansys2-terminal = self.callPackage ./plansys2-terminal {};
-
- plansys2-tests = self.callPackage ./plansys2-tests {};
 
  plansys2-tools = self.callPackage ./plansys2-tools {};
 
@@ -2446,6 +2464,8 @@ self: super: {
 
  realtime-tools = self.callPackage ./realtime-tools {};
 
+ reduct-bridge = self.callPackage ./reduct-bridge {};
+
  reductstore-agent = self.callPackage ./reductstore-agent {};
 
  replay-testing = self.callPackage ./replay-testing {};
@@ -2461,6 +2481,8 @@ self: super: {
  rig-reconfigure = self.callPackage ./rig-reconfigure {};
 
  rko-lio = self.callPackage ./rko-lio {};
+
+ rko-slam = self.callPackage ./rko-slam {};
 
  rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
 
@@ -2697,6 +2719,8 @@ self: super: {
  ros2-medkit-sovd-service-interface = self.callPackage ./ros2-medkit-sovd-service-interface {};
 
  ros2-medkit-topic-beacon = self.callPackage ./ros2-medkit-topic-beacon {};
+
+ ros2-pulse = self.callPackage ./ros2-pulse {};
 
  ros2-snapshot = self.callPackage ./ros2-snapshot {};
 
@@ -3000,6 +3024,8 @@ self: super: {
 
  rqt-msg = self.callPackage ./rqt-msg {};
 
+ rqt-multiplot = self.callPackage ./rqt-multiplot {};
+
  rqt-play-motion-builder = self.callPackage ./rqt-play-motion-builder {};
 
  rqt-plot = self.callPackage ./rqt-plot {};
@@ -3175,6 +3201,8 @@ self: super: {
  sick-safevisionary-interfaces = self.callPackage ./sick-safevisionary-interfaces {};
 
  sick-safevisionary-tests = self.callPackage ./sick-safevisionary-tests {};
+
+ sick-scan-xd = self.callPackage ./sick-scan-xd {};
 
  simple-actions = self.callPackage ./simple-actions {};
 
@@ -3630,9 +3658,21 @@ self: super: {
 
  wireless-watcher = self.callPackage ./wireless-watcher {};
 
- wuji-hand2-beta1-description = self.callPackage ./wuji-hand2-beta1-description {};
+ wuji-bringup = self.callPackage ./wuji-bringup {};
 
- wuji-hand2-beta2-description = self.callPackage ./wuji-hand2-beta2-description {};
+ wuji-glove-driver = self.callPackage ./wuji-glove-driver {};
+
+ wuji-hand2-1-description = self.callPackage ./wuji-hand2-1-description {};
+
+ wuji-hand2-2-description = self.callPackage ./wuji-hand2-2-description {};
+
+ wuji-hand2-driver = self.callPackage ./wuji-hand2-driver {};
+
+ wuji-msgs = self.callPackage ./wuji-msgs {};
+
+ wuji-sdk-vendor = self.callPackage ./wuji-sdk-vendor {};
+
+ wuji-tools = self.callPackage ./wuji-tools {};
 
  xacro = self.callPackage ./xacro {};
 

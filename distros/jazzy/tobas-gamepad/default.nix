@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-gamepad-core, tobas-gamepad-ros }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-gamepad";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_gamepad/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "231466c3ed5fde8d8574bff2a0f5e5cb28bcd664b70c1782d46d2402f96caee7";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_gamepad/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "c3852389fe168aa3deccdc6b47aeeb209fde6b8abe8e203f50f5a2253a5583a4";
   };
 
   buildType = "ament_cmake";

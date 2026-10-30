@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-libapps-cli }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-apps-cli";
-  version = "3.5.2-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_apps_cli/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "73c085abd866845450fda034cf10971098e9cdfc6e78380111332c56492ee80d";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_apps_cli/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "5ba1764efe79832b255919c86db13a6f585085b650426c1c60a1426918d500b6";
   };
 
   buildType = "cmake";

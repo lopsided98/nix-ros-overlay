@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, glfw3, libGL, libGLU, libxrandr, libxxf86vm, mrpt-opengl, python3, python3Packages, qt5, wxwidgets_3_2, xorg }:
 buildRosPackage {
   pname = "ros-humble-mrpt-gui";
-  version = "3.5.2-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_gui/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "30ddde288c6887d6e378c2549f9772b8b65c86533739aa8ccd1501c317c5ec13";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_gui/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "563bc59200b271531042230bc9c1888f6522e8cc68f718b8a580b77f0344cacc";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake libGL libGLU libxrandr libxxf86vm python3 python3Packages.pybind11 qt5.qtbase wxwidgets_3_2 ];
+  buildInputs = [ cmake python3 python3Packages.pybind11 ];
   checkInputs = [ xorg.xorgserver ];
-  propagatedBuildInputs = [ eigen glfw3 mrpt-opengl ];
+  propagatedBuildInputs = [ eigen glfw3 libGL libGLU libxrandr libxxf86vm mrpt-opengl qt5.qtbase wxwidgets_3_2 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

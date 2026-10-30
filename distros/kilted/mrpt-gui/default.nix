@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, glfw3, libGL, libGLU, libxrandr, libxxf86vm, mrpt-opengl, python3, python3Packages, qt5, wxwidgets_3_2, xorg }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-gui";
-  version = "3.5.2-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_gui/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "e8da7a13bed56fe8deda2b96455c371878bffbf61425206b11f55e35a00d9273";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_gui/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "cda827e5c9d5fc23932d895897e3d702b3e614eb88fcbdd786b87d2e19dbc780";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake libGL libGLU libxrandr libxxf86vm python3 python3Packages.pybind11 qt5.qtbase wxwidgets_3_2 ];
+  buildInputs = [ cmake python3 python3Packages.pybind11 ];
   checkInputs = [ xorg.xorgserver ];
-  propagatedBuildInputs = [ eigen glfw3 mrpt-opengl ];
+  propagatedBuildInputs = [ eigen glfw3 libGL libGLU libxrandr libxxf86vm mrpt-opengl qt5.qtbase wxwidgets_3_2 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

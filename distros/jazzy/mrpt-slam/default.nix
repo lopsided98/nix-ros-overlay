@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-maps, mrpt-topography, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-slam";
-  version = "3.5.2-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_slam/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "6475c7106ac2313c09a3283bdc7cf187686b2ad9649ce1b837a5c91c690962e3";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_slam/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "48917ef0daa8aea300537de7e765f23d2892b0843b19570d7d0da872e14b88a5";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-common, mrpt-graphslam, mrpt-kinematics, mrpt-libapps-gui, mrpt-nav }:
 buildRosPackage {
   pname = "ros-humble-mrpt-apps-gui";
-  version = "3.5.2-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_apps_gui/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "96b58f1deb1f305e5672b4087634481842e28db99d53b837221b4153aeaed4eb";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_apps_gui/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "ad13b3f30d2eae0ddffe4385040b398aa819aa0737179a5872cf27fb7421edca";
   };
 
   buildType = "cmake";

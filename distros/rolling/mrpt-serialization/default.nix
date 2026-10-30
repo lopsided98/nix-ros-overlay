@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-rtti, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-serialization";
-  version = "3.5.2-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_serialization/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "c3483713f28b083966b977b8ba365133cf8fd07ea1aeea863e8336820323925b";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_serialization/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "bba4bc5951878725aef654aafc1044f15c5de0fa12245ac82f487b9a8b00c106";
   };
 
   buildType = "cmake";

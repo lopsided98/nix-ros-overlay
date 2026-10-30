@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, eigen, geometry-msgs, nav-msgs, navmap-core, navmap-ros, navmap-ros-interfaces, pluginlib, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-lyrical-easynav-navmap-planner";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/lyrical/easynav_navmap_planner/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "7ae397aa16ffab7ef722972d425ef8bfc6e446d3569488910da62fa0d70b8db0";
+    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/lyrical/easynav_navmap_planner/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "3b8401ca94ee3c59713c4a9bc14a0117ffcf7bf67ec543d65fba7cd179b46354";
   };
 
   buildType = "ament_cmake";

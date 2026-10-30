@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-fixed-wing-controller, tobas-nonplanar-multi-controller, tobas-planar-multi-controller, tobas-random-axis-tilt-multi-controller, tobas-y-axis-tilt-multi-controller }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-controllers";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_controllers/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "27572495ad239b3e18b7b84eca6bbf0196bc1964c76842e893ccd4337975ae73";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_controllers/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "95bb66e1873954334764e5e309c08d5b9e2a8aa1420fc596f74361a055fa2501";
   };
 
   buildType = "ament_cmake";

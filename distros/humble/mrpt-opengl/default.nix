@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, libGL, libGLU, libglvnd, mrpt-img, mrpt-poses, mrpt-viz, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-mrpt-opengl";
-  version = "3.5.2-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_opengl/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "8911774dbfde82c09d791bbfa63711ad7da3afca9292973e7aa1bf826d2a217e";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_opengl/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "061a309286451ea1f747fa1a22610c83b2e57a0da143d24a12baac3840653c9f";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-math, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-topography";
-  version = "3.5.2-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_topography/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "f3ee72d18391a5d4154b63bdde07eb2eb5db664cd9e650cf9c2022122d015669";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_topography/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "ee4ad8d15c411faef8a209c056c7376b08bd0533790f2b52981f7003670794db";
   };
 
   buildType = "cmake";

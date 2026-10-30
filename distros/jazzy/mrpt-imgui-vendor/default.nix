@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, glfw3, libGL, libGLU, mrpt-common }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-imgui-vendor";
-  version = "3.5.2-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_imgui_vendor/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "f698f73b585fa4d4781ccac62f032568fb7447b61328c7da2fe72d7cf5e94d2f";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_imgui_vendor/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "7df048de83d8adcadeed06c99cd30bb13a7160f4f431cf3b25ee4ad184cbe989";
   };
 
   buildType = "cmake";

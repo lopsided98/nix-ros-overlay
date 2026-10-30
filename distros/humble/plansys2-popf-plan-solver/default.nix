@@ -2,25 +2,25 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, plansys2-core, pluginlib, popf, rclcpp, ros2run }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, kairos, plansys2-core, pluginlib, popf, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-plansys2-popf-plan-solver";
-  version = "2.0.9-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/humble/plansys2_popf_plan_solver/2.0.9-1.tar.gz";
-    name = "2.0.9-1.tar.gz";
-    sha256 = "f78c8cf57f4f6b58bba9fe65189ec71c484a368d0740c163750501f480999fc0";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/humble/plansys2_popf_plan_solver/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "13514b3d17344a1187d712b50e1b9430f053777ebdb2119b2fae8da527a0f340";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ros2run ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-ros ament-lint-auto ament-lint-common kairos ];
   propagatedBuildInputs = [ ament-index-cpp plansys2-core pluginlib popf rclcpp ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "This package contains the PDDL-based Planner module for the ROS2 Planning System";
+    description = "PlanSys2 plan solver plugin that runs the POPF temporal planner";
     license = with lib.licenses; [ asl20 ];
   };
 }

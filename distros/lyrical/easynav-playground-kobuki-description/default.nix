@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, xacro }:
 buildRosPackage {
   pname = "ros-lyrical-easynav-playground-kobuki-description";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/lyrical/easynav_playground_kobuki_description/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "5fb5f660f1e3e2f193a7d72c528aadcdb3ed08a37b5d443d4722eae96d2169be";
+    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/lyrical/easynav_playground_kobuki_description/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "1611f39356534f8f0e5a06a65963c9a5e1b1e1deb37a34c27f995fb255dc0fc4";
   };
 
   buildType = "ament_cmake";

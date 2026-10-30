@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, mola-state-estimation-simple, mola-state-estimation-smoother }:
 buildRosPackage {
   pname = "ros-rolling-mola-state-estimation";
-  version = "3.0.4-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/rolling/mola_state_estimation/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "0bc4422c2d23bc77e56f401f06ff8723e0ec221b3b19b63c010b2a748654d018";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/rolling/mola_state_estimation/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "65ffd918e6cb18e5e2054a20a2976747c004722ef660911c27e75794e849cdae";
   };
 
   buildType = "ament_cmake";

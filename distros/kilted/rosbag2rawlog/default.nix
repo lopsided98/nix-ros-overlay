@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, cli11, cmake, cv-bridge, mrpt-containers, mrpt-libros-bridge, mrpt-maps, mrpt-msgs, nav-msgs, rosbag2-cpp, sensor-msgs, tf2-geometry-msgs, tf2-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-rosbag2rawlog";
-  version = "4.0.0-r1";
+  version = "4.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_ros_bridge-release/archive/release/kilted/rosbag2rawlog/4.0.0-1.tar.gz";
-    name = "4.0.0-1.tar.gz";
-    sha256 = "e4fbbf7a29f9ad9a96188a3265667e6a359651a3847b2c7d56f1aa69a996293c";
+    url = "https://github.com/ros2-gbp/mrpt_ros_bridge-release/archive/release/kilted/rosbag2rawlog/4.0.1-1.tar.gz";
+    name = "4.0.1-1.tar.gz";
+    sha256 = "e04661298112ff0890145535a0f6162eec5f96137edc5349acd50b62b287dcfa";
   };
 
   buildType = "ament_cmake";

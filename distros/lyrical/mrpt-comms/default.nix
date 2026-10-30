@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, cmake, libftdi1, mrpt-common, mrpt-io, mrpt-poses, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-comms";
-  version = "3.5.2-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_comms/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "e25b2db8799291d745457c6c595374d30e6768216103a28b59f14c1ed4b75e9e";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_comms/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "c666cfede143c819c866472f2b8e8addc16c5c56f61398085a48996b1cde3880";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake libftdi1 python3 python3Packages.pybind11 ];
+  buildInputs = [ cmake python3 python3Packages.pybind11 ];
   checkInputs = [ mrpt-poses ];
-  propagatedBuildInputs = [ mrpt-common mrpt-io ];
+  propagatedBuildInputs = [ libftdi1 mrpt-common mrpt-io ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

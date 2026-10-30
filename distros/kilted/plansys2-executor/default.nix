@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, behaviortree-cpp, eigen, eigen3-cmake-module, lifecycle-msgs, plansys2-core, plansys2-domain-expert, plansys2-msgs, plansys2-pddl-parser, plansys2-planner, plansys2-problem-expert, pluginlib, popf, rclcpp, rclcpp-action, rclcpp-cascade-lifecycle, rclcpp-lifecycle, std-msgs, std-srvs }:
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, behaviortree-cpp, eigen, eigen3-cmake-module, kairos, lifecycle-msgs, plansys2-core, plansys2-domain-expert, plansys2-msgs, plansys2-pddl-parser, plansys2-planner, plansys2-popf-plan-solver, plansys2-problem-expert, pluginlib, rclcpp, rclcpp-action, rclcpp-cascade-lifecycle, rclcpp-lifecycle, rosgraph-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-kilted-plansys2-executor";
-  version = "3.0.2-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/kilted/plansys2_executor/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "9451a3be326e4079fe1cbbe0aa04514a4a980f7afcb2c4436c3c43889ff1e44a";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/kilted/plansys2_executor/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "2c9cc220bf610de705058197321df3c7d6ebd1838d5413c4b8d098cfd2bc1d31";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake eigen eigen3-cmake-module ];
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ament-index-cpp behaviortree-cpp lifecycle-msgs plansys2-core plansys2-domain-expert plansys2-msgs plansys2-pddl-parser plansys2-planner plansys2-problem-expert pluginlib popf rclcpp rclcpp-action rclcpp-cascade-lifecycle rclcpp-lifecycle std-msgs std-srvs ];
+  buildInputs = [ ament-cmake ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-ros ament-lint-auto ament-lint-common kairos plansys2-popf-plan-solver rosgraph-msgs ];
+  propagatedBuildInputs = [ action-msgs ament-index-cpp behaviortree-cpp eigen eigen3-cmake-module lifecycle-msgs plansys2-core plansys2-domain-expert plansys2-msgs plansys2-pddl-parser plansys2-planner plansys2-problem-expert pluginlib rclcpp rclcpp-action rclcpp-cascade-lifecycle rclcpp-lifecycle std-msgs std-srvs ];
   nativeBuildInputs = [ ament-cmake eigen3-cmake-module ];
 
   meta = {

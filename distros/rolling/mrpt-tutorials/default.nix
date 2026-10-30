@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, cmake, mvsim, teleop-twist-keyboard }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-tutorials";
-  version = "2.6.1-r1";
+  version = "2.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/rolling/mrpt_tutorials/2.6.1-1.tar.gz";
-    name = "2.6.1-1.tar.gz";
-    sha256 = "e1c5b89e3391f3ae5f861d1af14aac2ed4d649e85e06bef1c7d46c076e4ab964";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/rolling/mrpt_tutorials/2.7.0-1.tar.gz";
+    name = "2.7.0-1.tar.gz";
+    sha256 = "f370e0fc59a69c664aff33268901d411efe244280274614430a31b93f2af3ece";
   };
 
   buildType = "ament_cmake";

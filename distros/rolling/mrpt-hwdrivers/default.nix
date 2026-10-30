@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, cmake, ffmpeg, libdc1394, libpcap, libusb1, mrpt-comms, mrpt-maps, mrpt-viz, openni2, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-hwdrivers";
-  version = "3.5.2-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_hwdrivers/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "08ef4dd12b87cea25351f74ae1e31e2cea6f3da9827099c41c4cb639ca751f6f";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_hwdrivers/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "06aa109efa1bd4593d9afc143bc8c7b1b57e82d9c52c1594fe75d6e1f2e5d4a6";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ffmpeg libdc1394 libpcap libusb1 openni2 python3 python3Packages.pybind11 ];
-  propagatedBuildInputs = [ mrpt-comms mrpt-maps mrpt-viz ];
+  buildInputs = [ cmake python3 python3Packages.pybind11 ];
+  propagatedBuildInputs = [ ffmpeg libdc1394 libpcap libusb1 mrpt-comms mrpt-maps mrpt-viz openni2 ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

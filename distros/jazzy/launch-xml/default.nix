@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, launch, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-launch-xml";
-  version = "3.4.12-r1";
+  version = "3.4.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch-release/archive/release/jazzy/launch_xml/3.4.12-1.tar.gz";
-    name = "3.4.12-1.tar.gz";
-    sha256 = "08600d5fd4edb4417c273885a5738e3156d35145d067401058c9d661ba86adf4";
+    url = "https://github.com/ros2-gbp/launch-release/archive/release/jazzy/launch_xml/3.4.13-1.tar.gz";
+    name = "3.4.13-1.tar.gz";
+    sha256 = "d30c5de67685dc30fa7c9e021169b9cef30d2c362e266615493892ecd3086309";
   };
 
   buildType = "ament_python";

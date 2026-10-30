@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, gz-sim-vendor, image-transport-plugins, marine-acoustic-msgs, robot-state-publisher, ros-gz-bridge, ros-gz-image, ros-gz-sim, rqt-image-view, rqt-plot, rqt-topic, rviz-imu-plugin, rviz2, sdformat-urdf, tf2-ros, xacro }:
 buildRosPackage {
   pname = "ros-kilted-ros-gz-sim-demos";
-  version = "2.1.18-r1";
+  version = "2.1.19-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/kilted/ros_gz_sim_demos/2.1.18-1.tar.gz";
-    name = "2.1.18-1.tar.gz";
-    sha256 = "f03df0230bde199fa621ae514e093220567bf10db47820e413e2b5446b077b0f";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/kilted/ros_gz_sim_demos/2.1.19-1.tar.gz";
+    name = "2.1.19-1.tar.gz";
+    sha256 = "be4ddd07cb047d98b614b867669595e60a2f7e4898ce7ed261dfdf6f901296b5";
   };
 
   buildType = "ament_cmake";

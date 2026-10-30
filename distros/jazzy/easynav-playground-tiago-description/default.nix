@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-easynav-playground-tiago-description";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/jazzy/easynav_playground_tiago_description/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "cf773d8703ae1e6aaee7630dfaa610c93c85474abb3e7992de468e96069571ba";
+    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/jazzy/easynav_playground_tiago_description/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "7dfed5d79b15d5273412c6bb166d15901af9efd8e45bfacd12f206e5f2fbf613";
   };
 
   buildType = "ament_cmake";
