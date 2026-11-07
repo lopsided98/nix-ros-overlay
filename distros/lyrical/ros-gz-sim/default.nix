@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-index-python, ament-lint-auto, ament-lint-common, builtin-interfaces, cli11, geometry-msgs, gflags, gz-math-vendor, gz-msgs-vendor, gz-sim-vendor, gz-transport-vendor, launch, launch-ros, launch-testing, launch-testing-ament-cmake, pkg-config, rclcpp, rclcpp-action, rclcpp-components, rcpputils, ros-gz-bridge, ros-gz-interfaces, ros2pkg, simulation-interfaces, std-msgs, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-ros-gz-sim";
-  version = "3.0.10-r1";
+  version = "3.0.12-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/lyrical/ros_gz_sim/3.0.10-1.tar.gz";
-    name = "3.0.10-1.tar.gz";
-    sha256 = "761d06a103d0819718c3d6df1ca4e5fe04750eb214a91f2d9fc0a553e7ccef0c";
+    url = "https://github.com/ros2-gbp/ros_ign-release/archive/release/lyrical/ros_gz_sim/3.0.12-1.tar.gz";
+    name = "3.0.12-1.tar.gz";
+    sha256 = "284e256a8b24a5a1b57606e74b8b0d1ba6b7763e102c20ce537e9c16ecd36cbc";
   };
 
   buildType = "ament_cmake";

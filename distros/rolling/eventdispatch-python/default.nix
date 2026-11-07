@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-eventdispatch-python";
-  version = "0.2.29-r1";
+  version = "0.2.31-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_eventdispatch-release/archive/release/rolling/eventdispatch_python/0.2.29-1.tar.gz";
-    name = "0.2.29-1.tar.gz";
-    sha256 = "ff08f2626590ce7b02d45fbd220fa2991e9b0c1ffb91012d9f97c3b3e227051a";
+    url = "https://github.com/ros2-gbp/ros2_eventdispatch-release/archive/release/rolling/eventdispatch_python/0.2.31-1.tar.gz";
+    name = "0.2.31-1.tar.gz";
+    sha256 = "002cb934fe5663a35e877f0dcbbc86d42f4e06b71979d3530356fe8640800eb0";
   };
 
   buildType = "ament_python";

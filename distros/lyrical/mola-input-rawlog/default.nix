@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-kernel, mrpt-obs }:
 buildRosPackage {
   pname = "ros-lyrical-mola-input-rawlog";
-  version = "3.3.2-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_input_rawlog/3.3.2-1.tar.gz";
-    name = "3.3.2-1.tar.gz";
-    sha256 = "b13fad0d7eccb49c52a17d0cd9ca8fc3532071be39f0a5f74c1724137e50cb8c";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_input_rawlog/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "eb521051062d5fc061b6f10b572782290595ae21d6c6f090cc518db86d44e14b";
   };
 
   buildType = "cmake";

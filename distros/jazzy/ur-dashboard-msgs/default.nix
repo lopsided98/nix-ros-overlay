@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-ur-dashboard-msgs";
-  version = "3.9.0-r1";
+  version = "3.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/jazzy/ur_dashboard_msgs/3.9.0-1.tar.gz";
-    name = "3.9.0-1.tar.gz";
-    sha256 = "b944eea46e98c3fc0c906e9f76071686af0c90373a2d4142dc5715d23ddb3f0f";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/jazzy/ur_dashboard_msgs/3.10.0-1.tar.gz";
+    name = "3.10.0-1.tar.gz";
+    sha256 = "3badb6bae49868d472e2f78a456c400b093a035cd248af6dd715ce5a3e34db9f";
   };
 
   buildType = "ament_cmake";

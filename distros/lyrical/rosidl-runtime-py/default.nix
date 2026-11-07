@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, python3Packages, rosidl-buffer-py, rosidl-parser, std-msgs, std-srvs, test-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-rosidl-runtime-py";
-  version = "0.15.2-r3";
+  version = "0.15.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl_runtime_py-release/archive/release/lyrical/rosidl_runtime_py/0.15.2-3.tar.gz";
-    name = "0.15.2-3.tar.gz";
-    sha256 = "a03a2a5447617ae0c491abc82067555b7119ae748a7b4f5298ff4fc91e1dad69";
+    url = "https://github.com/ros2-gbp/rosidl_runtime_py-release/archive/release/lyrical/rosidl_runtime_py/0.15.3-1.tar.gz";
+    name = "0.15.3-1.tar.gz";
+    sha256 = "033647046d975002a09c2a57450f690cdccd3c612c63c9dbd410e82ee0a7e3e1";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-lint-auto, ament-lint-common, nlohmann_json, rcpputils, rcutils, rmw-security-common, tinyxml2-vendor, zenoh-cpp-vendor }:
 buildRosPackage {
   pname = "ros-kilted-zenoh-security-tools";
-  version = "0.6.9-r1";
+  version = "0.6.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_zenoh-release/archive/release/kilted/zenoh_security_tools/0.6.9-1.tar.gz";
-    name = "0.6.9-1.tar.gz";
-    sha256 = "48d9d0a546ddcf9f9f0264b2954e1b6dfda3eaae3d1d91198e2938b409fb4cf5";
+    url = "https://github.com/ros2-gbp/rmw_zenoh-release/archive/release/kilted/zenoh_security_tools/0.6.10-1.tar.gz";
+    name = "0.6.10-1.tar.gz";
+    sha256 = "fbf7bb3e51209edc3d26d3683d48661f0ee92e2037dcc3fca2dca131db7ea5f5";
   };
 
   buildType = "ament_cmake";

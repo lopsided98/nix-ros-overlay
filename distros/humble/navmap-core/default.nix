@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, eigen, eigen3-cmake-module, gtest }:
 buildRosPackage {
   pname = "ros-humble-navmap-core";
-  version = "0.6.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/humble/navmap_core/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "cec10318eb6f529d9159d64d5fc2fd38055cdbd6f4fc39d29b1c831d3dd4ec21";
+    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/humble/navmap_core/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "af2948367f615537d3e646b9ddb9d21f75da36eeb9fcfbce6777610b5ea9c59b";
   };
 
   buildType = "ament_cmake";

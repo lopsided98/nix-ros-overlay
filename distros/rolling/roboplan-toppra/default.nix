@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-python, python3, python3Packages, roboplan-common, roboplan-core, roboplan-example-models, toppra }:
 buildRosPackage {
   pname = "ros-rolling-roboplan-toppra";
-  version = "0.7.0-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/rolling/roboplan_toppra/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "5a3c2053efc00bf2eb31e8692fee7499e101a5b9e75bc1671fab5736d4786462";
+    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/rolling/roboplan_toppra/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "d66fe8609a9d6dd13c8090e8becdc367bf94086fe1d4cd1581563211b9ce98d4";
   };
 
   buildType = "ament_cmake";

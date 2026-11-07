@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, easynav-controller, easynav-core, easynav-planner, easynav-sensors, easynav-system, geometry-msgs, lifecycle-msgs, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-easynav-regulated-pp-controller";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/humble/easynav_regulated_pp_controller/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "42c3adb3f80cc925aefe4ab5961edd2b8db9755b4cf67f9b4fd97e3233876667";
+    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/humble/easynav_regulated_pp_controller/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "19708e84a27eed3a1b2bf257018dd463e0c9c57231f667f46a231f1998edadbc";
   };
 
   buildType = "ament_cmake";

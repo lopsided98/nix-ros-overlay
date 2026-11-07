@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-test, launch-testing, python-cmake-module }:
 buildRosPackage {
   pname = "ros-jazzy-launch-testing-ament-cmake";
-  version = "3.4.12-r1";
+  version = "3.4.13-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch-release/archive/release/jazzy/launch_testing_ament_cmake/3.4.12-1.tar.gz";
-    name = "3.4.12-1.tar.gz";
-    sha256 = "0b74478432b8279193053ecdd0f61dc6ad80df518e5e952fa9fab6a4889cdbd8";
+    url = "https://github.com/ros2-gbp/launch-release/archive/release/jazzy/launch_testing_ament_cmake/3.4.13-1.tar.gz";
+    name = "3.4.13-1.tar.gz";
+    sha256 = "76c06b1932cdd966419bacf03e64235d366cd07392c98d73ea1faaa81d965f71";
   };
 
   buildType = "ament_cmake";

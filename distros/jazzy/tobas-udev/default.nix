@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, pkg-config, udev }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-udev";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_udev/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "391a4ca90ce3b7b7dd53e2823ead538d2a4c503ebbfd1c9ca22c6de66a9e7bac";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_udev/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "f061d0584a4f158d26f026943e68f5f3c77741af340bac1944fdf761d917abe8";
   };
 
   buildType = "ament_cmake";

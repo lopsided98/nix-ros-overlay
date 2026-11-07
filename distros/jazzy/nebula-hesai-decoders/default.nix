@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, boost, nebula-core-common, nebula-core-decoders, nebula-hesai-common, rclcpp, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-nebula-hesai-decoders";
-  version = "1.2.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_hesai_decoders/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "8196a18d3c9de24fdf44cfb0a20ef175ea74d3d0fad396976ef7cf5644152e1b";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_hesai_decoders/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "2ed97c0993e8926c1e4410f75941faf368b66fca69692ddda8a67108ef37f758";
   };
 
   buildType = "ament_cmake";

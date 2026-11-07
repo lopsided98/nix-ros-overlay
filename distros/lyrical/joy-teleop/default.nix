@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, control-msgs, example-interfaces, geometry-msgs, launch-ros, launch-testing, rclpy, rosidl-runtime-py, sensor-msgs, std-msgs, std-srvs, teleop-tools-msgs, test-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-joy-teleop";
-  version = "2.0.0-r3";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/lyrical/joy_teleop/2.0.0-3.tar.gz";
-    name = "2.0.0-3.tar.gz";
-    sha256 = "f0499127d61d4773b6d9759300d8309cee3e27663bb8022e6d1772485f300f9b";
+    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/lyrical/joy_teleop/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "27be9fbdfdc47dff09dc0bcf4e0aacb8830f71d9a788937d6efd8d4b8f06db57";
   };
 
   buildType = "ament_python";

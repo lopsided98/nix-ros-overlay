@@ -242,6 +242,8 @@ self: super: {
 
  audio-play = self.callPackage ./audio-play {};
 
+ audio-video-recorder = self.callPackage ./audio-video-recorder {};
+
  auto-apms-behavior-tree = self.callPackage ./auto-apms-behavior-tree {};
 
  auto-apms-behavior-tree-core = self.callPackage ./auto-apms-behavior-tree-core {};
@@ -547,6 +549,8 @@ self: super: {
  boost-sml-vendor = self.callPackage ./boost-sml-vendor {};
 
  broll = self.callPackage ./broll {};
+
+ btick = self.callPackage ./btick {};
 
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
 
@@ -972,6 +976,8 @@ self: super: {
 
  dynamic-edt-3d = self.callPackage ./dynamic-edt-3d {};
 
+ dynamic-tf-publisher = self.callPackage ./dynamic-tf-publisher {};
+
  dynamixel-hardware = self.callPackage ./dynamixel-hardware {};
 
  dynamixel-hardware-interface = self.callPackage ./dynamixel-hardware-interface {};
@@ -1106,12 +1112,6 @@ self: super: {
 
  ecl-converters-lite = self.callPackage ./ecl-converters-lite {};
 
- ecl-core = self.callPackage ./ecl-core {};
-
- ecl-core-apps = self.callPackage ./ecl-core-apps {};
-
- ecl-devices = self.callPackage ./ecl-devices {};
-
  ecl-eigen = self.callPackage ./ecl-eigen {};
 
  ecl-errors = self.callPackage ./ecl-errors {};
@@ -1124,15 +1124,9 @@ self: super: {
 
  ecl-geometry = self.callPackage ./ecl-geometry {};
 
- ecl-io = self.callPackage ./ecl-io {};
-
- ecl-ipc = self.callPackage ./ecl-ipc {};
-
  ecl-license = self.callPackage ./ecl-license {};
 
  ecl-linear-algebra = self.callPackage ./ecl-linear-algebra {};
-
- ecl-lite = self.callPackage ./ecl-lite {};
 
  ecl-manipulators = self.callPackage ./ecl-manipulators {};
 
@@ -1142,19 +1136,9 @@ self: super: {
 
  ecl-mpl = self.callPackage ./ecl-mpl {};
 
- ecl-sigslots = self.callPackage ./ecl-sigslots {};
-
  ecl-sigslots-lite = self.callPackage ./ecl-sigslots-lite {};
 
  ecl-statistics = self.callPackage ./ecl-statistics {};
-
- ecl-streams = self.callPackage ./ecl-streams {};
-
- ecl-threads = self.callPackage ./ecl-threads {};
-
- ecl-time = self.callPackage ./ecl-time {};
-
- ecl-time-lite = self.callPackage ./ecl-time-lite {};
 
  ecl-tools = self.callPackage ./ecl-tools {};
 
@@ -1171,6 +1155,10 @@ self: super: {
  eigenpy = self.callPackage ./eigenpy {};
 
  eiquadprog = self.callPackage ./eiquadprog {};
+
+ elite-cs-series-sdk = self.callPackage ./elite-cs-series-sdk {};
+
+ elite-robots-description = self.callPackage ./elite-robots-description {};
 
  ess-imu-driver2 = self.callPackage ./ess-imu-driver2 {};
 
@@ -1692,6 +1680,8 @@ self: super: {
 
  image-view = self.callPackage ./image-view {};
 
+ image-view2 = self.callPackage ./image-view2 {};
+
  imu-complementary-filter = self.callPackage ./imu-complementary-filter {};
 
  imu-filter-madgwick = self.callPackage ./imu-filter-madgwick {};
@@ -1748,6 +1738,8 @@ self: super: {
 
  jig-example = self.callPackage ./jig-example {};
 
+ joint-command-topic-hardware-interface = self.callPackage ./joint-command-topic-hardware-interface {};
+
  joint-group-impedance-controller = self.callPackage ./joint-group-impedance-controller {};
 
  joint-limits = self.callPackage ./joint-limits {};
@@ -1772,13 +1764,27 @@ self: super: {
 
  jrl-cmakemodules = self.callPackage ./jrl-cmakemodules {};
 
+ jsk-common = self.callPackage ./jsk-common {};
+
  jsk-common-msgs = self.callPackage ./jsk-common-msgs {};
+
+ jsk-data = self.callPackage ./jsk-data {};
 
  jsk-footstep-msgs = self.callPackage ./jsk-footstep-msgs {};
 
  jsk-gui-msgs = self.callPackage ./jsk-gui-msgs {};
 
  jsk-hark-msgs = self.callPackage ./jsk-hark-msgs {};
+
+ jsk-ros1-ros2-compat = self.callPackage ./jsk-ros1-ros2-compat {};
+
+ jsk-rosbag-tools = self.callPackage ./jsk-rosbag-tools {};
+
+ jsk-tools = self.callPackage ./jsk-tools {};
+
+ jsk-topic-tools = self.callPackage ./jsk-topic-tools {};
+
+ kairos = self.callPackage ./kairos {};
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
@@ -1805,8 +1811,6 @@ self: super: {
  kinova-gen3-lite-moveit-config = self.callPackage ./kinova-gen3-lite-moveit-config {};
 
  kitti-metrics-eval = self.callPackage ./kitti-metrics-eval {};
-
- kobuki-core = self.callPackage ./kobuki-core {};
 
  kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
 
@@ -2954,6 +2958,8 @@ self: super: {
 
  pinocchio = self.callPackage ./pinocchio {};
 
+ plansys2 = self.callPackage ./plansys2 {};
+
  plansys2-bringup = self.callPackage ./plansys2-bringup {};
 
  plansys2-bt-actions = self.callPackage ./plansys2-bt-actions {};
@@ -2963,6 +2969,8 @@ self: super: {
  plansys2-domain-expert = self.callPackage ./plansys2-domain-expert {};
 
  plansys2-executor = self.callPackage ./plansys2-executor {};
+
+ plansys2-kairos-plan-solver = self.callPackage ./plansys2-kairos-plan-solver {};
 
  plansys2-lifecycle-manager = self.callPackage ./plansys2-lifecycle-manager {};
 
@@ -2980,9 +2988,9 @@ self: super: {
 
  plansys2-terminal = self.callPackage ./plansys2-terminal {};
 
- plansys2-tests = self.callPackage ./plansys2-tests {};
-
  plansys2-tools = self.callPackage ./plansys2-tools {};
+
+ plansys2-tui-cli = self.callPackage ./plansys2-tui-cli {};
 
  play-motion2 = self.callPackage ./play-motion2 {};
 
@@ -3216,6 +3224,8 @@ self: super: {
 
  rclpy = self.callPackage ./rclpy {};
 
+ rclpy-cascade-lifecycle = self.callPackage ./rclpy-cascade-lifecycle {};
+
  rclpy-message-converter = self.callPackage ./rclpy-message-converter {};
 
  rclpy-message-converter-msgs = self.callPackage ./rclpy-message-converter-msgs {};
@@ -3250,6 +3260,8 @@ self: super: {
 
  realtime-tools = self.callPackage ./realtime-tools {};
 
+ reduct-bridge = self.callPackage ./reduct-bridge {};
+
  reductstore-agent = self.callPackage ./reductstore-agent {};
 
  replay-testing = self.callPackage ./replay-testing {};
@@ -3259,6 +3271,8 @@ self: super: {
  rig-reconfigure = self.callPackage ./rig-reconfigure {};
 
  rko-lio = self.callPackage ./rko-lio {};
+
+ rko-slam = self.callPackage ./rko-slam {};
 
  rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
 
@@ -3815,6 +3829,8 @@ self: super: {
  rqt-moveit = self.callPackage ./rqt-moveit {};
 
  rqt-msg = self.callPackage ./rqt-msg {};
+
+ rqt-multiplot = self.callPackage ./rqt-multiplot {};
 
  rqt-play-motion-builder = self.callPackage ./rqt-play-motion-builder {};
 
@@ -4439,8 +4455,6 @@ self: super: {
  tobas-node = self.callPackage ./tobas-node {};
 
  tobas-nonplanar-multi-controller = self.callPackage ./tobas-nonplanar-multi-controller {};
-
- tobas-object-avoidance = self.callPackage ./tobas-object-avoidance {};
 
  tobas-parameter-tuning = self.callPackage ./tobas-parameter-tuning {};
 

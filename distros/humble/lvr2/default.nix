@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, cmake, eigen, embree, flann, freeglut, gdal, gsl, hdf5, libtiff, libxi, libxmu, lz4, ocl-icd, onetbb, opencv, yaml-cpp }:
+{ lib, buildRosPackage, fetchurl, boost, cmake, eigen, embree, flann, freeglut, gsl, hdf5, libtiff, libxi, libxmu, lz4, ocl-icd, onetbb, opencv, yaml-cpp }:
 buildRosPackage {
   pname = "ros-humble-lvr2";
-  version = "25.2.2-r1";
+  version = "26.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/lvr2-release/archive/release/humble/lvr2/25.2.2-1.tar.gz";
-    name = "25.2.2-1.tar.gz";
-    sha256 = "602c26e68a7f8cd67a2346a3d93c4c20ac691d70bb51a5b698d844645e2dbb96";
+    url = "https://github.com/ros2-gbp/lvr2-release/archive/release/humble/lvr2/26.0.0-1.tar.gz";
+    name = "26.0.0-1.tar.gz";
+    sha256 = "f1b729c0df69841167bd97552ec8e910f4cf9ab3aa2172cc4c0be33519ba24e2";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ boost eigen embree flann freeglut gdal gsl hdf5 libtiff libxi libxmu lz4 ocl-icd onetbb opencv opencv.cxxdev yaml-cpp ];
+  propagatedBuildInputs = [ boost eigen embree flann freeglut gsl hdf5 libtiff libxi libxmu lz4 ocl-icd onetbb opencv opencv.cxxdev yaml-cpp ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

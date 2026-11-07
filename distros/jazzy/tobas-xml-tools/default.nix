@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-xml-tools";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_xml_tools/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "d3c39a5fa5f8fe3d510538fe976515c104a1ce1315a2688b0f74623e8a4860f3";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_xml_tools/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "65814e8c9fcdd296b830da4757761fd92e9a0ec3b7015c9095d3f9611a8e0dd0";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, rclcpp, rclcpp-action }:
 buildRosPackage {
   pname = "ros-kilted-examples-rclcpp-minimal-action-server";
-  version = "0.20.6-r2";
+  version = "0.20.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/examples-release/archive/release/kilted/examples_rclcpp_minimal_action_server/0.20.6-2.tar.gz";
-    name = "0.20.6-2.tar.gz";
-    sha256 = "c166312caa36c4860b065d19d4558cf174e408f2e3818cc0c1344c32a64a55fc";
+    url = "https://github.com/ros2-gbp/examples-release/archive/release/kilted/examples_rclcpp_minimal_action_server/0.20.7-1.tar.gz";
+    name = "0.20.7-1.tar.gz";
+    sha256 = "352a7936fe1851cb10840c48483bc3dc8fb4686482fa20b30ec53d177ff07c56";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, builtin-interfaces, eigen, geometry-msgs, pinocchio, python3, python3Packages, roboplan-core, roboplan-example-models, rosidl-generator-cpp, sensor-msgs, tf2-eigen, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kilted-roboplan-ros-cpp";
-  version = "0.7.0-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan_ros-release/archive/release/kilted/roboplan_ros_cpp/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "06f273e464df0fc3d05d567638143489baf535ee600ae533ef1c9765a9a1afec";
+    url = "https://github.com/ros2-gbp/roboplan_ros-release/archive/release/kilted/roboplan_ros_cpp/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "93196bce1b9646cfae39f0dfc86c3dfa9bb0bd4c0e8b2c60b1390c643d9b3a0b";
   };
 
   buildType = "ament_cmake";

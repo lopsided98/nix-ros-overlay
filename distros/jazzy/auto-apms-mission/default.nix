@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, auto-apms-behavior-tree, auto-apms-util, rclcpp-components }:
 buildRosPackage {
   pname = "ros-jazzy-auto-apms-mission";
-  version = "1.5.1-r1";
+  version = "1.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/jazzy/auto_apms_mission/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "5cda1f31408bb489c1507f6ee734700d779c5162718a072b2cdb2acddc8d853d";
+    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/jazzy/auto_apms_mission/1.7.0-1.tar.gz";
+    name = "1.7.0-1.tar.gz";
+    sha256 = "d3ad3208a48fbd38e6d42acdd6278c185ed8dfd4eac25d665a105b2134c8af32";
   };
 
   buildType = "ament_cmake";

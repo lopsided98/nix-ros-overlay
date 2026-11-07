@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, example-interfaces, launch, launch-ros, launch-testing, rclcpp, rclcpp-components, rcutils, rmw, rmw-implementation-cmake, sensor-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-quality-of-service-demo-cpp";
-  version = "0.37.9-r1";
+  version = "0.37.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/lyrical/quality_of_service_demo_cpp/0.37.9-1.tar.gz";
-    name = "0.37.9-1.tar.gz";
-    sha256 = "51590391536f714da68f603ff2541ade0111a1237e0a1e6d403100687037beab";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/lyrical/quality_of_service_demo_cpp/0.37.10-1.tar.gz";
+    name = "0.37.10-1.tar.gz";
+    sha256 = "9f2881a52936e39b7a6276aec7eba57dfecd4d2929aa54411545f524364191bb";
   };
 
   buildType = "ament_cmake";

@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, cmake, icu, mrpt-common, mrpt-expr, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-config";
-  version = "3.5.2-r1";
+  version = "3.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_config/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "ccf59380df640e4229676fb4c6aed767fd1f24a6231644913a79899098a05645";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_config/3.6.1-1.tar.gz";
+    name = "3.6.1-1.tar.gz";
+    sha256 = "1359d6b5ffee4918c5d0505bc8696a4cbfc6b3eb9c4951848ac5e9a12a9ed72f";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake icu python3 python3Packages.pybind11 ];
-  propagatedBuildInputs = [ mrpt-common mrpt-expr ];
+  buildInputs = [ cmake python3 python3Packages.pybind11 ];
+  propagatedBuildInputs = [ icu mrpt-common mrpt-expr ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

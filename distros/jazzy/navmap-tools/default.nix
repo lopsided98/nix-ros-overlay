@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-copyright, ament-flake8, ament-index-python, ament-lint-auto, ament-lint-common, ament-pep257, ament-xmllint, nav-msgs, navmap-core, navmap-ros, navmap-ros-interfaces, pcl-conversions, python3Packages, rclcpp, rclpy, sensor-msgs, sensor-msgs-py, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-jazzy-navmap-tools";
-  version = "0.6.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/jazzy/navmap_tools/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "a84a45b021fe72557926159f268be838f8a7205261f1c20239eb4cdab9a405a7";
+    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/jazzy/navmap_tools/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "cde28369462a5caf6105c83edbaa047402d0bf3e069ddd00658abd5140cbaa58";
   };
 
   buildType = "ament_cmake";

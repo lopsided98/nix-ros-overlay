@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-novatel-gps-msgs";
-  version = "4.3.1-r1";
+  version = "5.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/novatel_gps_driver-release/archive/release/kilted/novatel_gps_msgs/4.3.1-1.tar.gz";
-    name = "4.3.1-1.tar.gz";
-    sha256 = "dba711bc6b309c388f8d564f33d869fa7e0c37c9716638ff6c5839310ee494a6";
+    url = "https://github.com/ros2-gbp/novatel_gps_driver-release/archive/release/kilted/novatel_gps_msgs/5.1.0-1.tar.gz";
+    name = "5.1.0-1.tar.gz";
+    sha256 = "f4a3d3904b9e4e7fab6070c78f0352b4029b9623e8933a7d8ccffcf738e6b413";
   };
 
   buildType = "ament_cmake";

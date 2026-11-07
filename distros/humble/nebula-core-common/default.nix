@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-lint-auto, autoware-cmake, boost, nlohmann_json, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-nebula-core-common";
-  version = "1.2.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_core_common/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "b68179c5cb0fd293285d99e2a8d74333adf6672a2537a97498cf4c541486153f";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_core_common/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "bd159e3fc72035100c7bc3108364d59baecdd35646867f49c6578285a66cb071";
   };
 
   buildType = "ament_cmake";

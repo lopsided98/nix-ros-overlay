@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, fmt, geometry-msgs, hardware-interface, pal-statistics, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, sensor-msgs, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, fmt, geometry-msgs, hardware-interface, joint-limits, lifecycle-msgs, pal-statistics, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-controller-interface";
-  version = "4.49.0-r1";
+  version = "4.50.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/controller_interface/4.49.0-1.tar.gz";
-    name = "4.49.0-1.tar.gz";
-    sha256 = "23672f67bfce84f8ab21ad809e6d51cb693b7ecb59bcaf94a63c3d27fb72d8b3";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/jazzy/controller_interface/4.50.0-1.tar.gz";
+    name = "4.50.0-1.tar.gz";
+    sha256 = "1fbb9d0c075b045be616bb5699055c8653cdea928068ed07918815f5ec81d4f0";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-gen-version-h fmt pal-statistics ros2-control-cmake ];
+  buildInputs = [ ament-cmake ament-cmake-gen-version-h ros2-control-cmake ];
   checkInputs = [ ament-cmake-gmock geometry-msgs sensor-msgs std-msgs ];
-  propagatedBuildInputs = [ hardware-interface rclcpp-lifecycle realtime-tools ];
+  propagatedBuildInputs = [ fmt geometry-msgs hardware-interface joint-limits lifecycle-msgs pal-statistics rclcpp rclcpp-lifecycle realtime-tools sensor-msgs std-msgs ];
   nativeBuildInputs = [ ament-cmake ament-cmake-gen-version-h ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-python, eigen, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-toppra";
-  version = "0.6.10-r1";
+  version = "0.6.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/toppra-release/archive/release/jazzy/toppra/0.6.10-1.tar.gz";
-    name = "0.6.10-1.tar.gz";
-    sha256 = "0e0cd63a094512e2d4e3f560fe7efa11bd044dba0e9f285de9d7534b784331b7";
+    url = "https://github.com/ros2-gbp/toppra-release/archive/release/jazzy/toppra/0.6.11-1.tar.gz";
+    name = "0.6.11-1.tar.gz";
+    sha256 = "f551b2b942c1c90fac86ee1d3037e7ad1678e2e120e964a53b2c639a0ad2e15d";
   };
 
   buildType = "catkin";

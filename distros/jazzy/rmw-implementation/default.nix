@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, performance-test-fixture, rcpputils, rcutils, rmw, rmw-connextdds, rmw-cyclonedds-cpp, rmw-fastrtps-cpp, rmw-fastrtps-dynamic-cpp, rmw-implementation-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-rmw-implementation";
-  version = "2.15.6-r1";
+  version = "2.15.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_implementation-release/archive/release/jazzy/rmw_implementation/2.15.6-1.tar.gz";
-    name = "2.15.6-1.tar.gz";
-    sha256 = "90329f70219318b4916e895b01082048951c8ee3a64868c6d279468c336b01b9";
+    url = "https://github.com/ros2-gbp/rmw_implementation-release/archive/release/jazzy/rmw_implementation/2.15.7-1.tar.gz";
+    name = "2.15.7-1.tar.gz";
+    sha256 = "5d7902c9570573fac30c30181e4e4280210c690cf8777f980a415c01f249d4a3";
   };
 
   buildType = "ament_cmake";

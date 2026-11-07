@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, _unresolved_python3-colcon-common-extensions, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-jazzy-colcon-rclgd";
-  version = "2.1.0-r3";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/Ozuba/rclgd-release/archive/release/jazzy/colcon_rclgd/2.1.0-3.tar.gz";
-    name = "2.1.0-3.tar.gz";
-    sha256 = "a4c81291fd2abef9102597a8d5fcb0a1a5833ea4097ca0396484a0e6c6b49d8b";
+    url = "https://github.com/Ozuba/rclgd-release/archive/release/jazzy/colcon_rclgd/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "bb5681d11911eaab1b086e471bde24fe861e47307959f16dbb005a790648676b";
   };
 
   buildType = "ament_python";

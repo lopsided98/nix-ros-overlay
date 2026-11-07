@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-copyright, ament-flake8, ament-index-python, ament-lint-auto, ament-lint-common, ament-pep257, ament-xmllint, nav-msgs, navmap-core, navmap-ros, navmap-ros-interfaces, pcl-conversions, python3Packages, rclcpp, rclpy, sensor-msgs, sensor-msgs-py, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-kilted-navmap-tools";
-  version = "0.6.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/kilted/navmap_tools/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "2f5e92e1a3b53ad1bc4f375223530c029cb5e36bad4ef764782497803669ffe5";
+    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/kilted/navmap_tools/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "7c2bde6ff0adf9c7d6e6a69e664d3f4d26fd7781411113b1f4f50afbe7277320";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, angles, proj, qt5, rclcpp, rcpputils, rviz-common, rviz-default-plugins, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rviz-satellite";
-  version = "4.3.1-r1";
+  version = "4.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rviz_satellite-release/archive/release/jazzy/rviz_satellite/4.3.1-1.tar.gz";
-    name = "4.3.1-1.tar.gz";
-    sha256 = "aa8f52e1ae70b40cb0ebf2369b641d6c1d4308a1c19302b5a3075b000d7a33a2";
+    url = "https://github.com/ros2-gbp/rviz_satellite-release/archive/release/jazzy/rviz_satellite/4.4.0-1.tar.gz";
+    name = "4.4.0-1.tar.gz";
+    sha256 = "256afba78d128fe1992397055738a175c33831cdba5de7206be1ded6b2cc390e";
   };
 
   buildType = "ament_cmake";

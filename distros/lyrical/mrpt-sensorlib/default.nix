@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, diagnostic-updater, mrpt-hwdrivers, mrpt-libros-bridge, mrpt-msgs, rclcpp-components, ros-environment, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-sensorlib";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/lyrical/mrpt_sensorlib/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "a0bc902cde15d0cff3d5017aa90000fa35f3b341c882814e5afa118f68f7e9d8";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/lyrical/mrpt_sensorlib/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "ed411384a1a4bde51a695a92daf84cccfc9aad6572563714a442c9dbdff6a105";
   };
 
   buildType = "ament_cmake";

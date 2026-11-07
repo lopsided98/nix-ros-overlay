@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-gtest, ament-cmake-test, gmock-vendor, gtest }:
 buildRosPackage {
   pname = "ros-jazzy-ament-cmake-gmock";
-  version = "2.5.6-r2";
+  version = "2.5.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/jazzy/ament_cmake_gmock/2.5.6-2.tar.gz";
-    name = "2.5.6-2.tar.gz";
-    sha256 = "fddb550815f345ad68aee00dfffa2ee0393e6e77b5133f0cc739e64cf0c4a91d";
+    url = "https://github.com/ros2-gbp/ament_cmake-release/archive/release/jazzy/ament_cmake_gmock/2.5.7-1.tar.gz";
+    name = "2.5.7-1.tar.gz";
+    sha256 = "850b6491071e51de1b6d4c8591359c6d06590a0873fcba297378ff0ac06db92b";
   };
 
   buildType = "ament_cmake";

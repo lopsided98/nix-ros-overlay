@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, easynav-playground-kobuki-description, gz-sim-vendor, launch, launch-ros, launch-yaml, robot-state-publisher, ros-gz-bridge, ros-gz-sim, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-easynav-playground-kobuki-worlds";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/jazzy/easynav_playground_kobuki_worlds/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "0ecb669462cfc4fcab8bd563a77b1bbef7b22cf56c3fa8eb174f3c259806f90a";
+    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/jazzy/easynav_playground_kobuki_worlds/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "2d8a670f1741629d1619e3e6078ab61946be934aeb816641923b5b0450b1bda0";
   };
 
   buildType = "ament_cmake";

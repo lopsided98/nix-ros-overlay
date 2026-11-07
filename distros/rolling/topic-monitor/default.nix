@@ -5,17 +5,17 @@
 { lib, buildRosPackage, fetchurl, ament-flake8, ament-mypy, ament-pep257, ament-xmllint, example-interfaces, launch, launch-ros, python3Packages, rclpy, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-topic-monitor";
-  version = "0.38.0-r1";
+  version = "0.38.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/topic_monitor/0.38.0-1.tar.gz";
-    name = "0.38.0-1.tar.gz";
-    sha256 = "bdf90eda407bcea9cd8b98c0d692a883c675617e097b7d034d034d004e18cc70";
+    url = "https://github.com/ros2-gbp/demos-release/archive/release/rolling/topic_monitor/0.38.1-1.tar.gz";
+    name = "0.38.1-1.tar.gz";
+    sha256 = "5142ce74f295b9505e1122ba68a2329862b5fa597e430b56e53d19748cd92f1b";
   };
 
   buildType = "ament_python";
   checkInputs = [ ament-flake8 ament-mypy ament-pep257 ament-xmllint python3Packages.pytest ];
-  propagatedBuildInputs = [ example-interfaces launch launch-ros rclpy std-msgs ];
+  propagatedBuildInputs = [ example-interfaces launch launch-ros python3Packages.matplotlib rclpy std-msgs ];
 
   meta = {
     description = "Package containing tools for monitoring ROS 2 topics.";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-core, mrpt-typemeta, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-containers";
-  version = "3.5.2-r1";
+  version = "3.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_containers/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "57ed13f5f2500c5111e6233eaa68295e9ca1121e24430772c4f155e58898bd23";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_containers/3.6.1-1.tar.gz";
+    name = "3.6.1-1.tar.gz";
+    sha256 = "eda99fe2f4db24bdd1d5e036d3d40d137117c7e1e54bbe694840458bfd4af1c7";
   };
 
   buildType = "cmake";

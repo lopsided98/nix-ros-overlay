@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common }:
 buildRosPackage {
   pname = "ros-kilted-rosidl-typesupport-interface";
-  version = "4.9.8-r1";
+  version = "4.9.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/kilted/rosidl_typesupport_interface/4.9.8-1.tar.gz";
-    name = "4.9.8-1.tar.gz";
-    sha256 = "3053a0cefb18bdf780b8577f8a7f2d1666704725b946f9eeec76e6d06e606e71";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/kilted/rosidl_typesupport_interface/4.9.9-1.tar.gz";
+    name = "4.9.9-1.tar.gz";
+    sha256 = "1a199204be51a5700ab93305f17ac7f118c8437e7f3a93daeee3a9fa917523a4";
   };
 
   buildType = "ament_cmake";

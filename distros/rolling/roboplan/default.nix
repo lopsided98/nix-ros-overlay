@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, roboplan-cartesian-planning, roboplan-common, roboplan-core, roboplan-example-models, roboplan-examples, roboplan-oink, roboplan-rrt, roboplan-simple-ik, roboplan-toppra }:
 buildRosPackage {
   pname = "ros-rolling-roboplan";
-  version = "0.7.0-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/rolling/roboplan/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "add41f12100488b87acff6886642556898227fdfb90c3c0e9bda46a806f27a42";
+    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/rolling/roboplan/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "d463db8273511d215ad4f90f26ba4671e4f78321a9b9931bd5283d7db9dd7bee";
   };
 
   buildType = "ament_cmake";

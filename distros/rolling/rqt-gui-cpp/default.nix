@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, pluginlib, qt-gui-cpp, qt6, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-rqt-gui-cpp";
-  version = "2.0.4-r1";
+  version = "2.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/rolling/rqt_gui_cpp/2.0.4-1.tar.gz";
-    name = "2.0.4-1.tar.gz";
-    sha256 = "7a25361aad81db1537c23fc6ec517cea4662836fc7fbadb927f2a054b03c6a09";
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/rolling/rqt_gui_cpp/2.0.5-1.tar.gz";
+    name = "2.0.5-1.tar.gz";
+    sha256 = "2c542d2710fe39f54ffdc58ef7ba3b49858e78d081fafb6a5b3b206d36ee34cd";
   };
 
   buildType = "ament_cmake";

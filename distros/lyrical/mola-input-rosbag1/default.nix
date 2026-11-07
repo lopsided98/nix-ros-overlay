@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, boost, bzip2, cmake, geometry-msgs, lz4, mola-common, mola-kernel, mrpt-maps, mrpt-obs, opencv, tf2, tf2-geometry-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, boost, bzip2, cmake, geometry-msgs, lz4, mola-common, mola-kernel, mrpt-maps, mrpt-obs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-mola-input-rosbag1";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_input_rosbag1-release/archive/release/lyrical/mola_input_rosbag1/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "38fb024feca439bb9403163004a6eee393804e2f39bf3b76be9f686d881c82ee";
+    url = "https://github.com/ros2-gbp/mola_input_rosbag1-release/archive/release/lyrical/mola_input_rosbag1/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "62b046c9ed293625758ba2b34f66090701e13459c3d837db3ec3356023822a7f";
   };
 
   buildType = "cmake";
   buildInputs = [ cmake ];
-  propagatedBuildInputs = [ boost bzip2 geometry-msgs lz4 mola-common mola-kernel mrpt-maps mrpt-obs opencv opencv.cxxdev tf2 tf2-geometry-msgs tf2-ros ];
+  propagatedBuildInputs = [ boost bzip2 geometry-msgs lz4 mola-common mola-kernel mrpt-maps mrpt-obs tf2 tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

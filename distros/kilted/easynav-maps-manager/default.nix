@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, lifecycle-msgs, pluginlib, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-kilted-easynav-maps-manager";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_maps_manager/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "fec9f396bcf73ef9f00e132a1cc98de26f3c8192feddcb66f4142c3873c19a53";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/kilted/easynav_maps_manager/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "a443811c5232f74912ba5653e7313fa759a1d2eab36fa26427b567c3fecd49eb";
   };
 
   buildType = "ament_cmake";

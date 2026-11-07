@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, easynav-common, easynav-core, lifecycle-msgs, pluginlib, rclcpp, rclcpp-lifecycle }:
 buildRosPackage {
   pname = "ros-humble-easynav-maps-manager";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/humble/easynav_maps_manager/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "4931010b313eaf4558293a715dec953eadad16ec50ef0b2a0bc3e2fbf88f5f66";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/humble/easynav_maps_manager/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "f8feab838ac5609227b66f93d35c28564971d0b12deddef05bb2f5fa516cb6b7";
   };
 
   buildType = "ament_cmake";

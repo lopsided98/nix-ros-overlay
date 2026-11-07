@@ -5,18 +5,18 @@
 { lib, buildRosPackage, fetchurl, cmake, libftdi1, mrpt-common, mrpt-io, mrpt-poses, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-humble-mrpt-comms";
-  version = "3.5.2-r1";
+  version = "3.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_comms/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "695ce33e49d317db430fea079ed8f2e6dfcba97c0c4fe7e40612d6889c0b3fee";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/humble/mrpt_comms/3.6.2-1.tar.gz";
+    name = "3.6.2-1.tar.gz";
+    sha256 = "f142803663601bd90994193c0871707e3e804fdba22db530d99bf6561084cb1e";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake libftdi1 python3 python3Packages.pybind11 ];
+  buildInputs = [ cmake python3 python3Packages.pybind11 ];
   checkInputs = [ mrpt-poses ];
-  propagatedBuildInputs = [ mrpt-common mrpt-io ];
+  propagatedBuildInputs = [ libftdi1 mrpt-common mrpt-io ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

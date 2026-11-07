@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, pluginlib, qt-gui-cpp, qt5, rclcpp }:
 buildRosPackage {
   pname = "ros-kilted-rqt-gui-cpp";
-  version = "1.9.2-r1";
+  version = "1.9.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt-release/archive/release/kilted/rqt_gui_cpp/1.9.2-1.tar.gz";
-    name = "1.9.2-1.tar.gz";
-    sha256 = "fac772c1c5bf64080ddef7408a589c03e45c44fac0756448d8d0d669d4bc48a5";
+    url = "https://github.com/ros2-gbp/rqt-release/archive/release/kilted/rqt_gui_cpp/1.9.3-1.tar.gz";
+    name = "1.9.3-1.tar.gz";
+    sha256 = "385a09afaaa421fccc515d3b7ff5d97854d88c9ed13be5b32221ed734af5d28b";
   };
 
   buildType = "ament_cmake";

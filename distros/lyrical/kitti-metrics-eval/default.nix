@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cli11, cmake, eigen, mola-common, mrpt-math, mrpt-poses }:
 buildRosPackage {
   pname = "ros-lyrical-kitti-metrics-eval";
-  version = "3.1.0-r1";
+  version = "3.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_academic_datasets-release/archive/release/lyrical/kitti_metrics_eval/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "295da6ed572fa6d2e36cf7370fb532840325b91eedd44bda2bf39e9d12567da0";
+    url = "https://github.com/ros2-gbp/mola_academic_datasets-release/archive/release/lyrical/kitti_metrics_eval/3.1.1-1.tar.gz";
+    name = "3.1.1-1.tar.gz";
+    sha256 = "5c1c21305bfb61d18aee567fe31ee15c9f90c768ce8e485662d1e5d324a1839f";
   };
 
   buildType = "cmake";

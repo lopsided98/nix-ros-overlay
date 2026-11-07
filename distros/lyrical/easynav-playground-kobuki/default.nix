@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, easynav-costmap-localizer, easynav-costmap-maps-manager, easynav-costmap-planner, easynav-diagnostic-recovery, easynav-interfaces, easynav-mhamcl-localizer, easynav-mpc-controller, easynav-mppi-controller, easynav-playground-kobuki-worlds, easynav-regulated-pp-controller, easynav-routes-maps-manager, easynav-serest-controller, easynav-simple-controller, easynav-simple-localizer, easynav-simple-maps-manager, easynav-simple-planner, easynav-simple-recovery, easynav-system, launch, launch-ros, launch-yaml, python3Packages, ros2topic, rviz2 }:
 buildRosPackage {
   pname = "ros-lyrical-easynav-playground-kobuki";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/lyrical/easynav_playground_kobuki/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "39d18dd5ae90f848b43e37354202409ec415e23ba66b6bdae7a3958babc74963";
+    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/lyrical/easynav_playground_kobuki/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "04f0e15409f4664e9a72bb36cc164d09251a1f830a968d6ee4e771947105eb9f";
   };
 
   buildType = "ament_cmake";

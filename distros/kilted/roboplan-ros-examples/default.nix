@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, control-msgs, rclpy, roboplan-core, sensor-msgs, std-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kilted-roboplan-ros-examples";
-  version = "0.7.0-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan_ros-release/archive/release/kilted/roboplan_ros_examples/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "c41a9df5c8c576042348789f850376aef387d078ef174f2cad0baf8281054c94";
+    url = "https://github.com/ros2-gbp/roboplan_ros-release/archive/release/kilted/roboplan_ros_examples/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "46da897ed81e61f0d627dab2504ceed1ccfc0d6d7a56b026695d81b9e7b49bfa";
   };
 
   buildType = "ament_cmake";

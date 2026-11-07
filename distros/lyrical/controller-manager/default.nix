@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, ament-cmake-pytest, ament-cmake-python, backward-ros, controller-interface, controller-manager-msgs, diagnostic-msgs, diagnostic-updater, example-interfaces, fmt, generate-parameter-library, hardware-interface, hardware-interface-testing, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, libstatistics-collector, lifecycle-msgs, pluginlib, python3Packages, rcl-interfaces, rclcpp, rclpy, realtime-tools, robot-state-publisher, ros2-control-cmake, ros2-control-test-assets, ros2param, ros2pkg, sensor-msgs, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, ament-cmake-pytest, ament-cmake-python, backward-ros, controller-interface, controller-manager-msgs, diagnostic-msgs, diagnostic-updater, example-interfaces, fmt, generate-parameter-library, hardware-interface, hardware-interface-testing, launch, launch-ros, launch-testing, launch-testing-ament-cmake, launch-testing-ros, libstatistics-collector, lifecycle-msgs, pluginlib, python3Packages, rcl, rcl-interfaces, rclcpp, rclcpp-lifecycle, rclpy, realtime-tools, robot-state-publisher, ros2-control-cmake, ros2-control-test-assets, ros2param, ros2pkg, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-controller-manager";
-  version = "6.12.0-r1";
+  version = "6.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/lyrical/controller_manager/6.12.0-1.tar.gz";
-    name = "6.12.0-1.tar.gz";
-    sha256 = "40a78d447175c00e1da610d25170041fcd6a04cf7f11494eca32cf5cc6687dfb";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/lyrical/controller_manager/6.13.0-1.tar.gz";
+    name = "6.13.0-1.tar.gz";
+    sha256 = "0d0b19ee7ea5d64137faaf3683f180334b36d5ac6847ba2ec80b69f4287bd340";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-gen-version-h ament-cmake-python ros2-control-cmake ];
-  checkInputs = [ ament-cmake-gmock ament-cmake-pytest diagnostic-msgs example-interfaces hardware-interface-testing launch-testing launch-testing-ament-cmake python3Packages.coverage robot-state-publisher ros2-control-test-assets ros2pkg ];
-  propagatedBuildInputs = [ backward-ros controller-interface controller-manager-msgs diagnostic-updater fmt generate-parameter-library hardware-interface launch launch-ros launch-testing-ros libstatistics-collector lifecycle-msgs pluginlib python3Packages.filelock python3Packages.pyyaml rcl-interfaces rclcpp rclpy realtime-tools ros2param sensor-msgs std-msgs ];
+  checkInputs = [ ament-cmake-gmock ament-cmake-pytest example-interfaces hardware-interface-testing launch-testing launch-testing-ament-cmake python3Packages.coverage robot-state-publisher ros2-control-test-assets ros2pkg ];
+  propagatedBuildInputs = [ backward-ros controller-interface controller-manager-msgs diagnostic-msgs diagnostic-updater fmt generate-parameter-library hardware-interface launch launch-ros launch-testing-ros libstatistics-collector lifecycle-msgs pluginlib python3Packages.filelock python3Packages.pyyaml rcl rcl-interfaces rclcpp rclcpp-lifecycle rclpy realtime-tools ros2param sensor-msgs std-msgs ];
   nativeBuildInputs = [ ament-cmake ament-cmake-gen-version-h ament-cmake-python ];
 
   meta = {

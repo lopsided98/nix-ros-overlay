@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-pep257, ament-cmake-uncrustify, ament-cmake-xmllint, ament-lint-auto, cli11, cmake, flann, gtsam, lz4, mola-common, mola-georeferencing, mola-gtsam-factors, mola-metric-maps, mola-pose-list, mola-relocalization, mola-test-datasets, mola-yaml, mp2p-icp, mrpt-maps, mrpt-viz, onetbb, ros-environment }:
 buildRosPackage {
   pname = "ros-kilted-mola-sm-loop-closure";
-  version = "1.3.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_sm_loop_closure-release/archive/release/kilted/mola_sm_loop_closure/1.3.0-1.tar.gz";
-    name = "1.3.0-1.tar.gz";
-    sha256 = "5487c39a2848caeaab21d871654aaac2bd63734e4adb60c8dd2d9473c23bc290";
+    url = "https://github.com/ros2-gbp/mola_sm_loop_closure-release/archive/release/kilted/mola_sm_loop_closure/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "10d223d83c137aed95734a371f8c456d99e5096cb129a4752a9c278c75b4d153";
   };
 
   buildType = "ament_cmake";

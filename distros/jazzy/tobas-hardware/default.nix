@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-fc1xx, tobas-fc2xx, tobas-hardware-common }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-hardware";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_hardware/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "f0fa1a9bd31579559b602e3d9dbb30a3999f306ad0cdb40a5fec0a162161b67d";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_hardware/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "44556c487add58900a96323743dd22154d013b962722b5c96c7dee73320d4636";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, image-transport, mapviz-interfaces, opencv, pkg-config, pluginlib, qt-gui-cpp, qt5or6, rclcpp, rqt-gui, rqt-gui-cpp, std-msgs, std-srvs, swri-math-util, swri-transform-util, tf2, tf2-geometry-msgs, tf2-ros, yaml-cpp }:
 buildRosPackage {
   pname = "ros-kilted-mapviz";
-  version = "4.1.2-r1";
+  version = "4.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/kilted/mapviz/4.1.2-1.tar.gz";
-    name = "4.1.2-1.tar.gz";
-    sha256 = "108a77b8a42ccfdfa36b79cc02419245f7c04fe0f77a1943f5a6007527cbafae";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/kilted/mapviz/4.2.0-1.tar.gz";
+    name = "4.2.0-1.tar.gz";
+    sha256 = "4556001a569e4d72bee3d14b1f3dd17a45de5ba05245b469fff30ec59954b8b3";
   };
 
   buildType = "ament_cmake";

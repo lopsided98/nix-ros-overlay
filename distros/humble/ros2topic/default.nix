@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, geometry-msgs, launch, launch-ros, launch-testing, launch-testing-ros, python3Packages, rclpy, ros2cli, rosgraph-msgs, rosidl-runtime-py, std-msgs, test-msgs }:
 buildRosPackage {
   pname = "ros-humble-ros2topic";
-  version = "0.18.20-r1";
+  version = "0.18.21-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/humble/ros2topic/0.18.20-1.tar.gz";
-    name = "0.18.20-1.tar.gz";
-    sha256 = "41071ad0f8c48a53ff1ac2bdc563bad644919bd6b409c1ad3e1af8954ab64b14";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/humble/ros2topic/0.18.21-1.tar.gz";
+    name = "0.18.21-1.tar.gz";
+    sha256 = "9c502bb0fb192f5b89a8edcb69807a215c0154e9c31c478f01770bd80ffc6eb7";
   };
 
   buildType = "ament_python";
