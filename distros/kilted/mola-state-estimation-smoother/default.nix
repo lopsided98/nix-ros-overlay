@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-xmllint, boost, cmake, geometry-msgs, gtsam, launch-testing, launch-testing-ament-cmake, launch-testing-ros, mola-bridge-ros2, mola-common, mola-demos, mola-gtsam-factors, mola-imu-preintegration, mola-kernel, mola-launcher, mrpt-obs, nav-msgs, rclpy, ros-environment, rviz2, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-mola-state-estimation-smoother";
-  version = "3.0.4-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/kilted/mola_state_estimation_smoother/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "803209dbac945c5825bb2adab44d0c85847d0eb0a421ab4dbaa906b33efb785b";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/kilted/mola_state_estimation_smoother/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "f2d072aa3fff06bcec3b84ae314b278b342f6447e72cbf53be8da39502cfae6c";
   };
 
   buildType = "ament_cmake";

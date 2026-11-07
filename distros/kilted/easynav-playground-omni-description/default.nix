@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, xacro }:
 buildRosPackage {
   pname = "ros-kilted-easynav-playground-omni-description";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/kilted/easynav_playground_omni_description/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "f1659bd140043e8058d9ccfbf82160c28cdbd621790b419c1736efef5db19f32";
+    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/kilted/easynav_playground_omni_description/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "860eb2534ef92deda981f698795c1cc2f17643ac23211a516c38246c0c0045cd";
   };
 
   buildType = "ament_cmake";

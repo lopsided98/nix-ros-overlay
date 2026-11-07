@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, roboplan-cartesian-planning, roboplan-common, roboplan-core, roboplan-example-models, roboplan-examples, roboplan-oink, roboplan-rrt, roboplan-simple-ik, roboplan-toppra }:
 buildRosPackage {
   pname = "ros-jazzy-roboplan";
-  version = "0.7.0-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/jazzy/roboplan/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "a341dec47c0fa934071e09d609a8447c56071629ea9a662751464906cf35e94e";
+    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/jazzy/roboplan/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "159b136ef216769d3f5984702ec0cad8e251abdec22cf248a13a7b1c5b24e48d";
   };
 
   buildType = "ament_cmake";

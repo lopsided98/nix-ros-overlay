@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-xmllint, boost, cmake, geometry-msgs, gtsam, launch-testing, launch-testing-ament-cmake, launch-testing-ros, mola-bridge-ros2, mola-common, mola-demos, mola-gtsam-factors, mola-imu-preintegration, mola-kernel, mola-launcher, mrpt-obs, nav-msgs, rclpy, ros-environment, rviz2, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-mola-state-estimation-smoother";
-  version = "3.0.4-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/lyrical/mola_state_estimation_smoother/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "1639453ed622abf4b2ec36244f781927d4869906d7237571436cdd21d6f36afb";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/lyrical/mola_state_estimation_smoother/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "a996b65dc0b798bb00cd20a4cbbe1d2fb53fe49a2fcd5868701894fddc5e1347";
   };
 
   buildType = "ament_cmake";

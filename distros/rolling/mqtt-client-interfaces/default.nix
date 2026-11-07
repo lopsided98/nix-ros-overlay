@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-mqtt-client-interfaces";
-  version = "2.5.0-r1";
+  version = "2.5.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mqtt_client-release/archive/release/rolling/mqtt_client_interfaces/2.5.0-1.tar.gz";
-    name = "2.5.0-1.tar.gz";
-    sha256 = "91335627852a7128d2ede2139bc09ea589580293989aea3264530671f237fde2";
+    url = "https://github.com/ros2-gbp/mqtt_client-release/archive/release/rolling/mqtt_client_interfaces/2.5.2-1.tar.gz";
+    name = "2.5.2-1.tar.gz";
+    sha256 = "fec28db921e242208e8aae407c5a07baf9fe9c1999bd2538d5a6bb36377ec017";
   };
 
   buildType = "ament_cmake";

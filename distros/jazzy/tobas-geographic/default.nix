@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, geographiclib, pkg-config, tobas-std-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-geographic";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_geographic/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "eac655e2b024aadd846c64e3d63c1391aa35988eff383a99dda8dfe35ae490ad";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_geographic/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "88cd06dda76d23fb0800b6404efa533c6a075f539533462755b589392447aae0";
   };
 
   buildType = "ament_cmake";

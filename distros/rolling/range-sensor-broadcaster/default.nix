@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-range-sensor-broadcaster";
-  version = "6.10.0-r1";
+  version = "6.10.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/range_sensor_broadcaster/6.10.0-1.tar.gz";
-    name = "6.10.0-1.tar.gz";
-    sha256 = "3f4a6bd67728e89f5191af022f291b2812ef4ec23c1a67fd27659d2c4d38a622";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/rolling/range_sensor_broadcaster/6.10.1-1.tar.gz";
+    name = "6.10.1-1.tar.gz";
+    sha256 = "700da3b3123f95a0bdb981e2b0292d435d04189c52405266edfdddd5a3f60ae8";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, eigen, elite-cs-series-sdk, launch, launch-ros, rclcpp, yaml-cpp }:
 buildRosPackage {
   pname = "ros-humble-elite-robots-calibration";
-  version = "1.0.3-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EliteRobots/Elite_Robots_CS_ROS2_Driver-release/archive/release/humble/elite_robots_calibration/1.0.3-1.tar.gz";
-    name = "1.0.3-1.tar.gz";
-    sha256 = "14b391055720ef4aad4fcc8e8521b4c37ecc83f784e1de0023762911be882296";
+    url = "https://github.com/EliteRobots/Elite_Robots_CS_ROS2_Driver-release/archive/release/humble/elite_robots_calibration/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "dad6afb136050d4a9866c47b98dd05781bbe9f7e7ed0ea8350532f417a4ef324";
   };
 
   buildType = "ament_cmake";

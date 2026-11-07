@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, rclcpp, rosidl-default-generators, std-msgs }:
+{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-plansys2-msgs";
-  version = "3.1.0-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/lyrical/plansys2_msgs/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "0273bd05f1020c891c0d0912d59c0b60d3680d03ba008393ff6af0dc48c13084";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/lyrical/plansys2_msgs/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "8d3395b94483ff88076d646381b8c8906ade0171d0c63825dc2c452e7ee7d0f4";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ action-msgs builtin-interfaces rclcpp rosidl-default-generators std-msgs ];
-  nativeBuildInputs = [ ament-cmake ];
+  buildInputs = [ ament-cmake rosidl-default-generators ];
+  propagatedBuildInputs = [ action-msgs builtin-interfaces rosidl-default-runtime std-msgs ];
+  nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {
     description = "Messages and service files for the ROS2 Planning System";

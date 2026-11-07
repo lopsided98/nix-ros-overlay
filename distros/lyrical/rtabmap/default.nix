@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, cv-bridge, gtsam, libg2o, octomap, pcl, proj, qt-gui-cpp, sqlite, zlib }:
 buildRosPackage {
   pname = "ros-lyrical-rtabmap";
-  version = "0.23.13-r1";
+  version = "0.23.14-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rtabmap-release/archive/release/lyrical/rtabmap/0.23.13-1.tar.gz";
-    name = "0.23.13-1.tar.gz";
-    sha256 = "bee9c020141b2115ea38e089393a8fa2e0a2f0f7fb24ec1fd301aad9d94a9122";
+    url = "https://github.com/ros2-gbp/rtabmap-release/archive/release/lyrical/rtabmap/0.23.14-1.tar.gz";
+    name = "0.23.14-1.tar.gz";
+    sha256 = "c8d04e0033aeee47b9b0ebc35afc484f60098bf24586e24508fd9e31ad8600e7";
   };
 
   buildType = "cmake";

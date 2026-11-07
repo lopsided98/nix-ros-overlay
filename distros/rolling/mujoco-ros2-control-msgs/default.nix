@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-mujoco-ros2-control-msgs";
-  version = "0.1.3-r1";
+  version = "0.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/rolling/mujoco_ros2_control_msgs/0.1.3-1.tar.gz";
-    name = "0.1.3-1.tar.gz";
-    sha256 = "0ea061ae885bf7c0e4cc83504f13809a868fb865289aa0f69f5ff8882dde8316";
+    url = "https://github.com/ros2-gbp/mujoco_ros2_control-release/archive/release/rolling/mujoco_ros2_control_msgs/0.1.4-1.tar.gz";
+    name = "0.1.4-1.tar.gz";
+    sha256 = "2b904fca79ff2f1731968cc75ecfc1550447bee253b75b3f18a3fc79d9f5f327";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, image-transport, mapviz-interfaces, opencv, pkg-config, pluginlib, qt-gui-cpp, qt5or6, rclcpp, rqt-gui, rqt-gui-cpp, std-msgs, std-srvs, swri-math-util, swri-transform-util, tf2, tf2-geometry-msgs, tf2-ros, yaml-cpp }:
 buildRosPackage {
   pname = "ros-lyrical-mapviz";
-  version = "4.1.2-r1";
+  version = "4.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/lyrical/mapviz/4.1.2-1.tar.gz";
-    name = "4.1.2-1.tar.gz";
-    sha256 = "0a7f30458dbd61c68571fd2f11c5ef497df77faa217e9a20cb0e63339111b8da";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/lyrical/mapviz/4.2.0-1.tar.gz";
+    name = "4.2.0-1.tar.gz";
+    sha256 = "470fec7ff34fed179a6342cabd1a79f4fe0d7a1435e15cd6b82a5ab9246eba0e";
   };
 
   buildType = "ament_cmake";

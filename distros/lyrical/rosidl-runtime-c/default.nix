@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, performance-test-fixture, rcutils, rosidl-buffer, rosidl-typesupport-interface }:
 buildRosPackage {
   pname = "ros-lyrical-rosidl-runtime-c";
-  version = "5.2.1-r1";
+  version = "5.2.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/lyrical/rosidl_runtime_c/5.2.1-1.tar.gz";
-    name = "5.2.1-1.tar.gz";
-    sha256 = "5b511fb39a1c08056daf83812cf4ee945b25e16c4bf92cc74c34abfd6ec7a8a0";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/lyrical/rosidl_runtime_c/5.2.2-1.tar.gz";
+    name = "5.2.2-1.tar.gz";
+    sha256 = "811e455f2a1605d66bb6008d1161e953dc07b7f50e47af3efd572541da3637fa";
   };
 
   buildType = "ament_cmake";

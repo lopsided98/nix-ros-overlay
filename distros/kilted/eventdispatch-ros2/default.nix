@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, eventdispatch-python, eventdispatch-ros2-interfaces, rclcpp, rclpy }:
 buildRosPackage {
   pname = "ros-kilted-eventdispatch-ros2";
-  version = "0.2.29-r1";
+  version = "0.2.31-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_eventdispatch-release/archive/release/kilted/eventdispatch_ros2/0.2.29-1.tar.gz";
-    name = "0.2.29-1.tar.gz";
-    sha256 = "dfda81a52e067467b1d5237461980ed61bce16f73794ee4fed16ae81ed8adf4f";
+    url = "https://github.com/ros2-gbp/ros2_eventdispatch-release/archive/release/kilted/eventdispatch_ros2/0.2.31-1.tar.gz";
+    name = "0.2.31-1.tar.gz";
+    sha256 = "45163c437698db5249691fba7ffd96a29eac38316f1c6c03d23c64236941dec0";
   };
 
   buildType = "ament_cmake";

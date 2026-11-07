@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros-core, ament-index-python, ament-lint-auto, ament-lint-common, python3, rosidl-cli, rosidl-parser }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-pytest, ament-cmake-python, ament-cmake-ros-core, ament-index-python, ament-lint-auto, ament-lint-common, python3, rosidl-cli, rosidl-cmake, rosidl-parser }:
 buildRosPackage {
   pname = "ros-rolling-rosidl-generator-type-description";
-  version = "5.3.1-r2";
+  version = "5.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/rolling/rosidl_generator_type_description/5.3.1-2.tar.gz";
-    name = "5.3.1-2.tar.gz";
-    sha256 = "70ceec2173383198deee7ab2085ceaf0f741b73f3a4f6293d8ebbd5c7115ba0c";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/rolling/rosidl_generator_type_description/5.3.2-1.tar.gz";
+    name = "5.3.2-1.tar.gz";
+    sha256 = "2a2461387bd09f3b4e5e89ac5900528e13233e43eb9c19f275b7e7881aeb671e";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-python ament-cmake-ros-core ];
   checkInputs = [ ament-cmake-pytest ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ament-cmake-core ament-index-python python3 rosidl-cli rosidl-parser ];
+  propagatedBuildInputs = [ ament-cmake-core ament-index-python python3 rosidl-cli rosidl-cmake rosidl-parser ];
   nativeBuildInputs = [ ament-cmake-core ament-cmake-python ament-cmake-ros-core python3 ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-copyright, ament-flake8, ament-index-python, ament-lint-auto, ament-lint-common, ament-pep257, ament-xmllint, nav-msgs, navmap-core, navmap-ros, navmap-ros-interfaces, pcl-conversions, python3Packages, rclcpp, rclpy, sensor-msgs, sensor-msgs-py, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-humble-navmap-tools";
-  version = "0.6.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/humble/navmap_tools/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "b84782daefd96c288086a86db29667bfcdc1a0ff54596f8eacaf1d7c0495c2ed";
+    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/humble/navmap_tools/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "059668ff2c60a7c27d0c7e637146991114770457de1aedd82c713f78e3490c8c";
   };
 
   buildType = "ament_cmake";

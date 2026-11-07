@@ -564,8 +564,6 @@ self: super: {
 
  dummy-sensors = self.callPackage ./dummy-sensors {};
 
- dynamixel-hardware = self.callPackage ./dynamixel-hardware {};
-
  dynamixel-hardware-interface = self.callPackage ./dynamixel-hardware-interface {};
 
  dynamixel-interfaces = self.callPackage ./dynamixel-interfaces {};
@@ -581,78 +579,6 @@ self: super: {
  dynamixel-workbench-msgs = self.callPackage ./dynamixel-workbench-msgs {};
 
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
-
- ecl-build = self.callPackage ./ecl-build {};
-
- ecl-command-line = self.callPackage ./ecl-command-line {};
-
- ecl-concepts = self.callPackage ./ecl-concepts {};
-
- ecl-config = self.callPackage ./ecl-config {};
-
- ecl-console = self.callPackage ./ecl-console {};
-
- ecl-containers = self.callPackage ./ecl-containers {};
-
- ecl-converters = self.callPackage ./ecl-converters {};
-
- ecl-converters-lite = self.callPackage ./ecl-converters-lite {};
-
- ecl-core = self.callPackage ./ecl-core {};
-
- ecl-core-apps = self.callPackage ./ecl-core-apps {};
-
- ecl-devices = self.callPackage ./ecl-devices {};
-
- ecl-eigen = self.callPackage ./ecl-eigen {};
-
- ecl-errors = self.callPackage ./ecl-errors {};
-
- ecl-exceptions = self.callPackage ./ecl-exceptions {};
-
- ecl-filesystem = self.callPackage ./ecl-filesystem {};
-
- ecl-formatters = self.callPackage ./ecl-formatters {};
-
- ecl-geometry = self.callPackage ./ecl-geometry {};
-
- ecl-io = self.callPackage ./ecl-io {};
-
- ecl-ipc = self.callPackage ./ecl-ipc {};
-
- ecl-license = self.callPackage ./ecl-license {};
-
- ecl-linear-algebra = self.callPackage ./ecl-linear-algebra {};
-
- ecl-lite = self.callPackage ./ecl-lite {};
-
- ecl-manipulators = self.callPackage ./ecl-manipulators {};
-
- ecl-math = self.callPackage ./ecl-math {};
-
- ecl-mobile-robot = self.callPackage ./ecl-mobile-robot {};
-
- ecl-mpl = self.callPackage ./ecl-mpl {};
-
- ecl-sigslots = self.callPackage ./ecl-sigslots {};
-
- ecl-sigslots-lite = self.callPackage ./ecl-sigslots-lite {};
-
- ecl-statistics = self.callPackage ./ecl-statistics {};
-
- ecl-streams = self.callPackage ./ecl-streams {};
-
- ecl-threads = self.callPackage ./ecl-threads {};
-
- ecl-time = self.callPackage ./ecl-time {};
-
- ecl-time-lite = self.callPackage ./ecl-time-lite {};
-
- ecl-tools = self.callPackage ./ecl-tools {};
-
- ecl-type-traits = self.callPackage ./ecl-type-traits {};
-
- ecl-utilities = self.callPackage ./ecl-utilities {};
 
  ehukai = self.callPackage ./ehukai {};
 
@@ -1030,6 +956,8 @@ self: super: {
 
  jacro = self.callPackage ./jacro {};
 
+ joint-command-topic-hardware-interface = self.callPackage ./joint-command-topic-hardware-interface {};
+
  joint-limits = self.callPackage ./joint-limits {};
 
  joint-state-broadcaster = self.callPackage ./joint-state-broadcaster {};
@@ -1078,11 +1006,7 @@ self: super: {
 
  kitti-metrics-eval = self.callPackage ./kitti-metrics-eval {};
 
- kobuki-core = self.callPackage ./kobuki-core {};
-
  kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
-
- kobuki-velocity-smoother = self.callPackage ./kobuki-velocity-smoother {};
 
  kompass = self.callPackage ./kompass {};
 
@@ -2124,6 +2048,8 @@ self: super: {
 
  rko-lio = self.callPackage ./rko-lio {};
 
+ rko-slam = self.callPackage ./rko-slam {};
+
  rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
 
  rmf-battery = self.callPackage ./rmf-battery {};
@@ -2241,10 +2167,6 @@ self: super: {
  rmw-desert = self.callPackage ./rmw-desert {};
 
  rmw-fastrtps-cpp = self.callPackage ./rmw-fastrtps-cpp {};
-
- rmw-fastrtps-dynamic-cpp = self.callPackage ./rmw-fastrtps-dynamic-cpp {};
-
- rmw-fastrtps-shared-cpp = self.callPackage ./rmw-fastrtps-shared-cpp {};
 
  rmw-implementation = self.callPackage ./rmw-implementation {};
 
@@ -2630,6 +2552,8 @@ self: super: {
 
  rqt-msg = self.callPackage ./rqt-msg {};
 
+ rqt-multiplot = self.callPackage ./rqt-multiplot {};
+
  rqt-play-motion-builder = self.callPackage ./rqt-play-motion-builder {};
 
  rqt-plot = self.callPackage ./rqt-plot {};
@@ -2665,6 +2589,32 @@ self: super: {
  rslidar-msg = self.callPackage ./rslidar-msg {};
 
  rtabmap = self.callPackage ./rtabmap {};
+
+ rtabmap-conversions = self.callPackage ./rtabmap-conversions {};
+
+ rtabmap-demos = self.callPackage ./rtabmap-demos {};
+
+ rtabmap-examples = self.callPackage ./rtabmap-examples {};
+
+ rtabmap-launch = self.callPackage ./rtabmap-launch {};
+
+ rtabmap-msgs = self.callPackage ./rtabmap-msgs {};
+
+ rtabmap-odom = self.callPackage ./rtabmap-odom {};
+
+ rtabmap-python = self.callPackage ./rtabmap-python {};
+
+ rtabmap-ros = self.callPackage ./rtabmap-ros {};
+
+ rtabmap-rviz-plugins = self.callPackage ./rtabmap-rviz-plugins {};
+
+ rtabmap-slam = self.callPackage ./rtabmap-slam {};
+
+ rtabmap-sync = self.callPackage ./rtabmap-sync {};
+
+ rtabmap-util = self.callPackage ./rtabmap-util {};
+
+ rtabmap-viz = self.callPackage ./rtabmap-viz {};
 
  rtcm-msgs = self.callPackage ./rtcm-msgs {};
 
@@ -2925,8 +2875,6 @@ self: super: {
  tlsf-cpp = self.callPackage ./tlsf-cpp {};
 
  topic-monitor = self.callPackage ./topic-monitor {};
-
- topic-statistics-demo = self.callPackage ./topic-statistics-demo {};
 
  topic-tools = self.callPackage ./topic-tools {};
 

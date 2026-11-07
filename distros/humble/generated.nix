@@ -1842,6 +1842,8 @@ self: super: {
 
  jrl-cmakemodules = self.callPackage ./jrl-cmakemodules {};
 
+ kairos = self.callPackage ./kairos {};
+
  kangaroo-bringup = self.callPackage ./kangaroo-bringup {};
 
  kangaroo-controller-configuration = self.callPackage ./kangaroo-controller-configuration {};
@@ -2305,6 +2307,8 @@ self: super: {
  mola-viz-imgui = self.callPackage ./mola-viz-imgui {};
 
  mola-yaml = self.callPackage ./mola-yaml {};
+
+ mono-depth-viewer = self.callPackage ./mono-depth-viewer {};
 
  motion-capture-tracking = self.callPackage ./motion-capture-tracking {};
 
@@ -3076,6 +3080,8 @@ self: super: {
 
  pinocchio = self.callPackage ./pinocchio {};
 
+ plansys2 = self.callPackage ./plansys2 {};
+
  plansys2-bringup = self.callPackage ./plansys2-bringup {};
 
  plansys2-bt-actions = self.callPackage ./plansys2-bt-actions {};
@@ -3085,6 +3091,8 @@ self: super: {
  plansys2-domain-expert = self.callPackage ./plansys2-domain-expert {};
 
  plansys2-executor = self.callPackage ./plansys2-executor {};
+
+ plansys2-kairos-plan-solver = self.callPackage ./plansys2-kairos-plan-solver {};
 
  plansys2-lifecycle-manager = self.callPackage ./plansys2-lifecycle-manager {};
 
@@ -3098,9 +3106,13 @@ self: super: {
 
  plansys2-problem-expert = self.callPackage ./plansys2-problem-expert {};
 
+ plansys2-support-py = self.callPackage ./plansys2-support-py {};
+
  plansys2-terminal = self.callPackage ./plansys2-terminal {};
 
  plansys2-tools = self.callPackage ./plansys2-tools {};
+
+ plansys2-tui-cli = self.callPackage ./plansys2-tui-cli {};
 
  play-motion2 = self.callPackage ./play-motion2 {};
 
@@ -3362,6 +3374,8 @@ self: super: {
 
  rclpy = self.callPackage ./rclpy {};
 
+ rclpy-cascade-lifecycle = self.callPackage ./rclpy-cascade-lifecycle {};
+
  rclpy-message-converter = self.callPackage ./rclpy-message-converter {};
 
  rclpy-message-converter-msgs = self.callPackage ./rclpy-message-converter-msgs {};
@@ -3387,6 +3401,8 @@ self: super: {
  realsense2-description = self.callPackage ./realsense2-description {};
 
  realtime-tools = self.callPackage ./realtime-tools {};
+
+ reduct-bridge = self.callPackage ./reduct-bridge {};
 
  replay-testing = self.callPackage ./replay-testing {};
 

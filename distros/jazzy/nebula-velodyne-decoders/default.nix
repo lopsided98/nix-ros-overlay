@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, angles, autoware-cmake, boost, nebula-core-common, nebula-core-decoders, nebula-velodyne-common, rclcpp, ros-environment, velodyne-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-nebula-velodyne-decoders";
-  version = "1.2.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_velodyne_decoders/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "f36dfeeb0c392dfa75aec254051eac84af3d2af2014e0be8a328c63622ea5081";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_velodyne_decoders/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "e56f456be162a92b53eb7c6d1d77baebb2dc0cf70089576aa0092c89baa29a90";
   };
 
   buildType = "ament_cmake";

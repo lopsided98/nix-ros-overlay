@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, rmw-connextdds-common }:
 buildRosPackage {
   pname = "ros-jazzy-rmw-connextdds";
-  version = "0.22.3-r1";
+  version = "0.22.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_connextdds-release/archive/release/jazzy/rmw_connextdds/0.22.3-1.tar.gz";
-    name = "0.22.3-1.tar.gz";
-    sha256 = "d6fb1621f3f6517bb54b646a291a628e60501484ea5b8405ae83b7bbb39b3121";
+    url = "https://github.com/ros2-gbp/rmw_connextdds-release/archive/release/jazzy/rmw_connextdds/0.22.4-1.tar.gz";
+    name = "0.22.4-1.tar.gz";
+    sha256 = "07f57d56a28c91f860b3d4469a9b1d72495caae98d70c3f19c3dac474ff26255";
   };
 
   buildType = "ament_cmake";

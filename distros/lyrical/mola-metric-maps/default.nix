@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cli11, cmake, eigen, mola-common, mola-kernel, mola-test-datasets, mp2p-icp, mrpt-maps, mrpt-viz, nanoflann-vendor, onetbb, ros-environment }:
 buildRosPackage {
   pname = "ros-lyrical-mola-metric-maps";
-  version = "3.3.2-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_metric_maps/3.3.2-1.tar.gz";
-    name = "3.3.2-1.tar.gz";
-    sha256 = "6d10d10451b32896eef9b3bae1604ef81bf0f86f1eb3b80b977ffddf58be12ba";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/lyrical/mola_metric_maps/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "17fa1d83ce3f29d5a824a2272a07daa379d69f0c91fea72fb54c0b92d17255cb";
   };
 
   buildType = "ament_cmake";

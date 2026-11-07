@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, yaml-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-constants";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_constants/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "8f825c4a090792de7ea27ee61568cf580da82e7705f63cc806b96c048e68b7e3";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_constants/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "58ad91b2b4136127db7dd6e71fabca9c2041938cc31a24fbb70ea764af613a73";
   };
 
   buildType = "ament_cmake";

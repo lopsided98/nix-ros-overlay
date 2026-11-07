@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, mimick-vendor, performance-test-fixture, rcl, rcl-action, rclcpp, rcpputils, rosidl-runtime-c, test-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rclcpp-action";
-  version = "28.1.22-r1";
+  version = "28.1.23-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/jazzy/rclcpp_action/28.1.22-1.tar.gz";
-    name = "28.1.22-1.tar.gz";
-    sha256 = "eb9f69306f04a60a3bcf8f39682760245c89db2e23cfebfadf6e00d1715e5e5d";
+    url = "https://github.com/ros2-gbp/rclcpp-release/archive/release/jazzy/rclcpp_action/28.1.23-1.tar.gz";
+    name = "28.1.23-1.tar.gz";
+    sha256 = "1bd2fc1ce9069a1c2585e2161d6419de16aef2747349b098c4e81d8e7bc04f80";
   };
 
   buildType = "ament_cmake";

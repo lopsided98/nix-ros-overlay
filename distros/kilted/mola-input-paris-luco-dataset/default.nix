@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mola-common, mola-kernel, mrpt-maps, mrpt-math }:
 buildRosPackage {
   pname = "ros-kilted-mola-input-paris-luco-dataset";
-  version = "3.1.0-r1";
+  version = "3.1.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_academic_datasets-release/archive/release/kilted/mola_input_paris_luco_dataset/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "f04b26a54ef76d25a6941eedb1c1364809cf41fe81752c2b1cdebaa07a1a9f4f";
+    url = "https://github.com/ros2-gbp/mola_academic_datasets-release/archive/release/kilted/mola_input_paris_luco_dataset/3.1.1-1.tar.gz";
+    name = "3.1.1-1.tar.gz";
+    sha256 = "1345ffc2d0ca22ace5fffc97d26c1cb41fe8329aebd64658cb3f5449b1cf795f";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rclcpp, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros, tf2-sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-message-tf-frame-transformer";
-  version = "1.1.3-r2";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/message_tf_frame_transformer-release/archive/release/kilted/message_tf_frame_transformer/1.1.3-2.tar.gz";
-    name = "1.1.3-2.tar.gz";
-    sha256 = "8dc48dcf3c9ecd1dc6705cf4fd1cbf7a9e538dff903255e24f21d51f51a3f34d";
+    url = "https://github.com/ros2-gbp/message_tf_frame_transformer-release/archive/release/kilted/message_tf_frame_transformer/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "4aa7268becc4cc476e0fea81c076671b1402d1438b6316b07c8ec7254ef44ea5";
   };
 
   buildType = "ament_cmake";

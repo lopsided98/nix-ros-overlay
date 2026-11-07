@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, geometry-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-kilted-kompass-interfaces";
-  version = "0.6.0-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kompass-release/archive/release/kilted/kompass_interfaces/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "020c6563f0b12d6a8c75df545703003fad43b259d1e69a2e9c81aa07a7954184";
+    url = "https://github.com/ros2-gbp/kompass-release/archive/release/kilted/kompass_interfaces/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "402759acdc60f2fc7b815ee8c5580f983536a57e951a9630b135ab01d32f9477";
   };
 
   buildType = "ament_cmake";

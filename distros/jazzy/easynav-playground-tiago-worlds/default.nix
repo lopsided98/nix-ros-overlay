@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, controller-manager, diff-drive-controller, easynav-playground-tiago-description, force-torque-sensor-broadcaster, gz-ros2-control, gz-sim-vendor, imu-sensor-broadcaster, joint-state-broadcaster, joint-trajectory-controller, launch, launch-ros, launch-yaml, robot-state-publisher, ros-gz-bridge, ros-gz-sim, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-easynav-playground-tiago-worlds";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/jazzy/easynav_playground_tiago_worlds/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "b0a6fd61ae99d12abc435915d0d88bf5debb12b18e75d5d4967f2202d10ddd40";
+    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/jazzy/easynav_playground_tiago_worlds/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "77b8231efff20f8c5768ed094a893a3e689fd7556f6e51818360058a1fe3b75c";
   };
 
   buildType = "ament_cmake";

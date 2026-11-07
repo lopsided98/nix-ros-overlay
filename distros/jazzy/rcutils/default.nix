@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, launch, launch-testing, launch-testing-ament-cmake, mimick-vendor, osrf-testing-tools-cpp, performance-test-fixture, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-rcutils";
-  version = "6.7.6-r1";
+  version = "6.7.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcutils-release/archive/release/jazzy/rcutils/6.7.6-1.tar.gz";
-    name = "6.7.6-1.tar.gz";
-    sha256 = "ac599f6e8efb75f48221fc34287dcf3045f86e828c9b735687e05c79a41ebba3";
+    url = "https://github.com/ros2-gbp/rcutils-release/archive/release/jazzy/rcutils/6.7.7-1.tar.gz";
+    name = "6.7.7-1.tar.gz";
+    sha256 = "5e3e3699a26cdd9aeb96f9486b1ff576de42301eecba540623bf652507fabc40";
   };
 
   buildType = "ament_cmake";

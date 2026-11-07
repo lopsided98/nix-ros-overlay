@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-eventdispatch-python";
-  version = "0.2.29-r1";
+  version = "0.2.31-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_eventdispatch-release/archive/release/kilted/eventdispatch_python/0.2.29-1.tar.gz";
-    name = "0.2.29-1.tar.gz";
-    sha256 = "c35082a3d98e4b14160fddb3a12dea1ecf25c83ed416b8e26a31ea0d8ed185ad";
+    url = "https://github.com/ros2-gbp/ros2_eventdispatch-release/archive/release/kilted/eventdispatch_python/0.2.31-1.tar.gz";
+    name = "0.2.31-1.tar.gz";
+    sha256 = "7d374d04ab8da15b82b3d91a3c9e043b1711d44c3cda66a00d68b4f9d64587c2";
   };
 
   buildType = "ament_python";

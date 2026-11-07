@@ -5,19 +5,19 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-mypy, ament-cmake-pytest, ament-lint-auto, ament-lint-common, python3Packages, rosidl-adapter }:
 buildRosPackage {
   pname = "ros-rolling-rosidl-parser";
-  version = "5.3.1-r2";
+  version = "5.3.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/rolling/rosidl_parser/5.3.1-2.tar.gz";
-    name = "5.3.1-2.tar.gz";
-    sha256 = "c13f37a8b2696c256834f9978f104f7192202705e0695b5131a5d77bff70b017";
+    url = "https://github.com/ros2-gbp/rosidl-release/archive/release/rolling/rosidl_parser/5.3.2-1.tar.gz";
+    name = "5.3.2-1.tar.gz";
+    sha256 = "277514cd53c863e8abc9be7d2d0ef52356761c9c6d8a9d74cee6faeff4eab20e";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-mypy ament-cmake-pytest ament-lint-auto ament-lint-common python3Packages.pytest ];
   propagatedBuildInputs = [ python3Packages.lark rosidl-adapter ];
-  nativeBuildInputs = [ ament-cmake ];
+  nativeBuildInputs = [ ament-cmake python3Packages.lark ];
 
   meta = {
     description = "The parser for `.idl` ROS interface files.";

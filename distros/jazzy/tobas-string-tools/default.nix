@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-string-tools";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_string_tools/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "4a6c457f7287e85f09e02f7ac014318ea9891abaf303b1fb5bf8b25b0a53169e";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_string_tools/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "87b60f1e230e365819121f108a6bf78cccad440befef0b78cd15eaf8494224af";
   };
 
   buildType = "ament_cmake";

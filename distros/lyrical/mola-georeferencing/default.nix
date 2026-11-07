@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cli11, cmake, gtsam, mola-common, mola-gtsam-factors, mola-yaml, mp2p-icp, mrpt-maps }:
 buildRosPackage {
   pname = "ros-lyrical-mola-georeferencing";
-  version = "3.0.4-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/lyrical/mola_georeferencing/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "11084f7ddf2606d212afb30c737b296169b516a51c985c31e9d6d4716c576966";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/lyrical/mola_georeferencing/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "09d1f3159f494948e79890768ad99a6838bdb0d04d57206a872cd2cb1f8b2356";
   };
 
   buildType = "cmake";

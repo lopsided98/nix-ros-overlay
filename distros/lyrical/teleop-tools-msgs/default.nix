@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-lyrical-teleop-tools-msgs";
-  version = "2.0.0-r3";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/lyrical/teleop_tools_msgs/2.0.0-3.tar.gz";
-    name = "2.0.0-3.tar.gz";
-    sha256 = "e255f00223640d2494c21984ade8b65823956156d7cb1fa9d0e347522160ea8c";
+    url = "https://github.com/ros2-gbp/teleop_tools-release/archive/release/lyrical/teleop_tools_msgs/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "6d196ee709dceca24a6e832c0c0066cbdba06ab7d2db4f6980eafaeb021dbed7";
   };
 
   buildType = "ament_cmake";

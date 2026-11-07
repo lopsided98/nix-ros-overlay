@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake }:
 buildRosPackage {
   pname = "ros-rolling-ur-client-library";
-  version = "2.15.2-r1";
+  version = "2.17.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_Client_Library-release/archive/release/rolling/ur_client_library/2.15.2-1.tar.gz";
-    name = "2.15.2-1.tar.gz";
-    sha256 = "a09bd1962da774026c2fb476cb243be587c4b30da2052e89bebbe358eb50ee3f";
+    url = "https://github.com/ros2-gbp/Universal_Robots_Client_Library-release/archive/release/rolling/ur_client_library/2.17.0-1.tar.gz";
+    name = "2.17.0-1.tar.gz";
+    sha256 = "bccb4b4fefdcd5cc3624e4fb4c07b6d488a3e34be7abdb4945352ad972d2593c";
   };
 
   buildType = "cmake";

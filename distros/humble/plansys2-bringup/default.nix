@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, plansys2-domain-expert, plansys2-executor, plansys2-lifecycle-manager, plansys2-planner, plansys2-problem-expert, rclcpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, launch, launch-ros, launch-testing, launch-testing-ament-cmake, lifecycle-msgs, plansys2-domain-expert, plansys2-executor, plansys2-lifecycle-manager, plansys2-msgs, plansys2-planner, plansys2-popf-plan-solver, plansys2-problem-expert, rcl-interfaces, rclcpp, rclcpp-lifecycle, rclpy }:
 buildRosPackage {
   pname = "ros-humble-plansys2-bringup";
-  version = "2.0.9-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/humble/plansys2_bringup/2.0.9-1.tar.gz";
-    name = "2.0.9-1.tar.gz";
-    sha256 = "32170ab857b2071dad4dcd809df81f2ebd5235ddf4effa4d7cdfc6cce56ed6e1";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/humble/plansys2_bringup/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "b5182a2f5197fe171ed84e80d279ec3384cecabde3adba73f98ce596f095ffaf";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-lint-auto ament-lint-common launch launch-testing ];
-  propagatedBuildInputs = [ launch-ros plansys2-domain-expert plansys2-executor plansys2-lifecycle-manager plansys2-planner plansys2-problem-expert rclcpp ];
+  checkInputs = [ ament-index-python ament-lint-auto ament-lint-common launch launch-testing launch-testing-ament-cmake plansys2-msgs plansys2-popf-plan-solver rcl-interfaces rclpy ];
+  propagatedBuildInputs = [ launch-ros lifecycle-msgs plansys2-domain-expert plansys2-executor plansys2-lifecycle-manager plansys2-planner plansys2-problem-expert rclcpp rclcpp-lifecycle ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

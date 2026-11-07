@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, forward-command-controller, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-kilted-effort-controllers";
-  version = "5.18.0-r1";
+  version = "5.18.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/effort_controllers/5.18.0-1.tar.gz";
-    name = "5.18.0-1.tar.gz";
-    sha256 = "2e04dc862c72682cf1cb189d6e8b045a3f207ce08249991a026423c94ad5bc2f";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/effort_controllers/5.18.1-1.tar.gz";
+    name = "5.18.1-1.tar.gz";
+    sha256 = "8fc28a0442a7225166f560d27367b8e3dcdc24ad488d0be4ea8fd8b4eddb7e3a";
   };
 
   buildType = "ament_cmake";

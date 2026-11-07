@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, backward-ros, fmt, generate-parameter-library, launch-ros, launch-testing-ament-cmake, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, trajectory-msgs, urdf }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, backward-ros, fmt, generate-parameter-library, launch-ros, launch-testing-ament-cmake, lifecycle-msgs, pluginlib, rcl-interfaces, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-lyrical-joint-limits";
-  version = "6.12.0-r1";
+  version = "6.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/lyrical/joint_limits/6.12.0-1.tar.gz";
-    name = "6.12.0-1.tar.gz";
-    sha256 = "e4564946046122e3895be6a7e4534f2e0d163a4499d468668952aa62c91ae93f";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/lyrical/joint_limits/6.13.0-1.tar.gz";
+    name = "6.13.0-1.tar.gz";
+    sha256 = "ce0d8b62bce5b743f1dc47d3ee17065c43ab41dda1deb39d3a0a219a20097b46";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-gen-version-h ros2-control-cmake ];
-  checkInputs = [ ament-cmake-gmock generate-parameter-library launch-ros launch-testing-ament-cmake ];
-  propagatedBuildInputs = [ backward-ros fmt pluginlib rclcpp rclcpp-lifecycle realtime-tools trajectory-msgs urdf ];
+  checkInputs = [ ament-cmake-gmock generate-parameter-library launch-ros launch-testing-ament-cmake lifecycle-msgs ];
+  propagatedBuildInputs = [ backward-ros fmt pluginlib rcl-interfaces rclcpp rclcpp-lifecycle realtime-tools trajectory-msgs urdf ];
   nativeBuildInputs = [ ament-cmake ament-cmake-gen-version-h ];
 
   meta = {

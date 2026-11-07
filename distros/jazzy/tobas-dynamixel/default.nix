@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-dynamixel-handler, tobas-dynamixel-msgs, tobas-dynamixel-ros-interface }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-dynamixel";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_dynamixel/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "038f3b86dfaf4ac29060b8914051479ac010d3f97cf16be7c45fc08281005ec8";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_dynamixel/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "6dae4fbe63ef4ee87e798462cb1f6afa14cb80b0767e0fba9acda393ccf7524e";
   };
 
   buildType = "ament_cmake";

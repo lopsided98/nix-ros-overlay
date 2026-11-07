@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-index-python, auto-apms-behavior-tree, auto-apms-interfaces, python3Packages, rcl-interfaces, rclpy, ros2cli, ros2param, ros2run, std-srvs }:
 buildRosPackage {
   pname = "ros-jazzy-auto-apms-ros2behavior";
-  version = "1.5.1-r1";
+  version = "1.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/jazzy/auto_apms_ros2behavior/1.5.1-1.tar.gz";
-    name = "1.5.1-1.tar.gz";
-    sha256 = "980ffb2e976e303761a3800aa7a1519792a0feefbee9f8e3356e10643bf7ed9b";
+    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/jazzy/auto_apms_ros2behavior/1.7.0-1.tar.gz";
+    name = "1.7.0-1.tar.gz";
+    sha256 = "bd9f737fdce7bd3a90ad2215e5baa8141dc3b89392b15dff922cbf4d79428243";
   };
 
   buildType = "ament_python";

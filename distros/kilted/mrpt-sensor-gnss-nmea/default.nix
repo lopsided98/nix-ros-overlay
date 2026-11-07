@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, mrpt-hwdrivers, mrpt-libros-bridge, mrpt-msgs, mrpt-sensorlib, nmea-msgs, rclcpp-components, ros-environment, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-sensor-gnss-nmea";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/kilted/mrpt_sensor_gnss_nmea/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "bd20e9edc4b55da33ed9ff3e286cf7d253e489de93aa4ff830771a00d7a81993";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/kilted/mrpt_sensor_gnss_nmea/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "b0a8612acd99fe3e517472c4f205fdad78858720ecae3e779c66ce26e5726fea";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, auto-apms-behavior-tree, auto-apms-util, rclcpp-components }:
 buildRosPackage {
   pname = "ros-rolling-auto-apms-mission";
-  version = "1.5.1-r2";
+  version = "1.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/rolling/auto_apms_mission/1.5.1-2.tar.gz";
-    name = "1.5.1-2.tar.gz";
-    sha256 = "15c8acc1eea2502826a0452b6bf1fd73e5784d608f8c008f16913a0a16c3dbaf";
+    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/rolling/auto_apms_mission/1.7.0-1.tar.gz";
+    name = "1.7.0-1.tar.gz";
+    sha256 = "d8c4f09cbfc97ac1e88a5ab8cfc481bda1bd35b187c53568abb2bd22a58a14b0";
   };
 
   buildType = "ament_cmake";

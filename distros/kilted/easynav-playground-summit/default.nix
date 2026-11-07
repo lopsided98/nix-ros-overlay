@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, easynav-bonxai-maps-manager, easynav-diagnostic-recovery, easynav-fusion-localizer, easynav-mpc-controller, easynav-mppi-controller, easynav-navmap-localizer, easynav-navmap-maps-manager, easynav-navmap-planner, easynav-playground-summit-worlds, easynav-regulated-pp-controller, easynav-serest-controller, easynav-simple-controller, easynav-system, launch, launch-ros, launch-yaml, navmap-rviz-plugin, rviz2, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-easynav-playground-summit";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/kilted/easynav_playground_summit/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "3dc90c2853bb6dd2dffecfe49f2fe221233e4447dbf0e1bd4603622a38c3ccca";
+    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/kilted/easynav_playground_summit/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "e7f156fb7da6331bd9ff0741bb138a6b50a73a317f9e9d83ce3124bdeefe9809";
   };
 
   buildType = "ament_cmake";

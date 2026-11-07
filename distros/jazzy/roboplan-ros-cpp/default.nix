@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, builtin-interfaces, eigen, geometry-msgs, pinocchio, python3, python3Packages, roboplan-core, roboplan-example-models, rosidl-generator-cpp, sensor-msgs, tf2-eigen, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-roboplan-ros-cpp";
-  version = "0.7.0-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan_ros-release/archive/release/jazzy/roboplan_ros_cpp/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "d175e3438b6103ce653615219e146970e15814f6105bdd3b490afcffc7b61416";
+    url = "https://github.com/ros2-gbp/roboplan_ros-release/archive/release/jazzy/roboplan_ros_cpp/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "ba87a8bce4ffae9f4174f353c11f395cbf23e8f2593fec55cc07f85768088eb8";
   };
 
   buildType = "ament_cmake";

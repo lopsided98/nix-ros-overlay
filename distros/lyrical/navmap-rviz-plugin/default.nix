@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, eigen, geometry-msgs, navmap-core, navmap-ros, navmap-ros-interfaces, pluginlib, rclcpp, rviz-common, rviz-default-plugins, rviz-rendering, sensor-msgs, std-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-navmap-rviz-plugin";
-  version = "0.6.0-r1";
+  version = "0.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/lyrical/navmap_rviz_plugin/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "ff14cb5bbb49f713ac1c69bd8b3bb76d55a8d84892917fa12429058f163aed0e";
+    url = "https://github.com/EasyNavigation/NavMap-release/archive/release/lyrical/navmap_rviz_plugin/0.7.0-1.tar.gz";
+    name = "0.7.0-1.tar.gz";
+    sha256 = "74c8944b73081050cb506ac64d87e3fedf6879087001fd065b3c8a92b1e66453";
   };
 
   buildType = "ament_cmake";

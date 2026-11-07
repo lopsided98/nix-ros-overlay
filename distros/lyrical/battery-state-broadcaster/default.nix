@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, control-msgs, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-battery-state-broadcaster";
-  version = "6.10.0-r1";
+  version = "6.10.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/battery_state_broadcaster/6.10.0-1.tar.gz";
-    name = "6.10.0-1.tar.gz";
-    sha256 = "625b116a739c731ad276e219604e94c3c82381bc8eba132b76820921bd2c4b59";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/lyrical/battery_state_broadcaster/6.10.1-1.tar.gz";
+    name = "6.10.1-1.tar.gz";
+    sha256 = "572634c619a76350751c17d7ca09425fcb1b67e7dd275b6d93fa58a902a09617";
   };
 
   buildType = "ament_cmake";

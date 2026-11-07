@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, eigen, generate-parameter-library, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-magnetometer-broadcaster";
-  version = "5.18.0-r1";
+  version = "5.18.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/magnetometer_broadcaster/5.18.0-1.tar.gz";
-    name = "5.18.0-1.tar.gz";
-    sha256 = "e65d4179373503f703d7af019fd64aa0373fbbe7651f662507bc44ace5c1fa05";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/magnetometer_broadcaster/5.18.1-1.tar.gz";
+    name = "5.18.1-1.tar.gz";
+    sha256 = "206ed00a9f32dbea39eca9940af8434732fc24297ffead0440ee217bc5f4277d";
   };
 
   buildType = "ament_cmake";

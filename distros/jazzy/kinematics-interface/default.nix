@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, eigen, pluginlib, rclcpp, rclcpp-lifecycle, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-jazzy-kinematics-interface";
-  version = "1.7.1-r1";
+  version = "1.7.2-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kinematics_interface-release/archive/release/jazzy/kinematics_interface/1.7.1-1.tar.gz";
-    name = "1.7.1-1.tar.gz";
-    sha256 = "e8ac5d3e38960dd2967f3ec108bea031ba3a2930b7a727c2a3f490a4559cc253";
+    url = "https://github.com/ros2-gbp/kinematics_interface-release/archive/release/jazzy/kinematics_interface/1.7.2-2.tar.gz";
+    name = "1.7.2-2.tar.gz";
+    sha256 = "2c5281e3ad8233147e2e7b0764961d7227c27920637468a3dfaaa1f522ca20fe";
   };
 
   buildType = "ament_cmake";

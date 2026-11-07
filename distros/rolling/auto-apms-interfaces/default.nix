@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, rosidl-default-generators }:
 buildRosPackage {
   pname = "ros-rolling-auto-apms-interfaces";
-  version = "1.5.1-r2";
+  version = "1.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/rolling/auto_apms_interfaces/1.5.1-2.tar.gz";
-    name = "1.5.1-2.tar.gz";
-    sha256 = "c215fb79f54531b11fc2d218725aa49dcf20fad15fd96c1ba50ced07a6cf31ad";
+    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/rolling/auto_apms_interfaces/1.7.0-1.tar.gz";
+    name = "1.7.0-1.tar.gz";
+    sha256 = "1e83d0738e6f9edcbe774d51cb1d7b6ce33e094886b65d54ed8669a76f27d91e";
   };
 
   buildType = "ament_cmake";

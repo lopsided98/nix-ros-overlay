@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-graphs, mrpt-obs, octomap, python3, python3Packages }:
+{ lib, buildRosPackage, fetchurl, cmake, eigen, lz4, mrpt-graphs, mrpt-obs, octomap, python3, python3Packages, zstd }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-maps";
-  version = "3.5.2-r1";
+  version = "3.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_maps/3.5.2-1.tar.gz";
-    name = "3.5.2-1.tar.gz";
-    sha256 = "803f44a373356e71af72b94a8600b5d0eef07a400a54435b79516f10d8ba161d";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_maps/3.6.1-1.tar.gz";
+    name = "3.6.1-1.tar.gz";
+    sha256 = "58614316d6f3b5918aa2eb2e228f5cfe4bc8e7224e6b37aea3bdea85f746916f";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake eigen octomap python3 python3Packages.pybind11 ];
-  propagatedBuildInputs = [ mrpt-graphs mrpt-obs ];
+  buildInputs = [ cmake eigen python3 python3Packages.pybind11 ];
+  propagatedBuildInputs = [ lz4 mrpt-graphs mrpt-obs octomap zstd ];
   nativeBuildInputs = [ cmake ];
 
   meta = {
