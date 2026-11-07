@@ -210,6 +210,8 @@ self: super: {
 
  audio-play = self.callPackage ./audio-play {};
 
+ audio-video-recorder = self.callPackage ./audio-video-recorder {};
+
  auto-apms-behavior-tree = self.callPackage ./auto-apms-behavior-tree {};
 
  auto-apms-behavior-tree-core = self.callPackage ./auto-apms-behavior-tree-core {};
@@ -319,6 +321,12 @@ self: super: {
  battery-state-rviz-overlay = self.callPackage ./battery-state-rviz-overlay {};
 
  behaviortree-cpp = self.callPackage ./behaviortree-cpp {};
+
+ beluga = self.callPackage ./beluga {};
+
+ beluga-amcl = self.callPackage ./beluga-amcl {};
+
+ beluga-ros = self.callPackage ./beluga-ros {};
 
  bicycle-steering-controller = self.callPackage ./bicycle-steering-controller {};
 
@@ -618,7 +626,7 @@ self: super: {
 
  dwb-plugins = self.callPackage ./dwb-plugins {};
 
- dynamixel-hardware = self.callPackage ./dynamixel-hardware {};
+ dynamic-tf-publisher = self.callPackage ./dynamic-tf-publisher {};
 
  dynamixel-hardware-interface = self.callPackage ./dynamixel-hardware-interface {};
 
@@ -735,78 +743,6 @@ self: super: {
  easynav-tools = self.callPackage ./easynav-tools {};
 
  easynav-vff-controller = self.callPackage ./easynav-vff-controller {};
-
- ecl-build = self.callPackage ./ecl-build {};
-
- ecl-command-line = self.callPackage ./ecl-command-line {};
-
- ecl-concepts = self.callPackage ./ecl-concepts {};
-
- ecl-config = self.callPackage ./ecl-config {};
-
- ecl-console = self.callPackage ./ecl-console {};
-
- ecl-containers = self.callPackage ./ecl-containers {};
-
- ecl-converters = self.callPackage ./ecl-converters {};
-
- ecl-converters-lite = self.callPackage ./ecl-converters-lite {};
-
- ecl-core = self.callPackage ./ecl-core {};
-
- ecl-core-apps = self.callPackage ./ecl-core-apps {};
-
- ecl-devices = self.callPackage ./ecl-devices {};
-
- ecl-eigen = self.callPackage ./ecl-eigen {};
-
- ecl-errors = self.callPackage ./ecl-errors {};
-
- ecl-exceptions = self.callPackage ./ecl-exceptions {};
-
- ecl-filesystem = self.callPackage ./ecl-filesystem {};
-
- ecl-formatters = self.callPackage ./ecl-formatters {};
-
- ecl-geometry = self.callPackage ./ecl-geometry {};
-
- ecl-io = self.callPackage ./ecl-io {};
-
- ecl-ipc = self.callPackage ./ecl-ipc {};
-
- ecl-license = self.callPackage ./ecl-license {};
-
- ecl-linear-algebra = self.callPackage ./ecl-linear-algebra {};
-
- ecl-lite = self.callPackage ./ecl-lite {};
-
- ecl-manipulators = self.callPackage ./ecl-manipulators {};
-
- ecl-math = self.callPackage ./ecl-math {};
-
- ecl-mobile-robot = self.callPackage ./ecl-mobile-robot {};
-
- ecl-mpl = self.callPackage ./ecl-mpl {};
-
- ecl-sigslots = self.callPackage ./ecl-sigslots {};
-
- ecl-sigslots-lite = self.callPackage ./ecl-sigslots-lite {};
-
- ecl-statistics = self.callPackage ./ecl-statistics {};
-
- ecl-streams = self.callPackage ./ecl-streams {};
-
- ecl-threads = self.callPackage ./ecl-threads {};
-
- ecl-time = self.callPackage ./ecl-time {};
-
- ecl-time-lite = self.callPackage ./ecl-time-lite {};
-
- ecl-tools = self.callPackage ./ecl-tools {};
-
- ecl-type-traits = self.callPackage ./ecl-type-traits {};
-
- ecl-utilities = self.callPackage ./ecl-utilities {};
 
  ehukai = self.callPackage ./ehukai {};
 
@@ -1158,6 +1094,8 @@ self: super: {
 
  image-view = self.callPackage ./image-view {};
 
+ image-view2 = self.callPackage ./image-view2 {};
+
  imu-complementary-filter = self.callPackage ./imu-complementary-filter {};
 
  imu-filter-madgwick = self.callPackage ./imu-filter-madgwick {};
@@ -1188,6 +1126,8 @@ self: super: {
 
  jacro = self.callPackage ./jacro {};
 
+ joint-command-topic-hardware-interface = self.callPackage ./joint-command-topic-hardware-interface {};
+
  joint-limits = self.callPackage ./joint-limits {};
 
  joint-state-broadcaster = self.callPackage ./joint-state-broadcaster {};
@@ -1210,13 +1150,27 @@ self: super: {
 
  jrl-cmakemodules = self.callPackage ./jrl-cmakemodules {};
 
+ jsk-common = self.callPackage ./jsk-common {};
+
  jsk-common-msgs = self.callPackage ./jsk-common-msgs {};
+
+ jsk-data = self.callPackage ./jsk-data {};
 
  jsk-footstep-msgs = self.callPackage ./jsk-footstep-msgs {};
 
  jsk-gui-msgs = self.callPackage ./jsk-gui-msgs {};
 
  jsk-hark-msgs = self.callPackage ./jsk-hark-msgs {};
+
+ jsk-ros1-ros2-compat = self.callPackage ./jsk-ros1-ros2-compat {};
+
+ jsk-rosbag-tools = self.callPackage ./jsk-rosbag-tools {};
+
+ jsk-tools = self.callPackage ./jsk-tools {};
+
+ jsk-topic-tools = self.callPackage ./jsk-topic-tools {};
+
+ kairos = self.callPackage ./kairos {};
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
@@ -1244,11 +1198,7 @@ self: super: {
 
  kitti-metrics-eval = self.callPackage ./kitti-metrics-eval {};
 
- kobuki-core = self.callPackage ./kobuki-core {};
-
  kobuki-ros-interfaces = self.callPackage ./kobuki-ros-interfaces {};
-
- kobuki-velocity-smoother = self.callPackage ./kobuki-velocity-smoother {};
 
  kompass = self.callPackage ./kompass {};
 
@@ -2224,6 +2174,8 @@ self: super: {
 
  plansys2-executor = self.callPackage ./plansys2-executor {};
 
+ plansys2-kairos-plan-solver = self.callPackage ./plansys2-kairos-plan-solver {};
+
  plansys2-lifecycle-manager = self.callPackage ./plansys2-lifecycle-manager {};
 
  plansys2-msgs = self.callPackage ./plansys2-msgs {};
@@ -2239,8 +2191,6 @@ self: super: {
  plansys2-support-py = self.callPackage ./plansys2-support-py {};
 
  plansys2-terminal = self.callPackage ./plansys2-terminal {};
-
- plansys2-tests = self.callPackage ./plansys2-tests {};
 
  plansys2-tools = self.callPackage ./plansys2-tools {};
 
@@ -2446,6 +2396,8 @@ self: super: {
 
  realtime-tools = self.callPackage ./realtime-tools {};
 
+ reduct-bridge = self.callPackage ./reduct-bridge {};
+
  reductstore-agent = self.callPackage ./reductstore-agent {};
 
  replay-testing = self.callPackage ./replay-testing {};
@@ -2461,6 +2413,8 @@ self: super: {
  rig-reconfigure = self.callPackage ./rig-reconfigure {};
 
  rko-lio = self.callPackage ./rko-lio {};
+
+ rko-slam = self.callPackage ./rko-slam {};
 
  rmf-api-msgs = self.callPackage ./rmf-api-msgs {};
 
@@ -2606,6 +2560,10 @@ self: super: {
 
  roboplan-cartesian-planning = self.callPackage ./roboplan-cartesian-planning {};
 
+ roboplan-common = self.callPackage ./roboplan-common {};
+
+ roboplan-core = self.callPackage ./roboplan-core {};
+
  roboplan-example-models = self.callPackage ./roboplan-example-models {};
 
  roboplan-examples = self.callPackage ./roboplan-examples {};
@@ -2697,6 +2655,8 @@ self: super: {
  ros2-medkit-sovd-service-interface = self.callPackage ./ros2-medkit-sovd-service-interface {};
 
  ros2-medkit-topic-beacon = self.callPackage ./ros2-medkit-topic-beacon {};
+
+ ros2-pulse = self.callPackage ./ros2-pulse {};
 
  ros2-snapshot = self.callPackage ./ros2-snapshot {};
 
@@ -3000,6 +2960,8 @@ self: super: {
 
  rqt-msg = self.callPackage ./rqt-msg {};
 
+ rqt-multiplot = self.callPackage ./rqt-multiplot {};
+
  rqt-play-motion-builder = self.callPackage ./rqt-play-motion-builder {};
 
  rqt-plot = self.callPackage ./rqt-plot {};
@@ -3175,6 +3137,10 @@ self: super: {
  sick-safevisionary-interfaces = self.callPackage ./sick-safevisionary-interfaces {};
 
  sick-safevisionary-tests = self.callPackage ./sick-safevisionary-tests {};
+
+ sick-scan-xd = self.callPackage ./sick-scan-xd {};
+
+ sicks300-ros2 = self.callPackage ./sicks300-ros2 {};
 
  simple-actions = self.callPackage ./simple-actions {};
 
@@ -3630,9 +3596,21 @@ self: super: {
 
  wireless-watcher = self.callPackage ./wireless-watcher {};
 
- wuji-hand2-beta1-description = self.callPackage ./wuji-hand2-beta1-description {};
+ wuji-bringup = self.callPackage ./wuji-bringup {};
 
- wuji-hand2-beta2-description = self.callPackage ./wuji-hand2-beta2-description {};
+ wuji-glove-driver = self.callPackage ./wuji-glove-driver {};
+
+ wuji-hand2-1-description = self.callPackage ./wuji-hand2-1-description {};
+
+ wuji-hand2-2-description = self.callPackage ./wuji-hand2-2-description {};
+
+ wuji-hand2-driver = self.callPackage ./wuji-hand2-driver {};
+
+ wuji-msgs = self.callPackage ./wuji-msgs {};
+
+ wuji-sdk-vendor = self.callPackage ./wuji-sdk-vendor {};
+
+ wuji-tools = self.callPackage ./wuji-tools {};
 
  xacro = self.callPackage ./xacro {};
 

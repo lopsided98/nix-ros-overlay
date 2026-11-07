@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, angles, backward-ros, control-msgs, control-toolbox, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-action, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, rsl, tl-expected-nixpkgs, trajectory-msgs, urdf }:
 buildRosPackage {
   pname = "ros-jazzy-joint-trajectory-controller";
-  version = "4.43.0-r1";
+  version = "4.43.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/joint_trajectory_controller/4.43.0-1.tar.gz";
-    name = "4.43.0-1.tar.gz";
-    sha256 = "e31112b43eb7e318f960f9e4881060bd8313a19bb678ccb321834f1bb8b7e7d5";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/joint_trajectory_controller/4.43.1-1.tar.gz";
+    name = "4.43.1-1.tar.gz";
+    sha256 = "d51e5dc8b76574eb53864ef1cc8604e1a205ebbf6cf6f60dc9e179a3ba5a19a1";
   };
 
   buildType = "ament_cmake";

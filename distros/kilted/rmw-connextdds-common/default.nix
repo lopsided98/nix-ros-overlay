@@ -5,17 +5,18 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, fastcdr, rcpputils, rcutils, rmw, rmw-dds-common, rmw-security-common, rosidl-runtime-c, rosidl-runtime-cpp, rosidl-typesupport-fastrtps-c, rosidl-typesupport-fastrtps-cpp, rosidl-typesupport-introspection-c, rosidl-typesupport-introspection-cpp, rti-connext-dds-cmake-module, tracetools }:
 buildRosPackage {
   pname = "ros-kilted-rmw-connextdds-common";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_connextdds-release/archive/release/kilted/rmw_connextdds_common/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "739a4f4fdfca2172dd9eed595fbb4f95bd7732c3526aba055f2c15d3d3f58b17";
+    url = "https://github.com/ros2-gbp/rmw_connextdds-release/archive/release/kilted/rmw_connextdds_common/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "963c79ce90b1f3caf7cc40b45354c1eeddba1a004b111768f0daae815c314f3f";
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ament-cmake fastcdr rcpputils rcutils rmw rmw-dds-common rmw-security-common rosidl-runtime-c rosidl-runtime-cpp rosidl-typesupport-fastrtps-c rosidl-typesupport-fastrtps-cpp rosidl-typesupport-introspection-c rosidl-typesupport-introspection-cpp rti-connext-dds-cmake-module tracetools ];
+  propagatedBuildInputs = [ fastcdr rcpputils rcutils rmw rmw-dds-common rmw-security-common rosidl-runtime-c rosidl-runtime-cpp rosidl-typesupport-fastrtps-c rosidl-typesupport-fastrtps-cpp rosidl-typesupport-introspection-c rosidl-typesupport-introspection-cpp rti-connext-dds-cmake-module tracetools ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

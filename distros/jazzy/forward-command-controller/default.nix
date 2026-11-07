@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, backward-ros, controller-interface, controller-manager, generate-parameter-library, hardware-interface, hardware-interface-testing, pluginlib, rclcpp, rclcpp-lifecycle, realtime-tools, ros2-control-cmake, ros2-control-test-assets, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-forward-command-controller";
-  version = "4.43.0-r1";
+  version = "4.43.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/forward_command_controller/4.43.0-1.tar.gz";
-    name = "4.43.0-1.tar.gz";
-    sha256 = "9f00fe6a0f2d53da7a1cedc59f705a27fd40f98c10a00a7803ad2d096914fa69";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/jazzy/forward_command_controller/4.43.1-1.tar.gz";
+    name = "4.43.1-1.tar.gz";
+    sha256 = "73e1041ef207611953c6284ab09b1245f26e31b973e59ebc14fd384f627e6970";
   };
 
   buildType = "ament_cmake";

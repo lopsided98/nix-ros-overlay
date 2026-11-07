@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, hardware-interface, pluginlib, rclcpp, rclcpp-lifecycle, robstride-driver, xacro }:
 buildRosPackage {
   pname = "ros-lyrical-robstride-ros2-control";
-  version = "0.2.0-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robstride_ros2-release/archive/release/lyrical/robstride_ros2_control/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "a980ac0b8dbea5949bb165f57c02c37daafaae30ef4841583cc21b3476aecc73";
+    url = "https://github.com/ros2-gbp/robstride_ros2-release/archive/release/lyrical/robstride_ros2_control/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "03f3ae33c2bb804ecc3864f2304356fc1fe24d0f3316bba7cb444b57aa9fab40";
   };
 
   buildType = "ament_cmake";

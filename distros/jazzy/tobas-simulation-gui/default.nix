@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-command-msgs-adapter, tobas-drone-core, tobas-eigen-conversions, tobas-gazebo-common, tobas-gazebo-msgs, tobas-gazebo-tools, tobas-gui-common, tobas-kdl-parser, tobas-msgs-adapter, tobas-property-client, tobas-qt-tools, tobas-ros2-tools, tobas-rqt-bridge, tobas-uadf }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-simulation-gui";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_simulation_gui/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "7ec9832f273e50dbb21f7bb3af85b1f26f8c72d128c1d9c4d70b91c12c4523bb";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_simulation_gui/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "9bf1916da59912dc7b83999180c1fc5e9ccf738ed020422b601972fbf2a0ba7a";
   };
 
   buildType = "ament_cmake";

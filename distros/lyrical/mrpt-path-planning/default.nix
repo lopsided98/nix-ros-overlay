@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-path-planning-apps, mrpt-path-planning-core }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-path-planning";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_path_planning-release/archive/release/lyrical/mrpt_path_planning/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "31840d895bc5dfcc66581f8df29485e4b512285f591c670e7cea0c14697c4839";
+    url = "https://github.com/ros2-gbp/mrpt_path_planning-release/archive/release/lyrical/mrpt_path_planning/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "33580810983cdcffddd8c3a926130dc3f54e653096fc03816578cedb961cb13a";
   };
 
   buildType = "cmake";

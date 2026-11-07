@@ -5,17 +5,18 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rmw-connextdds-common }:
 buildRosPackage {
   pname = "ros-kilted-rmw-connextdds";
-  version = "1.1.1-r1";
+  version = "1.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_connextdds-release/archive/release/kilted/rmw_connextdds/1.1.1-1.tar.gz";
-    name = "1.1.1-1.tar.gz";
-    sha256 = "61034056fd23cef9a58b4b043ced8cff2d2a427cda08622f212f867df0e1c0e4";
+    url = "https://github.com/ros2-gbp/rmw_connextdds-release/archive/release/kilted/rmw_connextdds/1.1.2-1.tar.gz";
+    name = "1.1.2-1.tar.gz";
+    sha256 = "52b6faabd2463cbae7599e4ff23ca367d18ce06e1ced59682af11e31957ae35d";
   };
 
   buildType = "ament_cmake";
+  buildInputs = [ ament-cmake ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ ament-cmake rmw-connextdds-common ];
+  propagatedBuildInputs = [ rmw-connextdds-common ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -2,25 +2,25 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, behaviortree-cpp, geometry-msgs, plansys2-executor, plansys2-msgs, rclcpp, rclcpp-action, rclcpp-lifecycle, test-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-index-cpp, ament-lint-auto, ament-lint-common, behaviortree-cpp, geometry-msgs, lifecycle-msgs, plansys2-core, plansys2-executor, plansys2-msgs, rclcpp, rclcpp-action, rclcpp-cascade-lifecycle, rclcpp-lifecycle, std-msgs, test-msgs, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-plansys2-bt-actions";
-  version = "2.0.18-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/jazzy/plansys2_bt_actions/2.0.18-1.tar.gz";
-    name = "2.0.18-1.tar.gz";
-    sha256 = "2f218aa76813cf11ccf6fa8638d73201b6c872d686cf8b3a113a44a084515c71";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/jazzy/plansys2_bt_actions/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "cb5b943d524bd617edb95994d8065d9ac1a0edcaf4a38a5942a7bd174024757a";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common geometry-msgs plansys2-msgs test-msgs ];
-  propagatedBuildInputs = [ action-msgs behaviortree-cpp plansys2-executor rclcpp rclcpp-action rclcpp-lifecycle ];
+  checkInputs = [ ament-cmake-gtest ament-cmake-ros ament-index-cpp ament-lint-auto ament-lint-common geometry-msgs plansys2-core plansys2-msgs rclcpp-cascade-lifecycle test-msgs tf2-geometry-msgs ];
+  propagatedBuildInputs = [ behaviortree-cpp lifecycle-msgs plansys2-executor rclcpp rclcpp-action rclcpp-lifecycle std-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
-    description = "This package contains the Problem Expert module for the ROS2 Planning System";
+    description = "Base classes to implement PlanSys2 actions as behavior trees (BT.CPP)";
     license = with lib.licenses; [ asl20 ];
   };
 }

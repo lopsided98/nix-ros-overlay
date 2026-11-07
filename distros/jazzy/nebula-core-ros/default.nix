@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-lint-auto, autoware-cmake, boost, diagnostic-msgs, diagnostic-updater, nebula-core-common, rclcpp, ros-environment, ros-testing, rosbag2-storage }:
 buildRosPackage {
   pname = "ros-jazzy-nebula-core-ros";
-  version = "1.2.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_core_ros/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "d299efef31c3c6722430f149f2c15b72119caa30c527d4a69d59609aa4ef289a";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_core_ros/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "7253b1d36942791d1bb6d9dd6d00c2f1f40be49188512abae098c1f674e942a0";
   };
 
   buildType = "ament_cmake";

@@ -2,22 +2,22 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-ros, ament-lint-auto, ament-lint-common, rcl-logging-interface, rcutils }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, rcl-logging-interface, rcutils }:
 buildRosPackage {
   pname = "ros-rolling-rcl-logging-noop";
-  version = "3.5.0-r1";
+  version = "3.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/rolling/rcl_logging_noop/3.5.0-1.tar.gz";
-    name = "3.5.0-1.tar.gz";
-    sha256 = "27625b07a6b9ba63f4ce21b15e75a7a9e2a1ed214d1919e3090176bd5f1066a6";
+    url = "https://github.com/ros2-gbp/rcl_logging-release/archive/release/rolling/rcl_logging_noop/3.5.1-1.tar.gz";
+    name = "3.5.1-1.tar.gz";
+    sha256 = "90ec1993baf211c82f7455a3a38412c8be22e84725ab3e174e13c4a44500f121";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake-ros ];
+  buildInputs = [ ament-cmake ament-cmake-ros-core ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ rcl-logging-interface rcutils ];
-  nativeBuildInputs = [ ament-cmake-ros ];
+  nativeBuildInputs = [ ament-cmake ament-cmake-ros-core ];
 
   meta = {
     description = "An rcl logger implementation that doesn't do anything with log messages.";

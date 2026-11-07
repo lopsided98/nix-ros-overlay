@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, eigen, eigen3-cmake-module, kinematics-interface, pinocchio, pluginlib, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-kilted-kinematics-interface-pinocchio";
-  version = "2.4.2-r1";
+  version = "2.4.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/kinematics_interface-release/archive/release/kilted/kinematics_interface_pinocchio/2.4.2-1.tar.gz";
-    name = "2.4.2-1.tar.gz";
-    sha256 = "042481bf900c4a1962e701bbf95954fc51f1bd09c0e27058ab1bfaee1ce6bcdb";
+    url = "https://github.com/ros2-gbp/kinematics_interface-release/archive/release/kilted/kinematics_interface_pinocchio/2.4.3-1.tar.gz";
+    name = "2.4.3-1.tar.gz";
+    sha256 = "d2be96a125953feecf6d87644db150669fba4c5b2c2e66e15d67e587b5e8cf10";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-constants, tobas-msgs-adapter, tobas-node }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-fake-publishers";
-  version = "2.16.6-r1";
+  version = "2.16.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_fake_publishers/2.16.6-1.tar.gz";
-    name = "2.16.6-1.tar.gz";
-    sha256 = "f1c9db03ed8bed88ef83c3056e6f27d686605020c463a6789ddb32a4935eced6";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_fake_publishers/2.16.9-1.tar.gz";
+    name = "2.16.9-1.tar.gz";
+    sha256 = "3db4c81c1f33de4cd1e06e1aeb8518a0e3a752fe5d0c7079c3dfa45256377eff";
   };
 
   buildType = "ament_cmake";

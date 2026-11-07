@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cli11, cmake, mrpt-gui, mrpt-nav, mrpt-path-planning-core, mvsim }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-path-planning-apps";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_path_planning-release/archive/release/rolling/mrpt_path_planning_apps/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "fa992750ebf9a3ff7151710d2fd88bc4a13a5b64cd6cfed581c1dbe0966cbb42";
+    url = "https://github.com/ros2-gbp/mrpt_path_planning-release/archive/release/rolling/mrpt_path_planning_apps/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "0815f17723c861eb78671407a890c48ccf4ca8313c1d87366f9b7ba66e35487f";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-axis-msgs";
-  version = "3.0.2-r1";
+  version = "3.0.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/axis_camera-release/archive/release/jazzy/axis_msgs/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "ae8cdeeea52d963483c5f97c81422b66f26e5516c4805513298c30e800c0fc49";
+    url = "https://github.com/clearpath-gbp/axis_camera-release/archive/release/jazzy/axis_msgs/3.0.3-1.tar.gz";
+    name = "3.0.3-1.tar.gz";
+    sha256 = "330b45cc4008cbf16d9e10e86b95c1c32835a3789ffa91a736ef1f5eb8fd63c4";
   };
 
   buildType = "catkin";

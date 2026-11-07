@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, diagnostic-msgs, geometry-msgs, nav-msgs, sensor-msgs, shape-msgs, std-msgs, std-srvs, stereo-msgs, trajectory-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-common-interfaces";
-  version = "5.9.3-r1";
+  version = "5.9.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/lyrical/common_interfaces/5.9.3-1.tar.gz";
-    name = "5.9.3-1.tar.gz";
-    sha256 = "cb57edbce5f757861bdb085b4583fb3db207f17eafc335c4fa763eddc1c2fa17";
+    url = "https://github.com/ros2-gbp/common_interfaces-release/archive/release/lyrical/common_interfaces/5.9.4-1.tar.gz";
+    name = "5.9.4-1.tar.gz";
+    sha256 = "8114d2b2e8308db899782791efeb80fd86bc1eec249015cfd84c3a4b22c8b1a3";
   };
 
   buildType = "ament_cmake";

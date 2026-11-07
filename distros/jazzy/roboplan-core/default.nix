@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-pytest, ament-cmake-python, eigen, gtest, pinocchio, python3, python3Packages, roboplan-common, roboplan-example-models, tinyxml2-vendor, tl-expected-nixpkgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-jazzy-roboplan-core";
-  version = "0.7.0-r1";
+  version = "0.8.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/jazzy/roboplan_core/0.7.0-1.tar.gz";
-    name = "0.7.0-1.tar.gz";
-    sha256 = "259023eb23a99b33e71b7b6ef7d334bb7decd0afa7c73695897cf005fcc348a1";
+    url = "https://github.com/ros2-gbp/roboplan-release/archive/release/jazzy/roboplan_core/0.8.0-1.tar.gz";
+    name = "0.8.0-1.tar.gz";
+    sha256 = "949747374aefb0a614f1df647f93a0707a2e970ec335772bbb0a3bd01be54338";
   };
 
   buildType = "ament_cmake";

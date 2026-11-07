@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, boost, diagnostic-msgs, diagnostic-updater, gps-msgs, libpcap, nav-msgs, novatel-gps-msgs, rclcpp, rclcpp-components, sensor-msgs, std-msgs, swri-math-util, swri-serial-util, tf2, tf2-geometry-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, boost, diagnostic-msgs, diagnostic-updater, gps-msgs, libpcap, nmea-msgs, novatel-gps-msgs, rclcpp, rclcpp-components, rtcm-msgs, sensor-msgs, swri-math-util, swri-serial-util, tf2, tf2-geometry-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-novatel-gps-driver";
-  version = "4.3.1-r1";
+  version = "5.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/novatel_gps_driver-release/archive/release/jazzy/novatel_gps_driver/4.3.1-1.tar.gz";
-    name = "4.3.1-1.tar.gz";
-    sha256 = "1179cfe444ad60ffb138ebfe67c63f5d6897f8b57677d8141605cdb72e9b4431";
+    url = "https://github.com/ros2-gbp/novatel_gps_driver-release/archive/release/jazzy/novatel_gps_driver/5.1.0-1.tar.gz";
+    name = "5.1.0-1.tar.gz";
+    sha256 = "55e9a9d47559772932f4e843e0a11c3250199acd2ae3cf364a772c93a0ef4022";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
   checkInputs = [ ament-cmake-gtest ament-index-cpp ament-lint-auto ];
-  propagatedBuildInputs = [ boost diagnostic-msgs diagnostic-updater gps-msgs libpcap nav-msgs novatel-gps-msgs rclcpp rclcpp-components sensor-msgs std-msgs swri-math-util swri-serial-util tf2 tf2-geometry-msgs ];
+  propagatedBuildInputs = [ boost diagnostic-msgs diagnostic-updater gps-msgs libpcap nmea-msgs novatel-gps-msgs rclcpp rclcpp-components rtcm-msgs sensor-msgs swri-math-util swri-serial-util tf2 tf2-geometry-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

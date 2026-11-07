@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cli11, cmake, glfw3, mola-common, mp2p-icp-core, mrpt-gui, mrpt-imgui, mrpt-imgui-vendor, mrpt-opengl, ros-environment }:
 buildRosPackage {
   pname = "ros-rolling-mp2p-icp-viz";
-  version = "3.0.2-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/rolling/mp2p_icp_viz/3.0.2-1.tar.gz";
-    name = "3.0.2-1.tar.gz";
-    sha256 = "e2619f5a03807994a76de1451a9aa9e070c4c471e78d478e61c7ba887f302c08";
+    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/rolling/mp2p_icp_viz/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "d49b7ad7aa86c12c5775096b83a0dd4b4488755d7ae7dc5f1832ae98d9c70fc6";
   };
 
   buildType = "cmake";

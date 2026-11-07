@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, diagnostic-msgs, easynav-common, easynav-core, easynav-planner, easynav-recovery, easynav-sensors, geometry-msgs, lifecycle-msgs, nav-msgs, pcl, pluginlib, rcl-interfaces, rclcpp, rclcpp-lifecycle, visualization-msgs }:
 buildRosPackage {
   pname = "ros-humble-easynav-diagnostic-recovery";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/humble/easynav_diagnostic_recovery/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "913f5f8cdf6f3464bc877f93c91be86932ca9136a4def75d7a8b4b981604b3c6";
+    url = "https://github.com/EasyNavigation/easynav_plugins-release/archive/release/humble/easynav_diagnostic_recovery/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "f384b9a6e6143f51eb8a68f74098626b9ad56f53777212aeae5da49fa94ec280";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, ament-xmllint, geometry-msgs, launch, launch-ros, launch-testing, launch-testing-ros, python3Packages, rclpy, ros2cli, rosgraph-msgs, rosidl-runtime-py, std-msgs, test-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ros2topic";
-  version = "0.42.0-r1";
+  version = "0.42.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/rolling/ros2topic/0.42.0-1.tar.gz";
-    name = "0.42.0-1.tar.gz";
-    sha256 = "3495c9db6e72af30f13192aa46d937ec9bd442ca0c0550ab8aaf80f784b98969";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/rolling/ros2topic/0.42.2-1.tar.gz";
+    name = "0.42.2-1.tar.gz";
+    sha256 = "e6196bb6704a6fd6330e3ffa4b972c1f5f0b190bf0779f5fa7f611e970a54619";
   };
 
   buildType = "ament_python";

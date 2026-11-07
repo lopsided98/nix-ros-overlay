@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, can-msgs, diagnostic-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-rolling-robstride-driver";
-  version = "0.2.0-r1";
+  version = "0.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/robstride_ros2-release/archive/release/rolling/robstride_driver/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "65d8451ac17a0d0f2bdca1d5af9944acee477e33e8a3f4d051a398e5b042af65";
+    url = "https://github.com/ros2-gbp/robstride_ros2-release/archive/release/rolling/robstride_driver/0.3.0-1.tar.gz";
+    name = "0.3.0-1.tar.gz";
+    sha256 = "10421653c50f40bc66341a8b2c5b66805e8847c4e067c7dbf927670af45c1aba";
   };
 
   buildType = "ament_cmake";

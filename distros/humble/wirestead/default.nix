@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake, spdlog }:
 buildRosPackage {
   pname = "ros-humble-wirestead";
-  version = "0.10.0-r2";
+  version = "0.10.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/wirestead-release/archive/release/humble/wirestead/0.10.0-2.tar.gz";
-    name = "0.10.0-2.tar.gz";
-    sha256 = "c7768916785dbe57a1e600e45a90c6f8b25e0fd0ff1aa7635cc6aeecffb7e901";
+    url = "https://github.com/ros2-gbp/wirestead-release/archive/release/humble/wirestead/0.10.1-1.tar.gz";
+    name = "0.10.1-1.tar.gz";
+    sha256 = "ca9e839e5453ce6024381099e2f02fc2d66f15b60fb9d53f0b85f0d8fae01da8";
   };
 
   buildType = "cmake";

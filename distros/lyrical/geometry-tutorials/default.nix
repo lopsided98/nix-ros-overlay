@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-lyrical-geometry-tutorials";
-  version = "0.7.0-r3";
+  version = "0.7.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/geometry_tutorials-release/archive/release/lyrical/geometry_tutorials/0.7.0-3.tar.gz";
-    name = "0.7.0-3.tar.gz";
-    sha256 = "5424422086db46c0050bb455b84acf1a807c5ebd239812c39e203cb8422d024a";
+    url = "https://github.com/ros2-gbp/geometry_tutorials-release/archive/release/lyrical/geometry_tutorials/0.7.1-1.tar.gz";
+    name = "0.7.1-1.tar.gz";
+    sha256 = "f7f1ac62d3ef6009730e87f7700ca21e88697012c6ca5141aed795ec83ccff7e";
   };
 
   buildType = "ament_cmake";

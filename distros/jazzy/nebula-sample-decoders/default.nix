@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, nebula-core-common, nebula-core-decoders, nebula-sample-common, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-nebula-sample-decoders";
-  version = "1.2.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_sample_decoders/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "6105c42ce871fa0bb1315002da83a0df62bed41aca14551580c619e87dc11fe1";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_sample_decoders/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "24f64a8a05d21bf6afb308433ea23e92836a15cf4c8a83e3945d0741149323cf";
   };
 
   buildType = "ament_cmake";

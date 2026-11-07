@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mola-pose-list, mola-test-datasets, mp2p-icp, mrpt-maps, mrpt-obs }:
 buildRosPackage {
   pname = "ros-rolling-mola-relocalization";
-  version = "3.3.2-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_relocalization/3.3.2-1.tar.gz";
-    name = "3.3.2-1.tar.gz";
-    sha256 = "290f01851f8c8e4b84ea06e8266adc71c978843859d2c080c7e38d79713a3082";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/rolling/mola_relocalization/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "43904f2624145aa25457f9f051c2ca2cf8f13b6f34e734cae9542630b74ed3a7";
   };
 
   buildType = "cmake";

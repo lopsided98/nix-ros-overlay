@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, mrpt-hwdrivers, mrpt-libros-bridge, mrpt-msgs, mrpt-sensorlib, rclcpp-components, ros-environment, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-mrpt-sensor-bumblebee-stereo";
-  version = "0.4.0-r1";
+  version = "0.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/humble/mrpt_sensor_bumblebee_stereo/0.4.0-1.tar.gz";
-    name = "0.4.0-1.tar.gz";
-    sha256 = "044e669fa5004bc2e7c4c3c7a8ffcf93814c638833a9379f8eea062e3f5dfe5d";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/humble/mrpt_sensor_bumblebee_stereo/0.4.1-1.tar.gz";
+    name = "0.4.1-1.tar.gz";
+    sha256 = "78c4adc5b6aca7a6ddf6fc3cd7a43b51fe717c09fd39925d9945c4043d363c8b";
   };
 
   buildType = "ament_cmake";

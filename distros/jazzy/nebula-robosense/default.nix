@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-lint-auto, autoware-cmake, boost, diagnostic-msgs, diagnostic-updater, nebula-core-common, nebula-core-decoders, nebula-core-hw-interfaces, nebula-core-ros, nebula-msgs, nebula-robosense-common, nebula-robosense-decoders, nebula-robosense-hw-interfaces, rclcpp, rclcpp-components, robosense-msgs, ros-environment, ros-testing, sensor-msgs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-nebula-robosense";
-  version = "1.2.0-r1";
+  version = "1.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_robosense/1.2.0-1.tar.gz";
-    name = "1.2.0-1.tar.gz";
-    sha256 = "d19ad41af0a1d6ffde00ab20e784a8b9e8b1fb45d4f33c9899a0d07404522e99";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_robosense/1.3.1-1.tar.gz";
+    name = "1.3.1-1.tar.gz";
+    sha256 = "9123f066a59d374302169887a97a6190808ba8dc8fa6ae95b1e5ceb5e4e9c654";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, angles, backward-ros, geometry-msgs, nav2-common, nav2-controller, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-regulated-pure-pursuit-controller, nav2-ros-common, nav2-util, pluginlib, rcl-interfaces, rclcpp, rclcpp-lifecycle, tf2, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-nav2-rotation-shim-controller";
-  version = "1.5.2-r2";
+  version = "1.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_rotation_shim_controller/1.5.2-2.tar.gz";
-    name = "1.5.2-2.tar.gz";
-    sha256 = "e3726d408b348d95a9da34a0788e6ebf183481d010626ae77facb4a42f1bd040";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_rotation_shim_controller/1.5.3-1.tar.gz";
+    name = "1.5.3-1.tar.gz";
+    sha256 = "8c2769ff957900b918d71c5a4b4b4b86023a757ee83fb6104a9e3083a9f8dd92";
   };
 
   buildType = "ament_cmake";

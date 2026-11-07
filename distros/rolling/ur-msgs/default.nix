@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, control-msgs, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-rolling-ur-msgs";
-  version = "3.0.0-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ur_msgs-release/archive/release/rolling/ur_msgs/3.0.0-1.tar.gz";
-    name = "3.0.0-1.tar.gz";
-    sha256 = "343253a6db2574dcc2248e2544e9456695f41d3ed067844c03da2b9345b6b926";
+    url = "https://github.com/ros2-gbp/ur_msgs-release/archive/release/rolling/ur_msgs/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "4cb9cc93dc21c409d66ee227f39cc4b91a42618325d0f7a8dcad84a93a86deba";
   };
 
   buildType = "ament_cmake";

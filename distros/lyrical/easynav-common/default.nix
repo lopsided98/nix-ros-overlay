@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, geometry-msgs, rclcpp, rclcpp-lifecycle, rcutils, tf2-msgs, tf2-ros, yaets }:
 buildRosPackage {
   pname = "ros-lyrical-easynav-common";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/lyrical/easynav_common/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "6e26333c492b46a553aefc381aa4621ed4f2e584386ef5b8245daefbcf4fcbbc";
+    url = "https://github.com/EasyNavigation/EasyNavigation-release/archive/release/lyrical/easynav_common/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "0585cd00c7288216ee122d3bf64930f73fd54a98bfa5ae45572bb456d4d8f06d";
   };
 
   buildType = "ament_cmake";

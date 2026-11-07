@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-jazzy-ptz-action-server-msgs";
-  version = "2.0.3-r1";
+  version = "2.0.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/clearpath-gbp/ptz_action_server-release/archive/release/jazzy/ptz_action_server_msgs/2.0.3-1.tar.gz";
-    name = "2.0.3-1.tar.gz";
-    sha256 = "c4116fd2ed160052999e8cbba4173f9ce072843cf5daa68d18742a5c806b8f45";
+    url = "https://github.com/clearpath-gbp/ptz_action_server-release/archive/release/jazzy/ptz_action_server_msgs/2.0.4-1.tar.gz";
+    name = "2.0.4-1.tar.gz";
+    sha256 = "3894d69467fc6ae20b3d214e6b851e5d2c282211145116ce198700aa75678afc";
   };
 
   buildType = "ament_cmake";

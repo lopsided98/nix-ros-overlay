@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, diagnostic-msgs, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-control-msgs";
-  version = "6.10.0-r1";
+  version = "6.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/control_msgs-release/archive/release/lyrical/control_msgs/6.10.0-1.tar.gz";
-    name = "6.10.0-1.tar.gz";
-    sha256 = "37c15af9a1dada5b0da1d562db9dc090c2e7729e36041fb80db631ee4c9e1a0c";
+    url = "https://github.com/ros2-gbp/control_msgs-release/archive/release/lyrical/control_msgs/6.11.0-1.tar.gz";
+    name = "6.11.0-1.tar.gz";
+    sha256 = "810cd1c3b4a7326f9c0f8425832f3b775dbd29b4274d3b9f86353fa8b2711144";
   };
 
   buildType = "ament_cmake";

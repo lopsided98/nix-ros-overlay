@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cli11, cmake, eigen, mola-common, mola-kernel, mola-test-datasets, mp2p-icp, mrpt-maps, mrpt-viz, nanoflann-vendor, onetbb, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-mola-metric-maps";
-  version = "3.3.2-r1";
+  version = "3.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_metric_maps/3.3.2-1.tar.gz";
-    name = "3.3.2-1.tar.gz";
-    sha256 = "7023a9df4b7aa307e9ac681ca2814015158b7e45fd99aa2f1d5acaa02d4a0753";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/jazzy/mola_metric_maps/3.4.0-1.tar.gz";
+    name = "3.4.0-1.tar.gz";
+    sha256 = "a9b3f43c849e7c7675635bc2c6f2ee9a97f8ac6d913b822cffa017c5239ca9ba";
   };
 
   buildType = "ament_cmake";

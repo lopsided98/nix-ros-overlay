@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-gtest, ament-cmake-python, ament-index-cpp, ament-index-python, auto-apms-interfaces, generate-parameter-library, pluginlib, rclcpp, rclcpp-action, rcpputils, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-lyrical-auto-apms-util";
-  version = "1.5.1-r3";
+  version = "1.7.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/lyrical/auto_apms_util/1.5.1-3.tar.gz";
-    name = "1.5.1-3.tar.gz";
-    sha256 = "69c99d80c5326451fd23be06bb299639e762907a6892d05832ee20baab031100";
+    url = "https://github.com/ros2-gbp/autoapms-release/archive/release/lyrical/auto_apms_util/1.7.0-1.tar.gz";
+    name = "1.7.0-1.tar.gz";
+    sha256 = "cfd68d6b8c415e7783b6c5665ec33968d51160ffcacf28e239fac5ea53608fdb";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, xacro }:
 buildRosPackage {
   pname = "ros-lyrical-easynav-playground-omni-description";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/lyrical/easynav_playground_omni_description/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "36b01d649e03cc59987a1da6c3e610b832b08999bd491288f9ab22ea7e9b9d51";
+    url = "https://github.com/EasyNavigation/easynav_playgrounds-release/archive/release/lyrical/easynav_playground_omni_description/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "80d0b1a64e5539f8daf827673829f94033878547245cb4a38c71e81d42134ca3";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, hardware-interface, pal-statistics-msgs, rclcpp, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-rolling-cm-topic-hardware-component";
-  version = "1.1.0-r1";
+  version = "1.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/topic_based_hardware-release/archive/release/rolling/cm_topic_hardware_component/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "3c5daa6b227d6da20d1fcf0509de8970257173dfde3e474fae723fcf229516da";
+    url = "https://github.com/ros2-gbp/topic_based_hardware-release/archive/release/rolling/cm_topic_hardware_component/1.2.0-1.tar.gz";
+    name = "1.2.0-1.tar.gz";
+    sha256 = "542ab6cb1ffd66305247b6f7196dae79e626d05eb499de32e877e7cf2a7ac3f9";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-humble-ros2cli-test-interfaces";
-  version = "0.18.20-r1";
+  version = "0.18.21-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/humble/ros2cli_test_interfaces/0.18.20-1.tar.gz";
-    name = "0.18.20-1.tar.gz";
-    sha256 = "207d9daae4238d7afd9292efbc5d95c3f685bdcc9940d5f866969a13b09aec9c";
+    url = "https://github.com/ros2-gbp/ros2cli-release/archive/release/humble/ros2cli_test_interfaces/0.18.21-1.tar.gz";
+    name = "0.18.21-1.tar.gz";
+    sha256 = "c43d3d3135dc5020f8c2a100140ad03571df3fd214c49ad6fd87187605a23019";
   };
 
   buildType = "ament_cmake";

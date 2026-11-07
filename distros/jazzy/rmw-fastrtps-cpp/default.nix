@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, fastcdr, fastrtps, fastrtps-cmake-module, osrf-testing-tools-cpp, rcpputils, rcutils, rmw, rmw-dds-common, rmw-fastrtps-shared-cpp, rosidl-dynamic-typesupport, rosidl-dynamic-typesupport-fastrtps, rosidl-runtime-c, rosidl-runtime-cpp, rosidl-typesupport-fastrtps-c, rosidl-typesupport-fastrtps-cpp, test-msgs, tracetools }:
 buildRosPackage {
   pname = "ros-jazzy-rmw-fastrtps-cpp";
-  version = "8.4.4-r1";
+  version = "8.4.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmw_fastrtps-release/archive/release/jazzy/rmw_fastrtps_cpp/8.4.4-1.tar.gz";
-    name = "8.4.4-1.tar.gz";
-    sha256 = "b19beff50d6ee341d54805c2b777a14e63094fdfa6fd71084221ee86114f1437";
+    url = "https://github.com/ros2-gbp/rmw_fastrtps-release/archive/release/jazzy/rmw_fastrtps_cpp/8.4.5-1.tar.gz";
+    name = "8.4.5-1.tar.gz";
+    sha256 = "4fa4876d84f337883a5088205616bb5297734278e43c9a8222913de4cc8744b6";
   };
 
   buildType = "ament_cmake";

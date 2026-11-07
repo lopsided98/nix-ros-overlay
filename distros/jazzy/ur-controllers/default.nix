@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, angles, control-msgs, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, joint-trajectory-controller, lifecycle-msgs, pluginlib, rclcpp-lifecycle, rcutils, realtime-tools, ros2-control-test-assets, std-msgs, std-srvs, tf2-geometry-msgs, tf2-ros, trajectory-msgs, ur-dashboard-msgs, ur-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ur-controllers";
-  version = "3.9.0-r1";
+  version = "3.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/jazzy/ur_controllers/3.9.0-1.tar.gz";
-    name = "3.9.0-1.tar.gz";
-    sha256 = "14e8b2f694ee5daeb0a828af0174b9affcc7c054521b251579b9382c74e3fc4a";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/jazzy/ur_controllers/3.10.0-1.tar.gz";
+    name = "3.10.0-1.tar.gz";
+    sha256 = "dce01fb912aa2e1b020d841267d4338758cfdcdd039a9dd8c5745223fb212807";
   };
 
   buildType = "ament_cmake";

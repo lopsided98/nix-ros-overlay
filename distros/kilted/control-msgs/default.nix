@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, builtin-interfaces, diagnostic-msgs, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, trajectory-msgs }:
 buildRosPackage {
   pname = "ros-kilted-control-msgs";
-  version = "6.10.0-r1";
+  version = "6.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/control_msgs-release/archive/release/kilted/control_msgs/6.10.0-1.tar.gz";
-    name = "6.10.0-1.tar.gz";
-    sha256 = "5be11e9c03a8dbbc01aff68d28216814fbee3211ecaeded27cf5398f1eff2a87";
+    url = "https://github.com/ros2-gbp/control_msgs-release/archive/release/kilted/control_msgs/6.11.0-1.tar.gz";
+    name = "6.11.0-1.tar.gz";
+    sha256 = "625918fb366d6e130d37b8067a530a232beeddd9c39fdd15ac8647814908d750";
   };
 
   buildType = "ament_cmake";

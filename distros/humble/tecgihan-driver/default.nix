@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, geometry-msgs, python3Packages, rclpy, robot-state-publisher, rviz2, xacro }:
 buildRosPackage {
   pname = "ros-humble-tecgihan-driver";
-  version = "0.3.0-r1";
+  version = "0.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/tecgihan/tecgihan_driver-release/archive/release/humble/tecgihan_driver/0.3.0-1.tar.gz";
-    name = "0.3.0-1.tar.gz";
-    sha256 = "e4b868c39b2b25ac9bee9f04a7bb2811a3f285f4f8fe57aa8cf7d9fe85cc6392";
+    url = "https://github.com/tecgihan/tecgihan_driver-release/archive/release/humble/tecgihan_driver/0.3.1-1.tar.gz";
+    name = "0.3.1-1.tar.gz";
+    sha256 = "e60b276810e0a75bc839793058e1da41445d71a565bf75ae732fbef99fe2ef15";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-vendor-package, git, glfw3, patchelf, pkg-config }:
 buildRosPackage {
   pname = "ros-kilted-mujoco-vendor";
-  version = "0.1.0-r1";
+  version = "0.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mujoco_vendor-release/archive/release/kilted/mujoco_vendor/0.1.0-1.tar.gz";
-    name = "0.1.0-1.tar.gz";
-    sha256 = "8e3704b6eb92307f12f6d069852911229d987f19d9f57089905fa038cf5b23b8";
+    url = "https://github.com/ros2-gbp/mujoco_vendor-release/archive/release/kilted/mujoco_vendor/0.1.2-1.tar.gz";
+    name = "0.1.2-1.tar.gz";
+    sha256 = "a8f5d0826d35db31b91246931520b38d86e9a64c4741e8d73129a47661c633d7";
   };
 
   buildType = "ament_cmake";

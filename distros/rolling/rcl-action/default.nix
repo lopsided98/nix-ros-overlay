@@ -5,19 +5,19 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-ros, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, osrf-testing-tools-cpp, rcl, rcutils, rmw, rmw-implementation-cmake, rosidl-runtime-c, test-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rcl-action";
-  version = "10.5.2-r1";
+  version = "10.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rcl-release/archive/release/rolling/rcl_action/10.5.2-1.tar.gz";
-    name = "10.5.2-1.tar.gz";
-    sha256 = "dd7958630692e46ea0d46767e871a522fff3e88f1200a016cefcf3f33e8b37b1";
+    url = "https://github.com/ros2-gbp/rcl-release/archive/release/rolling/rcl_action/10.5.3-1.tar.gz";
+    name = "10.5.3-1.tar.gz";
+    sha256 = "5d938fed2c1fe9205b775e2b9f07c2a582b37920295cb759dd98119bad7c90b0";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake-gen-version-h ament-cmake-ros ];
-  checkInputs = [ ament-cmake-gtest ament-cmake-ros-core ament-lint-auto ament-lint-common osrf-testing-tools-cpp rmw-implementation-cmake test-msgs ];
-  propagatedBuildInputs = [ action-msgs rcl rcutils rmw rosidl-runtime-c ];
-  nativeBuildInputs = [ ament-cmake-gen-version-h ament-cmake-ros ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ament-lint-common osrf-testing-tools-cpp rmw-implementation-cmake test-msgs ];
+  propagatedBuildInputs = [ action-msgs ament-cmake-ros-core rcl rcutils rmw rosidl-runtime-c ];
+  nativeBuildInputs = [ ament-cmake-gen-version-h ament-cmake-ros ament-cmake-ros-core ];
 
   meta = {
     description = "Package containing a C-based ROS action implementation";

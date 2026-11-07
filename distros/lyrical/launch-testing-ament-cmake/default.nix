@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-copyright, ament-cmake-test, launch-testing }:
 buildRosPackage {
   pname = "ros-lyrical-launch-testing-ament-cmake";
-  version = "3.9.8-r1";
+  version = "3.9.9-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/launch-release/archive/release/lyrical/launch_testing_ament_cmake/3.9.8-1.tar.gz";
-    name = "3.9.8-1.tar.gz";
-    sha256 = "e6403a8f61f5e0c3b9d2c7cd763ac28127a3a4f21779d608f6e8fe7416b9751c";
+    url = "https://github.com/ros2-gbp/launch-release/archive/release/lyrical/launch_testing_ament_cmake/3.9.9-1.tar.gz";
+    name = "3.9.9-1.tar.gz";
+    sha256 = "54878c9c9cbb7384dcec9dfe07ca72f62e8efd443194a63f6186fe8ec0e8b76b";
   };
 
   buildType = "ament_cmake";

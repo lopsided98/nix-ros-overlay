@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, bullet, cmake, eigen, gbenchmark, gz-cmake-vendor, gz-common-vendor, gz-dartsim-vendor, gz-math-vendor, gz-plugin-vendor, gz-utils-vendor, sdformat-vendor }:
 buildRosPackage {
   pname = "ros-kilted-gz-physics-vendor";
-  version = "0.2.6-r1";
+  version = "0.2.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_physics_vendor-release/archive/release/kilted/gz_physics_vendor/0.2.6-1.tar.gz";
-    name = "0.2.6-1.tar.gz";
-    sha256 = "4fc4b2571a1d30a563387aa486007e53f1791aec63226da42a293ecc499dcd83";
+    url = "https://github.com/ros2-gbp/gz_physics_vendor-release/archive/release/kilted/gz_physics_vendor/0.2.7-1.tar.gz";
+    name = "0.2.7-1.tar.gz";
+    sha256 = "79d1dac395d6559a0b7e8e72950644a2b9b98875a3d22462b9e17a8a2311b2d2";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cmake-vendor-package cmake ];
 
   meta = {
-    description = "Vendor package for: gz-physics8 8.4.0
+    description = "Vendor package for: gz-physics8 8.5.0
 
     Gazebo Physics : Physics classes and functions for robot applications";
     license = with lib.licenses; [ asl20 ];

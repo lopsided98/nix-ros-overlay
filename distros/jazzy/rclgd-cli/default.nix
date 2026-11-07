@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, ament-lint-auto, ament-lint-common, ros2cli }:
 buildRosPackage {
   pname = "ros-jazzy-rclgd-cli";
-  version = "2.1.0-r3";
+  version = "3.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/Ozuba/rclgd-release/archive/release/jazzy/rclgd_cli/2.1.0-3.tar.gz";
-    name = "2.1.0-3.tar.gz";
-    sha256 = "5bf8eb9bbcb1f331da573ec4bb6bde70d95435879f9aa0a42d2fc8f8019903cf";
+    url = "https://github.com/Ozuba/rclgd-release/archive/release/jazzy/rclgd_cli/3.0.0-1.tar.gz";
+    name = "3.0.0-1.tar.gz";
+    sha256 = "6056332fc04d189fc7d8a263660d73c7d1d08e6630f9e15124b791f8c0560301";
   };
 
   buildType = "ament_python";

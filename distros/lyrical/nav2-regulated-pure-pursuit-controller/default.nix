@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-ros, ament-lint-auto, ament-lint-common, angles, backward-ros, geometry-msgs, nav2-common, nav2-controller, nav2-core, nav2-costmap-2d, nav2-msgs, nav2-ros-common, nav2-util, pluginlib, rcl-interfaces, rclcpp, rclcpp-lifecycle, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-nav2-regulated-pure-pursuit-controller";
-  version = "1.5.2-r2";
+  version = "1.5.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_regulated_pure_pursuit_controller/1.5.2-2.tar.gz";
-    name = "1.5.2-2.tar.gz";
-    sha256 = "6ddbbabaa19c4a1ca7fc610c6b8e8f4bae686ca685d9e1685c9b193207591d48";
+    url = "https://github.com/ros2-gbp/navigation2-release/archive/release/lyrical/nav2_regulated_pure_pursuit_controller/1.5.3-1.tar.gz";
+    name = "1.5.3-1.tar.gz";
+    sha256 = "07cd80adf62640306ac5d2c0cae27276553e8f20fffc3c35d6e97fb3fe7dec9b";
   };
 
   buildType = "ament_cmake";

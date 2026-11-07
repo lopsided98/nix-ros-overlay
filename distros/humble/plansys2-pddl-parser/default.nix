@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, plansys2-msgs, rclcpp, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-index-cpp, ament-lint-auto, ament-lint-common, plansys2-msgs, rclcpp }:
 buildRosPackage {
   pname = "ros-humble-plansys2-pddl-parser";
-  version = "2.0.9-r1";
+  version = "4.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/IntelligentRoboticsLabs/ros2_planning_system-release/archive/release/humble/plansys2_pddl_parser/2.0.9-1.tar.gz";
-    name = "2.0.9-1.tar.gz";
-    sha256 = "1267fa667dae732ae36a8ffbae96a94fad768143a2f650f049dc34ae601dde32";
+    url = "https://github.com/ros2-gbp/ros2_planning_system-release/archive/release/humble/plansys2_pddl_parser/4.0.0-1.tar.gz";
+    name = "4.0.0-1.tar.gz";
+    sha256 = "b929ed9a1071b66368b4394cd5b961d9ea40ba1aa29d7a9012fb0618bcea04f8";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  checkInputs = [ ament-cmake-gtest ament-index-cpp ament-lint-auto ament-lint-common ];
-  propagatedBuildInputs = [ plansys2-msgs rclcpp std-msgs ];
+  checkInputs = [ ament-cmake-gtest ament-index-cpp ament-lint-auto ament-lint-common rclcpp ];
+  propagatedBuildInputs = [ plansys2-msgs ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {
