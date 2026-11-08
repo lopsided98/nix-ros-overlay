@@ -542,12 +542,12 @@ in {
   });
 
   int2dds-ffi-vendor = let
-    version = "0.1.8";
+    version = "1.0.1";
   in
     (lib.patchVendorUrl rosSuper.int2dds-ffi-vendor {
       originalUrl = "\${INT2DDS_FFI_BASE_URL}/\${_asset}";
-      url = "https://github.com/IntellectusCorp/int2dds_ffi_vendor/releases/download/v${version}/int2dds-ffi-${version}-linux.tar.gz";
-      hash = "sha256-GlWVLddZmoN9ATBAWaAi/bZEqmpIjkuNGb7rv65HSyQ=";
+      url = "https://github.com/IntellectusCorp/int2DDS/releases/download/v${version}/int2dds-${version}-linux-x86_64.tar.gz";
+      hash = "sha256-mv2c3dHMZhPQyF+nqxB97AYGihu5Oq4u5wGZxU+7WEo=";
     }).overrideAttrs ({
       postPatch ? "", ...
     }: {
