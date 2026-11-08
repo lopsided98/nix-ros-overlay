@@ -78,6 +78,20 @@ in {
       '';
   });
 
+  geodesy = rosSuper.geodesy.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Adding missing include for setprecision
+      # https://github.com/ros-geographic-info/geographic_info/pull/64
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-geographic-info/geographic_info/commit/f70b81a438172cd7a066dc1b18314d70e0eb6389.patch?full_index=1";
+        hash = "sha256-yvQbrJP/mfx7TToNkfCk6SC6wBGqSwXVh4nJIUp6XCQ=";
+        relative = "geodesy";
+      })
+    ];
+  });
+
   google-benchmark-vendor = lib.patchExternalProjectGit rosSuper.google-benchmark-vendor {
     url = "https://github.com/google/benchmark.git";
     rev = "344117638c8ff7e239044fd0fa7085839fc03021";
