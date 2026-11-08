@@ -623,6 +623,21 @@ in {
     ];
   });
 
+  rmf-traffic-ros2 = rosSuper.rmf-traffic-ros2.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix "rclcpp/time.hpp: No such file or directory" (use CMake
+      # targets instead of old-style _LIBRARIES/_INCLUDE_DIRS variables)
+      # https://github.com/open-rmf/rmf_ros2/pull/580
+      (self.fetchpatch2 {
+        url = "https://github.com/open-rmf/rmf_ros2/commit/91c7d5b5e3e54cf37c54ef4c963af902f3c5fe91.patch?full_index=1";
+        hash = "sha256-0tNRXHzzQwglnaXFkIqRBH/ODlYWJGk6p6ZP64rKj9w=";
+        relative = "rmf_traffic_ros2";
+      })
+    ];
+  });
+
   roboplan-examples = rosSuper.roboplan-examples.overrideAttrs ({
     buildInputs ? [], ...
   }: {
