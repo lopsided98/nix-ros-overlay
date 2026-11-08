@@ -731,6 +731,19 @@ in {
     '';
   });
 
+  topic-tools = rosSuper.topic-tools.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # https://github.com/ros-tooling/topic_tools/pull/157
+      (self.fetchpatch2 {
+        url = "https://github.com/ros-tooling/topic_tools/commit/ff3175d5339e10174f05de1a69c65d7e8c368fae.patch?full_index=1";
+        hash = "sha256-HnfFUgaHKdFdz1xtmZmJBxjQ0p8+jeElZAjc8M5ctaU=";
+        stripLen = 1;
+      })
+    ];
+  });
+
   turtlesim = rosSuper.turtlesim.overrideAttrs ({
     nativeBuildInputs ? [], ...
   }: {
