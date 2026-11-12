@@ -111,6 +111,10 @@ let
       tsid
       ;
 
+    # also available in nixpkgs, but under a different name
+    # ref. https://github.com/ros/rosdistro/pull/53263
+    example-robot-descriptions = self.python3Packages.example-robot-data;
+
     foonathan-memory-vendor = rosSuper.foonathan-memory-vendor.overrideAttrs ({
       propagatedBuildInputs ? [], ...
     }: {
