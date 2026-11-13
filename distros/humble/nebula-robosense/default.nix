@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-lint-auto, autoware-cmake, boost, diagnostic-msgs, diagnostic-updater, nebula-core-common, nebula-core-decoders, nebula-core-hw-interfaces, nebula-core-ros, nebula-msgs, nebula-robosense-common, nebula-robosense-decoders, nebula-robosense-hw-interfaces, rclcpp, rclcpp-components, robosense-msgs, ros-environment, ros-testing, sensor-msgs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-humble-nebula-robosense";
-  version = "1.3.1-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_robosense/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "73b9fd524d4c92dfc7bb84c1f5fdc6644f7c76ce706eaf6831eb3300dd8168ba";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_robosense/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "58916eb1ccc241b6e4d221a0ff1a3cd5d2f6ba8f79013a9a438c2ecfbfef49af";
   };
 
   buildType = "ament_cmake";

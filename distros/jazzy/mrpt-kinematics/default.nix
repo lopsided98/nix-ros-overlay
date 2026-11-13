@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-viz, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-kinematics";
-  version = "3.6.1-r1";
+  version = "3.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_kinematics/3.6.1-1.tar.gz";
-    name = "3.6.1-1.tar.gz";
-    sha256 = "ec29ee5f78643a330480435a63844c0f0fa69221baf944ed35052187b833f276";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_kinematics/3.6.2-1.tar.gz";
+    name = "3.6.2-1.tar.gz";
+    sha256 = "8cfe06d24301f640641235e282ad01b44621d8ddc3fff29d36dac3bd4bd7d983";
   };
 
   buildType = "cmake";

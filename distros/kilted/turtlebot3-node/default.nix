@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, dynamixel-sdk, geometry-msgs, message-filters, nav-msgs, rclcpp, rcutils, sensor-msgs, std-msgs, std-srvs, tf2, tf2-ros, turtlebot3-msgs }:
 buildRosPackage {
   pname = "ros-kilted-turtlebot3-node";
-  version = "2.3.6-r1";
+  version = "2.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/kilted/turtlebot3_node/2.3.6-1.tar.gz";
-    name = "2.3.6-1.tar.gz";
-    sha256 = "bc133b997d87699f0bc1c83de33e2e5ad40068a38e0e6c4af2dcf1761db7a23c";
+    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/kilted/turtlebot3_node/2.3.7-1.tar.gz";
+    name = "2.3.7-1.tar.gz";
+    sha256 = "d1c01cd1565c98cb9b999ef2eb2753605457cd4685beb1a5a71083ce7aa72fd5";
   };
 
   buildType = "ament_cmake";

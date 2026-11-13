@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, audio-common-msgs, boost, gst_all_1, jsk-ros1-ros2-compat, message-filters, rclcpp, ros-environment, sensor-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-audio-video-recorder";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/lyrical/audio_video_recorder/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "ecd9bb04812bed440b24bf62db9521c1cda42f2473b99362f6f4ad637f7d9aec";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/lyrical/audio_video_recorder/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "4b5d9e41fab82097c465294a76ede3b8331f77096fcebe4c0ad8f7cdd8c1344f";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "ROS package for recording image and audio synchronously";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

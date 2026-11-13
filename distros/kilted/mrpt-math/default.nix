@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-common, mrpt-io, mrpt-random, mrpt-serialization, mrpt-system, nanoflann-vendor, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-math";
-  version = "3.6.1-r1";
+  version = "3.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_math/3.6.1-1.tar.gz";
-    name = "3.6.1-1.tar.gz";
-    sha256 = "1cf5d7c8b980ab171ed00d6bd4ecbe75a395cf0a5ed3e51bc4e5c1f996ecce50";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_math/3.6.2-1.tar.gz";
+    name = "3.6.2-1.tar.gz";
+    sha256 = "773418c20e945bd512028635584d38f470dea92d0fb22356b8524a0db14f19dd";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-eventdispatch-ros2-interfaces";
-  version = "0.2.31-r1";
+  version = "0.2.32-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_eventdispatch-release/archive/release/kilted/eventdispatch_ros2_interfaces/0.2.31-1.tar.gz";
-    name = "0.2.31-1.tar.gz";
-    sha256 = "c14797a85cdb9c6b76ccf1d031f2ca90f77e65bf8510420968b7337ea39868f2";
+    url = "https://github.com/ros2-gbp/ros2_eventdispatch-release/archive/release/kilted/eventdispatch_ros2_interfaces/0.2.32-1.tar.gz";
+    name = "0.2.32-1.tar.gz";
+    sha256 = "61c74fac666c495efcb45727e9f13c8082f9895d98b3256a196cd2f2b988706b";
   };
 
   buildType = "ament_cmake";

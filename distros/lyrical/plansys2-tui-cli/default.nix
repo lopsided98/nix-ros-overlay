@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_python3-pygments, ament-copyright, ament-flake8, ament-pep257, plansys2-msgs, python3Packages, rclpy, ros2cli }:
+{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, plansys2-msgs, python3Packages, rclpy, ros2cli }:
 buildRosPackage {
   pname = "ros-lyrical-plansys2-tui-cli";
   version = "4.0.0-r1";
@@ -15,7 +15,7 @@ buildRosPackage {
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 python3Packages.pytest ];
-  propagatedBuildInputs = [ _unresolved_python3-pygments plansys2-msgs python3Packages.platformdirs python3Packages.rich python3Packages.typing-extensions rclpy ros2cli ];
+  propagatedBuildInputs = [ plansys2-msgs python3Packages.platformdirs python3Packages.pygments python3Packages.rich python3Packages.typing-extensions rclpy ros2cli ];
 
   meta = {
     description = "PlanSys2 TUI (Textual) and ros2cli tools.";

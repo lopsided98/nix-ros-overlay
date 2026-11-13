@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-hls-lfcd-lds-driver";
-  version = "2.1.0-r2";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/hls_lfcd_lds_driver-release/archive/release/kilted/hls_lfcd_lds_driver/2.1.0-2.tar.gz";
-    name = "2.1.0-2.tar.gz";
-    sha256 = "b406ab1f44bf90901974ac6b7e30dad50ac46444ebfecff86c4d6c3e8167ddfe";
+    url = "https://github.com/ros2-gbp/hls_lfcd_lds_driver-release/archive/release/kilted/hls_lfcd_lds_driver/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "a2e11f842e647f6d61bb58fb8200fd3bcfd42ab676ad72a1e2968aa9e40c5bf0";
   };
 
   buildType = "ament_cmake";

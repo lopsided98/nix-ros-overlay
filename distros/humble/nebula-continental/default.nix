@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-lint-auto, autoware-cmake, autoware-sensing-msgs, continental-msgs, continental-srvs, diagnostic-msgs, diagnostic-updater, geometry-msgs, message-filters, nebula-continental-common, nebula-continental-decoders, nebula-continental-hw-interfaces, nebula-core-common, nebula-core-ros, nebula-msgs, radar-msgs, rclcpp, rclcpp-components, ros-environment, ros-testing, rosbag2-cpp, sensor-msgs, sync-tooling-msgs, tf2-ros, visualization-msgs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-humble-nebula-continental";
-  version = "1.3.1-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_continental/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "8509f89be5ee6718ac862eabd16d261496a0dfd4825da3d83df438f9ec51fbf4";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_continental/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "ab1f3bcbb197ac22320e565b679c1550d65594c0245634bcc5cc25bb99b23fe9";
   };
 
   buildType = "ament_cmake";

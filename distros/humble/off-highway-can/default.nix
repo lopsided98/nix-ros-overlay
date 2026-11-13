@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, can-msgs, diagnostic-updater, rclcpp, ros2-socketcan-msgs }:
 buildRosPackage {
   pname = "ros-humble-off-highway-can";
-  version = "0.12.0-r1";
+  version = "0.13.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/off_highway_sensor_drivers-release/archive/release/humble/off_highway_can/0.12.0-1.tar.gz";
-    name = "0.12.0-1.tar.gz";
-    sha256 = "13cb11d7b86a078396dc2e0f3df466d5e97e77b7e596be1524abff6db7d5433d";
+    url = "https://github.com/ros2-gbp/off_highway_sensor_drivers-release/archive/release/humble/off_highway_can/0.13.0-1.tar.gz";
+    name = "0.13.0-1.tar.gz";
+    sha256 = "520df443c090313aa2643b37bc9cb6652b7611c61f5c05d29b6b810e58f16489";
   };
 
   buildType = "ament_cmake";

@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_libcereal-dev, ament-cmake, ament-cmake-gmock, ament-cmake-python, gtest, proxsuite, python3, python3Packages, roboplan-common, roboplan-core, roboplan-example-models }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-python, cereal, gtest, proxsuite, python3, python3Packages, roboplan-common, roboplan-core, roboplan-example-models }:
 buildRosPackage {
   pname = "ros-jazzy-roboplan-oink";
   version = "0.8.0-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python python3 python3Packages.nanobind python3Packages.typing-extensions ];
   checkInputs = [ ament-cmake-gmock gtest roboplan-example-models ];
-  propagatedBuildInputs = [ _unresolved_libcereal-dev proxsuite roboplan-common roboplan-core ];
+  propagatedBuildInputs = [ cereal proxsuite roboplan-common roboplan-core ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ];
 
   meta = {
