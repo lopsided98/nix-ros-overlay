@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-cmake-python, curl, example-interfaces, rclcpp, rclpy, ros-environment, rosbag2-py, rosidl-runtime-py, std-msgs, std-srvs, tf2-ros, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-kilted-jsk-ros1-ros2-compat";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/kilted/jsk_ros1_ros2_compat/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "fbb7d8b6dc552e099fbad5f078705f4cb9bfdc6d7070e999b208f5afe7a7629c";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/kilted/jsk_ros1_ros2_compat/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "e3ac5177080bd4e03bb234e956d8a69b6cf1baad7eb479bd320174e5723e71ab";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Shared ROS1(roscpp/rospy)/ROS2(rclcpp/rclpy) compatibility helpers used across jsk_common's ROS2-ported packages, so that individual packages don't each maintain their own copy.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

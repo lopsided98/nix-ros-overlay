@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-ros, ament-lint-auto, ament-lint-common, can-msgs, off-highway-can, off-highway-general-purpose-radar-msgs, rclcpp, rclcpp-components, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-off-highway-general-purpose-radar";
-  version = "1.3.0-r2";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/off_highway_sensor_drivers-release/archive/release/rolling/off_highway_general_purpose_radar/1.3.0-2.tar.gz";
-    name = "1.3.0-2.tar.gz";
-    sha256 = "4d1d1459cc74990f428ad6cbba5378b7219ad9f16af177ddaee1f4231b9e1b26";
+    url = "https://github.com/ros2-gbp/off_highway_sensor_drivers-release/archive/release/rolling/off_highway_general_purpose_radar/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "5dd163a0b3fc8e15720a435c628bf3059ab1287399571787656699d198f42830";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nav2-bringup }:
 buildRosPackage {
   pname = "ros-kilted-turtlebot3-navigation2";
-  version = "2.3.6-r1";
+  version = "2.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/kilted/turtlebot3_navigation2/2.3.6-1.tar.gz";
-    name = "2.3.6-1.tar.gz";
-    sha256 = "fa392ecdb8f3dd1d583df000bb909ff988575a87513ce62a20c14de55b75f0ef";
+    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/kilted/turtlebot3_navigation2/2.3.7-1.tar.gz";
+    name = "2.3.7-1.tar.gz";
+    sha256 = "89a27e0b1d80734d8918c1b3593d24a7c938a8ee0a61889d04845e43b0ff2f17";
   };
 
   buildType = "ament_cmake";

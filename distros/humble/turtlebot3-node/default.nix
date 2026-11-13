@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, dynamixel-sdk, geometry-msgs, message-filters, nav-msgs, rclcpp, rcutils, sensor-msgs, std-msgs, std-srvs, tf2, tf2-ros, turtlebot3-msgs }:
 buildRosPackage {
   pname = "ros-humble-turtlebot3-node";
-  version = "2.3.6-r1";
+  version = "2.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/humble/turtlebot3_node/2.3.6-1.tar.gz";
-    name = "2.3.6-1.tar.gz";
-    sha256 = "5d2c001df2f3e7625b6f69043d4b2e9f53cd9b1e0e0a7c7b23499e414fa038ad";
+    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/humble/turtlebot3_node/2.3.7-1.tar.gz";
+    name = "2.3.7-1.tar.gz";
+    sha256 = "d40f945c9e28057427a8bd88f6d35c8a4847f38c1061a1690daa36a7a4faf8c9";
   };
 
   buildType = "ament_cmake";

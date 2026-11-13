@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, nebula-continental-common, nebula-core-common, nebula-core-hw-interfaces, nebula-msgs }:
 buildRosPackage {
   pname = "ros-humble-nebula-continental-hw-interfaces";
-  version = "1.3.1-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_continental_hw_interfaces/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "6235d3ac87e2f8502db4666b3b74b6d3b0ccdf791d2244767314c7762252c011";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_continental_hw_interfaces/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "d61ca3bb93613f9dc2e1bc2bf80cbef70b2e9217b7d33ce56177881cd2cbe7c8";
   };
 
   buildType = "ament_cmake";

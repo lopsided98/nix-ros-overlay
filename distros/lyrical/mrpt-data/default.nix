@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-data";
-  version = "3.6.1-r1";
+  version = "3.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_data/3.6.1-1.tar.gz";
-    name = "3.6.1-1.tar.gz";
-    sha256 = "b27560f53339fa17bf5dd2e5483dd56ee69bc80d21cfed60dd0bf2acd6e97374";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_data/3.6.2-1.tar.gz";
+    name = "3.6.2-1.tar.gz";
+    sha256 = "6f2d5a48f2d19633d8aa399ad06f0becae49f5dd9157b1592a395f6874381760";
   };
 
   buildType = "cmake";

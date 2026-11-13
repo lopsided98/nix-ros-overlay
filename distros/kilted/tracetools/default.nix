@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gtest, ament-cmake-ros-core, ament-lint-auto, ament-lint-common, lttng-tools, lttng-ust, pkg-config }:
 buildRosPackage {
   pname = "ros-kilted-tracetools";
-  version = "8.6.0-r2";
+  version = "8.6.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/kilted/tracetools/8.6.0-2.tar.gz";
-    name = "8.6.0-2.tar.gz";
-    sha256 = "e9c992227c7858cf760e6c85a7dc3c1df45ed8941a6bfbf9bce9bb8912377a29";
+    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/kilted/tracetools/8.6.1-1.tar.gz";
+    name = "8.6.1-1.tar.gz";
+    sha256 = "537e3547382a07bf3df984c3df56304af3b26c9bc754db875f731891b35da573";
   };
 
   buildType = "ament_cmake";

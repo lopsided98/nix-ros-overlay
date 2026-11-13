@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-gtest, ament-cmake-lint-cmake, ament-index-cpp, ament-lint, data-tamer-cpp, data-tamer-msgs, foxglove-sdk-vendor, geographic-msgs, geometry-msgs, mcap-vendor, nlohmann_json, protobuf, rcl-interfaces, rclcpp, rclcpp-components, rclcpp-lifecycle, rosidl-default-generators, sensor-msgs, tf2-msgs, visualization-msgs }:
+{ lib, buildRosPackage, fetchurl, _unresolved_data_tamer_cpp, _unresolved_data_tamer_msgs, ament-cmake, ament-cmake-clang-format, ament-cmake-cppcheck, ament-cmake-gtest, ament-cmake-lint-cmake, ament-index-cpp, ament-lint, foxglove-sdk-vendor, geographic-msgs, geometry-msgs, mcap-vendor, nlohmann_json, protobuf, rcl-interfaces, rclcpp, rclcpp-components, rclcpp-lifecycle, rosidl-default-generators, sensor-msgs, tf2-msgs, visualization-msgs }:
 buildRosPackage {
   pname = "ros-rolling-data-tamer-tools";
   version = "0.11.0-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake rosidl-default-generators ];
   checkInputs = [ ament-cmake-clang-format ament-cmake-cppcheck ament-cmake-gtest ament-cmake-lint-cmake ament-index-cpp ament-lint ];
-  propagatedBuildInputs = [ data-tamer-cpp data-tamer-msgs foxglove-sdk-vendor geographic-msgs geometry-msgs mcap-vendor nlohmann_json protobuf rcl-interfaces rclcpp rclcpp-components rclcpp-lifecycle sensor-msgs tf2-msgs visualization-msgs ];
+  propagatedBuildInputs = [ _unresolved_data_tamer_cpp _unresolved_data_tamer_msgs foxglove-sdk-vendor geographic-msgs geometry-msgs mcap-vendor nlohmann_json protobuf rcl-interfaces rclcpp rclcpp-components rclcpp-lifecycle sensor-msgs tf2-msgs visualization-msgs ];
   nativeBuildInputs = [ ament-cmake rosidl-default-generators ];
 
   meta = {

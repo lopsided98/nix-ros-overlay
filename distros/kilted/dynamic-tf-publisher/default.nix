@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, jsk-ros1-ros2-compat, launch-ros, launch-testing, launch-testing-ament-cmake, rclpy, ros-environment, rosidl-default-generators, rosidl-default-runtime, std-msgs, tf-transformations, tf2-ros, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-kilted-dynamic-tf-publisher";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/kilted/dynamic_tf_publisher/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "542297f69d6ed61e39f239c7cb4b2146d9be1a0f37e2589d2324dfd523f9adb2";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/kilted/dynamic_tf_publisher/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "ab5bbedd0224dfc1f995761e686f17c897a6403c500890b6851edd1a87815410";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "dynamically set the tf trensformation";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

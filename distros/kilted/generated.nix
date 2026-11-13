@@ -2600,6 +2600,8 @@ self: super: {
 
  robotiq-description = self.callPackage ./robotiq-description {};
 
+ robotis-interfaces = self.callPackage ./robotis-interfaces {};
+
  robotraconteur = self.callPackage ./robotraconteur {};
 
  robotraconteur-companion = self.callPackage ./robotraconteur-companion {};

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python }:
 buildRosPackage {
   pname = "ros-lyrical-dynamixel-sdk";
-  version = "4.0.3-r3";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/lyrical/dynamixel_sdk/4.0.3-3.tar.gz";
-    name = "4.0.3-3.tar.gz";
-    sha256 = "09aea17bc05b5b2fa1d3baceefe26be5ff092cc881ab0aa2dc0f915917b1c542";
+    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/lyrical/dynamixel_sdk/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "3a0cd850c9a8cd7ba85edc2491fc8f8939bdcb1e7af1fb245889e309360858ba";
   };
 
   buildType = "ament_cmake";

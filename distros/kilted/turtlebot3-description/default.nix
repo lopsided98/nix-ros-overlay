@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, urdf, xacro }:
 buildRosPackage {
   pname = "ros-kilted-turtlebot3-description";
-  version = "2.3.6-r1";
+  version = "2.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/kilted/turtlebot3_description/2.3.6-1.tar.gz";
-    name = "2.3.6-1.tar.gz";
-    sha256 = "cb7f315467eb5b67a1a1a456639e7a02690c76ddddf6bf436a9010cc2894b9bf";
+    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/kilted/turtlebot3_description/2.3.7-1.tar.gz";
+    name = "2.3.7-1.tar.gz";
+    sha256 = "bc378fa55349a845b53050fda9ddb6cadd93e7d405d7334801eb1f8ad0fafebc";
   };
 
   buildType = "ament_cmake";

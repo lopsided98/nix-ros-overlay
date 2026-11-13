@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, cv-bridge, geometry-msgs, image-geometry, image-transport, jsk-ros1-ros2-compat, launch-ros, launch-testing, launch-testing-ament-cmake, message-filters, pcl, pcl-conversions, python3Packages, rclcpp, ros-environment, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-image-view2";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/kilted/image_view2/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "2036ead91b220c6bd6469ce46f7de9dfcf6cc59303c820c2e18c7e755df76e04";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/kilted/image_view2/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "05bcf457134a85e9882c6f13319b90b32887f6a17cc43c9836bf189497551b1d";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "A simple viewer for ROS image topics with draw-on features";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

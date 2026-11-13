@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, audio-common-msgs, boost, gst_all_1, jsk-ros1-ros2-compat, message-filters, rclcpp, ros-environment, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-audio-video-recorder";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/jazzy/audio_video_recorder/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "6a7765314c4822eda62c233010735e8dc7bf9703a08cc70318eb2415fa0ad3bb";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/jazzy/audio_video_recorder/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "d85cb71a63f099d237124f44514d8dfdab88926e6b03a1a12fa214240245ab06";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "ROS package for recording image and audio synchronously";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

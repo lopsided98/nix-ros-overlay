@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, audio-video-recorder, dynamic-tf-publisher, image-view2, jsk-rosbag-tools, jsk-tools, jsk-topic-tools, ros-environment }:
 buildRosPackage {
   pname = "ros-lyrical-jsk-common";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/lyrical/jsk_common/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "e5e9d2d70b9cf7f3d1b47d92bd93254487a17313b0eb3f8f99c2fe9bbb6716c4";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/lyrical/jsk_common/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "a54bb739f7d98af469bd6077d4024065d79f67e7bc663500446a1a8b0800330e";
   };
 
   buildType = "ament_cmake";
@@ -20,6 +20,6 @@ buildRosPackage {
 
   meta = {
     description = "<p>Metapackage that contains commonly used toolset for jsk-ros-pkg</p>";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, lz4, mrpt-graphs, mrpt-obs, octomap, python3, python3Packages, zstd }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-maps";
-  version = "3.6.1-r1";
+  version = "3.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_maps/3.6.1-1.tar.gz";
-    name = "3.6.1-1.tar.gz";
-    sha256 = "91340d4763c82215064679c322aa44b06b6c4d21f1034eba09610a25d639ce3a";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_maps/3.6.2-1.tar.gz";
+    name = "3.6.2-1.tar.gz";
+    sha256 = "102dbda86d289dd057bc6dafb54044cf9f617c66aaa4af109b6f8bed1406869b";
   };
 
   buildType = "cmake";

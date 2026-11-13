@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-orbbec-camera-msgs";
-  version = "2.10.6-r1";
+  version = "2.10.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/orbbec_camera_v2-release/archive/release/humble/orbbec_camera_msgs/2.10.6-1.tar.gz";
-    name = "2.10.6-1.tar.gz";
-    sha256 = "b3c2a7332051bd87692a3e743ad89d52c30a0566ae5864b51a754e75d2e3f639";
+    url = "https://github.com/ros2-gbp/orbbec_camera_v2-release/archive/release/humble/orbbec_camera_msgs/2.10.7-1.tar.gz";
+    name = "2.10.7-1.tar.gz";
+    sha256 = "8d44cf266d46e6bd657a964629e486a16df1e011b8c622b404b8022465c5b6a7";
   };
 
   buildType = "ament_cmake";

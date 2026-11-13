@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-gui, mrpt-libapps-cli, wxwidgets_3_2 }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-libapps-gui";
-  version = "3.6.1-r1";
+  version = "3.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_libapps_gui/3.6.1-1.tar.gz";
-    name = "3.6.1-1.tar.gz";
-    sha256 = "5bf3b35679e8c0c91e631c2ff48b21dd0d844c30833487db004cf84a5e3ec03d";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_libapps_gui/3.6.2-1.tar.gz";
+    name = "3.6.2-1.tar.gz";
+    sha256 = "19b6fe0e30f714c784fb25a979637472b709dbbae0fcd5ab68fcac6f2c3b8861";
   };
 
   buildType = "cmake";

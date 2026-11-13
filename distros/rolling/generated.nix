@@ -202,6 +202,8 @@ self: super: {
 
  audio-play = self.callPackage ./audio-play {};
 
+ audio-video-recorder = self.callPackage ./audio-video-recorder {};
+
  auto-apms-behavior-tree = self.callPackage ./auto-apms-behavior-tree {};
 
  auto-apms-behavior-tree-core = self.callPackage ./auto-apms-behavior-tree-core {};
@@ -506,10 +508,6 @@ self: super: {
 
  cyclonedds = self.callPackage ./cyclonedds {};
 
- data-tamer-cpp = self.callPackage ./data-tamer-cpp {};
-
- data-tamer-msgs = self.callPackage ./data-tamer-msgs {};
-
  data-tamer-tools = self.callPackage ./data-tamer-tools {};
 
  delphi-esr-msgs = self.callPackage ./delphi-esr-msgs {};
@@ -564,6 +562,8 @@ self: super: {
 
  dummy-sensors = self.callPackage ./dummy-sensors {};
 
+ dynamic-tf-publisher = self.callPackage ./dynamic-tf-publisher {};
+
  dynamixel-hardware-interface = self.callPackage ./dynamixel-hardware-interface {};
 
  dynamixel-interfaces = self.callPackage ./dynamixel-interfaces {};
@@ -579,6 +579,12 @@ self: super: {
  dynamixel-workbench-msgs = self.callPackage ./dynamixel-workbench-msgs {};
 
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
+
+ dynmsg = self.callPackage ./dynmsg {};
+
+ dynmsg-demo = self.callPackage ./dynmsg-demo {};
+
+ dynmsg-msgs = self.callPackage ./dynmsg-msgs {};
 
  ehukai = self.callPackage ./ehukai {};
 
@@ -611,6 +617,8 @@ self: super: {
  eventdispatch-ros2-interfaces = self.callPackage ./eventdispatch-ros2-interfaces {};
 
  example-interfaces = self.callPackage ./example-interfaces {};
+
+ example-robot-descriptions = self.callPackage ./example-robot-descriptions {};
 
  examples-rclcpp-async-client = self.callPackage ./examples-rclcpp-async-client {};
 
@@ -671,26 +679,6 @@ self: super: {
  ffmpeg-image-transport-msgs = self.callPackage ./ffmpeg-image-transport-msgs {};
 
  ffmpeg-image-transport-tools = self.callPackage ./ffmpeg-image-transport-tools {};
-
- ffw = self.callPackage ./ffw {};
-
- ffw-bringup = self.callPackage ./ffw-bringup {};
-
- ffw-description = self.callPackage ./ffw-description {};
-
- ffw-joint-trajectory-command-broadcaster = self.callPackage ./ffw-joint-trajectory-command-broadcaster {};
-
- ffw-joystick-controller = self.callPackage ./ffw-joystick-controller {};
-
- ffw-moveit-config = self.callPackage ./ffw-moveit-config {};
-
- ffw-robot-manager = self.callPackage ./ffw-robot-manager {};
-
- ffw-spring-actuator-controller = self.callPackage ./ffw-spring-actuator-controller {};
-
- ffw-swerve-drive-controller = self.callPackage ./ffw-swerve-drive-controller {};
-
- ffw-teleop = self.callPackage ./ffw-teleop {};
 
  fibar-lib = self.callPackage ./fibar-lib {};
 
@@ -928,6 +916,8 @@ self: super: {
 
  image-view = self.callPackage ./image-view {};
 
+ image-view2 = self.callPackage ./image-view2 {};
+
  imu-complementary-filter = self.callPackage ./imu-complementary-filter {};
 
  imu-filter-madgwick = self.callPackage ./imu-filter-madgwick {};
@@ -979,6 +969,26 @@ self: super: {
  joy-tester = self.callPackage ./joy-tester {};
 
  jrl-cmakemodules = self.callPackage ./jrl-cmakemodules {};
+
+ jsk-common = self.callPackage ./jsk-common {};
+
+ jsk-common-msgs = self.callPackage ./jsk-common-msgs {};
+
+ jsk-data = self.callPackage ./jsk-data {};
+
+ jsk-footstep-msgs = self.callPackage ./jsk-footstep-msgs {};
+
+ jsk-gui-msgs = self.callPackage ./jsk-gui-msgs {};
+
+ jsk-hark-msgs = self.callPackage ./jsk-hark-msgs {};
+
+ jsk-ros1-ros2-compat = self.callPackage ./jsk-ros1-ros2-compat {};
+
+ jsk-rosbag-tools = self.callPackage ./jsk-rosbag-tools {};
+
+ jsk-tools = self.callPackage ./jsk-tools {};
+
+ jsk-topic-tools = self.callPackage ./jsk-topic-tools {};
 
  kartech-linear-actuator-msgs = self.callPackage ./kartech-linear-actuator-msgs {};
 
@@ -1852,11 +1862,7 @@ self: super: {
 
  play-motion-builder-msgs = self.callPackage ./play-motion-builder-msgs {};
 
- plotjuggler = self.callPackage ./plotjuggler {};
-
  plotjuggler-msgs = self.callPackage ./plotjuggler-msgs {};
-
- plotjuggler-ros = self.callPackage ./plotjuggler-ros {};
 
  pluginlib = self.callPackage ./pluginlib {};
 
@@ -1885,6 +1891,8 @@ self: super: {
  pose-broadcaster = self.callPackage ./pose-broadcaster {};
 
  pose-cov-ops = self.callPackage ./pose-cov-ops {};
+
+ posedetection-msgs = self.callPackage ./posedetection-msgs {};
 
  protobuf-comm = self.callPackage ./protobuf-comm {};
 
@@ -2228,6 +2236,8 @@ self: super: {
 
  robotiq-description = self.callPackage ./robotiq-description {};
 
+ robotis-interfaces = self.callPackage ./robotis-interfaces {};
+
  robotraconteur = self.callPackage ./robotraconteur {};
 
  robotraconteur-companion = self.callPackage ./robotraconteur-companion {};
@@ -2261,6 +2271,8 @@ self: super: {
  ros2acceleration = self.callPackage ./ros2acceleration {};
 
  ros2action = self.callPackage ./ros2action {};
+
+ ros2ai = self.callPackage ./ros2ai {};
 
  ros2bag = self.callPackage ./ros2bag {};
 
@@ -2743,6 +2755,8 @@ self: super: {
  spacenav = self.callPackage ./spacenav {};
 
  spdlog-vendor = self.callPackage ./spdlog-vendor {};
+
+ speech-recognition-msgs = self.callPackage ./speech-recognition-msgs {};
 
  spinnaker-camera-driver = self.callPackage ./spinnaker-camera-driver {};
 

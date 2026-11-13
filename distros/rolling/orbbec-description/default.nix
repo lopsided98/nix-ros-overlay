@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-python, ament-lint-auto, ament-lint-common, launch, launch-ros, robot-state-publisher, rviz2, xacro }:
 buildRosPackage {
   pname = "ros-rolling-orbbec-description";
-  version = "2.10.6-r3";
+  version = "2.10.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/orbbec_camera_v2-release/archive/release/rolling/orbbec_description/2.10.6-3.tar.gz";
-    name = "2.10.6-3.tar.gz";
-    sha256 = "9b96e9f76efd59360fb9a150bc331bad37f0391d749a93af268b0f28a4b21d91";
+    url = "https://github.com/ros2-gbp/orbbec_camera_v2-release/archive/release/rolling/orbbec_description/2.10.7-1.tar.gz";
+    name = "2.10.7-1.tar.gz";
+    sha256 = "7ddc27b5ebeda7cfae15eaf63a8e108eb07ac39755056ff98344f91aa7ca407c";
   };
 
   buildType = "ament_cmake";

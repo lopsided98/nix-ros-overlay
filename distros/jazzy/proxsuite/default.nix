@@ -2,7 +2,7 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_libcereal-dev, catch2, cmake, doxygen, eigen, git, graphviz, jrl-cmakemodules, matio, python3, python3Packages, simde }:
+{ lib, buildRosPackage, fetchurl, catch2, cereal, cmake, doxygen, eigen, git, graphviz, jrl-cmakemodules, matio, python3, python3Packages, simde }:
 buildRosPackage {
   pname = "ros-jazzy-proxsuite";
   version = "0.8.2-r1";
@@ -16,7 +16,7 @@ buildRosPackage {
   buildType = "cmake";
   buildInputs = [ cmake doxygen git graphviz jrl-cmakemodules python3 ];
   checkInputs = [ catch2 matio ];
-  propagatedBuildInputs = [ _unresolved_libcereal-dev eigen python3Packages.nanobind python3Packages.numpy python3Packages.scipy simde ];
+  propagatedBuildInputs = [ cereal eigen python3Packages.nanobind python3Packages.numpy python3Packages.scipy simde ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

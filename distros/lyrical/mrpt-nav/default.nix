@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mrpt-kinematics, mrpt-maps, mrpt-viz, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-nav";
-  version = "3.6.1-r1";
+  version = "3.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_nav/3.6.1-1.tar.gz";
-    name = "3.6.1-1.tar.gz";
-    sha256 = "7d4d043d3f25782dd0dd98843367f2c2376eb06f58188a464006b1893e0b88a9";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_nav/3.6.2-1.tar.gz";
+    name = "3.6.2-1.tar.gz";
+    sha256 = "8b3e3b946bbbb5d6488ed1878bb429f4f7f3daf7db4911715db32ec3b66a7892";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-hls-lfcd-lds-driver";
-  version = "2.1.1-r3";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/hls_lfcd_lds_driver-release/archive/release/lyrical/hls_lfcd_lds_driver/2.1.1-3.tar.gz";
-    name = "2.1.1-3.tar.gz";
-    sha256 = "270c9e4ae30eeefeaf943b211610139da12f77e6182afb9670238ab837dc8fe2";
+    url = "https://github.com/ros2-gbp/hls_lfcd_lds_driver-release/archive/release/lyrical/hls_lfcd_lds_driver/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "a850cacf96a99291fc5f1f3888d35f584db10ad31b38fb4a52f5682e9831ac4a";
   };
 
   buildType = "ament_cmake";

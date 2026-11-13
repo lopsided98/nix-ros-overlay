@@ -832,26 +832,6 @@ self: super: {
 
  ffmpeg-image-transport-tools = self.callPackage ./ffmpeg-image-transport-tools {};
 
- ffw = self.callPackage ./ffw {};
-
- ffw-bringup = self.callPackage ./ffw-bringup {};
-
- ffw-description = self.callPackage ./ffw-description {};
-
- ffw-joint-trajectory-command-broadcaster = self.callPackage ./ffw-joint-trajectory-command-broadcaster {};
-
- ffw-joystick-controller = self.callPackage ./ffw-joystick-controller {};
-
- ffw-moveit-config = self.callPackage ./ffw-moveit-config {};
-
- ffw-robot-manager = self.callPackage ./ffw-robot-manager {};
-
- ffw-spring-actuator-controller = self.callPackage ./ffw-spring-actuator-controller {};
-
- ffw-swerve-drive-controller = self.callPackage ./ffw-swerve-drive-controller {};
-
- ffw-teleop = self.callPackage ./ffw-teleop {};
-
  fibar-lib = self.callPackage ./fibar-lib {};
 
  fields2cover = self.callPackage ./fields2cover {};
@@ -907,6 +887,8 @@ self: super: {
  franka-inria-inverse-dynamics-solver = self.callPackage ./franka-inria-inverse-dynamics-solver {};
 
  frequency-cam = self.callPackage ./frequency-cam {};
+
+ fsm-localisation = self.callPackage ./fsm-localisation {};
 
  fuse = self.callPackage ./fuse {};
 
@@ -2600,6 +2582,8 @@ self: super: {
 
  robotiq-description = self.callPackage ./robotiq-description {};
 
+ robotis-interfaces = self.callPackage ./robotis-interfaces {};
+
  robotraconteur = self.callPackage ./robotraconteur {};
 
  robotraconteur-companion = self.callPackage ./robotraconteur-companion {};
@@ -2667,6 +2651,8 @@ self: super: {
  ros2acceleration = self.callPackage ./ros2acceleration {};
 
  ros2action = self.callPackage ./ros2action {};
+
+ ros2ai = self.callPackage ./ros2ai {};
 
  ros2bag = self.callPackage ./ros2bag {};
 

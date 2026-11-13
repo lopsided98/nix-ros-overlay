@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, glfw3, libGL, libGLU, mrpt-common }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-imgui-vendor";
-  version = "3.6.1-r1";
+  version = "3.6.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_imgui_vendor/3.6.1-1.tar.gz";
-    name = "3.6.1-1.tar.gz";
-    sha256 = "c17a1ed0ed2a5fa2ab9ed95b9754262108446447189138c76b07903f9f1d654f";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_imgui_vendor/3.6.2-1.tar.gz";
+    name = "3.6.2-1.tar.gz";
+    sha256 = "ebc75a23a679effab3d0a38680216b0a44d7df0af6b379c7a73deb9333615a5b";
   };
 
   buildType = "cmake";

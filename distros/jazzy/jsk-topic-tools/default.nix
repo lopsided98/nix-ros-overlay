@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-auto, ament-cmake-clang-format, ament-cmake-pytest, ament-cmake-python, boost, geometry-msgs, jsk-ros1-ros2-compat, launch-ros, launch-testing, launch-testing-ament-cmake, lifecycle-msgs, python3Packages, rclcpp, rclcpp-components, rclcpp-lifecycle, rclpy, ros-environment, sensor-msgs, std-msgs, tf2-eigen, tf2-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-jsk-topic-tools";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/jazzy/jsk_topic_tools/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "d04848e190c8d38f226b970d3c930dea97e1f2f26c046d6189c7a1b04bcbce88";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/jazzy/jsk_topic_tools/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "9631b1c02f358c624702b9edf9f9a9c23b771b2c73175f6913e6642b087f15a0";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "jsk_topic_tools";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }
