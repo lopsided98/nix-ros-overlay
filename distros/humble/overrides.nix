@@ -1406,18 +1406,6 @@ in with lib; {
     '';
   });
 
-  sick-scan-xd = rosSuper.sick-scan-xd.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # fix for gcc15, ref https://github.com/SICKAG/sick_scan_xd/pull/557
-      (self.fetchpatch2 {
-        url = "https://github.com/SICKAG/sick_scan_xd/commit/f5ac360b4cfb319c981b022a9b817a5e86639d5c.patch?full_index=1";
-        hash = "sha256-UJQZO0cStf7b3890BBrpHBxzgWnJXPOxmW6SKsuAsWw=";
-      })
-    ];
-  });
-
   slam-toolbox = rosSuper.slam-toolbox.overrideAttrs ({
     postPatch ? "", patches ? [], meta ? {}, ...
   }: {
