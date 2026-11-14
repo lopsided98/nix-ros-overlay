@@ -440,19 +440,6 @@ in {
     '';
   });
 
-  lttngpy = rosSuper.lttngpy.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = [
-      # fix compile error
-      (self.fetchpatch2 {
-        url = "https://github.com/ros2/ros2_tracing/commit/e175cde407a2da7fab2a75890cdb9d0e626cc73b.patch?full_index=1";
-        hash = "sha256-U0G8/WNTmaDHu0NN8OxGBFJlnebgW2XZIVNeTpUqgmY=";
-        stripLen = 1;
-      })
-    ];
-  });
-
   mcap-vendor = (lib.patchVendorUrl rosSuper.mcap-vendor {
     url = "https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v1.4.0.tar.gz";
     hash = "sha256-ZP8+URGfN//Pr53uy9mHp8tNTZA110o/03czlaRw/aE=";
