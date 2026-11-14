@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, _unresolved_libcereal-dev, catch2, cmake, doxygen, eigen, git, graphviz, jrl-cmakemodules, matio, python3, python3Packages, simde }:
+{ lib, buildRosPackage, fetchurl, catch2, cereal, cmake, doxygen, eigen, git, graphviz, jrl-cmakemodules, matio, python3, python3Packages, ros-environment, simde }:
 buildRosPackage {
   pname = "ros-lyrical-proxsuite";
-  version = "0.8.2-r1";
+  version = "0.8.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/proxsuite-release/archive/release/lyrical/proxsuite/0.8.2-1.tar.gz";
-    name = "0.8.2-1.tar.gz";
-    sha256 = "60bb50b64f90e181b567aec7303957ee854855d6b4b75268f5f129f6d38b7db4";
+    url = "https://github.com/ros2-gbp/proxsuite-release/archive/release/lyrical/proxsuite/0.8.3-1.tar.gz";
+    name = "0.8.3-1.tar.gz";
+    sha256 = "4c12ec701b87a2163c39e9e0e39a34b7314fd48e0e68b41961800b4d50128008";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake doxygen git graphviz jrl-cmakemodules python3 ];
+  buildInputs = [ cmake doxygen git graphviz jrl-cmakemodules python3 ros-environment ];
   checkInputs = [ catch2 matio ];
-  propagatedBuildInputs = [ _unresolved_libcereal-dev eigen python3Packages.nanobind python3Packages.numpy python3Packages.scipy simde ];
+  propagatedBuildInputs = [ cereal eigen python3Packages.nanobind python3Packages.numpy python3Packages.scipy simde ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

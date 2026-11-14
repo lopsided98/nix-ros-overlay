@@ -362,17 +362,6 @@ in {
     '';
   });
 
-  ld08-driver = rosSuper.ld08-driver.overrideAttrs ({
-    postPatch ? "", ...
-  }: {
-    # https://github.com/ROBOTIS-GIT/ld08_driver/pull/36
-    postPatch = postPatch + ''
-      substituteInPlace CMakeLists.txt \
-        --replace-fail "Boost::system" "Boost::boost" \
-        --replace-fail "REQUIRED system" "REQUIRED"
-    '';
-  });
-
   lely-core-libraries = (lib.patchExternalProjectGit rosSuper.lely-core-libraries {
     url = "https://gitlab.com/lely_industries/lely-core.git";
     rev = "9e3267d26018f6f6babd50786f6ae2af89cc57ea";
@@ -449,19 +438,6 @@ in {
       substituteInPlace third-party/realsense-file/CMakeLists.txt \
         --replace-fail '$<$<COMPILE_LANGUAGE:C>:-include stdint.h>' ""
     '';
-  });
-
-  lttngpy = rosSuper.lttngpy.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = [
-      # fix compile error
-      (self.fetchpatch2 {
-        url = "https://github.com/ros2/ros2_tracing/commit/e175cde407a2da7fab2a75890cdb9d0e626cc73b.patch?full_index=1";
-        hash = "sha256-U0G8/WNTmaDHu0NN8OxGBFJlnebgW2XZIVNeTpUqgmY=";
-        stripLen = 1;
-      })
-    ];
   });
 
   mcap-vendor = (lib.patchVendorUrl rosSuper.mcap-vendor {

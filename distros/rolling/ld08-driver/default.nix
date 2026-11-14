@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, boost, rclcpp, sensor-msgs, udev }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, rclcpp, sensor-msgs, udev }:
 buildRosPackage {
   pname = "ros-rolling-ld08-driver";
-  version = "1.1.4-r2";
+  version = "1.1.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ld08_driver-release/archive/release/rolling/ld08_driver/1.1.4-2.tar.gz";
-    name = "1.1.4-2.tar.gz";
-    sha256 = "20ca5642f88fa79af780f8d776f8f861d7fee6c2fd967216fc5787411797b3fa";
+    url = "https://github.com/ros2-gbp/ld08_driver-release/archive/release/rolling/ld08_driver/1.1.5-1.tar.gz";
+    name = "1.1.5-1.tar.gz";
+    sha256 = "19834cc706ac18d73396bdce1766479e198ee41074738efd5564694ceb171f53";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
-  propagatedBuildInputs = [ boost rclcpp sensor-msgs udev ];
+  propagatedBuildInputs = [ rclcpp sensor-msgs udev ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

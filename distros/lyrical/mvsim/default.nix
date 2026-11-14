@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cli11, cmake, controller-manager, cppzmq, diagnostic-msgs, diff-drive-controller, eigen, hardware-interface, joint-state-broadcaster, mrpt-imgui, mrpt-imgui-vendor, mrpt-libros-bridge, mrpt-maps, mrpt-tfest, mrpt-topography, nav-msgs, onetbb, protobuf, python3, python3Packages, robot-state-publisher, ros-environment, ros2launch, sensor-msgs, simulation-interfaces, stereo-msgs, tf2, tf2-geometry-msgs, unzip, visualization-msgs, wget }:
 buildRosPackage {
   pname = "ros-lyrical-mvsim";
-  version = "2.0.0-r1";
+  version = "2.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mvsim-release/archive/release/lyrical/mvsim/2.0.0-1.tar.gz";
-    name = "2.0.0-1.tar.gz";
-    sha256 = "826345125be86888384aefdc3a36652e7782aa061b6362f75fac546103edeba8";
+    url = "https://github.com/ros2-gbp/mvsim-release/archive/release/lyrical/mvsim/2.1.0-1.tar.gz";
+    name = "2.1.0-1.tar.gz";
+    sha256 = "1d9a686f674592bed6619cc6611dd3e3fa1e017a7cb5c32fade1b504b8a378aa";
   };
 
   buildType = "ament_cmake";

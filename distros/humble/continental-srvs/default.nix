@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-continental-srvs";
-  version = "1.3.1-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/continental_srvs/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "d030b5848c53bd630728017126c28bb99fe145048c742d7308a97ebffbccb941";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/continental_srvs/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "9bb49b511dd71ff9b0a8a08deb95aec52b8ce7a02f9e098eb583ae76df679681";
   };
 
   buildType = "ament_cmake";

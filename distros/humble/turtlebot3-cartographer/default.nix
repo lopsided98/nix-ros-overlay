@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cartographer-ros }:
 buildRosPackage {
   pname = "ros-humble-turtlebot3-cartographer";
-  version = "2.3.6-r1";
+  version = "2.3.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/humble/turtlebot3_cartographer/2.3.6-1.tar.gz";
-    name = "2.3.6-1.tar.gz";
-    sha256 = "165d80c33057e22ebfd7845d17cf5e1bc0ead2ecd45ece16494c931103e6f743";
+    url = "https://github.com/ros2-gbp/turtlebot3-release/archive/release/humble/turtlebot3_cartographer/2.3.7-1.tar.gz";
+    name = "2.3.7-1.tar.gz";
+    sha256 = "48af513f6172872a7457fae1c9720667070ec10026ef38e494fa72544cdc0170";
   };
 
   buildType = "ament_cmake";

@@ -1089,32 +1089,6 @@ in with lib; {
     propagatedNativeBuildInputs = propagatedNativeBuildInputs ++ [ rosSelf.ros-environment ];
   });
 
-  off-highway-premium-radar = rosSuper.off-highway-premium-radar.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # fix for asio 1.36, ref. https://github.com/bosch-engineering/off_highway_sensor_drivers/pull/33
-      (self.fetchpatch2 {
-        url = "https://github.com/nim65s/off_highway_sensor_drivers/commit/61c88d4c1c844e2eb24eab30ea23cdd2dfd066b5.patch?full_index=1";
-        hash = "sha256-vGdu9MfPQrxg71tPxyFD2MKt0c92agQMGn04amwWY7Y=";
-        stripLen = 1;
-      })
-    ];
-  });
-
-  off-highway-premium-radar-sample = rosSuper.off-highway-premium-radar-sample.overrideAttrs ({
-    patches ? [], ...
-  }: {
-    patches = patches ++ [
-      # fix for asio 1.36, ref. https://github.com/bosch-engineering/off_highway_sensor_drivers/pull/33
-      (self.fetchpatch2 {
-        url = "https://github.com/nim65s/off_highway_sensor_drivers/commit/c2e2fba65f812284790687a0c4f9c5982bd6fd14.patch?full_index=1";
-        hash = "sha256-sevjNaBo/nnRCB/Pfa33l0mvjs3W8bmVMaqhyyQrYJU=";
-        stripLen = 1;
-      })
-    ];
-  });
-
   ompl = rosSuper.ompl.overrideAttrs ({
     patches ? [], ...
   }: {

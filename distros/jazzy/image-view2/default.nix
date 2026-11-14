@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, cv-bridge, geometry-msgs, image-geometry, image-transport, jsk-ros1-ros2-compat, launch-ros, launch-testing, launch-testing-ament-cmake, message-filters, pcl, pcl-conversions, python3Packages, rclcpp, ros-environment, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-image-view2";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/jazzy/image_view2/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "82655124d4f0aadc0b8a8d8cbe1d1e6a44f336fdf03017d35bc6fc43bbc28c8f";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/jazzy/image_view2/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "dd4fcb4a8eafb2c62fac0a9d9521ddb7ef984bd61eb63d8f489e3c02b1b42b54";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "A simple viewer for ROS image topics with draw-on features";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-pytest, ament-cmake-python, curl, example-interfaces, rclcpp, rclpy, ros-environment, rosbag2-py, rosidl-runtime-py, std-msgs, std-srvs, tf2-ros, tf2-ros-py }:
 buildRosPackage {
   pname = "ros-jazzy-jsk-ros1-ros2-compat";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/jazzy/jsk_ros1_ros2_compat/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "ebc3535e2c835eb7ad9046f18657e22e30b6fd81c015c1f4c0e1b9fe2d1db91c";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/jazzy/jsk_ros1_ros2_compat/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "ee1bc6f61bc3dd477381bcd42eb973efb2efdfb3730bb05b195a07ceebda645a";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Shared ROS1(roscpp/rospy)/ROS2(rclcpp/rclpy) compatibility helpers used across jsk_common's ROS2-ported packages, so that individual packages don't each maintain their own copy.";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

@@ -1336,28 +1336,6 @@ self: super: {
 
  ffmpeg-image-transport-tools = self.callPackage ./ffmpeg-image-transport-tools {};
 
- ffw = self.callPackage ./ffw {};
-
- ffw-bringup = self.callPackage ./ffw-bringup {};
-
- ffw-description = self.callPackage ./ffw-description {};
-
- ffw-joint-trajectory-command-broadcaster = self.callPackage ./ffw-joint-trajectory-command-broadcaster {};
-
- ffw-joystick-controller = self.callPackage ./ffw-joystick-controller {};
-
- ffw-moveit-config = self.callPackage ./ffw-moveit-config {};
-
- ffw-navigation = self.callPackage ./ffw-navigation {};
-
- ffw-robot-manager = self.callPackage ./ffw-robot-manager {};
-
- ffw-spring-actuator-controller = self.callPackage ./ffw-spring-actuator-controller {};
-
- ffw-swerve-drive-controller = self.callPackage ./ffw-swerve-drive-controller {};
-
- ffw-teleop = self.callPackage ./ffw-teleop {};
-
  fibar-lib = self.callPackage ./fibar-lib {};
 
  fields2cover = self.callPackage ./fields2cover {};
@@ -3443,6 +3421,8 @@ self: super: {
  robotiq-controllers = self.callPackage ./robotiq-controllers {};
 
  robotiq-description = self.callPackage ./robotiq-description {};
+
+ robotis-interfaces = self.callPackage ./robotis-interfaces {};
 
  robotraconteur = self.callPackage ./robotraconteur {};
 

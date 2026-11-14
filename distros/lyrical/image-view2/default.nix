@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, cv-bridge, geometry-msgs, image-geometry, image-transport, jsk-ros1-ros2-compat, launch-ros, launch-testing, launch-testing-ament-cmake, message-filters, pcl, pcl-conversions, python3Packages, rclcpp, ros-environment, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs, std-srvs, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-image-view2";
-  version = "3.0.4-r1";
+  version = "3.0.5-r1";
 
   src = fetchurl {
-    url = "https://github.com/tork-a/jsk_common-release/archive/release/lyrical/image_view2/3.0.4-1.tar.gz";
-    name = "3.0.4-1.tar.gz";
-    sha256 = "fa8a168743e1305bd92374f52b437251f5a85f71603652d00abc0bdb6a223c0d";
+    url = "https://github.com/tork-a/jsk_common-release/archive/release/lyrical/image_view2/3.0.5-1.tar.gz";
+    name = "3.0.5-1.tar.gz";
+    sha256 = "e8995eb33365fda163392c463f789919fdbf7aa24207f2a83fe0792e25a36f15";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "A simple viewer for ROS image topics with draw-on features";
-    license = with lib.licenses; [ bsdOriginal ];
+    license = with lib.licenses; [ bsd3 ];
   };
 }

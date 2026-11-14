@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-dynamixel-sdk-custom-interfaces";
-  version = "4.0.3-r1";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/kilted/dynamixel_sdk_custom_interfaces/4.0.3-1.tar.gz";
-    name = "4.0.3-1.tar.gz";
-    sha256 = "5206f6fb3aeec334255fae798e78e31472a72b7dc53cb7bf09ac29a2bf6dc8e8";
+    url = "https://github.com/ros2-gbp/dynamixel_sdk-release/archive/release/kilted/dynamixel_sdk_custom_interfaces/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "60a78f4de1c950067f881b87d78168c6b1e5396efa4eb2491a5adb56912d3e62";
   };
 
   buildType = "ament_cmake";
