@@ -189,6 +189,20 @@ in {
     '';
   });
 
+  behaviortree-cpp = rosSuper.behaviortree-cpp.overrideAttrs ({
+    patches ? [], ...
+  }: {
+    patches = patches ++ [
+      # Fix GCC 15 -Werror=null-dereference in dependents (e.g.
+      # nav2-bt-navigator, opennav-docking-bt) caused by
+      # BT::ThreadSafeSignal::notify()
+      (self.fetchpatch2 {
+        url = "https://github.com/BehaviorTree/BehaviorTree.CPP/commit/9174257d8c62c6a917005aad93ef96a9a9bc3302.patch?full_index=1";
+        hash = "sha256-ArKvq55x9Sp6tdwe1DhLpyj+orSt5cieWrpD6UgEarA=";
+      })
+    ];
+  });
+
   camera-aravis2 = rosSuper.camera-aravis2.overrideAttrs ({
     patches ? [], nativeBuildInputs ? [], ...
   }: {
