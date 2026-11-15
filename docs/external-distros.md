@@ -52,7 +52,7 @@ overlays = [
     name = "my-jazzy";
     distro = "jazzy";
     version = 2;
-    generated = [ (nix-ros-overlay.lib.bundledGenerated "jazzy") ./distros/jazzy ];
+    packages = [ (nix-ros-overlay.lib.bundledPackages "jazzy") ./distros/jazzy ];
   })
 
   # Or, to patch your packages into rosPackages.jazzy itself:
@@ -67,14 +67,14 @@ overlays = [
 | `distro` | ROS distro the packages target: `ROS_DISTRO`, and the default for `overridesFrom`. |
 | `version` | ROS major version, 1 or 2. |
 | `name` | Attribute under `rosPackages`; defaults to `distro`. |
-| `generated` | An overlay, a `generated.nix`, a directory of `<pkg>/default.nix`, or a list of those. |
+| `packages` | An overlay, a `generated.nix`, a directory of `<pkg>/default.nix`, or a list of those. |
 | `overridesFrom` | Bundled distro whose `overrides.nix` and Qt version apply; defaults to `distro`. |
-| `upstreamOverrides` | Apply this repo's fixups (default `true`). Fixups for packages missing from `generated` are dropped. |
+| `upstreamOverrides` | Apply this repo's fixups (default `true`). Fixups for packages missing from `packages` are dropped. |
 | `overrides` | Further `rosSelf: rosSuper:` overlays, applied last. |
 | `qtVersion` | `"5"` or `"6"`, for the Qt fixups. Defaults by `overridesFrom`, and to `"6"` for a name this repo doesn't know. |
 
 A distro generated in full from a rosdistro of your own needs no bundled
-distro under it. Set `generated` to your `distros/<distro>` alone. `distro`
+distro under it. Set `packages` to your `distros/<distro>` alone. `distro`
 can be your own name; the pnames superflore writes and `ROS_DISTRO` follow
 it. If it is a snapshot of a bundled distro, set `overridesFrom` to that
 distro so its fixups (vendor package hashes and the like) still apply. The ROS 2 fixups still apply by package name, and fixups for packages

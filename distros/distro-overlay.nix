@@ -12,11 +12,12 @@
   # splicing finds the build and target platform sets through it, so it must
   # match where the scope actually lives.
   name ? distro,
-  # The generated package set: an overlay function, a generated.nix, a
-  # directory of <pkg>/default.nix, or a list of those, applied in order.
-  generated ? ./. + "/${distro}/generated.nix",
+  # The distro's packages: an overlay function, a file holding one (such as
+  # a superflore generated.nix), a directory of <pkg>/default.nix, or a list
+  # of those, applied in order.
+  packages ? ./. + "/${distro}/generated.nix",
   # Apply this repo's fixups (ros2-overlay.nix, the Qt overlays and
-  # <overridesFrom>/overrides.nix). Fixups for packages missing from `generated`
+  # <overridesFrom>/overrides.nix). Fixups for packages missing from `packages`
   # are dropped instead of left dangling.
   upstreamOverrides ? true,
   # Further rosSelf: rosSuper: overlays, applied last.
@@ -304,13 +305,13 @@ let
     inherit (rosSelf) lib buildRosPackage;
   };
 
-  generatedOverlays = map (import ../lib/distro-overlays.nix).generatedOverlay (self.lib.toList generated);
+  packageOverlays = map (import ../lib/distro-overlays.nix).packageSetOverlay (self.lib.toList packages);
 
-  bundledGenerated = ./. + "/${distro}/generated.nix";
-  usesBundledSet = builtins.elem bundledGenerated (self.lib.toList generated);
+  bundledPackages = ./. + "/${distro}/generated.nix";
+  usesBundledSet = builtins.elem bundledPackages (self.lib.toList packages);
 
   # The bundled overrides name every package in the bundled distros. Against a
-  # set generated elsewhere, keep only those that override a package that
+  # set from elsewhere, keep only those that override a package that
   # exists or that add something no bundled distro defines (aliases, packages
   # taken from nixpkgs). Names come from every bundled distro, so a set
   # generated from a rosdistro of its own, under a name this repo doesn't
@@ -337,7 +338,7 @@ in self.lib.makeScopeWithSplicing
   keep
   (_: {})
   (rosSelf: self.lib.composeManyExtensions ([ base ]
-    ++ generatedOverlays
+    ++ packageOverlays
     ++ self.lib.optionals upstreamOverrides bundledOverrides
     ++ overrides
   ) rosSelf {})
