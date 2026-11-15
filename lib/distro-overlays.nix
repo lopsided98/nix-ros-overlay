@@ -23,32 +23,14 @@ rec {
       }) dirs))
     else import g;
 
-  # The package set generated for a bundled distro, for building a distro of
-  # your own on top of it: packages = [ (bundledPackages "jazzy") ./mine ].
-  # Passing this path, rather than a copy, keeps every bundled fixup applied.
-  bundledPackages = distro: ../distros + "/${distro}/generated.nix";
-
-  # Add rosPackages.${name}, a distro built from `packages`. Takes the
-  # arguments of distros/distro-overlay.nix; `name` defaults to `distro`,
-  # which replaces the bundled distro of that name.
-  rosDistroOverlay = args: final: prev: let
-    name = args.name or args.distro;
-  in {
+  # Add rosPackages.${distro}, built by mkRosDistro from `args`. `base` may
+  # also name a distro under rosPackages, which is looked up before this
+  # overlay applies, so a distro can be layered onto one of the same name.
+  rosDistroOverlay = args: final: prev: {
     rosPackages = prev.rosPackages // {
-      ${name} = final.rosPackages.mkRosDistro (args // { inherit name; });
-    };
-  };
-
-  # Layer packages over an existing distro, for a handful of private or
-  # patched packages that don't need a distro of their own. They go on after
-  # the bundled fixups. Replacing the attribute, rather than calling
-  # overrideScope where it is used, keeps the build-platform sets that
-  # cross-compilation splices in consistent with it. `overlays` takes the
-  # forms packageSetOverlay does, or a list of them.
-  extendRosDistro = distro: overlays: final: prev: {
-    rosPackages = prev.rosPackages // {
-      ${distro} = prev.rosPackages.${distro}.overrideScope
-        (prev.lib.composeManyExtensions (map packageSetOverlay (prev.lib.toList overlays)));
+      ${args.distro} = final.rosPackages.mkRosDistro (args
+        // (if builtins.isString (args.base or null)
+            then { base = prev.rosPackages.${args.base}; } else { }));
     };
   };
 }

@@ -46,16 +46,20 @@ without flakes) has nixpkgs overlays to apply after `overlays.default`:
 overlays = [
   nix-ros-overlay.overlays.default
 
-  # A distro of your own, rosPackages.my-jazzy: the bundled jazzy plus your
-  # packages, which replace any of the same name.
+  # rosPackages.my-jazzy: the bundled jazzy with your packages layered on,
+  # replacing any of the same name.
   (nix-ros-overlay.lib.rosDistroOverlay {
-    name = "my-jazzy";
-    distro = "jazzy";
-    packages = [ (nix-ros-overlay.lib.bundledPackages "jazzy") ./distros/jazzy ];
+    distro = "my-jazzy";
+    base = "jazzy";
+    packages = ./distros/my-jazzy;
   })
 
-  # Or, to patch your packages into rosPackages.jazzy itself:
-  (nix-ros-overlay.lib.extendRosDistro "jazzy" ./distros/jazzy)
+  # Or, to layer them onto rosPackages.jazzy itself:
+  (nix-ros-overlay.lib.rosDistroOverlay {
+    distro = "jazzy";
+    base = "jazzy";
+    packages = ./distros/my-jazzy;
+  })
 ];
 ```
 
@@ -63,8 +67,8 @@ overlays = [
 
 | Argument | Meaning |
 |---|---|
-| `distro` | ROS distro the packages target: `ROS_DISTRO`, and the default for `overridesFrom`. |
-| `name` | Attribute under `rosPackages`; defaults to `distro`. |
+| `distro` | The attribute under `rosPackages`, and `ROS_DISTRO` unless `base` is given. |
+| `base` | A distro to layer on (a name, or a scope when calling `mkRosDistro`). Its packages come first, and its `ROS_DISTRO` and fixups carry over. Layers can stack. |
 | `packages` | An overlay, a `generated.nix`, a directory of `<pkg>/default.nix`, or a list of those. |
 | `overridesFrom` | Bundled distro whose fixups (common, ROS 2, Qt and its `overrides.nix`) apply; defaults to `distro`, and `null` applies none. Fixups for packages missing from `packages` are dropped. |
 
@@ -82,4 +86,4 @@ other distro.
 `rosPackages.mkRosDistro` takes the same arguments and returns the scope
 without adding it to `rosPackages`. Add it there, as `rosDistroOverlay` does,
 if you cross-compile: splicing finds the build platform's copy of the distro
-at `rosPackages.<name>`.
+at `rosPackages.<distro>`.

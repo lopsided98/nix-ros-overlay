@@ -24,6 +24,7 @@ let
     "python2Packages"
     "python3Packages"
     "boost"
+    "rosDistroArgs"
   ]);
   releaseRosPackages = mapAttrs cleanupDistro pkgs.rosPackages;
   overlayAttrNames = attrNames ((import ./overlay.nix) null pkgs);

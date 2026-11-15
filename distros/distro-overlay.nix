@@ -3,23 +3,24 @@
 # rosPackages.mkRosDistro or lib.rosDistroOverlay) with expressions it
 # generated itself, and still get this repo's build functions and fixups.
 {
-  # The ROS distro the packages are built for: ROS_DISTRO envvar, and the default
-  # for overridesFrom.
+  # The distro's name. It is the attribute under rosPackages the scope must be
+  # published at, since cross-compilation splicing looks for the build
+  # platform's copy there, and, unless `base` is given, ROS_DISTRO.
   distro,
-  # Attribute under rosPackages the scope is published at. Cross-compilation
-  # splicing finds the build and target platform sets through it, so it must
-  # match where the scope actually lives.
-  name ? distro,
+  # Another distro scope to layer on, for example rosPackages.jazzy. The result
+  # holds base's packages followed by `packages`, and keeps base's ROS_DISTRO
+  # and fixups, so a layered distro can itself be a base.
+  base ? null,
   # The distro's packages: an overlay function, a file holding one (such as
   # a superflore generated.nix), a directory of <pkg>/default.nix, or a list
   # of those, applied in order.
-  packages ? ./. + "/${distro}/generated.nix",
+  packages ? if base == null then ./. + "/${distro}/generated.nix" else [ ],
   # The bundled distro whose fixups apply: the common ones, ros2-overlay.nix,
   # the Qt overlay and <overridesFrom>/overrides.nix. A distro of a new name
   # snapshotted from a bundled one sets it to that distro; null applies none.
-  # Fixups for packages missing from `packages` are dropped rather than left
+  # Fixups for packages missing from the set are dropped rather than left
   # dangling.
-  overridesFrom ? distro,
+  overridesFrom ? if base == null then distro else base.rosDistroArgs.overridesFrom,
 }:
 self: super:
 let
@@ -34,8 +35,17 @@ let
     });
   };
 
-  base = rosSelf: rosSuper: {
+  # What a distro layered on this one starts from.
+  rosDistroArgs = {
+    inherit overridesFrom;
+    rosDistro = if base == null then distro else base.rosDistroArgs.rosDistro;
+    packages = (if base == null then [ ] else base.rosDistroArgs.packages)
+      ++ self.lib.toList packages;
+  };
+
+  core = rosSelf: rosSuper: {
     recurseForDerivations = true;
+    inherit rosDistroArgs;
     lib = super.lib // import ../lib { inherit self rosSelf; };
 
     callPackage = self.newScope rosSelf;
@@ -43,7 +53,7 @@ let
     buildRosPackage = rosSelf.callPackage ./build-ros-package {
       # ROS_VERSION. Only ROS 2 distros are maintained here now.
       rosVersion = 2;
-      rosDistro = distro;
+      inherit (rosDistroArgs) rosDistro;
     };
 
     buildEnv = rosSelf.callPackage ./build-env {
@@ -287,21 +297,21 @@ let
   } // (mrptOverrides rosSelf rosSuper);
 
   otherSplices = {
-    selfBuildBuild = self.pkgsBuildBuild.rosPackages.${name};
-    selfBuildHost = self.pkgsBuildHost.rosPackages.${name};
-    selfBuildTarget = self.pkgsBuildTarget.rosPackages.${name};
-    selfHostHost = self.pkgsHostHost.rosPackages.${name};
-    selfTargetTarget = self.pkgsTargetTarget.rosPackages.${name} or {};
+    selfBuildBuild = self.pkgsBuildBuild.rosPackages.${distro};
+    selfBuildHost = self.pkgsBuildHost.rosPackages.${distro};
+    selfBuildTarget = self.pkgsBuildTarget.rosPackages.${distro};
+    selfHostHost = self.pkgsHostHost.rosPackages.${distro};
+    selfTargetTarget = self.pkgsTargetTarget.rosPackages.${distro} or {};
   };
 
   keep = rosSelf: {
-    inherit (rosSelf) lib buildRosPackage;
+    inherit (rosSelf) lib buildRosPackage rosDistroArgs;
   };
 
-  packageOverlays = map (import ../lib/distro-overlays.nix).packageSetOverlay (self.lib.toList packages);
+  packageOverlays = map (import ../lib/distro-overlays.nix).packageSetOverlay rosDistroArgs.packages;
 
-  bundledPackages = ./. + "/${distro}/generated.nix";
-  usesBundledSet = builtins.elem bundledPackages (self.lib.toList packages);
+  # Whether the set includes the bundled packages the fixups were written for.
+  usesBundledSet = builtins.elem (./. + "/${overridesFrom}/generated.nix") rosDistroArgs.packages;
 
   # The bundled overrides name every package in the bundled distros. Against a
   # set from elsewhere, keep only those that override a package that
@@ -330,7 +340,7 @@ in self.lib.makeScopeWithSplicing
   otherSplices
   keep
   (_: {})
-  (rosSelf: self.lib.composeManyExtensions ([ base ]
+  (rosSelf: self.lib.composeManyExtensions ([ core ]
     ++ packageOverlays
     ++ self.lib.optionals (overridesFrom != null) bundledOverrides
   ) rosSelf {})
