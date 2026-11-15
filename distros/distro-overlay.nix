@@ -1,7 +1,8 @@
-# Builds one ROS distro package set as a scope. The bundled distros call this
-# with their own generated.nix; a separate repo can call it (through
-# rosPackages.mkRosDistro or lib.rosDistroOverlay) with expressions it
-# generated itself, and still get this repo's build functions and fixups.
+# Builds one ROS distro package set as a scope. It is used for the
+# official ROS distros in this overlay, but external code can also use
+# it to create custom ROS distros: call rosPackages.lib.mkRosDistro
+# with custom derivations. The resulting set includes this repo's
+# build functions (e.g. buildRosPackage) and fixups.
 {
   # The distro's name. It is the attribute under rosPackages the scope must be
   # published at, since cross-compilation splicing looks for the build
@@ -308,7 +309,19 @@ let
     inherit (rosSelf) lib buildRosPackage rosDistroArgs;
   };
 
-  packageOverlays = map (import ../lib/distro-overlays.nix).packageSetOverlay rosDistroArgs.packages;
+  # A package set as a rosSelf: rosSuper: overlay. A directory with no
+  # generated.nix in it is read as one package per <pkg>/default.nix, which is
+  # what ros2nix, or superflore regenerating a few packages (--only), writes.
+  packageSetOverlay = p:
+    if builtins.isFunction p then p
+    else if builtins.pathExists (p + "/generated.nix") then import (p + "/generated.nix")
+    else if builtins.readFileType p == "directory" then
+      (rosSelf: _: self.lib.mapAttrs (n: _: rosSelf.callPackage (p + "/${n}") { })
+        (self.lib.filterAttrs (n: t: t == "directory" && builtins.pathExists (p + "/${n}/default.nix"))
+          (builtins.readDir p)))
+    else import p;
+
+  packageOverlays = map packageSetOverlay rosDistroArgs.packages;
 
   # Whether the set includes the bundled packages the fixups were written for.
   usesBundledSet = builtins.elem (./. + "/${overridesFrom}/generated.nix") rosDistroArgs.packages;

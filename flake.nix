@@ -43,8 +43,8 @@
       ;
     }) // {
       overlays.default = import ./overlay.nix;
-      # For repos that generate their own distro or packages; see
-      # lib/distro-overlays.nix.
+      # Overlays for repos with ROS distros or packages of their own; see
+      # docs/external-distros.md. Without flakes, use rosPackages.lib.mkRosDistro.
       lib = import ./lib/distro-overlays.nix;
       nixosModules.default = ./modules;
 
