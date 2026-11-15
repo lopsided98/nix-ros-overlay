@@ -51,7 +51,6 @@ overlays = [
   (nix-ros-overlay.lib.rosDistroOverlay {
     name = "my-jazzy";
     distro = "jazzy";
-    version = 2;
     packages = [ (nix-ros-overlay.lib.bundledPackages "jazzy") ./distros/jazzy ];
   })
 
@@ -65,7 +64,6 @@ overlays = [
 | Argument | Meaning |
 |---|---|
 | `distro` | ROS distro the packages target: `ROS_DISTRO`, and the default for `overridesFrom`. |
-| `version` | ROS major version, 1 or 2. |
 | `name` | Attribute under `rosPackages`; defaults to `distro`. |
 | `packages` | An overlay, a `generated.nix`, a directory of `<pkg>/default.nix`, or a list of those. |
 | `overridesFrom` | Bundled distro whose fixups (common, ROS 2, Qt and its `overrides.nix`) apply; defaults to `distro`, and `null` applies none. Fixups for packages missing from `packages` are dropped. |

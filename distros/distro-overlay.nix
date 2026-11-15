@@ -6,8 +6,6 @@
   # The ROS distro the packages are built for: ROS_DISTRO envvar, and the default
   # for overridesFrom.
   distro,
-  # The ROS version being built: ROS_VERSION envvar.
-  version ? 2,
   # Attribute under rosPackages the scope is published at. Cross-compilation
   # splicing finds the build and target platform sets through it, so it must
   # match where the scope actually lives.
@@ -43,7 +41,8 @@ let
     callPackage = self.newScope rosSelf;
 
     buildRosPackage = rosSelf.callPackage ./build-ros-package {
-      rosVersion = version;
+      # ROS_VERSION. Only ROS 2 distros are maintained here now.
+      rosVersion = 2;
       rosDistro = distro;
     };
 
@@ -320,7 +319,7 @@ let
       (overlay rosSelf rosSuper);
 
   bundledOverrides = map pruneMissing ([ commonOverrides ]
-    ++ self.lib.optional (version == 2) (import ./ros2-overlay.nix self)
+    ++ [ (import ./ros2-overlay.nix self) ]
     ++ self.lib.optional (qtVersion == "5") (import ./qt5-overlay.nix self)
     ++ self.lib.optional (qtVersion == "6") (import ./qt6-overlay.nix self)
     ++ self.lib.optional (builtins.pathExists (./. + "/${overridesFrom}/overrides.nix"))
