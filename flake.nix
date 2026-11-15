@@ -43,6 +43,9 @@
       ;
     }) // {
       overlays.default = import ./overlay.nix;
+      # Overlays for repos with ROS distros or packages of their own; see
+      # docs/external-distros.md. Without flakes, use rosPackages.lib.mkRosDistro.
+      lib = import ./lib/distro-overlays.nix;
       nixosModules.default = ./modules;
 
       overlay = nixpkgs.lib.warn

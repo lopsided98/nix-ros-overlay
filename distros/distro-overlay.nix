@@ -1,7 +1,31 @@
-{ version, distro }:
+# Builds one ROS distro package set as a scope. It is used for the
+# official ROS distros in this overlay, but external code can also use
+# it to create custom ROS distros: call rosPackages.lib.mkRosDistro
+# with custom derivations. The resulting set includes this repo's
+# build functions (e.g. buildRosPackage) and fixups.
+{
+  # The distro's name. It is the attribute under rosPackages the scope must be
+  # published at, since cross-compilation splicing looks for the build
+  # platform's copy there, and, unless `base` is given, ROS_DISTRO.
+  distro,
+  # Another distro scope to layer on, for example rosPackages.jazzy. The result
+  # holds base's packages followed by `packages`, and keeps base's ROS_DISTRO
+  # and fixups, so a layered distro can itself be a base.
+  base ? null,
+  # The distro's packages: an overlay function, a file holding one (such as
+  # a superflore generated.nix), a directory of <pkg>/default.nix, or a list
+  # of those, applied in order.
+  packages ? if base == null then ./. + "/${distro}/generated.nix" else [ ],
+  # The bundled distro whose fixups apply: the common ones, ros2-overlay.nix,
+  # the Qt overlay and <overridesFrom>/overrides.nix. A distro of a new name
+  # snapshotted from a bundled one sets it to that distro; null applies none.
+  # Fixups for packages missing from the set are dropped rather than left
+  # dangling.
+  overridesFrom ? if base == null then distro else base.rosDistroArgs.overridesFrom,
+}:
 self: super:
 let
-  qtVersion = if (builtins.elem distro ["humble" "jazzy" "kilted"]) then "5" else "6";
+  qtVersion = if builtins.elem overridesFrom [ "humble" "jazzy" "kilted" ] then "5" else "6";
 
   pythonOverridesFor = with self.lib; prevPython: prevPython // {
     pkgs = prevPython.pkgs.overrideScope (pyFinal: pyPrev: {
@@ -12,15 +36,25 @@ let
     });
   };
 
-  base = rosSelf: rosSuper: {
+  # What a distro layered on this one starts from.
+  rosDistroArgs = {
+    inherit overridesFrom;
+    rosDistro = if base == null then distro else base.rosDistroArgs.rosDistro;
+    packages = (if base == null then [ ] else base.rosDistroArgs.packages)
+      ++ self.lib.toList packages;
+  };
+
+  core = rosSelf: rosSuper: {
     recurseForDerivations = true;
+    inherit rosDistroArgs;
     lib = super.lib // import ../lib { inherit self rosSelf; };
 
     callPackage = self.newScope rosSelf;
 
     buildRosPackage = rosSelf.callPackage ./build-ros-package {
-      rosVersion = version;
-      rosDistro = distro;
+      # ROS_VERSION. Only ROS 2 distros are maintained here now.
+      rosVersion = 2;
+      inherit (rosDistroArgs) rosDistro;
     };
 
     buildEnv = rosSelf.callPackage ./build-env {
@@ -86,7 +120,7 @@ let
       "mrpt-libtclap"
     ] (name: patchMrptExternalProjectGit rosSuper.${name});
 
-  overrides = rosSelf: rosSuper: with rosSelf.lib; {
+  commonOverrides = rosSelf: rosSuper: with rosSelf.lib; {
     # ROS package overrides/fixups
 
     # Some third-party packages are available in rodistro,
@@ -276,22 +310,54 @@ let
   };
 
   keep = rosSelf: {
-    inherit (rosSelf) lib buildRosPackage;
+    inherit (rosSelf) lib buildRosPackage rosDistroArgs;
   };
+
+  # A package set as a rosSelf: rosSuper: overlay. A directory with no
+  # generated.nix in it is read as one package per <pkg>/default.nix, which is
+  # what ros2nix, or superflore regenerating a few packages (--only), writes.
+  packageSetOverlay = p:
+    if builtins.isFunction p then p
+    else if builtins.pathExists (p + "/generated.nix") then import (p + "/generated.nix")
+    else if builtins.readFileType p == "directory" then
+      (rosSelf: _: self.lib.mapAttrs (n: _: rosSelf.callPackage (p + "/${n}") { })
+        (self.lib.filterAttrs (n: t: t == "directory" && builtins.pathExists (p + "/${n}/default.nix"))
+          (builtins.readDir p)))
+    else import p;
+
+  packageOverlays = map packageSetOverlay rosDistroArgs.packages;
+
+  # Whether the set includes the bundled packages the fixups were written for.
+  usesBundledSet = builtins.elem (./. + "/${overridesFrom}/generated.nix") rosDistroArgs.packages;
+
+  # The bundled overrides name every package in the bundled distros. Against a
+  # set from elsewhere, keep only those that override a package that
+  # exists or that add something no bundled distro defines (aliases, packages
+  # taken from nixpkgs). Names come from every bundled distro, so a set
+  # generated from a rosdistro of its own, under a name this repo doesn't
+  # know, is pruned as well as one derived from a bundled distro.
+  bundledNames = self.lib.foldl' (acc: d: acc // import (./. + "/${d}/generated.nix") { } { }) { }
+    (builtins.filter (d: builtins.pathExists (./. + "/${d}/generated.nix"))
+      (builtins.attrNames (builtins.readDir ./.)));
+  pruneMissing = overlay:
+    if usesBundledSet then overlay
+    else rosSelf: rosSuper: self.lib.filterAttrs
+      (n: _: rosSuper ? ${n} || !(bundledNames ? ${n}))
+      (overlay rosSelf rosSuper);
+
+  bundledOverrides = map pruneMissing ([ commonOverrides ]
+    ++ [ (import ./ros2-overlay.nix self) ]
+    ++ self.lib.optional (qtVersion == "5") (import ./qt5-overlay.nix self)
+    ++ self.lib.optional (qtVersion == "6") (import ./qt6-overlay.nix self)
+    ++ self.lib.optional (builtins.pathExists (./. + "/${overridesFrom}/overrides.nix"))
+      (import (./. + "/${overridesFrom}/overrides.nix") self));
 in self.lib.makeScopeWithSplicing
   self.splicePackages
   self.newScope
   otherSplices
   keep
   (_: {})
-  (rosSelf: self.lib.composeManyExtensions ([
-    base
-    (import (./. + "/${distro}/generated.nix"))
-    overrides
-  ]
-  ++ self.lib.optional (version == 2) (import ./ros2-overlay.nix self)
-  ++ self.lib.optional (qtVersion == "5") (import ./qt5-overlay.nix self)
-  ++ self.lib.optional (qtVersion == "6") (import ./qt6-overlay.nix self)
-  ++ [
-    (import (./. + "/${distro}/overrides.nix") self)
-  ]) rosSelf {})
+  (rosSelf: self.lib.composeManyExtensions ([ core ]
+    ++ packageOverlays
+    ++ self.lib.optionals (overridesFrom != null) bundledOverrides
+  ) rosSelf {})
