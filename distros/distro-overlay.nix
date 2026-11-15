@@ -22,12 +22,10 @@
   # Fixups for packages missing from `packages` are dropped rather than left
   # dangling.
   overridesFrom ? distro,
-  # "5" or "6"; picks the Qt fixups. Defaults by overridesFrom, and to Qt 6
-  # for a distro this repo doesn't know.
-  qtVersion ? if builtins.elem overridesFrom [ "humble" "jazzy" "kilted" ] then "5" else "6",
 }:
 self: super:
 let
+  qtVersion = if builtins.elem overridesFrom [ "humble" "jazzy" "kilted" ] then "5" else "6";
 
   pythonOverridesFor = with self.lib; prevPython: prevPython // {
     pkgs = prevPython.pkgs.overrideScope (pyFinal: pyPrev: {

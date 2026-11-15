@@ -69,7 +69,6 @@ overlays = [
 | `name` | Attribute under `rosPackages`; defaults to `distro`. |
 | `packages` | An overlay, a `generated.nix`, a directory of `<pkg>/default.nix`, or a list of those. |
 | `overridesFrom` | Bundled distro whose fixups (common, ROS 2, Qt and its `overrides.nix`) apply; defaults to `distro`, and `null` applies none. Fixups for packages missing from `packages` are dropped. |
-| `qtVersion` | `"5"` or `"6"`, for the Qt fixups. Defaults by `overridesFrom`, and to `"6"` for a name this repo doesn't know. |
 
 A distro generated in full from a rosdistro of your own needs no bundled
 distro under it. Set `packages` to your `distros/<distro>` alone. `distro`
