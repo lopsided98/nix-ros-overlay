@@ -70,7 +70,6 @@ overlays = [
 | `packages` | An overlay, a `generated.nix`, a directory of `<pkg>/default.nix`, or a list of those. |
 | `overridesFrom` | Bundled distro whose `overrides.nix` and Qt version apply; defaults to `distro`. |
 | `upstreamOverrides` | Apply this repo's fixups (default `true`). Fixups for packages missing from `packages` are dropped. |
-| `overrides` | Further `rosSelf: rosSuper:` overlays, applied last. |
 | `qtVersion` | `"5"` or `"6"`, for the Qt fixups. Defaults by `overridesFrom`, and to `"6"` for a name this repo doesn't know. |
 
 A distro generated in full from a rosdistro of your own needs no bundled
@@ -80,6 +79,9 @@ it. If it is a snapshot of a bundled distro, set `overridesFrom` to that
 distro so its fixups (vendor package hashes and the like) still apply. The ROS 2 fixups still apply by package name, and fixups for packages
 you don't have are dropped. Your set has to include the core packages
 (ament, rclcpp and the rest), and nothing falls through to a bundled distro.
+
+To change packages after that, use `overrideScope` on the result, as with any
+other distro.
 
 `rosPackages.mkRosDistro` takes the same arguments and returns the scope
 without adding it to `rosPackages`. Add it there, as `rosDistroOverlay` does,

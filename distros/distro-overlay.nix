@@ -20,8 +20,6 @@
   # <overridesFrom>/overrides.nix). Fixups for packages missing from `packages`
   # are dropped instead of left dangling.
   upstreamOverrides ? true,
-  # Further rosSelf: rosSuper: overlays, applied last.
-  overrides ? [ ],
   # The bundled distro whose fixups (<distro>/overrides.nix) and Qt version
   # apply. A distro generated from its own rosdistro under a new
   # name sets this to the bundled distro it was snapshotted from.
@@ -340,5 +338,4 @@ in self.lib.makeScopeWithSplicing
   (rosSelf: self.lib.composeManyExtensions ([ base ]
     ++ packageOverlays
     ++ self.lib.optionals upstreamOverrides bundledOverrides
-    ++ overrides
   ) rosSelf {})
