@@ -16,13 +16,11 @@
   # a superflore generated.nix), a directory of <pkg>/default.nix, or a list
   # of those, applied in order.
   packages ? ./. + "/${distro}/generated.nix",
-  # Apply this repo's fixups (ros2-overlay.nix, the Qt overlays and
-  # <overridesFrom>/overrides.nix). Fixups for packages missing from `packages`
-  # are dropped instead of left dangling.
-  upstreamOverrides ? true,
-  # The bundled distro whose fixups (<distro>/overrides.nix) and Qt version
-  # apply. A distro generated from its own rosdistro under a new
-  # name sets this to the bundled distro it was snapshotted from.
+  # The bundled distro whose fixups apply: the common ones, ros2-overlay.nix,
+  # the Qt overlay and <overridesFrom>/overrides.nix. A distro of a new name
+  # snapshotted from a bundled one sets it to that distro; null applies none.
+  # Fixups for packages missing from `packages` are dropped rather than left
+  # dangling.
   overridesFrom ? distro,
   # "5" or "6"; picks the Qt fixups. Defaults by overridesFrom, and to Qt 6
   # for a distro this repo doesn't know.
@@ -337,5 +335,5 @@ in self.lib.makeScopeWithSplicing
   (_: {})
   (rosSelf: self.lib.composeManyExtensions ([ base ]
     ++ packageOverlays
-    ++ self.lib.optionals upstreamOverrides bundledOverrides
+    ++ self.lib.optionals (overridesFrom != null) bundledOverrides
   ) rosSelf {})
