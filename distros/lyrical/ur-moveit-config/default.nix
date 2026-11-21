@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, moveit-configs-utils, moveit-kinematics, moveit-planners, moveit-planners-chomp, moveit-ros-move-group, moveit-ros-visualization, moveit-servo, moveit-simple-controller-manager, ur-description, warehouse-ros-sqlite, xacro }:
 buildRosPackage {
   pname = "ros-lyrical-ur-moveit-config";
-  version = "6.2.0-r1";
+  version = "6.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/lyrical/ur_moveit_config/6.2.0-1.tar.gz";
-    name = "6.2.0-1.tar.gz";
-    sha256 = "9427c4d2d2551d54bafa059abe92857962cc91433c0b70f1947393620ade42d6";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/lyrical/ur_moveit_config/6.3.1-1.tar.gz";
+    name = "6.3.1-1.tar.gz";
+    sha256 = "1810c8aa45cf7d69c6795acc15a47da055491802e842caf9bc5a387922aba008";
   };
 
   buildType = "ament_cmake";

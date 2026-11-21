@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, geometry-msgs, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-continental-msgs";
-  version = "1.4.0-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/continental_msgs/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "4075bbb0a4935c385b82bda6d2d50f4410e3935001ab14d13a8001304a13eb0a";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/continental_msgs/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "84da4895854cc6cd63cbe4b5e9d03c2865d68aa55fd57c8175c8fbb245124216";
   };
 
   buildType = "ament_cmake";

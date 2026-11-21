@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-yasmin";
-  version = "6.1.2-r1";
+  version = "6.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/lyrical/yasmin/6.1.2-1.tar.gz";
-    name = "6.1.2-1.tar.gz";
-    sha256 = "de9642b46bae224388043e687bfa211106aba591019eec8aeb3aae6f0810fc70";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/lyrical/yasmin/6.1.4-1.tar.gz";
+    name = "6.1.4-1.tar.gz";
+    sha256 = "888ebb9833371513ddfd4686cd0bcd636bcfe69b0fcc6c5b7509c644cd502d4a";
   };
 
   buildType = "ament_cmake";

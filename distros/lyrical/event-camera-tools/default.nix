@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-black, ament-cmake-clang-format, ament-cmake-ros, ament-cmake-test, ament-lint-auto, ament-lint-common, event-camera-codecs, event-camera-msgs, opencv, rclcpp, rclcpp-components, ros-environment, rosbag2-cpp, rosbag2-storage, sensor-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-event-camera-tools";
-  version = "3.1.5-r2";
+  version = "3.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/event_camera_tools-release/archive/release/lyrical/event_camera_tools/3.1.5-2.tar.gz";
-    name = "3.1.5-2.tar.gz";
-    sha256 = "d7840217a8128899d98ca86d7ca6cd340fdea3988f3c1d270f1fb44e971bd001";
+    url = "https://github.com/ros2-gbp/event_camera_tools-release/archive/release/lyrical/event_camera_tools/3.1.6-1.tar.gz";
+    name = "3.1.6-1.tar.gz";
+    sha256 = "03d3bd9a998c779ab10331aae3702ffcd9b479aadfc61edd1402152d9ac0521d";
   };
 
   buildType = "ament_cmake";

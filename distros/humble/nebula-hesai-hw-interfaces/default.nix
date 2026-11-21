@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, boost, nebula-core-common, nebula-core-hw-interfaces, nebula-hesai-common }:
 buildRosPackage {
   pname = "ros-humble-nebula-hesai-hw-interfaces";
-  version = "1.4.0-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_hesai_hw_interfaces/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "81f6e4dfa2f3aa601217af7d16f2fde31de05a3c7015973f7c7e74eb6650e73d";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_hesai_hw_interfaces/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "bc390fc7f934133e4692ff26e6d083cffbc52c3a22f054b837c130e665c39a34";
   };
 
   buildType = "ament_cmake";

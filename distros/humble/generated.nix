@@ -1056,6 +1056,12 @@ self: super: {
 
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
 
+ dynmsg = self.callPackage ./dynmsg {};
+
+ dynmsg-demo = self.callPackage ./dynmsg-demo {};
+
+ dynmsg-msgs = self.callPackage ./dynmsg-msgs {};
+
  easynav = self.callPackage ./easynav {};
 
  easynav-bonxai-maps-manager = self.callPackage ./easynav-bonxai-maps-manager {};
@@ -1345,6 +1351,8 @@ self: super: {
  ewellix-viz = self.callPackage ./ewellix-viz {};
 
  example-interfaces = self.callPackage ./example-interfaces {};
+
+ example-robot-descriptions = self.callPackage ./example-robot-descriptions {};
 
  examples-rclcpp-async-client = self.callPackage ./examples-rclcpp-async-client {};
 
@@ -2216,21 +2224,27 @@ self: super: {
 
  mocap4r2-control = self.callPackage ./mocap4r2-control {};
 
- mocap4r2-control-msgs = self.callPackage ./mocap4r2-control-msgs {};
+ mocap4r2-gt-tools = self.callPackage ./mocap4r2-gt-tools {};
 
- mocap4r2-dummy-driver = self.callPackage ./mocap4r2-dummy-driver {};
-
- mocap4r2-marker-publisher = self.callPackage ./mocap4r2-marker-publisher {};
+ mocap4r2-interfaces = self.callPackage ./mocap4r2-interfaces {};
 
  mocap4r2-marker-viz = self.callPackage ./mocap4r2-marker-viz {};
 
- mocap4r2-marker-viz-srvs = self.callPackage ./mocap4r2-marker-viz-srvs {};
+ mocap4r2-motion-tools = self.callPackage ./mocap4r2-motion-tools {};
 
  mocap4r2-msgs = self.callPackage ./mocap4r2-msgs {};
 
+ mocap4r2-optitrack-driver = self.callPackage ./mocap4r2-optitrack-driver {};
+
+ mocap4r2-qualisys-driver = self.callPackage ./mocap4r2-qualisys-driver {};
+
  mocap4r2-robot-gt = self.callPackage ./mocap4r2-robot-gt {};
 
- mocap4r2-robot-gt-msgs = self.callPackage ./mocap4r2-robot-gt-msgs {};
+ mocap4r2-sim-driver = self.callPackage ./mocap4r2-sim-driver {};
+
+ mocap4r2-tools = self.callPackage ./mocap4r2-tools {};
+
+ mocap4r2-vicon-driver = self.callPackage ./mocap4r2-vicon-driver {};
 
  mocap-optitrack = self.callPackage ./mocap-optitrack {};
 
@@ -3596,6 +3610,8 @@ self: super: {
 
  ros2-medkit-diagnostic-bridge = self.callPackage ./ros2-medkit-diagnostic-bridge {};
 
+ ros2-medkit-fault-detection = self.callPackage ./ros2-medkit-fault-detection {};
+
  ros2-medkit-fault-manager = self.callPackage ./ros2-medkit-fault-manager {};
 
  ros2-medkit-fault-reporter = self.callPackage ./ros2-medkit-fault-reporter {};
@@ -3873,8 +3889,6 @@ self: super: {
  rqt-image-view = self.callPackage ./rqt-image-view {};
 
  rqt-joint-trajectory-controller = self.callPackage ./rqt-joint-trajectory-controller {};
-
- rqt-mocap4r2-control = self.callPackage ./rqt-mocap4r2-control {};
 
  rqt-moveit = self.callPackage ./rqt-moveit {};
 

@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, mrpt-hwdrivers, mrpt-libros-bridge, mrpt-msgs, mrpt-sensorlib, rclcpp-components, ros-environment, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, geometry-msgs, mrpt-hwdrivers, mrpt-sensorlib, rclcpp, ros-environment, sensor-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-mrpt-sensor-bumblebee-stereo";
-  version = "0.4.1-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/humble/mrpt_sensor_bumblebee_stereo/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "78c4adc5b6aca7a6ddf6fc3cd7a43b51fe717c09fd39925d9945c4043d363c8b";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/humble/mrpt_sensor_bumblebee_stereo/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "171cd9e50eed2c6dc1bcb2f4f622882c1dc7904926a7837073e2b08c0005c1df";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment ];
   checkInputs = [ ament-cmake-xmllint ament-lint-auto ];
-  propagatedBuildInputs = [ mrpt-hwdrivers mrpt-libros-bridge mrpt-msgs mrpt-sensorlib rclcpp-components tf2-ros ];
+  propagatedBuildInputs = [ geometry-msgs mrpt-hwdrivers mrpt-sensorlib rclcpp sensor-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-pytest, ament-cmake-ros, ament-cmake-xmllint, ament-lint-auto, geometry-msgs, launch-testing, launch-testing-ros, mrpt-containers, mrpt-libros-bridge, mrpt-maps, mrpt-math, mrpt-nav-interfaces, mrpt-path-planning-core, mrpt-system, mvsim, nav-msgs, rclcpp, rclcpp-components, rclpy, sensor-msgs, sensor-msgs-py, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-trajectory-follower";
-  version = "2.8.0-r1";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/rolling/mrpt_trajectory_follower/2.8.0-1.tar.gz";
-    name = "2.8.0-1.tar.gz";
-    sha256 = "66f5ce8199bb64f7c545429a239aa6d63f07121b7e2506c2242dd7d132223c40";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/rolling/mrpt_trajectory_follower/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "a796ed5b417bb2d18086a9ad541011c9c9f27bfe44d9fd1532efdcca42e5d1ad";
   };
 
   buildType = "ament_cmake";

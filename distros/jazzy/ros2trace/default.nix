@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-mypy, ament-pep257, ament-xmllint, python3Packages, ros2cli, tracetools-trace }:
 buildRosPackage {
   pname = "ros-jazzy-ros2trace";
-  version = "8.2.6-r1";
+  version = "8.2.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/jazzy/ros2trace/8.2.6-1.tar.gz";
-    name = "8.2.6-1.tar.gz";
-    sha256 = "71cb256ae3b2820aff0f12b58e284a8a3580a4dbc758056859c4f0315b81b25c";
+    url = "https://github.com/ros2-gbp/ros2_tracing-release/archive/release/jazzy/ros2trace/8.2.7-1.tar.gz";
+    name = "8.2.7-1.tar.gz";
+    sha256 = "a1c39ae3a2456b7b931319299117af80fce9fac0445efb271e69b30b86303a47";
   };
 
   buildType = "ament_python";

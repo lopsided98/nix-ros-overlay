@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, rclcpp, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-hls-lfcd-lds-driver";
-  version = "2.1.1-r1";
+  version = "2.1.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/hls_lfcd_lds_driver-release/archive/release/humble/hls_lfcd_lds_driver/2.1.1-1.tar.gz";
-    name = "2.1.1-1.tar.gz";
-    sha256 = "e69ee5d78560a416b5c6aff4016be71c850d4e1ee5ee27b01db23c10acb86d94";
+    url = "https://github.com/ros2-gbp/hls_lfcd_lds_driver-release/archive/release/humble/hls_lfcd_lds_driver/2.1.2-1.tar.gz";
+    name = "2.1.2-1.tar.gz";
+    sha256 = "aa18b3f9280241a2cf92b3039005d13d9a6bd621fd0a28e55ef492e5888f7305";
   };
 
   buildType = "ament_cmake";

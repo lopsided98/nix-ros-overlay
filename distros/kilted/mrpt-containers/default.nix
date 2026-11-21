@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-core, mrpt-typemeta, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-containers";
-  version = "3.6.2-r1";
+  version = "3.6.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_containers/3.6.2-1.tar.gz";
-    name = "3.6.2-1.tar.gz";
-    sha256 = "5154c50499024a765dfa524dfb4b9554f1ec2a3ecf8ca2e4e97abf0c740a66cc";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_containers/3.6.3-1.tar.gz";
+    name = "3.6.3-1.tar.gz";
+    sha256 = "8132d0bb8892f7336dd2fdc2079a7ae32208cd0a0f7a9098e4f8d39e9cd7433a";
   };
 
   buildType = "cmake";

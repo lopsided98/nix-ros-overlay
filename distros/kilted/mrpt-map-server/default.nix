@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, mp2p-icp, mrpt-libros-bridge, mrpt-maps, mrpt-msgs, mrpt-nav-interfaces, mrpt-obs, mrpt-topography, rclcpp-components, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-map-server";
-  version = "2.8.0-r1";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/kilted/mrpt_map_server/2.8.0-1.tar.gz";
-    name = "2.8.0-1.tar.gz";
-    sha256 = "17c9ffd4e570563187d2e37cf07698e592e3b2de7fe2f12b325591de603cfe65";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/kilted/mrpt_map_server/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "02a8e16e49cd1e3ea3d200a6abbfb0bd063e8fc088cb5ffca9ea8f3071838da2";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, mrpt-hwdrivers, mrpt-libros-bridge, mrpt-msgs, mrpt-sensorlib, rclcpp-components, ros-environment, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-sensor-imu-taobotics";
-  version = "0.4.1-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/lyrical/mrpt_sensor_imu_taobotics/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "e4c7b16f2c151cdc3af9f32042e35baf072e18a8d689090b43050b016be0c48e";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/lyrical/mrpt_sensor_imu_taobotics/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "b7a93ddcede8cb52a448315195f5b427e16ed64d904fbde78657cc7c83b64c38";
   };
 
   buildType = "ament_cmake";

@@ -398,6 +398,10 @@ self: super: {
 
  clips-vendor = self.callPackage ./clips-vendor {};
 
+ cloudini-lib = self.callPackage ./cloudini-lib {};
+
+ cloudini-ros = self.callPackage ./cloudini-ros {};
+
  cm-topic-hardware-component = self.callPackage ./cm-topic-hardware-component {};
 
  coal = self.callPackage ./coal {};
@@ -441,6 +445,8 @@ self: super: {
  cras-lint = self.callPackage ./cras-lint {};
 
  cras-msgs = self.callPackage ./cras-msgs {};
+
+ cras-py-common = self.callPackage ./cras-py-common {};
 
  cras-topic-tools = self.callPackage ./cras-topic-tools {};
 
@@ -1912,6 +1918,8 @@ self: super: {
 
  py-trees-ros-viewer = self.callPackage ./py-trees-ros-viewer {};
 
+ pybind11-json-vendor = self.callPackage ./pybind11-json-vendor {};
+
  pybind11-vendor = self.callPackage ./pybind11-vendor {};
 
  pyhri = self.callPackage ./pyhri {};
@@ -2161,6 +2169,8 @@ self: super: {
  rmf-websocket = self.callPackage ./rmf-websocket {};
 
  rmf-workcell-msgs = self.callPackage ./rmf-workcell-msgs {};
+
+ rmf-zone-msgs = self.callPackage ./rmf-zone-msgs {};
 
  rmw = self.callPackage ./rmw {};
 
@@ -2691,6 +2701,14 @@ self: super: {
  service-msgs = self.callPackage ./service-msgs {};
 
  shape-msgs = self.callPackage ./shape-msgs {};
+
+ shared-buffer = self.callPackage ./shared-buffer {};
+
+ shared-buffer-backend = self.callPackage ./shared-buffer-backend {};
+
+ shared-buffer-backend-msgs = self.callPackage ./shared-buffer-backend-msgs {};
+
+ shared-buffer-backend-py = self.callPackage ./shared-buffer-backend-py {};
 
  sick-safetyscanners2 = self.callPackage ./sick-safetyscanners2 {};
 

@@ -8,9 +8,9 @@ buildRosPackage {
   version = "0.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/MOCAP4ROS2-Project/mocap4r2_msgs-release/archive/release/kilted/mocap4r2_msgs/0.2.0-1.tar.gz";
+    url = "https://github.com/MOCAP4ROS2-Project/mocap4r2_interfaces-release/archive/release/kilted/mocap4r2_msgs/0.2.0-1.tar.gz";
     name = "0.2.0-1.tar.gz";
-    sha256 = "04f6539535638ae8b551e82323435a9a930b9630dd70a532f36120b0edc557cc";
+    sha256 = "f965e389f4467d1cfa242ef02e380578a6e3489219e80022db03624afd3bdaa9";
   };
 
   buildType = "ament_cmake";

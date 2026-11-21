@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, git, glfw3, libGL, libGLU, libusb1, libx11, openssl, pkg-config, udev }:
 buildRosPackage {
   pname = "ros-kilted-librealsense2";
-  version = "2.59.1-r1";
+  version = "2.59.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/librealsense2-release/archive/release/kilted/librealsense2/2.59.1-1.tar.gz";
-    name = "2.59.1-1.tar.gz";
-    sha256 = "639af0d358ef9320a05c533ce6be3c7472fc5186f9d1585ef99ced5c5dbf0129";
+    url = "https://github.com/ros2-gbp/librealsense2-release/archive/release/kilted/librealsense2/2.59.2-1.tar.gz";
+    name = "2.59.2-1.tar.gz";
+    sha256 = "c60f1011269968373644ae686748480f435aa49b40a8d2d4deaafef3cc7b7488";
   };
 
   buildType = "cmake";

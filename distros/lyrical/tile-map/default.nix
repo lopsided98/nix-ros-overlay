@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, jsoncpp, mapviz, pluginlib, qt5or6, rclcpp, rqt-gui-cpp, swri-math-util, swri-transform-util, tf2, yaml-cpp }:
 buildRosPackage {
   pname = "ros-lyrical-tile-map";
-  version = "4.2.0-r1";
+  version = "4.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/lyrical/tile_map/4.2.0-1.tar.gz";
-    name = "4.2.0-1.tar.gz";
-    sha256 = "eb9744272692fc0d9194e1e735ceef927f9ab790451d7d832133bfe86c313c7a";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/lyrical/tile_map/4.3.0-1.tar.gz";
+    name = "4.3.0-1.tar.gz";
+    sha256 = "51a9abfe9af7c7ef93f91f7f6648d7586117bed6c502a5351971d5020b4630a4";
   };
 
   buildType = "ament_cmake";

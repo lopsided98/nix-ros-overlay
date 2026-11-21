@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, geometry-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-lyrical-scenario-execution-interfaces";
-  version = "1.7.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/lyrical/scenario_execution_interfaces/1.7.0-1.tar.gz";
-    name = "1.7.0-1.tar.gz";
-    sha256 = "24d59f586837b744ad865b0e8785e8abe73d392246cca2c16552f6a34ab2d796";
+    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/lyrical/scenario_execution_interfaces/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "2562bfe4e8a0dbc19942d4ed5234d324c71c071c88b9c64d64c106216792e4c6";
   };
 
   buildType = "ament_cmake";

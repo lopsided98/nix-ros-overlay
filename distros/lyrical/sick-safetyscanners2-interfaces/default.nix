@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, rosidl-default-generators, rosidl-default-runtime, sensor-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-sick-safetyscanners2-interfaces";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sick_safetyscanners2_interfaces-release/archive/release/lyrical/sick_safetyscanners2_interfaces/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "b15df9e4fc7fc4767f8324eb43fb993a55b05e94269362d8a0ec247c9c8169c3";
+    url = "https://github.com/ros2-gbp/sick_safetyscanners2_interfaces-release/archive/release/lyrical/sick_safetyscanners2_interfaces/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "22a2c40985ecafde4a3d10fd56bf4764aaa6ae5f8353f4e1c20844d5668c05ca";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Interfaces for the sick_safetyscanners ros2 driver";
-    license = with lib.licenses; [ "ALv2" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

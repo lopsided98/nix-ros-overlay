@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, binutils, cmake, gflags, gz-cmake-vendor, gz-common-vendor, gz-gui-vendor, gz-math-vendor, gz-msgs-vendor, gz-plugin-vendor, gz-sim-vendor, gz-tools-vendor, gz-transport-vendor, libwebsockets, libxi, libxmu, libyaml, tinyxml-2, util-linux, xorg }:
 buildRosPackage {
   pname = "ros-kilted-gz-launch-vendor";
-  version = "0.2.5-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_launch_vendor-release/archive/release/kilted/gz_launch_vendor/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "16131659e8587cb61f6e10c4fb105b4cb8818c9bd749f438ace18a6b9d0e4a81";
+    url = "https://github.com/ros2-gbp/gz_launch_vendor-release/archive/release/kilted/gz_launch_vendor/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "6fb45aa8518904429a31376ae24acd9c45242d4e83b96f967ae9dd584c9c3a63";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cmake-vendor-package cmake ];
 
   meta = {
-    description = "Vendor package for: gz-launch8 8.0.3
+    description = "Vendor package for: gz-launch8 8.0.4
 
     Gazebo Launch : Run and manage programs and plugins";
     license = with lib.licenses; [ asl20 ];

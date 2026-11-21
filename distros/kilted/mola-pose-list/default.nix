@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-maps, mrpt-poses }:
 buildRosPackage {
   pname = "ros-kilted-mola-pose-list";
-  version = "3.4.0-r1";
+  version = "3.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_pose_list/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "7d7fca0b5bcc416a5d0b588168f5f5f33798ec04e42b8f9fd7b6d84ad7766cb9";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_pose_list/3.5.0-1.tar.gz";
+    name = "3.5.0-1.tar.gz";
+    sha256 = "ea54c3bae48ff445e013b5fab3466ec776f529fa0fa32cfb764175d060963568";
   };
 
   buildType = "cmake";

@@ -322,6 +322,8 @@ self: super: {
 
  broll = self.callPackage ./broll {};
 
+ btick = self.callPackage ./btick {};
+
  builtin-interfaces = self.callPackage ./builtin-interfaces {};
 
  camera-aravis2 = self.callPackage ./camera-aravis2 {};
@@ -447,6 +449,8 @@ self: super: {
  cras-lint = self.callPackage ./cras-lint {};
 
  cras-msgs = self.callPackage ./cras-msgs {};
+
+ cras-py-common = self.callPackage ./cras-py-common {};
 
  cras-topic-tools = self.callPackage ./cras-topic-tools {};
 
@@ -591,6 +595,12 @@ self: super: {
  dynamixel-workbench-msgs = self.callPackage ./dynamixel-workbench-msgs {};
 
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
+
+ dynmsg = self.callPackage ./dynmsg {};
+
+ dynmsg-demo = self.callPackage ./dynmsg-demo {};
+
+ dynmsg-msgs = self.callPackage ./dynmsg-msgs {};
 
  easynav = self.callPackage ./easynav {};
 
@@ -849,6 +859,8 @@ self: super: {
  eventdispatch-ros2-interfaces = self.callPackage ./eventdispatch-ros2-interfaces {};
 
  example-interfaces = self.callPackage ./example-interfaces {};
+
+ example-robot-descriptions = self.callPackage ./example-robot-descriptions {};
 
  examples-rclcpp-async-client = self.callPackage ./examples-rclcpp-async-client {};
 
@@ -1496,7 +1508,33 @@ self: super: {
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
+ mocap4r2-control = self.callPackage ./mocap4r2-control {};
+
+ mocap4r2-gt-tools = self.callPackage ./mocap4r2-gt-tools {};
+
+ mocap4r2-gz-demos = self.callPackage ./mocap4r2-gz-demos {};
+
+ mocap4r2-gz-plugin = self.callPackage ./mocap4r2-gz-plugin {};
+
+ mocap4r2-interfaces = self.callPackage ./mocap4r2-interfaces {};
+
+ mocap4r2-marker-viz = self.callPackage ./mocap4r2-marker-viz {};
+
+ mocap4r2-motion-tools = self.callPackage ./mocap4r2-motion-tools {};
+
  mocap4r2-msgs = self.callPackage ./mocap4r2-msgs {};
+
+ mocap4r2-optitrack-driver = self.callPackage ./mocap4r2-optitrack-driver {};
+
+ mocap4r2-qualisys-driver = self.callPackage ./mocap4r2-qualisys-driver {};
+
+ mocap4r2-robot-gt = self.callPackage ./mocap4r2-robot-gt {};
+
+ mocap4r2-sim-driver = self.callPackage ./mocap4r2-sim-driver {};
+
+ mocap4r2-tools = self.callPackage ./mocap4r2-tools {};
+
+ mocap4r2-vicon-driver = self.callPackage ./mocap4r2-vicon-driver {};
 
  mola = self.callPackage ./mola {};
 
@@ -2067,6 +2105,8 @@ self: super: {
  open-manipulator-playground = self.callPackage ./open-manipulator-playground {};
 
  open-manipulator-teleop = self.callPackage ./open-manipulator-teleop {};
+
+ opencv-apps = self.callPackage ./opencv-apps {};
 
  openeb-vendor = self.callPackage ./openeb-vendor {};
 

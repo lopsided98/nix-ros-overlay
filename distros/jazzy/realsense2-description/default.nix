@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, launch-ros, rclcpp, rclcpp-components, realsense2-camera-msgs, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-realsense2-description";
-  version = "4.59.1-r1";
+  version = "4.59.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/jazzy/realsense2_description/4.59.1-1.tar.gz";
-    name = "4.59.1-1.tar.gz";
-    sha256 = "3e8b4ca36ca297f21996ca0f733aca483b6579c2f7880e0e00ab740df304995f";
+    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/jazzy/realsense2_description/4.59.2-1.tar.gz";
+    name = "4.59.2-1.tar.gz";
+    sha256 = "49609af0e315f777710b2518777c5336d4a69af1c50e0e76d53f01b27cddfb61";
   };
 
   buildType = "ament_cmake";

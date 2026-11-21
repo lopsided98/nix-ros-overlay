@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, boost, nebula-core-common, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-nebula-continental-common";
-  version = "1.4.0-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_continental_common/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "142d587931eda14a25d10d2ea6d754750379bb1a9d0b71ef14eac5503f238447";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_continental_common/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "a65b9943998e4745c22facabf92d2b3da6c0dfea95bd43e8ceafee316058f4b7";
   };
 
   buildType = "ament_cmake";

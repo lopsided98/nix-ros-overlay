@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-data";
-  version = "3.6.2-r1";
+  version = "3.6.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_data/3.6.2-1.tar.gz";
-    name = "3.6.2-1.tar.gz";
-    sha256 = "332a91c918c458ba957bf1f4799aacb3971018a1b6b2736a8cef2a937b75718c";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_data/3.6.3-1.tar.gz";
+    name = "3.6.3-1.tar.gz";
+    sha256 = "4a99fad1eeb2949781f8289942651729efa570e8b0f21bddfc9c427a1ff5bd41";
   };
 
   buildType = "cmake";
