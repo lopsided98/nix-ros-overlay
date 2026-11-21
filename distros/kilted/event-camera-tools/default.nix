@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-black, ament-cmake-clang-format, ament-cmake-ros, ament-lint-auto, ament-lint-common, event-camera-codecs, event-camera-msgs, opencv, rclcpp, rclcpp-components, ros-environment, rosbag2-cpp, rosbag2-storage, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-black, ament-cmake-clang-format, ament-cmake-ros, ament-cmake-test, ament-lint-auto, ament-lint-common, event-camera-codecs, event-camera-msgs, opencv, rclcpp, rclcpp-components, ros-environment, rosbag2-cpp, rosbag2-storage, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-event-camera-tools";
-  version = "3.1.2-r1";
+  version = "3.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/event_camera_tools-release/archive/release/kilted/event_camera_tools/3.1.2-1.tar.gz";
-    name = "3.1.2-1.tar.gz";
-    sha256 = "7032d03d75cb889db7a98b1545344d4f7e4d4e7da55041316edc424232398224";
+    url = "https://github.com/ros2-gbp/event_camera_tools-release/archive/release/kilted/event_camera_tools/3.1.6-1.tar.gz";
+    name = "3.1.6-1.tar.gz";
+    sha256 = "4460609435dbf0b6c4382cd9a84dff785eed0cd207331520ba8e89b4b9f8c58c";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-auto ament-cmake-ros ros-environment ];
-  checkInputs = [ ament-cmake-black ament-cmake-clang-format ament-lint-auto ament-lint-common ];
+  checkInputs = [ ament-cmake-black ament-cmake-clang-format ament-cmake-test ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ event-camera-codecs event-camera-msgs opencv opencv.cxxdev rclcpp rclcpp-components rosbag2-cpp rosbag2-storage sensor-msgs ];
   nativeBuildInputs = [ ament-cmake ament-cmake-auto ament-cmake-ros ros-environment ];
 

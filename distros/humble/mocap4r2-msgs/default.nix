@@ -8,9 +8,9 @@ buildRosPackage {
   version = "0.0.6-r2";
 
   src = fetchurl {
-    url = "https://github.com/MOCAP4ROS2-Project/mocap4r2_msgs-release/archive/release/humble/mocap4r2_msgs/0.0.6-2.tar.gz";
+    url = "https://github.com/MOCAP4ROS2-Project/mocap4r2_interfaces-release/archive/release/humble/mocap4r2_msgs/0.0.6-2.tar.gz";
     name = "0.0.6-2.tar.gz";
-    sha256 = "dad98f723b18c6ad8b328c7280fdf60f23ac97a87b30903b2a7e0cace522e4db";
+    sha256 = "0f1c536a76bf45b78a087aefe106991d52b2482a1bbe7f5d210bc6595226da7b";
   };
 
   buildType = "ament_cmake";

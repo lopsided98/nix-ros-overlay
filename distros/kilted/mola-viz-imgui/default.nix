@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, glfw3, mola-kernel, mrpt-gui, mrpt-imgui, mrpt-maps, mrpt-obs, mrpt-opengl, mrpt-viz }:
 buildRosPackage {
   pname = "ros-kilted-mola-viz-imgui";
-  version = "3.4.0-r1";
+  version = "3.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_viz_imgui/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "4ce9ee6a8523d4d3ca2eb335fcc38db44a564c437a77761ffded236bcf12a8c4";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/kilted/mola_viz_imgui/3.5.0-1.tar.gz";
+    name = "3.5.0-1.tar.gz";
+    sha256 = "bd0dccba206255cb02c43c20f96e8264fcf43d136c22110089084e5f145597d3";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, angles, control-msgs, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, joint-trajectory-controller, lifecycle-msgs, pluginlib, rclcpp-lifecycle, rcutils, realtime-tools, ros2-control-test-assets, std-msgs, std-srvs, tf2-geometry-msgs, tf2-ros, trajectory-msgs, ur-dashboard-msgs, ur-msgs }:
 buildRosPackage {
   pname = "ros-kilted-ur-controllers";
-  version = "4.10.0-r1";
+  version = "4.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/kilted/ur_controllers/4.10.0-1.tar.gz";
-    name = "4.10.0-1.tar.gz";
-    sha256 = "81a9b523f2ddb1a03613e2b7a569b92e5ceeb8a7ca740b9f938b7bc67dcdf5a6";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/kilted/ur_controllers/4.11.0-1.tar.gz";
+    name = "4.11.0-1.tar.gz";
+    sha256 = "7c8216daf8b04e31fddc7a08e48b499b22dac5d24d1559c0d88bb1c14d91025e";
   };
 
   buildType = "ament_cmake";

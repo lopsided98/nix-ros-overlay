@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rclcpp, rclcpp-lifecycle, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-coin-d4-driver";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/coin_d4_driver-release/archive/release/jazzy/coin_d4_driver/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "9e4b6eb274888024db2b95d19fd89ba4078530eb4567c172ca39b5133da97bac";
+    url = "https://github.com/ros2-gbp/coin_d4_driver-release/archive/release/jazzy/coin_d4_driver/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "7ecdc8fb001991d1045f95cc61972d8ff5a31f63e837c4d50b7f036495b27640";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cv-bridge, eigen, freeglut, glew, image-transport, libGL, libGLU, llvmPackages, message-filters, moveit-common, moveit-core, moveit-msgs, moveit-ros-occupancy-map-monitor, moveit-ros-planning, object-recognition-msgs, pluginlib, rclcpp, sensor-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, urdf }:
 buildRosPackage {
   pname = "ros-rolling-moveit-ros-perception";
-  version = "2.15.2-r1";
+  version = "2.15.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_ros_perception/2.15.2-1.tar.gz";
-    name = "2.15.2-1.tar.gz";
-    sha256 = "13cba1ce4523759ac3f2bec651f935da69e258fdabacc4e2a5d61ab77735683c";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_ros_perception/2.15.3-1.tar.gz";
+    name = "2.15.3-1.tar.gz";
+    sha256 = "09d4c3a9c5f926b005dcf503f8c30dcb039632cbb0cae0c1e04f2dd283e66aa4";
   };
 
   buildType = "ament_cmake";

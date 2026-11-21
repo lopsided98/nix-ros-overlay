@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gtsam, mola-common, mrpt-poses }:
 buildRosPackage {
   pname = "ros-kilted-mola-gtsam-factors";
-  version = "3.2.0-r1";
+  version = "3.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/kilted/mola_gtsam_factors/3.2.0-1.tar.gz";
-    name = "3.2.0-1.tar.gz";
-    sha256 = "f28be2fc0f5815b2b7fa4a894605acb17d4b645654590131e5637e2bc3b8dc5f";
+    url = "https://github.com/ros2-gbp/mola_state_estimation-release/archive/release/kilted/mola_gtsam_factors/3.3.0-1.tar.gz";
+    name = "3.3.0-1.tar.gz";
+    sha256 = "dc926ad66f03b0ba867e9e18fc4058c1cd44282f31eb93abe958326c9bd81e74";
   };
 
   buildType = "cmake";

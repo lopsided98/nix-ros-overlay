@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, gps-msgs, mapviz, mapviz-interfaces, marti-common-msgs, pluginlib, python3Packages, qt5or6, rclcpp, rclpy, rqt-gui-cpp, swri-math-util, swri-transform-util, tf2 }:
 buildRosPackage {
   pname = "ros-humble-multires-image";
-  version = "4.2.0-r1";
+  version = "4.3.0-r3";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/humble/multires_image/4.2.0-1.tar.gz";
-    name = "4.2.0-1.tar.gz";
-    sha256 = "98472c3df9fa7dad8410bd77676ce9892f15685ca74b7951d605f4781e2e0415";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/humble/multires_image/4.3.0-3.tar.gz";
+    name = "4.3.0-3.tar.gz";
+    sha256 = "632ff4b0d68d4b3cdc1b85689ca0b654b18b520bcd548645002f5eaca006e954";
   };
 
   buildType = "ament_cmake";

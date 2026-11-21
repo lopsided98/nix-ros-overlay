@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, boost, cmake }:
 buildRosPackage {
   pname = "ros-lyrical-sick-safetyscanners-base";
-  version = "1.0.3-r3";
+  version = "2.0.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/sick_safetyscanners_base-release/archive/release/lyrical/sick_safetyscanners_base/1.0.3-3.tar.gz";
-    name = "1.0.3-3.tar.gz";
-    sha256 = "b0b4119b1d948661c24b5b0574b74732bcc1cd1dd9905a79e585752446d6f21e";
+    url = "https://github.com/ros2-gbp/sick_safetyscanners_base-release/archive/release/lyrical/sick_safetyscanners_base/2.0.0-1.tar.gz";
+    name = "2.0.0-1.tar.gz";
+    sha256 = "9c79a17b66bf6edbd3f5a896cdccbad4f213c598d30d0ca0322fac4b07caaf3e";
   };
 
   buildType = "cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
   meta = {
     description = "Provides an Interface to read the sensor output of a SICK
   Safety Scanner";
-    license = with lib.licenses; [ "ALv2" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

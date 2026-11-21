@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cli11, cmake, controller-manager, cppzmq, diagnostic-msgs, diff-drive-controller, eigen, hardware-interface, joint-state-broadcaster, mrpt-imgui, mrpt-imgui-vendor, mrpt-libros-bridge, mrpt-maps, mrpt-tfest, mrpt-topography, nav-msgs, onetbb, protobuf, python3, python3Packages, robot-state-publisher, ros-environment, ros2launch, sensor-msgs, simulation-interfaces, stereo-msgs, tf2, tf2-geometry-msgs, unzip, visualization-msgs, wget }:
 buildRosPackage {
   pname = "ros-kilted-mvsim";
-  version = "2.1.0-r1";
+  version = "2.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mvsim-release/archive/release/kilted/mvsim/2.1.0-1.tar.gz";
-    name = "2.1.0-1.tar.gz";
-    sha256 = "f8728ff58b67adf81718043bed142d9930a89d7d4e20b70dc2eb610447383fa7";
+    url = "https://github.com/ros2-gbp/mvsim-release/archive/release/kilted/mvsim/2.2.0-1.tar.gz";
+    name = "2.2.0-1.tar.gz";
+    sha256 = "7e0a00151890d4bcba2f5b7cc2b71664632aaa7235b66af3c83cf7765e284f1c";
   };
 
   buildType = "ament_cmake";

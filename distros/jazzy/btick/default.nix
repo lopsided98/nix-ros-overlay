@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, behaviortree-cpp, nlohmann_json, pugixml, rclcpp, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-btick";
-  version = "1.0.0-r1";
+  version = "1.0.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/SherifFathey/btick-release/archive/release/jazzy/btick/1.0.0-1.tar.gz";
-    name = "1.0.0-1.tar.gz";
-    sha256 = "991b99befcb8aea694ca020726d2663c24d6d6649a2c2400e386edc87f3ed4ab";
+    url = "https://github.com/SherifFathey/btick-release/archive/release/jazzy/btick/1.0.1-1.tar.gz";
+    name = "1.0.1-1.tar.gz";
+    sha256 = "9e4fa6f9a363e84c807b05e6d0adb2266bf2bf1aea20ff13cc0b265191b35b3e";
   };
 
   buildType = "ament_cmake";

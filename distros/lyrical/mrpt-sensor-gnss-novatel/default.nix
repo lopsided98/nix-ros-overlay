@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, mrpt-hwdrivers, mrpt-libros-bridge, mrpt-msgs, mrpt-sensorlib, novatel-oem6-msgs, rclcpp-components, ros-environment, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-sensor-gnss-novatel";
-  version = "0.4.1-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/lyrical/mrpt_sensor_gnss_novatel/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "907a3113117f552406247ebc87f84d22cef398a5e96f598c0f28aec741fad9e4";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/lyrical/mrpt_sensor_gnss_novatel/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "d37ebaae36be03e7d34965ff819f24b3797fa402447e5ba40e59dec716e7a6b6";
   };
 
   buildType = "ament_cmake";

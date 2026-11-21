@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, eigen, eigen3-cmake-module }:
 buildRosPackage {
   pname = "ros-jazzy-fusioncore-core";
-  version = "0.5.0-r1";
+  version = "0.5.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/manankharwar/fusioncore-release/archive/release/jazzy/fusioncore_core/0.5.0-1.tar.gz";
-    name = "0.5.0-1.tar.gz";
-    sha256 = "8df8c1aa540ba0e2e38571062f70fd45a1ec2cd4a2d2c95d357d4184beebd954";
+    url = "https://github.com/manankharwar/fusioncore-release/archive/release/jazzy/fusioncore_core/0.5.1-1.tar.gz";
+    name = "0.5.1-1.tar.gz";
+    sha256 = "486e47d717c0ce8f8e2345109c203ed4254792fc2e96e6b569cc250d1abe8121";
   };
 
   buildType = "ament_cmake";

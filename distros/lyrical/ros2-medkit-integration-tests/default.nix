@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-index-python, diagnostic-msgs, example-interfaces, launch-ros, launch-testing, launch-testing-ament-cmake, python3Packages, rcl-interfaces, rclcpp, rclcpp-action, rclcpp-lifecycle, ros2-medkit-cmake, ros2-medkit-fault-manager, ros2-medkit-gateway, ros2-medkit-graph-provider, ros2-medkit-linux-introspection, ros2-medkit-msgs, ros2-medkit-param-beacon, ros2-medkit-topic-beacon, sensor-msgs, std-msgs, std-srvs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-flake8, ament-cmake-gmock, ament-cmake-pytest, ament-cmake-python, ament-index-python, diagnostic-msgs, example-interfaces, greenwave-monitor, launch-ros, launch-testing, launch-testing-ament-cmake, lifecycle-msgs, python3Packages, rcl, rcl-interfaces, rclcpp, rclcpp-action, rclcpp-lifecycle, rmw, rmw-dds-common, ros2-medkit-action-status-bridge, ros2-medkit-cmake, ros2-medkit-diagnostic-bridge, ros2-medkit-fault-manager, ros2-medkit-fault-reporter, ros2-medkit-gateway, ros2-medkit-graph-provider, ros2-medkit-linux-introspection, ros2-medkit-log-bridge, ros2-medkit-msgs, ros2-medkit-param-beacon, ros2-medkit-topic-beacon, rosidl-typesupport-cpp, sensor-msgs, std-msgs, std-srvs }:
 buildRosPackage {
   pname = "ros-lyrical-ros2-medkit-integration-tests";
-  version = "0.6.0-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/lyrical/ros2_medkit_integration_tests/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "a0214b81bf149f1dc1e263c305bf4e54626c8b7bfc585c37f8de99527132ad16";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/lyrical/ros2_medkit_integration_tests/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "ef52e63374d4119b3d67ddd6b766c9ded86890924bd270758f2ad70b0011fa09";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-python ros2-medkit-cmake ];
-  checkInputs = [ ament-index-python launch-ros launch-testing launch-testing-ament-cmake python3Packages.jsonschema python3Packages.requests ros2-medkit-fault-manager ros2-medkit-gateway ros2-medkit-graph-provider ros2-medkit-linux-introspection ros2-medkit-param-beacon ros2-medkit-topic-beacon ];
-  propagatedBuildInputs = [ diagnostic-msgs example-interfaces rcl-interfaces rclcpp rclcpp-action rclcpp-lifecycle ros2-medkit-msgs sensor-msgs std-msgs std-srvs ];
+  checkInputs = [ ament-cmake-flake8 ament-cmake-gmock ament-cmake-pytest ament-index-python greenwave-monitor launch-ros launch-testing launch-testing-ament-cmake python3Packages.jsonschema python3Packages.pytest python3Packages.requests rcl rmw rmw-dds-common ros2-medkit-action-status-bridge ros2-medkit-diagnostic-bridge ros2-medkit-fault-manager ros2-medkit-fault-reporter ros2-medkit-gateway ros2-medkit-graph-provider ros2-medkit-linux-introspection ros2-medkit-log-bridge ros2-medkit-param-beacon ros2-medkit-topic-beacon rosidl-typesupport-cpp ];
+  propagatedBuildInputs = [ diagnostic-msgs example-interfaces lifecycle-msgs rcl-interfaces rclcpp rclcpp-action rclcpp-lifecycle ros2-medkit-msgs sensor-msgs std-msgs std-srvs ];
   nativeBuildInputs = [ ament-cmake ament-cmake-python ros2-medkit-cmake ];
 
   meta = {

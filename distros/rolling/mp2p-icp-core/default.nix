@@ -2,20 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, cli11, cmake, eigen, mola-common, mola-imu-preintegration, mrpt-containers, mrpt-maps, mrpt-obs, mrpt-poses, mrpt-rtti, mrpt-serialization, mrpt-system, mrpt-tfest, mrpt-topography, onetbb, ros-environment }:
+{ lib, buildRosPackage, fetchurl, cli11, cmake, eigen, mola-common, mola-imu-preintegration, mrpt-containers, mrpt-maps, mrpt-obs, mrpt-poses, mrpt-rtti, mrpt-serialization, mrpt-system, mrpt-tfest, mrpt-topography, onetbb, python3, python3Packages, ros-environment, zlib }:
 buildRosPackage {
   pname = "ros-rolling-mp2p-icp-core";
-  version = "3.1.0-r1";
+  version = "3.2.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/rolling/mp2p_icp_core/3.1.0-1.tar.gz";
-    name = "3.1.0-1.tar.gz";
-    sha256 = "196d4709672acadf18be9c0ce251ab6cabd4da0bd62a24d1699a5e150be0638e";
+    url = "https://github.com/ros2-gbp/mp2p_icp-release/archive/release/rolling/mp2p_icp_core/3.2.0-1.tar.gz";
+    name = "3.2.0-1.tar.gz";
+    sha256 = "56ce0301d799e6070841f4fd74ab2f3c70f3e0b47fc0cc0df4607262eb04e33c";
   };
 
   buildType = "cmake";
-  buildInputs = [ cmake ros-environment ];
-  propagatedBuildInputs = [ cli11 eigen mola-common mola-imu-preintegration mrpt-containers mrpt-maps mrpt-obs mrpt-poses mrpt-rtti mrpt-serialization mrpt-system mrpt-tfest mrpt-topography onetbb ];
+  buildInputs = [ cmake python3 python3Packages.pybind11 ros-environment ];
+  checkInputs = [ python3Packages.pytest ];
+  propagatedBuildInputs = [ cli11 eigen mola-common mola-imu-preintegration mrpt-containers mrpt-maps mrpt-obs mrpt-poses mrpt-rtti mrpt-serialization mrpt-system mrpt-tfest mrpt-topography onetbb python3Packages.numpy zlib ];
   nativeBuildInputs = [ cmake ];
 
   meta = {

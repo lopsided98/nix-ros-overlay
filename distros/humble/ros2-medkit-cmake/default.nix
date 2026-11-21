@@ -2,19 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-flake8, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-test, domain-coordinator, launch-testing-ament-cmake, python3Packages, rclpy, rmw-fastrtps-cpp, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-ros2-medkit-cmake";
-  version = "0.6.0-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_cmake/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "b2160cede9c13d86f5a5c50995e7ac0cedf04f00337884cf17e2fe3024960de6";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_cmake/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "fe673e2e2ffe79e37a2ea57bf4152753697632317d8f929d5d1a3f9d399ad077";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ];
+  checkInputs = [ ament-cmake-flake8 ament-cmake-gtest ament-cmake-pytest launch-testing-ament-cmake python3Packages.pytest rclpy rmw-fastrtps-cpp std-msgs ];
+  propagatedBuildInputs = [ ament-cmake-test domain-coordinator ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gtest }:
 buildRosPackage {
   pname = "ros-jazzy-nanoflann-vendor";
-  version = "2.0.1-r1";
+  version = "2.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nanoflann-release/archive/release/jazzy/nanoflann_vendor/2.0.1-1.tar.gz";
-    name = "2.0.1-1.tar.gz";
-    sha256 = "169ce3547bd5500d52675d457c2326c0ff59b60545b057db41be7f0d1cab2cf3";
+    url = "https://github.com/ros2-gbp/nanoflann-release/archive/release/jazzy/nanoflann_vendor/2.0.2-1.tar.gz";
+    name = "2.0.2-1.tar.gz";
+    sha256 = "da9e1294b7e1d4b0f5b96740d5fcf4daa57216a099f8213ba4530f00849daf66";
   };
 
   buildType = "cmake";

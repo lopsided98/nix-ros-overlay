@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, backward-ros }:
 buildRosPackage {
   pname = "ros-rolling-moveit-common";
-  version = "2.15.2-r1";
+  version = "2.15.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_common/2.15.2-1.tar.gz";
-    name = "2.15.2-1.tar.gz";
-    sha256 = "e2026b304c6b630e2801d2e0f6f4776db54fc3bc9d52ec24e254cbfcbf93ceb2";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_common/2.15.3-1.tar.gz";
+    name = "2.15.3-1.tar.gz";
+    sha256 = "fc9bc40143f6a28d9024d55bc8f857c23e7e6483dace3d2768f749fa5723cbf4";
   };
 
   buildType = "ament_cmake";

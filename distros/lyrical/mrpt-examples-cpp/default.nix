@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-data, mrpt-graphslam, mrpt-gui, mrpt-imgui, mrpt-imgui-vendor, mrpt-libapps-cli, mrpt-libapps-gui, mrpt-nav }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-examples-cpp";
-  version = "3.6.2-r1";
+  version = "3.6.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_examples_cpp/3.6.2-1.tar.gz";
-    name = "3.6.2-1.tar.gz";
-    sha256 = "d4d8d786c45128fbaa5f6d2d539bdf55996a0cb3849fe168010b12d1f5b71a80";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/lyrical/mrpt_examples_cpp/3.6.3-1.tar.gz";
+    name = "3.6.3-1.tar.gz";
+    sha256 = "ae3ac8b28dceabd40668c7e1d32cdac86858f604d99625cfdb5aec608c839db7";
   };
 
   buildType = "cmake";

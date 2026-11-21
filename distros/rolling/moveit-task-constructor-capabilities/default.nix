@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, controller-manager, fmt, launch-testing, launch-testing-ament-cmake, moveit-configs-utils, moveit-core, moveit-resources-panda-moveit-config, moveit-ros-move-group, moveit-ros-planning, moveit-task-constructor-core, moveit-task-constructor-msgs, pluginlib, rclcpp-action, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-moveit-task-constructor-capabilities";
-  version = "0.2.0-r1";
+  version = "0.2.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit_task_constructor-release/archive/release/rolling/moveit_task_constructor_capabilities/0.2.0-1.tar.gz";
-    name = "0.2.0-1.tar.gz";
-    sha256 = "7d1cc759d5770efd254bd116df4b1d21cdd2803de6086a3df84ca1dd89e81cd1";
+    url = "https://github.com/ros2-gbp/moveit_task_constructor-release/archive/release/rolling/moveit_task_constructor_capabilities/0.2.1-1.tar.gz";
+    name = "0.2.1-1.tar.gz";
+    sha256 = "42aa3c27b243a0dabd827aedc55d4d4200e06d20b3193dfe65b941b7a7debe80";
   };
 
   buildType = "ament_cmake";

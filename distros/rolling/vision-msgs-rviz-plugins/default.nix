@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-lint-auto, ament-lint-common, pluginlib, python3Packages, rclcpp, rclpy, rviz-common, rviz-default-plugins, rviz-rendering, rviz2, vision-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-rolling-vision-msgs-rviz-plugins";
-  version = "4.2.0-r2";
+  version = "4.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/vision_msgs-release/archive/release/rolling/vision_msgs_rviz_plugins/4.2.0-2.tar.gz";
-    name = "4.2.0-2.tar.gz";
-    sha256 = "c7206688f699ef54108651ab44de12ce98f840e1781e6c13ab4c54ed8f264eb3";
+    url = "https://github.com/ros2-gbp/vision_msgs-release/archive/release/rolling/vision_msgs_rviz_plugins/4.3.0-1.tar.gz";
+    name = "4.3.0-1.tar.gz";
+    sha256 = "79d217a710e954ac6c205c7b5057e1842337b6ce89efd31c7ed643df83822168";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, moveit-ros-benchmarks, moveit-ros-move-group, moveit-ros-planning, moveit-ros-planning-interface, moveit-ros-robot-interaction, moveit-ros-visualization, moveit-ros-warehouse }:
 buildRosPackage {
   pname = "ros-rolling-moveit-ros";
-  version = "2.15.2-r1";
+  version = "2.15.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_ros/2.15.2-1.tar.gz";
-    name = "2.15.2-1.tar.gz";
-    sha256 = "13933db26110c2b17d6ae3dbf68355155b7bf1bfc3668771a0ec18974c644ab9";
+    url = "https://github.com/ros2-gbp/moveit2-release/archive/release/rolling/moveit_ros/2.15.3-1.tar.gz";
+    name = "2.15.3-1.tar.gz";
+    sha256 = "02ed54ebac06dcb5c0b0bb0c6b8ad394aa371cde0c7b6bbaaa0ff0ebd3263023";
   };
 
   buildType = "ament_cmake";
