@@ -67,7 +67,7 @@ What still needs to be done:
 
 ## Setup
 
-1. Install Nix: https://nixos.org/nix/download.html
+1. Install Nix: https://nixos.org/download/
 2. (Optional) [configure Nix to use ROS Cachix binary cache](#configure-binary-cache)
 3. Try one of the [examples](#examples)
 
