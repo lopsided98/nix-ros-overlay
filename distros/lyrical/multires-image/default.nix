@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, gps-msgs, mapviz, mapviz-interfaces, marti-common-msgs, pluginlib, python3Packages, qt5or6, rclcpp, rclpy, rqt-gui-cpp, swri-math-util, swri-transform-util, tf2 }:
 buildRosPackage {
   pname = "ros-lyrical-multires-image";
-  version = "4.2.0-r1";
+  version = "4.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/lyrical/multires_image/4.2.0-1.tar.gz";
-    name = "4.2.0-1.tar.gz";
-    sha256 = "c7d855e044026ae875a05aed913670bd71a3f60bbbc8db4c24c91a448ef669fc";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/lyrical/multires_image/4.3.0-1.tar.gz";
+    name = "4.3.0-1.tar.gz";
+    sha256 = "133c884791fd1585d9436695bf07dcc4caf9c5c2223f79a4037310b047e99746";
   };
 
   buildType = "ament_cmake";

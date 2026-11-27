@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-rolling-rmf-traffic-editor-assets";
-  version = "1.14.0-r2";
+  version = "1.16.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/rolling/rmf_traffic_editor_assets/1.14.0-2.tar.gz";
-    name = "1.14.0-2.tar.gz";
-    sha256 = "6a7563d6a2e1b132ea861ea142ac315d843af6d52b9b19036e245c47bcf4e343";
+    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/rolling/rmf_traffic_editor_assets/1.16.0-1.tar.gz";
+    name = "1.16.0-1.tar.gz";
+    sha256 = "b22749ee5cc3acc8fde644a9ed1d4a03c20fcfbfdb4a649abf658cb0ee972144";
   };
 
   buildType = "ament_cmake";

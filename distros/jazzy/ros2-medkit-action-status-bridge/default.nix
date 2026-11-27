@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-clang-format, ament-cmake-clang-tidy, ament-cmake-gtest, ament-lint-auto, ament-lint-common, launch-testing-ament-cmake, launch-testing-ros, rclcpp, ros2-medkit-cmake, ros2-medkit-fault-manager, ros2-medkit-fault-reporter, ros2-medkit-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-ros2-medkit-action-status-bridge";
-  version = "0.6.0-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/jazzy/ros2_medkit_action_status_bridge/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "b0f573c9db01dee044c1a569002e8d881cb244a7c8509d2187c9120e5336d923";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/jazzy/ros2_medkit_action_status_bridge/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "9ccca28175819ba716d85de7f1bdb4ef4a9c41b0af50f81ea50f8a6eda6e8a65";
   };
 
   buildType = "ament_cmake";

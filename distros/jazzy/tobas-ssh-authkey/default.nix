@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, libssh, pkg-config, tobas-string-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-ssh-authkey";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_ssh_authkey/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "292a74460ae207cf61e8dc9d76c58ff99b7371c7141d26d931b25313dbbcfffc";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_ssh_authkey/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "54973530e3046a2d6cd23ae21b4520db80ba4e76d267518a8bc415d34e0fda0a";
   };
 
   buildType = "ament_cmake";

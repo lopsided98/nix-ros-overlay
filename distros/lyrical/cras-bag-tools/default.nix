@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, ament-cmake-ros, builtin-interfaces, cras-lint, cv-bridge, python3Packages, rclpy, rosbag2-py, rosidl-runtime-py, sensor-msgs, tf2-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-cras-bag-tools";
-  version = "4.0.2-r1";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cras_ros_utils-release/archive/release/lyrical/cras_bag_tools/4.0.2-1.tar.gz";
-    name = "4.0.2-1.tar.gz";
-    sha256 = "304611be4f266d0c266abe37dcca33b4781c64de99c8ca7d8def9c9b68758e52";
+    url = "https://github.com/ros2-gbp/cras_ros_utils-release/archive/release/lyrical/cras_bag_tools/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "992917cfaa33bd8330c9bb4e36e209e4a2143e0d6c08d34709fcc9e94afcc4e1";
   };
 
   buildType = "ament_cmake";

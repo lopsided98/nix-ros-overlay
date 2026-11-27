@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, pcl-conversions, pcl-msgs, pcl-ros }:
 buildRosPackage {
   pname = "ros-lyrical-perception-pcl";
-  version = "2.10.0-r1";
+  version = "2.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/lyrical/perception_pcl/2.10.0-1.tar.gz";
-    name = "2.10.0-1.tar.gz";
-    sha256 = "f1e2e93e24fb183cfa5c39e2eca6a8bfb483beb36644a0da73c0173bbf6f3920";
+    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/lyrical/perception_pcl/2.11.0-1.tar.gz";
+    name = "2.11.0-1.tar.gz";
+    sha256 = "e23101e3c8fd67a905c091aa2e5ac4975299fa1856951d9d6e250f435e1dffb0";
   };
 
   buildType = "ament_cmake";

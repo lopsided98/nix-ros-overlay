@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-quadprog }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-nlp";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_nlp/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "7e7aa90c16842d3d6b62e73cb1b0ef724fcf2e3add7aa4944e7e5c8326a0b5bc";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_nlp/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "f1594829b3215e63fb1e80a6ce80004de844880cc88b2c65e7e04d0d38e49bf8";
   };
 
   buildType = "ament_cmake";

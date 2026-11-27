@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, marti-common-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-mapviz-interfaces";
-  version = "4.2.0-r1";
+  version = "4.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/rolling/mapviz_interfaces/4.2.0-1.tar.gz";
-    name = "4.2.0-1.tar.gz";
-    sha256 = "2ed9aea9df61557a1428968eeb1b7c6483c4c63664edc18cdd8f049322e21151";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/rolling/mapviz_interfaces/4.3.0-1.tar.gz";
+    name = "4.3.0-1.tar.gz";
+    sha256 = "19ae10afd14a4b476d777f66013c1ab548e2a3d2b9d49c549047d87e9e7a2219";
   };
 
   buildType = "ament_cmake";

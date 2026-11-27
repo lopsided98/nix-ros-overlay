@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-ros, ament-lint-auto, ament-lint-common, eigen, geometry-msgs, launch, launch-ros, launch-testing, launch-testing-ros, pcl, pcl-conversions, rclcpp, rclcpp-components, rosbag2-transport, sensor-msgs, tf2, tf2-eigen, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kilted-pcl-ros";
-  version = "2.10.0-r1";
+  version = "2.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/kilted/pcl_ros/2.10.0-1.tar.gz";
-    name = "2.10.0-1.tar.gz";
-    sha256 = "c3bd37d0cd78580da429a07d22d9887bfb13451e7075402c29f2bdf351a94447";
+    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/kilted/pcl_ros/2.11.0-1.tar.gz";
+    name = "2.11.0-1.tar.gz";
+    sha256 = "b3645d8687a48f4b7accef7239fa2e8faef84fabeede79074c07ca4a13df4146";
   };
 
   buildType = "ament_cmake";

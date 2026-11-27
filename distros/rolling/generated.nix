@@ -398,6 +398,10 @@ self: super: {
 
  clips-vendor = self.callPackage ./clips-vendor {};
 
+ cloudini-lib = self.callPackage ./cloudini-lib {};
+
+ cloudini-ros = self.callPackage ./cloudini-ros {};
+
  cm-topic-hardware-component = self.callPackage ./cm-topic-hardware-component {};
 
  coal = self.callPackage ./coal {};
@@ -441,6 +445,8 @@ self: super: {
  cras-lint = self.callPackage ./cras-lint {};
 
  cras-msgs = self.callPackage ./cras-msgs {};
+
+ cras-py-common = self.callPackage ./cras-py-common {};
 
  cras-topic-tools = self.callPackage ./cras-topic-tools {};
 
@@ -1912,6 +1918,8 @@ self: super: {
 
  py-trees-ros-viewer = self.callPackage ./py-trees-ros-viewer {};
 
+ pybind11-json-vendor = self.callPackage ./pybind11-json-vendor {};
+
  pybind11-vendor = self.callPackage ./pybind11-vendor {};
 
  pyhri = self.callPackage ./pyhri {};
@@ -1957,6 +1965,8 @@ self: super: {
  raspimouse = self.callPackage ./raspimouse {};
 
  raspimouse-msgs = self.callPackage ./raspimouse-msgs {};
+
+ rawlog2rosbag = self.callPackage ./rawlog2rosbag {};
 
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
@@ -2162,6 +2172,8 @@ self: super: {
 
  rmf-workcell-msgs = self.callPackage ./rmf-workcell-msgs {};
 
+ rmf-zone-msgs = self.callPackage ./rmf-zone-msgs {};
+
  rmw = self.callPackage ./rmw {};
 
  rmw-connextdds = self.callPackage ./rmw-connextdds {};
@@ -2189,6 +2201,8 @@ self: super: {
  rmw-test-fixture = self.callPackage ./rmw-test-fixture {};
 
  rmw-test-fixture-implementation = self.callPackage ./rmw-test-fixture-implementation {};
+
+ rmw-unix-socket-cpp = self.callPackage ./rmw-unix-socket-cpp {};
 
  rmw-zenoh-cpp = self.callPackage ./rmw-zenoh-cpp {};
 
@@ -2691,6 +2705,14 @@ self: super: {
  service-msgs = self.callPackage ./service-msgs {};
 
  shape-msgs = self.callPackage ./shape-msgs {};
+
+ shmem-buffer = self.callPackage ./shmem-buffer {};
+
+ shmem-buffer-backend = self.callPackage ./shmem-buffer-backend {};
+
+ shmem-buffer-backend-msgs = self.callPackage ./shmem-buffer-backend-msgs {};
+
+ shmem-buffer-backend-py = self.callPackage ./shmem-buffer-backend-py {};
 
  sick-safetyscanners2 = self.callPackage ./sick-safetyscanners2 {};
 

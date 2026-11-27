@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-clang-format, ament-cmake-clang-tidy, ament-cmake-gtest, ament-lint-auto, ament-lint-common, launch-testing-ament-cmake, launch-testing-ros, rclcpp, ros2-medkit-cmake, ros2-medkit-fault-manager, ros2-medkit-fault-reporter, ros2-medkit-msgs }:
 buildRosPackage {
   pname = "ros-humble-ros2-medkit-action-status-bridge";
-  version = "0.6.0-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_action_status_bridge/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "87018ac74e7109230a6f211be0d39f30c8f7798b1b6cbc82e1ccce5324f97fa4";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_action_status_bridge/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "f21bf2425ad5487245beb83e428d68e5553a1bf9bb9be5527499f11d846edc8b";
   };
 
   buildType = "ament_cmake";

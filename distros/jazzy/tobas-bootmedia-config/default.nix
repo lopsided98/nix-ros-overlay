@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-index-cpp, magic-enum, simpleini, tobas-constants, tobas-crypt, tobas-gui-common, tobas-inja-vendor, tobas-path-tools, tobas-qt-tools, tobas-ssh-authkey, tobas-udev, tobas-wpa-supplicant }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-bootmedia-config";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_bootmedia_config/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "a768908e1056317636c803a200606f74dc526333ab8553e73c32c866801e82f7";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_bootmedia_config/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "73eabf509de72a23df91f3b560954c4af809ed345356f0eb113458cd7d242719";
   };
 
   buildType = "ament_cmake";

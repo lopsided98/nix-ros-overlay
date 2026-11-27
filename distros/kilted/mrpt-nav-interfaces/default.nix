@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, geometry-msgs, mrpt-msgs, nav-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-nav-interfaces";
-  version = "2.8.0-r1";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/kilted/mrpt_nav_interfaces/2.8.0-1.tar.gz";
-    name = "2.8.0-1.tar.gz";
-    sha256 = "a7df51e7c9f2e69c9305308015a5fe53572e51b63c06f73cdb68d4d718fa24f6";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/kilted/mrpt_nav_interfaces/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "6f515ec4b6b89b49dc335baa48d67b68a45fd48ce9ec946862bade5c2d6151ba";
   };
 
   buildType = "ament_cmake";

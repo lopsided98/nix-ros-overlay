@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-dynamixel-msgs";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_dynamixel_msgs/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "14542fac0f1e67b4831bf23e5d12db321837316b289b6a88bcfc4648f5c2b511";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_dynamixel_msgs/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "590c8cc33c9330e7cec508cfd6971ea6f0cf8c4a30db8456d97bbe3765c036c6";
   };
 
   buildType = "ament_cmake";

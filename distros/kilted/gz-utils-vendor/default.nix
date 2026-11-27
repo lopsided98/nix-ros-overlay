@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, gz-cmake-vendor, spdlog-vendor }:
 buildRosPackage {
   pname = "ros-kilted-gz-utils-vendor";
-  version = "0.3.2-r1";
+  version = "0.3.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_utils_vendor-release/archive/release/kilted/gz_utils_vendor/0.3.2-1.tar.gz";
-    name = "0.3.2-1.tar.gz";
-    sha256 = "fedb8adaf9fec17c108c66cfcd2bb8b6a3ce5baaca5c8d558e030b2b29575701";
+    url = "https://github.com/ros2-gbp/gz_utils_vendor-release/archive/release/kilted/gz_utils_vendor/0.3.3-1.tar.gz";
+    name = "0.3.3-1.tar.gz";
+    sha256 = "c6181105fa3087c09e26f59beb57cde6276125fe6c8dbec3ad15ac1b9efa781b";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cmake-vendor-package cmake ];
 
   meta = {
-    description = "Vendor package for: gz-utils3 3.1.1
+    description = "Vendor package for: gz-utils3 3.2.0
 
     Gazebo Utils : Classes and functions for robot applications";
     license = with lib.licenses; [ asl20 ];

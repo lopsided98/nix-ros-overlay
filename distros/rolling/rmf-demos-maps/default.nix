@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rmf-building-map-tools, ros2run }:
 buildRosPackage {
   pname = "ros-rolling-rmf-demos-maps";
-  version = "2.8.2-r3";
+  version = "2.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/rolling/rmf_demos_maps/2.8.2-3.tar.gz";
-    name = "2.8.2-3.tar.gz";
-    sha256 = "c83579db5d145863699f2623c676fa7115e24034ccf0cdc2063d7dcbc4cab77b";
+    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/rolling/rmf_demos_maps/2.11.0-1.tar.gz";
+    name = "2.11.0-1.tar.gz";
+    sha256 = "30582ae62bdbbca0fad356dc4820532375db7a1316e40670ddea99183ada9027";
   };
 
   buildType = "ament_cmake";

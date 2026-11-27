@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rosbag2-cpp, std-srvs, tobas-command-msgs-adapter, tobas-debug-msgs-adapter, tobas-drone-msgs-adapter, tobas-linux, tobas-msgs-adapter, tobas-node, tobas-path-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-rosbag-recorder";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_rosbag_recorder/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "6c6a460efdb97089c9ff77159bd23ca314048dc7354f1b885b160b739b09aefb";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_rosbag_recorder/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "b7e8a786b6a59eb29724d548b84196c56ecdf324d59b348eaf47087ab04d0d5f";
   };
 
   buildType = "ament_cmake";

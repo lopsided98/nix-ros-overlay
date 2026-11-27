@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, sensor-msgs, tobas-drone-core, tobas-eigen-conversions, tobas-geographic, tobas-gui-common, tobas-kdl-conversions, tobas-property-tree, tobas-qt-tools, tobas-real-common, tobas-real-msgs, tobas-rqt-bridge, tobas-rviz-wrapper, tobas-time-tools, visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-sensor-calibration";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_sensor_calibration/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "cc554ea2b13f34f656dc7b106db688ccdb6c517aeedb64e45a289cd622642f05";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_sensor_calibration/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "ddf4aa647c1688d9cc4e70e919b303b8c7a7cde8ad9a1f0b61a61adeabf4add6";
   };
 
   buildType = "ament_cmake";

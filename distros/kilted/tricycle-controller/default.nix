@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ackermann-msgs, ament-cmake, ament-cmake-gmock, backward-ros, builtin-interfaces, controller-interface, controller-manager, generate-parameter-library, geometry-msgs, hardware-interface, hardware-interface-testing, nav-msgs, pluginlib, rclcpp, rclcpp-lifecycle, rcpputils, realtime-tools, ros2-control-cmake, ros2-control-test-assets, std-srvs, tf2, tf2-msgs }:
 buildRosPackage {
   pname = "ros-kilted-tricycle-controller";
-  version = "5.18.1-r1";
+  version = "5.19.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/tricycle_controller/5.18.1-1.tar.gz";
-    name = "5.18.1-1.tar.gz";
-    sha256 = "418b2b419802a1607a9295b9ccd2b18392085f28b0d83385e93e152fe8ff6c22";
+    url = "https://github.com/ros2-gbp/ros2_controllers-release/archive/release/kilted/tricycle_controller/5.19.0-1.tar.gz";
+    name = "5.19.0-1.tar.gz";
+    sha256 = "a04f220680d2d09d4928223d1689ed6fb075e697a226d1ff04fe84543cc0031c";
   };
 
   buildType = "ament_cmake";

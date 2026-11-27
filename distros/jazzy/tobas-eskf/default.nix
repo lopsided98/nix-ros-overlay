@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-debug-msgs-adapter, tobas-eigen-tools, tobas-geographic, tobas-kdl-conversions, tobas-msgs-adapter, tobas-node }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-eskf";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_eskf/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "6d70ee303870c7a9be3bd60c454ba5297ff11e646d531fb38f0850325eb6bbf8";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_eskf/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "053c690ed60da414fc9c1e9a7065ce292b7744a85851284f8a2307353d4483ab";
   };
 
   buildType = "ament_cmake";

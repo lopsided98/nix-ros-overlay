@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, cli11, cmake, eigen, launch-testing-ament-cmake, launch-testing-ros, mola-bridge-ros2, mola-common, mola-imu-preintegration, mola-input-kitti-dataset, mola-input-kitti360-dataset, mola-input-mulran-dataset, mola-input-paris-luco-dataset, mola-input-rawlog, mola-input-rosbag1, mola-input-rosbag2, mola-kernel, mola-launcher, mola-metric-maps, mola-pose-list, mola-relocalization, mola-state-estimation-simple, mola-state-estimation-smoother, mola-test-datasets, mola-viz, mola-viz-imgui, mola-yaml, mp2p-icp, mrpt-maps, mrpt-obs, nav-msgs, onetbb, rclpy, ros-environment, ros2bag, rosbag2-storage-mcap, sensor-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-cmake, cli11, cmake, eigen, launch-testing-ament-cmake, launch-testing-ros, mola-bridge-ros2, mola-common, mola-imu-preintegration, mola-input-kitti-dataset, mola-input-kitti360-dataset, mola-input-mulran-dataset, mola-input-paris-luco-dataset, mola-input-rawlog, mola-input-rosbag1, mola-input-rosbag2, mola-kernel, mola-launcher, mola-metric-maps, mola-pose-list, mola-relocalization, mola-state-estimation-simple, mola-state-estimation-smoother, mola-test-datasets, mola-viz, mola-viz-imgui, mola-yaml, mp2p-icp, mrpt-maps, mrpt-obs, nav-msgs, onetbb, rclpy, ros-environment, ros2bag, rosbag2-interfaces, rosbag2-storage-mcap, sensor-msgs }:
 buildRosPackage {
   pname = "ros-rolling-mola-lidar-odometry";
-  version = "3.4.0-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_lidar_odometry-release/archive/release/rolling/mola_lidar_odometry/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "b6fa7581905fed29a05e2c34796900a25cb48355dc9d798fb61ce7686ed8249c";
+    url = "https://github.com/ros2-gbp/mola_lidar_odometry-release/archive/release/rolling/mola_lidar_odometry/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "59ff4bf5af74f8763116886d5d69b41085fc44189eed3b5105cdb4fd1c06878d";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ament-cmake-gtest ament-cmake-xmllint cmake eigen ros-environment ];
-  checkInputs = [ ament-lint-auto ament-lint-cmake launch-testing-ament-cmake launch-testing-ros mola-launcher mola-metric-maps mola-test-datasets mrpt-obs nav-msgs rclpy ros2bag rosbag2-storage-mcap sensor-msgs ];
+  checkInputs = [ ament-lint-auto ament-lint-cmake launch-testing-ament-cmake launch-testing-ros mola-launcher mola-metric-maps mola-test-datasets mrpt-obs nav-msgs rclpy ros2bag rosbag2-interfaces rosbag2-storage-mcap sensor-msgs ];
   propagatedBuildInputs = [ cli11 mola-bridge-ros2 mola-common mola-imu-preintegration mola-input-kitti-dataset mola-input-kitti360-dataset mola-input-mulran-dataset mola-input-paris-luco-dataset mola-input-rawlog mola-input-rosbag1 mola-input-rosbag2 mola-kernel mola-launcher mola-metric-maps mola-pose-list mola-relocalization mola-state-estimation-simple mola-state-estimation-smoother mola-viz mola-viz-imgui mola-yaml mp2p-icp mrpt-maps onetbb ];
   nativeBuildInputs = [ ament-cmake ament-cmake-gtest cmake ];
 

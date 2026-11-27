@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-lint-auto, autoware-cmake, boost, diagnostic-msgs, diagnostic-updater, nebula-core-common, nebula-core-decoders, nebula-core-hw-interfaces, nebula-core-ros, nebula-msgs, nebula-velodyne-common, nebula-velodyne-decoders, nebula-velodyne-hw-interfaces, rclcpp, rclcpp-components, ros-environment, ros-testing, rosbag2-cpp, velodyne-msgs, yaml-cpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-lint-auto, autoware-cmake, boost, diagnostic-msgs, diagnostic-updater, nebula-core-common, nebula-core-decoders, nebula-core-hw-interfaces, nebula-core-ros, nebula-msgs, nebula-velodyne-common, nebula-velodyne-decoders, nebula-velodyne-hw-interfaces, rclcpp, rclcpp-components, ros-environment, ros-testing, rosbag2-cpp, sensor-msgs, velodyne-msgs, yaml-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-nebula-velodyne";
-  version = "1.3.1-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_velodyne/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "73a42a31b5e257e2f7f4b3e39535009a41f1ab4389c175490354f9128c443a09";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_velodyne/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "8e120fba509ea702970f16b3fc3a8e40701c8cb7d17c465f396f54b3d7091fcd";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ autoware-cmake ros-environment ros-testing ];
   checkInputs = [ ament-cmake-gtest ament-lint-auto rosbag2-cpp ];
-  propagatedBuildInputs = [ boost diagnostic-msgs diagnostic-updater nebula-core-common nebula-core-decoders nebula-core-hw-interfaces nebula-core-ros nebula-msgs nebula-velodyne-common nebula-velodyne-decoders nebula-velodyne-hw-interfaces rclcpp rclcpp-components velodyne-msgs yaml-cpp ];
+  propagatedBuildInputs = [ boost diagnostic-msgs diagnostic-updater nebula-core-common nebula-core-decoders nebula-core-hw-interfaces nebula-core-ros nebula-msgs nebula-velodyne-common nebula-velodyne-decoders nebula-velodyne-hw-interfaces rclcpp rclcpp-components sensor-msgs velodyne-msgs yaml-cpp ];
   nativeBuildInputs = [ autoware-cmake ros-environment ros-testing ];
 
   meta = {

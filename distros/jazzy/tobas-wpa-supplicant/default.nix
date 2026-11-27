@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-string-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-wpa-supplicant";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_wpa_supplicant/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "420c38bf6d0edcdc04c8361027cb123a3aceef11c6671f26474544e682ef0e2c";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_wpa_supplicant/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "d089e2038c667d7309d759a96c13d6b085de966b52a61d81ea81f4b26afbf5e7";
   };
 
   buildType = "ament_cmake";

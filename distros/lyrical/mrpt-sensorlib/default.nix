@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, diagnostic-updater, mrpt-hwdrivers, mrpt-libros-bridge, mrpt-msgs, rclcpp-components, ros-environment, tf2-geometry-msgs, tf2-ros }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, diagnostic-updater, mrpt-hwdrivers, mrpt-libros-bridge, mrpt-msgs, rclcpp, rclcpp-components, ros-environment, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-lyrical-mrpt-sensorlib";
-  version = "0.4.1-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/lyrical/mrpt_sensorlib/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "ed411384a1a4bde51a695a92daf84cccfc9aad6572563714a442c9dbdff6a105";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/lyrical/mrpt_sensorlib/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "a279ef18fdfbd91e864514e683641b8aa77d2837a1239faaa4b27d7df89a631a";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake ros-environment ];
   checkInputs = [ ament-cmake-xmllint ament-lint-auto ];
-  propagatedBuildInputs = [ diagnostic-updater mrpt-hwdrivers mrpt-libros-bridge mrpt-msgs rclcpp-components tf2-geometry-msgs tf2-ros ];
+  propagatedBuildInputs = [ diagnostic-updater mrpt-hwdrivers mrpt-libros-bridge mrpt-msgs rclcpp rclcpp-components sensor-msgs tf2 tf2-geometry-msgs tf2-ros ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

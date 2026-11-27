@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, rosidl-default-generators, rosidl-default-runtime, tobas-eigen-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-eigen-msgs-adapter";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_eigen_msgs_adapter/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "40cd8e435897454555725065cf383c5a8df607aae869aa8675c56b6db1dcd9c9";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_eigen_msgs_adapter/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "09a67995421c4efa197563ebb81e6c64fc6c70496186c7f25d9eb9627fb013ef";
   };
 
   buildType = "ament_cmake";

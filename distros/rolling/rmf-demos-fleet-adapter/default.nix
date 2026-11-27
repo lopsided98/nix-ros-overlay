@@ -2,20 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, launch-xml, python3Packages, rclpy, rmf-fleet-adapter-python, rmf-fleet-msgs, rmf-task-msgs }:
+{ lib, buildRosPackage, fetchurl, _unresolved_python3-portpicker, ament-copyright, ament-flake8, ament-pep257, launch-xml, python3Packages, rclpy, rmf-fleet-adapter-python, rmf-fleet-msgs, rmf-task-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rmf-demos-fleet-adapter";
-  version = "2.8.2-r3";
+  version = "2.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/rolling/rmf_demos_fleet_adapter/2.8.2-3.tar.gz";
-    name = "2.8.2-3.tar.gz";
-    sha256 = "d3459b4ec2202ad151337cbd757a7206ddfb35098ccfc60404fd7525bf09e820";
+    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/rolling/rmf_demos_fleet_adapter/2.11.0-1.tar.gz";
+    name = "2.11.0-1.tar.gz";
+    sha256 = "7437df5abc8aedacf1236d7c966e9cdb78888db8f7195ac6ee800993ddae4542";
   };
 
   buildType = "ament_python";
   checkInputs = [ ament-copyright ament-flake8 ament-pep257 ];
-  propagatedBuildInputs = [ launch-xml python3Packages.fastapi python3Packages.flask-socketio python3Packages.numpy python3Packages.pydantic python3Packages.pyproj python3Packages.pyyaml python3Packages.requests python3Packages.uvicorn rclpy rmf-fleet-adapter-python rmf-fleet-msgs rmf-task-msgs ];
+  propagatedBuildInputs = [ _unresolved_python3-portpicker launch-xml python3Packages.fastapi python3Packages.flask-socketio python3Packages.numpy python3Packages.pydantic python3Packages.pyproj python3Packages.pyyaml python3Packages.requests python3Packages.uvicorn rclpy rmf-fleet-adapter-python rmf-fleet-msgs rmf-task-msgs ];
 
   meta = {
     description = "Fleet adapters for interfacing with RMF Demos robots with a fleet manager via REST API";

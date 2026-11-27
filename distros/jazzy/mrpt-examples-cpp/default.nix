@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-data, mrpt-graphslam, mrpt-gui, mrpt-imgui, mrpt-imgui-vendor, mrpt-libapps-cli, mrpt-libapps-gui, mrpt-nav }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-examples-cpp";
-  version = "3.6.2-r1";
+  version = "3.6.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_examples_cpp/3.6.2-1.tar.gz";
-    name = "3.6.2-1.tar.gz";
-    sha256 = "9195e37519b1a631ad82c7a09fdb3bca9dd6feb8f6d0c280eeec3e7a39909047";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_examples_cpp/3.6.4-1.tar.gz";
+    name = "3.6.4-1.tar.gz";
+    sha256 = "543d21d1a515e245008aa1ba33556782e94ded01006f9ba59e88158137efd327";
   };
 
   buildType = "cmake";

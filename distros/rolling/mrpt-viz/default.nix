@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, assimp, cmake, eigen, mrpt-common, mrpt-img, mrpt-poses, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-rolling-mrpt-viz";
-  version = "3.6.2-r1";
+  version = "3.6.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_viz/3.6.2-1.tar.gz";
-    name = "3.6.2-1.tar.gz";
-    sha256 = "d5dc960d745350746ec014044562a802007416e4180f7bba713319b17808d136";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/rolling/mrpt_viz/3.6.4-1.tar.gz";
+    name = "3.6.4-1.tar.gz";
+    sha256 = "4727d77eb0d688f0923ef35743a5474c04041b29f953a973fa5992a5f256bf47";
   };
 
   buildType = "cmake";

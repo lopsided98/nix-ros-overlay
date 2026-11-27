@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-math, tobas-std-tools, yaml-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-yaml-tools";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_yaml_tools/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "7e02a693b95416f0d8d16c976c9e58e24d391f0f410c17c3bcb42270f20734bc";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_yaml_tools/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "d35db5875fee08475b433a94eac6708b429526b78dd28b247c9021873d1dd9c0";
   };
 
   buildType = "ament_cmake";

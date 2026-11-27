@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-clang-tidy, ament-cmake-gtest, ament-lint-auto, ament-lint-common, launch-testing-ament-cmake, launch-testing-ros, rcl-interfaces, rclcpp, ros2-medkit-cmake, ros2-medkit-fault-manager, ros2-medkit-fault-reporter, ros2-medkit-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-ros2-medkit-log-bridge";
-  version = "0.6.0-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/lyrical/ros2_medkit_log_bridge/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "6a7c216c7076cc332ab6476db1456d51ed8f088f0e3ccd485363a671f72b4521";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/lyrical/ros2_medkit_log_bridge/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "d27be7c81d79d992ec15d953e6144cfc82d2903df944489b23bfaf264d5bc1be";
   };
 
   buildType = "ament_cmake";

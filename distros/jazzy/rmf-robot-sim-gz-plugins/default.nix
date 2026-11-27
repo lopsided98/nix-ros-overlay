@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, gz-gui-vendor, gz-msgs-vendor, gz-plugin-vendor, gz-rendering-vendor, gz-sim-vendor, gz-transport-vendor, qt5, rclcpp, rmf-building-map-msgs, rmf-building-sim-gz-plugins, rmf-fleet-msgs, rmf-robot-sim-common }:
 buildRosPackage {
   pname = "ros-jazzy-rmf-robot-sim-gz-plugins";
-  version = "2.3.3-r1";
+  version = "2.3.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_simulation-release/archive/release/jazzy/rmf_robot_sim_gz_plugins/2.3.3-1.tar.gz";
-    name = "2.3.3-1.tar.gz";
-    sha256 = "9855ff416d835b0c47d535a52f072126399f1d524aef1afb6098628183526fd0";
+    url = "https://github.com/ros2-gbp/rmf_simulation-release/archive/release/jazzy/rmf_robot_sim_gz_plugins/2.3.4-1.tar.gz";
+    name = "2.3.4-1.tar.gz";
+    sha256 = "4d06066f1b3ce412af259f73b0108999b58a01eeb6babc599294d061eaf491d1";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, launch-xml, rmf-building-map-tools, rmf-demos-assets, rmf-demos-fleet-adapter, rmf-demos-maps, rmf-demos-tasks, rmf-fleet-adapter, rmf-reservation-node, rmf-task-ros2, rmf-traffic-ros2, rmf-visualization, rviz2 }:
 buildRosPackage {
   pname = "ros-rolling-rmf-demos";
-  version = "2.8.2-r3";
+  version = "2.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/rolling/rmf_demos/2.8.2-3.tar.gz";
-    name = "2.8.2-3.tar.gz";
-    sha256 = "3200d0b1e9f7551d83c0e9d5037f89f984835f9ad51e8144389e212530d55b81";
+    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/rolling/rmf_demos/2.11.0-1.tar.gz";
+    name = "2.11.0-1.tar.gz";
+    sha256 = "6cc34d968fe74fe5f1bb0f568537399c26c34573e99c40f376252c03c7046725";
   };
 
   buildType = "ament_cmake";

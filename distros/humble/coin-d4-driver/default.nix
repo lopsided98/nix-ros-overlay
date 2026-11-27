@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rclcpp, rclcpp-lifecycle, sensor-msgs }:
 buildRosPackage {
   pname = "ros-humble-coin-d4-driver";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/coin_d4_driver-release/archive/release/humble/coin_d4_driver/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "e7e18261ef5dc1c19485ffe4629fd2d2d1dfffafdbdb74c58fcd315b42bafb85";
+    url = "https://github.com/ros2-gbp/coin_d4_driver-release/archive/release/humble/coin_d4_driver/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "0a9bc6136ebbc211039d1ec061433f3f8cfc6e08e8a2d365ff1812049f93f415";
   };
 
   buildType = "ament_cmake";

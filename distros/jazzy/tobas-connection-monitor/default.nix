@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-constants, tobas-msgs, tobas-node }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-connection-monitor";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_connection_monitor/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "c7402e13932aee16caa937149b59b536737c9411173f72fcae22c8a4460473d5";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_connection_monitor/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "0a19820da9e92ff0c0d0e53cc8f96604664c8d16abb17ff244cb84a42b8d7d53";
   };
 
   buildType = "ament_cmake";

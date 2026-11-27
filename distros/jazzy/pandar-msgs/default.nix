@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, std-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-pandar-msgs";
-  version = "1.3.1-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/pandar_msgs/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "9dc4cb73532773cdfc1920466ff58410c58d2cc0d1522ad004aa9a423656d2c3";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/pandar_msgs/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "b020f8a2c4c2cb009a87019c561cec9bdc8ac2e0eaba3f1fe59d15736f875747";
   };
 
   buildType = "ament_cmake";

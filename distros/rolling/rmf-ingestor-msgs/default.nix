@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-common, builtin-interfaces, rmf-dispenser-msgs, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rmf-ingestor-msgs";
-  version = "4.0.0-r2";
+  version = "4.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/rolling/rmf_ingestor_msgs/4.0.0-2.tar.gz";
-    name = "4.0.0-2.tar.gz";
-    sha256 = "003428f7d47e70a3b68d4a683d133793f7a4b7dd948a8c5d2af61b61830cdc68";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/rolling/rmf_ingestor_msgs/4.3.0-2.tar.gz";
+    name = "4.3.0-2.tar.gz";
+    sha256 = "08bc9c46a65dc323d7a547042bd1937c5f2195487dc6ae51ddccd16625135b11";
   };
 
   buildType = "ament_cmake";

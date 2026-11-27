@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, autoware-cmake, boost, nebula-core-common, nebula-core-hw-interfaces, nebula-velodyne-common }:
 buildRosPackage {
   pname = "ros-humble-nebula-velodyne-hw-interfaces";
-  version = "1.4.0-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_velodyne_hw_interfaces/1.4.0-1.tar.gz";
-    name = "1.4.0-1.tar.gz";
-    sha256 = "f1de44e7813966d2beb33561e476edaea5c4fff8699ae67f36137696b057286e";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/humble/nebula_velodyne_hw_interfaces/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "142a0f5171fb3cec36b5bf4db2d61578c3fbc83695e899932a796e9f3ac04321";
   };
 
   buildType = "ament_cmake";

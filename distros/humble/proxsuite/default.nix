@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, catch2, cereal, cmake, doxygen, eigen, git, graphviz, jrl-cmakemodules, matio, ros-environment, simde }:
 buildRosPackage {
   pname = "ros-humble-proxsuite";
-  version = "0.8.3-r1";
+  version = "0.8.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/proxsuite-release/archive/release/humble/proxsuite/0.8.3-1.tar.gz";
-    name = "0.8.3-1.tar.gz";
-    sha256 = "c108a8e952176a8980503a06c4448f015659e17d5c7e92e1a6209497eab4c845";
+    url = "https://github.com/ros2-gbp/proxsuite-release/archive/release/humble/proxsuite/0.8.4-1.tar.gz";
+    name = "0.8.4-1.tar.gz";
+    sha256 = "f65979b7ced273a00bfa9f580bf285d25a73055007659f8c4434f4341088de21";
   };
 
   buildType = "cmake";

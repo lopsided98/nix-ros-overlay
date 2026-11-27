@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, mp2p-icp, mrpt-libros-bridge, mrpt-maps, mrpt-msgs, mrpt-nav-interfaces, mrpt-obs, mrpt-topography, rclcpp-components, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-humble-mrpt-map-server";
-  version = "2.8.0-r1";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/humble/mrpt_map_server/2.8.0-1.tar.gz";
-    name = "2.8.0-1.tar.gz";
-    sha256 = "38fdb0c435ac49a9aa79134ca71d93c39a84daba0cdb3cc551ec16ed4f99786a";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/humble/mrpt_map_server/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "00d25ccda107866dee4059749b96fae5924d8cbf73d9fcabccfc06c7a90a367b";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-rapidcsv-vendor";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_rapidcsv_vendor/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "e6b91cbc12e59860426d7aa42edec018deadf2684fabfc6e3d769309ac212248";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_rapidcsv_vendor/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "5885ae429c32b90900103f6aa27dde4a980ace5e32666441e34755dd8807a950";
   };
 
   buildType = "ament_cmake";

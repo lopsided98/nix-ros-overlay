@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-dynamixel, tobas-real-common, tobas-real-msgs, tobas-real-ros, tobas-sbus-driver }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-real";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_real/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "1dcb239c7894e6b792d28a4b9c671cb9600612548c3f7126585b52130e9c7051";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_real/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "96d9f811b695ae2b25327d027e52cc8e3b34bf16042a21a71791950cc2416313";
   };
 
   buildType = "ament_cmake";

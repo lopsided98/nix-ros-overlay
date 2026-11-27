@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rclcpp, rclcpp-lifecycle, sensor-msgs }:
 buildRosPackage {
   pname = "ros-kilted-coin-d4-driver";
-  version = "1.0.1-r1";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/coin_d4_driver-release/archive/release/kilted/coin_d4_driver/1.0.1-1.tar.gz";
-    name = "1.0.1-1.tar.gz";
-    sha256 = "74a186852fa6e0c44653d9bde39e1414eefb9701e83b02954c04e735e9580bf5";
+    url = "https://github.com/ros2-gbp/coin_d4_driver-release/archive/release/kilted/coin_d4_driver/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "4b7a6b10b855ed9f2948426fe081d82836d548aa3213df47c94d847be36335bd";
   };
 
   buildType = "ament_cmake";

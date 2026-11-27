@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, mola-common, mrpt-containers, mrpt-obs, mrpt-poses }:
 buildRosPackage {
   pname = "ros-lyrical-mola-imu-preintegration";
-  version = "3.0.1-r1";
+  version = "3.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola_imu_preintegration-release/archive/release/lyrical/mola_imu_preintegration/3.0.1-1.tar.gz";
-    name = "3.0.1-1.tar.gz";
-    sha256 = "9d0c6bd05cb8a572818a8dc2cde0f5b66d62bd96041e52ab60a3b30057ff3b59";
+    url = "https://github.com/ros2-gbp/mola_imu_preintegration-release/archive/release/lyrical/mola_imu_preintegration/3.1.0-1.tar.gz";
+    name = "3.1.0-1.tar.gz";
+    sha256 = "bcb4130633196292ca5760426b18b1cc92b03b13f99b0e3d9a9d184d74a5a252";
   };
 
   buildType = "cmake";

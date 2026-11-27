@@ -2,19 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, autoware-cmake, nebula-core-common, ros-environment }:
+{ lib, buildRosPackage, fetchurl, ament-cmake-gtest, ament-lint-auto, autoware-cmake, nebula-core-common, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-nebula-robosense-common";
-  version = "1.3.1-r1";
+  version = "1.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_robosense_common/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "c1d39e9f43280065be95f19f9f300198aae536fef2759d48b4d7192a6c65dd82";
+    url = "https://github.com/ros2-gbp/nebula-release/archive/release/jazzy/nebula_robosense_common/1.5.0-1.tar.gz";
+    name = "1.5.0-1.tar.gz";
+    sha256 = "0cd4c781bb3cb73393ea0a788ab61c14606cb20a77d1ac974266d79721e2027c";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ autoware-cmake ros-environment ];
+  checkInputs = [ ament-cmake-gtest ament-lint-auto ];
   propagatedBuildInputs = [ nebula-core-common ];
   nativeBuildInputs = [ autoware-cmake ros-environment ];
 

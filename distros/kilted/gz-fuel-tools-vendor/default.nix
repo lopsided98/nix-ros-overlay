@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, cmake, curl, gflags, gz-cmake-vendor, gz-common-vendor, gz-math-vendor, gz-msgs-vendor, gz-tools-vendor, gz-utils-vendor, jsoncpp, libyaml, libzip, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-kilted-gz-fuel-tools-vendor";
-  version = "0.2.5-r1";
+  version = "0.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_fuel_tools_vendor-release/archive/release/kilted/gz_fuel_tools_vendor/0.2.5-1.tar.gz";
-    name = "0.2.5-1.tar.gz";
-    sha256 = "3978c666520bb9e3e5dda344ec81cceca91d908e033421e42c97669827b00e5e";
+    url = "https://github.com/ros2-gbp/gz_fuel_tools_vendor-release/archive/release/kilted/gz_fuel_tools_vendor/0.2.6-1.tar.gz";
+    name = "0.2.6-1.tar.gz";
+    sha256 = "c3f5bbc8ee354783ddd8c18ef8cc5d46ac07249a4ac6c9a86676218593b4a3dc";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cmake-vendor-package cmake ];
 
   meta = {
-    description = "Vendor package for: gz-fuel_tools10 10.1.0
+    description = "Vendor package for: gz-fuel_tools10 10.1.1
 
     Gazebo Fuel Tools: Classes and tools for interacting with Gazebo Fuel";
     license = with lib.licenses; [ asl20 ];

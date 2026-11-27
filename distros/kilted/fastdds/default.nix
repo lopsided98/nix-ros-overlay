@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, asio, cmake, fastcdr, foonathan-memory-vendor, openssl, python3, tinyxml-2 }:
 buildRosPackage {
   pname = "ros-kilted-fastdds";
-  version = "3.2.5-r1";
+  version = "3.2.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastdds-release/archive/release/kilted/fastdds/3.2.5-1.tar.gz";
-    name = "3.2.5-1.tar.gz";
-    sha256 = "48730a1d5e0f49c3916b4583e71d47e9798b62b993a06b9b98f2af89c6400037";
+    url = "https://github.com/ros2-gbp/fastdds-release/archive/release/kilted/fastdds/3.2.6-1.tar.gz";
+    name = "3.2.6-1.tar.gz";
+    sha256 = "0bc504fcf8ea42e2369e22e199bcf532d0704c0c0024b6aea4d8e5ba8b35d98c";
   };
 
   buildType = "cmake";

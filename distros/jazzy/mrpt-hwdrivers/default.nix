@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, ffmpeg, libdc1394, libpcap, libusb1, mrpt-comms, mrpt-maps, mrpt-viz, openni2, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-hwdrivers";
-  version = "3.6.2-r1";
+  version = "3.6.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_hwdrivers/3.6.2-1.tar.gz";
-    name = "3.6.2-1.tar.gz";
-    sha256 = "d8cd5b8ebfcc4722bc69d576e0f60f8a2379642cda8ae997f1ce253d5b543016";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/jazzy/mrpt_hwdrivers/3.6.4-1.tar.gz";
+    name = "3.6.4-1.tar.gz";
+    sha256 = "e8c1d4c06ec38e5791614543c3d401bab7be4cef5bdabe82e151e323812f873a";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, nav-msgs, py-trees-ros-interfaces, qt5or6, rclcpp, rviz-common, scenario-execution-interfaces, std-srvs, tf2 }:
 buildRosPackage {
   pname = "ros-lyrical-scenario-execution-rviz";
-  version = "1.7.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/lyrical/scenario_execution_rviz/1.7.0-1.tar.gz";
-    name = "1.7.0-1.tar.gz";
-    sha256 = "4ea78f9d42d11b697e892b862138bdafe665bbbb6a24e728ff8cc26167089bdb";
+    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/lyrical/scenario_execution_rviz/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "43f6e68863bd07bdd7df6e3d8399cc72bc42425333eecd2f27539031f6b08f57";
   };
 
   buildType = "ament_cmake";

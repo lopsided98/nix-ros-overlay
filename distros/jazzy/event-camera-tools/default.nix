@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-auto, ament-cmake-black, ament-cmake-clang-format, ament-cmake-ros, ament-cmake-test, ament-lint-auto, ament-lint-common, event-camera-codecs, event-camera-msgs, opencv, rclcpp, rclcpp-components, ros-environment, rosbag2-cpp, rosbag2-storage, sensor-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-event-camera-tools";
-  version = "3.1.4-r1";
+  version = "3.1.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/event_camera_tools-release/archive/release/jazzy/event_camera_tools/3.1.4-1.tar.gz";
-    name = "3.1.4-1.tar.gz";
-    sha256 = "57cc701793637b1658fb65ca2a19392e7ccc26a93c11d69723dccb69e52d7894";
+    url = "https://github.com/ros2-gbp/event_camera_tools-release/archive/release/jazzy/event_camera_tools/3.1.6-1.tar.gz";
+    name = "3.1.6-1.tar.gz";
+    sha256 = "ee1c45db4703db4bd72bf051618d086c697ac3c57874d07f6dbeef33fd1ece70";
   };
 
   buildType = "ament_cmake";

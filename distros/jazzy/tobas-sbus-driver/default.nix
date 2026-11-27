@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, boost, tobas-linux, tobas-msgs, tobas-node }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-sbus-driver";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_sbus_driver/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "2828b6a8670a8e89cf4fc933122e44ca96566d34e0c81603288449c6dcbeea06";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_sbus_driver/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "ab3b8cfbffd0db6acae31ec8f48893cef570c424ede942bb044d986991053d8d";
   };
 
   buildType = "ament_cmake";
