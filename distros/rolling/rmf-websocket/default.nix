@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-catch2, ament-cmake-uncrustify, boost, eigen, nlohmann-json-schema-validator-vendor, nlohmann_json, rclcpp, rmf-utils, websocketpp }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-catch2, ament-cmake-uncrustify, backward-ros, boost, eigen, nlohmann-json-schema-validator-vendor, nlohmann_json, rclcpp, rmf-utils }:
 buildRosPackage {
   pname = "ros-rolling-rmf-websocket";
-  version = "2.12.0-r2";
+  version = "2.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/rolling/rmf_websocket/2.12.0-2.tar.gz";
-    name = "2.12.0-2.tar.gz";
-    sha256 = "1b2565451d3f6c1654ab515f16106bf1e8648dc007d114383be8cd75cc5366ee";
+    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/rolling/rmf_websocket/2.15.0-1.tar.gz";
+    name = "2.15.0-1.tar.gz";
+    sha256 = "2e05e2d1fc608d692948ff151e7d4a92f33eda7316375256dbb593df051d17fa";
   };
 
   buildType = "ament_cmake";
   buildInputs = [ ament-cmake eigen ];
   checkInputs = [ ament-cmake-catch2 ament-cmake-uncrustify ];
-  propagatedBuildInputs = [ boost nlohmann-json-schema-validator-vendor nlohmann_json rclcpp rmf-utils websocketpp ];
+  propagatedBuildInputs = [ backward-ros boost nlohmann-json-schema-validator-vendor nlohmann_json rclcpp rmf-utils ];
   nativeBuildInputs = [ ament-cmake ];
 
   meta = {

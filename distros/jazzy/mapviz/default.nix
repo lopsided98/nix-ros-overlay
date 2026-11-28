@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, image-transport, mapviz-interfaces, opencv, pkg-config, pluginlib, qt-gui-cpp, qt5or6, rclcpp, rqt-gui, rqt-gui-cpp, std-msgs, std-srvs, swri-math-util, swri-transform-util, tf2, tf2-geometry-msgs, tf2-ros, yaml-cpp }:
 buildRosPackage {
   pname = "ros-jazzy-mapviz";
-  version = "4.2.0-r2";
+  version = "4.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/jazzy/mapviz/4.2.0-2.tar.gz";
-    name = "4.2.0-2.tar.gz";
-    sha256 = "ece106891aaaefebe1aabcaa24356d679aa3e5231885e13808a8ed8cdf4fc4b0";
+    url = "https://github.com/ros2-gbp/mapviz-release/archive/release/jazzy/mapviz/4.3.0-1.tar.gz";
+    name = "4.3.0-1.tar.gz";
+    sha256 = "a89dd0ed6bf2420e62efea94c2fff25b20fbf673878130714148210b143c3f4f";
   };
 
   buildType = "ament_cmake";

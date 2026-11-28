@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, launch-xml, rmf-building-sim-gz-plugins, rmf-demos, rmf-robot-sim-gz-plugins, ros-gz-bridge, ros-gz-sim, ros2launch, teleop-twist-keyboard }:
 buildRosPackage {
   pname = "ros-rolling-rmf-demos-gz";
-  version = "2.8.2-r3";
+  version = "2.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/rolling/rmf_demos_gz/2.8.2-3.tar.gz";
-    name = "2.8.2-3.tar.gz";
-    sha256 = "b55eb1a10a55646ec93707b302a5409b5d09563f74a6272d82a28b8ae5314ee6";
+    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/rolling/rmf_demos_gz/2.11.0-1.tar.gz";
+    name = "2.11.0-1.tar.gz";
+    sha256 = "8fd1c617689d27466ddbf1aab0e87b079c9c036e5ac138bb4ca5686b2f710c08";
   };
 
   buildType = "ament_cmake";

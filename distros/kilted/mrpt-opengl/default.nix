@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, eigen, libGL, libGLU, libglvnd, mrpt-img, mrpt-poses, mrpt-viz, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-opengl";
-  version = "3.6.2-r1";
+  version = "3.6.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_opengl/3.6.2-1.tar.gz";
-    name = "3.6.2-1.tar.gz";
-    sha256 = "a4a9bca2206671d7963e84494604fdd74661fa48dd864f63580a957f63c62204";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_opengl/3.6.3-1.tar.gz";
+    name = "3.6.3-1.tar.gz";
+    sha256 = "40ebda99ba417b709ec4af534791cf0411111ab0e66dc432fc3ae3f4f3c3182c";
   };
 
   buildType = "cmake";

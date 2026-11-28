@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rmf-building-map-tools, ros2run }:
 buildRosPackage {
   pname = "ros-rolling-rmf-traffic-editor-test-maps";
-  version = "1.14.0-r2";
+  version = "1.16.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/rolling/rmf_traffic_editor_test_maps/1.14.0-2.tar.gz";
-    name = "1.14.0-2.tar.gz";
-    sha256 = "bb73293449d7378c5a6f026f6a16366952fd7dd2a10d669a6d2f370baffb2354";
+    url = "https://github.com/ros2-gbp/rmf_traffic_editor-release/archive/release/rolling/rmf_traffic_editor_test_maps/1.16.0-1.tar.gz";
+    name = "1.16.0-1.tar.gz";
+    sha256 = "588a34f7a18fd4e33a3982f281a6b6a0e1e1b106f8a237e12db7027144c5cef8";
   };
 
   buildType = "ament_cmake";

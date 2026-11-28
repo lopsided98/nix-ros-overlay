@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-gtest, ament-lint-auto, ament-lint-common, nlohmann_json, rclcpp, ros2-medkit-cmake, ros2-medkit-gateway, ros2-medkit-msgs }:
 buildRosPackage {
   pname = "ros-humble-ros2-medkit-sovd-service-interface";
-  version = "0.6.0-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_sovd_service_interface/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "77503b0d8d3e4b0d94593b9677d90721c7f6f51022e217d713e24622b6730e63";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_sovd_service_interface/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "dd8362313edc01cabfe1769f0d7abf9b48a2e7db9a3ce4c883b3ec3faa2a1dec";
   };
 
   buildType = "ament_cmake";

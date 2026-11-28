@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, pcl-conversions, pcl-msgs, pcl-ros }:
 buildRosPackage {
   pname = "ros-jazzy-perception-pcl";
-  version = "2.6.5-r1";
+  version = "2.6.6-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/jazzy/perception_pcl/2.6.5-1.tar.gz";
-    name = "2.6.5-1.tar.gz";
-    sha256 = "b8988ae6e684598c9525f515d9bf95fd709d72aa6eaf5a95ca36ce459a79d518";
+    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/jazzy/perception_pcl/2.6.6-1.tar.gz";
+    name = "2.6.6-1.tar.gz";
+    sha256 = "d7da0ba8757b28fbdd6d2302674f0bbd58e03075cde1edaa9090a5f2e159f04e";
   };
 
   buildType = "ament_cmake";

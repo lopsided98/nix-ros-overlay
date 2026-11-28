@@ -1,7 +1,7 @@
 {
   "gz_cmake_vendor": {
     "url": "https://github.com/gazebosim/gz-cmake.git",
-    "rev": "gz-cmake4_4.3.0",
-    "hash": "sha256-pavUKGiCCstrfqsbEQdWNE9TrB3CP8Mnj1ocbAYC+KI="
+    "rev": "gz-cmake4_4.4.1",
+    "hash": "sha256-bLu+4X3CNQ3EHbO8Z54oo9NplU4yhW+6yITLYJpRrB0="
   }
 }

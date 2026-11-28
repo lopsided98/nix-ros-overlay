@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rviz-common }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-rviz-wrapper";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_rviz_wrapper/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "b850e91bcd6e927df9d86b87a9fb1b964614ea819f3abddaf805aca2dee8e434";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_rviz_wrapper/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "1ca7741d24f3ed76ef65c6a74a24247fb044ee3f166c36be1056bdcda2ec8014";
   };
 
   buildType = "ament_cmake";

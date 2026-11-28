@@ -2,19 +2,19 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, aravis, camera-aravis2-msgs, camera-info-manager, cv-bridge, diagnostic-msgs, glib, image-transport, rclcpp, rclcpp-components, sensor-msgs, std-msgs }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, aravis, camera-aravis2-msgs, camera-info-manager, cv-bridge, diagnostic-msgs, glib, image-transport, pkg-config, rclcpp, rclcpp-components, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-humble-camera-aravis2";
-  version = "1.1.0-r1";
+  version = "1.3.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/camera_aravis2-release/archive/release/humble/camera_aravis2/1.1.0-1.tar.gz";
-    name = "1.1.0-1.tar.gz";
-    sha256 = "cf73c82b7a2aff79ffa52845239a580a66efb32152349039c5f5c0618a926096";
+    url = "https://github.com/ros2-gbp/camera_aravis2-release/archive/release/humble/camera_aravis2/1.3.0-1.tar.gz";
+    name = "1.3.0-1.tar.gz";
+    sha256 = "7ae486b370bbbd5d139cad4accf6079bf8c950fa1be5b5ee614c043d02a59e45";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake aravis glib ];
+  buildInputs = [ ament-cmake aravis glib pkg-config ];
   checkInputs = [ ament-lint-auto ament-lint-common ];
   propagatedBuildInputs = [ camera-aravis2-msgs camera-info-manager cv-bridge diagnostic-msgs image-transport rclcpp rclcpp-components sensor-msgs std-msgs ];
   nativeBuildInputs = [ ament-cmake ];

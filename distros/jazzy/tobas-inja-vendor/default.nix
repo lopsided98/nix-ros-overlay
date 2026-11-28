@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, nlohmann_json }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-inja-vendor";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_inja_vendor/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "f7147b4a5eff341fd6d77b139b4660c424eaddf6d1edc688e560ee6d6c269f05";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_inja_vendor/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "c79868defcda504f0386dba7c888a1687ab98d410adedf0d8d1b013375b7e00b";
   };
 
   buildType = "ament_cmake";

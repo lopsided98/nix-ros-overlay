@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-bridge-ros2, mola-demos, mola-input-rawlog, mola-input-rosbag2, mola-input-video, mola-kernel, mola-launcher, mola-metric-maps, mola-pose-list, mola-relocalization, mola-traj-tools, mola-viz, mola-yaml }:
 buildRosPackage {
   pname = "ros-humble-mola";
-  version = "3.4.0-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "3bcb0125853826c8540e97d3bcf0eba015be3ffd49e8c860923230ea18ada8d2";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "765cec738fe53d429f585f501086a0aa6ddaf717dd74732417b84b3b342e9837";
   };
 
   buildType = "cmake";

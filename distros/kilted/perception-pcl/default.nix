@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, pcl-conversions, pcl-msgs, pcl-ros }:
 buildRosPackage {
   pname = "ros-kilted-perception-pcl";
-  version = "2.10.0-r1";
+  version = "2.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/kilted/perception_pcl/2.10.0-1.tar.gz";
-    name = "2.10.0-1.tar.gz";
-    sha256 = "bb59acc64a6740d873e6a23560594457d63ac85f439a1dad66989d2734cbb0f9";
+    url = "https://github.com/ros2-gbp/perception_pcl-release/archive/release/kilted/perception_pcl/2.11.0-1.tar.gz";
+    name = "2.11.0-1.tar.gz";
+    sha256 = "b90a00b36941c302c9184413e28b7251951c2ec478b088ad0d6a616a89d3ebb6";
   };
 
   buildType = "ament_cmake";

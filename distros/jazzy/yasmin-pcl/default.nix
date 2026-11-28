@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, pcl, pcl-conversions, pluginlib, sensor-msgs, yasmin }:
 buildRosPackage {
   pname = "ros-jazzy-yasmin-pcl";
-  version = "6.1.2-r1";
+  version = "6.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/jazzy/yasmin_pcl/6.1.2-1.tar.gz";
-    name = "6.1.2-1.tar.gz";
-    sha256 = "8c229aa87d8b8868091c6d26f6a94ec566d4ce72c4ccdeaf7decae660f25263a";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/jazzy/yasmin_pcl/6.1.4-1.tar.gz";
+    name = "6.1.4-1.tar.gz";
+    sha256 = "f488cecaba5a99860f0fe056e97dd6d5bf8f8fdf7c247745829c7698dced8d09";
   };
 
   buildType = "ament_cmake";

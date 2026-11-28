@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, rmf-dispenser-msgs, rmf-fleet-msgs, rmf-lift-msgs, rmf-task-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rmf-demos-tasks";
-  version = "2.3.0-r1";
+  version = "2.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/jazzy/rmf_demos_tasks/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "e31f9e978c32d8b58c837900cfdd953ea0a79047ba0b5deae22225412e71472c";
+    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/jazzy/rmf_demos_tasks/2.4.1-1.tar.gz";
+    name = "2.4.1-1.tar.gz";
+    sha256 = "aaa8d6988a3ec3d05417df49cda8e1c41bd93e2168ac777d93df6abdeeac8e54";
   };
 
   buildType = "ament_python";

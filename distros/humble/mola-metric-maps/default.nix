@@ -2,21 +2,21 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cli11, cmake, eigen, mola-common, mola-kernel, mola-test-datasets, mp2p-icp, mrpt-maps, mrpt-viz, nanoflann-vendor, onetbb, ros-environment }:
+{ lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-xmllint, ament-lint-auto, ament-lint-common, cli11, cmake, eigen, mola-common, mola-test-datasets, mp2p-icp, mrpt-maps, mrpt-viz, nanoflann-vendor, onetbb, python3, python3Packages, ros-environment }:
 buildRosPackage {
   pname = "ros-humble-mola-metric-maps";
-  version = "3.4.0-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_metric_maps/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "7bef5947130da1760ab0953b6eece1350a6760126ae8cff6af74c206b6750b3a";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_metric_maps/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "9afaf7dec7e74c54bbbf4cf909de6e3ccce54fb6ced27d5188a0abaf37e69c5a";
   };
 
   buildType = "ament_cmake";
-  buildInputs = [ ament-cmake ament-cmake-gtest ament-cmake-xmllint cmake eigen ros-environment ];
-  checkInputs = [ ament-lint-auto ament-lint-common mola-test-datasets ];
-  propagatedBuildInputs = [ cli11 mola-common mola-kernel mp2p-icp mrpt-maps mrpt-viz nanoflann-vendor onetbb ];
+  buildInputs = [ ament-cmake ament-cmake-gtest ament-cmake-xmllint cmake eigen python3 python3Packages.pybind11 ros-environment ];
+  checkInputs = [ ament-lint-auto ament-lint-common mola-test-datasets python3Packages.pytest ];
+  propagatedBuildInputs = [ cli11 mola-common mp2p-icp mrpt-maps mrpt-viz nanoflann-vendor onetbb python3Packages.numpy ];
   nativeBuildInputs = [ ament-cmake ament-cmake-gtest cmake ];
 
   meta = {

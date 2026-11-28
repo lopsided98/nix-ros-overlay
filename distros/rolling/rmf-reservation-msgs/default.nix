@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-lint-auto, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime }:
 buildRosPackage {
   pname = "ros-rolling-rmf-reservation-msgs";
-  version = "4.0.0-r2";
+  version = "4.3.0-r2";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/rolling/rmf_reservation_msgs/4.0.0-2.tar.gz";
-    name = "4.0.0-2.tar.gz";
-    sha256 = "5faf3ccbb52a938ffcf9b2087b64542c10b050e5fe65ec5ffcc7851275c859fb";
+    url = "https://github.com/ros2-gbp/rmf_internal_msgs-release/archive/release/rolling/rmf_reservation_msgs/4.3.0-2.tar.gz";
+    name = "4.3.0-2.tar.gz";
+    sha256 = "e2a4fb9e11017f7b4afc698085378df7705d11335517c8dc6f19f29da146b9f7";
   };
 
   buildType = "ament_cmake";
@@ -21,6 +21,6 @@ buildRosPackage {
 
   meta = {
     description = "Messages for the reservation and queueing system";
-    license = with lib.licenses; [ "Apache" ];
+    license = with lib.licenses; [ asl20 ];
   };
 }

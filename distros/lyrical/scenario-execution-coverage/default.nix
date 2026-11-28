@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-copyright, ament-flake8, ament-pep257, python3Packages, scenario-execution }:
 buildRosPackage {
   pname = "ros-lyrical-scenario-execution-coverage";
-  version = "1.7.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/lyrical/scenario_execution_coverage/1.7.0-1.tar.gz";
-    name = "1.7.0-1.tar.gz";
-    sha256 = "dd0821fa54091f8841fd3606ac30d832a46e1fcc75c9e7fb708d0ec08b902c01";
+    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/lyrical/scenario_execution_coverage/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "bb4cc00116b42a3d14fd11fa912957027eb2dc25125f48963d7b5909d6bd8db3";
   };
 
   buildType = "ament_python";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, eigen, tobas-algorithm, tobas-math, tobas-time-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-std-tools";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_std_tools/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "2d0072bd0c16df8e4704c87b569fabd922d4cf92b1bf2ac02b5bb836591038f1";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_std_tools/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "b9ff0f22313349672eaba77cbc877db39e83674870168deee52b12748426a871";
   };
 
   buildType = "ament_cmake";

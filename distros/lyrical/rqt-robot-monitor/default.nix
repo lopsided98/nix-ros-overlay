@@ -2,19 +2,20 @@
 # Copyright 2026 Open Source Robotics Foundation
 # Distributed under the terms of the BSD license
 
-{ lib, buildRosPackage, fetchurl, diagnostic-msgs, python-qt-binding, python3Packages, qt-gui, qt-gui-py-common, rclpy, rosidl-default-generators, rqt-gui, rqt-gui-py, rqt-py-common }:
+{ lib, buildRosPackage, fetchurl, ament-flake8, ament-pep257, diagnostic-msgs, python-qt-binding, python3Packages, qt-gui, qt-gui-py-common, rclpy, rosidl-default-generators, rqt-gui, rqt-gui-py, rqt-py-common }:
 buildRosPackage {
   pname = "ros-lyrical-rqt-robot-monitor";
-  version = "1.0.6-r3";
+  version = "1.0.7-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rqt_robot_monitor-release/archive/release/lyrical/rqt_robot_monitor/1.0.6-3.tar.gz";
-    name = "1.0.6-3.tar.gz";
-    sha256 = "2072407cff585a480a8bd4d53da0ac950c890ae2b47863480ef720ea06adf7ff";
+    url = "https://github.com/ros2-gbp/rqt_robot_monitor-release/archive/release/lyrical/rqt_robot_monitor/1.0.7-1.tar.gz";
+    name = "1.0.7-1.tar.gz";
+    sha256 = "f4afc085f7de82badddb90ade52bee627e727a6b204bef582abc06ae0e780970";
   };
 
   buildType = "ament_python";
   buildInputs = [ rosidl-default-generators ];
+  checkInputs = [ ament-flake8 ament-pep257 python3Packages.pytest ];
   propagatedBuildInputs = [ diagnostic-msgs python-qt-binding python3Packages.rospkg qt-gui qt-gui-py-common rclpy rqt-gui rqt-gui-py rqt-py-common ];
   nativeBuildInputs = [ rosidl-default-generators ];
 

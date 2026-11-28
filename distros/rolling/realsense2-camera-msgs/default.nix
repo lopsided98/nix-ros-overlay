@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-lint-common, builtin-interfaces, rosidl-default-generators, rosidl-default-runtime, sensor-msgs, std-msgs }:
 buildRosPackage {
   pname = "ros-rolling-realsense2-camera-msgs";
-  version = "4.59.1-r1";
+  version = "4.59.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/rolling/realsense2_camera_msgs/4.59.1-1.tar.gz";
-    name = "4.59.1-1.tar.gz";
-    sha256 = "8c5c7e975120a0c6dd24d40d60f9572b7ee978511bc056f2c53a068ec84d7ab3";
+    url = "https://github.com/ros2-gbp/realsense-ros-release/archive/release/rolling/realsense2_camera_msgs/4.59.2-1.tar.gz";
+    name = "4.59.2-1.tar.gz";
+    sha256 = "c51f6fd56b8270ee950a4a2fa8952e0e88f75496d569afc0c935eb912b488b99";
   };
 
   buildType = "ament_cmake";

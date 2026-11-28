@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-constants, tobas-std-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-wind-model";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_wind_model/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "708b00c9a5bc973eaa9cc4e73e962c8359cd2eb49b8f2095c31f96ee9de03644";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_wind_model/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "90390c77bc24ec57c5aa1270680dbb9a72fd5d85b64c075e7f0468e43ddce949";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake }:
 buildRosPackage {
   pname = "ros-lyrical-magic-enum";
-  version = "0.9.8-r1";
+  version = "0.10.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/magic_enum-release/archive/release/lyrical/magic_enum/0.9.8-1.tar.gz";
-    name = "0.9.8-1.tar.gz";
-    sha256 = "8377053f32399d3ac1c68f63bb0b5f11f525fc9fb0aea3df551c862a5a70c897";
+    url = "https://github.com/ros2-gbp/magic_enum-release/archive/release/lyrical/magic_enum/0.10.0-1.tar.gz";
+    name = "0.10.0-1.tar.gz";
+    sha256 = "d5e0ce0d9bfa033419a3792ee70d3111cab884e6ea29f26bedfd1130c512bdcd";
   };
 
   buildType = "cmake";

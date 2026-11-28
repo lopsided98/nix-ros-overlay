@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, cmake, python3, python3Packages, ros-environment }:
 buildRosPackage {
   pname = "ros-jazzy-mavlink";
-  version = "2026.9.9-r1";
+  version = "2026.11.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mavlink-gbp-release/archive/release/jazzy/mavlink/2026.9.9-1.tar.gz";
-    name = "2026.9.9-1.tar.gz";
-    sha256 = "394a9265bbe5a092baf32566d0420264131901e12f1cd56266337889159d58d5";
+    url = "https://github.com/ros2-gbp/mavlink-gbp-release/archive/release/jazzy/mavlink/2026.11.11-1.tar.gz";
+    name = "2026.11.11-1.tar.gz";
+    sha256 = "5eb2a0f427970b46271f616c227a7ed53401884bae827dfe9d49a19c618a3366";
   };
 
   buildType = "cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mola-common, mrpt-containers, mrpt-system }:
 buildRosPackage {
   pname = "ros-humble-mola-yaml";
-  version = "3.4.0-r1";
+  version = "3.6.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_yaml/3.4.0-1.tar.gz";
-    name = "3.4.0-1.tar.gz";
-    sha256 = "cfd98b5232ce86aebec3a736490a703a9401b6ec5f4585a1e470e511395f37a8";
+    url = "https://github.com/ros2-gbp/mola-release/archive/release/humble/mola_yaml/3.6.0-1.tar.gz";
+    name = "3.6.0-1.tar.gz";
+    sha256 = "4f7a9cf3ad0e6e922c28f20137521b74b8fe49bafa36693e7e25a0c8f12d3b89";
   };
 
   buildType = "cmake";

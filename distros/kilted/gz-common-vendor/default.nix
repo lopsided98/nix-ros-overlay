@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-copyright, ament-cmake-core, ament-cmake-lint-cmake, ament-cmake-test, ament-cmake-vendor-package, ament-cmake-xmllint, assimp, cmake, ffmpeg, freeimage, gdal, gz-cmake-vendor, gz-math-vendor, gz-utils-vendor, pkg-config, spdlog-vendor, tinyxml-2, util-linux }:
 buildRosPackage {
   pname = "ros-kilted-gz-common-vendor";
-  version = "0.2.10-r1";
+  version = "0.2.11-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/gz_common_vendor-release/archive/release/kilted/gz_common_vendor/0.2.10-1.tar.gz";
-    name = "0.2.10-1.tar.gz";
-    sha256 = "d33fe6cfc691b4e128624cbfeabb8e1f3f9d27625f2de0d42810ef2a2b389f0b";
+    url = "https://github.com/ros2-gbp/gz_common_vendor-release/archive/release/kilted/gz_common_vendor/0.2.11-1.tar.gz";
+    name = "0.2.11-1.tar.gz";
+    sha256 = "a34cbf1fa29c994ebb6fdb3829cfd0d160c0d55b22a4a12302e8b8f0043616e1";
   };
 
   buildType = "ament_cmake";
@@ -20,7 +20,7 @@ buildRosPackage {
   nativeBuildInputs = [ ament-cmake-core ament-cmake-test ament-cmake-vendor-package cmake pkg-config ];
 
   meta = {
-    description = "Vendor package for: gz-common6 6.4.0
+    description = "Vendor package for: gz-common6 6.4.1
 
     Gazebo Common : AV, Graphics, Events, and much more.";
     license = with lib.licenses; [ asl20 ];

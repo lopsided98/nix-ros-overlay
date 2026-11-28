@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, rsl, rviz-common, rviz-default-plugins, tf2-eigen, tobas-visualization-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-rviz-plugin";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_rviz_plugin/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "1fe5e8092c49079e6f968422b6e1c8974b789e81085550465e80c962b9f62ca8";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_rviz_plugin/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "97f8343aeae13ad517df92f7946dfbb3b5f7befb7538a1aa444f3c52e2f54b87";
   };
 
   buildType = "ament_cmake";

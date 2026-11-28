@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gmock, ament-cmake-gtest, ament-lint-auto, ament-lint-common, eigen, rclcpp, ur-client-library, ur-robot-driver, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-lyrical-ur-calibration";
-  version = "6.2.0-r1";
+  version = "6.3.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/lyrical/ur_calibration/6.2.0-1.tar.gz";
-    name = "6.2.0-1.tar.gz";
-    sha256 = "87e5984804c6d766ec9ff6202ea47598aa4aef85bd019f9cb4caeb1137859d57";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/lyrical/ur_calibration/6.3.1-1.tar.gz";
+    name = "6.3.1-1.tar.gz";
+    sha256 = "bc1b607ba0c57e19b753fe9fd134a5d46165965f1eb66125091939a15187c1d2";
   };
 
   buildType = "ament_cmake";

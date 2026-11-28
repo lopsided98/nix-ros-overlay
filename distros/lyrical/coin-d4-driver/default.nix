@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, geometry-msgs, rclcpp, rclcpp-lifecycle, sensor-msgs }:
 buildRosPackage {
   pname = "ros-lyrical-coin-d4-driver";
-  version = "1.0.1-r3";
+  version = "1.0.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/coin_d4_driver-release/archive/release/lyrical/coin_d4_driver/1.0.1-3.tar.gz";
-    name = "1.0.1-3.tar.gz";
-    sha256 = "737bf96e0f852120c2a409e136baddea39dcb63f158551b5016375ed402b701e";
+    url = "https://github.com/ros2-gbp/coin_d4_driver-release/archive/release/lyrical/coin_d4_driver/1.0.2-1.tar.gz";
+    name = "1.0.2-1.tar.gz";
+    sha256 = "774f338ec33bfd73233bd22d72888c899533bd99e560ca7a8aad867e4c55966c";
   };
 
   buildType = "ament_cmake";

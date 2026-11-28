@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gen-version-h, ament-cmake-gmock, fmt, hardware-interface, pluginlib, rclcpp, ros2-control-cmake, ros2-control-test-assets }:
 buildRosPackage {
   pname = "ros-kilted-transmission-interface";
-  version = "5.20.0-r1";
+  version = "5.21.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/transmission_interface/5.20.0-1.tar.gz";
-    name = "5.20.0-1.tar.gz";
-    sha256 = "807789948adce926ab20609cd179b80fd1a918652742600016ba67765942c96b";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/kilted/transmission_interface/5.21.0-1.tar.gz";
+    name = "5.21.0-1.tar.gz";
+    sha256 = "f4fdfd6e4139dbff974ba6528bf36c4a5c46fd3962215e73bd9a907f19a4b523";
   };
 
   buildType = "ament_cmake";

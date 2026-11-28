@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-clang-tidy, ament-cmake-gtest, ament-lint-auto, ament-lint-common, geometry-msgs, nlohmann_json, rclcpp, rcpputils, rcutils, ros2-medkit-cmake, rosidl-runtime-c, rosidl-runtime-cpp, rosidl-typesupport-introspection-c, rosidl-typesupport-introspection-cpp, sensor-msgs, std-msgs, std-srvs, test-msgs, yaml-cpp-vendor }:
 buildRosPackage {
   pname = "ros-humble-ros2-medkit-serialization";
-  version = "0.6.0-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_serialization/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "4ea5b7a286d81bb1e3c70993101a3ef8736d0ce22d7c43cf00f73707a66feb66";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/humble/ros2_medkit_serialization/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "4e371d669c87d0b857f5c35564a0da0fcc1d6ef38237d08a9190d76c89703330";
   };
 
   buildType = "ament_cmake";

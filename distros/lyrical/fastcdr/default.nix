@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, gtest }:
 buildRosPackage {
   pname = "ros-lyrical-fastcdr";
-  version = "2.3.7-r1";
+  version = "2.3.8-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/fastcdr-release/archive/release/lyrical/fastcdr/2.3.7-1.tar.gz";
-    name = "2.3.7-1.tar.gz";
-    sha256 = "859d2561bcf78feca3a566e65b5d441583fdd4b601d41aae7c40649a063c8156";
+    url = "https://github.com/ros2-gbp/fastcdr-release/archive/release/lyrical/fastcdr/2.3.8-1.tar.gz";
+    name = "2.3.8-1.tar.gz";
+    sha256 = "1b850f97d82c9703ac94ec6a721d45a8943a202c88712e133635f64b462fade4";
   };
 
   buildType = "cmake";

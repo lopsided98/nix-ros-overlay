@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, action-msgs, ament-cmake, ament-cmake-gtest, ament-cmake-pytest, ament-cmake-python, ament-index-cpp, ament-index-python, class-loader, pluginlib, python3, python3Packages, rclcpp, rclcpp-action, rclpy, tinyxml2-vendor, yasmin, yasmin-msgs, yasmin-ros, yasmin-viewer }:
 buildRosPackage {
   pname = "ros-humble-yasmin-factory";
-  version = "6.1.2-r1";
+  version = "6.1.4-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_factory/6.1.2-1.tar.gz";
-    name = "6.1.2-1.tar.gz";
-    sha256 = "df89e3922cde4a1cbf2890b8218252635215f49aaf1f4463ae1b10800773de83";
+    url = "https://github.com/ros2-gbp/yasmin-release/archive/release/humble/yasmin_factory/6.1.4-1.tar.gz";
+    name = "6.1.4-1.tar.gz";
+    sha256 = "4a4212cd2d3000e91e5b1d1f630687520f93d16801bcf5fbb471ce9ebb3c5411";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-xmllint, ament-lint-auto, mrpt-msgs, mrpt-sensorlib, rclcpp, rclcpp-components, ros-environment, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-generic-sensor";
-  version = "0.4.1-r1";
+  version = "0.5.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/kilted/mrpt_generic_sensor/0.4.1-1.tar.gz";
-    name = "0.4.1-1.tar.gz";
-    sha256 = "7c62e68c3cf54082637432a3329fcfcc88b4a40ea91deb308f769b912bb747f5";
+    url = "https://github.com/ros2-gbp/mrpt_sensors-release/archive/release/kilted/mrpt_generic_sensor/0.5.0-1.tar.gz";
+    name = "0.5.0-1.tar.gz";
+    sha256 = "2224e7c155889d4725cd461f87b30cabcf0af28f08aa1c628919a7fc2f249470";
   };
 
   buildType = "ament_cmake";

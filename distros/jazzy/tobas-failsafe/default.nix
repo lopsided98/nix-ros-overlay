@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-drone-msgs-adapter, tobas-dsp, tobas-mission-items, tobas-mission-msgs, tobas-msgs-adapter, tobas-node, tobas-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-failsafe";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_failsafe/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "0b943ef901bae58a919fe48e623db95f0b83eda197de07ebb5aa49147f899f05";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_failsafe/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "48d8e329336c24e9f0da0b6b81a6134abdcd1fb23e44c393c5b5366c7a3da828";
   };
 
   buildType = "ament_cmake";

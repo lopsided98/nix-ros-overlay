@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-gtest, ament-cmake-lint-cmake, ament-cmake-xmllint, ament-lint-auto, geometry-msgs, mrpt-containers, mrpt-gui, mrpt-kinematics, mrpt-libros-bridge, mrpt-maps, mrpt-math, mrpt-msgs, mrpt-nav, mrpt-nav-interfaces, mrpt-opengl, mrpt-path-planning-apps, mrpt-path-planning-core, mrpt-system, mrpt-viz, nav-msgs, rclcpp, rclcpp-action, rclcpp-components, sensor-msgs, tf2, tf2-geometry-msgs, tf2-ros, visualization-msgs }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-tps-astar-planner";
-  version = "2.8.0-r1";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/kilted/mrpt_tps_astar_planner/2.8.0-1.tar.gz";
-    name = "2.8.0-1.tar.gz";
-    sha256 = "0203463b43c5ac05f8e7069c33644c9f9c0e279fa82efdc2ca18fa49df5d3bd8";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/kilted/mrpt_tps_astar_planner/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "1a8336212f5f7912d914be914ac21e0191313d6561170e6309bc7eaaa914d8c2";
   };
 
   buildType = "ament_cmake";

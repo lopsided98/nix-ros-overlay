@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, rclpy, rmf-fleet-msgs }:
 buildRosPackage {
   pname = "ros-rolling-rmf-charging-schedule";
-  version = "2.12.0-r2";
+  version = "2.15.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/rolling/rmf_charging_schedule/2.12.0-2.tar.gz";
-    name = "2.12.0-2.tar.gz";
-    sha256 = "9251bfa0480d5a890d52b267c0947ac5182442c11cc3ca6a8cd353c064c953e8";
+    url = "https://github.com/ros2-gbp/rmf_ros2-release/archive/release/rolling/rmf_charging_schedule/2.15.0-1.tar.gz";
+    name = "2.15.0-1.tar.gz";
+    sha256 = "a6813fde3530d2bc83866f294747fd8b904b44d57b1dfe6a93655e34bc5eb2f1";
   };
 
   buildType = "ament_python";

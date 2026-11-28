@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-index-python, controller-manager, controller-manager-msgs, launch, launch-ros, launch-testing, launch-testing-ros, lifecycle-msgs, python-qt-binding, python3Packages, qt-gui, rcl-interfaces, rclpy, ros2service, rqt-gui, rqt-gui-py }:
 buildRosPackage {
   pname = "ros-rolling-rqt-controller-manager";
-  version = "6.13.0-r1";
+  version = "6.14.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/rqt_controller_manager/6.13.0-1.tar.gz";
-    name = "6.13.0-1.tar.gz";
-    sha256 = "67a25b890d55f36e140c17382e7c76a21b8ffbcac744927cb3e96a7713bffc42";
+    url = "https://github.com/ros2-gbp/ros2_control-release/archive/release/rolling/rqt_controller_manager/6.14.0-1.tar.gz";
+    name = "6.14.0-1.tar.gz";
+    sha256 = "10b938e4e8868752044bd52c608ef5eab6f4e94488ffa67a44184e8b0553515a";
   };
 
   buildType = "ament_python";

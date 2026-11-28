@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-camera, tobas-command-msgs, tobas-command-msgs-adapter, tobas-common, tobas-components-rt, tobas-config-servers, tobas-connection-monitor, tobas-constants, tobas-controllers, tobas-cui, tobas-debug-msgs, tobas-debug-msgs-adapter, tobas-debug-tools, tobas-description, tobas-disturbance-observer, tobas-dparam, tobas-drone, tobas-dummy-pkg, tobas-eskf, tobas-failsafe, tobas-fake-publishers, tobas-hardware, tobas-joint-states-bridge, tobas-landing-detection, tobas-manipulation, tobas-mission, tobas-msgs, tobas-msgs-adapter, tobas-node, tobas-pose-pid, tobas-property, tobas-rc-teleop, tobas-real, tobas-ros-interface, tobas-rosbag-recorder, tobas-rotor-anomaly-detection, tobas-rotor-controller, tobas-tools, tobas-topic-throttle, tobas-tree-server, tobas-version, tobas-vibration-filter, tobas-wind-model }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-core";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_core/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "cef70cc4db5e07f78aa6d65ee96a5e2a9eb66c704a059b03f45426c7270f2da6";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_core/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "c0fa425cfd79655b167b99644d5b4883667bd1bfa127aec12dd28dbbd1d17781";
   };
 
   buildType = "ament_cmake";

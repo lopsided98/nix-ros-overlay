@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, qt5, tobas-constants, tobas-msgs-adapter, tobas-path-tools, tobas-real-common, tobas-ros2-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-rqt-bridge";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_rqt_bridge/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "bfc6a2a007ccb8c92893bc11f30395434b19c2bca4ff99ffd7286e05da7d939d";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_rqt_bridge/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "ea8897331c97052c611deb28f09d09cf3b34eae5097273d203608feb11e05b06";
   };
 
   buildType = "ament_cmake";

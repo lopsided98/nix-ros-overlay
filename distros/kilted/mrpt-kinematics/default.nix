@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, cmake, mrpt-common, mrpt-viz, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-kilted-mrpt-kinematics";
-  version = "3.6.2-r1";
+  version = "3.6.3-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_kinematics/3.6.2-1.tar.gz";
-    name = "3.6.2-1.tar.gz";
-    sha256 = "73c5325626082010d67b197ece2694878a65366f4cd0acd63ce3f866c1487bf6";
+    url = "https://github.com/ros2-gbp/mrpt3-release/archive/release/kilted/mrpt_kinematics/3.6.3-1.tar.gz";
+    name = "3.6.3-1.tar.gz";
+    sha256 = "e2ade77b63803f533b384e5d337d2e1b7856c330a2a293539a42aa7d734b5e7b";
   };
 
   buildType = "cmake";

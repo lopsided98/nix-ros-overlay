@@ -602,6 +602,8 @@ self: super: {
 
  canopen-utils = self.callPackage ./canopen-utils {};
 
+ cartesian-limit-adapter = self.callPackage ./cartesian-limit-adapter {};
+
  cartographer = self.callPackage ./cartographer {};
 
  cartographer-ros = self.callPackage ./cartographer-ros {};
@@ -771,6 +773,8 @@ self: super: {
  cras-lint = self.callPackage ./cras-lint {};
 
  cras-msgs = self.callPackage ./cras-msgs {};
+
+ cras-py-common = self.callPackage ./cras-py-common {};
 
  cras-topic-tools = self.callPackage ./cras-topic-tools {};
 
@@ -996,6 +1000,12 @@ self: super: {
 
  dynamixel-workbench-toolbox = self.callPackage ./dynamixel-workbench-toolbox {};
 
+ dynmsg = self.callPackage ./dynmsg {};
+
+ dynmsg-demo = self.callPackage ./dynmsg-demo {};
+
+ dynmsg-msgs = self.callPackage ./dynmsg-msgs {};
+
  easynav = self.callPackage ./easynav {};
 
  easynav-bonxai-maps-manager = self.callPackage ./easynav-bonxai-maps-manager {};
@@ -1158,7 +1168,21 @@ self: super: {
 
  elite-cs-series-sdk = self.callPackage ./elite-cs-series-sdk {};
 
+ elite-robots = self.callPackage ./elite-robots {};
+
+ elite-robots-calibration = self.callPackage ./elite-robots-calibration {};
+
+ elite-robots-controllers = self.callPackage ./elite-robots-controllers {};
+
+ elite-robots-dashboard-msgs = self.callPackage ./elite-robots-dashboard-msgs {};
+
  elite-robots-description = self.callPackage ./elite-robots-description {};
+
+ elite-robots-driver = self.callPackage ./elite-robots-driver {};
+
+ elite-robots-moveit-config = self.callPackage ./elite-robots-moveit-config {};
+
+ elite-robots-msgs = self.callPackage ./elite-robots-msgs {};
 
  ess-imu-driver2 = self.callPackage ./ess-imu-driver2 {};
 
@@ -1269,6 +1293,8 @@ self: super: {
  ewellix-viz = self.callPackage ./ewellix-viz {};
 
  example-interfaces = self.callPackage ./example-interfaces {};
+
+ example-robot-descriptions = self.callPackage ./example-robot-descriptions {};
 
  examples-rclcpp-async-client = self.callPackage ./examples-rclcpp-async-client {};
 
@@ -2136,7 +2162,33 @@ self: super: {
 
  mobileye-560-660-msgs = self.callPackage ./mobileye-560-660-msgs {};
 
+ mocap4r2-control = self.callPackage ./mocap4r2-control {};
+
+ mocap4r2-gt-tools = self.callPackage ./mocap4r2-gt-tools {};
+
+ mocap4r2-gz-demos = self.callPackage ./mocap4r2-gz-demos {};
+
+ mocap4r2-gz-plugin = self.callPackage ./mocap4r2-gz-plugin {};
+
+ mocap4r2-interfaces = self.callPackage ./mocap4r2-interfaces {};
+
+ mocap4r2-marker-viz = self.callPackage ./mocap4r2-marker-viz {};
+
+ mocap4r2-motion-tools = self.callPackage ./mocap4r2-motion-tools {};
+
  mocap4r2-msgs = self.callPackage ./mocap4r2-msgs {};
+
+ mocap4r2-optitrack-driver = self.callPackage ./mocap4r2-optitrack-driver {};
+
+ mocap4r2-qualisys-driver = self.callPackage ./mocap4r2-qualisys-driver {};
+
+ mocap4r2-robot-gt = self.callPackage ./mocap4r2-robot-gt {};
+
+ mocap4r2-sim-driver = self.callPackage ./mocap4r2-sim-driver {};
+
+ mocap4r2-tools = self.callPackage ./mocap4r2-tools {};
+
+ mocap4r2-vicon-driver = self.callPackage ./mocap4r2-vicon-driver {};
 
  mocap-optitrack = self.callPackage ./mocap-optitrack {};
 
@@ -2812,6 +2864,8 @@ self: super: {
 
  open-sound-control-msgs = self.callPackage ./open-sound-control-msgs {};
 
+ opencv-apps = self.callPackage ./opencv-apps {};
+
  openeb-vendor = self.callPackage ./openeb-vendor {};
 
  opennav-docking = self.callPackage ./opennav-docking {};
@@ -3110,6 +3164,8 @@ self: super: {
 
  raph-description = self.callPackage ./raph-description {};
 
+ raph-desktop = self.callPackage ./raph-desktop {};
+
  raph-fw = self.callPackage ./raph-fw {};
 
  raph-interfaces = self.callPackage ./raph-interfaces {};
@@ -3119,6 +3175,8 @@ self: super: {
  raph-robot = self.callPackage ./raph-robot {};
 
  raph-teleop = self.callPackage ./raph-teleop {};
+
+ raph-viz = self.callPackage ./raph-viz {};
 
  raspimouse = self.callPackage ./raspimouse {};
 
@@ -3139,6 +3197,8 @@ self: super: {
  raspimouse-slam = self.callPackage ./raspimouse-slam {};
 
  raspimouse-slam-navigation = self.callPackage ./raspimouse-slam-navigation {};
+
+ rawlog2rosbag = self.callPackage ./rawlog2rosbag {};
 
  rc-common-msgs = self.callPackage ./rc-common-msgs {};
 
@@ -3374,6 +3434,8 @@ self: super: {
 
  rmw-stats-shim = self.callPackage ./rmw-stats-shim {};
 
+ rmw-unix-socket-cpp = self.callPackage ./rmw-unix-socket-cpp {};
+
  rmw-zenoh-cpp = self.callPackage ./rmw-zenoh-cpp {};
 
  roboplan = self.callPackage ./roboplan {};
@@ -3457,6 +3519,8 @@ self: super: {
  ros2-medkit-cmake = self.callPackage ./ros2-medkit-cmake {};
 
  ros2-medkit-diagnostic-bridge = self.callPackage ./ros2-medkit-diagnostic-bridge {};
+
+ ros2-medkit-fault-detection = self.callPackage ./ros2-medkit-fault-detection {};
 
  ros2-medkit-fault-manager = self.callPackage ./ros2-medkit-fault-manager {};
 

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-python, backward-ros, control-msgs, controller-manager, controller-manager-msgs, effort-controllers, force-torque-sensor-broadcaster, geometry-msgs, hardware-interface, joint-state-broadcaster, joint-state-publisher, joint-trajectory-controller, launch, launch-ros, launch-testing-ament-cmake, pluginlib, pose-broadcaster, position-controllers, rclcpp, rclcpp-action, rclcpp-lifecycle, rclpy, robot-state-publisher, ros2-controllers-test-nodes, ros2run, rviz2, socat, std-msgs, std-srvs, tf2-geometry-msgs, ur-client-library, ur-controllers, ur-dashboard-msgs, ur-description, ur-msgs, urdf, velocity-controllers, xacro }:
 buildRosPackage {
   pname = "ros-jazzy-ur-robot-driver";
-  version = "3.10.0-r1";
+  version = "3.11.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/jazzy/ur_robot_driver/3.10.0-1.tar.gz";
-    name = "3.10.0-1.tar.gz";
-    sha256 = "9dbf288421cecee7c3e1f1306dd3ef3d44852ee99468ffb3c4280d0e2351a0c7";
+    url = "https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release/archive/release/jazzy/ur_robot_driver/3.11.0-1.tar.gz";
+    name = "3.11.0-1.tar.gz";
+    sha256 = "55c014d0a11167ff2974a5b9912556cc3b2edb35b2b1d4ca5e6312e885116005";
   };
 
   buildType = "ament_cmake";

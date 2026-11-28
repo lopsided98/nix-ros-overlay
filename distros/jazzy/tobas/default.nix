@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-core, tobas-examples, tobas-external, tobas-gui }:
 buildRosPackage {
   pname = "ros-jazzy-tobas";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "1d04a839c2675501fb3d24456523f608859df328e11f6577270ee321d8701512";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "d970c6fcf2a50d0e88d7415eab533de70b0094ea85a0061b6aac91a2bd8d44f6";
   };
 
   buildType = "ament_cmake";

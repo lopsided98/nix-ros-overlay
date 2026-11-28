@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-lint-cmake, ament-cmake-pytest, ament-cmake-ros, ament-cmake-xmllint, ament-lint-auto, geometry-msgs, launch-testing, launch-testing-ros, mrpt-containers, mrpt-libros-bridge, mrpt-maps, mrpt-math, mrpt-nav-interfaces, mrpt-path-planning-core, mrpt-system, mvsim, nav-msgs, rclcpp, rclcpp-components, rclpy, sensor-msgs, sensor-msgs-py, std-msgs, tf2, tf2-geometry-msgs, tf2-ros }:
 buildRosPackage {
   pname = "ros-jazzy-mrpt-trajectory-follower";
-  version = "2.8.0-r1";
+  version = "2.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/jazzy/mrpt_trajectory_follower/2.8.0-1.tar.gz";
-    name = "2.8.0-1.tar.gz";
-    sha256 = "ecfa82fb69a31eae0de55d592a114e3e359ac6ce69188c9de3a85cd357bf039c";
+    url = "https://github.com/ros2-gbp/mrpt_navigation-release/archive/release/jazzy/mrpt_trajectory_follower/2.9.0-1.tar.gz";
+    name = "2.9.0-1.tar.gz";
+    sha256 = "79e18f43e5f709c031fcea135d762fb39d08275f3ca7fec5b140e797df4f00f9";
   };
 
   buildType = "ament_cmake";

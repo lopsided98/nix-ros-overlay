@@ -5,16 +5,16 @@
 { lib, buildRosPackage, fetchurl, python3, python3Packages }:
 buildRosPackage {
   pname = "ros-lyrical-generate-parameter-library-py";
-  version = "1.3.1-r1";
+  version = "1.4.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/lyrical/generate_parameter_library_py/1.3.1-1.tar.gz";
-    name = "1.3.1-1.tar.gz";
-    sha256 = "5d3b429aed4fead99daf5d859ad49a90e2cf95c3ec33d4019f96d6f029e3155e";
+    url = "https://github.com/ros2-gbp/generate_parameter_library-release/archive/release/lyrical/generate_parameter_library_py/1.4.0-1.tar.gz";
+    name = "1.4.0-1.tar.gz";
+    sha256 = "b87cd9a23b4723b4d1bf1d335f429582463ac9ec2433bdac9ff441c7a825ba85";
   };
 
   buildType = "ament_python";
-  checkInputs = [ python3Packages.pytest ];
+  checkInputs = [ python3Packages.packaging python3Packages.pytest ];
   propagatedBuildInputs = [ python3 python3Packages.jinja2 python3Packages.pyyaml python3Packages.typeguard ];
 
   meta = {

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ffmpeg, scenario-execution }:
 buildRosPackage {
   pname = "ros-jazzy-scenario-execution-x11";
-  version = "1.7.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/jazzy/scenario_execution_x11/1.7.0-1.tar.gz";
-    name = "1.7.0-1.tar.gz";
-    sha256 = "4b3486246ffd63cf7e443f2b6059f0d509cda0436797f030e72547d31e1ad553";
+    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/jazzy/scenario_execution_x11/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "e1b041960d6e7c9c4ecede171aba5bfe897d1e6cae5a285762c912ae87dd5c77";
   };
 
   buildType = "ament_python";

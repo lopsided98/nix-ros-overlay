@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, launch, launch-ros, tobas-drone-msgs-adapter, tobas-dsp, tobas-fc1xx-core, tobas-hardware-common, tobas-ic-drivers, tobas-msgs-adapter, tobas-real-common, tobas-tools }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-fc1xx-ros";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_fc1xx_ros/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "27830b02738236414d967e6c332e08eeac356f265053bbf88f3164a86b9dfba3";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_fc1xx_ros/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "8ee28bae87b13c72c824588f8d71deb9138aee79f0cf173c356fa0e5fea8144c";
   };
 
   buildType = "ament_cmake";

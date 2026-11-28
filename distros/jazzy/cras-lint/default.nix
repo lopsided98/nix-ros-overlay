@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake-core, ament-cmake-test, ament-lint-common }:
 buildRosPackage {
   pname = "ros-jazzy-cras-lint";
-  version = "4.0.2-r1";
+  version = "4.1.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/cras_ros_utils-release/archive/release/jazzy/cras_lint/4.0.2-1.tar.gz";
-    name = "4.0.2-1.tar.gz";
-    sha256 = "763e5e56b851865a319798b250b641faf8d981f57220425171e85bc1cb8c888e";
+    url = "https://github.com/ros2-gbp/cras_ros_utils-release/archive/release/jazzy/cras_lint/4.1.0-1.tar.gz";
+    name = "4.1.0-1.tar.gz";
+    sha256 = "2511a956db419934ff2b9d7bf3d0068432a98f4238f89550e335be9c0f5c5c00";
   };
 
   buildType = "ament_cmake";

@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-eigen-msgs-adapter, tobas-eigen-tools, tobas-kdl, tobas-kdl-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-kdl-msgs-adapter";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_kdl_msgs_adapter/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "bf39e7f1b97dfc11dfad6438f9efdac9cdaf1d2b3638024e567ee1bc18a46e7a";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_kdl_msgs_adapter/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "2a9df22bbf061d7f5fc5b1c8cc1ab991ae0187781ba2f4113f563420ce870771";
   };
 
   buildType = "ament_cmake";

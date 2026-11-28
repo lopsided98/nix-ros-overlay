@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, ament-cmake-clang-format, ament-cmake-gmock, ament-lint-auto, ament-lint-common, nlohmann_json, rclcpp, ros2-medkit-beacon-common, ros2-medkit-cmake, ros2-medkit-gateway }:
 buildRosPackage {
   pname = "ros-lyrical-ros2-medkit-param-beacon";
-  version = "0.6.0-r1";
+  version = "0.7.2-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/lyrical/ros2_medkit_param_beacon/0.6.0-1.tar.gz";
-    name = "0.6.0-1.tar.gz";
-    sha256 = "df6a9a39428be70d5a444af282a7fb42d10ea248533d08b96fc0d5719262abae";
+    url = "https://github.com/ros2-gbp/ros2_medkit-release/archive/release/lyrical/ros2_medkit_param_beacon/0.7.2-1.tar.gz";
+    name = "0.7.2-1.tar.gz";
+    sha256 = "738477b546811965c388e345c84cef391a0612c2f25c82be540e92e78848e8b8";
   };
 
   buildType = "ament_cmake";

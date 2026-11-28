@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-camera-msgs, tobas-camera-ros-interface, tobas-image-processing }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-camera";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_camera/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "71ab7ab5a4e925847a038ef80e8e014cff3174e596e22f3b17d5612bd63fab00";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_camera/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "8cc9b2fa0595c4f399f5e36651ed89b00d13ce1d91ef12c116e7fc29c1209a53";
   };
 
   buildType = "ament_cmake";

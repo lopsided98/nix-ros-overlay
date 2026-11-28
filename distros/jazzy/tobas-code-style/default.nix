@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ament-cmake, tobas-cpp-code-style-example }:
 buildRosPackage {
   pname = "ros-jazzy-tobas-code-style";
-  version = "2.16.9-r1";
+  version = "2.16.10-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_code_style/2.16.9-1.tar.gz";
-    name = "2.16.9-1.tar.gz";
-    sha256 = "64a4cc271ccbc695f2cd3440371f23345843313c2903de68c223b384fa73783d";
+    url = "https://github.com/ros2-gbp/tobas-release/archive/release/jazzy/tobas_code_style/2.16.10-1.tar.gz";
+    name = "2.16.10-1.tar.gz";
+    sha256 = "a46edb05e98c534c3c76bfc1055171f4720013581689f4ec81dfde34cd3fa53d";
   };
 
   buildType = "ament_cmake";

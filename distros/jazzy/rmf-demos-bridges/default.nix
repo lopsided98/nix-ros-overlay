@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, python3Packages, rmf-building-map-tools, rmf-fleet-msgs, rmf-site-map-msgs, rmf-traffic-msgs }:
 buildRosPackage {
   pname = "ros-jazzy-rmf-demos-bridges";
-  version = "2.3.0-r1";
+  version = "2.4.1-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/jazzy/rmf_demos_bridges/2.3.0-1.tar.gz";
-    name = "2.3.0-1.tar.gz";
-    sha256 = "a27b36c3b8b858aaba23f4fdebbbc20cc400aec184e1127e7749232eb4a6f38e";
+    url = "https://github.com/ros2-gbp/rmf_demos-release/archive/release/jazzy/rmf_demos_bridges/2.4.1-1.tar.gz";
+    name = "2.4.1-1.tar.gz";
+    sha256 = "fd450669334395f0278eb39ab1004dce65964b5e7101cadf946e0f182f446be7";
   };
 
   buildType = "ament_python";

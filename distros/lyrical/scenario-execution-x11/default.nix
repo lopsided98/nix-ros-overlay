@@ -5,12 +5,12 @@
 { lib, buildRosPackage, fetchurl, ffmpeg, scenario-execution }:
 buildRosPackage {
   pname = "ros-lyrical-scenario-execution-x11";
-  version = "1.7.0-r1";
+  version = "1.9.0-r1";
 
   src = fetchurl {
-    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/lyrical/scenario_execution_x11/1.7.0-1.tar.gz";
-    name = "1.7.0-1.tar.gz";
-    sha256 = "0f628e5f162adbe6f851880c2bcac95e63fa78c13d971413de2833ceae225ef2";
+    url = "https://github.com/ros2-gbp/scenario_execution-release/archive/release/lyrical/scenario_execution_x11/1.9.0-1.tar.gz";
+    name = "1.9.0-1.tar.gz";
+    sha256 = "b4fedd34c403b190755a97b563f94033cb03a594a8d80d3c2dcb0e7cd359b87c";
   };
 
   buildType = "ament_python";
